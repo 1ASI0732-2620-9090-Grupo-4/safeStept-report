@@ -49,8 +49,8 @@
         <td align="center">Melgarejo Quiroz, Josep Eliu</td>
       </tr>
       <tr>
-        <td align="center">U20231C524</td>
-        <td align="center">Sanchez Espinoza, Mathias Enrique</td>
+        <td align="center">U202113310/td>
+        <td align="center">Tello Palacios, Fabrizio Rafael</td>
       </tr>
     </tbody>
   </table>
