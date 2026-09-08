@@ -1,8 +1,8 @@
-﻿<br>
+<br>
 <br>
 
 <div align="center">
-  <img src="../../assets/images/chapter-1/capitulo-1.png" alt="Capitulo 1" />
+  <img src="../../assets/images/chapter-1/capitulo-1.png" alt="Capítulo 1" />
 </div>
 
 <br>
@@ -12,317 +12,245 @@
 
 ## 1.2.1. Antecedentes y problemática
 
-Estudios recientes en Perú y a nivel internacional confirman que el desconocimiento en primeros auxilios sigue afectando a distintos grupos de la población —conductores, trabajadores de construcción, madres de familia, ciudadanía en general y profesionales de la salud en formación—, generando riesgos importantes de lesiones graves y muertes prevenibles.
+Los primeros auxilios comprenden acciones iniciales que pueden brindarse mientras se obtiene ayuda profesional. Su aprendizaje resulta relevante porque una respuesta desordenada, tardía o basada en información incorrecta puede aumentar el riesgo para la persona afectada y para quien intenta ayudar. La capacitación digital puede ampliar el acceso y favorecer el repaso, pero debe entenderse como complemento de la formación práctica y de los protocolos oficiales.
 
-En Lima, una intervención educativa aplicada en estudiantes de secundaria en 2023 mostró que, aunque las capacitaciones iniciales mejoran el conocimiento, la retención disminuye significativamente si no se refuerza con práctica continua y metodologías activas. Este hallazgo coincide con evaluaciones internacionales que señalan que la mayoría de participantes pierde habilidades críticas de RCP y control de hemorragias a los pocos meses de la capacitación.
+En Perú se han identificado brechas de conocimiento en distintos grupos. Lozano Villegas (2024) estudió factores asociados al conocimiento de primeros auxilios en estudiantes universitarios, mientras que Chuman Ramos y Ramírez Mayorca (2024) evaluaron el efecto de una intervención educativa en estudiantes de una institución de Lima. Ambos antecedentes respaldan la necesidad de estudiar no solo el acceso al contenido, sino también su comprensión, práctica y retención.
 
-Asimismo, un estudio de 2023 en España evidenció que los estudiantes de enfermería que participaron en proyectos de aprendizaje-servicio lograron mejoras en conocimientos teóricos y prácticos de primeros auxilios, pero también mostraron la necesidad de reforzar la práctica para garantizar la transferencia a situaciones reales. En Chile, se ha destacado la urgencia de incluir primeros auxilios en la formación curricular de docentes y profesionales de la salud, dado que la falta de preparación limita la capacidad de respuesta en contextos escolares y comunitarios.
+En el ámbito comunitario, el Gobierno Regional de La Libertad (2017) informó que una proporción importante de la población carecía de conocimientos para actuar ante víctimas de accidentes de tránsito. En el ámbito de respuesta organizada, el Ministerio de Salud del Perú (2025) destacó que la formación de brigadistas combina contenidos teóricos y prácticos sobre gestión de riesgos, atención sanitaria básica, primeros auxilios y transporte asistido. Estas fuentes muestran que las necesidades y el nivel de experiencia varían según el segmento.
 
-A nivel global, el informe de la Federación Internacional de la Cruz Roja (IFRC) señala que en 2022 más de 12,4 millones de personas fueron capacitadas en primeros auxilios, pero advierte que la calidad y continuidad de la formación son variables y que la falta de actualización reduce la efectividad en emergencias.
+La evidencia internacional también señala que el aprendizaje requiere refuerzo. White (2024) revisa la retención de habilidades de primeros auxilios y RCP, y Rodríguez-García et al. (2024) comparan modalidades tradicionales y gamificadas mediante simulación. Asimismo, Caicedo Vega y Zumbado Fernández (2023) identificaron, en docentes de educación básica, una diferencia entre el interés por aprender, la autopercepción y la preparación real. Estos resultados no se extrapolan directamente a la población peruana de SafeStep, pero aportan antecedentes para formular preguntas que deberán comprobarse con usuarios de los segmentos objetivo.
 
-En conjunto, la evidencia científica reciente confirma que la falta de formación adecuada, la baja retención del conocimiento y la ausencia de actualización continua afectan la capacidad de la población para actuar correctamente en emergencias. Esto representa un riesgo constante de accidentes y complicaciones médicas que podrían prevenirse con preparación adecuada. Sin embargo, existe una oportunidad adicional que no se ha abordado adecuadamente: la brecha entre el conocimiento teórico y la disponibilidad real de materiales para aplicar esos conocimientos. Muchas personas aprenden los procedimientos de primeros auxilios pero no cuentan con los productos necesarios (botiquines, vendas, antisépticos, guantes) para aplicar esos conocimientos cuando ocurre una emergencia.
+<div align="center">
+  <p>
+    <b>Gráfico 1.</b> Caracterización de participantes según capacitación, motivación y autopercepción del conocimiento sobre primeros auxilios
+  </p>
+  <img src="../../assets/images/chapter-1/grafico-1.png" alt="Comparación de capacitación, interés y autopercepción de conocimientos de primeros auxilios en docentes de instituciones públicas y privadas" />
+  <p>
+    <i><b>Fuente:</b> Caicedo Vega y Zumbado Fernández (2023).</i>
+  </p>
+</div>
 
-Por ello, existe una necesidad urgente de herramientas digitales, accesibles, prácticas e interactivas que permitan a la población general y a los profesionales en formación reforzar sus conocimientos y habilidades en primeros auxilios, garantizando que puedan responder de manera efectiva ante emergencias comunes. Esta necesidad se复合ica con una oportunidad de negocio única: integrar la educación con la modalidad de adquirir los productos necesarios para estar verdaderamente preparado, creando un ecosistema completo que va desde el aprendizaje hasta la preparación física.
+El gráfico evidencia que un nivel alto de interés o una autopercepción favorable no garantizan haber recibido capacitación ni poseer conocimientos suficientes. Para SafeStep, esta diferencia justifica medir comportamientos observables —como decisiones correctas, finalización de escenarios o reducción de errores— además de opiniones de satisfacción o confianza.
 
----
+### Enunciado del problema
+
+Las personas interesadas en aprender primeros auxilios encuentran contenido disperso, experiencias predominantemente pasivas y pocas oportunidades accesibles para practicar la toma de decisiones y recibir retroalimentación. Como consecuencia, pueden percibirse preparadas sin haber comprobado su comprensión en escenarios simulados.
+
+A esta brecha educativa se suma una brecha de preparación material: algunos usuarios desconocen qué insumos no farmacológicos son adecuados para un botiquín básico, cómo revisar su vigencia o cómo relacionarlos con situaciones concretas. No obstante, la disponibilidad de productos no equivale a competencia práctica; SafeStep debe evitar transmitir que una compra reemplaza la capacitación.
+
+### Aspectos que debe resolver la propuesta
+
+SafeStep debe abordar los siguientes aspectos:
+
+- Acceso a experiencias breves y comprensibles de práctica guiada.
+- Retroalimentación inmediata sobre las decisiones tomadas.
+- Seguimiento del progreso y repetición de escenarios.
+- Uso de elementos de gamificación sin distraer del objetivo educativo.
+- Comunicación clara de los límites de una simulación digital.
+- Contenido trazable a fuentes confiables y sujeto a revisión.
+- Accesibilidad e internacionalización de la experiencia.
+- Recomendaciones comerciales transparentes que no exploten la preocupación del usuario.
+- Recolección ética y mínima de datos para evaluar el producto y ejecutar experimentos.
+
+### Estado actual de la solución
+
+La siguiente tabla delimita el estado As-Is del producto y evita presentar como implementadas capacidades que todavía pertenecen a una visión futura.
+
+| Capacidad | Estado As-Is | Observación |
+|---|---|---|
+| Landing page informativa | Implementada | Presenta la propuesta y dirige a la aplicación web. |
+| Registro, inicio de sesión y perfil | Implementados | Se utiliza autenticación con JWT. |
+| Simulaciones interactivas | Implementadas | Incluyen escenarios, intentos y retroalimentación. |
+| Gamificación | Implementada | Incluye experiencia, SafeCoins, misiones, insignias y ranking. |
+| Progreso, estadísticas y certificados internos | Implementados | Son reconocimientos de la plataforma, no certificaciones profesionales. |
+| Tienda, carrito y pedidos | Implementados | Incluye integración con Stripe Checkout. |
+| Recomendaciones de productos | Implementadas de forma inicial | Su utilidad y aceptación todavía deben medirse. |
+| Aplicación móvil nativa | No implementada | La solución disponible es una aplicación web responsiva. |
+| Funcionamiento offline | No implementado | Se mantiene como posibilidad futura. |
+| Suscripción premium | No implementada | Es una hipótesis del modelo de negocio. |
+| Portal operativo para instructores | No implementado | El rol existe conceptualmente, pero no hay una experiencia completa. |
+| Plataforma de experimentación y tracking | No implementada | Forma parte del alcance del nuevo curso. |
 
 ### Objetivo general
 
-Desarrollar y validar una herramienta digital de capacitación en primeros auxilios que combine una plataforma educativa interactiva con una tienda virtual integrada, mejorando tanto la preparación y retención del conocimiento como el acceso a productos de primeros auxilios de calidad en estudiantes universitarios, comunidad vecinal y brigadistas, mediante experiencias prácticas accesibles, guiadas y basadas en evidencia científica reciente.
+Evaluar y evolucionar SafeStep como plataforma web de aprendizaje de primeros auxilios mediante verificación del software, automatización del ciclo de entrega y experimentos controlados que produzcan evidencia sobre el comportamiento y las necesidades de sus usuarios.
 
-### Objetivos Específicos
+### Objetivos específicos
 
-- Analizar las necesidades, brechas y dificultades en la formación de primeros auxilios en los tres segmentos objetivo (estudiantes, comunidad vecinal, brigadistas) mediante entrevistas, observación contextual y revisión de literatura científica reciente.
-  - **Indicadores:**
-    - % de usuarios que reportan falta de práctica
-    - Principales brechas identificadas
-    - Factores críticos de olvido y errores comunes
-
-- Diseñar la arquitectura de información y experiencia de usuario de una plataforma de simulación interactiva basada en metodologías de IHC, gamificación y escenarios ramificados, que incluya además una tienda virtual integrada para la venta de productos de primeros auxilios.
-
-- Desarrollar un prototipo funcional multiplataforma (web/móvil) con escenarios básicos de primeros auxilios y retroalimentación inmediata integrada, junto con un catálogo de productos básicos de primeros auxilios.
-  - **Indicadores:**
-    - Nº de escenarios funcionales (mínimo 5)
-    - Disponibilidad en modo offline
-    - Nº de productos listados en el catálogo inicial
-
-- Validar la usabilidad, aceptación y efectividad pedagógica del prototipo mediante pruebas con usuarios representativos, utilizando métricas cuantitativas de retención, confianza, satisfacción y reducción de errores, así como la tasa de conversión de la tienda virtual.
-  - **Indicadores:**
-    - Diferencia entre pretest y postest
-    - % de reducción de errores en simulaciones
-    - Tasa de compra de productos después de completar módulos
+- Caracterizar las necesidades de estudiantes universitarios, comunidades vecinales y brigadistas mediante fuentes documentales, entrevistas y observación de uso.
+- Verificar las funcionalidades principales mediante pruebas unitarias, de integración, comportamiento y sistema.
+- Implementar un pipeline reproducible de integración, entrega, despliegue y monitoreo continuo.
+- Definir métricas de negocio y de producto con fórmulas, fuentes de datos y criterios de interpretación.
+- Diseñar y ejecutar experimentos éticos que contrasten hipótesis sobre comprensión, confianza, finalización, retención e interacción con recomendaciones.
+- Analizar los resultados obtenidos y convertirlos en decisiones justificadas para el backlog del producto.
+- Mantener el contenido educativo y las comunicaciones comerciales separados, transparentes y sujetos a revisión.
 
 ### Restricciones
 
-- La solución debe ser completamente digital, accesible para distintos perfiles de usuario y no depender de equipamiento físico especializado para la parte educativa.
+- SafeStep es una herramienta complementaria y no reemplaza la atención médica, los servicios de emergencia ni la capacitación práctica acreditada.
+- El equipo no debe afirmar que un usuario está preparado para una emergencia real basándose únicamente en una simulación digital.
+- El contenido médico debe estar respaldado por fuentes identificables y revisarse cuando cambien los protocolos aplicables.
+- La tienda debe priorizar insumos no farmacológicos y cumplir las normas peruanas de comercio electrónico, protección al consumidor y protección de datos.
+- Las recomendaciones de compra no deben presentarse como prescripciones médicas.
+- Los experimentos deben aplicar consentimiento informado cuando corresponda, minimizar datos personales y evitar patrones manipulativos.
+- La solución As-Is es web responsiva; cualquier aplicación móvil nativa u operación offline requiere diseño e implementación adicional.
+- El alcance está condicionado por el tiempo del ciclo académico, el acceso a participantes y los servicios gratuitos o de bajo costo disponibles para despliegue y monitoreo.
 
-- El prototipo debe funcionar en dispositivos móviles y web, con capacidad de uso offline para zonas con conectividad limitada.
+### Técnica de The 5 W's y 2 H's
 
-- La tienda virtual debe cumplir con las regulaciones locales de comercio electrónico y protección al consumidor en Perú.
+#### What — ¿Qué ocurre?
 
-- Los productos vendidos en la tienda deben cumplir con certificación sanitaria vigente y estándares de calidad aplicables.
+Existe una brecha entre el interés por aprender primeros auxilios y la posibilidad de practicar decisiones, recibir retroalimentación y comprobar la comprensión de manera accesible. También existe incertidumbre sobre el valor real que aportan la gamificación y las recomendaciones de productos dentro de la experiencia educativa.
 
----
+#### When — ¿Cuándo ocurre?
 
-### Técnica de The 5 'W's y 2 'H's
+La brecha aparece durante el aprendizaje inicial, al intentar recordar procedimientos después de un periodo sin práctica y al enfrentar información dispersa. SafeStep se utiliza de manera preventiva y formativa, no durante una emergencia como sustituto de los servicios especializados.
 
-#### What (Qué)
+#### Where — ¿Dónde ocurre?
 
-- **_¿Cuál es el problema?_**
-- La población general, incluyendo estudiantes, familias, trabajadores y profesionales de la salud en formación, carece de conocimientos prácticos en primeros auxilios. Existe un nivel inadecuado de conocimientos prácticos en primeros auxilios en la población general y, alarmantemente, incluso entre profesionales de la salud en formación. Esto resulta en una incapacidad para responder de manera efectiva ante emergencias médicas comunes (como RCP, atragantamientos, quemaduras o hemorragias), aumentando el riesgo de lesiones graves, complicaciones y muertes que podrían prevenirse con una intervención inmediata y correcta.
+El aprendizaje puede realizarse desde hogares, universidades, espacios comunitarios o centros laborales mediante dispositivos con acceso web. Las emergencias relacionadas con el dominio pueden ocurrir en esos mismos entornos, pero la aplicación se enfoca en preparación previa y práctica simulada.
 
-- **_¿Cuál es la relación con la persona en cuestión?_**
-- Las personas que necesitan o desean estar preparadas para una emergencia, tendrán contacto con escenarios de emergencia virtuales que simulan situaciones reales, lo que les permite aprender a tomar decisiones críticas y recibir retroalimentación inmediata. Esto fortalece la confianza y capacidad de respuesta en emergencias, mejorando la preparación de la población general y profesionales de la salud en formación.
+#### Who — ¿A quién afecta?
 
-- **_¿Cuál es el problema secundario relacionado con la tienda?_**
-- Existe una desconexión entre quienes aprenden primeros auxilios y quienes realmente tienen los productos necesarios para actuar en una emergencia. Muchas personas capaces de realizar RCP no tienen un dispositivo de RCP nearby; quienes saben tratar quemaduras no tienen gasas o cremas especializadas; quienes pueden ayudar con hemorragias no tienen vendas o antisépticos disponibles. Esta brecha entre conocimiento y equipamiento reduce significativamente la efectividad de la primera respuesta.
+Afecta principalmente a estudiantes universitarios, miembros de comunidades vecinales y brigadistas que desean adquirir o reforzar conocimientos. Las víctimas potenciales de una respuesta incorrecta son beneficiarios indirectos, pero no son usuarios necesariamente.
 
-#### When (Cuándo)
+#### Why — ¿Por qué ocurre?
 
-- **_¿Cuándo sucede el problema?_**
-- El problema ocurre en cualquier momento, ya que las emergencias pueden presentarse sin previo aviso. La falta de preparación solo se nota durante la emergencia, momento en el que la capacidad de acción rápida puede determinar la diferencia entre la vida y la muerte.
+Entre las posibles causas se encuentran el acceso limitado a práctica guiada, la dependencia de contenidos pasivos, la falta de refuerzo, la sobreestimación del conocimiento propio y la dificultad para evaluar la calidad de la información disponible. Estas causas deben tratarse como explicaciones sustentadas o supuestos por comprobar, no como verdades universales.
 
-- **_¿Cuándo utiliza el cliente el producto?_**
-- El cliente utilizará SafeStep para capacitarse de manera proactiva en cualquier momento (24/7), desde su hogar, trabajo o centro de estudios. También lo usará para entrenamientos periódicos de refuerzo que combaten el olvido del conocimiento, y para prepararse específicamente antes de realizar actividades de riesgo, viajes o eventos masivos. Adicionalmente, utilizará la tienda virtual cuando necesite adquirir o reponer productos de primeros auxilios para su hogar, vehículo o lugar de trabajo.
+#### How — ¿Cómo se aborda?
 
-- **_¿Cuándo realiza compras en la tienda?_**
-- Las compras en la tienda virtual se realizan principalmente en tres contextos: al completar un módulo de aprendizaje (cuando el usuario identifica que necesita los productos enseñados), de manera preventive (para estar preparado antes de que ocurra una emergencia), y de reposición (cuando los productos del botiquín existente se agotan o caducan).
+SafeStep ofrece escenarios interactivos, alternativas de decisión, retroalimentación, repetición, progreso y gamificación. El nuevo ciclo incorporará pruebas automatizadas, despliegue continuo, instrumentación y experimentos para determinar qué elementos generan resultados útiles.
 
-#### Where (Dónde)
+#### How much — ¿Cuál es la magnitud?
 
-- **_¿Dónde está el cliente cuando usa el producto?_**
-
-El cliente estará en entornos cotidianos con conexión a internet: principalmente en su hogar, pero también en su lugar de trabajo, en la universidad, o en cualquier lugar donde necesite acceder a los materiales de aprendizaje.
-
-- **_¿Dónde surge el problema?_**
-
-El problema surge en los mismos entornos cotidianos: hogares, escuelas, vías públicas, centros laborales y comunidades. Lugares donde los servicios de emergencia médica no están disponibles de inmediato y la primera respuesta depende de los presentes.
-
-- **_¿Dónde realiza las compras?_**
-- Las compras se realizan a través de la plataforma web o aplicación móvil, con entrega a domicilio en todo el territorio nacional peruano. Esto elimina la barrera de ubicación geográfica para acceder a productos de calidad.
-
-#### Who (Quién)
-
-- **_¿Quiénes están involucrados?_**
-- Esta problemática afecta directamente a múltiples grupos que, por su contexto, rol o exposición, tienen alta probabilidad de enfrentar emergencias y necesitan estar preparados: Estudiantes Universitarios, Comunidades Vecinales y Brigadistas.
-
-- **_¿A quiénes les sucede el problema?_**
-- El impacto recae en las víctimas de accidentes o emergencias médicas que no reciben una primera ayuda adecuada durante los minutos críticos, aumentando el riesgo de complicaciones, secuelas permanentes o mortalidad evitable. La falta de preparación de quienes los rodean convierte a estos incidentes en situaciones de alto riesgo.
-
-- **_¿Quién utiliza la tienda virtual?_**
-- Los mismos segmentos que aprenden en la plataforma también constituyen el mercado de la tienda virtual: estudiantes que quieran un botiquín para su dormitorio o mochila, familias que necesitan un botiquín completo para el hogar, y brigadistas que requieren equipos profesionales de emergencia.
-
-#### Why (Por qué)
-
-- **_¿Cuál es la causa del problema?_**
-- La causa principal radica en la falta de efectividad de los métodos de capacitación tradicionales:
-  - **Capacitaciones obsoletas:** Charlas presenciales y videos lineales que son pasivos y no simulan el estrés de una emergencia real.
-  - **Falta de práctica:** No se ofrece un espacio para practicar la toma de decisiones en un entorno seguro, por lo que no se genera memoria muscular ni confianza.
-  - **Mala retención:** El conocimiento se olvida rápidamente si no se practica. Estudios indican que la retención decae a partir del primer mes post-capacitación.
-  - **Baja accesibilidad:** Los cursos presenciales son costosos, requieren tiempo y logística, lo que limita el acceso masivo.
-  - **Desconexión educación-productos:** Los cursos enseñan qué hacer pero no facilitan el acceso a los productos necesarios para hacerlo.
-
-- **_¿Por qué el modelo de negocio de SafeStep es innovador?_**
-- SafeStep combina por primera vez la educación interactiva en primeros auxilios (modelo Coursera) con una tienda virtual especializada (e-commerce), creando un ecosistema donde el aprendizaje genera necesidad de equipamiento, y el equipamiento motiva a completar el aprendizaje. Este modelo de negocio ofrece ventajas significativas: mayor retención de clientes (los usuarios regresan para aprender y comprar), flujo de ingresos multiple (suscripciones + ventas), y propuesta de valor diferenciada (aprender y Equiparse en un solo lugar).
-
-#### How (Cómo)
-
-- **_¿En qué condiciones los clientes usan nuestros productos?_**
-- Los clientes usan SafeStep cuando identifican que su conocimiento actual es insuficiente, cuando tienen poco tiempo o recursos para acceder a cursos presenciales, o cuando sus instituciones buscan una solución de capacitación escalable y efectiva. También usan la tienda cuando necesitan productos específicos que complementen su aprendizaje.
-
-- **_¿Cómo prefieren los clientes acceder a nuestro producto?_**
-- Los usuarios acceden a SafeStep a través de la web, utilizando computadoras, tablets o smartphones, con una experiencia responsiva y dinámica. La tienda virtual está integrada en la misma plataforma, facilitando el proceso de compra mientras el usuario está en contexto de aprendizaje.
-
-- **_¿Qué llevó al cliente a llegar a esta situación?_**
-- La falta de entrenamiento práctico, la baja retención del conocimiento en cursos previos, la ausencia de simulaciones interactivas, y la dificultad para encontrar productos de calidad confiables en un solo lugar motivaron la necesidad de una herramienta accesible y gamificada para entrenar en primeros auxilios, complementada con una tienda especializada que ofreciera productos seleccionados por expertos.
-
-- **_¿Cómo funciona la integración entre educación y tienda?_**
-- Después de completar cada lección, el usuario recibe recomendaciones personalizadas de productos relevantes para esa técnica específica. Por ejemplo, después de aprender RCP, se sugiere un kit de RCP o bolsa de resucitación; después de aprender sobre quemaduras, se sugiere un gel quemaduras y gasas estériles. Esta integración contextual aumenta significativamente las tasas de conversión.
-
-#### How much (Cuánto)
-
-- **_¿Cuánto afecta el problema al usuario?_**
-- El problema del cliente se da cuando desconoce por completo cómo actuar ante una emergencia, lo que se traduce en tiempo perdido crítico, acciones incorrectas que empeoran la situación y, en última instancia, en un mayor riesgo de lesiones permanentes o muerte evitable.
-
-- **_¿Cuánto estarían dispuestos a pagar los usuarios por productos de calidad?_**
-- Los estudios de mercado demuestran que las personas están dispuestas a invertir en su seguridad y la de su familia. El mercado de productos de primeros auxilios en Perú representa una oportunidad significativa, con familias que anualmente gastan en pharmacies locales sin acceso a orientación experta. SafeStep ofrece productos curados por especialistas, con educación incluida, lo que justifica un premium en precio.
-
-- **_¿Cuánto representa el mercado potencial de la tienda virtual?_**
-- Considerando los tres segmentos objetivo y sus necesidades específicas de equipamiento, el mercado potencial incluye: estudiantes que necesitan botiquines portátiles (S/ 50-150 por unidad), familias que necesitan botiquines domésticos (S/ 100-300 por unidad), y brigadistas que requieren equipos profesionales (S/ 200-500 por unidad). El mercado total representa millones de soles anuales en Perú.
-
-<div align="center">
-  <p>
-    <b>Gráfico 1</b>: Caracterización de los encuestados según indicadores referidos a capacitación, motivación y autopercepción del conocimiento sobre primeros auxilios
-  </p>
-  <img src="../../assets/images/chapter-1/grafico-1.png" alt="Gráfico 1" />
-  <p>
-    <i><b>Fuente</b>: Caicedo Vega, J. L. & Zumbado Fernández, H. M. (2023).</i>
-  </p>
-</div>
-
-El **Gráfico 1** evidencia que, si bien existe una alta motivación por aprender primeros auxilios (más del 85% de los docentes en los niveles medio y alto de interés) y se reconoce su importancia para el desempeño profesional (87.5% en instituciones privadas y 69.2% en públicas), existe una clara desconexión con la preparación real. El 86% de los educadores evaluados no había recibido capacitación alguna en primeros auxilios, lo que se refleja en que la mayoría subestima su propia falta de preparación: mientras el 62.5% de los docentes de instituciones privadas percibía su autopreparación como "buena", en la realidad sus resultados de conocimiento fueron predominantemente insuficientes.
-
-Este punto es crítico, ya que demuestra que el problema no es la falta de interés, sino la ausencia de acceso a herramientas de capacitación efectivas y accesibles que cierran la brecha entre la teoría y la práctica. Además, evidencia que existe una oportunidad adicional: personas motivadas que, además de querer aprender, estarán interesadas en adquirir los productos necesarios para put into practice lo que aprendan.
-
----
+Las fuentes revisadas evidencian brechas relevantes en poblaciones específicas, pero no permiten calcular directamente el tamaño del problema o del mercado total de SafeStep. La magnitud para los segmentos seleccionados se estimará con datos secundarios claramente citados y con datos primarios obtenidos durante entrevistas y experimentos. Las cifras de conversión, disposición de pago y recompra se consideran desconocidas hasta ser medidas.
 
 ## 1.2.2. Lean UX Process
 
+El Lean UX Process permite relacionar necesidades de usuarios, resultados de negocio y decisiones de producto mediante ciclos de construcción, medición y aprendizaje. En esta etapa se documentan creencias iniciales; no se presentan como hechos comprobados. Las hipótesis Lean UX de esta sección servirán posteriormente como material de entrada para las preguntas e hipótesis experimentales del Capítulo VIII.
+
 ### 1.2.2.1. Lean UX Problem Statements
 
-Actualmente, la capacitación en primeros auxilios y la adquisición de suministros de emergencia para el público en general se realiza a través de medios fragmentados, costosos o principalmente teóricos.
+#### Domain
 
-Hemos observado que muchas personas no cuentan con preparación práctica suficiente para tomar decisiones rápidas durante una emergencia. Además, el acceso a productos de primera respuesta suele ser disperso, poco claro y sin orientación especializada sobre qué elementos son realmente necesarios para cada situación.
+Educación preventiva digital, práctica simulada de primeros auxilios y preparación responsable ante emergencias cotidianas.
 
-Esto está causando que las personas se sientan inseguras, desinformadas e incapaces de actuar de manera rápida y efectiva ante emergencias cotidianas como RCP, cortes, quemaduras o atragantamientos. Como consecuencia, se incrementa el riesgo de lesiones graves, complicaciones y muertes prevenibles por falta de preparación práctica y equipamiento adecuado.
+#### Customer segments
 
-El problema principal es que los usuarios necesitan estar preparados para actuar ante emergencias comunes, pero enfrentan barreras de tiempo, costo, acceso, práctica continua, retención del conocimiento y disponibilidad de materiales adecuados.
+- **Segmento inicial:** estudiantes universitarios.
+- **Segmentos secundarios:** miembros de comunidades vecinales y brigadistas.
 
-### 1.2.2.2. Lean UX Assumptions.
+Se prioriza inicialmente a estudiantes universitarios porque el equipo puede acceder a participantes de este segmento durante el ciclo académico y porque su familiaridad digital facilita observar el uso de una plataforma web. Esta decisión no supone que sea el segmento con mayor valor comercial; dicha afirmación deberá comprobarse.
 
-#### User
+#### Pain points
 
-- **Estudiantes Universitarios:** Jóvenes con alta afinidad digital, motivados para aprender habilidades prácticas, pero con acceso limitado a capacitación formal y capacidad de pago reducida. Representan también un mercado para botiquines estudiantiles portátiles.
-- **Comunidades Vecinales:** Familias, padres y cuidadores en zonas urbanas y semi-urbanas que buscan proteger a sus seres queridos. Interesados en botiquines domésticos completos y productos de seguridad familiar.
-- **Instructores y Entidades:** Brigadistas, profesionales de salud, universidades y centros comunitarios que buscan una herramienta escalable para capacitar a sus alumnos o comunidades, además de equipos profesionales de emergencia.
+- Acceso limitado a oportunidades de práctica frecuente.
+- Contenidos extensos o pasivos que dificultan mantener la atención.
+- Falta de retroalimentación inmediata.
+- Incertidumbre sobre cuánto se comprende o recuerda.
+- Dificultad para identificar información y productos confiables.
+- Falta de claridad sobre la relación entre progreso, recompensas y aprendizaje.
 
-#### User Outcomes
+#### Gap
 
-- Para **Estudiantes y Comunidades**:
-  - Sentirse preparado para actuar ante una emergencia común (RCP, atragantamiento, quemadura).
-  - Aprender de forma rápida y práctica, sin las barreras de costo, tiempo y logística de los cursos presenciales.
-  - Recordar los procedimientos clave gracias a la práctica mediante simulaciones interactivas.
-  - Adquirir productos de calidad directamente desde la plataforma, con la confianza de que están seleccionados por especialistas.
+Las alternativas existentes pueden ofrecer información, capacitación presencial o venta de productos por separado. La oportunidad identificada consiste en comprobar si una experiencia digital integrada puede facilitar práctica guiada, seguimiento y preparación responsable sin sustituir la formación profesional.
 
-- Para **Instructores y Entidades**:
-  - Llegar a más personas con sus programas de capacitación de manera digital.
-  - Utilizar una herramienta pedagógica probada que mejora los resultados de aprendizaje comparada con charlas teóricas.
-  - Facilitar el seguimiento del progreso de sus alumnos o comunidad.
-  - Ofrecer productos profesionales a sus brigadistas o equipos de emergencia.
+#### Vision and strategy
 
-#### Features
+Chronos busca que SafeStep se convierta en una plataforma de aprendizaje continuo que tome decisiones de producto a partir de evidencia. La estrategia consiste en ofrecer una experiencia web accesible, medir los principales recorridos, probar cambios pequeños y conservar únicamente aquellos que demuestren aportar valor sin comprometer la seguridad ni la autonomía del usuario.
 
-- Simulaciones ramificadas basadas en escenarios reales y cotidianos (hogar, calle, universidad).
-- Diseño responsive para acceso desde cualquier dispositivo (móvil, tablet, computadora), crucial para estudiantes y familias.
-- Micro-lecciones y retroalimentación inmediata para adaptarse a tiempos limitados y reforzar el aprendizaje.
-- Modo sin conexión o de bajo consumo de datos para comunidades con conectividad limitada.
-- Certificados digitales de finalización para motivar a los usuarios y validar el aprendizaje.
-- Catálogo de productos de primeros auxilios integrado en la plataforma.
-- Recomendaciones contextualizadas de productos al completar cada lección.
-- Carrito de compras y proceso de pago integrado.
-- Sistema de entrega a domicilio con seguimiento de pedidos.
+#### Initial segment
 
-#### Needings
+El primer ciclo de descubrimiento y experimentación se enfocará en estudiantes universitarios mayores de edad con acceso habitual a internet y sin requerir experiencia previa en primeros auxilios. Los demás segmentos se investigarán progresivamente y no se asumirán equivalentes.
 
-1. Las personas presentan una deficiencia en la capacidad de respuesta ante emergencias, causada por métodos de enseñanza poco prácticos, manuales extensos y una falta de entrenamiento interactivo que fomente la acción rápida y segura.
+#### Problem statement
 
-2. Los usuarios necesitan superar esa deficiencia aprendiendo a reaccionar de manera segura, confiable y práctica, sin depender de materiales teóricos difíciles de comprender o recordar en situaciones de estrés.
+Hemos observado que estudiantes universitarios interesados en primeros auxilios disponen de información, pero cuentan con pocas oportunidades accesibles para practicar decisiones y recibir retroalimentación. Esto puede producir una diferencia entre su confianza percibida y su desempeño en escenarios simulados. SafeStep explorará si una experiencia web interactiva, clara y repetible mejora la finalización, la comprensión y la disposición a continuar practicando. El éxito se evaluará mediante métricas previamente definidas y no solo mediante opiniones positivas.
 
-3. Una aplicación interactiva que simule emergencias reales, ofrezca retroalimentación inmediata y permita acceso multiplataforma (móvil, tablet, web) para practicar y reforzar conocimientos de primeros auxilios.
+### 1.2.2.2. Lean UX Assumptions
 
-4. Personas con interés en mejorar su preparación ante emergencias (estudiantes, padres, trabajadores, voluntarios), así como instructores y centros de salud que buscan digitalizar su enseñanza y hacerla más accesible.
+#### Business assumptions
 
-5. El cliente espera corregir su deficiencia de reacción mediante un aprendizaje práctico, confiable y accesible, que lo prepare de verdad para actuar correctamente en situaciones críticas.
+- Existe interés en una experiencia digital complementaria de aprendizaje de primeros auxilios.
+- Una parte de los usuarios podría valorar servicios avanzados o productos relacionados, pero su disposición de pago es desconocida.
+- La sostenibilidad dependerá de retención, uso recurrente y confianza, no únicamente de registros o visitas.
+- Integrar educación y comercio podría aportar conveniencia, pero también generar desconfianza si la recomendación no es transparente.
 
-6. Los usuarios también necesitan acceso a productos de calidad para estar verdaderamente preparados: botiquines, vendas, antisépticos, guantes, y equipos especializados que no siempre están disponibles o que son difíciles de encontrar.
+#### User assumptions
 
-7. Redes sociales de alta difusión y aprendizaje visual (Facebook, Instagram, TikTok, YouTube) para captar usuarios interesados en educación rápida, práctica y digital.
+- Los estudiantes universitarios utilizan con familiaridad aplicaciones web y experiencias gamificadas.
+- Los usuarios valoran explicaciones breves y retroalimentación inmediata.
+- La confianza declarada puede diferir del desempeño observable.
+- Los brigadistas tienen necesidades diferentes de las personas sin formación previa.
+- Los miembros de comunidades vecinales pueden priorizar claridad, accesibilidad y aplicación en el hogar.
 
-8. Plataformas de salud y educación como Cruz Roja Digital, First Aid by British Red Cross, o Udemy, que ofrecen formación teórica, pero con limitada interactividad y sin integración de productos.
+#### Problem assumptions
 
-9. El mayor riesgo es la deficiencia funcional del producto (errores, fallas de compatibilidad o simulaciones imprecisas), lo cual se abordará con test de usuarios, control de calidad previo al lanzamiento y actualizaciones continuas basadas en retroalimentación real.
+- La falta de práctica frecuente contribuye a errores y olvido.
+- Parte del contenido disponible es percibido como extenso, fragmentado o difícil de aplicar.
+- Los usuarios necesitan comprender los límites de una simulación digital.
+- El sistema actual puede no explicar suficientemente la relación entre misiones, recompensas, progreso y aprendizaje.
 
-10. Asumimos que la falta de entrenamiento práctico puede ser compensada eficazmente mediante simulaciones digitales interactivas, capaces de replicar la toma de decisiones y la presión emocional de una emergencia real, ayudando así a reducir la deficiencia de reacción ante situaciones críticas.
+#### Solution assumptions
 
-11. Asumimos que la integración de tienda virtual incrementará el valor percibido de la plataforma y generará un flujo de ingresos adicional que hará sostenible el modelo de negocio.
+- Los escenarios ramificados pueden favorecer la práctica de toma de decisiones.
+- La retroalimentación inmediata puede ayudar a reconocer errores.
+- La repetición y el progreso visible pueden promover continuidad.
+- La gamificación puede motivar, aunque también podría distraer.
+- Mostrar fuentes y criterios de revisión puede aumentar la confianza.
+- Explicar por qué se recomienda un producto puede ser mejor recibido que mostrar una recomendación sin contexto.
 
-#### Main quests
+#### Risks and knowledge gaps
 
-1. **_¿Quién es el usuario?_**
+- No se conoce la frecuencia real con la que los usuarios repetirán simulaciones.
+- No se conoce qué elementos de gamificación aportan valor educativo.
+- No se conoce la disposición de pago ni la intención real de compra.
+- No se ha comprobado que las recomendaciones comerciales mejoren la experiencia.
+- No se ha medido la retención del aprendizaje en el tiempo.
+- Existe riesgo de que el usuario interprete la plataforma como sustituto de capacitación profesional.
+- Existe riesgo de sesgo si la muestra se limita a compañeros cercanos al equipo.
 
-- Por una parte, las personas que desean aprender primeros auxilios de manera práctica. Por otra parte, instructores y centros de salud que quieren usar la app para ofrecer cursos y comunicarse con estudiantes. Adicionalmente, los mismos usuarios son potenciales compradores de la tienda virtual.
+### 1.2.2.3. Lean UX Hypothesis Statements
 
-2. **_¿Dónde encaja nuestro producto? ¿En su trabajo o vida?_**
+Las siguientes hipótesis son preliminares y deberán transformarse en diseños experimentales con hipótesis nula, medidas, condiciones y escala en el Capítulo VIII.
 
-- Encaja en la vida diaria de las personas, ya que las emergencias ocurren en cualquier momento y la app les permitirá estar preparados. También encaja en el trabajo de instructores y profesionales de salud que deseen enseñar de forma digital. La tienda encaja en la necesidad de mantener un botiquín actualizado y completo.
+#### LH-01 — Claridad del primer uso
 
-3. **_¿Qué problema tiene nuestro producto?_**
+Creemos que explicar, antes de la primera simulación, el objetivo educativo, el funcionamiento de las decisiones y el significado de las recompensas ayudará a los estudiantes universitarios sin experiencia previa. Sabremos que existe evidencia favorable cuando aumente la proporción de usuarios que inicia y completa su primera simulación sin incrementar la tasa de abandono.
 
-- El riesgo de fallos técnicos en la simulación y la dificultad de posicionar la app en un mercado donde existen aplicaciones conocidas. Además, la gestión de inventario y logística de la tienda virtual representa un desafío operativo. Esto se soluciona con pruebas constantes, actualizaciones, alianzas con proveedores confiables y estrategias de drop shipping initially.
+#### LH-02 — Retroalimentación accionable
 
-4. **_¿Cómo debe reflejarse nuestro producto?_**
+Creemos que una retroalimentación que explique el motivo de cada decisión ayudará a los usuarios que completan simulaciones. Sabremos que existe evidencia favorable cuando disminuyan los errores repetidos en un segundo intento comparable.
 
-- Como una fuente de conocimiento confiable, práctica y accesible que permita a los usuarios aprender y practicar primeros auxilios de forma segura, complementada por una tienda especializada que ofrezca productos curados por expertos.
+#### LH-03 — Confianza y trazabilidad
 
-5. **_¿Cuál es la intención de nuestra aplicación?_**
+Creemos que mostrar fuentes, fecha de revisión y límites educativos aumentará la confianza informada en SafeStep. Sabremos que existe evidencia favorable cuando los usuarios identifiquen correctamente el propósito y los límites de la plataforma y aumente su intención de continuar practicando.
 
-- Satisfacer a los usuarios con un método de capacitación innovador que los prepare para responder en emergencias reales y, al mismo tiempo, brindar un espacio a instructores para difundir su conocimiento y una plataforma de compras para adquirir los productos necesarios.
+#### LH-04 — Gamificación con sentido educativo
 
-6. **_¿Qué características son importantes?_**
+Creemos que relacionar misiones e insignias con objetivos de aprendizaje concretos motivará la práctica recurrente sin desviar la atención hacia recompensas aisladas. Sabremos que existe evidencia favorable cuando aumente la repetición voluntaria de simulaciones y se mantenga o mejore el desempeño.
 
-- Compatibilidad con cualquier dispositivo móvil (iOS, Android) y versión web.
-- Simulaciones interactivas fáciles de usar.
-- Diseño minimalista y claro para no abrumar al usuario.
-- Información validada por expertos en primeros auxilios.
-- Catálogo de productos con descripciones detalladas y precios competitivos.
-- Proceso de compra seguro y entrega confiable.
+#### LH-05 — Recomendaciones transparentes
 
-### 1.2.2.3. Lean UX Hypothesis Statements.
-
-**Creemos** que incorporar simulaciones que reproduzcan emergencias reales evolucionará la enseñanza tradicional de primeros auxilios, pasando de la teoría a la práctica digital guiada.
-**Sabremos** que esto es cierto
-**Cuando** el 80% de los usuarios logre ejecutar correctamente protocolos básicos (RCP, Heimlich, control de hemorragias) en una prueba posterior al uso de la app.
-
-**Creemos** que un sistema de retroalimentación inmediata, adaptado a las decisiones del usuario, potenciará la autoconfianza y la retención práctica del conocimiento, transformando la app en un entrenador digital personalizado.
-**Sabremos** que esto es cierto
-**Cuando** los usuarios reporten un incremento del 30% en su autoconfianza y una reducción del 40% en errores repetidos entre sesiones consecutivas.
-
-**Creemos** que ofrecer una plataforma ligera, responsive y de bajo consumo de datos permitirá que comunidades con recursos limitados accedan a capacitación práctica sin barreras tecnológicas, lo cual representa una evolución inclusiva en la educación en salud.
-**Sabremos** que esto es cierto
-**Cuando** más del 70% de las interacciones provengan de dispositivos móviles y se mantenga una tasa de retención mensual superior al 60% en zonas con conectividad baja.
-
-**Creemos** que integrar un sistema de microlecciones personalizadas y recordatorios automáticos basados en el desempeño del usuario mantendrá el aprendizaje activo a largo plazo, una evolución frente a la capacitación puntual y olvidadiza.
-**Sabremos** que esto es cierto
-**Cuando** el 50% de los usuarios complete al menos una sesión de refuerzo dentro de los 30 días posteriores a la primera práctica.
-
-**Creemos** que integrar un espacio para instructores afiliados con paneles de seguimiento y analítica de progreso permitirá escalar la formación sin perder personalización.
-**Sabremos** que esto es cierto
-**Cuando** el 70% de los instructores adopten la plataforma y reporten una reducción del 40% en la gestión de cursos junto con un aumento del 50% en estudiantes capacitados.
-
-**Creemos** que un modelo freemium con acceso gratuito a simulaciones básicas y certificados digitales mediante suscripción hará sostenible la expansión del aprendizaje y democratizará la capacitación práctica.
-**Sabremos** que esto es cierto
-**Cuando** al menos el 15% de los usuarios gratuitos se conviertan en suscriptores premium en seis meses, motivados por la certificación digital y los escenarios avanzados.
-
-**Creemos** que permitir entrenar sin conexión y sincronizar avances automáticamente expandirá el alcance de la educación en primeros auxilios a zonas rurales o semi-urbanas, fortaleciendo la misión social del proyecto.
-**Sabremos** que esto es cierto
-**Cuando** el 25% de las sesiones de práctica se realicen en modo offline y los usuarios reporten una satisfacción mayor al 85% con la funcionalidad.
-
-**Creemos** que integrar un sistema de analítica del desempeño que mida el tiempo de reacción, decisiones tomadas y errores más frecuentes permitirá ajustar la dificultad de las simulaciones y ofrecer recomendaciones personalizadas.
-**Sabremos** que esto es cierto
-**Cuando** los datos muestren que el 70% de los usuarios reduce sus errores en simulaciones consecutivas, y el 60% de ellos mejore sus tiempos de respuesta tras recibir sugerencias automáticas de la plataforma.
-
-**Creemos** que la integración de una tienda virtual con recomendaciones contextualizadas de productos incrementará las tasas de conversión y hará sostenible el modelo de negocio.
-**Sabremos** que esto es cierto
-**Cuando** al menos el 10% de los usuarios que completen un módulo realicen al menos una compra en la tienda virtual dentro de los 30 días siguientes.
-
-**Creemos** que ofrecer productos seleccionados por especialistas en primeros auxilios generará mayor confianza y lealtad que las compras en farmacias tradicionales.
-**Sabremos** que esto es cierto
-**Cuando** el 70% de los compradores reporten satisfacción superior al 85% con la calidad de los productos recibidos y el 60% realicen una compra de repetición en seis meses.
+Creemos que explicar la relación entre una simulación y un producto no farmacológico recomendado generará mayor comprensión y aceptación que una recomendación sin justificación. Sabremos que existe evidencia favorable cuando aumente la interacción informada con la recomendación sin reducir la confianza en el contenido educativo.
 
 ### 1.2.2.4. Lean UX Canvas
 
+El Lean UX Canvas actualizado sintetiza el estado de la estrategia y diferencia las capacidades actuales de las hipótesis pendientes de comprobación.
+
 <div align="center">
   <p>
-    <b>Gráfico 2</b>: Lean UX Canvas
+    <b>Gráfico 2.</b> Lean UX Canvas actualizado de SafeStep
   </p>
-  <img src="../../assets/images/chapter-1/grafico-2.png" alt="Gráfico 2" />
+  <img src="../../assets/images/chapter-1/lean-ux-canvas-v2.png" alt="Lean UX Canvas de SafeStep con problema y resultados de negocio, usuarios, beneficios, ideas de solución, hipótesis, aprendizajes prioritarios y experimentos mínimos" />
   <p>
-    <i><b>Fuente</b>: Elaboración propia</i>
+    <i><b>Fuente:</b> elaboración propia.</i>
   </p>
 </div>
 
+El canvas establece como aprendizaje prioritario determinar si un onboarding contextual mejora la finalización y la comprensión de la primera simulación. Para obtener evidencia con el menor trabajo útil, propone comparar una condición de control con una variante que incorpora el onboarding y medir exposición, inicio, finalización, abandono y comprensión.
 
+Las posibles soluciones futuras —como modo offline, suscripción premium o un portal completo para instructores— no se presentan como capacidades actuales ni forman parte de este primer experimento.
 
-
-
-
+El canvas se revisará después de cada ciclo de aprendizaje. Los cambios deberán sustentarse con resultados del Question Backlog, los experimentos y las entrevistas, evitando convertir una observación aislada en una conclusión general.

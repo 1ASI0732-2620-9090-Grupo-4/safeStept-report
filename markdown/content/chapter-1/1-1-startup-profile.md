@@ -12,21 +12,27 @@
 
 ## 1.1.1. Descripción de la Startup
 
-**SafeStep** es una aplicación web interactiva que revoluciona la forma en que las personas aprenden primeros auxilios. A través de una estructura pedagógica organizada en módulos y lecciones, los usuarios pueden capacitarse de manera autónoma y práctica. Cada módulo contiene múltiples lecciones, y cada lección sigue una metodología de aprendizaje en tres etapas: primero se presenta la teoría escrita con pasos detallados para resolver emergencias específicas, luego se refuerza el aprendizaje mediante videos demostrativos que muestran la aplicación práctica de los procedimientos, y finalmente se evalúa el conocimiento adquirido a través de pruebas interactivas que verifican la comprensión del usuario. Los módulos incluyen temas fundamentales como RCP (reanimación cardio-pulmonar), quemaduras, cortes y hemorragias, atragantamientos, fracturas y lesiones traumáticas, emergencias médicas comunes como ataques cardíacos o convulsiones, y situaciones específicas según el entorno (hogar, trabajo, vía pública).
+**Chronos** es una startup académica de base tecnológica conformada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas. El equipo se orienta al diseño y desarrollo de productos digitales relacionados con la educación preventiva, la preparación ciudadana y el uso responsable de la tecnología en situaciones de emergencia. Su trabajo integra investigación de usuarios, diseño de experiencia, desarrollo de software, pruebas, despliegue y aprendizaje basado en evidencia.
 
-La plataforma ofrece una tienda virtual integrada donde los usuarios pueden adquirir productos de primeros auxilios directamente desde la aplicación. Esta funcionalidad permite que, después de aprender los procedimientos teóricos y prácticos, los usuarios puedan Equiparse con los elementos necesarios para estar preparados ante cualquier emergencia. La tienda ofrece productos seleccionados especialmente para complementar el aprendizaje: botiquines de primeros auxilios de diferentes tamaños y capacidades, vendas, gasas, antisépticos, tijeras de emergencia, guantes descartables, termómetros, dispositivos de RCP (bolsas de resucitación), y kits especializados para el hogar, el auto o la oficina.
+El producto principal de Chronos es **SafeStep**, una plataforma web para el aprendizaje y la práctica guiada de primeros auxilios. SafeStep busca reducir la distancia entre conocer un procedimiento y ser capaz de tomar decisiones ordenadas ante una situación simulada. Para ello, la solución utiliza escenarios interactivos, alternativas de decisión, retroalimentación inmediata, registro del progreso y elementos de gamificación.
+
+La versión actual de SafeStep incluye autenticación de usuarios, catálogo y ejecución de simulaciones, historial de intentos, progreso, insignias, misiones, ranking, SafeCoins, certificados internos y una tienda virtual con productos, carrito, pedidos y pago mediante Stripe Checkout. La plataforma también dispone de una landing page pública para comunicar el problema, la propuesta de valor y las características del producto.
+
+SafeStep es una herramienta educativa complementaria. No sustituye la capacitación práctica impartida por profesionales acreditados, la evaluación médica, los protocolos oficiales ni la comunicación con los servicios de emergencia. El contenido y las recomendaciones del producto deben revisarse periódicamente y mantener trazabilidad hacia fuentes confiables.
 
 ### Modelo de Negocio
 
-SafeStep implementa un modelo de negocio híbrido que combina dos fuentes de ingresos complementarias. La primera fuente es similar al modelo de Coursera: la plataforma ofrece cursos gratuitos con contenido básico de primeros auxilios, mientras que los módulos avanzados, certificaciones oficiales y contenido premium requieren suscripción. Este modelo permite democratizar el acceso a la educación en primeros auxilios para todo público, generando ingresos recurrentes mediante suscripciones mensuales o anuales. La segunda fuente de ingresos proviene de la tienda virtual integrada, donde se comercializan productos físicos de primeros auxilios. Esta integración vertical permite ofrecer una experiencia completa al usuario: aprende los procedimientos y, si lo desea, adquiere los productos necesarios para aplicarlos en la vida real. La combinación de ambos modelos crea un ciclo virtuoso donde el aprendizaje genera necesidad de Equipamiento, y el equipamiento motiva a completar el aprendizaje.
+Chronos plantea para SafeStep un modelo de negocio digital híbrido. La primera fuente potencial de ingresos corresponde a la comercialización de productos e insumos no farmacológicos de primeros auxilios mediante la tienda integrada. La segunda fuente potencial corresponde a servicios digitales de valor agregado, como contenidos avanzados, rutas de aprendizaje y funcionalidades de seguimiento. Esta segunda fuente todavía constituye una hipótesis de negocio y no debe interpretarse como una suscripción implementada ni como una certificación oficial.
+
+La sostenibilidad del modelo dependerá de comprobar, mediante investigación y experimentos, si los usuarios perciben valor en la práctica digital, si las recomendaciones contextuales facilitan decisiones de compra responsables y si existe disposición real de pago. Por ello, las tasas de conversión, recompra, retención y adopción se tratarán como métricas por medir, no como resultados alcanzados.
 
 ### Misión
 
-Brindar a comunidades, familias, estudiantes y trabajadores una herramienta digital accesible y práctica que permita aprender primeros auxilios mediante una metodología estructurada de módulos y lecciones con teoría, videos y evaluaciones, complementada con una tienda virtual que ofrece productos de calidad para que estén preparados ante cualquier emergencia cotidiana, contribuyendo a salvar vidas en Latinoamérica.
+Facilitar el aprendizaje continuo y responsable de primeros auxilios mediante experiencias digitales accesibles, interactivas y basadas en evidencia, ayudando a que estudiantes, familias y brigadistas fortalezcan su preparación ante emergencias cotidianas.
 
 ### Visión
 
-Ser la plataforma líder en capacitación en primeros auxilios en Latinoamérica, reconocida por innovar en educación preventiva mediante metodologías interactivas y por ofrecer productos de calidad que permitan a las personas estar verdaderamente preparadas ante cualquier emergencia, desde el hogar hasta los espacios públicos.
+Ser una plataforma latinoamericana de referencia en educación preventiva digital, reconocida por la calidad de sus experiencias de aprendizaje, su enfoque inclusivo y el uso ético de datos para mejorar continuamente la preparación de sus usuarios.
 
 ## 1.1.2. Perfiles de integrantes del equipo
 
@@ -81,7 +87,6 @@ Ser la plataforma líder en capacitación en primeros auxilios en Latinoamérica
   </tr>
 
 </table>
-
 
 
 
