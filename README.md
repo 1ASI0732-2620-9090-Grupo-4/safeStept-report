@@ -49,7 +49,7 @@
         <td align="center">Melgarejo Quiroz, Josep Eliu</td>
       </tr>
       <tr>
-        <td align="center">U202113310/td>
+        <td align="center">U202113310</td>
         <td align="center">Tello Palacios, Fabrizio Rafael</td>
       </tr>
     </tbody>
