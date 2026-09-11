@@ -10,7 +10,7 @@
 
 # 3.2. Impact Mapping
 
-Este impact mapping representa el resumen de todo lo obtenido por las historias de usuario escogidas de tal manera que se examina el user gol principal y cada de unos de los 3 segmentos objetivo donde se reparten por impacts y deliverables. Donde el primero se enfoca en lo que el usuario le impactará o beneficiará a través de lo que consiga con la plataforma y el segundo acerca de lo que s ele entregará al usuario en cuanto a la aplicación.
+Este impact mapping representa el resumen de todo lo obtenido por las historias de usuario escogidas de tal manera que se examina el user gol principal y cada de unos de los 3 segmentos objetivo donde se reparten por impacts y deliverables. Donde el primero se enfoca en lo que el usuario le impactará o beneficiará a través de lo que consiga con la plataforma y el segundo acerca de lo que se le entregará al usuario en cuanto a la aplicación.
 
 <div align="center">
   <p>

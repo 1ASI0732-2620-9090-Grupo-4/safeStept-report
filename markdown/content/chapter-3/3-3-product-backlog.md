@@ -112,7 +112,7 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
         <tr>
             <td align="center">13</td>
             <td align="center">US32</td>
-            <td>Filtrar productos por categoria</td>
+            <td>Filtrar productos por categoría</td>
             <td>Como usuario, quiero filtrar productos por categoría para ver solo productos de un tipo específico.</td>
             <td align="center">3</td>
         </tr>
@@ -189,7 +189,7 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
         <tr>
             <td align="center">24</td>
             <td align="center">US43</td>
-            <td>Leer resenas de productos</td>
+            <td>Leer reseñas de productos</td>
             <td>Como usuario, quiero leer reseñas de otros usuarios para decidir mejor mi compra.</td>
             <td align="center">2</td>
         </tr>
@@ -559,24 +559,17 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
         </tr>
     </tbody>
 </table>
-**Referencia del Product Backlog en la herramienta seleccionada:**
 
-- **Herramienta utilizada:** [Completar herramienta utilizada]
-- **URL pública del Product Backlog:** [Insertar URL pública del Product Backlog]
+- **Herramienta utilizada:** Jira
+
+- **URL pública del Product Backlog:** [Jira Team-4 Public Workspace](https://upc-team-experimentos.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiZjZiZTMzZDI2MGNmNDc4MmE4YjA0OWM4NzRkY2Y1NDAiLCJwIjoiaiJ9)
 
 <div align="center">
   <p>
-    <b>Figura X</b>: Captura del Product Backlog en la herramienta seleccionada
+    Captura del Product Backlog en la herramienta seleccionada
   </p>
-  <img src="../../assets/images/chapter-3/product-backlog-tool.png" alt="Product Backlog en herramienta seleccionada" />
+  <img src="../../assets/images/chapter-3/product-backlog-tool.png" alt="Product Backlog en herramienta seleccionada"/>
   <p>
     <i><b>Fuente</b>: Elaboración propia</i>
   </p>
 </div>
-
-
-
-
-
-
-
