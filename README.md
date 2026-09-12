@@ -37,12 +37,12 @@
     </thead>
     <tbody>
       <tr>
-        <td align="center">U20241C030</td>
-        <td align="center">Ayala Fernandez, Jorge Brayan</td>
+        <td align="center">U201913639</td>
+        <td align="center">Palacios Jáuregui, Kalid Jesus</td>
       </tr>
       <tr>
-        <td align="center">U20231B781</td>
-        <td align="center">Flores Eusebio, Angel Thyago</td>
+        <td align="center">U201817507</td>
+        <td align="center">Sanchez Arenas, Manuel Angel</td>
       </tr>
       <tr>
         <td align="center">U202315165</td>
@@ -104,15 +104,15 @@
     - [2.3.2. User Task Matrix](./markdown/content/chapter-2/2-3-needfinding.md)
     - [2.3.3. User Journey Mapping](./markdown/content/chapter-2/2-3-needfinding.md)
     - [2.3.4. Empathy Mapping](./markdown/content/chapter-2/2-3-needfinding.md)
-    - 2.3.5. As-is Scenario Mapping
+    - [2.3.5. As-is Scenario Mapping](./markdown/content/chapter-2/2-3-needfinding.md)
   - [2.4. Ubiquitous Language](./markdown/content/chapter-2/2-5-ubiquitous-language.md)
 
 - **Capítulo III: Requirements Specification**
 
-  - 3.1. To-Be Scenario Mapping
-  - [3.2. User Stories](./markdown/content/chapter-3/3-1-user-stories.md)
-  - [3.3. Product Backlog](./markdown/content/chapter-3/3-3-product-backlog.md)
-  - [3.4. Impact Mapping](./markdown/content/chapter-3/3-2-impact-mapping.md)
+  - [3.1. To-Be Scenario Mapping](./markdown/content/chapter-3/3-1-to-be-scenario-mapping.md)
+  - [3.2. User Stories](./markdown/content/chapter-3/3-2-user-stories.md)
+  - [3.3. Impact Mapping](./markdown/content/chapter-3/3-3-impact-mapping.md)
+  - [3.4. Product Backlog](./markdown/content/chapter-3/3-4-product-backlog.md)
 
 - **Capítulo IV: Product Design**
 

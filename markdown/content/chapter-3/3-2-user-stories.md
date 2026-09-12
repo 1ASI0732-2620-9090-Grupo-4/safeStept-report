@@ -8,7 +8,7 @@
 <br>
 <br>
 
-# 3.1. User Stories
+# 3.2. User Stories
 
 En esta sección se presentan las épicas, user stories y technical stories que guían el desarrollo de SafeStep. Las historias se redactan desde la perspectiva del usuario o del equipo de desarrollo, siguiendo la estructura **Como [rol], quiero [necesidad], para [beneficio]**, con el fin de relacionar cada requerimiento con un valor concreto para el producto.
 

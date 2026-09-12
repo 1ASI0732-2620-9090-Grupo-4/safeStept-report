@@ -354,8 +354,14 @@ Cada mapa busca responder las preguntas centrales del diseño centrado en el usu
   </p>
 </div>
 
+### 2.3.5. As-is Scenario Mapping
 
-
-
-
-
+<div align="center">
+  <p>
+    Escenario As-Is elaborado en Miro.
+  </p>
+  <img src="../../assets/images/chapter-2/as-is-scenario-mapping.jpg" alt="As-Is Scenario Map de SafeStep" />
+  <p>
+    <i><b>Fuente:</b> elaboración propia.</i>
+  </p>
+</div>
