@@ -12,12 +12,12 @@
 
 El Product Backlog de SafeStep organiza las historias de usuario y technical stories de acuerdo con el valor que aportan al negocio y al desarrollo progresivo del producto. El orden de la tabla representa la priorización del backlog: primero se ubican las historias de la landing page, porque permiten comunicar la propuesta de valor y deben considerarse desde el primer sprint; luego se ubican las funcionalidades tipo CRUD y comercio; después el core de negocio, compuesto por dashboard, simulaciones, progreso y gamificación; posteriormente las technical stories necesarias para sostener la arquitectura; y finalmente la gestión de usuario e IAM.
 
-Cada elemento incluye su estimación en story points utilizando la escala Fibonacci solicitada: **1, 2, 3, 5 u 8**. La columna **Orden** indica la prioridad relativa dentro del Product Backlog.
+Cada elemento incluye su estimación en story points utilizando la escala Fibonacci solicitada: **1, 2, 3, 5 u 8**. La columna **# Orden** indica la prioridad relativa dentro del Product Backlog y coincide con **Priority** en 3.2.
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <thead>
         <tr>
-            <th align="center"><b>Orden</b></th>
+            <th align="center"><b># Orden</b></th>
             <th align="center"><b>User Story Id</b></th>
             <th align="center"><b>Título</b></th>
             <th align="center"><b>Descripción</b></th>

@@ -12,60 +12,56 @@
 
 ## 2.2.1. Diseño de entrevistas
 
-### Guía de preguntas para Estudiantes.
+Las diez entrevistas documentadas se realizaron previamente con un guion exploratorio. Para no alterar el registro histórico, la siguiente **guía revisada** organiza las preguntas que deben emplearse en nuevas sesiones o entrevistas complementarias. Los resúmenes de 2.2.2 se redactaron a partir de los registros originales y solo usan respuestas disponibles; no afirman que estas nuevas preguntas se hayan aplicado. La ausencia de respuesta se registra como dato no documentado.
 
-1. ¿Cuál es tu nombre y cuántos años tienes?
-2. ¿Dónde vives y a qué te dedicas?
-3. ¿Has recibido alguna capacitación en primeros auxilios dentro de tu Universidad? ¿Cómo fue esa experiencia?
-4. ¿Qué tan preparado te sientes actualmente para actuar en una emergencia dentro o fuera del campus?
-5. ¿Qué tan importante consideras que es que un estudiante tenga conocimientos de primeros auxilios?
-6. ¿Qué tipo de emergencias te preocupan más dentro de tu entorno estudiantil (ej. desmayos, accidentes en laboratorios, deportes)?
-7. ¿Qué dispositivos usas más para estudiar (celular, laptop, tablet)?
-8. ¿Qué aplicaciones o plataformas usas para capacitarte o estudiar en línea?
-9. ¿Qué elemento te generaría más confianza para usar esta aplicación: certificación, facilidad de uso, o calidad de la simulación?
-10. ¿Prefieres aprender de manera individual, en grupo o mediante simulaciones interactivas? ¿Por qué?
-11. ¿Cómo imaginas que una app o web de simulaciones podría ayudarte a aprender mejor primeros auxilios?
-12. Si tuvieras esta app, ¿la recomendarías a tus compañeros? ¿Qué parte crees que les llamaría más la atención?
-13. ¿Cuánto estarías dispuesto a pagar por un curso virtual con simulaciones interactivas (rango en soles)?
+**Objetivo:** comprender comportamientos actuales de aprendizaje y práctica, barreras, dispositivos, fuentes de confianza y contexto personal antes de presentar SafeStep. Primero se preguntan experiencias pasadas y tareas concretas; al final se exploran reacciones a una posible solución, sin asumir interés, pago o eficacia. La persona puede omitir preguntas. Se debe explicar el propósito, solicitar autorización para grabar y para publicar imágenes o nombres, y separar ese permiso del consentimiento para participar. La fecha, modalidad, duración y permiso deben quedar en una ficha de campo; no se reconstruyen retroactivamente.
 
-### Guía de preguntas para comunidades vecinales.
+### Guía revisada: estudiantes universitarios
 
-1. ¿Cuál es tu edad, nombre y cuántos años tienes?
-2. ¿Dónde vives y a qué te dedicas?
-3. ¿Has recibido alguna vez una capacitación en primeros auxilios por parte de tu comunidad, municipalidad o Defensa Civil?
-4. ¿Qué tan preparado crees que está tu vecindario frente a una emergencia como incendios, sismos o accidentes domésticos?
-5. ¿Qué tipo de emergencias son más frecuentes en tu comunidad?
-6. ¿Tienes algún rol en la organización vecinal (ej. dirigente, voluntario, participante en actividades de seguridad)?
-7. ¿Usas con frecuencia un smartphone o computadora? ¿Qué tipo de aplicaciones sueles usar más?
-8. ¿Qué limitaciones o barreras crees que tendrías para capacitarte en primeros auxilios (tiempo, costo, falta de información, tecnología)?
-9. ¿Te interesa más aprender individualmente o en talleres grupales con tus vecinos? ¿Por qué?
-10. ¿Crees que tu comunidad estaría dispuesta a pagar una suscripción o licencia para tener acceso a este tipo de capacitaciones?
-11. ¿Qué tan cómodo te sentirías usando una aplicación de simulaciones de primeros auxilios en tu celular?
-12. ¿Qué esperas de una capacitación digital en primeros auxilios para tu comunidad?
-13. ¿Qué te motivaría más a recomendar esta aplicación a otros vecinos?
-14. ¿Cómo crees que esta aplicación podría fortalecer la unión y preparación de tu comunidad frente a emergencias?
+1. ¿Qué edad tienes, en qué distrito vives, qué estudias y cómo es una semana habitual de estudio? ¿Hay responsabilidades familiares o laborales que afecten tu tiempo?
+2. Cuéntame la última vez que buscaste información o capacitación en primeros auxilios. ¿Qué necesitabas resolver, dónde buscaste y cómo decidiste si la fuente era confiable?
+3. ¿Qué cursos o charlas has recibido? ¿Qué recuerdas haber practicado y qué no pudiste practicar?
+4. Piensa en una emergencia que te preocupe en la universidad, el hogar o el transporte. ¿Qué harías primero y en qué parte dudarías?
+5. ¿Qué te dificulta aprender o repasar? ¿Qué te motiva a continuar y qué te hace abandonar?
+6. ¿Qué dispositivos, navegador, aplicaciones y canales digitales usas para aprender? ¿Hay problemas de conectividad, accesibilidad o costo?
+7. ¿Prefieres aprender solo, con otras personas o mediante ejercicios? Describe una experiencia concreta que te haya funcionado.
+8. ¿Qué instituciones, personas, marcas o señales influyen en tu confianza en contenido de salud? ¿Qué significado atribuyes a una constancia o certificación?
+9. Después de describir la idea de una simulación digital: ¿qué beneficio, riesgo o duda ves? ¿Qué necesitarías comprobar antes de usarla o recomendarla?
+10. Solo si tiene sentido para la persona: ¿por qué recurso educativo has pagado realmente? ¿Qué condiciones deberían darse para considerar pagar por este tipo de aprendizaje?
 
-### Guía de preguntas para brigadistas.
+### Guía revisada: miembros de comunidades vecinales
 
-1. ¿Podría indicarme su nombre completo, edad y lugar de procedencia?
-2. ¿Cuál es su ocupación actual y en qué tipo de institución se desempeña como brigadista?
-3. ¿Qué nivel de formación en primeros auxilios posee hasta el momento?
-4. ¿Con qué frecuencia recibe capacitaciones o actualizaciones en primeros auxilios?
-5. Según su experiencia, ¿qué tan efectivas han sido las capacitaciones presenciales que ha recibido?
-6. ¿Qué tipo de emergencias atiende con mayor frecuencia en su institución?
-7. ¿Suele utilizar aplicaciones móviles o plataformas web para reforzar sus conocimientos en primeros auxilios?
-8. ¿Qué tan útil considera que sería una aplicación con simulaciones para mejorar sus habilidades como brigadista?
-9. Desde su experiencia, ¿qué limitaciones identifica en las capacitaciones actuales (por ejemplo, costos, tiempo, logística, escasa práctica realista)?
-10. ¿Qué funcionalidades le gustaría que incluya una aplicación digital de primeros auxilios (por ejemplo, escenarios realistas, certificaciones, evaluaciones, ranking)?
-11. ¿Prefiere realizar simulaciones prácticas en grupo o de manera individual? ¿Por qué?
-12. ¿Qué importancia tendría para usted que la aplicación ofrezca certificaciones válidas reconocidas por su institución?
-13. ¿Estaría dispuesto a pagar personalmente o recomendar a su institución que invierta en una licencia para este servicio?
-14. ¿Qué rango de precios consideraría razonable para este tipo de capacitación digital?
-15. ¿Qué institución o respaldo considera fundamental para confiar en una aplicación de primeros auxilios (por ejemplo, Ministerio de Salud, Cruz Roja, Defensa Civil)?
+1. ¿Qué edad tienes, en qué distrito vives, a qué te dedicas y con quiénes compartes responsabilidades de cuidado o seguridad? ¿Participas en alguna organización vecinal?
+2. Describe una situación reciente de accidente o preparación ante emergencias en tu comunidad. ¿Qué hicieron tú y tus vecinos?
+3. ¿Dónde han aprendido primeros auxilios o recibido simulacros? ¿Qué les resultó útil y qué quedó sin resolver?
+4. ¿Cómo buscan y comprueban información cuando tienen dudas? ¿Qué instituciones, personas o medios influyen en sus decisiones?
+5. ¿Qué impide que tú o tus vecinos participen en capacitaciones: tiempo, costo, distancia, conectividad, lenguaje u otras razones? Da ejemplos.
+6. ¿Qué tareas preferirías hacer individualmente y cuáles con el grupo? ¿Por qué?
+7. ¿Qué dispositivos, navegador, aplicaciones y canales de comunicación usas? ¿Cuáles emplea habitualmente el grupo?
+8. ¿Qué te haría confiar o desconfiar de una capacitación digital? ¿Qué tendría que demostrar antes de recomendarla?
+9. Al final, después de explicar una posible simulación: ¿qué utilidad concreta ves y qué no resolvería?
+10. ¿Quién toma decisiones de gasto en el hogar o la organización? ¿Existe alguna compra o capacitación previa comparable? No asumir disposición a pagar.
+
+### Guía revisada: brigadistas
+
+1. ¿Qué edad tienes, dónde vives, cuál es tu ocupación y qué institución, rol y experiencia efectiva tienes como brigadista?
+2. Describe una capacitación reciente: frecuencia, contenidos, práctica, evaluación, fuentes y actualización de protocolos.
+3. ¿Qué situaciones has atendido o practicado? Sin identificar pacientes, relata cómo se coordina el equipo y qué decisiones resultan difíciles.
+4. ¿Cómo repasas entre capacitaciones? ¿Qué documentos, aplicaciones, dispositivos, navegador y canales digitales usas?
+5. ¿Qué limitaciones observas en la formación actual? Distingue tiempo, costo, logística, realismo y diferencias de experiencia entre integrantes.
+6. ¿Qué criterios e instituciones consideras fiables? ¿Cómo verificas versiones de protocolos y qué acreditación es necesaria para tu rol?
+7. ¿Cuándo es preferible practicar individualmente y cuándo en equipo? Da un ejemplo de cada caso.
+8. Después de presentar una posible simulación digital: ¿qué tareas podría apoyar y cuáles exigirían práctica presencial supervisada?
+9. ¿Qué evidencia necesitarías para recomendarla? ¿Quién decide una eventual compra o licencia y con qué presupuesto comprobado?
+10. ¿Hay características personales, responsabilidades o condiciones de conectividad que cambien tu forma de capacitarte? Solo registrar lo que la persona quiera compartir.
+
+**Datos para arquetipos:** edad, distrito, ocupación, experiencia, objetivos, frustraciones, habilidades, preferencias, influencias, marcas, familia y personalidad se documentan solo si fueron preguntados y respondidos. No se deducen de fotografías, género ni lugar de residencia. Las preguntas sobre productos y certificaciones distinguen explícitamente reconocimientos internos de acreditaciones profesionales.
 
 ## 2.2.2. Registro de entrevistas
 
-A continuación, se muestra la transcripción, evidencia y resumen de cada entrevista realizada a estudiantes universitarios.
+A continuación se presentan diez entrevistas: cuatro estudiantes universitarios (E01–E04), tres miembros de comunidades vecinales (C01–C03) y tres personas con experiencia como brigadistas (B01–B03). Cada ficha conserva **sin cambios** su imagen, URL y duración, y ahora incluye un resumen descriptivo en lugar de la transcripción pregunta por pregunta. La guía revisada de 2.2.1 no se presenta como el guion históricamente aplicado.
+
+El material actual enlaza videos individuales en YouTube y SharePoint; no se observa en esta sección un video único editado de todas las entrevistas ni marcas de inicio en dicho video. Para cumplir estrictamente el statement, el equipo aún debe producirlo y alojarlo en Microsoft Stream/Clipchamp, comprobar acceso y registrar para cada entrevista el tiempo de inicio y la duración, manteniendo los enlaces originales como evidencia adicional. Las fechas y autorizaciones de publicación tampoco constan en los registros y deben recuperarse del material de campo, no inventarse.
 
 <table align="center">
     <tr>
@@ -99,49 +95,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (E01):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Cuál es tu nombre y cuántos años tienes?</b> <br/>
-            Mi nombre es Nataly Aguilar y tengo 23 años<br/>
-            <br/>
-            <b>¿Dónde vives  y a qué te dedicas?</b> <br/>
-            Vivo en el Callao y soy estudiante de Psicología.<br/>
-            <br/>
-            <b>¿Has recibido alguna capacitación en primeros auxilios dentro de tu Universidad? ¿Cómo fue esa experiencia?</b> <br/>
-            Si he recibido una capacitación, fue muy enriquecedora porque enseñaron primeros auxilios, y cómo actuar ante una emergencia en nuestra casa o institución educativa.<br/>
-            <br/>
-            <b>¿Qué tan preparado te sientes actualmente para actuar en una emergencia dentro o fuera del campus?</b> <br/>
-            En realidad creo que nunca estamos 100% preparados, por eso debemos estar constantemente capacitándolos o averiguando algunas cosas para poder estar a la vanguardia.<br/>
-            <br/>
-            <b>¿Qué tan importante consideras que es que un estudiante tenga conocimientos de primeros auxilios?</b> <br/>
-            Yo creo que es muy importante, no solo para los estudiantes, sino también para todas las personas en general, debemos saber primeros auxilios ya que es esencial.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias te preocupan más dentro de tu entorno estudiantil (ej. desmayos, accidentes en laboratorios, deportes)?</b> <br/>
-            Yo creo que los accidentes que ocurren en los laboratorios, nosotros como estudiantes debemos saber cómo actuar ante una emergencia y poder brindar los primeros auxilios a nuestros compañeros o maestros.<br/>
-            <br/>
-            <b>¿Qué dispositivos usas más para estudiar (celular, laptop, tablet)?</b> <br/>
-            Uso una laptop.<br/>
-            <br/>
-            <b>¿Qué aplicaciones o plataformas usas para capacitarte o estudiar en línea?</b> <br/>
-            Uso zoom, meet y teams.<br/>
-            <br/>
-            <b>¿Qué elemento te generaría más confianza para usar esta aplicación: certificación, facilidad de uso, o calidad de la simulación?</b> <br/>
-            Yo creo que tenga certificación y que sea de fácil uso.<br/>
-            <br/>
-            <b>¿Prefieres aprender de manera individual, en grupo o mediante simulaciones interactivas? ¿Por qué?</b> <br/>
-            Yo prefiero aprender de manera grupal ya que así podemos compartir algunas experiencias, ya que algunos compañeros pueden saber más del tema y podemos intercambiar opiniones.<br/>
-            <br/>
-            <b>¿Cómo imaginas que una app o web de simulaciones podría ayudarte a aprender mejor primeros auxilios?</b> <br/>
-            Que sea de fácil uso e interactiva para que podamos participar.<br/>
-            <br/>
-            <b>Si tuvieras esta app, ¿la recomendarías a tus compañeros? ¿Qué parte crees que les llamaría más la atención?</b> <br/>
-            Claro que sí la recomendaría, yo creo que llamaría más la atención que sea de fácil uso para que cualquier persona pueda utilizar y puedan dar sus opiniones, compartir experiencias y  opiniones.<br/>
-            <br/>
-            <b>¿Cuánto estarías dispuesto a pagar por un curso virtual con simulaciones interactivas (rango en soles)?</b> <br/>
-            Yo creo que sí es un curso que es bueno, puedo pagar entre 100 y 150 soles.<br/>
+            <b>E01 — Nataly Aguilar Ortiz, 23 años, Callao, estudiante de Psicología.</b> Recibió una capacitación universitaria y la consideró útil, pero sostiene que es necesario continuar formándose. Le preocupan los accidentes de laboratorio. Estudia con laptop y usa Zoom, Meet y Teams. Prefiere aprender en grupo para intercambiar experiencias. La facilidad de uso y una certificación le transmitirían confianza. Expresó que consideraría pagar S/100–150 por un curso que juzgue bueno. No constan navegador, responsabilidades familiares, marcas personales ni evidencia de que haya usado SafeStep.
         </td>
     </tr>
 </table>
@@ -178,49 +137,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (E02):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Cuál es tu nombre y cuántos años tienes?</b> <br/>
-            Mi nombre es Mari Elena y tengo 21 años<br/>
-            <br/>
-            <b>¿Dónde vives  y a qué te dedicas?</b> <br/>
-            Vivo en Comas y soy estudiante de la universidad<br/>
-            <br/>
-            <b>¿Has recibido alguna capacitación en primeros auxilios dentro de tu Universidad? ¿Cómo fue esa experiencia?</b> <br/>
-            No he recibido capacitación en la universidad, solo algo básico antes, pero muy breve.<br/>
-            <br/>
-            <b>¿Qué tan preparado te sientes actualmente para actuar en una emergencia dentro o fuera del campus?</b> <br/>
-            Me siento algo preparada pero me faltaría un poco de práctica y seguridad.<br/>
-            <br/>
-            <b>¿Qué tan importante consideras que es que un estudiante tenga conocimientos de primeros auxilios?</b> <br/>
-            Sería muy importante porque cualquiera podría enfrentar una emergencia y poder ayudar a sus compañeros dependiendo de qué caso sea.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias te preocupan más dentro de tu entorno estudiantil (ej. desmayos, accidentes en laboratorios, deportes)?</b> <br/>
-            Creo que serían todos, en especial los accidentes en laboratorios, porque en los trabajos grupales que hacen hay aparatos que son a prueba y pueden lastimar a algunos estudiantes.<br/>
-            <br/>
-            <b>¿Qué dispositivos usas más para estudiar (celular, laptop, tablet)?</b> <br/>
-            Uso mi laptop y mi celular.<br/>
-            <br/>
-            <b>¿Qué aplicaciones o plataformas usas para capacitarte o estudiar en línea?</b> <br/>
-            Entro mediante el aula virtual, también uso el Classroom y el Meet.<br/>
-            <br/>
-            <b>¿Qué elemento te generaría más confianza para usar esta aplicación: certificación, facilidad de uso, o calidad de la simulación?</b> <br/>
-            Creo que sería la calidad de la simulación, porque me hace sentir que practico en una situación real y la certificación porque respalda lo aprendido.<br/>
-            <br/>
-            <b>¿Prefieres aprender de manera individual, en grupo o mediante simulaciones interactivas? ¿Por qué?</b> <br/>
-            Sería con simulaciones, porque se aprende practicando mediante los tutoriales, videos.<br/>
-            <br/>
-            <b>¿Cómo imaginas que una app o web de simulaciones podría ayudarte a aprender mejor primeros auxilios?</b> <br/>
-            Mostrándome casos prácticos y vídeos cortos, de acuerdo a eso ya podría llover y aprender.<br/>
-            <br/>
-            <b>Si tuvieras esta app, ¿la recomendarías a tus compañeros? ¿Qué parte crees que les llamaría más la atención?</b> <br/>
-            Sí la recomendaría, creo que le llamaría más la atención acerca de las simulaciones.<br/>
-            <br/>
-            <b>¿Cuánto estarías dispuesto a pagar por un curso virtual con simulaciones interactivas (rango en soles)?</b> <br/>
-            Primero  comprobaría en una prueba gratuita cómo es el desarrollo de esa app, de acuerdo a eso, le pondría un costo.<br/>
+            <b>E02 — Maria Elena Gamboa Azabache, 21 años, Comas, estudiante universitaria.</b> No recibió capacitación en su universidad; solo tuvo una introducción breve. Se siente parcialmente preparada y considera que necesita práctica. Mencionó accidentes en laboratorios, laptop y celular, aula virtual, Classroom y Meet. Prefiere simulaciones y videos/casos breves; la calidad de la simulación y una certificación le generarían confianza. No fijó un precio: pidió probar primero una versión gratuita. No constan carrera, navegador ni situación familiar.
         </td>
     </tr>
 </table>
@@ -257,49 +179,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (E03):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Cuál es tu nombre y cuántos años tienes?</b> <br/>
-            Mi nombre es Luciana Sanchez y tengo 20 años.<br/>
-            <br/>
-            <b>¿Dónde vives  y a qué te dedicas?</b> <br/>
-            Vivo en San Miguel y soy estudiante de ingeniería de software.<br/>
-            <br/>
-            <b>¿Has recibido alguna capacitación en primeros auxilios dentro de tu Universidad? ¿Cómo fue esa experiencia?</b> <br/>
-            No recibí ninguna capacitación, pero si se de la existencia de ello.<br/>
-            <br/>
-            <b>¿Qué tan preparado te sientes actualmente para actuar en una emergencia dentro o fuera del campus?</b> <br/>
-            Me siento poco preparada debido a que no tiene mucho conocimiento en el tema.<br/>
-            <br/>
-            <b>¿Qué tan importante consideras que es que un estudiante tenga conocimientos de primeros auxilios?</b> <br/>
-            Lo considero muy importante.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias te preocupan más dentro de tu entorno estudiantil (ej. desmayos, accidentes en laboratorios, deportes)?</b> <br/>
-            Me preocupan mas cuando ocurre un atoramiento mientra una persona come.<br/>
-            <br/>
-            <b>¿Qué dispositivos usas más para estudiar (celular, laptop, tablet)?</b> <br/>
-            Uso más mi laptop y tablet.<br/>
-            <br/>
-            <b>¿Qué aplicaciones o plataformas usas para capacitarte o estudiar en línea?</b> <br/>
-            Uso en general el coursera y blackboard.<br/>
-            <br/>
-            <b>¿Qué elemento te generaría más confianza para usar esta aplicación: certificación, facilidad de uso, o calidad de la simulación?</b> <br/>
-            Lo que me genera más confianza sería la calidad de la simulación y la certificación.<br/>
-            <br/>
-            <b>¿Prefieres aprender de manera individual, en grupo o mediante simulaciones interactivas? ¿Por qué?</b> <br/>
-            Todas me parecen bien, porque en todas se fomenta los primeros auxilios y me siento cómoda en todos los casos.<br/>
-            <br/>
-            <b>¿Cómo imaginas que una app o web de simulaciones podría ayudarte a aprender mejor primeros auxilios?</b> <br/>
-            Si, ayudaría mucho, ya que lo podría usar en todos lados, como cuando voy a la universidad o cuando no tengo nada que haces.<br/>
-            <br/>
-            <b>Si tuvieras esta app, ¿la recomendarías a tus compañeros? ¿Qué parte crees que les llamaría más la atención?</b> <br/>
-            Si, claro que lo recomendaría, y lo que más destacaría sería las simulaciones interactivas.<br/>
-            <br/>
-            <b>¿Cuánto estarías dispuesto a pagar por un curso virtual con simulaciones interactivas (rango en soles)?</b> <br/>
-            No estaría dispuesta a pagar más de 18 soles.<br/>
+            <b>E03 — Luciana Celeste Sanchez Silva, 20 años, San Miguel, estudiante de Ingeniería de Software.</b> No recibió capacitación formal y se considera poco preparada. Le preocupa especialmente un episodio de atragantamiento. Usa laptop y tablet, y mencionó Coursera y Blackboard. No eligió una única modalidad de aprendizaje; señaló sentirse cómoda con varias. Valora la calidad de simulación y una certificación. Indicó un máximo de S/18 para el curso hipotético. No constan navegador ni experiencia de uso del producto.
         </td>
     </tr>
 </table>
@@ -336,49 +221,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (E04):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Cuál es tu nombre y cuántos años tienes?</b> <br/>
-            Mi nombre es Alessandro Daniel Bravo Castillo y tengo 20 años.<br/>
-            <br/>
-            <b>¿Dónde vives  y a qué te dedicas?</b> <br/>
-            Vivo en San martin de Porres y actualmente soy estudiante de Ciencias de la computacion en la UPC.<br/>
-            <br/>
-            <b>¿Has recibido alguna capacitación en primeros auxilios dentro de tu Universidad? ¿Cómo fue esa experiencia?</b> <br/>
-            Hasta ahora no he recibido una capacitación formal dentro de la universidad, aunque sí he tenido algunas charlas informativas. Me parecieron útiles, pero siento que fueron muy generales y que me gustaría tener algo más práctico y realista.<br/>
-            <br/>
-            <b>¿Qué tan preparado te sientes actualmente para actuar en una emergencia dentro o fuera del campus?</b> <br/>
-            Me siento medianamente preparado. Conozco lo básico, pero creo que en una situación real podría ponerme nervioso y no saber exactamente qué hacer.<br/>
-            <br/>
-            <b>¿Qué tan importante consideras que es que un estudiante tenga conocimientos de primeros auxilios?</b> <br/>
-            Lo considero muy importante. Nunca sabemos cuándo puede ocurrir un accidente o una emergencia, y tener esos conocimientos puede marcar la diferencia entre ayudar realmente o no saber cómo reaccionar.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias te preocupan más dentro de tu entorno estudiantil (ej. desmayos, accidentes en laboratorios, deportes)?</b> <br/>
-            Me preocupan más los desmayos o mareos, porque suelen pasar de manera inesperada en clases o en el transporte. También los accidentes en talleres o laboratorios, ya que en Diseño Industrial usamos materiales y herramientas que podrían ser riesgosas.<br/>
-            <br/>
-            <b>¿Qué dispositivos usas más para estudiar (celular, laptop, tablet)?</b> <br/>
-            Principalmente uso mi laptop para trabajos y presentaciones, pero también el celular porque es más práctico para revisar información rápida o ver videos.<br/>
-            <br/>
-            <b>¿Qué aplicaciones o plataformas usas para capacitarte o estudiar en línea?</b> <br/>
-            Uso Google Classroom, Canva, YouTube para tutoriales y en algunos cursos Moodle. Para temas específicos me gusta buscar cursos en Coursera o Udemy.<br/>
-            <br/>
-            <b>¿Qué elemento te generaría más confianza para usar esta aplicación: certificación, facilidad de uso, o calidad de la simulación?</b> <br/>
-            Creo que la calidad de la simulación sería lo más importante, porque me daría la sensación de estar realmente practicando. Aunque si además hay certificación, sería un plus enorme.<br/>
-            <br/>
-            <b>¿Prefieres aprender de manera individual, en grupo o mediante simulaciones interactivas? ¿Por qué?</b> <br/>
-            Me gustan más las simulaciones interactivas, porque me ayudan a ponerme en el papel y a practicar como si fuera real. Aprender en grupo también me gusta, pero siento que en emergencias la práctica individual es clave.<br/>
-            <br/>
-            <b>¿Cómo imaginas que una app o web de simulaciones podría ayudarte a aprender mejor primeros auxilios?</b> <br/>
-            Me la imagino como una forma de entrenar en diferentes escenarios sin necesidad de un instructor presente. Sería como un espacio seguro para equivocarme y aprender qué hacer en distintas situaciones.<br/>
-            <br/>
-            <b>Si tuvieras esta app, ¿la recomendarías a tus compañeros? ¿Qué parte crees que les llamaría más la atención?</b> <br/>
-            Sí, definitivamente. Creo que lo que más les llamaría la atención sería poder practicar casos reales desde su celular o laptop, y ver qué tan preparados están para responder.<br/>
-            <br/>
-            <b>¿Cuánto estarías dispuesto a pagar por un curso virtual con simulaciones interactivas (rango en soles)?</b> <br/>
-            Creo que entre 40 a 80 soles sería un rango justo, siempre que el curso sea completo, interactivo y ofrezca algún tipo de certificado.<br/>
+            <b>E04 — Alessandro Daniel Bravo Castillo, 20 años, San Martín de Porres, estudiante universitario.</b> Reportó charlas generales, no capacitación formal. Se siente medianamente preparado y anticipa nerviosismo ante una emergencia; le preocupan desmayos y accidentes de taller o laboratorio. Usa laptop y celular, y mencionó Classroom, Canva, YouTube, Moodle, Coursera y Udemy. Prefiere simulaciones interactivas, aunque también acepta trabajo grupal. Señaló un rango hipotético de S/40–80 condicionado a un curso completo y algún certificado. El registro base menciona dos áreas de estudio distintas; su carrera exacta requiere confirmación.
         </td>
     </tr>
 </table>
@@ -415,52 +263,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (C01):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Cuál es tu nombre y cuántos años tienes?</b> <br/>
-            Mi nombre es Fabrizio Tataje y tengo 27 años..<br/>
-            <br/>
-            <b>¿Dónde vives  y a qué te dedicas?</b> <br/>
-            Vivo en calle Yungas y soy programador independiente y trabajo desde casa.<br/>
-            <br/>
-            <b>¿Has recibido alguna vez una capacitación en primeros auxilios por parte de tu comunidad, municipalidad o Defensa Civil?</b> <br/>
-            De parte de la municipalidad sí.<br/>
-            <br/>
-            <b>¿Qué tan preparado crees que está tu vecindario frente a una emergencia  como incendios, sismos o accidentes domésticos?</b> <br/>
-            No estamos preparados definitivamente como debe ser. Diría que “estamos” preparados un 30-40%.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias son más frecuentes en tu comunidad?</b> <br/>
-            Por el momento no hay emergencias tan riesgosas.<br/>
-            <br/>
-            <b>¿Tienes algún rol en la organización vecinal (ej. dirigente, voluntario, participante en actividades de seguridad)?</b> <br/>
-            No, por el momento no.<br/>
-            <br/>
-            <b>¿Usas con frecuencia un smartphone o computadora? ¿Qué tipo de aplicaciones sueles usar más?</b> <br/>
-            Sí, uso mi iphone y la aplicación que mas uso es instagram.<br/>
-            <br/>
-            <b>¿Qué limitaciones o barreras crees que tendrías para capacitarte en primeros auxilios (tiempo, costo, falta de información, tecnología)?</b> <br/>
-            El tiempo y la falta de información.<br/>
-            <br/>
-            <b>¿Te interesa más aprender individualmente o en talleres grupales con tus vecinos? ¿Por qué?</b> <br/>
-            Me interesa más en talleres con mis vecinos porque creo yo que en grupal sería mejor el aprendizaje.<br/>
-            <br/>
-            <b>¿Crees que tu comunidad estaría dispuesta a pagar una suscripción o licencia para tener acceso a este tipo de capacitaciones?</b> <br/>
-            Sí, sí me parece correcto que tendríamos que pagar un porcentaje para que mejor sea el aprendizaje para cada uno de nosotros.<br/>
-            <br/>
-            <b>¿Qué tan cómodo te sentirías usando una aplicación de simulaciones de primeros auxilios en tu celular?</b> <br/>
-            Sí, me parece muy efectivo, muy conveniente para cada uno de nosotros, para poder actuar en casos de emergencia y creo yo que con unión de todos los vecinos, de toda mi comunidad, es mejor.<br/>
-            <br/>
-            <b>¿Qué esperas de una capacitación digital en primeros auxilios para tu comunidad?</b> <br/>
-            Creo que sería de mejor aprendizaje, para mí y para todos, sería más conveniente, para poder apoyarnos entre toda mi comunidad en casos, de que suceda emergencias, que sea necesario, y conveniente para la protección de cada uno de nosotros o de nuestros hijos.<br/>
-            <br/>
-            <b>¿Qué te motivaría más a recomendar esta aplicación a otros vecinos?</b> <br/>
-            Porque como lo vuelvo a repetir me motivaría porque es conveniente de que deberíamos saber, cada uno de nosotros y estar preparados en casos de emergencia. No solamente incendios, también terremotos o temblores fuertísimos de que a veces hay personas que se caen y necesitamos ahí los primeros auxilios.<br/>
-            <br/>
-            <b>¿Cómo crees que esta aplicación podría fortalecer la unión y preparación de tu comunidad frente a emergencias?</b> <br/>
-            Nos podría fortalecer porque, como la misma  pregunta lo dice, la unión hace la fuerza y el estar preparados en comunidad, estar preparados entre todos nosotros, teniendo el aprendizaje virtualmente, como en la anterior pregunta me hiciste, ya tendríamos la capacitación de cada uno de nosotros poder defendernos en esos casos, de poder apoyarnos.<br/>
+            <b>C01 — Fabrizio Ernesto Tataje, 27 años, San Miguel, programador independiente.</b> Recibió capacitación municipal, no desempeña un rol vecinal formal y considera insuficiente la preparación comunitaria. Identificó tiempo y falta de información como barreras. Usa iPhone e Instagram. Prefiere talleres grupales y asocia la formación con ayuda mutua. Consideraría una contribución comunitaria, pero no dio precio ni evidencia de compra. La entrevista no documenta navegador, situación familiar ni frecuencia de uso de redes.
         </td>
     </tr>
 </table>
@@ -497,52 +305,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (C02):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Cuál es tu nombre y cuántos años tienes?</b> <br/>
-            Mi nombre es Rodrigo Alfaro y tengo 27 años.<br/>
-            <br/>
-            <b>¿Dónde vives  y a qué te dedicas?</b> <br/>
-            Vivo en chorrillos y en estos momentos trabajo en una tienda de reparación de equipos electrónicos.<br/>
-            <br/>
-            <b>¿Has recibido alguna vez una capacitación en primeros auxilios por parte de tu comunidad, municipalidad o Defensa Civil?</b> <br/>
-            No, nunca recibí ninguna capacitación en esos temas.<br/>
-            <br/>
-            <b>¿Qué tan preparado crees que está tu vecindario frente a una emergencia  como incendios, sismos o accidentes domésticos?</b> <br/>
-            Yo creo que no está muy preparado debido a que viven muchas personas mayores que no tienen conocimiento del tema.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias son más frecuentes en tu comunidad?</b> <br/>
-            Los más frecuentes son accidentes domésticos y algún que otro robo.<br/>
-            <br/>
-            <b>¿Tienes algún rol en la organización vecinal (ej. dirigente, voluntario, participante en actividades de seguridad)?</b> <br/>
-            Solo soy voluntario en cualquier actividad importante que haya.<br/>
-            <br/>
-            <b>¿Usas con frecuencia un smartphone o computadora? ¿Qué tipo de aplicaciones sueles usar más?</b> <br/>
-            Si, uso con frecuencia lo que es Instagram, TikTok y WhatsApp.<br/>
-            <br/>
-            <b>¿Qué limitaciones o barreras crees que tendrías para capacitarte en primeros auxilios (tiempo, costo, falta de información, tecnología)?</b> <br/>
-            Más que todo el tiempo, ya que paro ocupado con mi trabajo aun cuando estoy fuera de horario laboral.<br/>
-            <br/>
-            <b>¿Te interesa más aprender individualmente o en talleres grupales con tus vecinos? ¿Por qué?</b> <br/>
-            Me gustaria mas aprender individualmente, ya que me siento mas en paz.<br/>
-            <br/>
-            <b>¿Crees que tu comunidad estaría dispuesta a pagar una suscripción o licencia para tener acceso a este tipo de capacitaciones?</b> <br/>
-            Yo creo que si se habla bien del tema y se informa bien, si estarían dispuestos a pagar una suscripción.<br/>
-            <br/>
-            <b>¿Qué tan cómodo te sentirías usando una aplicación de simulaciones de primeros auxilios en tu celular?</b> <br/>
-            Me sentiría muy cómodo, ya que llevo mi celular a todos lados y podría usar la aplicación cuando yo quiera.<br/>
-            <br/>
-            <b>¿Qué esperas de una capacitación digital en primeros auxilios para tu comunidad?</b> <br/>
-            Espero que se enseñe con calidad y buenos ejemplos de situaciones que podrían evitarse con el debido conocimiento del tema.<br/>
-            <br/>
-            <b>¿Qué te motivaría más a recomendar esta aplicación a otros vecinos?</b> <br/>
-            Me motivaria si la aplicación cuenta con una buena calidad en las simulaciones de primeros auxilios.<br/>
-            <br/>
-            <b>¿Cómo crees que esta aplicación podría fortalecer la unión y preparación de tu comunidad frente a emergencias?</b> <br/>
-            Yo creo que fortalece el aspecto de confianza, ya que si un vecino sufre algun accidente, puede ir corriendo a pedir ayuda a sus vecinos sabiendo que ya tienen conocimiento de cómo solucionar su problema.<br/>
+            <b>C02 — Rodrigo Nicolas Alfaro Mancilla, 27 años, Chorrillos, trabajador de reparación electrónica.</b> No recibió capacitación; participa como voluntario cuando hay actividades relevantes. Considera poco preparado a su vecindario e identifica accidentes domésticos entre los casos comunes. Señaló falta de tiempo, usa Instagram, TikTok y WhatsApp, y prefiere aprender individualmente. Cree que una suscripción podría aceptarse si se explica su valor, pero no comprometió una compra propia. No consta marca de teléfono, navegador ni configuración familiar.
         </td>
     </tr>
 </table>
@@ -579,52 +347,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (C03):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Cuál es tu nombre y cuántos años tienes?</b> <br/>
-            Mi nombre es Rodrigo Andres Gonzales Portugal, tengo 20 años.<br/>
-            <br/>
-            <b>¿Dónde vives  y a qué te dedicas?</b> <br/>
-            Vivo en San Miguel, Lima, y soy estudiante de Comunicación Audiovisual.<br/>
-            <br/>
-            <b>¿Has recibido alguna vez una capacitación en primeros auxilios por parte de tu comunidad, municipalidad o Defensa Civil?</b> <br/>
-            No de manera formal, aunque sí he participado en charlas o simulacros de sismos organizados por el colegio y la municipalidad. Pero siento que faltan talleres más prácticos y constantes.<br/>
-            <br/>
-            <b>¿Qué tan preparado crees que está tu vecindario frente a una emergencia  como incendios, sismos o accidentes domésticos?</b> <br/>
-            Creo que estoy medianamente preparado. Todos sabemos lo básico de evacuar en un sismo, pero si ocurriera un incendio o un accidente doméstico grave, no estoy seguro de que sepamos actuar rápido y de la mejor manera.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias son más frecuentes en tu comunidad?</b> <br/>
-            Lo más común son los sismos, por el contexto del país, y también algunos accidentes domésticos como caídas o cortes.<br/>
-            <br/>
-            <b>¿Tienes algún rol en la organización vecinal (ej. dirigente, voluntario, participante en actividades de seguridad)?</b> <br/>
-            No tengo un rol fijo, pero sí participo en simulacros y actividades que organiza la comunidad cuando me entero.<br/>
-            <br/>
-            <b>¿Usas con frecuencia un smartphone o computadora? ¿Qué tipo de aplicaciones sueles usar más?</b> <br/>
-            Sí, uso bastante ambos. Principalmente redes sociales como Instagram y TikTok, además de plataformas educativas como Google Drive o Zoom para mis estudios.<br/>
-            <br/>
-            <b>¿Qué limitaciones o barreras crees que tendrías para capacitarte en primeros auxilios (tiempo, costo, falta de información, tecnología)?</b> <br/>
-            La principal barrera sería el tiempo, porque entre la universidad y mis proyectos a veces se me complica. El costo también podría ser un factor, pero más que nada la falta de información sobre dónde capacitarse.<br/>
-            <br/>
-            <b>¿Te interesa más aprender individualmente o en talleres grupales con tus vecinos? ¿Por qué?</b> <br/>
-            Creo que talleres grupales serían mejores, porque permiten practicar juntos, aprender del error de otros y además fortalecen la unión entre vecinos.<br/>
-            <br/>
-            <b>¿Crees que tu comunidad estaría dispuesta a pagar una suscripción o licencia para tener acceso a este tipo de capacitaciones?</b> <br/>
-            Algunos sí, sobre todo si el precio es accesible y ven el valor real. Pero pienso que muchos preferirían que fuera apoyado por la municipalidad o alguna institución.<br/>
-            <br/>
-            <b>¿Qué tan cómodo te sentirías usando una aplicación de simulaciones de primeros auxilios en tu celular?</b> <br/>
-            Bastante cómodo, porque ya estoy acostumbrado a usar apps para casi todo. Mientras sea fácil de usar y práctica, me parecería útil.<br/>
-            <br/>
-            <b>¿Qué esperas de una capacitación digital en primeros auxilios para tu comunidad?</b> <br/>
-            Espero que sea interactiva, que muestre casos reales y que nos enseñe qué hacer paso a paso. Algo que no sea solo teoría, sino práctica aplicada a situaciones comunes.<br/>
-            <br/>
-            <b>¿Qué te motivaría más a recomendar esta aplicación a otros vecinos?</b> <br/>
-            Que realmente funcione, es decir, que nos dé seguridad y confianza para actuar. Si además ofrece certificación o reconocimiento, creo que muchos la recomendaríamos.<br/>
-            <br/>
-            <b>¿Cómo crees que esta aplicación podría fortalecer la unión y preparación de tu comunidad frente a emergencias?</b> <br/>
-            Podría ser un punto de encuentro digital que nos permita capacitarnos juntos, compartir experiencias y sentirnos más preparados como grupo. Eso generaría más confianza entre vecinos y una mejor respuesta en emergencias.<br/>
+            <b>C03 — Rodrigo Andres Gonzales Portugal, 20 años, San Miguel, estudiante de Comunicación Audiovisual.</b> Participó en charlas o simulacros, pero no en una capacitación formal de primeros auxilios. Describe una preparación vecinal insuficiente para accidentes graves; mencionó sismos, caídas y cortes. Tiempo, costo y falta de información son barreras. Usa smartphone y computadora, Instagram, TikTok, Google Drive y Zoom. Prefiere talleres grupales y considera valioso compartir experiencias; cree que algunos vecinos podrían pagar si perciben valor, aunque muchos preferirían apoyo municipal. No se registró una decisión real de compra.
         </td>
     </tr>
 </table>
@@ -661,55 +389,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (B01):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Podría indicarme su nombre completo, edad y lugar de procedencia?</b> <br/>
-            Mi nombre es Gian Marco Chavez Lopez tengo 20 años y vivo en Independencia.<br/>
-            <br/>
-            <b>¿Cuál es su ocupación actual y en qué tipo de institución se desempeña como brigadista?</b> <br/>
-            Actualmente soy teniente del cuerpo general de bomberos voluntarios del Perú, y pertenezco a la Compañía de Bomberos France 3.<br/>
-            <br/>
-            <b>¿Qué nivel de formación en primeros auxilios posee hasta el momento?</b> <br/>
-            Hasta el momento tengo la certificación de soporte básico de vida en primeros auxilios.<br/>
-            <br/>
-            <b>¿Con qué frecuencia recibe capacitaciones o actualizaciones en primeros auxilios?</b> <br/>
-            No tenemos una frecuencia, ya que como bomberos no nos destacamos en un solo ámbito, tenemos que llevar cursos a lo largo del tiempo de diferentes áreas.<br/>
-            <br/>
-            <b>Según su experiencia, ¿qué tan efectivas han sido las capacitaciones presenciales que ha recibido?</b> <br/>
-            Bastantes buenas, enriquecedoras.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias atiende con mayor frecuencia en su institución?</b> <br/>
-            Incendios, rescates vehiculares, emergencias médicas y rescates en altura.<br/>
-            <br/>
-            <b>¿Suele utilizar aplicaciones móviles o plataformas web para reforzar sus conocimientos en primeros auxilios?</b> <br/>
-            Suelo usar aplicaciones pero no son precisas para primeros auxilios sino que me permiten acceder a documentos, PDF, y demás.<br/>
-            <br/>
-            <b>¿Qué tan útil considera que sería una aplicación con simulaciones para mejorar sus habilidades?</b> <br/>
-            Sería bastante bueno, ya que pues dentro del proceso de aprendizaje después de haber recibido una capacitación ya sea teórico o práctico, lo que queremos después es contrastar esos conocimientos con algún tipo de prueba y a la mayoría de bomberos están mal acostumbrados a esperar a que la emergencia ocurra para recién poner en práctica lo aprendido, sin darse cuenta que esto puede y es peligroso porque ya en el momento hay mucho en riesgo como para llegar a ese punto a practicar recién, deberíamos tener una forma de poder practicar sin necesidad de llegar a esos riesgos.<br/>
-            <br/>
-            <b>Desde su experiencia, ¿qué limitaciones identifica en las capacitaciones actuales?</b> <br/>
-            Que la mayoría de personas no vienen con las mismas ganas de aprender, algunas ya tienen un conocimiento mucho más amplio del tema y eso hace que le presten poca atención, por ejemplo: venga un enfermero o un doctor y que menosprecie quizás la capacitación o la herramienta.<br/>
-            <br/>
-            <b>¿Qué funcionalidades le gustaría que incluya una aplicación digital de primeros auxilios?</b> <br/>
-            Que tenga la capacidad de bajar el contenido, que pueda funcionar sin conexión a internet para evitar distracciones, que ofrezca diferentes tipos de herramientas educativas para poder absorber mejor la información y que permita en una modalidad quizás en línea poder a través de un juego lúdico e interactivo poder también interactuar con otro estudiante y reforzar entre dos el tema.<br/>
-            <br/>
-            <b>¿Prefiere realizar simulaciones prácticas en grupo o de manera individual? ¿Por qué?</b> <br/>
-            Yo creo que cada modalidad tiene sus ventajas y desventajas, y también cada una tiene un impacto distinto, no se puede descartar una u otra, tienen que ir de la mano.<br/>
-            <br/>
-            <b>¿Qué importancia tendría para usted que la aplicación ofrezca certificaciones válidas reconocidas por su institución?</b> <br/>
-            Sería muy importante porque hoy en día existe algo que se llama “trazabilidad de la información” y también como en todos lados hay una mezcla de ideas, desconocimientos también que necesita un curso para ser válido, quizás una certificación a nivel internacional o nivel nacional reconocida por alguna institución no solamente le da validez al estudio sino también le brinden al estudiante las ganas de querer aprender por esa compensación, que es la certificación.<br/>
-            <br/>
-            <b>¿Estaría dispuesto a pagar personalmente o recomendar a su institución que invierta en una licencia para este servicio?</b> <br/>
-            Por supuesto que sí.<br/>
-            <br/>
-            <b>¿Qué rango de precios consideraría razonable para este tipo de capacitación digital?</b> <br/>
-            Creo que si la modalidad es híbrida, osea clases en línea y ya clases pregrabadas, yo pienso que de entre 10 a 20 dólares mensuales puede ser un buen inicio.<br/>
-            <br/>
-            <b>¿Qué institución o respaldo considera fundamental para confiar en una aplicación de primeros auxilios?</b> <br/>
-            Puede ser la AHA, puede ser también instituciones nacionales como el Ministerio de Salud, internacionales como NFPA.<br/>
+            <b>B01 — Gian Marco Chavez Lopez, 20 años, Independencia, bombero voluntario.</b> Declaró formación en soporte básico de vida y explicó que la actualización no tiene una frecuencia fija. Valora la capacitación presencial, pero desea ensayar conocimientos sin esperar una emergencia real. Consulta documentos digitales y propone contenido descargable, actividades colaborativas y herramientas educativas variadas. Considera importante el respaldo institucional y mencionó AHA, MINSA y NFPA. Dio un rango hipotético de US$10–20 al mes para una modalidad híbrida; no convertirlo a soles ni atribuirlo a una app aislada.
         </td>
     </tr>
 </table>
@@ -746,55 +431,12 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (B02):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Podría indicarme su nombre completo, edad y lugar de procedencia?</b> <br/>
-            Mi nombre es Juan Miguel Barrios Casanova, tengo 20 años y actualmente vivo en Lima-Perú.<br/>
-            <br/>
-            <b>¿Cuál es su ocupación actual y en qué tipo de institución se desempeña como brigadista?</b> <br/>
-            Bueno, actualmente soy estudiante, pero he realizazdo como brigadista en la Municipalidad de Lima anteriormente.<br/>
-            <br/>
-            <b>¿Qué nivel de formación en primeros auxilios posee hasta el momento?</b> <br/>
-            Bueno, hasta el momento llevé la formación básica, cómo reanimnación y en casos de no peligro. <br/>
-            <br/>
-            <b>¿Con qué frecuencia recibe capacitaciones o actualizaciones en primeros auxilios?</b> <br/>
-            Bueno, actualmente recibo capacitaciones 2 veces al mes.<br/>
-            <br/>
-            <b>Según su experiencia, ¿qué tan efectivas han sido las capacitaciones presenciales que ha recibido?</b> <br/>
-            Bueno, han sido muy efectivas en cuánto a la explicación y el aprendizaje.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias atiende con mayor frecuencia en su institución?</b> <br/>
-            En eventos organizados por la municipalidad misma, las emergencias que atendí fueron descomposición, deshidratación o insolación.<br/>
-            <br/>
-            <b>¿Suele utilizar aplicaciones móviles o plataformas web para reforzar sus conocimientos en primeros auxilios?</b> <br/>
-            He usado algunos vídeos explicativos.<br/>
-            <br/>
-            <b>¿Qué tan útil considera que sería una aplicación con simulaciones para mejorar sus habilidades?</b> <br/>
-            Bueno, sería muy útil la verdad, ya que a veces los videos en los que recibimos capacitaciones no terminan de explicar de buena manera ciertas circunstancias.<br/>
-            <br/>
-            <b>Desde su experiencia, ¿qué limitaciones identifica en las capacitaciones actuales?</b> <br/>
-            Pues, principalmente diría la práctica realista, ya que normalmente las capacitaciones que recibo son más teóricas que prácticas.<br/>
-            <br/>
-            <b>¿Qué funcionalidades le gustaría que incluya una aplicación digital de primeros auxilios?</b> <br/>
-            Bueno más que nada, modelado 3D, es decir, que la aplicación me muestre como actuar ante una circunstancia o emergencias en la que yo puedo comprender correctamente como actuar.<br/>
-            <br/>
-            <b>¿Prefiere realizar simulaciones prácticas en grupo o de manera individual? ¿Por qué?</b> <br/>
-            Bueno, yo prefiero practicar en grupo, ya que individualmente no he sentido un avance en tema de aprendizaje, en este caso en el tema de primeros auxilios. <br/>
-            <br/>
-            <b>¿Qué importancia tendría para usted que la aplicación ofrezca certificaciones válidas reconocidas por su institución?</b> <br/>
-            Sería muy importante, ya que sería una forma de validad el como yo u otros brigadistas han tomado las capacitaciones correctas.<br/>
-            <br/>
-            <b>¿Estaría dispuesto a pagar personalmente o recomendar a su institución que invierta en una licencia para este servicio?</b> <br/>
-            Por supuesto que sí.<br/>
-            <br/>
-            <b>¿Qué rango de precios consideraría razonable para este tipo de capacitación digital?</b> <br/>
-            Dependería un poco en que esté centrano la aplicación, pero yo diría que entre unos 20 soles aproximandamente.<br/>
-            <br/>
-            <b>¿Qué institución o respaldo considera fundamental para confiar en una aplicación de primeros auxilios?</b> <br/>
-            Bueno, diría que sería la MINSA, ya que se encarga de controlar y estandarizar el sistema de salud a nivel nacional, y con el respaldo de esta institución pública sería una forma sencilla que se estandarice el uso de un aplicativo para capacitaciones de primeros auxilios.<br/>
+            <b>B02 — Juan Miguel Barrios Casanova, 20 años, Lima, estudiante y exbrigadista municipal.</b> Refirió formación básica y capacitación dos veces al mes, con uso de videos. Percibe insuficiente práctica realista y prefiere el entrenamiento grupal. Sugirió demostraciones/modelado 3D y certificación reconocida; mencionó al MINSA como posible respaldo. Su precio aproximado fue S/20, condicionado al enfoque del producto. La experiencia fue previa, por lo que no debe describirse como brigadista actualmente activo.
         </td>
     </tr>
 </table>
@@ -831,155 +473,71 @@ A continuación, se muestra la transcripción, evidencia y resumen de cada entre
     </tr>
     <tr>
         <td colspan="2" align="center">
-            <b>Transcripción:</b>
+            <b>Resumen de la entrevista (B03):</b>
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <b>¿Podría indicarme su nombre completo, edad y lugar de procedencia?</b> <br/>
-            Mi nombre es Diego Alonso León Lino, tengo 20 años y soy de Lima, Perú.<br/>
-            <br/>
-             <b>¿Cuál es su ocupación actual y en qué tipo de institución se desempeña como brigadista?</b> <br/>
-             Actualmente soy estudiante universitario y me encuentro cursando mi carrera profesional. Anteriormente fui brigadista en mi colegio, donde participé en actividades relacionadas con primeros auxilios, apoyo en emergencias y prevención de riesgos.
-            <br/>
-            <br/>
-            <b>¿Qué nivel de formación en primeros auxilios posee hasta el momento?</b> <br/>
-            Hasta el momento he llevado una capacitación de nivel intermedio en primeros auxilios, donde aprendí temas importantes como RCP, control de hemorragias, atención ante desmayos, fracturas leves y respuesta inicial frente a diferentes tipos de emergencia.<br/>
-            <br/>
-            <b>¿Con qué frecuencia recibe capacitaciones o actualizaciones en primeros auxilios?</b> <br/>
-            Normalmente recibimos capacitaciones cada 4 o 6 meses, aunque depende bastante de la programación institucional. A veces también se realizan pequeños refuerzos cuando ocurre alguna situación importante o cuando se actualizan los protocolos.<br/>
-            <br/>
-            <b>Según su experiencia, ¿qué tan efectivas han sido las capacitaciones presenciales que ha recibido?</b> <br/>
-            Considero que las capacitaciones presenciales han sido bastante efectivas porque permiten practicar directamente y eso ayuda mucho más que solo la teoría.<br/>
-            <br/>
-            <b>¿Qué tipo de emergencias atiende con mayor frecuencia en su institución?</b> <br/>
-            Las emergencias que más atendemos suelen ser desmayos, caídas, golpes leves, cortes pequeños, crisis nerviosas y algunos casos de problemas respiratorios.<br/>
-            <br/>
-            <b>¿Suele utilizar aplicaciones móviles o plataformas web para reforzar sus conocimientos en primeros auxilios?</b> <br/>
-            No suelo utilizar aplicaciones móviles ni plataformas web para reforzar primeros auxilios, porque considero que aprender de forma práctica y presencial es mucho más útil. Pienso que practicar directamente ayuda a reaccionar mejor en una emergencia real, ya que no es lo mismo leer un procedimiento que aplicarlo en el momento cuando alguien necesita ayuda.<br/>
-            <br/>
-            <b>¿Qué tan útil considera que sería una aplicación con simulaciones para mejorar sus habilidades como profesional del sector salud?</b> <br/>
-            Creo que una aplicación con simulaciones sería muy útil porque ayudaría a practicar cómo actuar en una emergencia sin esperar que pase una de verdad. Eso serviría para reaccionar más rápido, tener más seguridad y no quedarse en blanco en el momento.<br/>
-            <br/>
-            <b>Desde su experiencia, ¿qué limitaciones identifica en las capacitaciones actuales (por ejemplo, costos, tiempo, logística, escasa práctica realista)?</b> <br/>
-            Las principales limitaciones que veo son el poco tiempo disponible, la baja frecuencia de las capacitaciones y la falta de simulaciones realmente realistas. En muchos casos, todo se enfoca más en la explicación y casi no se practica como sería en una situación real.<br/>
-            <br/>
-            <b>¿Qué funcionalidades le gustaría que incluya una aplicación digital de primeros auxilios (por ejemplo, escenarios realistas, certificaciones, evaluaciones, ranking)?</b></b> <br/>
-            Me gustaría que la aplicación tenga evaluaciones prácticas, respuestas inmediatas sobre los errores o aciertos, certificaciones válidas y una actualización constante de los protocolos de primeros auxilios.<br/>
-            <br/>
-            <b>¿Prefiere realizar simulaciones prácticas en grupo o de manera individual? ¿Por qué?</b> <br/>
-            Prefiero las simulaciones en grupo porque ayudan al trabajo en equipo durante una emergencia.
-            <br/>
-            <br/>
-            <b>¿Qué importancia tendría para usted que la aplicación ofrezca certificaciones válidas reconocidas por su institución?</b> <br/>
-            Sería muy importante que la aplicación ofrezca certificaciones reconocidas por la institución, porque eso genera mayor confianza.<br/>
-            <br/>
-            <b>¿Estaría dispuesto a pagar personalmente o recomendar a su institución que invierta en una licencia para este servicio?</b> <br/>
-            Sí, estaría dispuesto a recomendarlo e incluso sugerir a mi institución que invierta en este tipo de servicio, ya que sería una buena forma de mejorar la preparación en primeros auxilios.<br/>
-            <br/>
-            <b>¿Qué rango de precios consideraría razonable para este tipo de capacitación digital?</b> <br/>
-            Considero que un rango razonable estaría entre 30 y 80 soles mensuales por usuario, dependiendo de lo que ofrezca la aplicación.
-            <br/>
-            <br/>
-            <b>¿Qué institución o respaldo considera fundamental para confiar en una aplicación de primeros auxilios?</b> <br/>
-            Considero que el respaldo del Ministerio de Salud garantizaría la validez del contenido y daría mayor confianza al momento de utilizar la aplicación.<br/>
+            <b>B03 — Diego Alonso León Lino, 20 años, Lima, estudiante y exbrigadista escolar.</b> Reportó capacitación intermedia y refuerzos cada cuatro o seis meses, según la programación. Prefiere la práctica presencial y grupal, aunque ve utilidad complementaria en simulaciones digitales con evaluación y retroalimentación. Identifica tiempo, baja frecuencia y realismo como barreras. Considera importante un respaldo institucional; mencionó al MINSA. Dio un rango hipotético de S/30–80 mensuales por usuario según la oferta. Su rol de brigadista fue anterior, no actual.
         </td>
     </tr>
 </table>
 
 ## 2.2.3. Análisis de entrevistas
 
-Se realizaron 10 entrevistas semiestructuradas distribuidas en tres segmentos objetivo identificados previamente: Estudiantes Universitarios (4 entrevistas), Comunidad Vecinal (3 entrevistas) y Brigadistas/Profesionales de Salud (3 entrevistas). El análisis cuantifica las respuestas para identificar patrones representativos que sustenten la construcción de arquetipos de usuario.
+Se analizaron diez entrevistas semiestructuradas: cuatro estudiantes (E01–E04), tres miembros de comunidades vecinales (C01–C03) y tres personas con experiencia actual o previa como brigadistas (B01–B03). Los códigos remiten a los registros y resúmenes anteriores. Para cada porcentaje se muestra el numerador y denominador del **segmento entrevistado**, no de la población peruana. Una mención cuenta solo si aparece en la respuesta; ausencia de mención no significa desacuerdo. Las preguntas originales incluyen opciones sugeridas y descripciones de la solución, por lo que las preferencias declaradas pueden estar inducidas.
 
-### Segmento: Estudiantes universitarios
+### Estudiantes universitarios — n = 4
 
-**Total entrevistados**: 4
+| Dimensión observada | Resultado en la muestra | Evidencia |
+| --- | --- | --- |
+| Edad | 20–23 años; media 21 años | E01: 23; E02: 21; E03: 20; E04: 20 |
+| Capacitación universitaria formal declarada | 1/4 (25 %). E02 menciona una introducción breve y E04 charlas generales, pero no las equiparamos a capacitación formal | E01–E04 |
+| Uso de laptop para estudiar | 4/4 (100 %); celular explícito en 2/4 (50 %) y tablet en 1/4 (25 %) | E01–E04; celular: E02, E04; tablet: E03 |
+| Preocupación por accidentes de laboratorio/taller | 3/4 (75 %) | E01, E02, E04 |
+| Aprendizaje considerado importante | 4/4 (100 %) | E01–E04 |
+| Preferencia declarada | Simulación: 2/4; grupo: 1/4; sin modalidad única: 1/4 | E02, E04; E01; E03 |
+| Confianza condicionada a una certificación | 4/4 mencionan certificación; 3/4 también mencionan calidad de simulación. Esto **no** prueba que aceptarían un certificado interno de SafeStep como equivalente | E01–E04 |
 
-#### _Características objetivas_
+**Lectura cualitativa:** E03 afirma sentirse poco preparada; E02 y E04 describen preparación parcial y necesidad de práctica; E01 subraya que la preparación requiere actualización. E04 teme bloquearse ante una emergencia. Estas son percepciones, no mediciones de habilidad. Los precios no son comparables ni promediables: E01 mencionó S/100–150, E03 un máximo de S/18, E04 S/40–80 condicionados, y E02 pidió una prueba gratuita antes de valorar el precio. Para el User Persona estudiantil son sostenibles el contexto universitario, el uso de laptop, la preocupación por practicar y la variabilidad de preferencias; no lo son una marca específica, estado civil o un precio «típico».
 
-- **Edad**: 19-23 años (promedio 21 años)
-- **Dispositivos de estudio**: 100% usa laptop (4/4), 75% complementa con celular (3/4)
-- **Capacitación previa en Primeros Auxilios**: 25% recibió capacitación (1/4), 75% no recibió formación completa (3/4)
-- **Plataformas digitales utilizadas**: 100% usa plataformas educativas (Zoom, Meet, Teams, Classroom, Coursera).
-- **Tipo de emergencia que más preocupa**: Accidentes en laboratorios (3 de 4 lo mencionan) que es el 75 %.
-- **Elemento que genera más confianza en una app**: El 100% menciona que la certificación y calidad de simulación.
-- **Disposición a pagar**: Entre 18 y 150 soles (promedio: 72 soles).
-- **Preferencias de aprendizaje**: 50% prefiere simulaciones interactivas, 25% prefiere aprendizaje grupal, 25% se siente cómoda con todas las modalidades
+### Miembros de comunidades vecinales — n = 3
 
-#### _Características subjetivas_
+| Dimensión observada | Resultado en la muestra | Evidencia |
+| --- | --- | --- |
+| Edad | 20–27 años; media 24,7 años | C01: 27; C02: 27; C03: 20 |
+| Capacitación municipal declarada | 1/3 (33 %); C03 participó en charlas/simulacros sin formación formal | C01; C03 |
+| Barrera de tiempo | 3/3 (100 %) | C01–C03 |
+| Falta de información sobre capacitación | 2/3 (67 %) | C01, C03 |
+| Costo como posible barrera | 1/3 (33 %) | C03 |
+| Preferencia por talleres grupales | 2/3 (67 %); aprendizaje individual: 1/3 (33 %) | C01, C03; C02 |
+| Uso de canales digitales o redes | 3/3 mencionan aplicaciones; solo C01 y C03 identifican explícitamente el smartphone | C01–C03 |
 
-- **Se sienten poco o medianamente preparadas ante emergencias**: 75% (3/4)
-  - "Me siento poco preparada debido a que no tengo mucho conocimiento en el tema" – Luciana (Entrevista 3)
-  - "Me siento medianamente preparada. Conozco lo básico, pero creo que en una situación real podría ponerme nerviosa" – Sofía (Entrevista 4)
+**Lectura cualitativa:** C01 y C02 consideran insuficiente la preparación de sus vecinos. C03 se describe a sí mismo como medianamente preparado y duda de la respuesta ante incidentes graves; no corresponde codificarlo como una respuesta idéntica sobre todo el vecindario. C01 propone una contribución; C02 y C03 plantean pago condicionado al valor percibido, la explicación o el apoyo institucional. No existe una compra observada ni un precio consensuado. Las situaciones citadas difieren: C01 no reporta emergencias graves frecuentes, C02 menciona accidentes domésticos y C03 añade sismos, caídas y cortes. No debe afirmarse unanimidad sobre tipos de emergencia.
 
-- **Importancia atribuida**: 100% considera "muy importante" tener conocimientos de primeros auxilios (4/4)
-  - "Lo considero muy importante. Nunca sabemos cuándo puede ocurrir un accidente" – Sofía (Entrevista 4)
+### Personas con experiencia como brigadistas — n = 3
 
-- **Factores de confianza en la app**: 75% valora certificación + calidad de simulación (3/4)
-  - "La calidad de la simulación me hace sentir que practico en una situación real y la certificación porque respalda lo aprendido" – María Elena (Entrevista 2)
+| Dimensión observada | Resultado en la muestra | Evidencia |
+| --- | --- | --- |
+| Edad | Los tres tienen 20 años; media 20 | B01–B03 |
+| Situación del rol | Un bombero voluntario activo; un exbrigadista municipal y un exbrigadista escolar | B01; B02; B03 |
+| Formación previa declarada | 3/3 (100 %), con niveles distintos y sin verificación documental de acreditaciones | B01–B03 |
+| Frecuencia de actualización | No uniforme: sin frecuencia fija; dos veces al mes; cada cuatro o seis meses | B01; B02; B03 |
+| Refuerzo mediante documentos o videos digitales | 2/3 (67 %); B03 no suele utilizar apps/plataformas para ello | B01, B02; B03 |
+| Necesidad de practicar sin depender de una emergencia real o de más realismo | 3/3 la expresan con matices diferentes | B01–B03 |
+| Importancia de acreditación o respaldo institucional | 3/3 mencionan certificación/reconocimiento; B01 cita AHA, MINSA y NFPA; B02 y B03 citan MINSA | B01–B03 |
+| Modalidad | B01 valora combinar individual y grupo; B02 y B03 prefieren grupo | B01–B03 |
 
-- **Disposición de pago**: variación significativa según la percepción de valor.
+**Lectura cualitativa:** la práctica digital se concibe como complemento, no sustituto automático de la formación presencial. B01 solicita incluso uso offline, pero esto es una necesidad expresada por **una** persona, no una capacidad actual ni una prioridad validada para todos. Las respuestas de precio se refieren a ofertas distintas: B01 habló de US$10–20 al mes para una modalidad híbrida, B02 de aproximadamente S/20 según el enfoque y B03 de S/30–80 mensuales por usuario. No se calcula promedio ni «disposición de pago del segmento». Este grupo no equivale a una muestra de profesionales sanitarios.
 
-### Segmento: Comunidad vecinal
+### Trazabilidad y límites para los artefactos de 2.3
 
-**Total entrevistados**: 3
+| Hallazgo sustentado | Entrevistas | Uso admisible en Needfinding |
+| --- | --- | --- |
+| Preparación percibida incompleta y deseo de práctica entre estudiantes | E01–E04 | Objetivos y frustraciones de una persona estudiantil **compuesta**, sin afirmar desempeño real |
+| Barrera de tiempo en contexto vecinal; preferencia de aprendizaje no uniforme | C01–C03 | Fases de búsqueda, capacitación y continuidad; incluir alternativa individual además de grupal |
+| Experiencia brigadista heterogénea y necesidad de refuerzo | B01–B03 | No presentar un único rol institucional ni una frecuencia universal de actualización |
+| Certificación como señal de confianza, sin aval de SafeStep | E01–E04, B01–B03 | Distinguir interés por acreditación de certificaciones internas disponibles |
+| Datos ausentes sobre familia, estado civil, personalidad y navegadores | Todos los registros | Marcar «no documentado» o realizar nuevas entrevistas; no inventar datos en las fichas |
 
-#### _Características objetivas_
-
-- **Edad**: 20-42 años (promedio 29 años)
-- **Han recibido capacitación en primeros auxilios**: 33% (1/3) recibió capacitación municipal
-- **Tipo de emergencias más comunes**: 100% coincide en accidentes domésticos, sismos, incendios.
-- **Acceso tecnológico**: 100% usa smartphone (3/3), 67% usa redes sociales diariamente (2/3)
-- **Barreras principales para capacitarse**: 67% menciona falta de tiempo (2/3), 33% falta de información (1/3)
-- **Preferencia de aprendizaje**: 67% talleres grupales (2/3), 33% individual (1/3)
-- **Modelo de pago preferido**: 100% prefiere modelos comunitarios o institucionales (3/3)
-
-#### _Características subjetivas_
-
-- **Consideran a su comunidad poco preparada ante emergencias**: 100% (3/3)
-- **Disposición a pagar por capacitación**: todos sí estarían dispuestos, pero condicionado a que tenga valor real o apoyo municipal
-  - "Más que todo el tiempo, ya que paro ocupado con mi trabajo" – Rodrigo (Entrevista 6)
-  - "Me interesa más en talleres con mis vecinos porque creo yo que en grupal sería mejor el aprendizaje" – Janeth (Entrevista 5)
-  - "Sí, sí me parece correcto que tendríamos que pagar un porcentaje" – Janeth (Entrevista 5)
-
-- **Expectativas de la app**: 100% busca fortalecer la unión comunitaria (3/3)
-  - "Podría ser un punto de encuentro digital que nos permita capacitarnos juntos" – Josemaría (Entrevista 7)
-
-### Segmento: Brigadistas / Profesionales del sector salud
-
-**Total entrevistados**: 3
-
-#### _Características objetivas_
-
-- **Edad**: 20-42 años (promedio 27 años)
-- **Capacitación formal en primeros auxilios**: 100% tiene capacitación formal en PA (3/3)
-- **Frecuencia de actualización**: Cada 6-12 meses (2/3 mencionan esta frecuencia)
-- **Tipo de emergencias más frecuentes**: Incendios, desmayos, contusiones, fracturas, rescates.
-- **Uso de herramientas digitales**: 2 de 3 usan plataformas o videos de refuerzo (67 %).
-- **Elemento más valorado en una app**: 100% valora certificaciones con aval institucional y simulaciones realistas (3/3).
-- **Disposición a pagar**: Entre 20 y 100 soles (promedio: 60 soles).
-- **Preferencias de uso**: 67% valora ambas modalidades (individual/grupal), 33% prefiere simulaciones grupales.
-
-#### _Características subjetivas_
-
-- **Limitaciones identificadas**:
-  - 67% menciona escasez de práctica realista (2/3)
-  - "La escasez de clases prácticas" – Andy (Entrevista 9)
-  - "Deberíamos tener una forma de poder practicar sin necesidad de llegar a los riesgos reales" – Héctor (Entrevista 8)
-
-- **Funcionalidades deseadas**:
-  - Sería muy importante porque hoy en día existe algo que se llama 'trazabilidad de la información'" - Héctor (Entrevista 8).
-  - "Me gustaría recibir escenarios realistas para que los conocimientos sean efectivos" - Marjori (Entrevista 10).
-
-- **Elemento más valorado en una app**: simulaciones realistas y certificación oficial.
-- **Disposición de pago**: alta, con expectativa de S/20-50 mensual o S/50-100 por curso.
-- **Instituciones de respaldo requeridas**: MINSA, Cruz Roja, AHA, Defensa Civil (mencionadas por 100%).
-
-
-
-
-
-
-
-
-
+**Limitaciones:** selección por conveniencia, muestras de tres o cuatro personas por segmento, preguntas con ejemplos y posible sesgo de deseabilidad. Los porcentajes describen solamente a las personas entrevistadas. El registro base contiene inconsistencias que requieren contraste con video, por ejemplo la carrera de E04. Las citas textuales y rasgos no verificados se omiten del análisis para evitar atribuciones erróneas. Los mapas y User Personas deben revisarse a partir de esta matriz, sin reescribir retrospectivamente los testimonios.
