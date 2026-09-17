@@ -92,7 +92,7 @@ Ser una plataforma latinoamericana de referencia en educación preventiva digita
     </td>
     <td width="70%">
       <h3>Desarrollador de Base de Datos</h3>
-      <h4>Palacios Jauregui, Kalid Jesus U201913639</h4>
+      <h4>Aylas De La Cruz, Paulo Smit U20181D263</h4>
       <p>
         Soy estudiante de la carrera de ingenieria de software de la UPC, soy el encargado de diseñar el modelo de base de datos para nuestro proyecto SafeStep aplicando las 3 principales formas de normalizacion. 
       </p>
