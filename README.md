@@ -53,7 +53,7 @@
         <td align="center">Tello Palacios, Fabrizio Rafael</td>
       </tr>
        <tr>
-        <td align="center">U201913639/td>
+        <td align="center">U201913639</td>
         <td align="center"> Palacios Jauregui, Kalid Jesus</td>
       </tr>
     </tbody>
