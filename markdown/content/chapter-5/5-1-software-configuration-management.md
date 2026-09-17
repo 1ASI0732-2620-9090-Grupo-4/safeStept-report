@@ -17,7 +17,7 @@ La tabla distingue productos constatados en el código o en este entorno de herr
 | Persistencia | PostgreSQL; cliente local 18.4 | Datos transaccionales de la API | [PostgreSQL](https://www.postgresql.org) | El proveedor de producción debe confirmarse |
 | Documentación API | springdoc OpenAPI 3.0.3 / Swagger UI | Contratos y prueba interactiva de endpoints | [OpenAPI](https://spec.openapis.org/oas/latest.html) | Dependencia declarada en `pom.xml`; URL pública pendiente de verificar |
 | Pruebas web/API | Vitest 4.0.8; Spring Boot Starter Test / JUnit | Pruebas automatizadas y resultados reproducibles | [Vitest](https://vitest.dev); [JUnit](https://junit.org/junit5/) | Dependencias declaradas; resultados en 5.2 y capítulo VI |
-| Android nativo | SDK 37, Android Gradle Plugin 9.3.2, Kotlin Compose Compiler 2.3.21, Gradle 9.5 | Implementar y probar la app móvil | Proyecto local `safestept-android`; [Android Developers](https://developer.android.com) | Proyecto creado; ejecución integrada y publicación pendientes |
+| Android nativo | SDK 37, Android Gradle Plugin 9.3.2, Kotlin Compose Compiler 2.3.21, Gradle 9.5 | Implementar y probar la app móvil | Proyecto local `safestept-android`; [Android Developers](https://developer.android.com) | Compilación, pruebas y ejecución con API local verificadas; publicación pendiente |
 | Control de versiones | Git/GitHub | Ramas, PR, commits y versiones | [Git](https://git-scm.com); [GitHub](https://github.com) | Cuatro repositorios previos y proyecto Android local disponibles |
 | Despliegue | Docker y configuración de GitHub Pages del frontend | Empaquetado y publicación | [Docker](https://docs.docker.com); [GitHub Pages](https://pages.github.com) | Los destinos actuales deben verificarse antes de afirmar despliegue |
 
@@ -51,6 +51,8 @@ Las claves, nombres de clases, métodos, rutas y mensajes técnicos se escriben 
 | Kotlin/Android | Los mismos criterios de nombres Kotlin; estados UI separados del acceso a datos; textos en recursos localizables; pruebas unitarias y de interfaz Compose antes del APK. |
 | SQL | Tablas/columnas en `snake_case`, PK y FK explícitas, sin contraseñas ni datos personales en scripts de ejemplo. |
 | Gherkin | `Feature`, `Scenario`, `Given/When/Then` con comportamiento observable, uno por intención de negocio; enlazar cada escenario a una User Story. Los archivos `.feature` aún no están presentes en los repositorios actuales. |
+
+Las referencias adoptadas son [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) y [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html) para la landing; [Angular coding style guide](https://angular.dev/style-guide) y la [documentación TypeScript](https://www.typescriptlang.org/docs/handbook/) para la web; [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) para la API; [Android Kotlin style guide](https://developer.android.com/kotlin/style-guide) para Android; y la [referencia Gherkin de Cucumber](https://cucumber.io/docs/gherkin/reference/) para escenarios BDD. Adoptarlas no equivale a afirmar que todos los archivos actuales ya las cumplen: esa verificación pertenece a las pruebas estáticas del capítulo VI.
 
 El statement menciona guías Vue y C# porque prescribe esas tecnologías. El equipo conserva Angular y Spring Boot por decisión de proyecto, pero **requiere confirmar con el docente** la aceptación de esta desviación; el informe no debe afirmar conformidad técnica completa antes de ello.
 
