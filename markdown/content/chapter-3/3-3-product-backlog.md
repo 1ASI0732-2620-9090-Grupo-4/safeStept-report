@@ -8,7 +8,7 @@
 <br>
 <br>
 
-# 3.4. Product Backlog
+# 3.3. Product Backlog
 
 El Product Backlog de SafeStep organiza las historias de usuario y technical stories de acuerdo con el valor que aportan al negocio y al desarrollo progresivo del producto. El orden de la tabla representa la priorización del backlog: primero se ubican las historias de la landing page, porque permiten comunicar la propuesta de valor y deben considerarse desde el primer sprint; luego se ubican las funcionalidades tipo CRUD y comercio; después el core de negocio, compuesto por dashboard, simulaciones, progreso y gamificación; posteriormente las technical stories necesarias para sostener la arquitectura; y finalmente la gestión de usuario e IAM.
 

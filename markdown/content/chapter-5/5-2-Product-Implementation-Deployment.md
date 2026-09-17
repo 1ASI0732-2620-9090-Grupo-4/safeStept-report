@@ -24,7 +24,7 @@ El informe elaborado en el curso anterior documenta cuatro sprints del proyecto 
 
 ### Sprints del curso de Diseño de Experimentos
 
-La siguiente secuencia es un **backlog de implementación**, no una retrospectiva inventada. El equipo debe fijar fechas, responsables, puntos y velocidad en su tablero actual antes de iniciar cada sprint. Las historias se seleccionarán por ID desde el [Product Backlog del capítulo III](../chapter-3/3-4-product-backlog.md), incorporando nuevas historias Android o de corrección mediante control de versiones.
+La siguiente secuencia es un **backlog de implementación**, no una retrospectiva inventada. El equipo debe fijar fechas, responsables, puntos y velocidad en su tablero actual antes de iniciar cada sprint. Las historias se seleccionarán por ID desde el [Product Backlog del capítulo III](../chapter-3/3-3-product-backlog.md), incorporando nuevas historias Android o de corrección mediante control de versiones.
 
 | Sprint nuevo | Goal y criterio de aceptación propuestos | Historias/tareas principales | Evidencia de cierre exigida | Estado |
 |---|---|---|---|---|
@@ -54,7 +54,7 @@ La siguiente secuencia es un **backlog de implementación**, no una retrospectiv
     <tr><th colspan="2" align="left">Sprint Goal & User Stories</th></tr>
     <tr><th>Sprint 1 Goal</th><td>Que el equipo pueda reproducir la compilación y las pruebas de web/API, y que una cuenta común no pueda modificar catálogos, confirmado por <code>mvn package</code>, <code>npm run build</code>, pruebas automatizadas y smoke test local aprobados.</td></tr>
     <tr><th>Sprint 1 Velocity</th><td>Pendiente de definir por el equipo; no hay velocidad histórica previa en el curso actual.</td></tr>
-    <tr><th>Sum of Story Points</th><td>19 (TS15: 5, TS17: 8, TS18: 3, TS20: 3 — historias técnicas con Story ID del Product Backlog de 3.4 incluidas en este Sprint).</td></tr>
+    <tr><th>Sum of Story Points</th><td>19 (TS15: 5, TS17: 8, TS18: 3, TS20: 3 — historias técnicas con Story ID del Product Backlog de 3.3 incluidas en este Sprint).</td></tr>
   </tbody>
 </table>
 
@@ -96,7 +96,7 @@ La siguiente secuencia es un **backlog de implementación**, no una retrospectiv
     <tr><th colspan="2" align="left">Sprint Goal & User Stories</th></tr>
     <tr><th>Sprint 2 Goal</th><td>Que una persona pueda iniciar sesión, realizar una práctica y consultar su progreso desde Android con datos persistidos.</td></tr>
     <tr><th>Sprint 2 Velocity</th><td>Pendiente de definir por el equipo.</td></tr>
-    <tr><th>Sum of Story Points</th><td>37 (US01: 3, US02: 5, US10: 5, US12: 3, US13: 8, US14: 5, US16: 3, US18: 5 — mismas historias del Product Backlog de 3.4, implementadas ahora en el cliente Android).</td></tr>
+    <tr><th>Sum of Story Points</th><td>37 (US01: 3, US02: 5, US10: 5, US12: 3, US13: 8, US14: 5, US16: 3, US18: 5 — mismas historias del Product Backlog de 3.3, implementadas ahora en el cliente Android).</td></tr>
   </tbody>
 </table>
 
@@ -106,7 +106,7 @@ La siguiente secuencia es un **backlog de implementación**, no una retrospectiv
 | Pruebas y artefacto | 2 pruebas unitarias, 1 prueba de UI y APK debug reproducible. | Añadir escenarios de errores/red y PR revisado. |
 | Integración local | Capturas de recorrido con API/PostgreSQL local. | Repetir contra entorno compartido, registrar versión y test de sistema. |
 
-**Sprint Backlog — Engineering Tasks (Sprint 2).** Las historias reutilizan el mismo Story ID del Product Backlog de 3.4 porque describen el mismo objetivo de usuario implementado ahora en un segundo cliente (Android); el título indica el cliente para evitar confusión con la versión web ya entregada.
+**Sprint Backlog — Engineering Tasks (Sprint 2).** Las historias reutilizan el mismo Story ID del Product Backlog de 3.3 porque describen el mismo objetivo de usuario implementado ahora en un segundo cliente (Android); el título indica el cliente para evitar confusión con la versión web ya entregada.
 
 | Story ID | Story Title | Task ID | Task Title | Descripción | Estimación (h) | Assigned To | Status |
 |---|---|---|---|---|---|---|---|

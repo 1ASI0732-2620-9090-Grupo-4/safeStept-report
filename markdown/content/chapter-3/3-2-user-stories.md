@@ -14,7 +14,7 @@ En esta sección se presentan las épicas, user stories y technical stories que 
  
 Los criterios de aceptación se expresan bajo el formato **Gherkin**, utilizando la estructura **Dado que / Cuando / Entonces**. De esta manera, cada historia cuenta con condiciones verificables que permiten validar su cumplimiento durante el desarrollo, las pruebas funcionales y la revisión de cada Sprint. Las filas identificadas como épicas no incluyen criterios de aceptación específicos, debido a que funcionan como agrupadores de historias relacionadas.
 
-En la columna **Priority**, `#1` indica la mayor prioridad y cada número corresponde al **# Orden** del Product Backlog de 3.4. Las épicas agrupan historias y no tienen una prioridad independiente. Se conserva una sola tabla para todo el conjunto de épicas e historias; cada ficha ocupa varias filas conforme al formato del statement.
+En la columna **Priority**, `#1` indica la mayor prioridad y cada número corresponde al **# Orden** del Product Backlog de 3.3. Las épicas agrupan historias y no tienen una prioridad independiente. Se conserva una sola tabla para todo el conjunto de épicas e historias; cada ficha ocupa varias filas conforme al formato del statement.
 
 
 <table border="1" cellpadding="6" cellspacing="0" width="100%">
