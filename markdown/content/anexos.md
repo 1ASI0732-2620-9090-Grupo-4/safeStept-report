@@ -73,11 +73,11 @@ Este anexo reune los recursos utilizados para representar la solucion desde el p
 
 Este anexo centraliza los repositorios oficiales del equipo Chronos y los enlaces publicos de despliegue utilizados para validar la solucion SafeStep.
 
-- Organizacion GitHub Chronos: <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/upc-1asi0729-2610-11990-chronos-team-3</a>
-- Repositorio del reporte: <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report</a>
-- Repositorio de la landing page: <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git</a>
-- Repositorio del frontend web: <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git</a>
-- Repositorio del backend web: <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend</a>
+- Organizacion GitHub: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4</a>
+- Repositorio del reporte: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-report.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-report.git</a>
+- Repositorio de la landing page: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page.git</a>
+- Repositorio del frontend web: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git</a>
+- Repositorio del backend web: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git</a>
 - Landing page desplegada: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/" style="word-break: break-all; overflow-wrap: anywhere;">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
 - Frontend web desplegado: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/" style="word-break: break-all; overflow-wrap: anywhere;">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
 - Backend desplegado en Render: <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html" style="word-break: break-all; overflow-wrap: anywhere;">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>

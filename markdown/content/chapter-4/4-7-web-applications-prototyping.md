@@ -8,15 +8,15 @@
 <br>
 <br>
 
-# 4.5. Web Applications Prototyping
+# 4.7. Web Applications Prototyping
 
 Esta sección incluye Prototipos de UI para Desktop y Mobile Web Browser con simulación de interacción y navegación, acorde con la propuesta de paths de User Flow Diagrams. Esta sección inicia con una introducción en la que se explica los principales criterios para las decisiones de interacción. Es importante evidenciar la relación con las decisiones de arquitectura de información, en particular sobre el sistema de navegación y los tipos de interacciones seleccionadas. Para cada caso debe incluirse 1 screenshot de video y un enlace a un video subido a Microsoft Stream para cada aplicación, en el que se demuestre y explique los principales flujos de interacción que cubren los prototipos.
 
-## 4.5.1. Introducción al Prototipado
+## 4.7.1. Introducción al Prototipado
 
 El prototipado de SafeStep representa la culminación del proceso de diseño, donde las decisiones abstractas de arquitectura, wireframes y mockups se traducen en experiencias interactivas funcionales. Los prototipos demuestran cómo los usuarios realmente interactuarán con la aplicación, revelando aspectos que no son evidentes en representaciones estáticas.
 
-### 4.5.1.1. Objetivos del Prototipado
+### 4.7.1.1. Objetivos del Prototipado
 
 Los prototipos de SafeStep cumplen varios objetivos fundamentales:
 
@@ -35,7 +35,7 @@ Los prototipos de SafeStep cumplen varios objetivos fundamentales:
 - Facilitan la validación con usuarios y patrocinadores
 - Crean hype y expectativa positiva
 
-### 4.5.1.2. Criterios de Interacción
+### 4.7.1.2. Criterios de Interacción
 
 Las decisiones de interacción en los prototipos de SafeStep siguen criterios específicos:
 
@@ -63,7 +63,7 @@ Las decisiones de interacción en los prototipos de SafeStep siguen criterios es
 - Los estados de carga se comunican claramente
 - El usuario siempre sabe dónde está y qué puede hacer
 
-### 4.5.1.3. Relación con Arquitectura de Información
+### 4.7.1.3. Relación con Arquitectura de Información
 
 Los prototipos evidencian las decisiones de arquitectura de información tomadas en la sección 4.2:
 
@@ -82,11 +82,11 @@ Los prototipos evidencian las decisiones de arquitectura de información tomadas
 - Los filtros son claramente visibles y aplicables
 - Los resultados se presentan según lo especificado
 
-## 4.5.2. Prototipo Desktop
+## 4.7.2. Prototipo Desktop
 
 El prototipo desktop presenta la experiencia de escritorio completa, optimizada para monitores de computadora y navegación con mouse/teclado.
 
-### 4.5.2.1. Descripción General del Prototipo Desktop
+### 4.7.2.1. Descripción General del Prototipo Desktop
 
 El prototipo desktop de SafeStep recrea la experiencia completa en un factor de forma de escritorio tradicional. Las interacciones están optimizadas para navegación mediante puntero (mouse) y entrada de teclado.
 
@@ -115,7 +115,7 @@ Las siguientes vistas están incluidas en el prototipo desktop:
 6. **Carrito** - Proceso de checkout
 7. **Mi Perfil** - Configuración
 
-### 4.5.2.2. Prototipo Desktop - Dashboard
+### 4.7.2.2. Prototipo Desktop - Dashboard
 
 El prototipo del dashboard muestra la pantalla principal después del login:
 
@@ -160,7 +160,7 @@ El flujo principal mostrado:
 4. Navegación le permite ir a cualquier sección
 5. Notificaciones informan de updates
 
-### 4.5.2.3. Prototipo Desktop - Simulación Interactiva
+### 4.7.2.3. Prototipo Desktop - Simulación Interactiva
 
 El prototipo de simulación muestra la experiencia de práctica:
 
@@ -223,7 +223,7 @@ El flujo de simulación:
 6. Completa todas las preguntas
 7. Ve resultados finales
 
-### 4.5.2.4. Prototipo Desktop - Proceso de Compra
+### 4.7.2.4. Prototipo Desktop - Proceso de Compra
 
 El prototipo de checkout muestra el flujo de compra:
 
@@ -305,7 +305,7 @@ El flujo de compra:
 5. Confirma y paga
 6. Recibe confirmación
 
-### 4.5.2.5. Video Prototipo Desktop
+### 4.7.2.5. Video Prototipo Desktop
 
 El video del prototipo desktop demuestra las interacciones principales:
 
@@ -333,11 +333,11 @@ El video incluye:
 
 Enlace del video: <a href="https://youtu.be/_nZcADweJ3k">https://youtu.be/_nZcADweJ3k</a>
 
-## 4.5.3. Prototipo Mobile
+## 4.7.3. Prototipo Mobile
 
 El prototipo mobile presenta la experiencia optimizada para dispositivos táctiles, especialmente smartphones.
 
-### 4.5.3.1. Descripción General del Prototipo Mobile
+### 4.7.3.1. Descripción General del Prototipo Mobile
 
 El prototipo mobile de SafeStep recrea la experiencia en formato móvil, considerando las limitaciones y fortalezas de dispositivos táctiles.
 
@@ -364,7 +364,7 @@ Las siguientes vistas están incluidas:
 4. **Tienda Mobile** - Grid optimizado
 5. **Checkout Mobile** - Forms verticales
 
-### 4.5.3.2. Prototipo Mobile - Dashboard
+### 4.7.3.2. Prototipo Mobile - Dashboard
 
 El prototipo del dashboard móvil:
 
@@ -395,7 +395,7 @@ El dashboard móvil muestra:
 - Scroll vertical estándar
 - Bottom nav clicks cambian vista
 
-### 4.5.3.3. Prototipo Mobile - Simulación
+### 4.7.3.3. Prototipo Mobile - Simulación
 
 El prototipo de simulación móvil:
 
@@ -446,7 +446,7 @@ La simulación móvil muestra:
 - Botones grandes y táctiles
 - Feedback visual claro
 
-### 4.5.3.4. Prototipo Mobile - Tienda
+### 4.7.3.4. Prototipo Mobile - Tienda
 
 El prototipo de tienda móvil:
 
@@ -510,7 +510,7 @@ La tienda móvil muestra:
 - Carrito en badge de header
 - Checkout simplificado
 
-### 4.5.3.5. Video Prototipo Mobile
+### 4.7.3.5. Video Prototipo Mobile
 
 El video del prototipo mobile demuestra las interacciones touch:
 
@@ -538,11 +538,11 @@ El video incluye:
 
 Enlace del video: <a href="https://youtu.be/cFe5_H0TDsA">https://youtu.be/cFe5_H0TDsA</a>
 
-## 4.5.4. Flujos de Interacción Principales
+## 4.7.4. Flujos de Interacción Principales
 
 Los prototipos demuestran los flujos de interacción principales de SafeStep:
 
-### 4.5.4.1. Flow: Onboarding
+### 4.7.4.1. Flow: Onboarding
 
 El flujo de onboarding introduce nuevos usuarios a la plataforma:
 
@@ -557,7 +557,7 @@ El flujo de onboarding introduce nuevos usuarios a la plataforma:
 - Personalización inicial
 - Introducción suave a la plataforma
 
-### 4.5.4.2. Flow: Aprendizaje
+### 4.7.4.2. Flow: Aprendizaje
 
 El flujo muestra cómo usuarios aprenden:
 
@@ -574,7 +574,7 @@ El flujo muestra cómo usuarios aprenden:
 - Feedback después de cada etapa
 - Motivación con certificado
 
-### 4.5.4.3. Flow: Simulación
+### 4.7.4.3. Flow: Simulación
 
 El flujo de práctica muestra interacción:
 
@@ -590,7 +590,7 @@ El flujo de práctica muestra interacción:
 - Feedback inmediato
 - Aprender de errores
 
-### 4.5.4.4. Flow: Compra
+### 4.7.4.4. Flow: Compra
 
 El flujo de compra evidencia el e-commerce:
 
@@ -605,7 +605,7 @@ El flujo de compra evidencia el e-commerce:
 - Confirmaciones en cada paso
 - Acceso a seguimiento de orden
 
-## 4.5.5. Herramientas Utilizadas
+## 4.7.5. Herramientas Utilizadas
 
 Los prototipos fueron creados usando las siguientes herramientas:
 

@@ -21,7 +21,7 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
             <th align="center"><b>User Story Id</b></th>
             <th align="center"><b>Título</b></th>
             <th align="center"><b>Descripción</b></th>
-            <th align="center"><b>Story Points</b></th>
+            <th align="center"><b>Story Points<br>(1 / 2 / 3 / 5 / 8)</b></th>
         </tr>
     </thead>
     <tbody>
