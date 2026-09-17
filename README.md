@@ -52,9 +52,6 @@
         <td align="center">U202113310</td>
         <td align="center">Tello Palacios, Fabrizio Rafael</td>
       </tr>
-      <tr>
-        <td align="center">U20181D263</td>
-        <td align="center">Aylas De La Cruz, Paulo Smit</td>
       </tr>
     </tbody>
   </table>
