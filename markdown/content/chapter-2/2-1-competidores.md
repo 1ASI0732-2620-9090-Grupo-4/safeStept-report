@@ -1,8 +1,8 @@
-﻿<br>
+<br>
 <br>
 
 <div align="center">
-    <img src="../../assets/images/chapter-2/capitulo-2.png" alt="Capitulo 2" />
+  <img src="../../assets/images/chapter-2/capitulo-2.png" alt="Capítulo II" />
 </div>
 
 <br>
@@ -10,410 +10,132 @@
 
 # 2.1. Competidores
 
-1. **Cruz Roja Digital (Cursos Online)**
+Se comparan tres productos digitales de primeros auxilios con SafeStep. Son **competidores directos por la atención y el tiempo de aprendizaje del usuario**, aunque no necesariamente por su modelo de ingresos. La Escuela Nacional de la Cruz Roja Peruana se considera una alternativa **indirecta** de capacitación formal, no una cuarta aplicación equivalente. El alcance geográfico, el idioma y las características pueden variar por versión; las observaciones corresponden a las fuentes oficiales consultadas el 16/09/2026. No se atribuyen a ningún producto carencias que no puedan verificarse.
 
-- Ofrece programas de capacitación virtual con certificación oficial en primeros auxilios. Incluye material en video, manuales PDF y evaluaciones finales. Sin embargo, sus cursos tienen horarios establecidos y suelen ser de pago, lo que limita su disponibilidad masiva.
+Los tres productos digitales del cuadro son First Aid de British Red Cross, First Aid de American Red Cross y First Aid – IFRC. Sus fichas oficiales se enlazan en la cabecera. Como alternativa indirecta adicional se considera la [Escuela Nacional de la Cruz Roja Peruana](https://cruzroja.org.pe/escuela_nacional.html), que ofrece formación en primeros auxilios y RCP, pero no se equipara a una cuarta aplicación.
 
-2. **First Aid by British Red Cross (App)**
-
-- Aplicación móvil en inglés que enseña procedimientos de primeros auxilios mediante texto, imágenes y videos cortos. Está diseñada como guía de bolsillo, pero carece de simulaciones interactivas o retroalimentación dinámica.
-
-3. **Primeros Auxilios – IFRC (App)**
-
-- App oficial de la Federación Internacional de Sociedades de la Cruz Roja y de la Media Luna Roja. Brinda información paso a paso para distintas emergencias y cuenta con recursos multimedia. Sin embargo, el aprendizaje es pasivo y no entrena la toma de decisiones en tiempo real.
-
-4. **Cursos en Plataformas MOOC (Coursera, Udemy, EdX)**
-
-- Brindan formación teórica en primeros auxilios con módulos pregrabados y certificados opcionales. Son útiles como complemento, pero no ofrecen interacción práctica ni simulaciones.
+Estas ofertas no equivalen automáticamente a SafeStep. La comparación se centra en las tareas que una persona podría elegir para aprender, repasar o practicar antes de una emergencia. La capacitación institucional y la práctica presencial siguen siendo complementos necesarios: ninguna simulación digital acredita por sí sola competencia para actuar en una emergencia real.
 
 ## 2.1.1. Análisis competitivo
 
-<table>
-    <tr>
-        <td colspan="6" align="center">
-            <b>Competitive Analysis Landscape</b>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" align="center">
-            ¿Porqué llevar a cabo este análisis?
-        </td>
-        <td colspan="4">
-        El objetivo de este análisis es identificar las fortalezas, debilidades, oportunidades y amenazas del entorno competitivo en el sector de capacitación en primeros auxilios digital, con el fin de definir la ventaja competitiva de SafeStep frente a las alternativas existentes y orientar las estrategias de diferenciación e innovación.</td>
-    </tr>
-    <tr>
-        <td colspan="2" align="center">
-            <b>Competidores</b>
-        </td>
-        <td align="center">
-            <p><b>SafeStep</b></p>
-            <img src="../../assets/images/chapter-2/logo-1.png" alt="Capitulo 2" width="70" />
-        </td>
-        <td align="center">
-            <p><b>Cruz Roja Digital</b></p>
-            <img src="../../assets/images/chapter-2/logo-2.png" alt="Capitulo 2" width="70" />
-        </td>
-        <td align="center">
-            <p><b>First Aid</b></p>
-            <img src="../../assets/images/chapter-2/logo-3.png" alt="Capitulo 2" width="70" />
-        </td>
-        <td align="center">
-            <p><b>IFRC</b></p>
-            <img src="../../assets/images/chapter-2/logo-4.png" alt="Capitulo 2" width="70" />
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="2" align="center">
-            <b>Perfil</b>
-        </td>
-        <td align="center">
-            <b>Overview</b>
-        </td>
-        <td align="center">
-            <p>
-                Plataforma web y móvil que enseña primeros auxilios mediante simulaciones interactivas ramificadas y retroalimentación inmediata, disponible 24/7.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Plataforma de cursos virtuales y presenciales con certificación oficial. Acceso limitado y de pago.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Aplicación móvil en inglés con guías y videos educativos de primeros auxilios.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Aplicación móvil en inglés con guías y videos educativos de primeros auxilios.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Ventaja competitiva ¿Qué valor ofrece a los clientes?</b>
-        </td>
-        <td align="center">
-            <p>
-                Entrenamiento práctico, accesible y gamificado, con enfoque en toma de decisiones en tiempo real y certificación digital.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Certificación oficial reconocida internacionalmente.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Contenido confiable y sencillo, validado por expertos.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Alcance global, gratuito y contenido validado por la Cruz Roja.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="2" align="center">
-            <b>Perfil de Marketing</b>
-        </td>
-        <td align="center">
-            <b>Mercado objetivo</b>
-        </td>
-        <td align="center">
-            <p>
-                Estudiantes, comunidades vecinales y brigadistas que buscan aprender de manera práctica y flexible.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Profesionales y empresas que requieren certificaciones formales.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Público general de habla inglesa.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Público global que busca información básica de emergencia.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Estrategias de marketing</b>
-        </td>
-        <td align="center">
-            <p>
-                Estrategia freemium, gamificación, alianzas con universidades y campañas en redes sociales enfocadas en prevención y educación.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Promoción institucional y convenios con organismos oficiales.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Posicionamiento en tiendas de apps y uso de la reputación de la Cruz Roja.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Difusión a través de la red internacional de la Cruz Roja.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="3" align="center">
-            <b>Perfil de Producto</b>
-        </td>
-        <td align="center">
-            <b>Productos & Servicios</b>
-        </td>
-        <td align="center">
-            <p>
-                Simulaciones interactivas, microlecciones, módulos comunitarios, certificados digitales y estadísticas de desempeño.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Cursos virtuales y presenciales con exámenes y certificaciones.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Guías y videos cortos educativos.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Guías paso a paso, videos y listas de chequeo.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Precios & costos</b>
-        </td>
-        <td align="center">
-            <p>
-                Modelo freemium: acceso básico gratuito y plan premium (S/100 – S/150).
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Pago por curso (medio a alto).
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Gratuito.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Gratuito.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Canales y distribución (Web y/o móvil)</b>
-        </td>
-        <td align="center">
-            <p>
-                Web responsive y app móvil (Android/iOS).
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Web y sesiones presenciales.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                App móvil (Android/iOS).
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                App móvil (Android/iOS).
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="4" align="center">
-            <b>Análisis SWOT</b>
-        </td>
-        <td align="center">
-            <b>Fortalezas</b>
-        </td>
-        <td align="center">
-            <p>
-                Simulaciones interactivas y ramificadas; gamificación; feedback inmediato; accesibilidad multiplataforma; modelo freemium.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Certificación oficial; respaldo institucional; contenido validado.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Interfaz simple; alta confiabilidad; posicionamiento sólido.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Acceso gratuito; respaldo global; contenidos validados.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Debilidades</b>
-        </td>
-        <td align="center">
-            <p>
-                Falta de certificación oficial internacional; dependencia de conexión a internet; necesidad de actualización constante.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Alto costo de cursos; poca flexibilidad digital.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                En inglés; aprendizaje pasivo sin práctica.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Sin interactividad ni evaluación; enfoque informativo.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Oportunidades</b>
-        </td>
-        <td align="center">
-            <p>
-                Creciente interés en e-learning y capacitación preventiva; alianzas con ONGs y universidades; expansión en Latinoamérica.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Integrar simuladores y experiencias interactivas.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Ampliar idiomas y contenido práctico.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Asociarse con startups tecnológicas para modernizar su experiencia.
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-            <b>Amenazas</b>
-        </td>
-        <td align="center">
-            <p>
-                Competidores con mayor financiamiento; desconfianza inicial hacia métodos digitales; saturación de apps educativas.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Aparición de plataformas más ágiles como SafeStep.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Pérdida de relevancia frente a apps gamificadas.
-            </p>
-        </td>
-        <td align="center">
-            <p>
-                Pérdida de interés por falta de innovación.
-            </p>
-        </td>
-    </tr>
+### Competitive Analysis Landscape
+
+<table border="1" cellpadding="6" cellspacing="0" width="100%">
+  <tr>
+    <th colspan="6" align="left">Competitive Analysis Landscape</th>
+  </tr>
+  <tr>
+    <th colspan="2" align="left">¿Por qué llevar a cabo este análisis?</th>
+    <td colspan="4">Identificar cómo aprenden y repasan primeros auxilios los usuarios mediante alternativas digitales, qué valor ofrece cada una y qué posible diferenciación de SafeStep aún debe comprobarse.</td>
+  </tr>
+  <tr>
+    <th colspan="2" align="left">Startup y competidores</th>
+    <th align="center"><img src="../../assets/images/chapter-2/logo-1.png" alt="Logo de SafeStep" width="52" /><br>SafeStep</th>
+    <th align="center"><img src="../../assets/images/chapter-2/logo-2.png" alt="Logo de la Cruz Roja" width="52" /><br><a href="https://www.redcross.org.uk/first-aid/first-aid-apps">British Red Cross</a></th>
+    <th align="center"><img src="../../assets/images/chapter-2/logo-3.png" alt="Logo de American Red Cross" width="52" /><br><a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/mobile-apps.html">American Red Cross</a></th>
+    <th align="center"><img src="../../assets/images/chapter-2/logo-4.png" alt="Logo de IFRC" width="52" /><br><a href="https://play.google.com/store/apps/details?id=com.cube.gdpc.fa">IFRC</a></th>
+  </tr>
+  <tr>
+    <th rowspan="2" scope="rowgroup">Perfil</th>
+    <th align="left">Overview</th>
+    <td>Plataforma web responsiva de práctica simulada de primeros auxilios, progreso y tienda. Producto de la startup Chronos.</td>
+    <td>Aplicación de primeros auxilios de la sociedad nacional británica, con guías y recursos para aprender o consultar.</td>
+    <td>Aplicación de la sociedad nacional estadounidense, con orientación paso a paso y recursos multimedia.</td>
+    <td>Aplicación de la federación internacional con escenarios paso a paso y recursos de aprendizaje multilingües.</td>
+  </tr>
+  <tr>
+    <th align="left">Ventaja competitiva: ¿qué valor ofrece a los clientes?</th>
+    <td>Permite ensayar decisiones, revisar errores y repetir escenarios. Que ello genere una ventaja frente a otras apps es una hipótesis pendiente de medición.</td>
+    <td>Información gratuita y respaldo institucional, con acceso a contenidos sin conexión.</td>
+    <td>Consejos, videos y cuestionarios en una aplicación gratuita, con opción de inglés o español.</td>
+    <td>Recursos gratuitos, contenido offline, seguimiento del progreso e insignias.</td>
+  </tr>
+  <tr>
+    <th rowspan="2" scope="rowgroup">Perfil de Marketing</th>
+    <th align="left">Mercado objetivo</th>
+    <td>Primer ciclo: estudiantes universitarios peruanos mayores de edad. Comunidades vecinales y brigadistas son segmentos secundarios.</td>
+    <td>Público que busca aprender o consultar primeros auxilios; oferta desarrollada en el contexto británico.</td>
+    <td>Público general que busca orientación básica en primeros auxilios; oferta desarrollada en el contexto estadounidense.</td>
+    <td>Público internacional interesado en primeros auxilios y preparación ante emergencias.</td>
+  </tr>
+  <tr>
+    <th align="left">Estrategias de marketing</th>
+    <td>Landing page informativa. La captación por alianzas, campañas o planes de pago no está validada en el alcance As-Is.</td>
+    <td>Difusión desde el portal y los recursos educativos oficiales de British Red Cross.</td>
+    <td>Difusión desde el portal de aplicaciones y los recursos formativos oficiales de American Red Cross.</td>
+    <td>Disponibilidad en tiendas de aplicaciones y vinculación con sociedades nacionales de la Cruz Roja y Media Luna Roja.</td>
+  </tr>
+  <tr>
+    <th rowspan="3" scope="rowgroup">Perfil de Producto</th>
+    <th align="left">Productos &amp; Servicios</th>
+    <td>Simulaciones, intentos, retroalimentación, gamificación, seguimiento, tienda y pedidos. Los certificados son internos.</td>
+    <td>Guías paso a paso, videos y cuestionarios; funciona sin internet.</td>
+    <td>Guías, videos, cuestionarios, localización de hospitales y acceso a certificaciones de cursos obtenidos por otras vías.</td>
+    <td>Escenarios paso a paso, cuestionarios, progreso, insignias, contenido precargado y varios idiomas.</td>
+  </tr>
+  <tr>
+    <th align="left">Precios &amp; Costos</th>
+    <td>No existe suscripción premium. La tienda muestra precios de productos; el costo operativo del servicio no se cuantifica aquí.</td>
+    <td>Aplicación gratuita; los cursos son una oferta separada.</td>
+    <td>Aplicación gratuita; los cursos son una oferta separada.</td>
+    <td>Aplicación gratuita.</td>
+  </tr>
+  <tr>
+    <th align="left">Canales de distribución (Web y/o Móvil)</th>
+    <td>Web responsiva. No hay aplicación móvil nativa ni funcionamiento offline implementados.</td>
+    <td>Aplicación móvil y recursos web de la institución.</td>
+    <td>Aplicación móvil y recursos web de la institución.</td>
+    <td>Aplicación móvil con contenido precargado.</td>
+  </tr>
+  <tr>
+    <th rowspan="5" scope="rowgroup">Análisis SWOT</th>
+    <td colspan="5">Comparación de fortalezas y debilidades internas, y de oportunidades y amenazas del entorno. Las oportunidades y amenazas son inferencias estratégicas; no acreditan superioridad de una oferta. Las fortalezas de SafeStep deben ponerse a prueba para establecer su posible ventaja competitiva.</td>
+  </tr>
+  <tr>
+    <th align="left">Fortalezas</th>
+    <td>Simulaciones web con decisiones y retroalimentación; enfoque inicial en usuarios peruanos.</td>
+    <td>Respaldo institucional, gratuidad, cuestionarios y acceso offline.</td>
+    <td>Respaldo institucional, videos, cuestionarios y opción en español.</td>
+    <td>Alcance internacional, varios idiomas, offline, progreso e insignias.</td>
+  </tr>
+  <tr>
+    <th align="left">Debilidades</th>
+    <td>Sin app nativa, modo offline ni acreditación profesional; medición experimental pendiente.</td>
+    <td>La adecuación de su contenido al segmento peruano de SafeStep no se ha evaluado en este estudio.</td>
+    <td>La adecuación de su contenido al segmento peruano de SafeStep no se ha evaluado en este estudio.</td>
+    <td>La experiencia específica de estudiantes peruanos no se ha evaluado en este estudio.</td>
+  </tr>
+  <tr>
+    <th align="left">Oportunidades</th>
+    <td>Probar onboarding, claridad del feedback y práctica repetida con participantes locales.</td>
+    <td>Adaptar recursos a contextos y públicos adicionales.</td>
+    <td>Ampliar el alcance de recursos en español y contextos locales.</td>
+    <td>Profundizar la localización y colaboración con sociedades nacionales.</td>
+  </tr>
+  <tr>
+    <th align="left">Amenazas</th>
+    <td>Alternativas gratuitas y reconocidas; riesgo de prometer aprendizaje no demostrado.</td>
+    <td>Otras aplicaciones gratuitas y expectativas cambiantes de aprendizaje.</td>
+    <td>Alternativas con recorridos adaptados a contextos locales.</td>
+    <td>Alternativas locales más pertinentes para ciertos casos de uso.</td>
+  </tr>
 </table>
+
+Las descripciones de los competidores se basan en las fichas oficiales enlazadas en la cabecera; el estado de SafeStep se delimita en [1.2. Solution Profile](../chapter-1/1-2-solution-profile.md). «No se ha evaluado» expresa un límite de este análisis, no la ausencia de una capacidad del competidor. Ningún cuestionario, insignia o certificado interno equivale por sí solo a una acreditación profesional.
+
+**Conclusión:** SafeStep no puede alegar «única app interactiva», «única app gamificada» ni superioridad pedagógica general: IFRC y American Red Cross ya ofrecen cuestionarios, y IFRC incluye progreso e insignias. La **posible** ventaja de SafeStep es un recorrido web localizado de decisiones, explicación de errores y repetición que facilite comprender y completar una primera simulación. Esa ventaja queda como hipótesis de comparación y deberá medirse en el Capítulo VIII.
 
 ## 2.1.2. Estrategias y tácticas frente a competidores
 
-<table>
-    <tr>
-        <td align="center">
-        <b>Estrategia / Táctica</b>
-        </td>
-        <td align="center">
-        <b>Descripción</b>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-        <b>Innovación en UX</b>
-        </td>
-        <td>
-        <p>Crear simulaciones ramificadas con decisiones en tiempo real y visuales, ofreciendo una experiencia de usuario única.</p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-        <b>Modelo freemium</b>
-        </td>
-        <td>
-        <p>Ofrecer escenarios básicos gratis para atraer usuarios y planes premium con certificaciones y reportes para monetización.</p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-        <b>Gamificación</b>
-        </td>
-        <td>
-        <p>Integrar puntos, logros y niveles que motiven la práctica constante y el aprendizaje progresivo.</p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-        <b>Alianzas estratégicas</b>
-        </td>
-        <td>
-        <p>Colaborar con universidades, colegios, empresas y ONGs para integrar SafeStep en programas de capacitación y RSE.</p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-        <b>Marketing segmentado</b>
-        </td>
-        <td>
-        <p>Diseñar campañas digitales para redes sociales, enfocadas en familias, jóvenes y empresas, destacando el impacto social y el bajo costo.</p>
-        </td>
-    </tr>
-    <tr>
-        <td align="center">
-        <b>Actualización continua</b>
-        </td>
-        <td>
-        <p>Mantener la plataforma actualizada con nuevos escenarios y contenido validado por profesionales de salud.</p>
-        </td>
-    </tr>
-</table>
+Las acciones siguientes responden a hallazgos del Landscape y del FODA. Se distinguen cambios implementables en el nuevo ciclo de ideas dependientes de alianzas externas.
 
+| Hallazgo competitivo | Estrategia | Táctica comprobable | Evidencia de éxito o decisión |
+| --- | --- | --- | --- |
+| Las apps oficiales ya ofrecen contenidos, cuestionarios y, en el caso de IFRC, progreso e insignias | Diferenciar la **comprensión del recorrido**, no solo la existencia de funciones | Comparar onboarding actual con una variante contextual antes de la primera simulación | Exposición, inicio, finalización, abandono y comprensión; conservar el cambio solo si mejora el resultado sin perjuicios relevantes |
+| La autoridad de las organizaciones competidoras favorece la confianza | Transparencia sobre fuentes y límites educativos | Mostrar fuente, fecha de revisión y aviso de que SafeStep no sustituye atención ni formación acreditada | Comprensión de límites y confianza informada en entrevistas y pruebas |
+| El certificado interno de SafeStep no equivale a una acreditación | Evitar promesas de aval institucional no obtenido | Etiquetar claramente certificados e insignias como reconocimientos internos | Menos confusión observada entre reconocimiento y acreditación profesional |
+| British Red Cross e IFRC ofrecen contenido offline; SafeStep aún no | Priorizar según necesidad observada, no por paridad de características | Investigar conectividad y frecuencia de uso antes de estimar un modo offline | Evidencia de necesidad y viabilidad; no prometer una fecha de lanzamiento |
+| Los tres competidores digitales ofrecen acceso gratuito | No asumir disposición de pago | Mantener los precios y modelos premium como preguntas de investigación; medir utilidad percibida antes de monetizar | Entrevistas y experimentos específicos; no inferir demanda de una muestra pequeña |
+| Una recomendación comercial puede afectar la confianza educativa | Separar aprendizaje y comercio | Explicar por qué se muestra un insumo no farmacológico y permitir ignorarlo | Interacción informada sin pérdida de confianza ni interrupción del aprendizaje |
 
-
-
-
-
+No se declara como táctica vigente una alianza con la Cruz Roja, MINSA u otra institución: requiere coordinación y autorización de dichas entidades. La estrategia de corto plazo es mejorar y medir el producto propio; una acreditación externa sería un proyecto distinto.

@@ -8,9 +8,9 @@
 <br>
 <br>
 
-# 4.8. Database Design
+# 4.10. Database Design
 
-## 4.8.1. Database Diagrams
+## 4.10.1. Relational/Non-Relational Database Diagram
 
 El siguiente Diagrama Entidad-Relación (ERD) representa la estructura de datos fundamental que soporta toda la lógica de la plataforma SafeStep. Este modelo relacional, compuesto por 31 entidades, ha sido diseñado aplicando las 3 fases de normalizacion. Para garantizar la escalabilidad, el mantenimiento y la separación de responsabilidades, la base de datos se ha estructurado en 5 paquetes o módulos lógicos:
 
@@ -60,10 +60,6 @@ El siguiente Diagrama Entidad-Relación (ERD) representa la estructura de datos 
 </div>
 
 <p align="center"><strong>Diagrama ERD Simulation</strong></p>
-
-
-
-
 
 
 

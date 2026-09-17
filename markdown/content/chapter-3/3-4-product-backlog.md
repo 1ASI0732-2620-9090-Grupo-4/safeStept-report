@@ -8,16 +8,16 @@
 <br>
 <br>
 
-# 3.3. Product Backlog
+# 3.4. Product Backlog
 
 El Product Backlog de SafeStep organiza las historias de usuario y technical stories de acuerdo con el valor que aportan al negocio y al desarrollo progresivo del producto. El orden de la tabla representa la priorización del backlog: primero se ubican las historias de la landing page, porque permiten comunicar la propuesta de valor y deben considerarse desde el primer sprint; luego se ubican las funcionalidades tipo CRUD y comercio; después el core de negocio, compuesto por dashboard, simulaciones, progreso y gamificación; posteriormente las technical stories necesarias para sostener la arquitectura; y finalmente la gestión de usuario e IAM.
 
-Cada elemento incluye su estimación en story points utilizando la escala Fibonacci solicitada: **1, 2, 3, 5 u 8**. La columna **Orden** indica la prioridad relativa dentro del Product Backlog.
+Cada elemento incluye su estimación en story points utilizando la escala Fibonacci solicitada: **1, 2, 3, 5 u 8**. La columna **# Orden** indica la prioridad relativa dentro del Product Backlog y coincide con **Priority** en 3.2.
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <thead>
         <tr>
-            <th align="center"><b>Orden</b></th>
+            <th align="center"><b># Orden</b></th>
             <th align="center"><b>User Story Id</b></th>
             <th align="center"><b>Título</b></th>
             <th align="center"><b>Descripción</b></th>
@@ -112,7 +112,7 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
         <tr>
             <td align="center">13</td>
             <td align="center">US32</td>
-            <td>Filtrar productos por categoria</td>
+            <td>Filtrar productos por categoría</td>
             <td>Como usuario, quiero filtrar productos por categoría para ver solo productos de un tipo específico.</td>
             <td align="center">3</td>
         </tr>
@@ -189,7 +189,7 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
         <tr>
             <td align="center">24</td>
             <td align="center">US43</td>
-            <td>Leer resenas de productos</td>
+            <td>Leer reseñas de productos</td>
             <td>Como usuario, quiero leer reseñas de otros usuarios para decidir mejor mi compra.</td>
             <td align="center">2</td>
         </tr>
@@ -559,24 +559,17 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
         </tr>
     </tbody>
 </table>
-**Referencia del Product Backlog en la herramienta seleccionada:**
 
-- **Herramienta utilizada:** [Completar herramienta utilizada]
-- **URL pública del Product Backlog:** [Insertar URL pública del Product Backlog]
+- **Herramienta utilizada:** Jira
+
+- **URL pública del Product Backlog:** [Jira Team-4 Public Workspace](https://upc-team-experimentos.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiZjZiZTMzZDI2MGNmNDc4MmE4YjA0OWM4NzRkY2Y1NDAiLCJwIjoiaiJ9)
 
 <div align="center">
   <p>
-    <b>Figura X</b>: Captura del Product Backlog en la herramienta seleccionada
+    Captura del Product Backlog en la herramienta seleccionada
   </p>
-  <img src="../../assets/images/chapter-3/product-backlog-tool.png" alt="Product Backlog en herramienta seleccionada" />
+  <img src="../../assets/images/chapter-3/product-backlog-tool.png" alt="Product Backlog en herramienta seleccionada"/>
   <p>
     <i><b>Fuente</b>: Elaboración propia</i>
   </p>
 </div>
-
-
-
-
-
-
-
