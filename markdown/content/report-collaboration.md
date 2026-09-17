@@ -6,32 +6,32 @@
 
 **URL de la organización**: 
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3">https://github.com/upc-1asi0729-2610-11990-chronos-team-3</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4">https://github.com/1ASI0732-2620-9090-Grupo-4</a>
 
 **URL del reporte de SafeStep**:
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-report.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-report.git</a>
 
 **URL del landing page de SafeStep**:
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page.git</a>
 
 **URL del frontend de SafeStep**:
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git</a>
 
 **URL del backend de SafeStep**:
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git</a>
 
 ## Trabajo 1 (AV1)
 
 
 <div align="center">
   <p>
-    <b>Gráfico 2</b>: Analytics TB1
+    <b>Gráfico 2</b>: Analytics AV1
   </p>
-  <img src="../assets/images/av1-analytics.png" alt="Analytics TB1" width="500" />
+  <img src="../assets/images/chapter-1/AV1commits.png" alt="Analytics AV1" width="500" />
   <p>
     <i><b>Fuente</b>: Elaboración propia.</i>
   </p>
@@ -44,7 +44,7 @@
   <p>
     <b>Gráfico 2</b>: Analytics TB1
   </p>
-  <img src="../assets/images/chapter-5/CommitsSprint4front.png" alt="Analytics TB1" width="500" />
+  <img src="../assets/images/chapter-5/" alt="Analytics TB1" width="500" />
   <p>
     <i><b>Fuente</b>: Elaboración propia.</i>
   </p>
@@ -56,7 +56,7 @@
   <p>
     <b>Gráfico 2</b>: Analytics AV2
   </p>
-  <img src="../assets/images/chapter-5/CommitsSprint4back.png" alt="Analytics TB1" width="500" />
+  <img src="../assets/images/chapter-5/" alt="Analytics AV2" width="500" />
   <p>
     <i><b>Fuente</b>: Elaboración propia.</i>
   </p>
@@ -69,7 +69,7 @@
   <p>
     <b>Gráfico 2</b>: Analytics TB2
   </p>
-  <img src="../assets/images/chapter-5/commitsreport.png" alt="Analytics TB1" width="500" />
+  <img src="../assets/images/chapter-5/" alt="Analytics TB2" width="500" />
   <p>
     <i><b>Fuente</b>: Elaboración propia.</i>
   </p>

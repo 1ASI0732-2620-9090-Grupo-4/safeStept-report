@@ -50,6 +50,12 @@ En sintesis, el contraste entre Lean UX y los resultados obtenidos muestra que S
 
 ---
 
+## Video App Validation
+
+**Pendiente.** Falta grabar y publicar el video de validación de la aplicación con usuarios del curso actual; no se insertará un enlace ficticio ni contenido del curso anterior.
+
+---
+
 ## Video About The Team
 
 El video About The Team presenta la participacion de los cuatro integrantes activos del equipo Chronos durante el desarrollo de SafeStep. En el video se explica como se organizo el trabajo, que responsabilidades asumio cada integrante y como el equipo logro construir la Landing Page, la Web Application, el backend, la integracion con IAM, el sistema de pagos con Stripe y la documentacion del proyecto.

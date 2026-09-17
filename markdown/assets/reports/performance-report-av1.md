@@ -28,7 +28,7 @@
     </tr>
     <tr>
         <td><b>1</b></td>
-        <td>Ayala Fernandez, Jorge Brayan</td>
+        <td>Palacios Jáuregui, Kalid Jesus</td>
         <td>Redactar el capítulo I. Introducción</td>
         <td>X</td>
         <td></td>
@@ -38,7 +38,7 @@
     </tr>
     <tr>
         <td><b>2</b></td>
-        <td>Flores Eusebio, Angel Thyago</td>
+        <td>Sanchez Arenas, Manuel Angel</td>
         <td>Redactar el capítulo II. Requirements Elicitation & Analysis</td>
         <td>X</td>
         <td></td>
@@ -58,7 +58,7 @@
     </tr>
     <tr>
         <td><b>4</b></td>
-        <td>Miraval Pomalaya, Rodrigo Jesus</td>
+        <td>Tello Palacios, Fabrizio Rafael</td>
         <td>Redactar el capítulo IV. Product Design</td>
         <td>X</td>
         <td></td>
@@ -68,7 +68,7 @@
     </tr>
     <tr>
         <td><b>5</b></td>
-        <td>Sanchez Espinoza, Mathias Enrique</td>
+        <td>Palacios Jauregui, Kalid Jesus</td>
         <td>Redactar el capítulo V. Product Implementation, Validation & Deployment</td>
         <td>X</td>
         <td></td>

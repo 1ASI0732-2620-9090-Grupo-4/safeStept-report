@@ -1,6 +1,6 @@
 # 5.1. Software Configuration Management
 
-Este apartado describe la configuración **del proyecto actual**. El capítulo 5 anterior se conserva en `Capitulo5antiguo` como antecedente; sus versiones, tableros, repositorios y despliegues no se atribuyen a esta entrega sin una comprobación nueva. La solución disponible consta de una landing page estática, una aplicación web Angular y una API Spring Boot con PostgreSQL. La aplicación Android nativa está en desarrollo y se reporta por separado.
+Este apartado describe la configuración **del proyecto actual**. El capítulo 5 del informe del curso anterior se conserva como antecedente; sus versiones, tableros, repositorios y despliegues no se atribuyen a esta entrega sin una comprobación nueva. La solución disponible consta de una landing page estática, una aplicación web Angular y una API Spring Boot con PostgreSQL. La aplicación Android nativa está en desarrollo y se reporta por separado.
 
 ## 5.1.1. Software Development Environment Configuration
 
@@ -25,7 +25,7 @@ Las versiones del equipo de un integrante no constituyen un requisito universal:
 
 ## 5.1.2. Source Code Management
 
-El trabajo actual se aloja en la organización [1ASI0732-2620-9090-Grupo-4](https://github.com/1ASI0732-2620-9090-Grupo-4). Los repositorios de la organización antigua citados en `Capitulo5antiguo` son exclusivamente evidencia histórica.
+El trabajo actual se aloja en la organización [1ASI0732-2620-9090-Grupo-4](https://github.com/1ASI0732-2620-9090-Grupo-4). Los repositorios de la organización antigua citados en el capítulo 5 del informe anterior son exclusivamente evidencia histórica.
 
 | Producto | Repositorio actual | Rama local observada al preparar esta sección |
 |---|---|---|

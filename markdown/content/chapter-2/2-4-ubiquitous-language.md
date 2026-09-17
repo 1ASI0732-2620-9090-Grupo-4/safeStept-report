@@ -8,7 +8,7 @@
 <br>
 <br>
 
-# 2.5. Ubiquitous Language
+# 2.4. Ubiquitous Language
 
 Es el lenguaje común compartido entre desarrolladores y expertos del negocio que se formula durante el EventStorming para alinear modelos mentales y eliminar ambigüedades. Este lenguaje asegura que tanto la documentación técnica como el código final de SafeStep utilicen exactamente los mismos términos definidos para el dominio empresarial.
 
