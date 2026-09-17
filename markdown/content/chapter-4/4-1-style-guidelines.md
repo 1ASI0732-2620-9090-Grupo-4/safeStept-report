@@ -1,8 +1,8 @@
-﻿<br>
+<br>
 <br>
 
 <div align="center">
-    <img src="../../assets/images/chapter-4/capitulo-4.png" alt="Capitulo 4" />
+  <img src="../../assets/images/chapter-4/capitulo-4.png" alt="Capítulo IV" />
 </div>
 
 <br>
@@ -10,453 +10,135 @@
 
 # 4.1. Style Guidelines
 
+Esta guía reúne decisiones de marca, tipografía, color, espaciado e interacción para la landing page, la aplicación web y la futura experiencia móvil de SafeStep. La base visual se vincula con la necesidad de comprensión y práctica identificada en los tres segmentos de 1.3 y con las historias de la landing (US47–US56) y de la aplicación (US01–US46). **Las reglas para iOS y Android son propuestas de diseño; el proyecto revisado aún no contiene aplicaciones nativas.**
+
+El logotipo e imágenes de la landing están en `safeStept-landing-page/assets/`; la aplicación web guarda recursos en `safeStept-frontend/public/assets/` y sus variables visuales en `safeStept-frontend/src/styles.css`. La landing mantiene variables equivalentes en `safeStept-landing-page/styles.css`. **Todavía no existe un repositorio único de tokens y assets compartidos**: antes de producir nuevos prototipos, el equipo debe acordar una fuente maestra con nombre, valor, propósito, variante y responsable de cada token, y versionar allí logotipo, iconos y recursos con sus licencias. Esta guía es la referencia documental, no sustituye esa sincronización técnica.
+
 ## 4.1.1. General Style Guidelines
 
-### 4.1.1.1. Branding
+### 4.1.1.1. Branding y lenguaje
 
-El branding de SafeStep se fundamenta en la misión de salvar vidas a través de la educación en primeros auxilios. La marca busca transmitir confiabilidad, accesibilidad y profesionalismo, sin ser intimidante para el usuario común que busca aprender. A continuación se detallan los elementos fundamentales de la marca SafeStep.
-
-#### Nombre de la Marca
-
-**SafeStep** es una marca compuesta que transmite seguridad y progreso. El prefijo "Safe" (seguro en inglés) hace referencia inmediata a la seguridad, protección y primeros auxilios, mientras que "Step" (paso en inglés) representa el aprendizaje progresivo y los pasos concretos que debe seguir el usuario para estar preparado ante una emergencia. La combinación transmite el mensaje de que cada pequeño paso en el aprendizaje contribuye a sentirse más seguro y preparado para proteger a quienes lo rodean.
-
-#### Logotipo
-
-El logotipo de SafeStep consiste en un ícono representativo combinado con el nombre de la marca. El ícono principal es un corazón con un signo de más (+) integrado, que hace referencia clara al primer auxilios y a la atención médica de emergencia. Este ícono está encerrado en un escudo o círculo que representa protección. El nombre "SafeStep" se presenta en tipografía limpia y moderna, utilizando la fuente Poppins en versión bold para destacar. El color del ícono combina con el color primario de la paleta establecida, creando una identidad visual coherente y reconocible.
+**SafeStep** une seguridad y aprendizaje progresivo. El logotipo actual combina un símbolo asociado a primeros auxilios con el nombre de la marca. Se conservará en proporciones y variantes aprobadas por el equipo, evitando deformaciones o cambios de color que reduzcan su reconocimiento.
 
 <div align="center">
-  <p>
-    <b>Gráfico</b>: Logo de SafeStep
-  </p>
-  <img src="../../assets/images/chapter-4/safestep-logo.png" alt="Logo de SafeStep" />
-  <p>
-    <i><b>Fuente</b>: Elaboración propia.</i>
-  </p>
+  <p><b>Gráfico 1.</b> Logotipo actual de SafeStep</p>
+  <img src="../../assets/images/chapter-4/safestep-logo.png" alt="Logotipo de SafeStep" />
+  <p><i>Fuente: recurso existente del proyecto.</i></p>
 </div>
 
-#### Eslogan
+El lema de trabajo es «Aprende a salvar vidas, un paso a la vez». Como promesa de comunicación, debe acompañarse de un límite explícito: **la plataforma apoya el aprendizaje y no reemplaza la atención de emergencias ni la práctica supervisada**. No se afirmará que el contenido esté validado por profesionales de salud, que las simulaciones acrediten competencias o que una insignia sea certificación profesional hasta contar con evidencia verificable.
 
-El slogan principal de SafeStep es "Aprende a salvar vidas, un paso a la vez". Este slogan refleja la metodología progresiva de la plataforma, donde el usuario avanza gradualmente a través de módulos y lecciones estructuradas, ganando confianza y conocimientos en cada etapa. También transmite que el aprendizaje de primeros auxilios es accesible para cualquier persona, sin importar su edad o formación previa.
+| Dimensión del tono | Decisión | Aplicación y sustento |
+|---|---|---|
+| Serio / divertido | Serio en instrucciones; ligero solo en motivación | Una emergencia requiere indicaciones claras; los elementos lúdicos no deben trivializarla. |
+| Formal / casual | Cercano y respetuoso | Los segmentos incluyen principiantes; se explican términos técnicos antes de usarlos. |
+| Respetuoso / irreverente | Respetuoso | No se usan bromas sobre lesiones, víctimas o errores. |
+| Entusiasta / sereno | Sereno en decisiones; alentador en progreso | El feedback reconoce avances sin prometer capacidad clínica no medida. |
 
-#### Valores de Marca
-
-SafeStep se basa en los siguientes valores fundamentales que guían todas las decisiones de diseño y comunicación:
-
-1. **Accesibilidad**: Todo contenido y funcionalidad debe ser comprensible para cualquier usuario, independientemente de su nivel educativo o experiencia tecnológica. La plataforma evita tecnicismos innecesarios y presenta la información de manera clara y concisa.
-
-2. **Confiabilidad**: El contenido de SafeStep está validado por profesionales de la salud y basado en protocolos internacionales de primeros auxilios. El diseño transmite seriedad y profesionalismo sin ser intimidante.
-
-3. **Empoderamiento**: Cada elemento de la experiencia busca hacer sentir al usuario que puede aprender y que está capacitado para actuar en una emergencia. El diseño refuerza la autoconfianza a través de retroalimentación positiva y progresión clara.
-
-4. **Humanidad**: La plataforma mantiene un tono cálido y empático, reconociendo que las emergencias son situaciones sensibles. Los mensajes y elementos visuales equilibran la seriedad del tema con esperanza y apoyo.
-
-5. **Innovación**: SafeStep utiliza tecnología moderna para hacer el aprendizaje más efectivo y accesible. El diseño refleja innovación sin sacrificar la claridad.
-
-#### Personalidad de Marca
-
-La personalidad de SafeStep se define en el espectro entre varios ejes comunicacionales:
-
-- **Serio pero accesible**: El contenido de primeros auxilios es serio y representa situaciones críticas. Sin embargo, el tono no debe ser alarmista ni aterrador. Se transmite urgencia educando sin intimidar. El lenguaje es directo pero cálido, profesional pero cercano.
-
-- **Educativo sin ser aburrido**: El aprendizaje de primeros auxilios puede ser interesante y hasta entretenido cuando se presenta de manera interactiva. SafeStep evita el tono de conferencias tradicionales, trae vida a conceptos que podrían ser secs y monótonos a través de casos reales, ejemplos prácticos y elementos de gamificación.
-
-- **Profesional sin ser impersonal**: A diferencia de aplicaciones informales, SafeStep mantiene estándares profesionales en su contenido. Sin embargo, la comunicación no es frívola ni excesivamente corporativa. El usuario siente que está siendo guiado por expertos que genuinamente se preocupan por su bienestar.
-
-- **Entusiasta pero Enfocado**: El entusiasmo de SafeStep por enseñar y por el progreso del usuario es evidente. Sin embargo, no es superficial ni distraído. Cada elemento tiene un propósito claro y contribuye al objetivo fundamental de preparar personas para actuar en emergencias.
+Microcopy recomendado: verbos concretos como «Practicar», «Revisar respuesta» y «Continuar». Los mensajes de error explican qué ocurrió y qué puede hacer la persona; las respuestas médicas deben citar una fuente y fecha de revisión cuando se publiquen. Se evitarán frases absolutas como «ya puedes actuar correctamente» o «certificado oficial» sin respaldo.
 
 ### 4.1.1.2. Typography
 
-El sistema tipográfico de SafeStep establece una jerarquía clara que guía al usuario a través del contenido, enfatizando la información más importante mientras mantiene la legibilidad en todos los tamaños de pantalla y dispositivos.
-
-#### Familia Tipográfica Principal
-
-SafeStep utiliza dos familias tipográficas complementarias que trabajan juntas para crear una jerarquía visual efectiva:
-
-1. **Poppins** (Sans-serif): Utilizada para títulos, encabezados y elementos que requieren impacto visual. Es una fuente geométrica moderna con excelente legibilidad en pantallas. Su versión Bold transmite confianza y determinación apropiadas para el tono de la marca.
-
-2. **Inter** (Sans-serif): Utilizada para el cuerpo de texto y contenido general. Es una fuente altamente legible diseñada específicamente para interfaces de usuario. Su diseño neutro complementa Poppins sin competir por atención.
+El código actual carga **Poppins** para títulos e **Inter** para texto de interfaz tanto en la landing como en el frontend. Se conservan por la diferenciación entre jerarquía visual y lectura prolongada; deben ofrecerse fuentes de reserva del sistema si la carga externa falla.
 
 <div align="center">
-  <p>
-    <b>Gráfico</b>: Tipografía utilizada
-  </p>
-  <img src="../../assets/images/chapter-4/poppins.png" alt="Poppins" width="300" />
-  <p>
-    <i><b>Fuente</b>: Elaboración propia.</i>
-  </p>
+  <p><b>Gráfico 2.</b> Referencia tipográfica existente</p>
+  <img src="../../assets/images/chapter-4/poppins.png" alt="Muestra de tipografía Poppins" width="300" />
+  <p><i>Fuente: recurso existente del proyecto.</i></p>
 </div>
 
-#### Jerarquía Tipográfica
+| Uso | Familia y peso de referencia | Tamaño web inicial | Regla |
+|---|---|---:|---|
+| Título principal | Poppins 700 | 32–48 px según espacio | Un H1 semántico por vista; no reducir el texto hasta hacerlo ilegible. |
+| Sección | Poppins 600 | 24–32 px | Orden H2/H3 coherente con la estructura. |
+| Texto principal | Inter 400 | 16 px | Interlineado aproximado de 1,5. |
+| Texto secundario | Inter 400/500 | 14 px | No usarlo para instrucciones críticas extensas. |
+| Controles | Inter o Poppins 600 | 14–16 px | Nombre visible y accesible consistente. |
 
-La jerarquía tipográfica de SafeStep se organiza en varios niveles, cada uno con tamaños y pesos específicos:
+En web se emplearán unidades relativas o `clamp()` cuando corresponda. En móvil nativo, el tamaño de texto respetará los ajustes de accesibilidad del sistema; la equivalencia visual no requiere fijar el mismo número de píxeles en todas las plataformas.
 
-- **Display (Títulos principales)**: Poppins Bold, 48-64px. Utilizado para títulos de página y encabezados de hero sections. Este nivel tiene el mayor impacto visual y guía la atención inicial del usuario.
+### 4.1.1.3. Colors
 
-- **H1 (Títulos de sección)**: Poppins SemiBold, 32-36px. Utilizado para títulos de secciones principales dentro de las páginas. Establece la estructura visual del contenido.
+Los colores base proceden de las hojas de estilo actuales. El azul comunica acción y orientación, el verde indica éxito, el naranja precaución y el rojo error o riesgo. **El color nunca será el único indicador del estado**: se añadirá texto, icono o forma.
 
-- **H2 (Subtítulos)**: Poppins Medium, 24-28px. Utilizado para subtítulos que dividen contenido en secciones más pequeñas. Permite escaneo rápido del contenido.
+| Token de diseño | Valor | Uso previsto | Estado |
+|---|---|---|---|
+| Azul de marca | `#0ea5e9` | Acentos, ilustración y fondos sin texto blanco pequeño | Existente en landing y web. |
+| Azul de acción accesible | `#0369a1` | Fondo de botón con texto blanco o enlace sobre blanco | Propuesto para unificar; ya existe como variable en la landing. |
+| Azul profundo | `#0c4a6e` | Encabezados y superficies oscuras | Existente en la landing. |
+| Verde de marca | `#22c55e` | Estado de éxito acompañado de etiqueta | Existente; no usar con texto blanco pequeño sin revisión. |
+| Naranja / rojo | `#f97316` / `#ef4444` | Aviso / error acompañados de mensaje | Existentes; revisar contraste según combinación. |
+| Texto / fondo | `#111827` / `#ffffff` | Lectura principal | Existentes. |
 
-- **H3 (Títulos menores)**: Poppins Medium, 20px. Utilizado para títulos dentro de secciones específicas. Ayuda a organizar información relacionada.
+El contraste calculado de **blanco sobre `#0ea5e9` es 2,77:1**, insuficiente para el objetivo de 4,5:1 en texto normal. Blanco sobre `#0369a1` alcanza aproximadamente **5,93:1**. Por ello, **no se declara conformidad WCAG AA de la implementación actual**: se debe cambiar la combinación de botones/enlaces afectados y auditar todas las variantes, tamaños y estados. El objetivo se basa en [WCAG 2.2, criterio de contraste mínimo](https://www.w3.org/TR/WCAG22/#contrast-minimum); los valores anteriores son cálculos para colores sólidos, no una auditoría del gradiente completo.
 
-- **Cuerpo (Texto general)**: Inter Regular, 16px con interlineado de 1.5. El tamaño base para todo el contenido de texto que no requiere énfasis especial. El interlineado generoso mejora la legibilidad en textos más largos.
+### 4.1.1.4. Spacing y recursos compartidos
 
-- **Cuerpo pequeno (Texto secundario)**: Inter Regular, 14px. Utilizado para información de soporte, metadatos y descripciones adicionales.
+La escala propuesta parte de 4 px: **4, 8, 12, 16, 24, 32, 48 y 64 px**. Se usará para separación entre controles, tarjetas y secciones; no se reducirá de manera mecánica a la mitad en móvil si eso compromete el espacio táctil. El ancho máximo y la retícula de cada vista se comprobarán sobre los diseños reales, evitando imponer 12 columnas a pantallas estrechas.
 
-- **Botones y acciones**: Poppins SemiBold, 14-16px. Utilizado para texto dentro de botones y elementos de llamada a la acción. El peso semi-bold asegura que el texto sea legible incluso en botones pequeños.
+Para cada nuevo recurso se registrarán formato, versión, origen, licencia, texto alternativo y uso previsto. La biblioteca compartida debe contener variantes de logotipo, iconos, fotografías aprobadas, fuentes o enlaces de distribución, y tokens de color, tipografía y espaciado. Mientras siga dividida entre repositorios, cualquier cambio visual deberá revisarse en landing y frontend para evitar divergencias.
 
-- **Labels**: Inter Medium, 12-14px. Utilizado para etiquetas de formularios y campos de entrada. El tamaño pequeño pero legible economiza espacio.
+### 4.1.1.5. Referencia de diseño y trazabilidad
 
-#### Espaciado y Ritmo Tipográfico
+La aplicación web usa **Angular Material y CSS propio**; la landing usa HTML/CSS/JavaScript y variables CSS. La versión heredada **no implementa Tailwind**. El statement del curso exige una futura adecuación de la experiencia web a Vue/PrimeVue; la guía visual puede reutilizarse, pero no debe presentarse esa migración como terminada. Cada componente nuevo se relacionará con la historia de usuario que atiende, el token que utiliza y sus estados accesibles.
 
-El sistema tipográfico de SafeStep sigue un ritmo vertical consistente que crea una experiencia visual armoniosa:
+## 4.1.2. Web Style Guidelines
 
-- El espaciado entre líneas de texto (interlineado) es 1.5x el tamaño de fuente para cuerpo principal
-- El espaciado entre párrafos es 1.5x el tamaño de fuente
-- Los títulos tienen espaciado inferior mayor que el espaciado superior para crear separación visual clara
-- El espaciado entre letras (tracking) está ligeramente incrementado en títulos para mayor claridad
-- Los títulos en mayúsculas utilizan tracking aún mayor (+0.05em)
-
-### 4.1.1.3. Color Palette
-
-La paleta de colores de SafeStep está diseñada para comunicar los valores de la marca mientras mantiene la accesibilidad y funcionalidad. Cada color tiene un propósito específico en la experiencia del usuario.
-
-#### Esquema de Color Primario
-
-El esquema de color primario de SafeStep transmite seguridad, confianza y accesibilidad:
-
-1. **Primary Blue (#0ea5e9 - Sky 500)**
-
-   El azul primario de SafeStep representa confianza, profesionalismo y seguridad. Es el color principal utilizado para botones primarios, enlaces importantes, iconos de navegación y elementos que requieren atención. Su tono medio-azul es lo suficientemente serio para transmitir profesionalismo pero lo suficientemente cálido para no ser fría o distante. Este color se usa consistentemente para:
-   - Botones principales de llamada a la acción
-   - Iconos y elementos decorativos principales
-   - Resaltado de enlaces y navegación activa
-   - Elementos interactivos primarios
-
-2. **Primary Dark (#0284c7 - Sky 600)**
-
-   Una versión más oscura del azul primario para estados hover y énfasis. Mantiene la misma tonalidad pero con mayor contraste para mejor visibilidad en interactive elements.
-
-3. **Primary Light (#38bdf8 - Sky 400)**
-
-   Una versión más clara para fondos sutiles, highlights y elementos que requieren suavidad visual.
-
-#### Esquema de Color secundario
-
-El esquema secundario complementa el primario con opciones para diferentes estados y contextos:
-
-1. **Safe Green (#22c55e - Green 500)**
-
-   El verde de SafeStep representa éxito y seguridad. Se utiliza para:
-   - Indicadores de éxito y seguridad
-   - Estados de completado en progresiones
-   - Insignias y recompensas de gamificación
-   - Iconos de verificación
-
-2. **Safe Green Dark (#16a34a - Green 600)**
-
-   Versión más oscura del verde para estados hover en elementos verdes.
-
-#### Esquema de Color de Alerta
-
-Los colores de alerta comunican el estado y urgencia appropriately:
-
-1. **Warning Orange (#f97316 - Orange 500)**
-
-   Naranja para advertencias y atención moderada. Utilizado para:
-   - Alertas informativas
-   - Estados de progreso lentos
-   - Iconos de precaución
-
-2. **Danger Red (#ef4444 - Red 500)**
-
-   Rojo para errores, acciones peligrosas y emergencias. Se usa con moderación y con instrucciones claras:
-   - Mensajes de error en formularios
-   - Indicadores de emergencia en simulaciones
-   - Advertencias de seguridad críticas
-
-#### Paleta de Colores Neutral
-
-Los colores neutrales crean el fondo y estructura visual:
-
-1. **White (#ffffff)**
-   Color de fondo primario para tarjetas y secciones de contenido.
-
-2. **Gray 50 (#f9fafb)**
-   Fondo general de la página, especialmente en secciones de contenido.
-
-3. **Gray 100 (#f3f4f6)**
-   Fondo de secciones alternativas y separadores.
-
-4. **Gray 200 (#e5e7eb)**
-   Bordes y divisores sutiles.
-
-5. **Gray 300 (#d1d5db)**
-   Bordes de mayor contraste.
-
-6. **Gray 400 (#9ca3af)**
-   Iconos deshabilitados y texto de menor jerarquía.
-
-7. **Gray 500 (#6b7280)**
-   Texto secundario.
-
-8. **Gray 600 (#4b5563)**
-   Texto de menor jerarquía en headers.
-
-9. **Gray 700 (#374151)**
-   Cuerpo de texto secundario.
-
-10. **Gray 800 (#1f2937)**
-    Texto en fondos claros, títulos menores.
-
-11. **Gray 900 (#111827)**
-    Texto principal en fondos claros.
-
-12. **Black (#000000)**
-    Para texto en fondos claros cuando se requiera máximo contraste.
-
-#### Uso de Color en la Interfaz
-
-El sistema de color de SafeStep sigue principios de uso consistente:
-
-- El color nunca es el único medio para transmitir información
-- Los estados de interactive elements se comunican a través de múltiples señales (color, forma, movimiento)
-- El contraste se verifica para cumplir WCAG AA mínimo
-- Los colores se prueban en diferentes condiciones de iluminación y dispositivos
-
-### 4.1.1.4. Spacing System
-
-El sistema de espaciado de SafeStep establece una red consistente que crea orden visual y guía el flujo natural del usuario a través del contenido.
-
-#### Base de Espaciado
-
-El sistema de espaciado de SafeStep se basa en una escala de múltiplos de 4:
-
-- **4px (0.25rem)**: Espaciado mínimo para elementos muy juntos
-- **8px (0.5rem)**: Espaciado pequeño entre elementos relacionados
-- **12px (0.75rem)**: Espaciado entre elementos en el mismo grupo
-- **16px (1rem)**: Espaciado base para separación de componentes
-- **24px (1.5rem)**: Espaciado entre grupos de contenido
-- **32px (2rem)**: Espaciado entre secciones
-- **48px (3rem)**: Espaciado grande entre secciones
-- **64px (4rem)**: Espaciado máximo entre secciones principales
-- **96px (6rem)**: Espaciado hero para acciones mayores
-
-#### Sistema de Grid
-
-SafeStep utiliza un sistema de grid flexible que se adapta a diferentes tamaños de pantalla:
-
-- **Grid de 12 columnas**: Utilizado para layouts principales en desktop
-- **Gutter de 24px**: Separación estándar entre columnas
-- **Margen horizontal de 24-48px**: Según el ancho de pantalla
-- **Container máximo de 1280px**: Ancho máximo de contenido en desktop
-
-#### Espaciado en Componentes
-
-Cada componente tiene espaciado interno definido:
-
-- **Botones**: Padding vertical de 12-16px, horizontal de 16-24px
-- **Tarjetas**: Padding de 24px en desktop, 16px en móvil
-- **Inputs**: Padding de 12px vertical, 16px horizontal
-- **Listas**: Padding de 12-16px por item
-- **Navegación**: Padding de 8-12px por item
-
-#### Espaciado Responsivo
-
-El sistema de espaciado se adapta según el dispositivo:
-
-- **Desktop (>1024px)**: Espaciado completo de la escala
-- **Tablet (768-1024px)**: Reducción del 75% del espaciado base
-- **Mobile (<768px)**: Reducción del 50% del espaciado base, ajuste a múltiplos de 4
-
-### 4.1.1.5. Design System de Referencia
-
-SafeStep toma como referencia varios design systems establecidos, adaptándolos a las necesidades específicas de la plataforma. El sistema de Tailwind CSS proporciona la base técnica, mientras que principios de Material Design y sistemas propios informan las decisiones de interacción.
-
-#### Tailwind CSS como Base Técnica
-
-SafeStep utiliza Tailwind CSS para la implementación del diseño system. Los colores, tipografía, espaciado y componentes se definen en la configuración de Tailwind, permitiendo:
-
-- Consistencia en valores a través de la aplicación
-- Desarrollo rápido con clases utilitarias
-- Personalización centralizada en un solo archivo de configuración
-- Facilidad para adicionar nuevos valores
-
-#### Principios de Diseño UI
-
-Más allá de la implementación técnica, SafeStep sigue principios de diseño UI probados:
-
-- **Jerarquía visual clara**: El usuario sabe dónde mirar primero
-- **Consistencia**: Elementos similares se ven y comportan de manera similar
-- **Feedback**: Toda acción tiene respuesta visual
-- **Affordance evidente**: Los elementos muestran cómo usarse
-- **Accesibilidad**: La interfaz funciona para todos
-
-### 4.1.2. Web Style Guidelines
+Las reglas web cubren la landing y la aplicación autenticada. Su aplicación actual es parcial: el documento establece la decisión objetivo y señala los puntos que requieren ajuste en código.
 
 ### 4.1.2.1. Responsive Design Principles
 
-Los principios de diseño responsivo de SafeStep aseguran que la experiencia sea óptima en cualquier dispositivo, desde monitores grandes hasta teléfonos móviles.
+La landing usa cortes CSS en torno a **480, 768 y 992 px**; el shell de la aplicación cambia a modo compacto en **1024 px**. No son todavía un conjunto unificado. La decisión objetivo es basar cada cambio de disposición en el espacio real del contenido y probar al menos teléfono estrecho, teléfono ancho, tableta y escritorio. El contenido y las acciones esenciales deben permanecer disponibles sin desplazamiento horizontal. «Mobile-first» se tratará como criterio de próximos diseños, no como afirmación comprobada sobre todo el CSS heredado.
 
-#### Mobile-First Approach
+### 4.1.2.2. Componentes y estados
 
-SafeStep sigue un enfoque mobile-first, donde el diseño comienza optimizado para pantallas pequeñas y luego se expande para pantallas más grandes. Este enfoque asegura que:
+Cada botón, enlace, campo, tarjeta interactiva y elemento de navegación tendrá estados **predeterminado, hover cuando aplique, focus visible, pressed, disabled, carga y error/éxito**. La etiqueta y el feedback deberán indicar el resultado de la acción. El foco no dependerá solo del color y no desaparecerá para navegación por teclado.
 
-- El contenido esencial siempre es visible y accesible
-- Los elementos táctiles tienen tamaño adecuado (mínimo 44x44px)
-- La experiencia móvil es funcional y completa
-- Las versiones de escritorio son enhancement, no una adaptación obligatoria
+<div align="center">
+  <p><b>Gráfico 3.</b> Especificación visual propuesta de estados web</p>
+  <img src="../../assets/images/chapter-4/style-guidelines-web-states.svg" alt="Ejemplos de botón predeterminado, hover, foco, deshabilitado y campo con error" />
+  <p><i>Fuente: elaboración propia. Es una guía de diseño, no una captura de la aplicación implementada.</i></p>
+</div>
 
-#### Breakpoints Established
+Los formularios asociarán cada campo con su etiqueta, indicación de obligatoriedad y mensaje de error junto al control. Las acciones destructivas requerirán confirmación cuando su efecto sea difícil de revertir. En web se propone un objetivo táctil de **al menos 44 × 44 px** para controles principales, sujeto a revisión contextual y accesibilidad.
 
-SafeStep define los siguientes breakpoints para su diseño responsivo:
+### 4.1.2.3. Navegación, accesibilidad y movimiento
 
-- **Mobile**: 0-639px (celulares horizontales)
-- **Mobile Large**: 640-767px (teléfonos grandes, tablets pequeñas en portrait)
-- **Tablet**: 768-1023px (tablets en landscape)
-- **Desktop**: 1024-1279px (laptops, monitores pequeños)
-- **Desktop Large**: 1280px+ (monitores estándar y grandes)
+La landing dispone de navegación por anclas y acceso a la aplicación; la aplicación utiliza un shell con barra superior y menú lateral que pasa a modo compacto. La ubicación actual y el retorno se señalarán de forma consistente; no se prometerán breadcrumbs ni enlaces legales funcionales donde aún no existan. Los patrones concretos se describen en 4.2.5.
 
-#### Fluid Typography
+La meta web es cumplir **WCAG 2.2 nivel AA**: navegación por teclado, orden de foco, nombres accesibles, alternativas textuales, contraste y estados perceptibles. Esta es una meta de verificación, no una certificación de conformidad actual. Las transiciones cortas pueden orientar, pero el contenido no dependerá del movimiento y se respetará `prefers-reduced-motion`. Un *pull-to-refresh* nativo no se incluye como regla general de web.
 
-La tipografía de SafeStep escala fluidamente entre breakpoints, utilizando:
+## 4.1.3. Mobile Style Guidelines
 
-- Viewport units para tamaños de fuente principales
-- Clamp() para límites mínimos y máximos
-- Escalas proporcionales entre tamaños de pantalla
+Estas guías definen una **propuesta To-Be** para aplicaciones nativas. No describen pantallas ya desarrolladas. Se conservan marca, lenguaje, colores con contraste comprobado y estructura de contenido, pero controles, medidas y navegación se adaptarán a cada plataforma. La arquitectura de información móvil de 4.2 es igualmente propuesta.
 
-### 4.1.2.2. Web Component States
+| Elemento compartido | Decisión para las dos plataformas |
+|---|---|
+| Inicio de práctica | Acceso a simulaciones, progreso y ayuda sin ocultar información crítica tras gamificación o tienda. |
+| Contenido de emergencia | Instrucciones breves, fuente visible, fecha de revisión y aviso de que la app no sustituye atención profesional. |
+| Feedback | Explicar decisión, consecuencia y siguiente paso sin atribuir competencia clínica por una puntuación. |
+| Adaptación | Texto escalable, orientación y tamaños diversos, controles con nombres accesibles, movimiento reducible. |
 
-Los componentes de SafeStep comunican claramente sus estados a través de señales visuales múltiples:
+<div align="center">
+  <p><b>Gráfico 4.</b> Patrones móviles propuestos por plataforma</p>
+  <img src="../../assets/images/chapter-4/style-guidelines-mobile-platforms.svg" alt="Esquema comparativo de navegación móvil propuesta para iOS y Android" />
+  <p><i>Fuente: elaboración propia basada en las guías oficiales de Apple y Android. No representa una app implementada.</i></p>
+</div>
 
-#### Estados interactivos
+### 4.1.3.1. iOS Mobile Style Guidelines
 
-1. **Default**: Estado base del componente
-   - Fondo y color definidos por tipo
-   - Borde estándar
-   - Sin efectos adicionales
+- Respetar las **safe areas** para que texto y controles no queden bajo la cámara, barra del sistema o indicadores de gesto; adaptar pantallas compactas y ampliadas.
+- Usar una barra de pestañas solo para destinos principales estables. En vistas de detalle, conservar una forma reconocible de volver; no depender únicamente de gestos ocultos.
+- Integrar **Dynamic Type** y verificar que el contenido siga comprensible con texto ampliado. El área de interacción propuesta para controles es al menos **44 × 44 pt**.
+- Ofrecer etiquetas útiles para VoiceOver y no basar la comprensión del resultado exclusivamente en color, vibración o animación.
 
-2. **Hover**: Estado cuando el cursor está sobre el elemento
-   - Color de fondo cambiado (más claro u oscuro)
-   - Cursor de puntero
-   - Transición suave (200-300ms)
+Referencias: [Apple Human Interface Guidelines: Layout](https://developer.apple.com/design/human-interface-guidelines/layout), [Accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility) y [Tab bars](https://developer.apple.com/design/human-interface-guidelines/tab-bars).
 
-3. **Active/Pressed**: Estado cuando el elemento está siendo activado
-   - Color de fondo más oscuro
-   - Escala ligeramente reducida (0.98)
-   - Sin transición adicional
+### 4.1.3.2. Android Mobile Style Guidelines
 
-4. **Focus**: Estado cuando el elemento tiene foco (teclado)
-   - Anillo de foco visible (2-4px)
-   - Color del anillo contrastante
-   - No visible con mouse pero accesible con teclado
+- Respetar barras del sistema, recortes, teclado y **WindowInsets**; si se usa contenido edge-to-edge, mantener acciones fuera de las zonas de gestos.
+- Usar navegación principal adaptable: barra para un conjunto pequeño de destinos y, en pantallas amplias, evaluar rail o drawer. El comportamiento de **Back** debe volver de manera predecible desde detalles y flujos.
+- Permitir escalado de fuentes y lectura por TalkBack. El área táctil propuesta para controles es al menos **48 × 48 dp**, incluso si el icono visible es menor.
+- Usar componentes y patrones Material como referencia Android, manteniendo la identidad de SafeStep sin copiar una pantalla iOS.
 
-5. **Disabled**: Estado cuando la interacción no está disponible
-   - Opacidad reducida (50-60%)
-   - Cursor de "no permitido"
-   - Eliminar interactividad
-
-### 4.1.2.3. Form Elements
-
-Los elementos de formulario de SafeStep siguen patrones consistentes:
-
-#### Input Fields
-
-- Altura mínima de 44px para facilidad táctil
-- Bordes visibles que indican el área de interacción
-- Labels claramente asociados
-- Mensajes de error appear debajo del campo
-- Estados de focus y error claramente diferenciados
-
-#### Buttons
-
-- **Primary**: Fondo azul primario, texto blanco
-- **Secondary**: Fondo transparente, borde primario, texto primario
-- **Danger**: Fondo rojo, texto blanco
-- **Ghost**: Fondo transparente, texto primario, sin borde
-- Todos con altura mínima de 44px y padding horizontal de 16px
-
-#### Selects y Dropdowns
-
-- Diseño consistente con inputs de texto
-- Indicadores visuales de que es un elemento desplegable
-- Opciones visibles al abrir
-
-### 4.1.2.4. Navigation Patterns
-
-Los patrones de navegación de SafeStep optimizan la experiencia del usuario:
-
-#### Global Navigation
-
-- Visible en todas las páginas
-- Incluye logo, menú principal y acciones de usuario
-- Fija en la parte superior en desktop
-- Collapsible en mobile
-
-#### Secondary Navigation
-
-- Breadcrumbs para profundidad de navegación
-- Utilizado en secciones con sub-páginas
-- Indica claramente la ubicación actual
-
-#### Footer
-
-- Enlaces de utilidad (about, contacto, términos)
-- Redes sociales
-- Información legal
--links adicionales de ayuda
-
-### 4.1.2.5. Accessibility Guidelines
-
-SafeStep cumple con estándares de accesibilidad WCAG nivel AA como mínimo:
-
-#### Keyboard Navigation
-
-- Todos los elementos interactivos son accesibles por teclado
-- El orden de tabulación es lógico
-- Los atajos de teclado no interfieren con los del navegador
-- El foco es claramente visible
-
-#### Screen Reader Support
-
-- HTML semántico (headings, landmarks, labels)
-- ARIA labels donde es necesario
-- Imágenes con texto alternativo
-- Formularios completamente etiquetados
-
-#### Visual Accessibility
-
-- Contraste mínimo de 4.5:1 para texto
-- Contraste mínimo de 3:1 para elementos UI grandes
-- No depender solo de color para transmitir información
-- Los estados son diferenciables
-
-### 4.1.2.6. Animation Guidelines
-
-Las animaciones de SafeStep mejoran la experiencia sin distraer mucho:
-
-#### Purpose of Animations
-
-- feedback de interacción (el sistema responde a acciones del usuario)
-- Orientación espacial (el usuario entiende cambios de contexto)
-- Estados de carga (comunican que el sistema está trabajando)
-- Énfasis (atraen la atención a elementos importantes)
-
-#### Animation Principles
-
-- Duración breve: 150-300ms para la mayoría de transiciones
-- Curvas de easing naturales (ease-out para entrada, ease-in-out para cambios de estado)
-- Evitar animaciones que duran más de 500ms para interacciones frecuentes
-- Permitir reducción de movimiento a través de prefers-reduced-motion
-
-#### Micro-interactions
-
-- Hover states en botones y enlaces
-- Transiciones de color suave
-- Efectos de presión (escala reducida) en buttons
-- Pull-to-refresh en mobile
-
-
-
-
-
-
+Referencias: [Android: System bars](https://developer.android.com/design/ui/mobile/guides/foundations/system-bars), [Accessibility](https://developer.android.com/design/ui/mobile/guides/foundations/accessibility) y [Layouts and navigation patterns](https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-patterns).

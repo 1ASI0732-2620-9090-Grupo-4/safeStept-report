@@ -1,8 +1,8 @@
-﻿<br>
+<br>
 <br>
 
 <div align="center">
-    <img src="../../assets/images/chapter-4/capitulo-4.png" alt="Capitulo 4" />
+  <img src="../../assets/images/chapter-4/capitulo-4.png" alt="Capítulo IV" />
 </div>
 
 <br>
@@ -10,682 +10,121 @@
 
 # 4.2. Information Architecture
 
+La arquitectura de información organiza el contenido para que visitantes y usuarios encuentren una forma de conocer SafeStep, practicar y revisar su progreso. Se basa en los segmentos de 1.3, en la necesidad de fuentes y práctica descrita en 2.2–2.3 y en las historias de la landing (US47–US56) y de la aplicación (US01–US46). La prioridad es hacer visible la práctica sin confundir una puntuación de simulación con competencia clínica.
+
+**Alcance:** se distinguen la landing HTML/CSS/JavaScript y la aplicación web autenticada actual. Las decisiones de aplicación nativa son **propuestas To-Be**, porque no hay una app iOS o Android en los repositorios revisados. Cuando una función descrita aquí no está implementada, se etiqueta como pendiente y no se presenta como evidencia de producto terminado.
+
+<div align="center">
+  <p><b>Gráfico 1.</b> Mapa de contenidos y destinos principales</p>
+  <img src="../../assets/images/chapter-4/information-architecture-map.svg" alt="Mapa de la landing, la aplicación web y la futura experiencia móvil" />
+  <p><i>Fuente: elaboración propia a partir de la landing y las rutas del frontend. La rama móvil es propuesta.</i></p>
+</div>
+
 ## 4.2.1. Organization Systems
 
-### 4.2.1.1. Organización del Landing Page
+### 4.2.1.1. Organización por producto y propósito
 
-El Landing Page de SafeStep sirve como punto de entrada principal para visitantes que descubren la plataforma por primera vez. Su organización está diseñada para guiar al usuario a través de un viaje de descubrimiento y conversión desde el primer momento.
+| Producto / grupo | Organización visual | Categorización y orden | Estado |
+|---|---|---|---|
+| Landing: inicio | Jerárquica: propuesta de valor y CTA antes del detalle; secuencial en «cómo funciona» | Por tópicos: características, cursos, gamificación, tienda, testimonios, FAQ; existe además `about.html` | Implementado en el sitio estático. |
+| Web: inicio y práctica | Jerárquica: dashboard → catálogo de simulaciones → detalle → respuesta y resultado | Por tópico/tipo de emergencia; el filtro de catálogo usa `emergencyType` | Implementado en la aplicación web. |
+| Web: progreso y gamificación | Jerárquica desde el menú principal; vistas de datos y logros | Cronológica cuando se revisan intentos o actividad; por tópico para estadísticas e insignias | Implementado parcialmente; revisar en cada vista las agrupaciones reales. |
+| Web: tienda | Catálogo → producto/kit → carrito y flujo de compra | Por categoría y búsqueda textual; no se presupone un orden alfabético fijo | Implementado en la aplicación web. |
+| Móvil nativo | Destinos principales equivalentes, con disposición adaptable a cada sistema | Mantener las mismas categorías y términos, revalidando su prioridad con cada segmento | Propuesta pendiente de diseño y desarrollo. |
 
-#### Estructura Jerárquica en el Landing Page
+La organización **matricial** se reserva como propuesta para cruces de tipo de emergencia, dificultad y estado cuando los datos y controles lo permitan. La organización **por audiencia** —estudiante, miembro de comunidad vecinal y persona con experiencia brigadista— sirve para analizar pertinencia de ejemplos y contenidos; **no se presenta como personalización o roles ya implementados**. Las listas alfabéticas podrían ayudar en un catálogo amplio, mientras las cronológicas son apropiadas para historial; ninguna se atribuye a todas las pantallas sin comprobarlo.
 
-La organización del Landing Page sigue una jerarquía visual clara que refleja el proceso mental del visitante:
+El informe anterior describía módulos obligatorios «teoría → video → evaluación», niveles curriculares y certificaciones como estructura vigente. Esa secuencia no se deduce de las rutas principales actuales, que se organizan alrededor de **simulaciones**. Si el equipo decide desarrollar cursos o módulos más adelante, deberá incorporarlos al backlog, al mapa de contenidos y a pruebas de navegación antes de tratarlos como parte del producto.
 
-1. **Nivel 1 - Header de Impacto**: El hero section presenta el valor principal de SafeStep de manera inmediata. El visitante entiende en qué consiste la plataforma en maximal 3 segundos de visualización. Esta sección incluye el título principal, subtítulo explicativo y llamadas a la acción primarias.
+### 4.2.1.2. Reglas de jerarquía y secuencia
 
-2. **Nivel 2 - Beneficios Clave**: Inmediatamente después, se presentan las características principales de SafeStep en formato de tarjetas visuales. Esta sección está organizada de manera secuencial (step-by-step) para guiar al visitante a través del proceso de comprensión: qué problema resuelve SafeStep, cómo lo resuelve, y qué beneficio obtiene el usuario.
-
-3. **Nivel 3 - Detalles y Pruebas**: Las secciones siguientes profundizan en características específicas, testimonios y pruebas sociales. Esta información está organizada por tópicos (simulaciones, gamificación, tienda, certificaciones).
-
-4. **Nivel 4 - Footer y Navegación Adicional**: El footer proporciona navegación secundaria, enlaces legales y opciones de contacto organizadas por función (soporte, empresa, legal).
-
-#### Principios de Organización Aplicados
-
-La organización del Landing Page aplica los siguientes principios específicos:
-
-- **Jerarquía visual estricto**: Cada nivel de contenido tiene importancia visual claramente diferenciada. El usuario escanea naturalmente de arriba abajo y de izquierda a derecha, siguiendo la jerarquía establecida.
-
-- **Progresión lógica**: Las secciones progress logically desde el "qué es" hasta el "cómo usarlo" y finalmente "por qué confiar". Esta narrativa sigue la estructura de cualquier proceso de decisión.
-
-- **Agrupación por función**: Elementos relacionados se mantienen juntos. Características similares comparten secciones, testimonios se agrupan con las secciones que respalda.
-
-- **Jerarquía de tres**: Nunca hay más de tres niveles de subdivisión por sección, evitando sobrecarga cognitiva.
-
-### 4.2.1.2. Organización de la Aplicación Web (Dashboard y Área Principal)
-
-La aplicación web de SafeStep tiene una estructura más compleja dado que los usuarios regresarán frecuentemente y necesitan encontrar funcionalidades específicas de manera eficiente.
-
-#### Sistema de Organización Principal
-
-La aplicación principal utiliza un sistema de organización matricial que combina múltiples enfoques:
-
-1. **Organización por audiencia (grupos de usuarios)**:
-
-   - **Aprendiz**: El usuario que viene a aprender y practicar simulaciones tiene su propio espacio de trabajo, progreso y recomendaciones.
-   - **Comprador**: El usuario interesado en productos tiene acceso al catálogo, carrito y órdenes.
-   - **Ambos**: Los usuarios pueden acceder a ambas funcionalidades desde un menú unificado.
-
-2. **Organización por función principal (áreas)**:
-
-   - **Aprendizaje**: Módulos, lecciones, simulaciones, progreso, certificaciones.
-   - **Tienda**: Catálogo, carrito, pedidos, direcciones, cuenta.
-   - **Perfil**: Configuración, progreso, preferencias, seguridad.
-
-3. **Organización cronológica (donde aplica)**:
-
-   - **Historial de simulaciones**: Lista cronológica inversely ordered (más reciente primero).
-   - **Pedidos**: Lista cronológica por fecha de compra.
-   - **Lecciones completadas**: Orden de progreso en el módulo.
-
-#### Esquemas de Categorización para Contenido Educativo
-
-El contenido de aprendizaje de SafeStep se organiza utilizando los siguientes esquemas según el contexto:
-
-1. **Por tópicos (Módulos principales)**:
-
-   - RCP (Reanimación Cardiopulmonar)
-   - Atragantamiento
-   - Quemaduras
-   - Hemorragias
-   - Sismos
-   - Y futuros módulos según desarrollo.
-
-2. **Por audiencia (contenido especializado)**:
-
-   - **Básico**: Contenido fundamental para todo público.
-   - **Intermedio**: Profundización para usuarios regulares.
-   - **Avanzado**: Contenido especializado para brigadistas y profesionales.
-
-3. **Por secuencia de aprendizaje (lecciones dentro de módulos)**:
-
-   Cada módulo tiene una lección sequence obligatoria:
-   - Teoría → Video → Evaluación
-   El usuario no puede saltar etapas según el orden pedagógico.
-
-#### Esquemas de Categorización para la Tienda
-
-La tienda de SafeStep organiza sus productos utilizando:
-
-1. **Por categoría de producto**:
-
-   - Botiquines y Kits
-   - Vendaje y Gasas
-   - Antisépticos y Cuidado de heridas
-   - Equipos de emergencia
-   - Accesorios
-
-2. **Por aplicación/Uso**:
-
-   - Hogar
-   - Oficina/Lugar de trabajo
-   - Vehículo
-   - Personal/Mochila
-
-3. **Alfabéticamente dentro de cada categoría**:
-   Los productos dentro de categorías se ordenan alfabéticamente para facilitar la navegación.
-
-### 4.2.1.3. Estrategia de Organización para Búsqueda y Descubrimiento
-
-Más allá de la navegación estructurada, SafeStep implementa organización que facilita el descubrimiento casual:
-
-#### Contenido Destacado
-
-- **Para usuarios nuevos**: Módulos recomendados para comenzar
-- **Para usuarios en progreso**: Continuar desde donde dejaron
-- **Para usuarios frecuentes**: Contenido avanzado o refreshers
-- **Productos populares**:based en datos de compra agregados
-
-#### Colecciones y Agrupaciones
-
-- **Bundles**: Productos que se compran juntos frecuentemente
-- **Kits por situación**: Productos para emergencias específicas
-- **Completar kit**: Productos que faltan en el kit básico del usuario
+1. En la landing, la pregunta «¿qué es y para quién sirve?» se responde antes del detalle de recompensas o tienda. Los CTA llevan a acceso/registro cuando el destino existe; no se usarán enlaces vacíos como si fueran navegación terminada.
+2. En la web, el dashboard ofrece acceso a las cinco áreas principales: Dashboard, Simulaciones, Progreso, Gamificación y Tienda. El perfil se alcanza mediante las acciones de usuario, no como una sexta entrada permanente del menú principal.
+3. Un detalle de simulación identifica el tipo de emergencia, qué se practicará y el origen del contenido antes de iniciar. El resultado ofrece un camino claro para revisar o repetir.
+4. La tienda mantiene separados el aprendizaje y la compra: una sugerencia comercial no se confundirá con una recomendación clínica.
 
 ## 4.2.2. Labeling Systems
 
-Aquí el equipo explica de qué maneras se representarán los datos, considerando simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para representar los conjuntos de información y las asociaciones entre las mismas.
+El etiquetado utiliza nombres breves y consistentes para relacionar **etiqueta → destino → acción esperada**. La landing y la web tienen contextos distintos; no se forzará la misma etiqueta donde significaría algo diferente. Las traducciones ES/EN de la aplicación deben conservar la misma asociación.
 
-### 4.2.2.1. Principios de Etiquetado
+### 4.2.2.1. Inventario de etiquetas principales
 
-SafeStep sigue principios específicos para todas las etiquetas utilizadas en la plataforma:
+| Contexto | Etiqueta visible o de referencia | Asociación prevista | Estado |
+|---|---|---|---|
+| Landing | Características | Beneficios y capacidades de SafeStep | Enlace a sección `#features`. |
+| Landing | Cursos | Presentación de temas; no equivale a un currículo web ya implementado | Enlace a `#courses`; revisar CTA de cada tarjeta. |
+| Landing | Gamificación / Tienda | Explicación de incentivos / productos | Enlaces a `#gamification` y `#store`. |
+| Landing | Acerca de | Equipo y proyecto Chronos | `about.html`. |
+| Landing | Comenzar Gratis | Acceso a la aplicación | Destino externo actual; validar disponibilidad y promesa de gratuidad. |
+| Web | Dashboard | Vista de inicio autenticada | `/app/dashboard`. |
+| Web | Simulaciones | Catálogo y práctica | `/app/simulations`. |
+| Web | Progreso | Estadísticas personales | `/app/statistics`. |
+| Web | Gamificación | Misiones, insignias y recompensas | `/app/gamification`. |
+| Web | Tienda | Catálogo y compra | `/app/store`. |
+| Web | Perfil | Información y opciones personales | Acceso desde shell a `/app/profile`. |
+| Móvil nativo | Inicio / Práctica / Progreso / Tienda | Destinos candidatos de primer nivel | Propuesta; validar mediante pruebas con usuarios. |
 
-#### Principios Fundamentales
+### 4.2.2.2. Reglas para contenido y acciones
 
-1. **Mínimo número de palabras**: Las etiquetas son cortas y descriptivas. Máximo 3 palabras para etiquetas de navegación, 5 para secciones.
-
-2. **Lenguaje común**: Se evitan tecnicismos innecesarios. Las etiquetas reflejan cómo el usuario promedio pensaría, no cómo un experto describiría.
-
-3. **Consistencia**: La misma concept tiene la misma etiqueta en todas partes. "Mis pedidos" no puede ser "Historial de compras" en otra sección.
-
-4. **Diferenciación clara**: Etiquetas similares tienen significados claramente distintos. "Mi progreso" vs "Mi historial" comunican cosas diferentes.
-
-5. **Traducibilidad**: Las etiquetas deben traducirse bien a otros idiomas sin perder claridad.
-
-### 4.2.2.2. Etiquetas de Navegación Principal
-
-Las etiquetas del menú principal de navegación:
-
-| Etiqueta | Descripción |
-|---------|-------------|
-| **Inicio** | Dashboard principal del usuario |
-| **Aprender** | Área de módulos y lecciones |
-| **Simulaciones** | Práctica interactiva |
-| **Tienda** | Catálogo de productos |
-| **Mi Progreso** | Estadísticas y avance |
-| **Mi Cuenta** | Configuración de perfil |
-
-### 4.2.2.3. Etiquetas de Contenido Educativo
-
-| Etiqueta | Descripción |
-|---------|-------------|
-| **Módulos** | Unidades de aprendizaje temáticas |
-| **Lecciones** | Contenido específico dentro de módulos |
-| **Teoría** | Contenido escrito y pasos |
-| **Video** | Contenido audiovisual demostrativo |
-| **Prueba/Evaluación** | Evaluación de comprensión |
-| **Certificado** | Reconocimiento de completación |
-
-### 4.2.2.4. Etiquetas de Tienda
-
-| Etiqueta | Descripción |
-|---------|-------------|
-| **Catálogo** | Lista de todos los productos |
-| **Carrito** | Productos seleccionados para compra |
-| **Mis Pedidos** | Historial de compras |
-| **Mis Direcciones** | Direcciones de entrega guardadas |
-| **Favoritos** | Productos guardados para después |
-
-### 4.2.2.5. Etiquetas de Acciones de Usuario
-
-| Etiqueta | Descripción |
-|---------|-------------|
-| **Comenzar** | Iniciar nuevo contenido o acción |
-| **Continuar** | Reanudar contenido en progreso |
-| **Completar** | Finalizar acción o módulo |
-| **Guardar** | Almacenar para después |
-| **Comprar** | Finalizar proceso de compra |
-| **Cancelar** | Abandonar proceso sin guardar |
-
-### 4.2.2.6. Reglas deAsociación entre Etiquetas
-
-Las etiquetas se relacionan de manera predecible:
-
-- **Barra lateral → Contenido principal**: Las etiquetas de navegación lateral correspond al contenido principal mostrado.
-- **Título de sección → Breadcrumb**: Los breadcrumbs reflejan la navegación realizada.
-- **Etiqueta de tab → Contenido del tab**: Las etiquetas de tabs tienen contenido asociado claro.
-- **Botón → Acción relacionada**: Los botones de acción reflejan la etiqueta del flujo que initiate.
+- Usar una sola denominación por concepto: «Simulaciones» no cambia a «Módulos» dentro del mismo flujo; «Progreso» y «Historial» se distinguen cuando muestran información diferente.
+- Las acciones se nombran por resultado: «Practicar», «Continuar», «Ver resultado», «Agregar al carrito». «Certificado» solo se utilizará si existe una credencial con alcance, emisor y validez comprobables; las recompensas internas se nombran como **insignias** o **logros**.
+- El texto breve de un botón no sustituye el contexto accesible. Un icono aislado tendrá nombre legible para tecnologías de asistencia.
+- Cada etiqueta de navegación debe conservar el destino esperado en español e inglés. El equipo revisará traducciones con la nomenclatura del backlog, las rutas y las pantallas, sin usar literalmente claves internas como `nav.dashboard`.
 
 ## 4.2.3. SEO Tags and Meta Tags
 
-En esta sección se debe incluir los SEO Tags y Meta Tags junto con los valores que asignará en las principales páginas de la experiencia tanto a nivel del sitio web estático (Landing Page) como Web Application. Se debe incluir Title, los Meta Tags Description, Keywords, Author como mínimo.
+El statement solicita valores de **Title, Description, Keywords y Author** para páginas principales de landing y aplicación. La tabla siguiente es una **especificación objetivo**, no una afirmación de que todos los metadatos estén ya publicados. Las páginas privadas de la aplicación no necesitan posicionarse en buscadores y se proponen con `noindex`.
 
-### 4.2.3.1. Configuración SEO General
+| Página / ruta | Title propuesto | Description propuesta | Keywords propuestas | Author | Indexación |
+|---|---|---|---|---|---|
+| Landing `index.html` | SafeStep \| Practica decisiones de primeros auxilios | Conoce SafeStep y sus simulaciones educativas para repasar decisiones iniciales ante emergencias. | primeros auxilios, simulaciones, aprendizaje | Equipo Chronos | Pública. |
+| Landing `about.html` | Acerca de Chronos \| SafeStep | Conoce al equipo, el propósito y los límites de la plataforma educativa SafeStep. | Chronos, SafeStep, equipo | Equipo Chronos | Pública. |
+| Acceso `/auth` | Acceso \| SafeStep | Ingresa a tu espacio de práctica de SafeStep. | SafeStep, acceso | Equipo Chronos | `noindex`. |
+| `/app/dashboard` | Inicio \| SafeStep | Consulta accesos a práctica y progreso personal. | SafeStep, inicio | Equipo Chronos | `noindex`. |
+| `/app/simulations` y detalle | Simulaciones \| SafeStep / [Nombre] \| SafeStep | Explora simulaciones educativas o revisa el objetivo de una práctica. | simulaciones, primeros auxilios | Equipo Chronos | `noindex` en el producto autenticado. |
+| `/app/statistics` | Progreso \| SafeStep | Revisa estadísticas de las prácticas realizadas. | SafeStep, progreso | Equipo Chronos | `noindex`. |
+| `/app/gamification` | Gamificación \| SafeStep | Consulta misiones, insignias y recompensas internas. | SafeStep, gamificación | Equipo Chronos | `noindex`. |
+| `/app/store` y detalle | Tienda \| SafeStep / [Producto] \| SafeStep | Explora productos o consulta sus características antes de comprar. | SafeStep, tienda | Equipo Chronos | `noindex` mientras requiera autenticación. |
 
-SafeStep implementa configuración SEO robusta en todas las páginas para maximizar visibilidad en buscadores.
+**Diferencia con el código actual:** `index.html` de la landing tiene Title, Description y Keywords, pero no Author; `about.html` tiene Title y Description, pero no Keywords ni Author. La aplicación define títulos de rutas, pero su HTML base no declara las cuatro metatags. Deben implementarse y verificarse en el HTML servido; una tabla del informe por sí sola no configura SEO.
 
-#### Nombre del Sitio
-
-**SafeStep - Aprende Primeros Auxilios de Forma Interactiva**
-
-#### Dominio Principal
-
-<a href="https://www.safestep.com">https://www.safestep.com</a> (o el dominio final registrado)
-
-### 4.2.3.2. Landing Page SEO Tags
-
-El Landing Page es la página más importante para SEO, sirviendo como punto de entrada principal.
-
-#### Title Tag
-
-```
-SafeStep | Aprende Primeros Auxilios de Forma Interactiva - Simulaciones Prácticas
-```
-
-#### Meta Description
-
-```
-Aprende primeros auxilios de manera interactiva con simulaciones realistas. Domina RCP, Heimlich, quemaduras y más. ¡50,000+ usuarios ya están preparados!
-```
-
-#### Meta Keywords
-
-```
-primeros auxilios, RCP, Heimlich, quemaduras, emergencias, primeros auxilios online, capacitación emergencia, aprender emergencias, simulaciones médicas
-```
-
-#### Meta Author
-
-```
-SafeStep Team
-```
-
-#### Open Graph Tags (para redes sociales)
-
-```
-og:title = SafeStep | Aprende Primeros Auxilios de Forma Interactiva
-og:description = Domina técnicas de primeros auxilios mediante simulaciones interactivas. ¡50,000+ usuarios preparados!
-og:image = [URL de imagen de preview]
-og:url = https://www.safestep.com
-og:type = website
-og:site_name = SafeStep
-```
-
-#### Twitter Card Tags
-
-```
-twitter:card = summary_large_image
-twitter:title = SafeStep | Aprende Primeros Auxilios de Forma Interactiva
-twitter:description = Domina técnicas de primeros auxilios mediante simulaciones interactivas.
-twitter:image = [URL de imagen de preview]
-```
-
-### 4.2.3.3. Web Application - Dashboard SEO Tags
-
-El dashboard es la página principal después del login.
-
-#### Title Tag
-
-```
-Dashboard - SafeStep
-```
-
-#### Meta Description
-
-```
-Tu espacio de aprendizaje de primeros auxilios. Continúa tu progreso y domina nuevas habilidades.
-```
-
-#### Meta Robots
-
-```
-noindex, nofollow
-```
-
-*(El dashboard no debe ser indexado)*
-
-### 4.2.3.4. Página de Módulos SEO Tags
-
-#### Title Tag
-
-```
-Módulos de Aprendizaje - SafeStep
-```
-
-#### Meta Description
-
-```
-Explora nuestros módulos de RCP, atragantamiento, quemaduras y más. Aprende paso a paso con teoría, videos y evaluaciones.
-```
-
-### 4.2.3.5. Página de Tienda SEO Tags
-
-#### Title Tag
-
-```
-Tienda de Primeros Auxilios - SafeStep
-```
-
-#### Meta Description
-
-```
-Encuentra botiquines, vendas, guantes y más productos de primeros auxilios. Envío a todo el país.
-```
-
-### 4.2.3.6. Página de Producto Individual SEO Tags
-
-#### Title Tag
-
-```
-[Nombre del Producto] - SafeStep
-```
-
-#### Meta Description
-
-```
-[Descripción específica del producto de 150-160 caracteres]
-```
-
-### 4.2.3.7. Página de Simulación Individual SEO Tags
-
-#### Title Tag
-
-```
-Simulación de [Tipo de Emergencia] - SafeStep
-```
-
-#### Meta Description
-
-```
-Practica tu respuesta ante [tipo de emergencia] con nuestra simulación interactiva. Aprende a actuar correctamente.
-```
-
-### 4.2.3.8. Estructura de Datos Schema Markup
-
-SafeStep implementa Schema.org para mejorar la presentación en buscadores:
-
-#### Organization Schema
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "SafeStep",
-  "url": "https://www.safestep.com",
-  "logo": "https://www.safestep.com/logo.png",
-  "description": "Plataforma interactiva para aprender primeros auxilios",
-  "sameAs": [
-    "https://www.facebook.com/safestep",
-    "https://instagram.com/safestep",
-    "https://twitter.com/safestep"
-  ]
-}
-```
-
-#### Course Schema (para páginas de módulos)
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "[Nombre del Módulo]",
-  "description": "[Descripción del módulo]",
-  "provider": {
-    "@type": "Organization",
-    "name": "SafeStep"
-  }
-}
-```
-
-#### Product Schema (para tienda)
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "[Nombre del producto]",
-  "description": "[Descripción]",
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "PEN",
-    "price": "[Precio]"
-  }
-}
-```
-
-### 4.2.3.9. Directrices SEO Generales
-
-SafeStep sigue las siguientes directrices SEO en todas las páginas:
-
-- **URLs descriptivas**: `/modulos/rcp`, `/tienda/botiquin-basico`
-- **Un H1 por página**: Solo un título principal por página
-- **Jerarquía de encabezados correcta**: H1 > H2 > H3 > H4 > H5 > H6
-- **Etiquetas alt significativas**: Todas las imágenes tienen texto alternativo descriptivo
-- **Links con anchor text descriptivo**: Evita "clic aquí" genérico
+Se retiraron de la propuesta las afirmaciones «50 000+ usuarios», cobertura de envíos, certificación o acreditación y dominios/redes sociales no verificados. La landing actual todavía contiene algunas de esas frases, por lo que **también requieren corrección en código antes de publicarse como hechos**. Los valores Open Graph, Twitter Card, URL canónica y datos estructurados se añadirán solo con URL absoluta, imagen pública y hechos comprobados. No se marcarán como `Course` páginas de cursos que no existan ni se expondrán datos privados mediante metadatos.
 
 ## 4.2.4. Searching Systems
 
-En esta sección el equipo explica qué medios de ayuda se brindará al usuario para la búsqueda de datos dentro del producto digital. Dichas decisiones sobre los sistemas de búsqueda tratan de evitar que los usuarios se sientan perdidos entre el volumen de información. Aquí se deben especificar qué opciones de búsqueda ofrecerán las aplicaciones, con qué filtros contará el usuario en cada caso y cómo lucirán los datos después de la búsqueda.
+La búsqueda debe responder «qué puedo encontrar aquí» y mostrar un estado claro cuando no haya resultados. La tabla diferencia los controles presentes de los propuestos; evita atribuir búsqueda global, voz o tolerancia a errores a la versión actual.
 
-### 4.2.4.1. Sistema de Búsqueda General
+| Superficie | Entrada y filtros | Presentación de resultados | Estado |
+|---|---|---|---|
+| Landing | Navegación por secciones, sin búsqueda interna | Desplazamiento al ancla; sección visible | Implementado. |
+| Catálogo de simulaciones | Filtro por **tipo de emergencia** (`emergencyType`) | Tarjetas de simulación y estado vacío si no hay coincidencias | Implementado. Búsqueda textual, dificultad, duración y fecha: pendientes. |
+| Tienda | Texto por nombre/categoría/etiquetas y filtro de categoría; los kits usan nombre/descripción/nivel | Productos y kits filtrados en sus vistas | Implementado. Rango de precio, valoración, stock, ordenamiento avanzado y sugerencias: pendientes. |
+| Progreso e historial | Consulta de datos propios mediante vistas existentes | Estadísticas/historial según la vista | Búsqueda y filtros por fecha o resultado: pendientes. |
+| Búsqueda global o por voz | Unificar contenidos o entrada de voz | Resultados agrupados por tipo | Idea futura; no implementada ni comprometida en esta versión. |
 
-SafeStep implementa un sistema de búsqueda integral que permite a los usuarios encontrar rápidamente lo que buscan.
-
-#### Componentes de Búsqueda
-
-1. **Barra de búsqueda global**: Accesible desde el header en todas las páginas de la aplicación. Permite búsqueda de contenido, productos y simulaciones.
-
-2. **Búsqueda por voz** (futuro): Para facilitar la búsqueda-hands-free.
-
-3. **Búsqueda predictiva**: Muestra sugerencias mientras el usuario escribe.
-
-#### Características de la Búsqueda
-
-- **Autocomplete**: Sugiere términos populares y coincidencias parciales.
-- **Tolerancia a errores**: Maneja errores de tipeo comunes.
-- **Resultados por tipo**: Agrupa resultados por categoría.
-- **Búsqueda reciente**: Mantiene historial de búsquedas recientes.
-
-### 4.2.4.2. Sistema de Búsqueda en Contenido Educativo
-
-El área de aprendizaje tiene su propio sistema de búsqueda optimizado.
-
-#### Opciones de Búsqueda
-
-1. **Buscar en módulos**: Buscar dentro del contenido teórico.
-2. **Buscar en simulaciones**: Encontrar simulaciones específicas.
-3. **Buscar por tipo de emergencia**: Filtrar por categoría de emergencia.
-4. **Buscar por estado**: Filtrar por: No iniciado, En progreso, Completado.
-
-#### Filtros Disponibles
-
-| Filtro | Descripción |
-|--------|-------------|
-| **Tipo de módulo** | RCP, Atragantamiento, Quemaduras, etc. |
-| **Dificultad** | Básico, Intermedio, Avanzado |
-| **Duración** | <10 min, 10-20 min, >20 min |
-| **Estado** | No iniciado, En progreso, Completado |
-| **Fecha** | Último mes, Últimos 3 meses, Todo |
-
-#### Presentación de Resultados
-
-Los resultados de búsqueda educativa se muestran como:
-
-- Tarjetas de módulo con información relevante.
-- Resaltado del término buscado.
-- Indicación del estado del resultado.
-- Acceso directo al contenido.
-
-### 4.2.4.3. Sistema de Búsqueda en la Tienda
-
-La tienda tiene un sistema de búsqueda especializado para productos.
-
-#### Opciones de Búsqueda
-
-1. **Búsqueda por nombre**: Coincidencia con nombres de productos.
-2. **Búsqueda por categoría**: Filtrar por categoría de producto.
-3. **Búsqueda avanzada**: Búsqueda por múltiples atributos.
-
-#### Filtros Disponibles en Tienda
-
-| Filtro | Descripción | Opciones |
-|--------|-------------|----------|
-| **Categoría** | Tipo de producto | Botiquines, Vendaje, Antisépticos, Equipos, Accesorios |
-| **Precio** | Rango de precio | Rangos predefinidos y personalizado |
-| **Uso previsto** | Dónde se usará | Hogar, Oficina, Vehículo, Personal |
-| **Valoración** | Por estrellas | 4+, 3+, etc. |
-| **Disponibilidad** | Stock | En stock, Pre-orden |
-
-#### Orden de Resultados
-
-Los productos pueden ordenarse por:
-
-- **Relevancia**: Orden default de búsqueda.
-- **Precio: Menor a Mayor**: Ascendente.
-- **Precio: Mayor a Menor**: Descendente.
-- **Popularidad**: Más vendidos.
-- **Valoración**: Mejor valorados.
-- **Novedades**: Más recientes.
-
-#### Presentación de Resultados de Búsqueda
-
-Los resultados de búsqueda en tienda muestran:
-
-- Grid de productos con imagen, nombre, precio.
-- Indicación de stock/disponibilidad.
-- Filtrado sidebar/collapsible en móvil.
-- Paginación o load more.
-
-### 4.2.4.4. Sistema de Búsqueda en Historial del Usuario
-
-El usuario puede buscar en su propio contenido.
-
-#### Tipos de Búsqueda en Historial
-
-1. **Historial de simulaciones**: Buscar por tipo de emergencia.
-2. **Historial de pedidos**: Buscar por producto o fecha.
-3. **Progreso guardado**: Buscar módulos específicos.
-
-#### Filtros por Tipo de Historial
-
-**Historial de simulaciones:**
-- Por módulo/tipo de emergencia.
-- Por fecha.
-- Por resultado (aprobado, needs improvement).
-
-**Historial de pedidos:**
-- Por producto.
-- Por fecha.
-- Por estado (entregado, en proceso, cancelado).
+En nuevas búsquedas se debe especificar campo consultado, combinación de filtros, forma de limpiar, cantidad de resultados y estados **cargando / sin coincidencias / error**. Una propuesta de filtro se convierte en requisito solo cuando tiene historia, criterio de aceptación y prueba correspondientes.
 
 ## 4.2.5. Navigation Systems
 
-Aquí el equipo explica cuáles serán las acciones y técnicas que guiarán a los usuarios a través del Landing Page y las aplicaciones, permitiéndoles cumplir sus metas e interactuar de forma satisfactoria con el producto. Aquí se debe incluir de qué maneras los usuarios irán recorriendo el contenido.
+### 4.2.5.1. Landing Page
 
-### 4.2.5.1. Sistema de Navegación Global
+La navegación principal lleva a Características, Cursos, Gamificación, Tienda y Acerca de; el CTA abre el acceso a la aplicación. Las anclas guían la lectura de la propuesta de valor hacia el detalle y la acción. En el footer hay enlaces con `href="#"` —incluidos algunos sociales, legales y de contacto—: **son marcadores sin destino funcional**, no navegación completada. Se deben sustituir por páginas reales o retirarlos antes de afirmar que la información legal y de contacto es accesible.
 
-SafeStep implementa un sistema de navegación global consistente en todas las páginas de la aplicación.
+### 4.2.5.2. Aplicación web
 
-#### Elementos de Navegación Primary
+El shell dispone de los destinos Dashboard, Simulaciones, Progreso, Gamificación y Tienda; bajo 1024 px utiliza navegación compacta. El logo retorna al dashboard. Algunas vistas de tienda y detalle de simulación incluyen breadcrumbs; no se afirma que todas las vistas los tengan. Los estados activos y el retroceso deben verificarse por ruta, incluidos los flujos de compra y administración.
 
-1. **Header fijo (Desktop)**:
-   - Logo (siempre lleva a Inicio/A Dashboard).
-   - Menú de navegación principal.
-   - Barra de búsqueda global.
-   - Acciones de usuario (carrito, perfil).
+| Origen | Destino o secuencia | Señal de orientación |
+|---|---|---|
+| Landing | Sección temática → CTA → acceso | Etiqueta de sección y destino explícito del CTA. |
+| Dashboard | Simulaciones → detalle → práctica → resultado | Título del caso, avance y salida/revisión claras. |
+| Dashboard | Tienda → producto → carrito → pago | Paso actual y posibilidad de regresar sin perder información pertinente. |
+| Dashboard | Progreso / Gamificación | Navegación principal con estado activo. |
 
-2. **Header colapsable (Mobile)**:
-   - Hamburger menu con panel deslizable.
-   - Logo reducido.
-   - Acciones esenciales.
+### 4.2.5.3. Experiencia móvil propuesta
 
-3. **Sidebar (Aplicación)**:
-   - Navegación principal.
-   - Acceso rápido a secciones frecuentes.
-   - Estado del usuario (progreso, nivel).
+Para iOS y Android se conservarán las categorías de contenido, pero la navegación se decidirá mediante pruebas de tareas con los tres segmentos. Se propone acceso visible a inicio, práctica y progreso, con tienda como destino diferenciado; una barra inferior se evaluará solo para destinos principales y el resto podrá ir a menú o perfil. El retorno respetará el comportamiento de cada sistema. **No hay evidencia de barra inferior o gestos nativos implementados actualmente.**
 
-#### Comportamiento de Navegación
+### 4.2.5.4. Accesibilidad y validación de navegación
 
-- Transiciones suaves entre páginas.
-- Indicador de página actual en menú.
-- Animación de cambio de vista.
-- Persistencia de scroll en navegación SPA.
-
-### 4.2.5.2. Navegación del Landing Page
-
-El Landing Page tiene una navegación diferenciada optimizada para visitantes.
-
-#### Navigation Principal
-
-- **Sticky header**: Se mantiene visible al hacer scroll.
-- **Links de sección**: Llevan a secciones en la misma página (smooth scroll).
-- **CTA principal**: "Comenzar Gratis" prominent.
-- **Login**: Acceder a la aplicación.
-
-#### Navegación Footer
-
-El footer del Landing Page incluye:
-
-- Links de navegación adicionales.
-- Redes sociales.
-- Información legal (Términos, Privacidad).
-- Información de contacto.
-- Copyright.
-
-### 4.2.5.3. Navegación de la Aplicación Web
-
-La aplicación web tiene navegación más profunda y estructurada.
-
-#### Tipos de Navegación
-
-1. **Navegación principal (Sidebar)**:
-   - Dashboard
-   - Aprender
-   - Simulaciones
-   - Tienda
-   - Mi Progreso
-   - Mi Cuenta
-
-2. **Navegación contextual**:
-   - Breadcrumbs para navegación profunda.
-   - Tabs para vistas alternativas.
-   - Submenús para secciones complejas.
-
-3. **Navegación auxiliar**:
-   - Botones de "anterior/siguiente" en contenido lineal.
-   - Enlaces relacionados al final de contenido.
-
-#### Navegación de Retroceso
-
-- **Botón atrás**: En header, vuelve a la página anterior del historial.
-- **Breadcrumbs**: Muestra ruta y permite navegar a niveles anteriores.
-- **Logo**: Siempre lleva al Dashboard principal.
-
-### 4.2.5.4. Sistema de Breadcrumbs
-
-SafeStep implementa breadcrumbs para navegación profunda.
-
-#### Estructura de Breadcrumbs
-
-```
-SafeStep > Aprender > Módulos > RCP > Lecciones > Lección 1
-```
-
-#### Reglas de Breadcrumbs
-
-- Máximo 4-5 niveles de profundidad mostrados.
-- El elemento actual no es enlazable.
-- Los niveles superiores son siempre navegables.
-- Separador consistente (>/|).
-
-### 4.2.5.5. Navegación Mobile
-
-La navegación mobile tiene consideraciones especiales.
-
-#### Patrón de Navegación Mobile
-
-1. **Bottom navigation bar**: Acceso rápido a 4-5 secciones principales.
-2. **Hamburger menu**: Navegación completa accesible.
-3. **Back gesture**: Botón físico/virtual de retorno.
-
-### 4.2.5.6. Navegación por Contenido
-
-El contenido educativo tiene navegación específica.
-
-#### Navegación Lineal (Lecciones)
-
-- Indicador de posición (Lección X de Y).
-- Botón "Siguiente" prominent.
-- Botón "Guardar progreso" antes de salir.
-- Confirmación antes de abandonar contenido en progreso.
-
-#### Navegación entre Módulos
-
-- Recomendador de siguiente módulo.
-- Indicador de prerequisites.
-- Acceso a mapa visual del currículo.
-
-### 4.2.5.7. Accesibilidad en Navegación
-
-SafeStep asegura navegación accesible.
-
-#### Características de Accesibilidad
-
-- Navegación por teclado completa.
-- Skip links para usuarios de lector de pantalla.
-- ARIA landmarks para identificar regiones.
-- Labels claras para todos los enlaces.
-- Orden de tabulación lógico.
-
-### 4.2.5.8. Feedback de Navegación
-
-SafeStep proporciona feedback claro durante la navegación.
-
-#### Indicadores Visuales
-
-- Active state highlighted en elemento actual.
-- Hover states en elementos interactivos.
-- Loading states para contenido que carga.
-- Transiciones suaves entre vistas.
-- Scroll suave para navegación de anclaje.
-
-#### Estados de Carga
-
-- Skeleton screens para content placeholders.
-- Spinners para acciones cortas.
-- Progress bars para descargas/cargas largas.
-- Niveles de progreso en contenido sequential.
-
-
-
-
-
-
+El flujo debe admitir teclado en web, foco visible, nombres comprensibles para lectores de pantalla y retorno predecible. En móvil se adaptará a VoiceOver o TalkBack. Antes de cerrar esta arquitectura, el equipo debe probar con participantes tareas concretas: encontrar una práctica, interpretar su resultado, volver al catálogo y localizar una compra. Se registrarán errores de navegación, etiquetas ambiguas y rutas sin salida, y se actualizarán el mapa, las historias y las pantallas de diseño con esos hallazgos.
