@@ -12,11 +12,7 @@
 
 ## 4.10.1. Relational/Non-Relational Database Diagram
 
-SafeStep utiliza PostgreSQL y persistencia relacional con JPA; por ello corresponde un **diagrama relacional**, no uno NoSQL adicional. El ERD general muestra **31 tablas** agrupadas en seis bounded contexts: IAM (5), Profiles (1), Simulation (7), Gamification (6), Analytics (1) y Commerce (11). Las imágenes siguientes muestran el modelo completo y sus vistas por contexto. Las clases de dominio no siempre se corresponden uno a uno con tablas: los objetos de valor de `Profile` se embeben en `profiles`, las colecciones de simulación y comercio generan tablas dependientes, y `AnalyticsSummary` se calcula para consulta.
-
-Para reproducir o actualizar los diagramas, se agregaron scripts PostgreSQL en [codefordiagrams](../../assets/codefordiagrams/). Para el ERD general se importa **solo** [00-safestep-completo.sql](../../assets/codefordiagrams/00-safestep-completo.sql). Para visualizar un módulo se importa únicamente su archivo: [IAM](../../assets/codefordiagrams/01-iam.sql), [Profiles](../../assets/codefordiagrams/02-profiles.sql), [Simulation](../../assets/codefordiagrams/03-simulation.sql), [Gamification](../../assets/codefordiagrams/04-gamification.sql), [Analytics](../../assets/codefordiagrams/05-analytics.sql) o [Commerce](../../assets/codefordiagrams/06-commerce.sql). El archivo general reúne las mismas 31 tablas de los archivos parciales; **no** se ejecutan ambos conjuntos sobre el mismo esquema. Tras exportar los diagramas desde LucidChart o Vertabelo, deberán reemplazarse las capturas de esta sección si el modelo visual cambia.
-
-Los SQL son **artefactos de diseño para ERD, no migraciones de producción**. Incluyen claves primarias, unicidad y relaciones internas útiles para representar cardinalidades. Algunas claves foráneas hacia claves naturales (por ejemplo `username`, `slug` y `externalId`) formalizan relaciones lógicas del diagrama que el mapeo JPA actual no impone físicamente; deben validarse antes de aplicarse a una base existente. No incluyen datos personales, `DROP` ni instrucciones de carga.
+El siguiente Diagrama Entidad-Relación (ERD) representa la estructura de datos fundamental que soporta toda la lógica de la plataforma SafeStep. Este modelo relacional, compuesto por 31 entidades, ha sido diseñado aplicando las 3 fases de normalizacion. Para garantizar la escalabilidad, el mantenimiento y la separación de responsabilidades, la base de datos se ha estructurado en 5 paquetes o módulos lógicos:
 
 
 <div align="center">
@@ -64,8 +60,6 @@ Los SQL son **artefactos de diseño para ERD, no migraciones de producción**. I
 </div>
 
 <p align="center"><strong>Diagrama ERD Simulation</strong></p>
-
-
 
 
 
