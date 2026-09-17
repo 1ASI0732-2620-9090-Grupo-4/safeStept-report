@@ -1,11 +1,10 @@
 # Student Outcome
 
-El presente apartado evidencia el cumplimiento del Student Outcome ABET 3: <b>Capacidad de comunicarse efectivamente con un rango de audiencias</b>. Para ello se consideran los criterios 3.c1 y 3.c2 de la rubrica del curso, tomando como referencia las cuatro entregas del proyecto:
+## ABET – EAC - Student Outcome 4
 
-- <b>AV1</b>: Sprint 1 - Documentacion inicial, capitulo 5 y Landing Page.
-- <b>TB1</b>: Sprint 2 - Frontend Angular de SafeStep.
-- <b>AV2</b>: Sprint 3 - Backend Spring Boot, Swagger e integracion frontend-backend.
-- <b>TB2</b>: Sprint 4 - IAM, pagos con Stripe, Render PostgreSQL y despliegue final.
+**Criterio:** La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
+
+En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 4, tomando como referencia el Avance 1 (AV1) del proyecto SafeStep, correspondiente a la documentación de los capítulos I al V elaborada hasta el momento.
 
 <table>
     <tr>
@@ -14,137 +13,89 @@ El presente apartado evidencia el cumplimiento del Student Outcome ABET 3: <b>Ca
         <td align="center"><b>Conclusiones</b></td>
     </tr>
     <tr>
-        <td rowspan="4">
-            <b>3.c1. Comunica oralmente con efectividad a diferentes rangos de audiencia.</b>
+        <td rowspan="5">
+            <b>4.c.1. Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software.</b>
         </td>
         <td>
-            <b>Ayala Fernandez, Jorge Brayan</b> <br/>
+            <b>Palacios Jáuregui, Kalid Jesus</b> <br/>
             <i>AV1</i>
-            <p>Explico la propuesta de valor de SafeStep desde la Landing Page, comunicando a usuarios no tecnicos como la plataforma ayuda a conocer simulaciones, beneficios y llamados a la accion.</p>
-            <i>TB1</i>
-            <p>Presento funcionalidades del frontend relacionadas con la experiencia de compra y navegacion, usando la aplicacion desplegada para mostrar productos, kits, filtros y carrito.</p>
-            <i>AV2</i>
-            <p>Expuso el bounded context de commerce del backend, explicando catalogo, productos, kits, cupones, carrito y ordenes desde una perspectiva tecnica apoyada en Swagger.</p>
-            <i>TB2</i>
-            <p>Presento la integracion de pagos con Stripe desde backend, explicando el flujo de creacion de orden, checkout, confirmacion y persistencia de compras pagadas.</p>
+            <p>Al redactar el Startup Profile y el Solution Profile (capítulo I), documenté explícitamente que SafeStep es una herramienta educativa complementaria que <b>no sustituye</b> la capacitación práctica de profesionales acreditados, la evaluación médica ni la comunicación con servicios de emergencia, para evitar que el producto sea percibido como una fuente de decisiones clínicas.</p>
         </td>
-        <td rowspan="4">
+        <td rowspan="5">
             <i>AV1</i>
-            <p>El equipo comunico el problema, la propuesta de valor y la Landing Page a una audiencia general, usando lenguaje orientado a visitantes y potenciales usuarios interesados en primeros auxilios.</p>
-            <i>TB1</i>
-            <p>El equipo adapto su comunicacion a una audiencia tecnica y academica, demostrando el frontend Angular, sus bounded contexts, pantallas principales y despliegue en GitHub Pages.</p>
-            <i>AV2</i>
-            <p>El equipo explico el backend real mediante Swagger, evidencias de endpoints, persistencia PostgreSQL, estructura por bounded contexts e integracion con el frontend.</p>
-            <i>TB2</i>
-            <p>El equipo comunico una solucion mas cercana a produccion, mostrando IAM, JWT, Stripe, despliegue en Render, PostgreSQL remoto y validacion del flujo completo de usuario.</p>
-            <p>En conjunto, las exposiciones emplearon medios audiovisuales adecuados: Landing Page desplegada, frontend funcional, Swagger UI, capturas, Video About-the-Product y evidencias de Sprint. Las observaciones recibidas fueron escuchadas e incorporadas en mejoras del reporte y del producto.</p>
+            <p>El equipo reconoció que trabajar sobre un dominio sensible como primeros auxilios exige límites éticos explícitos en el propio producto y en el informe: deslindar responsabilidad médica, no presentar el modelo de negocio como validado cuando aún es una hipótesis, tratar los datos de las personas entrevistadas con consentimiento y resguardo de su identidad, y documentar honestamente las limitaciones técnicas y de seguridad detectadas en lugar de ocultarlas para mostrar un avance más completo del que realmente existe. Estas decisiones se reflejan de forma trazable en los capítulos I a V del informe y en el código de los repositorios de SafeStep.</p>
         </td>
     </tr>
     <tr>
         <td>
-            <b>Flores Eusebio, Angel Thyago</b> <br/>
+            <b>Sanchez Arenas, Manuel Angel</b> <br/>
             <i>AV1</i>
-            <p>Comunico los hallazgos de entrevistas, segmentos objetivo y necesidades del usuario, conectando el problema de preparacion ante emergencias con los objetivos iniciales del producto.</p>
-            <i>TB1</i>
-            <p>Explico el flujo de simulaciones medicas en la Web Application, mostrando listado, detalle, preguntas, retroalimentacion y registro de intentos.</p>
-            <i>AV2</i>
-            <p>Presento los avances de IAM, profiles, validacion de endpoints y documentacion tecnica, usando Swagger como medio audiovisual para facilitar la comprension del API.</p>
-            <i>TB2</i>
-            <p>Expuso el flujo de autenticacion real, registro, inicio de sesion, tokens JWT, proteccion de rutas y perfil autenticado, relacionando frontend y backend.</p>
+            <p>En el capítulo II (Needfinding y entrevistas) apliqué el resguardo de la identidad de las personas entrevistadas usando resúmenes en lugar de transcripciones completas, y evité atribuir citas o conclusiones que los entrevistados no expresaron, para no distorsionar los hallazgos usados como base del producto.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Tello Palacios, Fabrizio Rafael</b> <br/>
+            <i>AV1</i>
+            <p>Al construir el Product Backlog (capítulo III) evité priorizar arbitrariamente historias técnicas de seguridad o autenticación por encima de historias de valor para el usuario, siguiendo el criterio de priorización por valor de negocio indicado en el statement, para no simular un avance orientado solo a infraestructura interna.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Aylas De La Cruz, Paulo Smit</b> <br/>
+            <i>AV1</i>
+            <p>Al diseñar el modelo de base de datos (capítulo IV) apliqué las tres formas de normalización y documenté los archivos SQL como artefactos de diseño, no como scripts de migración listos para producción, para no dar a entender que existe una base de datos productiva con información real de usuarios.</p>
         </td>
     </tr>
     <tr>
         <td>
             <b>Melgarejo Quiroz, Josep Eliu</b> <br/>
             <i>AV1</i>
-            <p>Presento el diseno visual y estructura comunicacional de la Landing Page, explicando como el contenido, paleta, secciones y mensajes responden al publico objetivo.</p>
-            <i>TB1</i>
-            <p>Expuso gamificacion y progreso del usuario, mostrando misiones, insignias, SafeCoins, ranking y estadisticas como mecanismos de motivacion.</p>
-            <i>AV2</i>
-            <p>Comunico la integracion frontend-backend y los bounded contexts de gamification, analytics y shared infrastructure, destacando la importancia de contratos claros entre capas.</p>
-            <i>TB2</i>
-            <p>Presento la integracion del frontend con IAM, guards, interceptor JWT, environment de produccion y despliegue conectado al backend de Render.</p>
+            <p>Al preparar la configuración y el despliegue (capítulo V), identifiqué una credencial de base de datos que había quedado versionada en el historial de Git y documenté que debe rotarse en el proveedor en lugar de solo eliminarla del archivo actual; también detecté que cuentas con rol de usuario común podían ver controles de administración en la web y agregué restricciones de rol (<code>@PreAuthorize</code> en el backend y un <code>adminGuard</code> en el frontend) antes de reportar el avance como funcional.</p>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="5">
+            <b>4.c.2. Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales.</b>
+        </td>
+        <td>
+            <b>Palacios Jáuregui, Kalid Jesus</b> <br/>
+            <i>AV1</i>
+            <p>En el Solution Profile documenté el modelo de negocio de SafeStep (venta de productos de primeros auxilios y posibles servicios digitales) explícitamente como una <b>hipótesis por validar</b>, no como ingresos comprobados, para no sustentar decisiones de producto sobre supuestos económicos no verificados.</p>
+        </td>
+        <td rowspan="5">
+            <i>AV1</i>
+            <p>El equipo emitió juicios informados al reconocer que el modelo de negocio de SafeStep todavía es una hipótesis económica sin validar, que los segmentos de usuario (estudiantes, comunidades vecinales y brigadistas) enfrentan contextos sociales y de acceso distintos entre sí, que el idioma por defecto debe ampliarse a inglés para no limitar el alcance social del producto, y que el diseño de datos debe evitar exponer información personal entre bounded contexts. En conjunto, estas decisiones muestran que el equipo considera el impacto económico, social y de protección de datos de sus decisiones de ingeniería antes de presentarlas como parte del producto, en lugar de evaluarlas únicamente desde un criterio técnico.</p>
         </td>
     </tr>
     <tr>
         <td>
-            <b>Sanchez Espinoza, Mathias Enrique</b> <br/>
+            <b>Sanchez Arenas, Manuel Angel</b> <br/>
             <i>AV1</i>
-            <p>Apoyo la exposicion de la Landing Page enfocandose en secciones visuales, simulaciones disponibles y navegacion responsive, validando que el mensaje sea comprensible para visitantes.</p>
-            <i>TB1</i>
-            <p>Explico la estructura general del frontend Angular, su organizacion por bounded contexts, componentes principales y despliegue en GitHub Pages.</p>
-            <i>AV2</i>
-            <p>Presento el bounded context de simulation del backend, explicando simulaciones, pasos, opciones, sugerencias de productos e intentos registrados por usuario.</p>
-            <i>TB2</i>
-            <p>Expuso el flujo visual de pago en el frontend, mostrando la redireccion a Stripe, el manejo de confirmacion/cancelacion y la visualizacion de compras confirmadas.</p>
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="4">
-            <b>3.c2. Comunica por escrito con efectividad a diferentes rangos de audiencia.</b>
-        </td>
-        <td>
-            <b>Ayala Fernandez, Jorge Brayan</b> <br/>
-            <i>AV1</i>
-            <p>Redacto y reviso contenido relacionado con la propuesta de valor, Landing Page, llamadas a la accion y evidencias de implementacion inicial.</p>
-            <i>TB1</i>
-            <p>Documento partes del frontend asociadas al flujo de ecommerce, productos, kits, carrito y experiencia de usuario dentro de la tienda.</p>
-            <i>AV2</i>
-            <p>Documento el bounded context de commerce del backend, incluyendo endpoints, recursos, entidades y evidencias de ejecucion desde Swagger.</p>
-            <i>TB2</i>
-            <p>Documento el flujo backend de pagos con Stripe, endpoints de ordenes, confirmacion de pagos y validacion de compras persistidas.</p>
-        </td>
-        <td rowspan="4">
-            <i>AV1</i>
-            <p>El informe escrito permitio comunicar el problema, los segmentos objetivo, la propuesta de solucion, los requisitos iniciales, el diseno y la Landing Page.</p>
-            <i>TB1</i>
-            <p>La documentacion evoluciono hacia la explicacion tecnica del frontend Angular, su arquitectura por bounded contexts, sus pantallas principales y sus evidencias de despliegue.</p>
-            <i>AV2</i>
-            <p>El equipo documento el backend real, la arquitectura por capas, los endpoints, Swagger, PostgreSQL, Docker, deployment e integracion con la Web Application.</p>
-            <i>TB2</i>
-            <p>El informe consolido IAM, Stripe, despliegue final, base de datos en Render, links actualizados, anexos, validaciones y evidencias del producto completo.</p>
-            <p>La documentacion fue ajustada iterativamente a partir de observaciones del docente: Lean UX Problem Statement enfocado solo en el problema, criterios Given-When-Then, Product Backlog ordenado por valor de negocio, Sprint Backlogs separados por User Story, links corregidos y anexos centralizados.</p>
+            <p>Al analizar los segmentos objetivo (estudiantes universitarios, comunidades vecinales y brigadistas) en el capítulo I y II, consideré diferencias de contexto social y de acceso a la preparación en primeros auxilios entre estos grupos, en lugar de asumir un único perfil de usuario homogéneo para todo el país.</p>
         </td>
     </tr>
     <tr>
         <td>
-            <b>Flores Eusebio, Angel Thyago</b> <br/>
+            <b>Tello Palacios, Fabrizio Rafael</b> <br/>
             <i>AV1</i>
-            <p>Redacto secciones de analisis de usuarios, entrevistas, necesidades, criterios de validacion y soporte documental para justificar el problema.</p>
-            <i>TB1</i>
-            <p>Documento la funcionalidad de simulaciones medicas, incluyendo escenarios, intentos, respuestas, recompensas y comportamiento esperado del usuario.</p>
-            <i>AV2</i>
-            <p>Documento IAM, profiles, validacion de endpoints, seed data y evidencias tecnicas del backend, asegurando trazabilidad entre tareas y resultados.</p>
-            <i>TB2</i>
-            <p>Documento autenticacion, registro, login, JWT, proteccion de rutas y perfil autenticado, relacionando contratos backend con consumo frontend.</p>
+            <p>Al redactar los criterios de aceptación de las historias de usuario, incluí historias relacionadas con el cambio de idioma (español/inglés) de la aplicación, reconociendo que el statement exige inglés como idioma por defecto para ampliar el alcance social del producto más allá de un único idioma.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Aylas De La Cruz, Paulo Smit</b> <br/>
+            <i>AV1</i>
+            <p>Al diseñar el diagrama de base de datos evité incluir columnas o relaciones que expusieran innecesariamente datos personales entre bounded contexts (por ejemplo, referencias lógicas en vez de llaves foráneas físicas entre usuario y otros contextos), como medida orientada a la protección de datos de los futuros usuarios.</p>
         </td>
     </tr>
     <tr>
         <td>
             <b>Melgarejo Quiroz, Josep Eliu</b> <br/>
             <i>AV1</i>
-            <p>Redacto y organizo requisitos, user stories, Product Backlog, criterios de aceptacion y evidencias del Sprint 1, manteniendo relacion con el valor de negocio.</p>
-            <i>TB1</i>
-            <p>Documento gamificacion, progreso, estadisticas y estructura por capas del frontend, explicando stores, entities, assemblers y endpoints.</p>
-            <i>AV2</i>
-            <p>Documento integracion frontend-backend, configuracion de environments, Swagger, shared infrastructure, analytics y actualizacion de la Landing Page.</p>
-            <i>TB2</i>
-            <p>Documento despliegues finales, base de datos Render, links actualizados, anexos, Sprint 4 y evidencias de IAM/Stripe en frontend y backend.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <b>Sanchez Espinoza, Mathias Enrique</b> <br/>
-            <i>AV1</i>
-            <p>Redacto evidencias de implementacion visual, secciones de simulaciones de la Landing Page, despliegue inicial y colaboracion del Sprint 1.</p>
-            <i>TB1</i>
-            <p>Documento la estructura general del frontend, navegacion, responsive design, dashboard, estadisticas y despliegue en GitHub Pages.</p>
-            <i>AV2</i>
-            <p>Documento el bounded context de simulation del backend, sus endpoints, persistencia de intentos y relacion con el aprendizaje del usuario.</p>
-            <i>TB2</i>
-            <p>Documento el flujo frontend de pagos, validacion de estados de compra, evidencias visuales de Stripe y experiencia del usuario durante checkout.</p>
+            <p>Documenté en el capítulo V que el puntaje y los pasos correctos de un intento de simulación son calculados por el cliente y que el backend todavía no los valida contra las respuestas reales, dejando explícito que esos datos <b>no deben usarse aún</b> como medición confiable para recompensas ni para futuras decisiones experimentales, evitando así un impacto negativo por decisiones basadas en datos no verificados.</p>
         </td>
     </tr>
 </table>
 
-Como conclusion general, el equipo SafeStep evidencia el cumplimiento del Student Outcome ABET 3 porque comunico el avance del proyecto de forma oral y escrita durante las cuatro entregas del curso. La comunicacion se adapto a usuarios finales, docentes evaluadores, revisores tecnicos y miembros del equipo de desarrollo, pasando progresivamente de una Landing Page inicial a una solucion completa con frontend, backend, IAM, Stripe y PostgreSQL desplegado.
+Como conclusión general, el equipo SafeStep evidencia el cumplimiento del ABET – EAC - Student Outcome 4 en el Avance 1 porque, al documentar el estado real del producto y del informe, reconoció límites éticos y profesionales propios de un dominio sensible (primeros auxilios) y evitó presentar como validado, seguro o terminado aquello que todavía es una hipótesis, una limitación conocida o un riesgo pendiente de resolver. Esta autocrítica se mantendrá y profundizará en las siguientes entregas del curso conforme el producto y sus validaciones avancen.
