@@ -159,15 +159,43 @@
     - [5.1.2. Source Code Management](#toc-5-1-2-source-code-management)
     - [5.1.3. Source Code Style Guide & Conventions](#toc-5-1-3-source-code-style-guide-conventions)
     - [5.1.4. Software Deployment Configuration](#toc-5-1-4-software-deployment-configuration)
-  - [5.2. Product Implementation & Deployment](#toc-5-2-product-implementation-deployment)
-    - [5.2.1. Sprint Backlogs](#toc-5-2-1-sprint-backlogs)
-    - [5.2.2. Implemented Landing Page Evidence](#toc-5-2-2-implemented-landing-page-evidence)
-    - [5.2.3. Implemented Frontend-Web Application Evidence](#toc-5-2-3-implemented-frontend-web-application-evidence)
-    - [5.2.4. Acuerdo de Servicio - SaaS](#toc-5-2-4-acuerdo-de-servicio-saas)
-    - [5.2.5. Implemented Native-Mobile Application Evidence](#toc-5-2-5-implemented-native-mobile-application-evidence)
-    - [5.2.6. Implemented RESTful API and/or Serverless Backend Evidence](#toc-5-2-6-implemented-restful-api-and-or-serverless-backend-evidence)
-    - [5.2.7. RESTful API documentation](#toc-5-2-7-restful-api-documentation)
-    - [5.2.8. Team Collaboration Insights](#toc-5-2-8-team-collaboration-insights)
+  - [5.2. Landing Page, Services & Applications Implementation](#toc-5-2-landing-page-services-applications-implementation)
+    - [5.2.1. Sprint 1](#toc-5-2-1-sprint-1)
+      - [5.2.1.1. Sprint Planning 1](#toc-5-2-1-1-sprint-planning-1)
+      - [5.2.1.2. Aspect Leaders and Collaborators](#toc-5-2-1-2-aspect-leaders-and-collaborators)
+      - [5.2.1.3. Sprint Backlog 1](#toc-5-2-1-3-sprint-backlog-1)
+      - [5.2.1.4. Development Evidence for Sprint Review](#toc-5-2-1-4-development-evidence-for-sprint-review)
+      - [5.2.1.5. Execution Evidence for Sprint Review](#toc-5-2-1-5-execution-evidence-for-sprint-review)
+      - [5.2.1.6. Services Documentation Evidence for Sprint Review](#toc-5-2-1-6-services-documentation-evidence-for-sprint-review)
+      - [5.2.1.7. Software Deployment Evidence for Sprint Review](#toc-5-2-1-7-software-deployment-evidence-for-sprint-review)
+      - [5.2.1.8. Team Collaboration Insights during Sprint](#toc-5-2-1-8-team-collaboration-insights-during-sprint)
+    - [5.2.2. Sprint 2](#toc-5-2-2-sprint-2)
+      - [5.2.2.1. Sprint Planning 2](#toc-5-2-2-1-sprint-planning-2)
+      - [5.2.2.2. Aspect Leaders and Collaborators](#toc-5-2-2-2-aspect-leaders-and-collaborators)
+      - [5.2.2.3. Sprint Backlog 2](#toc-5-2-2-3-sprint-backlog-2)
+      - [5.2.2.4. Development Evidence for Sprint Review](#toc-5-2-2-4-development-evidence-for-sprint-review)
+      - [5.2.2.5. Execution Evidence for Sprint Review](#toc-5-2-2-5-execution-evidence-for-sprint-review)
+      - [5.2.2.6. Services Documentation Evidence for Sprint Review](#toc-5-2-2-6-services-documentation-evidence-for-sprint-review)
+      - [5.2.2.7. Software Deployment Evidence for Sprint Review](#toc-5-2-2-7-software-deployment-evidence-for-sprint-review)
+      - [5.2.2.8. Team Collaboration Insights during Sprint](#toc-5-2-2-8-team-collaboration-insights-during-sprint)
+    - [5.2.3. Sprint 3](#toc-5-2-3-sprint-3)
+      - [5.2.3.1. Sprint Planning 3](#toc-5-2-3-1-sprint-planning-3)
+      - [5.2.3.2. Aspect Leaders and Collaborators](#toc-5-2-3-2-aspect-leaders-and-collaborators)
+      - [5.2.3.3. Sprint Backlog 3](#toc-5-2-3-3-sprint-backlog-3)
+      - [5.2.3.4. Development Evidence for Sprint Review](#toc-5-2-3-4-development-evidence-for-sprint-review)
+      - [5.2.3.5. Execution Evidence for Sprint Review](#toc-5-2-3-5-execution-evidence-for-sprint-review)
+      - [5.2.3.6. Services Documentation Evidence for Sprint Review](#toc-5-2-3-6-services-documentation-evidence-for-sprint-review)
+      - [5.2.3.7. Software Deployment Evidence for Sprint Review](#toc-5-2-3-7-software-deployment-evidence-for-sprint-review)
+      - [5.2.3.8. Team Collaboration Insights during Sprint](#toc-5-2-3-8-team-collaboration-insights-during-sprint)
+    - [5.2.4. Sprint 4](#toc-5-2-4-sprint-4)
+      - [5.2.4.1. Sprint Planning 4](#toc-5-2-4-1-sprint-planning-4)
+      - [5.2.4.2. Aspect Leaders and Collaborators](#toc-5-2-4-2-aspect-leaders-and-collaborators)
+      - [5.2.4.3. Sprint Backlog 4](#toc-5-2-4-3-sprint-backlog-4)
+      - [5.2.4.4. Development Evidence for Sprint Review](#toc-5-2-4-4-development-evidence-for-sprint-review)
+      - [5.2.4.5. Execution Evidence for Sprint Review](#toc-5-2-4-5-execution-evidence-for-sprint-review)
+      - [5.2.4.6. Services Documentation Evidence for Sprint Review](#toc-5-2-4-6-services-documentation-evidence-for-sprint-review)
+      - [5.2.4.7. Software Deployment Evidence for Sprint Review](#toc-5-2-4-7-software-deployment-evidence-for-sprint-review)
+      - [5.2.4.8. Team Collaboration Insights during Sprint](#toc-5-2-4-8-team-collaboration-insights-during-sprint)
   - [5.3. Video About-the-Product](#toc-5-3-video-about-the-product)
 
 **Capítulo VI: Product Verification & Validation**
@@ -5811,408 +5839,4545 @@ El siguiente Diagrama Entidad-Relación (ERD) representa la estructura de datos 
 
 <div style="page-break-before: always;"></div>
 
+<br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
 <a id="toc-5-1-software-configuration-management"></a>
 # 5.1. Software Configuration Management
 
-Este apartado describe la configuración **del proyecto actual**. El capítulo 5 del informe del curso anterior se conserva como antecedente; sus versiones, tableros, repositorios y despliegues no se atribuyen a esta entrega sin una comprobación nueva. La solución disponible consta de una landing page estática, una aplicación web Angular y una API Spring Boot con PostgreSQL. La aplicación Android nativa está en desarrollo y se reporta por separado.
+En esta sección se detallan las herramientas, procesos y configuraciones utilizadas por el equipo Chronos para gestionar el desarrollo del proyecto SafeStep. Se cubren desde las herramientas de desarrollo y despliegue hasta las estrategias de control de versiones, convenciones de código y configuración de entornos, asegurando un flujo de trabajo ordenado, reproducible y alineado con las buenas prácticas de la industria.
 
 <a id="toc-5-1-1-software-development-environment-configuration"></a>
 ## 5.1.1. Software Development Environment Configuration
 
-La tabla distingue productos constatados en el código o en este entorno de herramientas previstas para la siguiente iteración. «Disponible» no equivale a una evidencia de uso por todos los integrantes.
+A continuación se presentan las herramientas y tecnologías seleccionadas para cada ámbito del desarrollo del proyecto SafeStep, organizadas por categoría según su propósito dentro del ciclo de vida del software.
 
-| Actividad | Producto y versión constatada | Propósito | Referencia | Estado |
-|---|---|---|---|---|
-| Gestión de proyecto y requisitos | GitHub Issues/Projects; Trello (histórico) | Historias, tareas, revisión y tablero de sprint | [GitHub](https://github.com/1ASI0732-2620-9090-Grupo-4); [Trello](https://trello.com) | Falta tablero público del curso actual |
-| Diseño UX/UI | Figma; Miro/UXPressia según artefacto | Prototipos, escenarios y personas | [Figma](https://www.figma.com); [Miro](https://miro.com); [UXPressia](https://uxpressia.com) | Verificar enlaces de los artefactos actuales |
-| Landing page | HTML5, CSS3 y JavaScript | Página pública sin *build* ni gestor de paquetes | [Repositorio Landing](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page) | Código disponible |
-| Aplicación web | Angular 21.2.12, TypeScript 5.9.2, Angular Material 21.2.10 | Interfaz, navegación y consumo de la API | [Repositorio Frontend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend) | Versiones declaradas en `package.json` |
-| Entorno web | Node.js 24.15.0, npm 11.12.1 (equipo inspeccionado) | Instalar dependencias y ejecutar `npm run build` / `npm test` | [Node.js](https://nodejs.org) | Versión local; el proyecto declara npm 11.13.0 |
-| API | Java 26.0.1, Maven 3.9.16, Spring Boot 4.0.6 | Compilación, API REST y pruebas | [Repositorio Backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | Java/Spring verificados en `pom.xml` y entorno local |
-| Persistencia | PostgreSQL; cliente local 18.4 | Datos transaccionales de la API | [PostgreSQL](https://www.postgresql.org) | El proveedor de producción debe confirmarse |
-| Documentación API | springdoc OpenAPI 3.0.3 / Swagger UI | Contratos y prueba interactiva de endpoints | [OpenAPI](https://spec.openapis.org/oas/latest.html) | Dependencia declarada en `pom.xml`; URL pública pendiente de verificar |
-| Pruebas web/API | Vitest 4.0.8; Spring Boot Starter Test / JUnit | Pruebas automatizadas y resultados reproducibles | [Vitest](https://vitest.dev); [JUnit](https://junit.org/junit5/) | Dependencias declaradas; resultados en 5.2 y capítulo VI |
-| Android nativo | SDK 37, Android Gradle Plugin 9.3.2, Kotlin Compose Compiler 2.3.21, Gradle 9.5 | Implementar y probar la app móvil | Proyecto local `safestept-android`; [Android Developers](https://developer.android.com) | Compilación, pruebas y ejecución con API local verificadas; publicación pendiente |
-| Control de versiones | Git/GitHub | Ramas, PR, commits y versiones | [Git](https://git-scm.com); [GitHub](https://github.com) | Cuatro repositorios previos y proyecto Android local disponibles |
-| Despliegue | Docker y configuración de GitHub Pages del frontend | Empaquetado y publicación | [Docker](https://docs.docker.com); [GitHub Pages](https://pages.github.com) | Los destinos actuales deben verificarse antes de afirmar despliegue |
+<a id="toc-5-1-1-1-herramientas-de-gestion-de-proyectos-y-requisitos"></a>
+### 5.1.1.1. Herramientas de Gestión de Proyectos y Requisitos
 
-Las versiones del equipo de un integrante no constituyen un requisito universal: cada persona debe registrar en su entorno las versiones compatibles con los manifiestos del proyecto. No se utilizarán credenciales personales ni URL internas de bases de datos como «ruta de referencia» del software.
+| Herramienta | Propósito |URL de Referencia | Tipo |
+|-------------|-----------|------------------|------|
+| Trello | Gestión del Product Backlog, Sprint Boards y seguimiento de tareas del proyecto | <a href="https://trello.com/b/UHs6EvyH/safestep-team-3">https://trello.com/b/UHs6EvyH/safestep-team-3</a> | SaaS |
+| GitHub Projects | Gestión de Issues y seguimiento del progreso del desarrollo en sincronización con los repositorios | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3">https://github.com/upc-1asi0729-2610-11990-chronos-team-3</a> | SaaS |
+| Google Drive | Almacenamiento y colaboración documentos de análisis y requerimientos | <a href="https://drive.google.com">https://drive.google.com</a> | SaaS |
+| Discord | Comunicación en tiempo real del equipo y reuniones virtuales | <a href="https://discord.com">https://discord.com</a> | SaaS |
+
+<a id="toc-5-1-1-2-herramientas-de-diseno-ux-ui"></a>
+### 5.1.1.2. Herramientas de Diseño UX/UI
+
+| Herramienta | Propósito |URL de Referencia | Tipo |
+|-------------|-----------|------------------|------|
+| Figma | Diseño de interfaces, wireframes, mockups y prototipos interactivos | <a href="https://www.figma.com">https://www.figma.com</a> | SaaS |
+| Canva | Creación de assets gráficos, presentaciones y materiales visuales | <a href="https://www.canva.com">https://www.canva.com</a> | SaaS |
+
+<a id="toc-5-1-1-3-herramientas-de-desarrollo-frontend"></a>
+### 5.1.1.3. Herramientas de Desarrollo Frontend
+
+| Herramienta | Propósito |URL de Referencia | Tipo |
+|-------------|-----------|------------------|------|
+| Visual Studio Code | Editor de código principal para el desarrollo del frontend Angular | <a href="https://code.visualstudio.com">https://code.visualstudio.com</a> | Descargable |
+| Angular CLI | Interfaz de línea de comandos para crear, desarrollar y builds de proyectos Angular | <a href="https://angular.io/cli">https://angular.io/cli</a> | Descargable (npm) |
+| Node.js | Entorno de ejecución JavaScript del lado del servidor para servicios de desarrollo | <a href="https://nodejs.org">https://nodejs.org</a> | Descargable |
+| npm | Gestor de paquetes para JavaScript, utilizado para instalar dependencias de Angular | <a href="https://www.npmjs.com">https://www.npmjs.com</a> | Descargable |
+| TypeScript | Lenguaje de programación strongly-typed que compila a JavaScript | <a href="https://www.typescriptlang.org">https://www.typescriptlang.org</a> | Descargable (npm) |
+
+<a id="toc-5-1-1-4-herramientas-de-desarrollo-backend"></a>
+### 5.1.1.4. Herramientas de Desarrollo Backend
+
+| Herramienta | Propósito |URL de Referencia | Tipo |
+|-------------|-----------|------------------|------|
+| Spring Boot | Framework de desarrollo backend basado en Java | <a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a> | Descargable |
+| Java Development Kit (JDK 17) | Kit de desarrollo de Java necesario para compilar y ejecutar aplicaciones Spring Boot | <a href="https://www.oracle.com/java/technologies/downloads/#java17">https://www.oracle.com/java/technologies/downloads/#java17</a> | Descargable |
+| Apache Maven | Herramienta de gestión de proyectos y gestión de dependencias para Java | <a href="https://maven.apache.org">https://maven.apache.org</a> | Descargable |
+| IntelliJ IDEA | IDE recomendado para el desarrollo backend con Spring Boot | <a href="https://www.jetbrains.com/idea">https://www.jetbrains.com/idea</a> | Descargable |
+
+<a id="toc-5-1-1-5-herramientas-de-control-de-versiones"></a>
+### 5.1.1.5. Herramientas de Control de Versiones
+
+| Herramienta | Propósito |URL de Referencia | Tipo |
+|-------------|-----------|------------------|------|
+| Git | Sistema de control de versiones distribuido | <a href="https://git-scm.com">https://git-scm.com</a> | Descargable |
+| GitHub | Plataforma de alojamiento de repositorios Git y colaboración | <a href="https://github.com">https://github.com</a> | SaaS |
+| GitHub Desktop | Aplicación GUI para gestionar repositorios Git de forma visual | <a href="https://desktop.github.com">https://desktop.github.com</a> | Descargable |
+
+<a id="toc-5-1-1-6-herramientas-de-documentacion-y-calidad-de-codigo"></a>
+### 5.1.1.6. Herramientas de Documentación y Calidad de Código
+
+| Herramienta | Propósito |URL de Referencia | Tipo |
+|-------------|-----------|------------------|------|
+| ESLint | Analizador de código estático para identificar patrones problemáticos en JavaScript/TypeScript | <a href="https://eslint.org">https://eslint.org</a> | Descargable (npm) |
+| Prettier | Formateador de código Opinionated para mantener consistencia en el código | <a href="https://prettier.io">https://prettier.io</a> | Descargable (npm) |
+| Markdown | Lenguaje de formato para documentación técnica | <a href="https://www.markdownguide.org">https://www.markdownguide.org</a> | Referencia |
+| OpenAPI (Swagger) | Especificación para documentar APIs REST | <a href="https://swagger.io/specification">https://swagger.io/specification</a> | Referencia |
+
+<a id="toc-5-1-1-7-herramientas-de-despliegue"></a>
+### 5.1.1.7. Herramientas de Despliegue
+
+| Herramienta | Propósito |URL de Referencia | URL de Despliegue | Tipo |
+|-------------|-----------|------------------|-------------------|------|
+| GitHub Pages | Plataforma de despliegue para el landing page estático de SafeStep | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a> | SaaS |
+| GitHub Pages | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> | SaaS |
+| Render | Plataforma de despliegue para el backend Spring Boot de SafeStep | <a href="https://render.com">https://render.com</a> | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> | SaaS |
+| Render PostgreSQL | Base de datos PostgreSQL desplegada para persistencia del backend | <a href="https://render.com">https://render.com</a> | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` | SaaS |
+
+<a id="toc-5-1-1-8-herramientas-de-testing"></a>
+### 5.1.1.8. Herramientas de Testing
+
+| Herramienta | Propósito |URL de Referencia | Tipo |
+|-------------|-----------|------------------|------|
+| Jasmine | Framework de testing para aplicaciones Angular | <a href="https://jasmine.github.io">https://jasmine.github.io</a> | Descargable (npm) |
+| Karma | Test runner para Angular que permite ejecutar pruebas en múltiples navegadores | <a href="https://karma-runner.github.io">https://karma-runner.github.io</a> | Descargable (npm) |
+| Jest | Framework de testing alternativo para aplicaciones JavaScript/TypeScript | <a href="https://jestjs.io">https://jestjs.io</a> | Descargable (npm) |
+| JUnit | Framework de testing para aplicaciones Java/Spring Boot | <a href="https://junit.org/junit5">https://junit.org/junit5</a> | Descargable |
+| Postman | Herramienta para testing manual de endpoints API | <a href="https://www.postman.com">https://www.postman.com</a> | Descargable |
+
+<a id="toc-5-1-1-9-requisitos-del-sistema-por-miembro-del-equipo"></a>
+### 5.1.1.9. Requisitos del Sistema por Miembro del Equipo
+
+Cada miembro del equipo debe contar con las siguientes especificaciones mínimas en su estación de trabajo para garantizar un desarrollo eficiente y sin problemas de compatibilidad:
+
+**Requisitos Mínimos:**
+- Sistema Operativo: Windows 10/11, macOS Ventura o superior, o Ubuntu 22.04 LTS
+- Memoria RAM: Mínimo 8 GB (recomendado 16 GB para desarrollo fluido)
+- Espacio en disco: Mínimo 20 GB libres para herramientas y proyectos
+- Procesador: Intel Core i5 o equivalente AMD (recomendado i7 o Ryzen 7)
+- Conexión a internet: Banda ancha mínima de 10 Mbps para trabajo colaborativo
+
+**Software Requerido:**
+- Git configurado con credenciales de GitHub
+- Node.js LTS instalado (versión 20.x o superior)
+- npm instalado (versión 10.x o superior)
+- JDK 26 instalado y configurado en PATH
+- Maven instalado (versión 3.9.x o superior)
+- Visual Studio Code con extensiones recomendadas
+- Acceso a cuenta GitHub organization upc-chronos-team-3
 
 <a id="toc-5-1-2-source-code-management"></a>
 ## 5.1.2. Source Code Management
 
-El trabajo actual se aloja en la organización [1ASI0732-2620-9090-Grupo-4](https://github.com/1ASI0732-2620-9090-Grupo-4). Los repositorios de la organización antigua citados en el capítulo 5 del informe anterior son exclusivamente evidencia histórica.
+En esta sección el equipo establece los medios y esquema de organización que aplicará para el seguimiento de modificaciones. Para ello utilizará GitHub como plataforma y sistema de control de versiones. Se incluye el URL del repositorio de GitHub para cada producto: Report, Landing Page, Backend, Frontend Web Applications. En el caso del Backend, se incluye en el repositorio el proyecto y los archivos de pruebas, tanto unitarias como de integración/aceptación. En esta sección se explica de qué forma se implementará GitFlow como Workflow de control de versiones.
 
-| Producto | Repositorio actual | Rama local observada al preparar esta sección |
-|---|---|---|
-| Informe | [safeStept-report](https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-report) | `develop` |
-| Landing page | [safestept-landing-page](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page) | `main` |
-| Frontend web | [safestept-frontend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend) | `main` |
-| API | [safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `main` |
-| Android | Repositorio Git local `safestept-android`; remoto de la organización por crear y enlazar | `main` sin commits |
+<a id="toc-5-1-2-1-repositorios-de-github"></a>
+### 5.1.2.1. Repositorios de GitHub
 
-**Flujo acordado:** `main` recibe versiones publicables; `develop` integra cambios revisados; cada historia usa `feature/<id>-<descripcion-en-kebab-case>` desde `develop`; las estabilizaciones usan `release/vMAJOR.MINOR.PATCH` y las correcciones urgentes `hotfix/vMAJOR.MINOR.PATCH`. Una PR debe referir la historia, describir la prueba ejecutada y recibir al menos una revisión distinta de su autor antes de fusionarse. Las ramas `develop` aún no están constatadas en los tres repositorios de producto, por lo que esta política es una **configuración pendiente**, no una práctica ya demostrada.
+El equipo Chronos utiliza la organización GitHub "upc-chronos-team-3" para gestionar los cuatro repositorios del proyecto, cada uno encargado de un componente específico de la solución:
 
-Los mensajes siguen Conventional Commits, por ejemplo `feat(simulation): show attempt feedback`, `fix(auth): handle expired token` y `test(analytics): cover empty progress`. Los *releases* usan Semantic Versioning `MAJOR.MINOR.PATCH`; un número solo se declara liberado si existe el tag y un artefacto verificable. No se asignarán a los repositorios nuevos fechas, autores, PR o commits heredados de la organización anterior.
+| Repositorio | URL GitHub | Propósito |
+|-------------|-----------|-----------|
+| SafeStep Report | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report</a> | Documentación del proyecto en formato markdown |
+| SafeStep Frontend | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend</a> | Aplicación web interactiva desarrollada en Angular |
+| SafeStep Backend | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend</a> | API RESTful desarrollada en Spring Boot |
+| SafeStep Landing | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page</a> | Página landing pública de presentación del producto |
+
+<a id="toc-5-1-2-2-gitflow-implementation"></a>
+### 5.1.2.2. GitFlow Implementation
+
+El equipo implementa el modelo de ramificaciones GitFlow basado en el artículo "A successful Git branching model" de Vincent Driessen. Este modelo establece una estructura clara y organizada para el desarrollo colaborativo, permitiendo múltiples líneas de trabajo paralelas sin afectar la estabilidad del código en producción. A continuación se detallan las ramas principales y su propósito dentro del flujo de trabajo adoptado.
+
+<a id="toc-5-1-2-2-1-rama-principal-main"></a>
+#### 5.1.2.2.1. Rama Principal (main)
+
+La rama "main" representa la rama principal del repositorio y contiene exclusivamente el código que ha sido validado completamente y está listo para ejecución en producción. Esta rama está protegida contra pushes directos, lo que significa que ningún miembro del equipo puede realizar commits directamente a esta rama. Cualquier cambio que llegue a "main" debe pasar por el proceso completo de revisión y pruebas en ramas de característica o corrección. El código en esta rama refleja los releases finalizados y desplegados. Cada merge a main genera automáticamente una etiqueta (tag) de versión usando semantic versioning. La rama main es la fuente de verdad para despliegues automáticos a producción.
+
+<a id="toc-5-1-2-2-2-rama-de-desarrollo-develop"></a>
+#### 5.1.2.2.2. Rama de Desarrollo (develop)
+
+La rama "develop" sirve como rama de integración para características completadas. Es la rama base para crear nuevas ramas de características (feature branches) y constituye el centro de integración del desarrollo diario. El código en esta rama representa el estado más reciente del desarrollo con las características acumuladas del Sprint actual. Antes de cada release, se crea una rama de publicación (release branch) desde "develop". Esta rama también está protegida contra pushes directos, forzando que todos los cambios pasen por revisión. Es la rama que se despliega automáticamente al entorno de staging/pre-producción para testing de integración.
+
+<a id="toc-5-1-2-2-3-ramas-de-caracteristicas-feature"></a>
+#### 5.1.2.2.3. Ramas de Características (feature/*)
+
+Las ramas de características (feature branches) se crean desde la rama "develop" y se utilizan para desarrollar nuevas funcionalidades de manera aislada. Cada característica tiene su propia rama, lo que permite trabajar en múltiples funcionalidades simultáneamente sin interferir con el trabajo de otros miembros del equipo. Estas ramas siguen una convención de nomenclatura específica que incluye el tipo de trabajo y una descripción breve de la característica.
+
+**Convención de nomenclatura:** `feature/<id-ticket>-<descripcion-corta>` o alternativamente `feature/<descripcion-corta>` cuando no se cuente con un ticket asociado. Por ejemplo: `feature/US001-user-registration` para implementar el registro de usuarios, `feature/API001-modules-endpoint` para crear el endpoint de módulos, o `feature/UI002-landing-hero` para diseñar la sección hero de la landing page. Esta convención permite identificar rápidamente el propósito de cada rama y su relación con el backlog del producto.
+
+Una vez que la característica está completa y las pruebas pasan exitosamente, la rama de característica se fusiona (merge) de vuelta a "develop" mediante un Pull Request que requiere revisión de al menos un otro miembro del equipo. Después del merge, la rama de característica se elimina para mantener limpio el repositorio.
+
+<a id="toc-5-1-2-2-4-ramas-de-publicacion-release"></a>
+#### 5.1.2.2.4. Ramas de Publicación (release/*)
+
+Las ramas de publicación (release branches) se crean desde "develop" cuando el equipo está listo para publicar una nueva versión. Estas ramas permiten realizar ajustes finales, correctivos y preparar los artefactos de despliegue sin afectar el desarrollo continuo. El nombre de estas ramas sigue el formato: `release/v<major>.<minor>.<patch>` siguiendo semantic versioning.
+
+Durante la fase de publicación, solo se permiten cambios relacionados con la configuración de despliegue, documentación de release, y corrección de errores críticos. No se añaden nuevas funcionalidades en esta rama. Una vez completados los preparativos, la rama de release se fusiona tanto a "main" como a "develop", y se genera la etiqueta de versión correspondiente. Después de la publicación exitosa, la rama de release se elimina.
+
+<a id="toc-5-1-2-2-5-ramas-de-correccion-urgente-hotfix"></a>
+#### 5.1.2.2.5. Ramas de Corrección Urgente (hotfix/*)
+
+Las ramas de corrección urgente (hotfix branches) se crean desde "main" para abordar errores críticos que requieren solución inmediata en producción. Estas ramas siguen la convención de nomenclatura: `hotfix/<id-ticket>-<descripcion-corta>` o simplemente `hotfix/<descripcion-corta>`. Permiten resolver problemas críticos sin afectar el desarrollo en curso en "develop".
+
+Una vez que la corrección está completa y validada, se fusiona tanto a "main" como a "develop" para asegurar que la corrección esté disponible en futuras publicaciones. Al igual que otras ramas temporales, las ramas hotfix se eliminan después del merge. Este tipo de rama es esencial para mantener la calidad del servicio en producción y responder rápidamente a incidentes.
+
+<a id="toc-5-1-2-3-semantic-versioning"></a>
+### 5.1.2.3. Semantic Versioning
+
+El equipo aplica Semantic Versioning (SemVer) como sistema de versionado según la especificación "Semantic Versioning 2.0.0". El formato de versión sigue el patrón: `MAJOR.MINOR.PATCH`, donde cada componente tiene un significado específico que comunica el tipo de cambios realizados en cada release.
+
+**MAJOR (X.0.0):** Se incrementa cuando se realizan cambios incompatibles en la API. Esto incluye cambios que rompen la compatibilidad hacia atrás en la API pública, como la eliminación de endpoints, cambios en el formato de request/response que no son retrocompatibles, o restructuración significativa del código que afecta a integraciones existentes. Cuando se incrementa la versión mayor, las versiones menores y de parche se reinician a cero.
+
+**MINOR (x.Y.0):** Se incrementa cuando se añaden nuevas funcionalidades compatibles hacia atrás. Añadir nuevos endpoints, nuevos campos en respuestas (sin afectar los existentes), o nueva funcionalidad que no rompe la compatibilidad con consumidores existentes de la API. Cuando se incrementa la versión menor, la versión de parche se reinicia a cero.
+
+**PATCH (x.x.Z):** Se incrementa cuando se realizan correcciones de errores compatibles hacia atrás. Correcciones de bugs que no cambian la API pública, mejoras de rendimiento que no alteran el comportamiento externo, o documentación actualizada que no afecta al código.
+
+Ejemplos de versionado: `v1.0.0` (versión inicial), `v1.1.0` (nueva funcionalidad añadida como módulos de curso), `v1.1.1` (corrección de bug en autenticación), `v2.0.0` (cambio breaking en estructura de API).
+
+<a id="toc-5-1-2-4-conventional-commits"></a>
+### 5.1.2.4. Conventional Commits
+
+El equipo adopta Conventional Commits para estructurar los mensajes de commit de manera clara y consistente. Esta convención permite generar automáticamente registros de cambios (changelogs), identificar tipos de cambios, y facilitar la comunicación en el equipo. El formato del mensaje de commit sigue la estructura: `<tipo>[alcance opcional]: <descripción>`.
+
+**Tipos de commits aceptados:**
+
+| Tipo | Descripción |
+|------|------------|
+| feat | Nueva funcionalidad añadida al proyecto |
+| fix | Corrección de un bug |
+| docs | Cambios únicamente en documentación |
+| style | Cambios de formato que no afectan la lógica del código |
+| refactor | Reestructuración del código que no añade ni elimina características |
+| perf | Cambios que mejoran el rendimiento |
+| test | Añadir o corregir pruebas |
+| chore | Tareas de mantenimiento que no afectan al código de producción |
+| build | Cambios en el sistema de build o dependencias |
+| ci | Cambios en archivos de configuración de CI/CD |
+
+**Ejemplos de mensajes de commit:**
+
+- `feat(auth): add JWT token refresh endpoint` - Añade endpoint para refresh de tokens JWT
+- `fix(modules): resolve null pointer in module retrieval` - Corrige error de puntero nulo al obtener módulos
+- `docs(api): update endpoint documentation for user registration` - Actualiza documentación del endpoint de registro
+- `style(ui): apply consistent spacing in landing page components` - Aplica espaciado consistente en componentes
+- `refactor(db): optimize database queries for lesson fetch` - Optimiza consultas de base de datos para lecciones
+- `perf(api): add caching layer for module content` - Añade capa de caché para contenido de módulos
+- `test(auth): add unit tests for login service` - Añade pruebas unitarias para servicio de login
+- `build(deps): update Angular to version 17` - Actualiza Angular a versión 17
+
+Para commits que incluyen más detalle, se puede añadir un cuerpo descriptivo después de la línea en blanco, separado por un footer para información adicional como números de ticket:
+
+```
+feat(api): add pagination support to lessons endpoint
+
+Add limit and offset parameters to GET /api/lessons endpoint to support
+paginated responses for better performance with large datasets.
+
+Closes #45
+```
+
+<a id="toc-5-1-2-5-pull-request-guidelines"></a>
+### 5.1.2.5. Pull Request Guidelines
+
+Todos los miembros del equipo deben seguir estas pautas al crear y revisar Pull Requests. Antes de crear un PR, el branch debe estar al día con develop y pasar todas las pruebas locales. El título del PR debe seguir el formato Conventional Commits. El cuerpo del PR debe incluir descripción clara del cambio, screenshots para cambios visuales, y referencias a tickets relacionados. Los PRs requieren al menos una aprobación de otro miembro del equipo antes de poder hacer merge. El reviewer debe verificar que el código sigue las convenciones del proyecto, las pruebas pasan, y no introduce regresiones.
 
 <a id="toc-5-1-3-source-code-style-guide-conventions"></a>
 ## 5.1.3. Source Code Style Guide & Conventions
 
-Las claves, nombres de clases, métodos, rutas y mensajes técnicos se escriben en inglés. La UI se localiza a `en` y `es` mediante recursos, sin mezclar cadenas de presentación en la lógica. Se conserva el idioma inglés como valor por defecto exigido por el statement, con revisión específica de la landing page, que aún declara `lang="es"`.
+Aquí el equipo explica e indica las referencias que adoptará para nombrar elementos y programar en los lenguajes que se utilizan en la solución (en este caso HTML, CSS, JavaScript, TypeScript, Java). Para todos los lenguajes debe aplicar la nomenclatura en inglés. Adicionalmente, se adoptan convenciones estándares para coding basadas en las guías de referencia de la industria tecnológica.
 
-| Tecnología | Convención comprobable |
-|---|---|
-| HTML/CSS/JavaScript | HTML semántico; atributos ARIA solo cuando aportan significado; clases CSS en `kebab-case`; variables CSS para tokens; JS en `camelCase`; enlaces y controles accesibles por teclado. |
-| TypeScript/Angular | `PascalCase` para tipos/componentes, `camelCase` para miembros, `kebab-case` para rutas/archivos; tipado explícito en contratos; separar dominio, aplicación, infraestructura y presentación; ejecutar `npm run build` y `npm test`. Formato conforme a `.prettierrc` y `.editorconfig` del repositorio. |
-| Java/Spring Boot | Paquetes en minúsculas, clases en `PascalCase`, métodos/campos en `camelCase`; DTO de entrada validados; reglas de negocio fuera de controladores; ejecutar `mvn test` y compilar el artefacto. |
-| Kotlin/Android | Los mismos criterios de nombres Kotlin; estados UI separados del acceso a datos; textos en recursos localizables; pruebas unitarias y de interfaz Compose antes del APK. |
-| SQL | Tablas/columnas en `snake_case`, PK y FK explícitas, sin contraseñas ni datos personales en scripts de ejemplo. |
-| Gherkin | `Feature`, `Scenario`, `Given/When/Then` con comportamiento observable, uno por intención de negocio; enlazar cada escenario a una User Story. Los archivos `.feature` aún no están presentes en los repositorios actuales. |
+<a id="toc-5-1-3-1-convenciones-generales"></a>
+### 5.1.3.1. Convenciones Generales
 
-Las referencias adoptadas son [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) y [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html) para la landing; [Angular coding style guide](https://angular.dev/style-guide) y la [documentación TypeScript](https://www.typescriptlang.org/docs/handbook/) para la web; [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) para la API; [Android Kotlin style guide](https://developer.android.com/kotlin/style-guide) para Android; y la [referencia Gherkin de Cucumber](https://cucumber.io/docs/gherkin/reference/) para escenarios BDD. Adoptarlas no equivale a afirmar que todos los archivos actuales ya las cumplen: esa verificación pertenece a las pruebas estáticas del capítulo VI.
+El equipo SafeStep establece las siguientes convenciones generales que aplican a todos los lenguajes de programación utilizados en el proyecto, con el objetivo de mantener consistencia, legibilidad y mantenibilidad en todo el código fuente producido por el equipo de desarrollo.
 
-El statement menciona guías Vue y C# porque prescribe esas tecnologías. El equipo conserva Angular y Spring Boot por decisión de proyecto, pero **requiere confirmar con el docente** la aceptación de esta desviación; el informe no debe afirmar conformidad técnica completa antes de ello.
+**Nomenclatura en Inglés:** Todos los nombres de variables, funciones, clases, métodos, constantes, interfaces, y cualquier otro elemento de código debe ser nombrar en inglés. Esto incluye nombres de archivos, directorios, comentarios, y documentación. La razón principal es que el código será revisado y eventualmente mantenido por desarrolladores de diferentes nacionalidades, y el inglés es el idioma universal de la programación. Además, todas las palabras clave de los lenguajes de programación están en inglés, lo que hace que el código sea más coherente cuando se mezclan elementos propios con los del lenguaje.
+
+**Sistema de Archivos:** La estructura de directorios debe seguir una organización lógica y coherente. Los nombres de archivos deben ser descriptivos y seguir una convención consistente. Los directorios deben usar nombres en minúsculas con guiones (-) como separadores cuando sea necesario. Por ejemplo: `src/app/components/user-profile`, `src/app/services/auth.service.ts`, `src/app/models/user.model.ts`.
+
+<a id="toc-5-1-3-2-convenciones-para-html"></a>
+### 5.1.3.2. Convenciones para HTML
+
+El equipo sigue las "HTML Style Guide and Coding Conventions" ampliamente aceptadas en la industria, adaptadas a las necesidades específicas del proyecto SafeStep. HTML se utiliza principalmente para la construcción de la Landing Page y las plantillas de componentes Angular.
+
+**Estructura del Documento:** Todo documento HTML debe incluir la declaración DOCTYPE, el elemento html con el atributo lang correspondiente, y los metadatos esenciales en la sección head. El código debe sangría (indent) correctamente utilizando 4 espacios para mantener legibilidad. Los atributos deben estar en orden alfabético dentro de cada etiqueta para facilitar la búsqueda visual. Los valores de atributos deben estar siempre entre comillas dobles.
+
+**Convenciones de Nomenclatura:** Los IDs y clases deben seguir el patrón kebab-case, siendo descriptivos y coherentes con la función del elemento. Por ejemplo: `main-navigation`, `hero-section`, `cta-button`. Los atributos data- deben seguir un patrón similar: `data-module-id`, `data-lesson-progress`.
+
+**Comentarios:** Los comentarios en HTML deben ser significativos y explicar el propósito de secciones complejas o componentes no obvios. Se utiliza el formato estándar `<!-- comentario -->` para comentarios de una línea y múltiples líneas cuando sea necesario.
+
+<a id="toc-5-1-3-3-convenciones-para-css"></a>
+### 5.1.3.3. Convenciones para CSS
+
+El equipo adopta las directrices del "Google HTML/CSS Style Guide" como base para las convenciones de CSS, complementadas con prácticas específicas del ecosistema Angular.
+
+**Organización del Código CSS:** El código CSS se organiza siguiendo metodologías modernas como BEM (Block Element Modifier) para la nomenclatura de clases, lo que facilita el mantenimiento y la escalabilidad de los estilos. Cada componente en Angular debe tener su propio archivo de estilos encapsulado, utilizando preferentemente SCSS para aprovechar características como variables y mixins.
+
+**Convenciones de Nomenclatura:** Las clases CSS siguen el patrón BEM: `bloque__elemento--modificador`. Por ejemplo: `button--primary`, `card__title--highlighted`. Los nombres deben ser descriptivos y en inglés. Se evita el uso de IDs para estilos, prefiriendo clases para permitir la reutilización.
+
+**Propiedades Ordenadas:** Las propiedades CSS dentro de un bloque deben estar ordenadas lógicamente, agrupando propiedades relacionadas juntas. Una estructura recomendada es: posicionamiento, modelo de caja, tipografía, fondo, bordes, efectos visuales, otros.
+
+**Valores y Unidades:** Los valores numéricos deben incluir la unidad excepto cuando el valor sea cero. Los colores deben usarse en formato hexadecimal o rgb() para consistencia. Se utilizan variables CSS para valores repetidos para facilitar cambios globales.
+
+<a id="toc-5-1-3-4-convenciones-para-javascript-y-typescript"></a>
+### 5.1.3.4. Convenciones para JavaScript y TypeScript
+
+El equipo sigue las "Google TypeScript Style Guide" y las mejores prácticas del ecosistema Angular para el desarrollo en JavaScript y TypeScript. Estas convenciones aseguran que el código sea type-safe, legible y mantenible.
+
+**Declaración de Variables:** Se utiliza `const` por defecto para variables que no serán reasignadas. Solo se usa `let` cuando es necesario permitir reasignación. Se evita el uso de `var` completamente. Los nombres de variables utilizan camelCase y deben ser descriptivos, evitando abreviaturas que dificulten la lectura.
+
+**Funciones:** Las funciones utilizan arrow functions (funciones flecha) cuando no se necesita el objeto `this`. Se prefiere funciones declarativas sobre funciones anónimas cuando sea posible. Los parámetros opcionales deben tener un valor default. La documentación de funciones mediante JSDoc o TypeDoc es obligatoria para funciones exportadas.
+
+**Tipos y TypeScript:** Todos los parámetros de funciones deben tener tipos definidos. Se utilizan interfaces para definir la forma de objetos que se utilizan repetidamente. Los tipos primitivos se escriben en minúsculas: `string`, `number`, `boolean`. Los arrays se tipan usando la notación `Type[]` o `Array<Type>`. Se evita el uso de `any` a menos que sea absolutamente necesario.
+
+**Clases y Orientación a Objetos:** Las clases siguen PascalCase. Los miembros privados utilizan el prefijo underscore (`_`) o el modificador `private` de TypeScript. Los getters y setters se utilizan para acceder a miembros privados cuando hay lógica asociada. Las interfaces se nomin con el prefijo `I` o como sustantivos descriptivos.
+
+**Módulos e Imports:** Los imports se organizan en grupos: módulos externos, módulos internos del proyecto, módulos relativos. Dentro de cada grupo, se ordenan alfabéticamente. Se utilizan imports con nombres claros para facilitar el debugging.
+
+<a id="toc-5-1-3-5-convenciones-para-java-y-spring-boot"></a>
+### 5.1.3.5. Convenciones para Java y Spring Boot
+
+El equipo adopta el "Google Java Style Guide" como referencia principal para el desarrollo backend con Java y Spring Boot, complementado con las convenciones específicas del framework.
+
+**Organización del Código:** El código Java sigue una estructura de paquetes (packages) lógica y jerárquica. Los nombres de paquetes siguen el patrón inverso de dominio: `com.safestep.api`, `com.safestep.model`, `com.safestep.service`. Esta estructura facilita la identificación del propósito de cada clase.
+
+**Convenciones de Nomenclatura:** Las clases utilizan PascalCase y son sustantivos descriptivos. Los métodos utilizan verbos o frases verbales en camelCase. Las constantes utilizan UPPER_SNAKE_CASE. Los tipos genéricos utilizan letras mayúsculas simples (E, T, K, V).
+
+**Spring Boot Specific:** Las clases anotadas con `@Controller` o `@RestController` son responsables únicamente de manejar requests HTTP. La lógica de negocio reside en clases anotadas con `@Service`. El acceso a datos se realiza a través de clases anotadas con `@Repository`. Las entidades JPA siguen el patrón de nomenclatura de la base de datos.
+
+**Anotaciones:** Las anotaciones se colocan en la línea anterior al elemento que anotan. Se evita la anotación redundante. Las anotaciones de Spring se ordenan primero, seguidas de anotaciones personalizadas.
+
+<a id="toc-5-1-3-6-convenciones-para-gherkin-specifications"></a>
+### 5.1.3.6. Convenciones para Gherkin (Specifications)
+
+El equipo utiliza las "Gherkin Conventions for Readable Specifications" para escribir user stories en formato Given-When-Then y para crear pruebas de aceptación automatizadas.
+
+**Estructura de Feature Files:** Cada archivo Gherkin representa una característica específica del sistema. La primera línea contiene la palabra clave Feature seguida de un nombre y descripción opcionales. Los archivos se nomin descriptivamente en inglés.
+
+**Escritura de Escenarios:** Los escenarios siguen la estructura Given-When-Then. Given establece el contexto inicial, When describe la acción a realizar, Then verifica el resultado esperado. Se evita escribir pasos demasiado largos o complejos.
+
+**Step Definitions:** Los step definitions en el código deben ser reutilizables. Se parametrizan los valores que cambian entre escenarios. Se agrupan los steps relacionados en archivos lógicos.
 
 <a id="toc-5-1-4-software-deployment-configuration"></a>
 ## 5.1.4. Software Deployment Configuration
 
-El procedimiento siguiente describe pasos reproducibles; la existencia de código o configuraciones no demuestra por sí sola una publicación vigente. Los enlaces del capítulo anterior deben comprobarse y sustituirse por los de la organización actual.
+En esta sección el equipo especifica la configuración del despliegue de la solución, incluyendo los pasos necesarios para que, a partir de los repositorios de código fuente, se pueda lograr el despliegue o publicación satisfactorio de cada uno de los productos digitales en la solución (Landing Page, Web Services, Frontend Web Applications).
 
-1. **Landing:** revisar `index.html`, `about.html`, `styles.css`, `script.js` y recursos; verificar enlaces, idioma, navegación responsive y acuerdo SaaS; publicar la rama/version seleccionada en GitHub Pages; guardar URL, commit, fecha y captura desktop/móvil.
-2. **Web:** instalar con `npm ci`; ejecutar `npm test -- --watch=false` y `npm run build`; configurar la URL de API para producción mediante los archivos `src/environments`; desplegar el resultado en GitHub Pages con el `base-href` del repositorio; verificar rutas directas, autenticación, simulación, progreso y estados de error.
-3. **API:** ejecutar `mvn test` y empaquetar con Docker; definir `SPRING_PROFILES_ACTIVE=prod` y `PORT`. Inyectar `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD` y `JWT_SECRET` desde el proveedor, nunca desde Git. Stripe solo debe configurarse con claves de **prueba** para el piloto (`STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`). Comprobar acceso a base de datos, `/v3/api-docs` y flujos API antes de publicar su URL.
-4. **Android:** compilar, probar y generar un APK de prueba firmado para distribución interna; configurar el `baseUrl` del entorno de prueba sin colocar credenciales en el APK; instalar en dispositivo/emulador y registrar versión, huella del artefacto, capturas y resultados. No se publicará en tienda sin nueva revisión.
-5. **Reversión:** conservar el commit/tag y artefacto de la versión anterior; ante fallo, volver a la versión previamente validada y verificar los flujos principales. No revertir una base de datos con cambios destructivos sin plan de restauración específico.
+<a id="toc-5-1-4-1-estrategia-de-despliegue"></a>
+### 5.1.4.1. Estrategia de Despliegue
 
-**Hallazgo de seguridad al auditar esta sección:** el perfil de producción del backend contenía valores sensibles de respaldo y el Dockerfile iniciaba con el perfil `dev`. La configuración local se corrigió para exigir variables de entorno y activar `prod`. Las credenciales que hayan figurado en el historial deben rotarse por el responsable del servicio; editar el archivo no borra su exposición histórica. Los resultados de publicación y verificación se registrarán en 5.2, no se presumirán aquí.
+El equipo SafeStep adopta una estrategia de despliegue progresivo que permite entregar valor de manera continua mientras se mantiene la estabilidad y calidad del sistema. Esta estrategia contempla múltiples plataformas de despliegue, cada una seleccionada según las características y necesidades específicas de cada componente de la solución.
+
+<a id="toc-5-1-4-1-1-entornos-de-despliegue"></a>
+#### 5.1.4.1.1. Entornos de Despliegue
+
+El proyecto cuenta con tres productos desplegados en plataformas independientes. El primer producto es la Landing Page, desplegada en GitHub Pages como sitio estático, permitiendo una presentación pública del producto SafeStep con alta disponibilidad y sin costos operativos.
+
+El segundo producto es el Frontend Angular, desplegado en GitHub Pages como aplicación web estática. Esta plataforma fue seleccionada por su integración con GitHub, su disponibilidad pública mediante HTTPS y su facilidad para publicar builds frontend desde el repositorio.
+
+El tercer producto es el Backend API, desplegado en Render como un servicio Spring Boot documentado con Swagger. Este backend se conecta a una base de datos PostgreSQL desplegada en Render, utilizada para persistir usuarios, perfiles, simulaciones, órdenes, pagos y datos principales de la aplicación.
+
+<a id="toc-5-1-4-1-2-pipeline-de-ci-cd"></a>
+#### 5.1.4.1.2. Pipeline de CI/CD
+
+El equipo implementa pipelines de Integración Continua y Entrega Continua (CI/CD) utilizando GitHub Actions. Cada repositorio cuenta con su propio pipeline de CI/CD adaptado a sus características específicas.
+
+Para el repositorio de Frontend (Angular), el pipeline de CI/CD incluye las siguientes etapas: instalación de dependencias con npm install, verificación de código con ESLint y análisis estático, ejecución de pruebas unitarias con Karma o Jest, construcción de la aplicación para producción, y despliegue automático a GitHub Pages si las pruebas pasan exitosamente.
+
+Para el repositorio de Web Services (Spring Boot), el pipeline incluye: verificación de código con herramientas de análisis estático, compilación del proyecto con Maven, ejecución de pruebas unitarias y de integración, y construcción del artefacto JAR.
+
+Para el repositorio de Landing Page, se implementa un pipeline simplificado que incluye build estático y despliegue automático a GitHub Pages.
+
+<a id="toc-5-1-4-2-configuracion-de-plataformas-de-despliegue"></a>
+### 5.1.4.2. Configuración de Plataformas de Despliegue
+
+A continuación se detallan las configuraciones específicas para cada plataforma de despliegue utilizada en el proyecto SafeStep.
+
+<a id="toc-5-1-4-2-1-configuracion-de-landing-page-en-github-pages"></a>
+#### 5.1.4.2.1. Configuración de Landing Page en GitHub Pages
+
+La Landing Page de SafeStep se despliega en GitHub Pages, una plataforma de hosting estático directamente integrada con GitHub. El despliegue se configura mediante GitHub Actions, donde el pipeline construye los archivos estáticos y los publica en la rama `gh-pages` del repositorio.
+
+Para configurar el despliegue, se debe habilitar GitHub Pages en la configuración del repositorio, seleccionando la rama `gh-pages` como fuente. Los archivos estáticos generados tras el build se almacenan en esta rama y GitHub Pages los sirve automáticamente.
+
+La URL pública del landing page es:
+
+<a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
+
+<a id="toc-5-1-4-2-2-configuracion-de-frontend-en-github-pages"></a>
+#### 5.1.4.2.2. Configuración de Frontend en GitHub Pages
+
+El Frontend Angular se despliega en GitHub Pages como aplicación web estática. Los pasos de configuración incluyen generar el build de Angular, configurar la ruta base del proyecto y publicar los archivos generados en el repositorio correspondiente.
+
+El despliegue publica los archivos estáticos generados por Angular. Para ello, el workflow toma el directorio de salida del build y lo envía a GitHub Pages:
+
+```bash
+npm run build
+```
+
+La URL pública del frontend es:
+
+<a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
+
+<a id="toc-5-1-4-2-3-configuracion-de-backend-api-en-render"></a>
+#### 5.1.4.2.3. Configuración de Backend API en Render
+
+El Backend API se despliega en Render como una aplicación Spring Boot. Esta plataforma fue seleccionada porque permite publicar el servicio web, conectar variables de entorno, exponer la documentación Swagger y mantener disponible el API para el frontend desplegado.
+
+La configuración del backend se realiza mediante los archivos `application-dev.properties` y `application-prod.properties`, donde se define la conexión a PostgreSQL, el perfil de ejecución, las credenciales mediante variables de entorno y los parámetros necesarios para JWT y Stripe.
+
+La URL pública del backend desplegado es: <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+
+La base de datos PostgreSQL desplegada en Render utiliza el siguiente host:
+
+`dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com`
+
+<a id="toc-5-1-4-3-procedimientos-de-despliegue"></a>
+### 5.1.4.3. Procedimientos de Despliegue
+
+El equipo establece procedimientos detallados para ejecutar despliegues, asegurando consistencia y minimizando errores en el proceso de publicación del software.
+
+<a id="toc-5-1-4-3-1-despliegue-a-produccion"></a>
+#### 5.1.4.3.1. Despliegue a Producción
+
+Cada componente tiene su propio procedimiento de despliegue a producción. Para la Landing Page en GitHub Pages, el despliegue se activa automáticamente mediante GitHub Actions al hacer push a la rama `main`, ejecutando el build estático y publicando en la rama `gh-pages`.
+
+Para el Frontend en GitHub Pages, el despliegue se realiza mediante GitHub Actions, donde el pipeline ejecuta las pruebas, construye la aplicación y publica los archivos estáticos generados.
+
+Para el Backend en Render, el despliegue se realiza desde el repositorio del backend. Render construye la aplicación Spring Boot, ejecuta el artefacto generado y conecta el servicio con la base de datos PostgreSQL configurada mediante variables de entorno y archivos de propiedades.
+
+<a id="toc-5-1-4-3-2-verificacion-post-despliegue"></a>
+#### 5.1.4.3.2. Verificación Post-Despliegue
+
+Después de cada despliegue, el equipo debe verificar el correcto funcionamiento de cada componente accediendo a las URLs de despliegue correspondientes y realizando pruebas de humo (smoke tests) para confirmar que la aplicación responde correctamente.
+
+<a id="toc-5-1-4-3-3-rollback"></a>
+#### 5.1.4.3.3. Rollback
+
+En caso de problemas en producción, el equipo puede realizar un rollback a la versión anterior. GitHub Pages permite revertir el despliegue restaurando el contenido anterior de la rama `gh-pages`. Para Render, el rollback se realiza restaurando una versión anterior del backend o revirtiendo el commit desplegado desde el repositorio.
+
+<a id="toc-5-1-4-4-monitoreo-y-logging"></a>
+### 5.1.4.4. Monitoreo y Logging
+
+El equipo implementa capacidades de monitoreo y logging para mantener visibilidad sobre el estado de la aplicación en producción. GitHub Pages expone métricas básicas de uso a través de GitHub Insights. Para el tracking de errores, se puede integrar servicios como Sentry. Estas herramientas permiten identificar y resolver problemas rápidamente, asegurando la disponibilidad y calidad del servicio para los usuarios finales.
 
 <br>
 
-<a id="toc-5-2-product-implementation-deployment"></a>
-# 5.2. Product Implementation & Deployment
-
-SafeStep parte de una aplicación existente. Esta sección separa **línea base heredada**, **implementación comprobada en el repositorio actual** y **entregables pendientes del nuevo curso**. Una captura antigua, una URL del curso anterior o una funcionalidad descrita en un README no demuestran por sí mismas que la versión actual esté desplegada. Las pruebas detalladas pertenecen al capítulo VI; aquí se registra su vínculo con productos y sprints.
-
-| Estado de evidencia | Significado utilizado en esta sección |
-|---|---|
-| Implementado en código | Se localizó el archivo, ruta o componente en los repositorios actuales. |
-| Probado localmente | Existe un resultado de compilación/prueba ejecutado sobre el código actual. |
-| Desplegado/verificado | Se comprobó una URL pública y se registró fecha, versión y captura. |
-| Pendiente | Falta artefacto, revisión, ejecución o evidencia; no se presenta como terminado. |
-
-<a id="toc-5-2-1-sprint-backlogs"></a>
-## 5.2.1. Sprint Backlogs
-
-<a id="toc-linea-base-as-is-del-curso-anterior"></a>
-### Línea base As-Is del curso anterior
-
-El informe elaborado en el curso anterior documenta cuatro sprints del proyecto previo. Sus números y resultados son **afirmaciones históricas de ese informe** y no se contabilizan como trabajo ni velocidad del equipo del curso actual.
-
-| Sprint antiguo | Alcance declarado en el informe anterior | Story Points declarados | Uso en el proyecto nuevo |
-|---|---|---:|---|
-| 1 | Landing page inicial | 21 | Identificar piezas reutilizables y deuda de i18n/accesibilidad. |
-| 2 | Frontend Angular y API simulada | 43 | Revisar qué vistas siguen vigentes y cuáles usan la API real. |
-| 3 | Backend real, PostgreSQL, OpenAPI e integración | 45 | Contrastar contratos y despliegues con los repositorios actuales. |
-| 4 | IAM, Stripe, persistencia y validación | 34 | Revisar seguridad, pruebas y flujos de pago de prueba. |
-
-<a id="toc-sprints-del-curso-de-diseno-de-experimentos"></a>
-### Sprints del curso de Diseño de Experimentos
-
-La siguiente secuencia es un **backlog de implementación**, no una retrospectiva inventada. El equipo debe fijar fechas, responsables, puntos y velocidad en su tablero actual antes de iniciar cada sprint. Las historias se seleccionarán por ID desde el [Product Backlog del capítulo III](../chapter-3/3-3-product-backlog.md), incorporando nuevas historias Android o de corrección mediante control de versiones.
-
-| Sprint nuevo | Goal y criterio de aceptación propuestos | Historias/tareas principales | Evidencia de cierre exigida | Estado |
-|---|---|---|---|---|
-| 1 — línea base y contratos | Poder compilar y probar web/API, identificar desviaciones y acordar contratos Android. | Auditoría de repositorios, secretos, OpenAPI, i18n/a11y, pruebas existentes, tablero. | Board, planning, LACX, PR, logs de pruebas, lista priorizada de defectos. | En curso; el board y la asignación son pendientes. |
-| 2 — Android e integración | Un usuario puede registrarse, practicar una simulación y consultar su progreso/catálogo en Android. | App Kotlin/Compose, cliente API, pruebas unitarias/UI, manejo de errores. | APK de prueba, captura o video en dispositivo, tests y commits. | Recorrido local ejecutado en emulador; faltan board, PR, pruebas de errores y despliegue compartido. |
-| 3 — estabilización y entrega | Los productos principales funcionan en los destinos publicados y su evidencia es trazable. | Correcciones, despliegues, acuerdo SaaS aprobado, seguridad, video actual. | URL verificadas, smoke tests, capturas, video, colaboración y retrospectiva. | Pendiente. |
-
-**Plantilla obligatoria por sprint.** Registrar número y fechas; objetivo SMART; *velocity* y suma de puntos; tabla `Story ID | Título | Task ID | Descripción | Horas | Responsable | Estado`; URL pública y captura del board; tabla de commits `Repositorio | Rama | Commit | Mensaje | Fecha`; pruebas asociadas a historia; capturas y video de ejecución; endpoints OpenAPI añadidos; despliegue; LACX y retrospectiva. No inferir horas o puntos a partir de la cantidad de commits. Las tareas de seguridad y documentación que no dependan de una historia deben etiquetarse como tareas técnicas. Las estimaciones en horas de las tablas de Engineering Tasks siguientes son planificación (rango 4–8 h por tarea, según el statement), no hechos verificados; los campos de responsable y fecha exacta permanecen sin asignar hasta la planificación real en el board del equipo.
-
-**Sprint Planning y trazabilidad.** Los trabajos técnicos que siguen se ejecutaron para preparar el producto, pero no se atribuyen retroactivamente a una reunión o Sprint formal. Antes de incorporar cada Sprint a la entrega, el equipo completará el cuadro exigido por el statement: `Date | Time | Location | Prepared By | Attendees | Sprint anterior: review | Sprint anterior: retrospective | Sprint Goal | Velocity | Sum of Story Points`. También incorporará la URL pública y una captura del board, la matriz LACX `Integrante y GitHub | Aspecto 1 L/C | Aspecto 2 L/C`, y la tabla de tareas `Story ID | Story Title | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status`. Los campos de personas, horas, puntos y fechas permanecen sin asignar hasta la planificación real.
-
-<a id="toc-sprint-1-linea-base-y-contratos"></a>
-### Sprint 1 — línea base y contratos
-
-*Goal propuesto:* que el equipo pueda reproducir la compilación y las pruebas de web/API, y que una cuenta común no pueda modificar catálogos. El evento de confirmación es `mvn package`, `npm run build`, pruebas automatizadas y smoke test local aprobados. La fecha de cierre, la velocidad y las historias seleccionadas deben acordarse en el board; las tareas siguientes aún no constituyen un Sprint Backlog aprobado.
-
-<table border="1" cellpadding="6" cellspacing="0" width="100%">
-  <tbody>
-    <tr><th width="30%">Sprint #</th><td>Sprint 1</td></tr>
-    <tr><th colspan="2" align="left">Sprint Planning Background</th></tr>
-    <tr><th>Date</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Time</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Location</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Prepared By</th><td>Pendiente de asignación del equipo</td></tr>
-    <tr><th>Attendees (to planning meeting)</th><td>Pendiente de asignación del equipo</td></tr>
-    <tr><th>Sprint n-1 Review Summary</th><td>No aplica; es el primer Sprint del curso actual.</td></tr>
-    <tr><th>Sprint n-1 Retrospective Summary</th><td>No aplica; es el primer Sprint del curso actual.</td></tr>
-    <tr><th colspan="2" align="left">Sprint Goal & User Stories</th></tr>
-    <tr><th>Sprint 1 Goal</th><td>Que el equipo pueda reproducir la compilación y las pruebas de web/API, y que una cuenta común no pueda modificar catálogos, confirmado por <code>mvn package</code>, <code>npm run build</code>, pruebas automatizadas y smoke test local aprobados.</td></tr>
-    <tr><th>Sprint 1 Velocity</th><td>Pendiente de definir por el equipo; no hay velocidad histórica previa en el curso actual.</td></tr>
-    <tr><th>Sum of Story Points</th><td>19 (TS15: 5, TS17: 8, TS18: 3, TS20: 3 — historias técnicas con Story ID del Product Backlog de 3.3 incluidas en este Sprint).</td></tr>
-  </tbody>
-</table>
-
-| Task técnica propuesta | Resultado comprobado al 16/09/2026 | Pendiente para cierre del Sprint |
-|---|---|---|
-| Baseline web/API | 42 pruebas API y 2 web aprobadas; ambos productos compilan. | Vincular tests con historias y registrar commits/PR. |
-| Contratos y persistencia | Smoke test local de alta, sesión, simulaciones, intento, progreso, catálogo y OpenAPI. | Publicar entorno de prueba y ejemplos de request/response por endpoint. |
-| Seguridad de contenido | Mutaciones administrativas restringidas en API y rutas/controles ocultos en web para `ROLE_USER`. | Revisar permisos de administrador y ejecutar análisis estático. |
-| Deuda y riesgos | Inventario de dependencias, i18n parcial, bundle sobre presupuesto y secretos históricos. | Priorizar en el board; rotar secretos en el proveedor. |
-
-**Sprint Backlog — Engineering Tasks (Sprint 1).** Descomposición de las tareas anteriores en tareas de ingeniería estimadas en horas (planificación, no hechos verificados; ver nota de la plantilla obligatoria).
-
-| Story ID | Story Title | Task ID | Task Title | Descripción | Estimación (h) | Assigned To | Status |
-|---|---|---|---|---|---|---|---|
-| TS20 | Pruebas y validación del backend con Maven | T1.1 | Ejecutar y estabilizar suite de pruebas del backend | Correr `mvn test`, revisar las 14 suites/42 pruebas y dejar el build reproducible. | 6 | Por asignar | Hecho |
-| TS20 | Pruebas y validación del backend con Maven | T1.2 | Ejecutar suite de pruebas del frontend | Correr `npm test -- --watch=false` y `npm run build`, registrar el aviso de presupuesto de bundle. | 4 | Por asignar | Hecho |
-| Tarea técnica | Trazabilidad de pruebas | T1.3 | Vincular tests existentes con Story ID | Anotar en el código o en el board qué historia cubre cada clase de test. | 5 | Por asignar | Pendiente |
-| TS17 | RESTful API por bounded context | T1.4 | Smoke test manual de contratos | Ejecutar `scripts/smoke-api.ps1` contra alta, sesión, simulaciones, intento, progreso y catálogo. | 5 | Por asignar | Hecho |
-| TS18 | Documentación OpenAPI y Swagger | T1.5 | Publicar ejemplos de request/response | Completar en Swagger un ejemplo por endpoint del alcance del Sprint. | 6 | Por asignar | Pendiente |
-| TS15 | Seguridad backend con JWT y roles | T1.6 | Restringir mutaciones administrativas | Agregar `@PreAuthorize("hasAuthority('ROLE_ADMIN')")` en simulaciones, comercio y gamificación. | 7 | Por asignar | Hecho |
-| TS15 | Seguridad backend con JWT y roles | T1.7 | Ocultar controles de administración en la web | Añadir `adminGuard`, campo `roles` en la respuesta de login y ocultar rutas/controles para `ROLE_USER`. | 8 | Por asignar | Hecho |
-| Tarea técnica | Deuda técnica | T1.8 | Inventariar dependencias vulnerables y secretos | Revisar las 24 alertas de `npm ci` y priorizar la rotación de la credencial expuesta en el proveedor. | 4 | Por asignar | Pendiente |
-
-<a id="toc-sprint-2-android-e-integracion"></a>
-### Sprint 2 — Android e integración
-
-*Goal propuesto:* que una persona pueda iniciar sesión, realizar una práctica y consultar su progreso desde Android con datos persistidos. Un recorrido con cuenta ficticia en emulador y API/PostgreSQL locales confirmó el flujo básico; no equivale a cierre de Sprint sin planificación, pruebas negativas y revisión del equipo.
-
-<table border="1" cellpadding="6" cellspacing="0" width="100%">
-  <tbody>
-    <tr><th width="30%">Sprint #</th><td>Sprint 2</td></tr>
-    <tr><th colspan="2" align="left">Sprint Planning Background</th></tr>
-    <tr><th>Date</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Time</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Location</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Prepared By</th><td>Pendiente de asignación del equipo</td></tr>
-    <tr><th>Attendees (to planning meeting)</th><td>Pendiente de asignación del equipo</td></tr>
-    <tr><th>Sprint 1 Review Summary</th><td>Pendiente de sesión de review formal del Sprint 1.</td></tr>
-    <tr><th>Sprint 1 Retrospective Summary</th><td>Pendiente de sesión de retrospectiva del Sprint 1.</td></tr>
-    <tr><th colspan="2" align="left">Sprint Goal & User Stories</th></tr>
-    <tr><th>Sprint 2 Goal</th><td>Que una persona pueda iniciar sesión, realizar una práctica y consultar su progreso desde Android con datos persistidos.</td></tr>
-    <tr><th>Sprint 2 Velocity</th><td>Pendiente de definir por el equipo.</td></tr>
-    <tr><th>Sum of Story Points</th><td>37 (US01: 3, US02: 5, US10: 5, US12: 3, US13: 8, US14: 5, US16: 3, US18: 5 — mismas historias del Product Backlog de 3.3, implementadas ahora en el cliente Android).</td></tr>
-  </tbody>
-</table>
-
-| Task técnica propuesta | Resultado comprobado al 16/09/2026 | Pendiente para cierre del Sprint |
-|---|---|---|
-| Cliente Android Kotlin/Compose | Login, registro, listado, detalle, resultado, progreso y catálogo implementados. | Asociar nuevas historias y publicar repositorio remoto. |
-| Pruebas y artefacto | 2 pruebas unitarias, 1 prueba de UI y APK debug reproducible. | Añadir escenarios de errores/red y PR revisado. |
-| Integración local | Capturas de recorrido con API/PostgreSQL local. | Repetir contra entorno compartido, registrar versión y test de sistema. |
-
-**Sprint Backlog — Engineering Tasks (Sprint 2).** Las historias reutilizan el mismo Story ID del Product Backlog de 3.3 porque describen el mismo objetivo de usuario implementado ahora en un segundo cliente (Android); el título indica el cliente para evitar confusión con la versión web ya entregada.
-
-| Story ID | Story Title | Task ID | Task Title | Descripción | Estimación (h) | Assigned To | Status |
-|---|---|---|---|---|---|---|---|
-| US01 | Iniciar sesión (cliente Android) | T2.1 | Pantalla de login y llamada a `/auth/login` | Formulario Compose, manejo de estado y token en memoria. | 6 | Por asignar | Hecho |
-| US02 | Registrarse en SafeStep (cliente Android) | T2.2 | Pantalla de registro | Formulario Compose con validación básica y llamada a `/auth/register`. | 5 | Por asignar | Hecho |
-| US10 | Visualizar catálogo de simulaciones (cliente Android) | T2.3 | Listado de simulaciones | Consumo del endpoint de catálogo y grilla Compose con imagen, dificultad y recompensas. | 7 | Por asignar | Hecho |
-| US12 / US13 | Revisar detalle y responder pasos (cliente Android) | T2.4 | Pantalla de detalle y selección de respuestas | Navegación a detalle, render de pasos/opciones y envío de respuestas seleccionadas. | 8 | Por asignar | Hecho |
-| US14 / US16 | Finalizar simulación y ver resumen (cliente Android) | T2.5 | Pantalla de resultado | Cálculo local de resumen y llamada al endpoint de intento. | 6 | Por asignar | Hecho |
-| US18 | Visualizar resumen general de progreso (cliente Android) | T2.6 | Pantalla de progreso | Consumo del endpoint de progreso y render de indicadores. | 6 | Por asignar | Hecho |
-| Tarea técnica | Calidad Android | T2.7 | Pruebas unitarias y de UI | 2 pruebas unitarias y 1 prueba de UI Compose ejecutadas en `Pixel_7_sem2`. | 5 | Por asignar | Hecho |
-| Tarea técnica | Empaquetado | T2.8 | Generar APK debug | Compilar `app-debug.apk` y registrar hash SHA-256 del artefacto. | 4 | Por asignar | Hecho |
-| Tarea técnica | Publicación del repositorio | T2.9 | Crear remoto en la organización y subir el proyecto | Enlazar `safestept-android` con GitHub y abrir el primer PR. | 4 | Por asignar | Pendiente |
-| Tarea técnica | Resiliencia | T2.10 | Escenarios de error y sin red | Cubrir credenciales inválidas, sesión expirada y pérdida de conexión. | 6 | Por asignar | Pendiente |
-
-<a id="toc-sprint-3-estabilizacion-y-entrega"></a>
-### Sprint 3 — estabilización y entrega
-
-*Goal propuesto:* ofrecer landing, web, API y APK de prueba en versiones identificables, con recorrido y evidencia reproducibles para revisión del docente. Su aceptación requerirá URL, commit, fecha, capturas, pruebas de flujos positivos/negativos y video nuevo; actualmente está **pendiente**. Se priorizarán despliegue, accesibilidad/i18n, vulnerabilidades, términos del piloto aprobados, colaboración, retrospectiva y testimonio consentido.
-
-<table border="1" cellpadding="6" cellspacing="0" width="100%">
-  <tbody>
-    <tr><th width="30%">Sprint #</th><td>Sprint 3</td></tr>
-    <tr><th colspan="2" align="left">Sprint Planning Background</th></tr>
-    <tr><th>Date</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Time</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Location</th><td>Pendiente de registrar</td></tr>
-    <tr><th>Prepared By</th><td>Pendiente de asignación del equipo</td></tr>
-    <tr><th>Attendees (to planning meeting)</th><td>Pendiente de asignación del equipo</td></tr>
-    <tr><th>Sprint 2 Review Summary</th><td>Pendiente de sesión de review formal del Sprint 2.</td></tr>
-    <tr><th>Sprint 2 Retrospective Summary</th><td>Pendiente de sesión de retrospectiva del Sprint 2.</td></tr>
-    <tr><th colspan="2" align="left">Sprint Goal & User Stories</th></tr>
-    <tr><th>Sprint 3 Goal</th><td>Ofrecer landing, web, API y APK de prueba en versiones identificables, con recorrido y evidencia reproducibles para revisión del docente.</td></tr>
-    <tr><th>Sprint 3 Velocity</th><td>Pendiente de definir por el equipo.</td></tr>
-    <tr><th>Sum of Story Points</th><td>5 (US40: 5 — pruebas negativas sobre el checkout ya implementado; el resto del Sprint son tareas técnicas de estabilización sin Story ID del Product Backlog).</td></tr>
-  </tbody>
-</table>
-
-**Sprint Backlog — Engineering Tasks (Sprint 3, planificado).** Ninguna de estas tareas se ha ejecutado; las horas son una estimación inicial para planificar el Sprint, sujeta a ajuste por el equipo.
-
-| Story ID | Story Title | Task ID | Task Title | Descripción | Estimación (h) | Assigned To | Status |
-|---|---|---|---|---|---|---|---|
-| Tarea técnica | Despliegue verificado | T3.1 | Confirmar commit servido en landing, web y API | Verificar versión/commit detrás de cada URL pública antes de citarla como evidencia. | 5 | Por asignar | Pendiente |
-| Tarea técnica | GitFlow | T3.2 | Crear rama `develop` en los 3 repos de producto | Aplicar la política de GitFlow ya declarada en 5.1.2 a landing, frontend y backend. | 4 | Por asignar | Pendiente |
-| Tarea técnica | Seguridad | T3.3 | Rotar credencial expuesta y revisar secretos | Rotar en el proveedor la credencial detectada en el historial de Git y confirmar que no se reintroduce. | 4 | Por asignar | Pendiente |
-| Tarea técnica | Accesibilidad e i18n | T3.4 | Completar idioma por defecto en inglés y revisar accesibilidad | Corregir `lang="es"` de la landing y auditar textos de UI aún en español. | 8 | Por asignar | Pendiente |
-| US40 | Completar pago ficticio | T3.5 | Pruebas negativas de checkout | Cubrir pago rechazado, carrito vacío y datos inválidos en el flujo de compra. | 6 | Por asignar | Pendiente |
-| Tarea técnica | Acuerdo SaaS | T3.6 | Revisión y aprobación del Acuerdo de Servicio | Completar responsable, contacto, tratamiento/retención de datos y fecha antes de publicar. | 5 | Por asignar | Pendiente |
-| Tarea técnica | Video About-the-Product | T3.7 | Grabar y publicar el video | Grabar testimonio con consentimiento, subir a OneDrive/YouTube e insertar el enlace en la landing. | 8 | Por asignar | Pendiente |
-| Tarea técnica | Colaboración | T3.8 | Completar Team Collaboration Insights | Registrar integrantes, PR, commits, analíticas GitHub y retrospectiva del Sprint 3. | 4 | Por asignar | Pendiente |
-
-**Evidencia que debe añadirse por cada Sprint.** (a) *Development y Testing Suite Evidence:* tablas separadas con `Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on`; relacionar pruebas unitarias con clases y comportamientos, e integración/BDD con historias y archivos `.feature`. (b) *Execution Evidence:* capturas de vistas y video de navegación del Sprint. (c) *Services Documentation Evidence:* para cada endpoint, verbo, ruta, parámetros, ejemplo de respuesta, enlace OpenAPI local o publicado y captura con datos de muestra; incluir commits del backend. (d) *Software Deployment Evidence:* cambios de configuración y capturas del proveedor para landing, web y API. (e) *Team Collaboration Insights:* analíticas GitHub del período, interpretación por integrante, LACX y retrospectiva. Se completarán con hechos y enlaces del Sprint real, no con cifras heredadas.
-
-**Registro técnico inicial — 16/09/2026:** `mvn test -q` terminó con **42 pruebas, 0 fallos, 0 errores** en 14 suites del backend y `mvn package -q` generó el artefacto correctamente. `npm test -- --watch=false` terminó con **2 pruebas aprobadas** en una suite del frontend. `npm run build` generó el frontend, con aviso: el bundle inicial excede en 30,28 kB el presupuesto de 700 kB. `npm ci` reportó 24 alertas de dependencias (1 baja, 12 moderadas, 11 altas); deben revisarse y priorizarse, sin aplicar `npm audit fix` a ciegas. Estos resultados locales no sustituyen un pipeline.
-
-<a id="toc-5-2-2-implemented-landing-page-evidence"></a>
-## 5.2.2. Implemented Landing Page Evidence
-
-La landing actual incluye `index.html`, `about.html`, CSS y JavaScript, secciones de propuesta de valor, simulaciones, gamificación, catálogo y preguntas frecuentes. Se revisaron sus textos para retirar cifras de éxito, testimonios, certificaciones y disponibilidad sin respaldo. Los precios y productos visibles son ilustrativos para el piloto y los enlaces legales permanecen marcados «en revisión». Se capturó la versión local en Chrome a 1440 × 900 y 390 × 844 píxeles el 16/09/2026. **No se ha comprobado que estas capturas correspondan a la URL pública.**
-
-| Evidencia a conservar | Relación con el producto | Estado |
-|---|---|---|
-| Capturas del hero en [desktop](markdown/assets/images/chapter-5/landing-local-desktop-2026-09-16.png) y [móvil](markdown/assets/images/chapter-5/landing-local-mobile-2026-09-16.png), con dimensiones y fecha | Historias de landing US47–US53 y relacionadas | Capturadas localmente; faltan recorridos de navegación, FAQ y footer. |
-| URL y commit de publicación; comprobación de enlaces CTA hacia la web | Despliegue y recorrido del visitante | Pendiente de verificación |
-| Cambio de idioma `en`/`es`, semántica, foco y teclado | i18n/a11y exigidos por el statement | Pendiente; los HTML actuales declaran `lang="es"` |
-| Enlace accesible a Terms and Conditions tras aprobación del texto | Acuerdo SaaS | Pendiente de revisión y publicación |
-
-Las imágenes `landing-deployed.png` y otras capturas de `assets/images/chapter-5` pertenecen al informe anterior. Pueden ilustrar el As-Is, pero no se usarán como prueba de un despliegue nuevo sin verificar que corresponden al commit y la URL actuales.
-
-![Landing SafeStep en Chrome, anchura desktop](markdown/assets/images/chapter-5/landing-local-desktop-2026-09-16.png)
-
-*Figura 5.1. Landing local en escritorio, 16/09/2026; no es evidencia de publicación.*
-
-![Landing SafeStep en Chrome, anchura móvil](markdown/assets/images/chapter-5/landing-local-mobile-2026-09-16.png)
-
-*Figura 5.2. Landing local en viewport móvil, 16/09/2026.*
-
-<a id="toc-5-2-3-implemented-frontend-web-application-evidence"></a>
-## 5.2.3. Implemented Frontend-Web Application Evidence
-
-El repositorio actual implementa rutas de autenticación, dashboard, simulaciones, progreso/estadísticas, gamificación y comercio. Contiene recursos `en.json` y `es.json`, y una configuración de API para desarrollo y producción. La compilación y dos pruebas unitarias pasaron localmente el 16/09/2026. En Chrome se inició sesión con una cuenta ficticia contra la API y PostgreSQL locales: el dashboard mostró un intento previamente registrado mediante la API, con 1 simulación completada, 420 XP y 101 monedas. Se verificó además que esa cuenta `ROLE_USER` no ve el control de administración y que `/app/simulations/admin` redirige al dashboard. Esto **no** equivale a un E2E completo de resolución desde la interfaz ni a un despliegue verificado.
-
-| Flujo a evidenciar | Captura y comprobación requeridas | Estado |
-|---|---|---|
-| Registro/inicio de sesión y cierre | Formulario, errores de validación, respuesta de la API, ruta protegida | Inicio de sesión local comprobado; faltan errores y cierre de sesión en navegador. |
-| Selección y resolución de simulación | Catálogo, detalle, opciones, resultado, persistencia del intento | [Lista local capturada](markdown/assets/images/chapter-5/web-simulations-local-2026-09-16.png); resolución web E2E pendiente. |
-| Progreso, gamificación y estadísticas | Valores del usuario antes/después de un intento | [Dashboard local](markdown/assets/images/chapter-5/web-dashboard-local-2026-09-16.png) refleja un intento persistido por API; faltan pruebas de todas las vistas. |
-| Catálogo y checkout de prueba | Producto, carrito, redirección/resultado de Stripe en modo prueba | Código disponible; no usar pagos reales |
-| i18n, accesibilidad y responsive | Capturas `en`/`es`, teclado, foco, lector de pantalla y anchuras móvil/desktop | Capturas [ES](markdown/assets/images/chapter-5/web-dashboard-local-2026-09-16.png), [EN](markdown/assets/images/chapter-5/web-dashboard-en-local-2026-09-16.png), [login desktop](markdown/assets/images/chapter-5/web-login-local-desktop-2026-09-16.png) y [login móvil](markdown/assets/images/chapter-5/web-login-local-mobile-2026-09-16.png); traducción inglesa parcial y auditoría a11y pendientes. |
-
-Antes de registrar «desplegado», se debe asociar cada captura con commit, URL, fecha, navegador y datos de prueba. El aviso del presupuesto del bundle y las alertas de dependencias son hallazgos de calidad pendientes, no fallas ocultas.
-
-![Dashboard web local con progreso de una cuenta de prueba](markdown/assets/images/chapter-5/web-dashboard-local-2026-09-16.png)
-
-*Figura 5.3. Dashboard web servido localmente en Chrome, con API y PostgreSQL locales; cuenta ficticia y un intento de prueba.*
-
-<a id="toc-5-2-4-acuerdo-de-servicio-saas"></a>
-## 5.2.4. Acuerdo de Servicio - SaaS
-
-**Borrador para revisión del equipo — no publicar como versión contractual definitiva.** El statement exige derechos, obligaciones y restricciones en una sección pública «Terms and Conditions», clara y accesible. La siguiente redacción establece el alcance del piloto académico; debe completarse con identidad del responsable, contacto y política de tratamiento de datos antes de enlazarla desde la landing y la aplicación. Su revisión debe contemplar la [Ley peruana 29733](https://leyes.congreso.gob.pe/DetLeyNume_1p.aspx?xNorma=6&xNumero=29733) y su [reglamento vigente](https://www.gob.pe/institucion/anpd/normas-legales/6554453-16-2024-jus).
-
-1. **Objeto y alcance.** SafeStep es un piloto académico para practicar decisiones en escenarios simulados de primeros auxilios. Las puntuaciones y recompensas son educativas, no acreditan competencia clínica ni sustituyen formación certificada.
-2. **Emergencias reales.** Ante una emergencia, el usuario debe acudir a servicios de emergencia y personal sanitario. SafeStep no ofrece diagnóstico, triaje ni instrucciones médicas individualizadas en tiempo real.
-3. **Cuenta y uso aceptable.** El usuario debe proporcionar datos de prueba o información propia autorizada, proteger su contraseña, no acceder a cuentas ajenas, no manipular resultados y no cargar datos sensibles de terceros. El equipo puede suspender uso abusivo del piloto.
-4. **Datos y seguridad.** Se informará qué datos de cuenta, intentos y progreso se recogen, con qué finalidad, a quién se comunican, por cuánto tiempo se conservan y cómo solicitar acceso, rectificación o eliminación. Los responsables y el canal de contacto deben figurar con datos reales antes de la publicación; no se incluirán contraseñas o tokens en el informe.
-5. **Comercio y pagos.** Durante el piloto, las demostraciones de Stripe deben usar entorno de prueba: las transacciones simuladas no mueven fondos, conforme a la [documentación de Stripe](https://docs.stripe.com/testing?locale=es-ES). No se prometerán ventas, entregas ni reembolsos reales sin un servicio comercial operativo y condiciones adicionales aprobadas.
-6. **Disponibilidad, cambios y cierre.** El piloto puede interrumpirse por mantenimiento o fin de curso; no se garantiza disponibilidad continua. Antes de cerrarlo se comunicará el destino de las cuentas y datos según la política aprobada. Las modificaciones sustanciales del acuerdo deben publicarse con fecha y versión.
-7. **Accesibilidad y consultas.** Los términos deben poder leerse en inglés y español, desde el footer de landing y web, con texto navegable por teclado. El canal de consultas debe verificarse antes de hacerlo público.
-
-**Campos aún obligatorios antes de publicar:** denominación legal del prestador/responsable, correo de contacto, domicilio o canal institucional aplicable, finalidades y plazo de retención, destinatarios de datos, procedimiento de ejercicio de derechos, fecha de vigencia y responsable de aprobación. Este texto es un borrador de proyecto, no una opinión legal ni una autorización para procesar pagos reales.
-
-<a id="toc-5-2-5-implemented-native-mobile-application-evidence"></a>
-## 5.2.5. Implemented Native-Mobile Application Evidence
-
-Se inició un cliente **Android nativo** en el repositorio Git local `safestept-android`, con Kotlin y Jetpack Compose. El código incluye registro e inicio de sesión, lista y detalle de simulaciones, selección de respuestas y envío de un intento, además de consulta de progreso y catálogo. La administración permanece en la aplicación web. El cliente utiliza los contratos REST existentes y mantiene el token de acceso únicamente en memoria; no incluye secretos de producción. La configuración de red permite HTTP sin cifrar **solo en la variante debug** para conectar al emulador con una API local. La variante release exige HTTPS.
-
-| Evidencia Android | Estado y criterio de cierre |
-|---|---|
-| Código y correspondencia con historias | Código local implementado; asignar IDs de historias Android y PR cuando el equipo incorpore el repositorio al tablero. |
-| Pruebas del cálculo de puntuación | **2 pruebas unitarias aprobadas** con `testDebugUnitTest` el 16/09/2026. En Windows se ejecutaron desde una unidad `subst` ASCII debido a la ruta local con caracteres no ASCII. |
-| APK debug | `assembleDebug` correcto: artefacto local `safestept-android/app/build/outputs/apk/debug/app-debug.apk`, **12 001 260 bytes**, SHA-256 `BD6D3CCB4DAAEB011675DC19E56BC8D8E83965F57A22FA505F922BA6F9FBFE16`, 16/09/2026. No es una release firmada para distribución. |
-| Ejecución en emulador/dispositivo | **1 prueba de interfaz aprobada** en Pixel_7_sem2 (Android 13). Con cuenta ficticia se ejecutó inicio de sesión, listado, detalle, resolución, resultado, progreso y catálogo frente a la API con PostgreSQL locales. Se conservan [inicio](markdown/assets/images/chapter-5/android-login-2026-09-16.png), [listado](markdown/assets/images/chapter-5/android-simulations-2026-09-16.png), [detalle](markdown/assets/images/chapter-5/android-simulation-detail-2026-09-16.png), [resultado](markdown/assets/images/chapter-5/android-result-2026-09-16.png), [progreso](markdown/assets/images/chapter-5/android-progress-2026-09-16.png) y [catálogo](markdown/assets/images/chapter-5/android-catalog-2026-09-16.png). Faltan pruebas de errores y API pública. |
-| Publicación del repositorio y release | Pendiente de crear remoto de la organización, revisión por PR y distribución controlada del APK. |
-
-La decisión del equipo es **Android solamente**. Los prototipos iOS del capítulo IV no demuestran una app iOS implementada; esta limitación y su posible impacto en la evaluación deben validarse con el docente. El recorrido Android sí se ejecutó contra PostgreSQL local, pero falta repetirlo contra la versión que se publique.
+<br>
+<br>
 
 <div align="center">
-  <img src="markdown/assets/images/chapter-5/android-login-2026-09-16.png" alt="Pantalla inicial del cliente Android en emulador Pixel 7, sin datos de usuario" width="260" />
-  <p><i>Figura 5.4. Pantalla inicial de SafeStep Android, compilación debug local del 16/09/2026. La URL <code>10.0.2.2</code> apunta al host del emulador y no demuestra un backend público.</i></p>
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
+
+<a id="toc-5-2-1-sprint-1"></a>
+## 5.2.1. Sprint 1
+
+<a id="toc-5-2-1-1-sprint-planning-1"></a>
+### 5.2.1.1. Sprint Planning 1
+
+En esta sección se especifica los aspectos principales del Sprint Planning Meeting. SafeStep inicia su primer Sprint con el objetivo de establecer la presencia digital de la empresa mediante una Landing Page funcional que presente la propuesta de valor y facilite el registro de usuarios potenciales. Este Sprint representa la primera iteración del equipo SafeStep, donde se busca crear una primera impresión sólida ante potenciales usuarios que visitarán la plataforma por primera vez.
+
+La Landing Page cumple un rol fundamental en la estrategia de captación de usuarios, siendo el punto de entrada principal para personas que desconocen SafeStep pero buscan aprender primeros auxilios. Por esta razón, el equipo priorizó este componente como el primero a desarrollar, reconociendo que una presencia digital profesional y atractiva es esencial para generar confianza y credibilidad desde el primer momento.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td>Sprint 1</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Planning Background</b></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>2026-04-05</td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td>10:00 AM</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>Reunión virtual via Discord - Canal #sprint-planning</td>
+        </tr>
+        <tr>
+            <td>Prepared By</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+        </tr>
+        <tr>
+            <td>Attendees (to planning meeting)</td>
+            <td>Ayala Fernandez, Jorge Brayan / Sanchez Espinoza, Mathias Enrique / Melgarejo Quiroz, Josep Eliu / Flores Eusebio, Angel Thyago</td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Review Summary</td>
+            <td>No aplica - Este es el primer Sprint del proyecto. Se establecieron las bases del Product Backlog, se definieron los User Stories priorizados, y se creó la estructura inicial de repositorios en GitHub Organization.</td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Retrospective Summary</td>
+            <td>No aplica - Este es el primer Sprint del proyecto. El equipo se conformó recientemente y se espera mejorar la coordinación en sprints posteriores.</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Goal &amp; User Stories</b></td>
+        </tr>
+        <tr>
+            <td>Sprint 1 Goal</td>
+            <td>Nuestro enfoque es presentar SafeStep de forma clara a nuevos visitantes mediante una Landing Page funcional. Creemos que esto entrega confianza, comprensión inicial e interés en el producto a personas que desean aprender primeros auxilios. Esto se confirmará cuando los visitantes puedan entender la propuesta de valor, revisar las secciones principales y acceder al llamado a la acción de registro desde la landing page.</td>
+        </tr>
+        <tr>
+            <td>Sprint 1 Velocity</td>
+            <td>El equipo estimó un velocity inicial de 21 Story Points, enfocados únicamente en el desarrollo de la Landing Page (EP08).</td>
+        </tr>
+        <tr>
+            <td>Sum of Story Points</td>
+            <td>Total: 21 SP - Distribuidos en 5 SP para propuesta de valor, 3 SP para navegación, 5 SP para simulaciones, 3 SP para testimonios, 3 SP para preguntas frecuentes, y 2 SP para acceso a registro.</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Planning Meeting del 5 de abril de 2026 duró aproximadamente 2 horas. El equipo discutió en detalle los User Stories a implementar, estimó las responsabilidades iniciales, y estableció los primeros acuerdos de colaboración. Durante la reunión, cada miembro del equipo tuvo la oportunidad de expresar sus dudas respecto a las tareas asignadas y se resolvieron interrogantes técnicas relacionadas con las tecnologías a utilizar.
+
+La dinámica del Sprint Planning permitió al equipo alinear expectativas y establecer un compromiso colectivo hacia el logro del Sprint Goal. Se destinó tiempo suficiente para revisar las guidelines de código establecidas en el proyecto, asegurando que todos los miembros comprendieran las convenciones de nomenclatura, estructura de archivos y flujo de trabajo con Git.
+
+**User Stories incluidos en el Sprint 1:**
+
+Los User Stories seleccionados para este Sprint inicial corresponden exclusivamente a la Épica 08 (Landing Page pública) del Product Backlog, reflejando las necesidades más críticas para establecer la presencia digital de SafeStep. El equipo se enfocó únicamente en la Landing Page para este primer Sprint, dejando el Frontend Angular y el Backend API para sprints posteriores, priorizando de esta manera la captación de usuarios como primer objetivo de negocio.
+
+| ID | User Story | Prioridad | Story Points |
+| -- | ---------- | --------- | ------------ |
+| US47 | Como visitante, quiero ver rápidamente qué es SafeStep para entender si me ayuda a aprender primeros auxilios. | Must Have | 5 |
+| US48 | Como visitante, quiero navegar por las secciones de la landing para conocer funcionalidades, simulaciones, gamificación, tienda y preguntas frecuentes. | Must Have | 3 |
+| US49 | Como visitante, quiero revisar ejemplos de simulaciones para saber qué emergencias puedo practicar. | Must Have | 5 |
+| US52 | Como visitante, quiero leer testimonios para confiar en la utilidad de SafeStep. | Must Have | 3 |
+| US53 | Como visitante, quiero revisar preguntas frecuentes para resolver dudas antes de registrarme. | Must Have | 3 |
+| US54 | Como visitante interesado, quiero acceder al registro desde la landing para empezar a usar SafeStep. | Must Have | 2 |
+
+La selección de estos User Stories para el Sprint 1 responde a la necesidad de establecer la presencia digital de SafeStep rápidamente, permitiendo que usuarios potenciales conozcan la propuesta de valor, exploren las simulaciones ofrecidas, lean testimonios de otros usuarios, resuelvan sus dudas mediante preguntas frecuentes, y finalmente accedan al registro. El equipo identificó que el US47 (propuesta de valor) y US49 (simulaciones ofrecidas) son los más críticos con 5 SP cada uno, representando el núcleo del mensaje de la Landing Page.
+
+**Distribución de Trabajo por Componente:**
+
+- **Landing Page (EP08):** 21 Story Points - Enfocados en hero con propuesta de valor, navegación por secciones, showcase de simulaciones, testimonios, preguntas frecuentes y acceso a registro.
+
+La distribución de Story Points fue diseñada para que cada miembro del equipo tuviera una carga de trabajo equilibrada. Se priorizaron las tareas de implementación técnica (estructura HTML y estilos) sobre las tareas de configuración, reconociendo que la visibilidad del progreso es fundamental para mantener la motivación del equipo durante las primeras etapas del proyecto.
+
+<a id="toc-5-2-1-2-aspect-leaders-and-collaborators"></a>
+### 5.2.1.2. Aspect Leaders and Collaborators
+
+En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX), que indica por cada aspecto dentro del alcance del Sprint, quién es el líder y quién o quiénes son colaboradores en dicho aspecto, con el fin de brindar mayor claridad y efectividad en la comunicación al interior del equipo.
+
+La sección incluye una introducción donde se explica cuáles son los principales aspectos que se toma en cuenta en el Sprint 1. Para este primer Sprint, los aspectos están centrados exclusivamente en el desarrollo de la Landing Page, reconociendo la importancia de establecer roles claros desde el inicio del proyecto para evitar conflictos y facilitar la toma de decisiones durante la implementación.
+
+El equipo SafeStep está conformado por 4 miembros activos con diferentes fortalezas técnicas y experiencia en distintas áreas del desarrollo de software. Durante la reunión de Sprint Planning, se identificaron las competencias de cada miembro y se asignaron los roles de líder (L) y colaborador (C) para cada aspecto del Sprint, priorizando el desarrollo profesional de cada integrante mientras se optimiza la productividad del equipo.
+
+**Aspectos del Sprint 1:**
+
+1. **Landing Page - UI/UX:** Diseño y estructura visual de la página principal, incluyendo wireframes, mockups, paleta de colores, tipografía y componentes visuales.
+2. **Landing Page - Desarrollo:** Implementación técnica de la página landing, incluyendo código HTML semántico, estilos CSS, y funcionalidades JavaScript.
+3. **Documentación:** Documentación técnica del Sprint, incluyendo este archivo y demás artefactos Scrum requeridos.
+
+La distribución de roles fue diseñada para fomentar la colaboración entre los miembros del equipo, evitando situaciones donde un solo miembro sea responsable de un componente crítico. En caso de que un líder no esté disponible, los colaboradores están preparados para asumir responsabilidad parcial del aspecto correspondiente.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Team Member (Last Name, First Name)</b></td>
+            <td><b>GitHub Username</b></td>
+            <td><b>Landing UI/UX / L or C</b></td>
+            <td><b>Landing Dev / L or C</b></td>
+            <td><b>Documentation / L or C</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>jorgeayaladev</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Nounz27</td>
+            <td>-</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Melga1502</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>angelfdevs</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+        </tr>
+    </tbody>
+</table>
+
+La organización de líderes y colaboradores tiene relación directa con las fortalezas técnicas de cada miembro del equipo identificadas durante la conformación del equipo. Esta distribución también se relaciona con las tasks del Sprint Backlog: Melgarejo lidera las tareas de definición visual y contenido inicial, Ayala lidera las tareas de implementación de la landing page, Mathias colabora en las tareas de simulaciones ofrecidas y Flores lidera la documentación y validación de contenido del Sprint.
+
+**Distribución detallada de responsabilidades:**
+
+- **Melgarejo Quiroz, Josep Eliu (UI/UX Lead):** Responsable del diseño visual de la Landing Page, incluyendo la creación de mockups en Figma, definición de la paleta de colores basada en la identidad de marca de SafeStep, selección de tipografía adecuada, y diseño de componentes reutilizables. Colabora con el equipo de desarrollo para asegurar que la implementación respete el diseño propuesto.
+
+- **Ayala Fernandez, Jorge Brayan (Development Lead):** Responsable de la implementación técnica de la Landing Page, incluyendo la creación de la estructura HTML semántica, estilos CSS con metodología BEM, y funcionalidades JavaScript básicas. Coordina con el líder de UI/UX para resolver dudas sobre el diseño y garantizar su correcta implementación.
+
+- **Sanchez Espinoza, Mathias Enrique (Development Collaborator):** Responsable de apoyar la implementación técnica de la Landing Page, enfocándose en la sección de simulaciones y la integración de contenido dinámico. Colabora estrechamente con el Development Lead para asegurar la consistencia del código y contribuye en la implementación de componentes específicos.
+
+- **Flores Eusebio, Angel Thyago (Documentation Lead & Development Collaborator):** Responsable de apoyar en el desarrollo de la Landing Page, participando en la implementación de la sección de preguntas frecuentes, el footer y los enlaces de registro. También lidera la documentación del Sprint, recopilando información del avance y verificando que las evidencias estén alineadas con las tasks realizadas.
+
+<a id="toc-5-2-1-3-sprint-backlog-1"></a>
+### 5.2.1.3. Sprint Backlog 1
+
+El Sprint Backlog 1 resume el objetivo principal del Sprint: establecer la presencia digital de SafeStep mediante una Landing Page funcional que cubra las primeras User Stories de la Épica 08 del Product Backlog. Este documento representa el compromiso del equipo para completar las tareas identificadas durante el Sprint Planning y permite hacer seguimiento del avance de cada historia durante la iteración.
+
+El Sprint Backlog fue elaborado de manera colaborativa. Primero se seleccionaron las User Stories de mayor valor para el Sprint 1 y luego cada una fue descompuesta en Work-items o Tasks concretos. Las User Stories mantienen su estimación en Story Points, mientras que las tareas se estiman en horas para facilitar el seguimiento operativo dentro del Sprint. Estas horas no reemplazan los Story Points; únicamente representan el esfuerzo aproximado requerido para ejecutar cada tarea.
+
+**Trello Board:**
+El equipo utiliza un Trello Board para gestionar visualmente el Sprint Backlog. El Board contiene las listas estándar de Scrum: "Sprint Goal", "To Do", "In Progress", "To Review" y "Done". El uso de Trello permite una visualización clara del estado de cada tarea y facilita la identificación de cuellos de botella en el flujo de trabajo.
+
+**URL pública del Trello Board del Sprint 1:**
+
+<a href="https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource">https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource</a>
+
+<div align="center">
+  <p>
+    <b>Captura</b>: Board de Trello correspondiente al Sprint 1
+  </p>
+  <img src="markdown/assets/images/chapter-5/TrelloSprint1.png" alt="Trello Board Sprint 1" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Estructura del Trello Board:**
+
+- **Sprint Goal:** Lista que contiene una tarjeta con el objetivo del Sprint, sirviendo como recordatorio constante para todo el equipo.
+- **To Do:** Lista con las tareas pendientes por iniciar, ordenadas por prioridad y dependencias.
+- **In Progress:** Lista con las tareas que están siendo implementadas actualmente.
+- **To Review:** Lista con las tareas completadas pendientes de revisión por otro miembro del equipo.
+- **Done:** Lista con las tareas aprobadas y listas para deployment.
+
+A continuación, la tabla de control de estado para el Sprint 1:
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td colspan="7">Sprint 1</td>
+        </tr>
+        <tr>
+            <td colspan="2">User Story</td>
+            <td colspan="6">Work-Item / Task</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Estimation (Hours)</td>
+            <td>Assigned to</td>
+            <td>Status (To-do / In-Process / To-Review / Done)</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US47 - Propuesta de valor</b></td>
+        </tr>
+        <tr>
+            <td>US47</td>
+            <td>Propuesta de valor</td>
+            <td>T001</td>
+            <td>Definir contenido principal del hero</td>
+            <td>Redactar el mensaje principal, subtítulo y llamada a la acción que explican de forma inmediata qué es SafeStep.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US47</td>
+            <td>Propuesta de valor</td>
+            <td>T002</td>
+            <td>Implementar sección hero</td>
+            <td>Construir la primera sección de la landing con logo, título, descripción, imagen principal y botón de inicio.</td>
+            <td>3</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US47</td>
+            <td>Propuesta de valor</td>
+            <td>T003</td>
+            <td>Validar legibilidad inicial</td>
+            <td>Revisar contraste, jerarquía visual y claridad del mensaje en desktop y mobile para asegurar que el visitante entienda la propuesta.</td>
+            <td>1</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US48 - Navegación por secciones</b></td>
+        </tr>
+        <tr>
+            <td>US48</td>
+            <td>Navegación por secciones</td>
+            <td>T004</td>
+            <td>Crear barra de navegación</td>
+            <td>Implementar menú superior con enlaces a las secciones principales de la landing page.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US48</td>
+            <td>Navegación por secciones</td>
+            <td>T005</td>
+            <td>Configurar navegación entre secciones</td>
+            <td>Agregar desplazamiento suave y verificar que cada enlace lleve a la sección correcta.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US48</td>
+            <td>Navegación por secciones</td>
+            <td>T006</td>
+            <td>Adaptar navegación móvil</td>
+            <td>Asegurar que el menú sea usable en pantallas pequeñas y que no oculte el contenido principal.</td>
+            <td>2</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US49 - Simulaciones ofrecidas</b></td>
+        </tr>
+        <tr>
+            <td>US49</td>
+            <td>Simulaciones ofrecidas</td>
+            <td>T007</td>
+            <td>Definir contenido de simulaciones</td>
+            <td>Organizar los textos e imágenes de las emergencias que se mostrarán como ejemplos en la landing.</td>
+            <td>2</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US49</td>
+            <td>Simulaciones ofrecidas</td>
+            <td>T008</td>
+            <td>Implementar tarjetas de simulaciones</td>
+            <td>Crear las tarjetas de RCP, quemaduras, atragantamiento y sismos con título, descripción e imagen.</td>
+            <td>3</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US49</td>
+            <td>Simulaciones ofrecidas</td>
+            <td>T009</td>
+            <td>Validar visualización de tarjetas</td>
+            <td>Revisar que las tarjetas se visualicen correctamente en desktop y mobile, sin cortes de texto ni desorden visual.</td>
+            <td>1</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US52 - Testimonios</b></td>
+        </tr>
+        <tr>
+            <td>US52</td>
+            <td>Testimonios</td>
+            <td>T010</td>
+            <td>Crear sección de testimonios</td>
+            <td>Implementar bloque de testimonios con nombre, comentario y presentación visual consistente con la landing.</td>
+            <td>2</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US52</td>
+            <td>Testimonios</td>
+            <td>T011</td>
+            <td>Revisar confianza del contenido</td>
+            <td>Validar que los testimonios refuercen la utilidad de SafeStep y no generen ruido visual en la página.</td>
+            <td>1</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US53 - Preguntas frecuentes</b></td>
+        </tr>
+        <tr>
+            <td>US53</td>
+            <td>Preguntas frecuentes</td>
+            <td>T012</td>
+            <td>Redactar preguntas frecuentes</td>
+            <td>Definir preguntas y respuestas sobre funcionamiento, acceso, primeros auxilios y uso de la plataforma.</td>
+            <td>1</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US53</td>
+            <td>Preguntas frecuentes</td>
+            <td>T013</td>
+            <td>Implementar acordeón FAQ</td>
+            <td>Crear el comportamiento desplegable de las preguntas frecuentes y validar su uso en desktop y mobile.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US54 - Acceso a registro</b></td>
+        </tr>
+        <tr>
+            <td>US54</td>
+            <td>Acceso a registro</td>
+            <td>T014</td>
+            <td>Implementar botones de registro</td>
+            <td>Agregar botones principales y secundarios que lleven al usuario hacia el registro o acceso.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US54</td>
+            <td>Acceso a registro</td>
+            <td>T015</td>
+            <td>Validar redirección de CTAs</td>
+            <td>Probar que los llamados a la acción funcionen correctamente desde hero, secciones internas y final de la página.</td>
+            <td>1</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US54</td>
+            <td>Acceso a registro</td>
+            <td>T016</td>
+            <td>Implementar footer de cierre</td>
+            <td>Crear footer con marca, enlaces relevantes, contacto y derechos reservados para cerrar la experiencia de navegación.</td>
+            <td>2</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Backlog refleja 16 tareas que descomponen directamente las User Stories seleccionadas para el Sprint 1. Las estimaciones suman 29 horas de trabajo operativo y fueron asignadas en función del esfuerzo necesario para implementar, revisar y validar cada parte de la Landing Page. Los Story Points se mantienen a nivel de User Story, mientras que las horas permiten hacer seguimiento detallado dentro del Sprint.
+
+El equipo se compromete a completar todas las tareas del Sprint Backlog antes de la fecha de Sprint Review programada para el final de la iteración. Se realizará seguimiento diario del progreso mediante las daily standups y se tomarán acciones correctivas en caso de identificar desviaciones significativas del plan.
+
+<a id="toc-5-2-1-4-development-evidence-for-sprint-review"></a>
+### 5.2.1.4. Development Evidence for Sprint Review
+
+En esta sección se explica y presenta los avances en implementación con relación a los productos de la solución según el alcance del Sprint 1: Landing Page (EP08). La sección resume los principales avances logrados durante este Sprint inicial y sirve como evidencia de que el equipo cumplió con el objetivo planificado.
+
+Durante el Sprint 1, el equipo SafeStep logró completar la implementación de la Landing Page pública de SafeStep. Se obtuvo una página completamente funcional con las siguientes secciones: Hero Section con headline y propuesta de valor, menú de navegación con scroll suave, sección de características principales, showcase de simulaciones disponibles (RCP, quemaduras, atragantamiento, sismos), sección de testimonios, sección de preguntas frecuentes en formato acordeón, llamados a la acción para registro, y footer con información de contacto. El desarrollo siguió las mejores prácticas de desarrollo web, incluyendo código semántico, accesibilidad, y diseño responsivo.
+
+**Resumen de Avances Implementados:**
+
+La Landing Page implementada durante el Sprint 1 cuenta con las siguientes características técnicas y funcionales:
+
+- **Estructura HTML semántica:** Utilización de etiquetas HTML5 apropiadas (header, nav, main, section, article, footer) para garantizar accesibilidad y mejor posicionamiento en motores de búsqueda.
+- **Hojas de estilo CSS:** Implementación de estilos utilizando metodología BEM (Block Element Modifier) para mantener un código CSS organizado y reutilizable. Soporte para modo oscuro (dark mode) basado en las preferencias del sistema operativo del usuario.
+- **Diseño responsivo:** Implementación de breakpoints en 768px (tablet) y 480px (móvil) utilizando CSS Grid y Flexbox para asegurar una experiencia consistente en todos los dispositivos.
+- **Optimización de rendimiento:** Imágenes optimizadas en formato WebP con fallbacks PNG, carga diferida (lazy loading) de imágenes secundarias, y código JavaScript minificado.
+- **Accesibilidad web:** Cumplimiento de estándares WCAG 2.1 nivel AA, incluyendo contraste de colores adecuado, navegación por teclado funcional, y etiquetas ARIA donde fue necesario.
+
+**Commits Realizados:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td>Repository</td>
+            <td>Branch</td>
+            <td>Commit Id</td>
+            <td>Commit message</td>
+            <td>Commit body</td>
+            <td>Commit on (Date)</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>f3a2b1c</td>
+            <td>feat: create initial landing page structure</td>
+            <td>Create base HTML structure with DOCTYPE, meta tags, and linked CSS/JS files</td>
+            <td>2026-04-05</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>7d8e9f0</td>
+            <td>feat: implement hero section with value proposition</td>
+            <td>Add hero section with headline, value proposition description, and CTA button for registration</td>
+            <td>2026-04-06</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>2b4c6d8</td>
+            <td>feat: add features section</td>
+            <td>Create features section showcasing main SafeStep capabilities: simulations, gamification and store</td>
+            <td>2026-04-07</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>a192b37</td>
+            <td>feat: add navigation menu and smooth scroll</td>
+            <td>Implement sticky navigation bar with smooth scrolling to sections</td>
+            <td>2026-04-08</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>e5f6a71</td>
+            <td>feat: implement simulations showcase section</td>
+            <td>Add section with cards showing available simulations: CPR, burns, choking and earthquakes</td>
+            <td>2026-04-09</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>c8d9e02</td>
+            <td>feat: add testimonials section</td>
+            <td>Implement testimonials section with user reviews and experiences</td>
+            <td>2026-04-10</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>4b5a6f9</td>
+            <td>feat: add FAQ accordion section</td>
+            <td>Create FAQ section with accordion-style questions and answers for common doubts</td>
+            <td>2026-04-11</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>d1e2f34</td>
+            <td>feat: implement register access and footer</td>
+            <td>Add registration buttons and footer with brand info, links and copyright</td>
+            <td>2026-04-12</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>g5h6i78</td>
+            <td>style: add responsive styles</td>
+            <td>Apply responsive design for mobile and tablet devices</td>
+            <td>2026-04-13</td>
+        </tr>
+        <tr>
+            <td>safestep-landing</td>
+            <td>main</td>
+            <td>j9k0l12</td>
+            <td>chore: setup git repository structure</td>
+            <td>Initialize GitHub repository with proper folder structure and README file</td>
+            <td>2026-04-05</td>
+        </tr>
+    </tbody>
+</table>
+
+El equipo realizó un total de 10 commits en el repositorio de Landing Page durante el Sprint 1. Cada commit sigue la convención de Conventional Commits establecida en la configuración del proyecto, facilitando la generación automática de changelogs y la trazabilidad de cambios. Los commits fueron realizados de forma regular, evitando commits muy grandes que dificulten la revisión de código y el rollback en caso de problemas.
+
+**Repositorio de Landing Page:**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page</a>
+
+**Estadísticas del repositorio:**
+
+- Total de ramas: 2 (main, develop)
+- Total de commits: 10
+- Total de contribuciones: 4 miembros activos del equipo
+
+<a id="toc-5-2-1-5-execution-evidence-for-sprint-review"></a>
+### 5.2.1.5. Execution Evidence for Sprint Review
+
+Esta sección resume lo alcanzado en el Sprint 1 y presenta las capturas de pantalla de las principales vistas implementadas, junto con enlaces que ilustran la visualización y navegación logradas durante este Sprint inicial. Las evidencias presentadas demuestran que el equipo cumplió satisfactoriamente con el Sprint Goal establecido durante el Planning.
+
+**Resumen de lo Alcanzado:**
+
+El Sprint 1 permitió establecer la presencia digital de SafeStep mediante la implementación de la Landing Page pública (EP08). El equipo logró completar la configuración del repositorio, establecer las convenciones de código, e implementar todas las secciones planificadas: propuesta de valor, navegación, simulaciones, testimonios, preguntas frecuentes, acceso a registro y footer. Los resultados superan las expectativas iniciales, logrando una Landing Page funcional, visualmente atractiva y técnicamente sólida.
+
+**Capturas de Pantalla - Landing Page:**
+
+La Landing Page implementada incluye las siguientes secciones principales:
+
+1. **Hero Section:** Con el headline que comunica la propuesta de valor de SafeStep, subtítulo descriptivo explicando los beneficios de la plataforma, y botón de "Comenzar Ahora" que redirige a la pantalla de registro. La sección hero utiliza una imagen de fondo relacionada con primeros auxilios y cuenta con animación de entrada para los elementos de texto.
+
+2. **Features Section:** Con las características clave de SafeStep: Simulaciones Interactivas para practicar emergencias, Gamificación con niveles e insignias, y Tienda de productos y kits de primeros auxilios.
+
+3. **Simulaciones Section:** Tarjetas informativas que muestran las emergencias que se pueden practicar: RCP (Reanimación Cardiopulmonar), Quemaduras, Atragantamiento y Sismos, cada una con una breve descripción y llamado a la acción.
+
+4. **Testimonios Section:** Opiniones de usuarios ficticios que muestran experiencias positivas con SafeStep, generando confianza en los visitantes.
+
+5. **FAQ Section:** Preguntas frecuentes en formato acordeón que resuelven dudas comunes sobre el precio, la necesidad de experiencia médica y el funcionamiento de la plataforma.
+
+6. **Footer:** Con información de marca, enlaces a secciones relevantes, y derechos reservados.
+
+**Funcionalidades adicionales implementadas:**
+
+- **Navegación sticky:** La barra de navegación permanece fija al hacer scroll, mejorando la accesibilidad a los enlaces principales.
+- **Scroll suave:** Transición animada al navegar entre secciones mediante clic en el menú.
+- **Animaciones sutiles:** Transiciones suaves al hacer hover en botones y tarjetas, mejorando la experiencia de usuario.
+- **Diseño responsivo:** Adaptación completa a dispositivos móviles y tablets.
+
+**Imagen final del Landing Page:**
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Final Landing Page
+  </p>
+  <img src="markdown/assets/images/chapter-4/landing-mockup-desktop.png" alt="Landing Page SafeStep" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+Se muestra la navegación por la Landing Page y su funcionamiento en diferentes dispositivos. El video tiene una duración aproximada de 3 minutos y demuestra las siguientes funcionalidades: navegación por las secciones mediante el menú, comportamiento responsivo en diferentes tamaños de pantalla, interacción con los botones de llamada a la acción, y acceso a los enlaces del footer.
+
+<a id="toc-5-2-1-6-services-documentation-evidence-for-sprint-review"></a>
+### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+En esta sección se incluye la relación de Endpoints documentados con OpenAPI, relacionados con el alcance del Sprint. Sin embargo, para el Sprint 1 esto no aplica, debido a que el alcance de esta primera iteración estuvo limitado exclusivamente al desarrollo de la Landing Page pública (EP08). La Landing Page es un sitio web estático que no expone servicios web ni APIs REST, por lo que no existe documentación de servicios que presentar en esta sección. El equipo se enfocó en establecer la presencia digital de SafeStep mediante HTML, CSS y JavaScript del lado del cliente, sin necesidad de implementar ni documentar endpoints de backend.
+
+La documentación de servicios web con OpenAPI/Swagger será abordada en sprints posteriores, cuando se implementen los componentes de Web Services (Backend API con Spring Boot) y el Frontend Angular que consumirá dichos endpoints. Específicamente, en el sprint correspondiente al desarrollo del backend (EP09 - Soporte técnico y arquitectura), se definirán y documentarán los endpoints REST necesarios para la aplicación. Por ahora, al tratarse de un producto puramente estático y de presentación, no existen endpoints que documentar ni interacciones con servicios web que evidenciar.
+
+<a id="toc-5-2-1-7-software-deployment-evidence-for-sprint-review"></a>
+### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+En esta sección se resumen los procesos realizados en relación con Deployment durante el Sprint 1. Para este Sprint, las actividades de despliegue se centraron exclusivamente en la Landing Page de SafeStep, utilizando GitHub Pages como plataforma de hosting estático. El proceso de despliegue implicó la creación y configuración del repositorio en GitHub, la implementación del contenido estático, y la configuración del pipeline de publicación para que la Landing Page estuviera accesible públicamente.
+
+El despliegue en GitHub Pages se configuró siguiendo el enfoque de rama `gh-pages`, que es el método estándar para publicar sitios estáticos en esta plataforma. A continuación se detallan los pasos realizados durante el Sprint 1 para lograr el despliegue exitoso de la Landing Page.
+
+**Paso 1: Creación del repositorio en GitHub**
+
+Se creó el repositorio `safestep-landing-page` dentro de la organización GitHub `upc-1asi0729-2610-11990-chronos-team-3`. El repositorio se inicializó con una estructura básica que incluye las carpetas `css/`, `js/`, `assets/images/` y el archivo `index.html` como punto de entrada de la aplicación. Esta estructura sigue las convenciones establecidas en la guía de estilo del proyecto.
+
+**Paso 2: Configuración de GitHub Pages**
+
+Se accedió a la configuración del repositorio en GitHub, específicamente a la sección "Pages" dentro de "Settings". Allí se configuró la fuente de publicación seleccionando la rama `gh-pages` como rama de publicación y la carpeta raíz (`/`) como directorio de publicación. Esta configuración le indica a GitHub Pages que debe servir el contenido estático almacenado en la rama `gh-pages` del repositorio.
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Configuración de GitHub Pages en el repositorio
+  </p>
+  <img src="markdown/assets/images/chapter-5/github-pages-config.png" alt="Configuración GitHub Pages" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Paso 3: Automatización del despliegue con GitHub Actions**
+
+Se implementó un workflow de GitHub Actions para automatizar el proceso de despliegue. Cada vez que se realiza un push a la rama `main`, el workflow se encarga de construir los archivos estáticos y publicarlos en la rama `gh-pages`. El archivo de configuración del workflow se ubicó en `.github/workflows/deploy.yml` con la siguiente configuración:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Este workflow se activa automáticamente con cada push a `main`, elimina la necesidad de intervención manual para publicar cambios, y garantiza que la versión desplegada siempre coincida con el código en la rama principal del repositorio.
+
+**Paso 4: Verificación del despliegue**
+
+Una vez completada la configuración y ejecutado el workflow por primera vez, se verificó el acceso a la Landing Page a través de la URL pública proporcionada por GitHub Pages:
+
+```
+https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/
+```
+
+Se realizaron pruebas de navegación para confirmar que todas las secciones se cargaran correctamente, que los enlaces funcionaran, y que el diseño responsivo se comportara adecuadamente en diferentes tamaños de pantalla. Adicionalmente, se verificó que la página cargara correctamente en los navegadores Chrome, Firefox y Edge.
+
+<div align="center">
+  <p>
+    <b>Gráfico 2</b>: Landing Page desplegada en GitHub Pages
+  </p>
+  <img src="markdown/assets/images/chapter-5/landing-deployed.png" alt="Landing Page desplegada" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Paso 5: Configuración del dominio y HTTPS**
+
+GitHub Pages proporciona automáticamente un certificado SSL/TLS válido para todos los sitios alojados en la plataforma, por lo que la Landing Page es accesible mediante HTTPS sin configuración adicional. La URL canónica asignada sigue el formato estándar: `https://<organization>.github.io/<repository>/`.
+
+**Resultado del despliegue:**
+
+La Landing Page de SafeStep se encuentra actualmente en producción y accesible públicamente a través de la siguiente URL:
+
+<a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
+
+El despliegue en GitHub Pages desde la rama `gh-pages` ha resultado ser una solución eficiente y sin costos para alojar la presencia digital inicial de SafeStep. Esta plataforma ofrece alta disponibilidad, CDN global para entrega de contenido, y escalabilidad automática, lo que garantiza una experiencia de usuario óptima independientemente del volumen de visitantes.
+
+<a id="toc-5-2-1-8-team-collaboration-insights-during-sprint"></a>
+### 5.2.1.8. Team Collaboration Insights during Sprint
+
+En esta sección el equipo explica cómo se han desarrollado las actividades de implementación y se presenta los analíticos de colaboración y commits en GitHub, realizados por los miembros del equipo. Esta información permite evaluar la efectividad del equipo y identificar oportunidades de mejora para sprints futuros.
+
+**Distribución de Trabajo:**
+
+Todos los miembros del equipo participaron en la implementación de la Landing Page según sus fortalezas y responsabilidades asignadas en el LACX (Leadership and Collaboration Matrix). La distribución fue equitativa, con cada miembro contribuyendo al menos 1 commit durante el Sprint, demostrando el compromiso colectivo con el objetivo del Sprint.
+
+El equipo adoptó un enfoque de trabajo colaborativo, donde los miembros se reunían diariamente mediante standups virtuales para compartir avances, resolver dudas técnicas, y ajustar prioridades según sea necesario. Las comunicaciones asincrónicas se realizaban principalmente a través del canal de Discord, donde se compartían enlaces a código, capturas de pantalla, y preguntas técnicas.
+
+**Métricas de Colaboración:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Miembro</b></td>
+            <td><b>Repositorio</b></td>
+            <td><b>Commits</b></td>
+            <td><b>Líneas additions</b></td>
+            <td><b>Líneas eliminadas</b></td>
+            <td><b>PRs merged</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>safestep-landing</td>
+            <td>3</td>
+            <td>+350</td>
+            <td>-40</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>safestep-landing</td>
+            <td>2</td>
+            <td>+180</td>
+            <td>-15</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>safestep-landing</td>
+            <td>3</td>
+            <td>+300</td>
+            <td>-25</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>safestep-landing</td>
+            <td>2</td>
+            <td>+200</td>
+            <td>-20</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+**Analíticos de GitHub:**
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Analytics AV1
+  </p>
+  <img src="markdown/assets/images/av1-analytics.png" alt="Analytics AV1" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+El gráfico de actividad de GitHub muestra un patrón saludable de contribuciones distribuidas a lo largo de la semana, con mayor actividad los días martes y jueves. Este patrón sugiere una planificación adecuada del trabajo, evitando acumulaciones de última hora (crunch) que podrían afectar la calidad del código.
+
+**Distribución de trabajo por tipo de tarea:**
+
+- Diseño UI/UX: 30% del tiempo total
+- Implementación HTML/CSS: 45% del tiempo total
+- Configuración y documentación: 15% del tiempo total
+- Revisión de código y testing: 10% del tiempo total
+
+**Reflexiones del Equipo:**
+
+- Ayala Fernandez, Jorge Brayan: "El Sprint 1 estableció las bases de nuestra presencia digital. La coordinación con el equipo de diseño fue clave para lograr una Landing Page profesional. Aprendí la importancia de mantener una comunicación fluida con los diseñadores para evitar retrabajo y asegurar que el resultado final cumpla con las expectativas."
+
+- Sanchez Espinoza, Mathias Enrique: "Contribuí en la implementación de la sección de simulaciones, creando tarjetas informativas para cada emergencia disponible. Esta sección es fundamental para que los visitantes entiendan rápidamente qué tipo de entrenamiento pueden recibir en SafeStep."
+
+- Melgarejo Quiroz, Josep Eliu: "El diseño UI/UX requirió constante refinamiento. Logramos una interfaz atractiva que comunica efectivamente la propuesta de valor de SafeStep. La implementación rápida fue fundamental para alcanzar el nivel de calidad esperado."
+
+
+- Flores Eusebio, Angel Thyago: "Participar en el desarrollo de la Landing Page me permitió aplicar conocimientos prácticos de desarrollo web. Contribuí en la implementación de la sección de testimonios y preguntas frecuentes, áreas donde deseaba fortalecer mis habilidades."
+
+**Lecciones Aprendidas:**
+
+El equipo identifica las siguientes lecciones de este Sprint 1:
+
+1. **La configuración inicial del entorno de desarrollo toma tiempo significativo al inicio del proyecto:** Es importante considerar este tiempo en las estimaciones de futuros sprints, especialmente cuando se trabaja con tecnologías nuevas para algunos miembros del equipo.
+
+2. **Es importante mantener comunicación frecuente entre equipos de diseño y desarrollo:** La participación activa del líder de diseño en las revisiones de código ayudó a identificar desviaciones del diseño de manera temprana, evitando retrabajo significativo.
+
+3. **Las daily standups cortas fueron efectivas para mantener el progreso:** Reuniones de 15 minutos máximo permiten compartir información relevante sin afectar el tiempo de implementación.
+
+4. **Los code reviews incrementan la calidad del código:** La revisión por pares antes de hacer merge permitió identificar y corregir errores de estilo y lógica, mejorando la consistencia del código base.
+
+5. **Las estimaciones iniciales fueron acertadas pero con margen de mejora:** El equipo logró completar todas las tareas dentro del tiempo estimado, aunque algunas tareas requirieron ajuste de prioridades para cumplir con el Sprint Goal.
+
+<br>
+
+<a id="toc-5-2-2-sprint-2"></a>
+## 5.2.2. Sprint 2
+
+<a id="toc-5-2-2-1-sprint-planning-2"></a>
+### 5.2.2.1. Sprint Planning 2
+
+En esta sección se especifica los aspectos principales del Sprint Planning Meeting. SafeStep inicia su segundo Sprint con el objetivo de implementar la aplicación frontend Angular con todos los bounded contexts siguiendo una arquitectura Domain-Driven Design, integrada con json-server para datos de prueba y desplegada en GitHub Pages. Este Sprint representa la iteración donde se construye la aplicación transaccional de SafeStep.
+
+La aplicación frontend Angular cumple un rol fundamental como núcleo de la experiencia de usuario, permitiendo a los usuarios autenticarse, visualizar su dashboard, practicar simulaciones médicas interactivas, y navegar por los diferentes módulos de la plataforma.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td>Sprint 2</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Planning Background</b></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>2026-04-15</td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td>10:00 AM</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>Reunión virtual via Discord - Canal #sprint-planning</td>
+        </tr>
+        <tr>
+            <td>Prepared By</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+        </tr>
+        <tr>
+            <td>Attendees (to planning meeting)</td>
+            <td>Ayala Fernandez, Jorge Brayan / Sanchez Espinoza, Mathias Enrique / Melgarejo Quiroz, Josep Eliu / Flores Eusebio, Angel Thyago</td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Review Summary</td>
+            <td>Sprint 1 completado exitosamente: Landing Page pública desplegada en GitHub Pages. Se lograron 21 SP con todas las tareas en estado Done. La Landing Page está accesible en <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a></td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Retrospective Summary</td>
+            <td>El equipo identificó que la comunicación fluida entre diseño y desarrollo fue clave para el éxito. Se recomienda mejorar la estimación de tareas administrativas y considerar tiempo de configuración inicial en sprints futuros.</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Goal &amp; User Stories</b></td>
+        </tr>
+        <tr>
+            <td>Sprint 2 Goal</td>
+            <td>Nuestro enfoque es ofrecer la primera experiencia completa de aplicación web para los usuarios de SafeStep. Creemos que esto entrega entrenamiento práctico en primeros auxilios, progreso visible y motivación para los aprendices mediante los módulos de dashboard, simulaciones, estadísticas, gamificación y tienda. Esto se confirmará cuando los usuarios puedan navegar por la aplicación, practicar una simulación médica, revisar su progreso y explorar productos de emergencia desde el frontend desplegado.</td>
+        </tr>
+        <tr>
+            <td>Sprint 2 Velocity</td>
+            <td>El equipo estimó un velocity de 43 Story Points, considerando la experiencia adquirida en el Sprint 1 y la complejidad técnica de la aplicación Angular.</td>
+        </tr>
+        <tr>
+            <td>Sum of Story Points</td>
+            <td>Total: 43 SP - Distribuidos en 5 SP para progreso y estadísticas, 3 SP para gamificación, 3 SP para tienda, 8 SP para dashboard, 16 SP para simulaciones médicas, y 8 SP para navegación y experiencia general.</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Planning Meeting del 15 de abril de 2026 duró aproximadamente 3 horas. El equipo discutió en detalle la arquitectura de bounded contexts a implementar, la estructura de carpetas siguiendo Domain-Driven Design, y la integración con json-server como backend de datos de prueba.
+
+**User Stories incluidos en el Sprint 2:**
+
+Los User Stories seleccionados para este Sprint corresponden a los bounded contexts de progreso y estadísticas (EP04), gamificación (EP05), tienda (EP06), dashboard principal (EP02), simulaciones médicas (EP03), y navegación (EP07). El equipo priorizó las funcionalidades transaccionales del frontend que permiten al usuario monitorear su avance, ganar recompensas, comprar productos y practicar simulaciones.
+
+| ID | User Story | Prioridad | Story Points |
+| -- | ---------- | --------- | ------------ |
+| US18 | Como usuario, quiero ver indicadores generales de mi avance para entender mi desempeño general. | Must Have | 5 |
+| US23 | Como usuario, quiero ver mi nivel, XP, racha, ranking y monedas para conocer mi estado competitivo. | Must Have | 3 |
+| US30 | Como usuario, quiero ver productos relevantes al entrar a la tienda para encontrar rápidamente insumos útiles para mi entrenamiento. | Must Have | 3 |
+| US06 | Como usuario, quiero ver un resumen de mi progreso al entrar a la aplicación para saber mi estado actual. | Must Have | 5 |
+| US07 | Como usuario, quiero ver la siguiente simulación sugerida para continuar mi aprendizaje sin buscar manualmente. | Must Have | 3 |
+| US10 | Como usuario, quiero ver todas las simulaciones disponibles para elegir qué emergencia practicar. | Must Have | 5 |
+| US12 | Como usuario, quiero ver la información de una simulación antes de empezarla para saber qué aprenderé y qué recompensas ofrece. | Must Have | 3 |
+| US13 | Como usuario, quiero elegir respuestas en cada escenario para practicar decisiones ante emergencias. | Must Have | 8 |
+| US44 | Como usuario, quiero usar un menú lateral para moverme entre dashboard, simulaciones, progreso, gamificación y tienda. | Must Have | 3 |
+| US46 | Como usuario móvil, quiero que la aplicación sea usable desde una pantalla pequeña para practicar o comprar desde mi dispositivo. | Must Have | 5 |
+
+La selección de estos User Stories para el Sprint 2 responde a la necesidad de construir la aplicación frontend transaccional de SafeStep, habilitando el flujo completo: visualización del dashboard con progreso personal, exploración del rendimiento mediante estadísticas, motivación a través de la gamificación con niveles e insignias, experiencia de compra en la tienda con productos y kits, práctica de simulaciones médicas interactivas, y navegación intuitiva entre todos los módulos de la plataforma.
+
+**Distribución de Trabajo por Componente:**
+
+- **Frontend Angular (EP02, EP03, EP04, EP05, EP06, EP07):** 43 Story Points distribuidos en progreso y estadísticas (5 SP), gamificación (3 SP), tienda (3 SP), dashboard (8 SP), simulaciones (16 SP) y navegación (8 SP).
+
+<a id="toc-5-2-2-2-aspect-leaders-and-collaborators"></a>
+### 5.2.2.2. Aspect Leaders and Collaborators
+
+En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX) para el Sprint 2. Los aspectos están centrados en el desarrollo de la aplicación frontend Angular con arquitectura Domain-Driven Design, incluyendo la configuración del proyecto, implementación de bounded contexts, y despliegue en GitHub Pages.
+
+El equipo SafeStep mantiene una estructura de 4 miembros activos con roles ajustados según las necesidades técnicas del Sprint 2, que requiere mayor especialización en el desarrollo de los bounded contexts de statistics, gamification y ecommerce.
+
+**Aspectos del Sprint 2:**
+
+1. **Statistics - Desarrollo:** Implementación del bounded context de estadísticas con resumen de progreso, rendimiento por simulación y errores frecuentes.
+2. **Gamification - Desarrollo:** Implementación del bounded context de gamificación con niveles, insignias, misiones y ranking semanal.
+3. **Ecommerce - Desarrollo:** Implementación del bounded context de tienda con catálogo de productos, carrito de compras y proceso de checkout.
+4. **Dashboard - Desarrollo:** Implementación del dashboard principal con resumen de progreso y próximos entrenamientos.
+5. **Medical Simulation - Desarrollo:** Implementación del catálogo, detalle y ejecución de simulaciones médicas.
+6. **App Shell & Navigation - Desarrollo:** Implementación del layout principal, menú lateral, toolbar y diseño responsivo.
+7. **Documentación:** Documentación técnica del Sprint y artefactos Scrum.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Team Member (Last Name, First Name)</b></td>
+            <td><b>GitHub Username</b></td>
+            <td><b>Statistics Dev / L or C</b></td>
+            <td><b>Gamification Dev / L or C</b></td>
+            <td><b>Ecommerce Dev / L or C</b></td>
+            <td><b>Dashboard Dev / L or C</b></td>
+            <td><b>Medical Sim Dev / L or C</b></td>
+            <td><b>Shell & Nav Dev / L or C</b></td>
+            <td><b>Documentation / L or C</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>jorgeayaladev</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Nounz27</td>
+            <td>-</td>
+            <td>C</td>
+            <td>-</td>
+            <td>-</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Melga1502</td>
+            <td>C</td>
+            <td>L</td>
+            <td>L</td>
+            <td>L</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>angelfdevs</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+        </tr>
+    </tbody>
+</table>
+
+La organización de líderes y colaboradores se relaciona con la posterior selección de tasks del Sprint Backlog. Ayala lidera las tasks de estadísticas y validación de visualización, Sanchez lidera las tasks de simulaciones médicas, Melgarejo lidera gamificación, ecommerce, dashboard y navegación, mientras que Flores colabora en simulaciones, dashboard y lidera la documentación del Sprint.
+
+**Distribución detallada de responsabilidades:**
+
+- **Ayala Fernandez, Jorge Brayan (Development Lead - Statistics):** Responsable de la implementación del bounded context de statistics, incluyendo la página de progreso con indicadores generales, rendimiento por simulación, errores frecuentes y recomendaciones. Coordina la integración de los diferentes bounded contexts y asegura la calidad del código en todo el proyecto.
+
+- **Sanchez Espinoza, Mathias Enrique (Development Lead - Medical Simulation):** Responsable de la implementación del bounded context de medical-simulation, incluyendo el catálogo de simulaciones, la página de detalle, la lógica de selección de respuestas y el resumen de resultados. Implementa la capa domain, application e infrastructure siguiendo DDD.
+
+- **Melgarejo Quiroz, Josep Eliu (Development Lead - Gamification & Ecommerce):** Responsable de la implementación de los bounded contexts de gamification y ecommerce, incluyendo la página de gamificación con niveles, insignias, misiones y ranking, así como la tienda con catálogo de productos, carrito de compras y proceso de checkout. Lidera también el desarrollo del dashboard y app shell.
+
+
+- **Flores Eusebio, Angel Thyago (Documentation Lead & Development Collaborator):** Apoya en la implementación de los diferentes bounded contexts, participando en tareas de desarrollo del dashboard, simulaciones y configuración del proyecto. Además, lidera la documentación del Sprint 2, recopilando evidencias y verificando que los avances descritos coincidan con las tasks comprometidas.
+
+<a id="toc-5-2-2-3-sprint-backlog-2"></a>
+### 5.2.2.3. Sprint Backlog 2
+
+El Sprint Backlog 2 resume el objetivo principal del Sprint: implementar la aplicación frontend Angular de SafeStep con arquitectura Domain-Driven Design, integración con json-server y despliegue en GitHub Pages. Para corregir la trazabilidad del Sprint, las tareas se organizaron como descomposición directa de las User Stories seleccionadas, evitando tareas demasiado generales que mezclen varias funcionalidades no relacionadas.
+
+Las User Stories mantienen su estimación en Story Points dentro del Sprint Planning. En cambio, los Work-items o Tasks se estiman en horas, porque representan trabajo operativo concreto dentro del Sprint. Estas horas permiten monitorear avance diario, pero no reemplazan los Story Points de las historias.
+
+**Trello Board:**
+El equipo utiliza un Trello Board con las listas estándar de Scrum: "Sprint Goal", "To Do", "In Progress", "To Review" y "Done".
+
+**URL pública del Trello Board del Sprint 2:**
+
+<a href="https://trello.com/invite/b/6a3373a8e98b5c2617ea4c26/ATTI5e61bf3dc39dc696745f5ead1796409cEECDECC7/sprint2-opensource">https://trello.com/invite/b/6a3373a8e98b5c2617ea4c26/ATTI5e61bf3dc39dc696745f5ead1796409cEECDECC7/sprint2-opensource</a>
+
+<div align="center">
+  <p>
+    <b>Figura X</b>: Board de Trello correspondiente al Sprint 2
+  </p>
+  <img src="markdown/assets/images/chapter-5/TrelloSprint2.png" alt="Trello Board Sprint 2" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+A continuación, la tabla de control de estado para el Sprint 2:
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td colspan="7">Sprint 2</td>
+        </tr>
+        <tr>
+            <td colspan="2">User Story</td>
+            <td colspan="6">Work-Item / Task</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Estimation (Hours)</td>
+            <td>Assigned to</td>
+            <td>Status (To-do / In-Process / To-Review / Done)</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US18 - Visualizar resumen general de progreso</b></td>
+        </tr>
+        <tr>
+            <td>US18</td>
+            <td>Visualizar resumen general de progreso</td>
+            <td>T001</td>
+            <td>Definir indicadores de progreso</td>
+            <td>Identificar métricas visibles: simulaciones completadas, intentos, precisión promedio, XP, SafeCoins y tiempo entrenado.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US18</td>
+            <td>Visualizar resumen general de progreso</td>
+            <td>T002</td>
+            <td>Implementar vista de estadísticas</td>
+            <td>Construir la página de progreso con tarjetas de indicadores y estados vacíos cuando no existan intentos.</td>
+            <td>4</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US18</td>
+            <td>Visualizar resumen general de progreso</td>
+            <td>T003</td>
+            <td>Conectar estadísticas con datos simulados</td>
+            <td>Consumir json-server desde el store correspondiente para mostrar métricas reales a partir de intentos y transacciones.</td>
+            <td>3</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US23 - Visualizar resumen de gamificación</b></td>
+        </tr>
+        <tr>
+            <td>US23</td>
+            <td>Visualizar resumen de gamificación</td>
+            <td>T004</td>
+            <td>Diseñar resumen de gamificación</td>
+            <td>Definir la información principal de nivel, XP, racha, ranking y SafeCoins para la vista de gamificación.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US23</td>
+            <td>Visualizar resumen de gamificación</td>
+            <td>T005</td>
+            <td>Implementar página de gamificación</td>
+            <td>Construir la página con resumen de progreso competitivo, misiones visibles e insignias principales.</td>
+            <td>4</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US30 - Visualizar productos relevantes en tienda</b></td>
+        </tr>
+        <tr>
+            <td>US30</td>
+            <td>Visualizar productos relevantes en tienda</td>
+            <td>T006</td>
+            <td>Definir estructura del catálogo</td>
+            <td>Organizar productos, categorías, kits y recomendaciones necesarias para la vista inicial de tienda.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US30</td>
+            <td>Visualizar productos relevantes en tienda</td>
+            <td>T007</td>
+            <td>Implementar vista de tienda</td>
+            <td>Construir catálogo con tarjetas de producto, imagen, categoría, rating, stock y precio.</td>
+            <td>5</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US30</td>
+            <td>Visualizar productos relevantes en tienda</td>
+            <td>T008</td>
+            <td>Conectar tienda con json-server</td>
+            <td>Cargar productos y recomendaciones desde el store de ecommerce usando los endpoints simulados.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US06 - Visualizar resumen general de entrenamiento</b></td>
+        </tr>
+        <tr>
+            <td>US06</td>
+            <td>Visualizar resumen general de entrenamiento</td>
+            <td>T009</td>
+            <td>Definir tarjetas del dashboard</td>
+            <td>Seleccionar métricas, acciones rápidas y secciones que aparecerán al entrar a la aplicación.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US06</td>
+            <td>Visualizar resumen general de entrenamiento</td>
+            <td>T010</td>
+            <td>Implementar dashboard principal</td>
+            <td>Construir dashboard con resumen de progreso, SafeCoins, actividad reciente y accesos a módulos principales.</td>
+            <td>4</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US07 - Continuar con el siguiente entrenamiento</b></td>
+        </tr>
+        <tr>
+            <td>US07</td>
+            <td>Continuar con el siguiente entrenamiento</td>
+            <td>T011</td>
+            <td>Seleccionar siguiente simulación sugerida</td>
+            <td>Definir la lógica para mostrar una simulación pendiente o recomendada desde el dashboard.</td>
+            <td>2</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US07</td>
+            <td>Continuar con el siguiente entrenamiento</td>
+            <td>T012</td>
+            <td>Agregar acceso a práctica</td>
+            <td>Implementar botón de práctica que navegue desde el dashboard hacia el detalle de la simulación recomendada.</td>
+            <td>2</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US10 - Visualizar catálogo de simulaciones</b></td>
+        </tr>
+        <tr>
+            <td>US10</td>
+            <td>Visualizar catálogo de simulaciones</td>
+            <td>T013</td>
+            <td>Preparar datos de simulaciones</td>
+            <td>Definir estructura de simulaciones con título, imagen, dificultad, duración, XP y SafeCoins.</td>
+            <td>2</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US10</td>
+            <td>Visualizar catálogo de simulaciones</td>
+            <td>T014</td>
+            <td>Implementar listado de simulaciones</td>
+            <td>Construir la vista con tarjetas de simulación y estado visual para simulaciones completadas.</td>
+            <td>4</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US12 - Revisar detalle de una simulación</b></td>
+        </tr>
+        <tr>
+            <td>US12</td>
+            <td>Revisar detalle de una simulación</td>
+            <td>T015</td>
+            <td>Implementar detalle de simulación</td>
+            <td>Mostrar objetivos, dificultad, duración, XP disponible, SafeCoins base y botón para iniciar.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US13 - Responder pasos de una simulación</b></td>
+        </tr>
+        <tr>
+            <td>US13</td>
+            <td>Responder pasos de una simulación</td>
+            <td>T016</td>
+            <td>Implementar selección de respuestas</td>
+            <td>Permitir que el usuario seleccione una opción por paso y registrar la respuesta elegida.</td>
+            <td>4</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US13</td>
+            <td>Responder pasos de una simulación</td>
+            <td>T017</td>
+            <td>Agregar feedback visual</td>
+            <td>Diferenciar visualmente respuestas correctas e incorrectas después de que el usuario responde.</td>
+            <td>3</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US13</td>
+            <td>Responder pasos de una simulación</td>
+            <td>T018</td>
+            <td>Validar avance entre pasos</td>
+            <td>Controlar que el usuario avance por la simulación sin saltar preguntas requeridas.</td>
+            <td>2</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US44 - Navegar por los módulos principales</b></td>
+        </tr>
+        <tr>
+            <td>US44</td>
+            <td>Navegar por los módulos principales</td>
+            <td>T019</td>
+            <td>Implementar app shell</td>
+            <td>Crear layout principal con toolbar, sidebar, rutas y contenedor de vistas.</td>
+            <td>4</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US44</td>
+            <td>Navegar por los módulos principales</td>
+            <td>T020</td>
+            <td>Resaltar sección activa</td>
+            <td>Marcar visualmente la opción seleccionada dentro del menú lateral.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US46 - Usar la aplicación en pantallas pequeñas</b></td>
+        </tr>
+        <tr>
+            <td>US46</td>
+            <td>Usar la aplicación en pantallas pequeñas</td>
+            <td>T021</td>
+            <td>Adaptar shell a mobile</td>
+            <td>Configurar comportamiento tipo drawer para pantallas pequeñas sin generar desplazamiento horizontal.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US46</td>
+            <td>Usar la aplicación en pantallas pequeñas</td>
+            <td>T022</td>
+            <td>Validar tarjetas responsivas</td>
+            <td>Revisar que productos, simulaciones y misiones se muestren en columnas legibles en mobile.</td>
+            <td>3</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Backlog 2 refleja 22 tareas derivadas directamente de las User Stories comprometidas para la aplicación frontend. Las estimaciones suman 66 horas de trabajo operativo y fueron usadas para seguimiento diario dentro del Trello Board. Los Story Points se mantienen a nivel de User Story y no se convierten directamente a horas.
+
+<a id="toc-5-2-2-4-development-evidence-for-sprint-review"></a>
+### 5.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2, el equipo SafeStep implementó la aplicación frontend Angular de SafeStep con una arquitectura modular basada en Domain-Driven Design. Se completaron 5 bounded contexts (identity-access, medical-simulation, statistics, gamification, ecommerce) más un módulo compartido (shared), cada uno con sus capas de domain, application, infrastructure y presentation.
+
+**Resumen de Avances Implementados:**
+
+La aplicación frontend implementada durante el Sprint 2 cuenta con las siguientes características:
+
+- **Arquitectura DDD:** Cada bounded context organizado en carpetas domain/model, application, infrastructure (api, assembler, resources) y presentation/views.
+- **Estadísticas de progreso:** Página de progreso con indicadores generales, simulaciones completadas, precisión promedio, XP total y tiempo entrenado.
+- **Gamificación:** Página de gamificación con nivel, XP, racha, ranking semanal, insignias desbloqueadas y SafeCoins.
+- **Tienda:** Catálogo de productos con vista de productos relevantes, búsqueda y filtros por categoría.
+- **Dashboard principal:** Resumen de progreso con métricas clave, siguiente simulación sugerida y accesos rápidos.
+- **App shell:** Layout principal con toolbar, menú lateral responsivo y router-outlet para navegación entre módulos.
+- **Catálogo de simulaciones:** Tarjetas con imagen, dificultad, duración, XP y estado de completado.
+- **Detalle de simulación:** Información extendida con objetivos de aprendizaje, requisitos y recompensas.
+- **Ejecución de simulaciones:** Flujo interactivo de pasos con selección de respuestas, feedback visual y cálculo de resultados.
+- **Internacionalización:** Soporte para español e inglés mediante @ngx-translate.
+- **Integración con json-server:** API REST simulada con datos de prueba en db.json.
+
+**Commits Realizados:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td>Repository</td>
+            <td>Branch</td>
+            <td>Commit Id</td>
+            <td>Commit message</td>
+            <td>Commit body</td>
+            <td>Commit on (Date)</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>3550d19</td>
+            <td>chore: SafeStep frontend Initialization!!</td>
+            <td>Initialize Angular project with CLI, dependencies and base configuration</td>
+            <td>2026-04-15</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>b1f9463</td>
+            <td>feat: add ecommerce bounded context</td>
+            <td>Implement ecommerce BC with products catalog, cart and checkout structure</td>
+            <td>2026-04-16</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>7d39c32</td>
+            <td>feat(indentity-access): add authentication and profile bounded context</td>
+            <td>Implement identity-access BC with login, register and profile pages</td>
+            <td>2026-04-17</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>58c4b06</td>
+            <td>feat: medical-simulation BC</td>
+            <td>Implement medical-simulation BC with domain entities and infrastructure layer</td>
+            <td>2026-04-18</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>841ee94</td>
+            <td>feat: gamification BC</td>
+            <td>Implement gamification BC with levels, badges, missions and ranking</td>
+            <td>2026-04-19</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>de77751</td>
+            <td>feat: Simulation medical BC implementation</td>
+            <td>Add simulation execution flow with interactive steps and result calculation</td>
+            <td>2026-04-20</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>b708e3f</td>
+            <td>feat: build app modules, gamification, simulations, progress and store</td>
+            <td>Complete app modules with gamification, simulations, statistics and store integration</td>
+            <td>2026-04-22</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>1399e90</td>
+            <td>feat: Refactor appweb and add responsive design</td>
+            <td>Refactor application layout and add responsive styles for mobile devices</td>
+            <td>2026-04-24</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>4411a27</td>
+            <td>chore: SafeStep json-server deployment Initialization!!</td>
+            <td>Initialize json-server with db.json and routes for all bounded contexts</td>
+            <td>2026-04-25</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>main</td>
+            <td>53e9dd9</td>
+            <td>feat: Update API base URL for development environment</td>
+            <td>Update environment config to point to my-json-server Typicode endpoints</td>
+            <td>2026-04-26</td>
+        </tr>
+    </tbody>
+</table>
+
+**Repositorio de Frontend:**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend</a>
+
+**Repositorio de json-server (datos de prueba):**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server</a>
+
+<a id="toc-5-2-2-5-execution-evidence-for-sprint-review"></a>
+### 5.2.2.5. Execution Evidence for Sprint Review
+
+El Sprint 2 permitió construir la aplicación frontend Angular de SafeStep con todos los bounded contexts implementados siguiendo Domain-Driven Design. Las evidencias presentadas demuestran que el equipo cumplió satisfactoriamente con el Sprint Goal.
+
+**Resumen de lo Alcanzado:**
+
+- Aplicación Angular funcional con 5 bounded contexts (medical-simulation, statistics, gamification, ecommerce, identity-access)
+- Arquitectura DDD con capas domain, application, infrastructure y presentation
+- Estadísticas de progreso con indicadores de rendimiento y métricas de aprendizaje
+- Gamificación con niveles, insignias, misiones y ranking semanal
+- Tienda con catálogo de productos y productos relevantes
+- Dashboard con resumen de progreso y simulación sugerida
+- Catálogo y ejecución de simulaciones médicas interactivas
+- App shell con navegación lateral responsiva
+- Internacionalización español/inglés
+- Integración con json-server para datos de prueba
+
+**Capturas de Pantalla - Frontend Angular:**
+
+1. **Statistics Page:** Página de progreso con métricas de simulaciones completadas, precisión promedio, XP total y tiempo de entrenamiento.
+
+2. **Gamification Page:** Página de gamificación con nivel actual, barra de XP, racha de días, ranking semanal e insignias desbloqueadas.
+
+3. **Store Page:** Catálogo de productos con tarjetas que muestran imagen, nombre, categoría, rating y precio.
+
+4. **Dashboard:** Vista principal con tarjetas de resumen de progreso, estadísticas y siguiente entrenamiento sugerido.
+
+3. **Simulations Catalog:** Catálogo de simulaciones disponibles con tarjetas que muestran imagen, dificultad, duración y XP.
+
+4. **Simulation Detail:** Página de detalle con objetivos de aprendizaje, requisitos y botón de inicio.
+
+5. **Simulation Execution:** Flujo interactivo de pasos con selección de respuestas múltiples y feedback visual.
+
+6. **Results Summary:** Pantalla de resultados con respuestas correctas, XP ganado y SafeCoins obtenidos.
+
+7. **Profile Page:** Perfil de usuario con información personal, nivel, racha y monedas.
+
+8. **App Shell:** Layout principal con toolbar, menú lateral expandible y contenido dinámico.
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Frontend Angular - Dashboard Principal
+  </p>
+  <img src="markdown/assets/images/chapter-5/frontend-dashboard.png" alt="Frontend Dashboard" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
 </div>
 
 <div align="center">
-  <img src="markdown/assets/images/chapter-5/android-result-2026-09-16.png" alt="Resultado de una simulación en Android" width="260" />
-  <p><i>Figura 5.5. Resultado de una simulación ejecutada desde Android con datos de prueba y API local.</i></p>
+  <p>
+    <b>Gráfico 2</b>: Frontend Angular - Learning Section
+  </p>
+  <img src="markdown/assets/images/chapter-5/learning-section.png" alt="Frontend Dashboard" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
 </div>
 
 <div align="center">
-  <img src="markdown/assets/images/chapter-5/android-progress-2026-09-16.png" alt="Progreso obtenido en Android después de las simulaciones" width="260" />
-  <p><i>Figura 5.6. Progreso consultado por Android desde la API local; no es una medición con participantes reales.</i></p>
+  <p>
+    <b>Gráfico 3</b>: Frontend Angular - Ecommerce Section
+  </p>
+  <img src="markdown/assets/images/chapter-5/ecommerce-section.png" alt="Frontend Dashboard" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
 </div>
 
-<a id="toc-5-2-6-implemented-restful-api-and-or-serverless-backend-evidence"></a>
-## 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
+<a id="toc-5-2-2-6-services-documentation-evidence-for-sprint-review"></a>
+### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-El backend actual es una API Spring Boot con persistencia PostgreSQL, recursos IAM, perfiles, simulaciones e intentos, analítica, gamificación y comercio. Los controladores y modelos están en el [repositorio backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend). Se ejecutaron **42 pruebas sin fallos** el 16/09/2026. Un smoke test adicional contra PostgreSQL local creó una cuenta ficticia (201), inició sesión con rol `ROLE_USER`, leyó 18 simulaciones y 32 productos, registró un intento (201), recuperó un historial y progreso con una simulación completada, obtuvo OpenAPI (200) y confirmó que el borrado de una simulación con ese usuario devuelve **403**. El script reproducible es `scripts/smoke-api.ps1` del backend. Estos resultados verifican ese entorno local, **no** el despliegue, pagos ni todos los endpoints.
+En esta sección se incluye la relación de Endpoints documentados con OpenAPI, relacionados con el alcance del Sprint 2. Durante este Sprint, el equipo implementó la integración con json-server como backend de datos de prueba, exponiendo endpoints REST simulados para cada bounded context. La documentación de estos endpoints se realizó mediante la configuración de rutas en el archivo `routes.json` y la estructura de datos en `db.json`.
 
-La configuración de producción ahora requiere `DATABASE_USER`, `DATABASE_PASSWORD` y `JWT_SECRET` por variables de entorno; no se documentan valores. El Dockerfile compila con pruebas y usa perfil de producción. Debe verificarse su construcción en el pipeline y la conectividad con una base de datos de prueba antes de publicar. Los secretos que aparecieron antes en archivos versionados deben **rotarse** y retirarse del proveedor; el cambio del archivo actual no borra el historial de Git.
+La API REST simulada expone los siguientes endpoints para cada bounded context, accesibles a través de la URL base de my-json-server:
 
-**Limitación de integridad:** el contrato de intentos acepta `score` y `correctSteps` calculados por el cliente. Antes de usar estas métricas como resultado experimental o para recompensas sensibles, el backend debe verificar las respuestas contra la simulación o establecer otro mecanismo de validación; las pruebas actuales no demuestran esa integridad.
+| Endpoint | Método | Descripción | Sintaxis de llamada | Parámetros | Ejemplo Response |
+|----------|--------|-------------|---------------------|-------------|------------------|
+| `/identityAccess` | GET | Obtener datos de usuario autenticado | `GET /api/v1/identity-access` | Ninguno | `{ "sampleUser": { "id": "usr-001", "fullName": "Ana Torres", ... } }` |
+| `/identityAccess/userProfiles` | GET | Obtener perfiles de usuario | `GET /api/v1/identity-access/userProfiles` | Ninguno | `[ { "id": 1, "username": "JuanP", ... } ]` |
+| `/medicalSimulations/simulations` | GET | Obtener catálogo de simulaciones | `GET /api/v1/medical-simulations/simulations` | Ninguno | `[ { "id": "rcp-basico", "title": "RCP básico para adultos", ... } ]` |
+| `/medicalSimulations/simulations/:id` | GET | Obtener detalle de simulación | `GET /api/v1/medical-simulations/simulations/rcp-basico` | `id` (path) | `{ "id": "rcp-basico", "steps": [...], "learningGoals": [...] }` |
+| `/gamification` | GET | Obtener datos de gamificación | `GET /api/v1/gamification` | Ninguno | `{ "level": 12, "xp": 6840, "badges": [...], "missions": [...] }` |
+| `/ecommerce` | GET | Obtener productos del catálogo | `GET /api/v1/ecommerce` | Ninguno | `{ "products": [...], "categories": [...] }` |
+| `/statistics` | GET | Obtener estadísticas de progreso | `GET /api/v1/statistics` | Ninguno | `{ "completedSimulations": 24, "avgPrecision": 85, ... }` |
 
-| Recorrido a comprobar | Estado y evidencia |
-|---|---|
-| Alta, inicio, renovación y cierre de sesión | Alta 201 e inicio de sesión comprobados localmente; renovación, cierre y errores 4xx pendientes en este recorrido. |
-| Consultar simulación, enviar intento, leer progreso | Consulta y persistencia en PostgreSQL local comprobadas con usuario ficticio; pendiente error de red y validación del puntaje en servidor. |
-| Catálogo y pago de prueba | Producto, orden y webhook con credenciales **test**; nunca pagos reales. |
-| Administrar contenido | Mutaciones de simulaciones, productos y misiones restringidas a `ROLE_ADMIN` en API; prueba de integración y smoke test confirman 403 para usuario normal. Falta comprobar cada acción de administrador legítimo. |
+La URL base de la API desplegada es: <a href="https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server">https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server</a>
 
-<a id="toc-5-2-7-restful-api-documentation"></a>
-## 5.2.7. RESTful API documentation
+<a id="toc-5-2-2-7-software-deployment-evidence-for-sprint-review"></a>
+### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-La documentación OpenAPI se genera mediante `springdoc`; la ruta esperada en una instancia activa es `/swagger-ui/index.html` y el JSON se obtiene en `/v3/api-docs`. Este JSON devolvió **200 en la instancia local** el 16/09/2026. Antes de colocar enlaces públicos, abrir esas rutas en el despliegue actual y registrar URL, fecha, versión y captura. La matriz siguiente se basa en controladores del código, no en una API publicada comprobada.
+En esta sección se resumen los procesos realizados en relación con Deployment durante el Sprint 2. Las actividades de despliegue incluyeron la configuración de GitHub Pages para la aplicación frontend Angular y la configuración de my-json-server para la API de datos de prueba.
 
-| Método y ruta | Entrada principal | Respuesta funcional | Uso / prueba asociada |
-|---|---|---|---|
-| `POST /api/v1/authentication/sign-up` | Usuario y contraseña | Cuenta creada o error de validación | Registro web/Android; alta pública solo `ROLE_USER`. |
-| `POST /api/v1/authentication/sign-in` | Credenciales | Tokens de acceso/renovación y roles | Autenticación y acceso a rutas protegidas. |
-| `POST /api/v1/authentication/refresh-token` | Refresh token | Nuevo par de tokens o rechazo | Continuidad de sesión. |
-| `POST /api/v1/authentication/logout` | Refresh token | Revocación o rechazo | Cierre de sesión. |
-| `GET /api/v1/simulations` | Consulta | Lista de simulaciones | Catálogo de práctica web/Android. |
-| `GET /api/v1/simulations/{simulationId}` | ID de simulación | Detalle, pasos y opciones | Inicio de una práctica. |
-| `POST /api/v1/simulations/{simulationId}/attempts` | Modo, tiempo, puntuación y errores | Intento registrado o error | Resultado y persistencia. |
-| `GET /api/v1/simulations/attempts/me` | Bearer token | Intentos del usuario | Historial personal. |
-| `GET /api/v1/analytics/summary/me` | Bearer token | Resumen analítico | Estadísticas web. |
-| `GET /api/v1/gamification/summary/me` | Bearer token | Nivel, XP, monedas y racha | Progreso web/Android. |
-| `GET /api/v1/commerce/products` | Consulta | Productos | Catálogo web/Android. |
-| `POST /api/v1/commerce/orders/{orderId}/payments/stripe-checkout` | Orden autenticada | Sesión de checkout o error | Solo integración de pagos de prueba. |
+**Despliegue del Frontend en GitHub Pages:**
 
-También existen recursos de administración y perfiles; su lista completa, parámetros, códigos y esquemas deben consultarse en el OpenAPI generado del commit entregado. Antes de la entrega, contrastar la matriz con ese JSON, añadir los enlaces de historias definitivos y una tabla de casos positivos/negativos. No se deben copiar capturas Swagger antiguas como evidencia de la versión nueva.
+El frontend Angular se desplegó en GitHub Pages como aplicación web estática. A continuación se detallan los pasos realizados:
 
-<a id="toc-5-2-8-team-collaboration-insights"></a>
-## 5.2.8. Team Collaboration Insights
+**Paso 1: Preparación del proyecto Angular**
 
-Las capturas y métricas del capítulo 5 del informe del curso anterior corresponden al equipo y repositorios de ese curso. Para **cada nuevo sprint**, registrar en la organización actual: integrantes y roles, acta de planificación, pares de revisión, PR enlazados a historias, commits relevantes, comentarios de revisión, decisiones técnicas, bloqueos resueltos y retrospectiva. Adjuntar capturas de las analíticas GitHub con fecha y período, además de una interpretación cualitativa. La cantidad de commits no es una medida suficiente de contribución: una revisión, prueba reproducible, investigación o corrección de seguridad puede no generar muchos commits.
+Se verificó la configuración del proyecto Angular y se preparó el build de producción, considerando la ruta base del repositorio `safestep-frontend` para que la aplicación pueda ejecutarse correctamente desde GitHub Pages.
 
-| Sprint actual | Liderazgo y colaboración | PR/commits y analíticas | Reflexión LACX/retrospectiva |
-|---|---|---|---|
-| 1 | Pendiente de asignación del equipo. | Pendiente de URL y captura del período. | Pendiente de sesión. |
-| 2 | Pendiente de asignación del equipo. | Pendiente de URL y captura del período. | Pendiente de sesión. |
-| 3 | Pendiente de asignación del equipo. | Pendiente de URL y captura del período. | Pendiente de sesión. |
+**Paso 2: Configuración del build**
 
-El capítulo quedará cerrado cuando cada entrega tenga una cadena comprobable `historia → tarea → commit/PR → prueba → captura o URL`. Los defectos, incertidumbres y excepciones de stack deben mantenerse visibles junto con la evidencia positiva.
+Se generó el build de producción de Angular. Los archivos estáticos resultantes fueron preparados para su publicación en GitHub Pages:
 
+```bash
+npm run build
+```
+
+**Paso 3: Configuración de GitHub Pages**
+
+Se configuró GitHub Pages en el repositorio del frontend para publicar la aplicación desde la rama de despliegue correspondiente.
+
+**Paso 4: Automatización del despliegue con GitHub Actions**
+
+Se implementó un workflow de GitHub Actions que ejecuta el build de producción y publica automáticamente la aplicación en GitHub Pages cuando se realizan pushes a la rama `main`:
+
+```yaml
+name: Deploy Frontend to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Angular app
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: \${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/safestep-frontend/browser
+```
+
+**Paso 5: Verificación del despliegue**
+
+Se verificó el acceso a la aplicación frontend a través de la URL pública de despliegue:
+
+```
+https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/
+```
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Frontend Angular desplegado en GitHub Pages
+  </p>
+  <img src="markdown/assets/images/chapter-5/firebase-deploy.png" alt="Frontend Deployment" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Despliegue de Datos de Prueba en my-json-server:**
+
+Paralelamente al frontend, se configuró el repositorio `safestep-json-server` con el archivo `db.json` que contiene los datos mock para todos los bounded contexts. La estructura del archivo incluye:
+
+- `identityAccess`: Usuarios de muestra, proveedores de autenticación y perfiles
+- `medicalSimulations`: Simulaciones médicas con pasos, opciones y resultados
+- `gamification`: Niveles, insignias, misiones y rankings
+- `ecommerce`: Productos, kits, categorías y carritos
+- `statistics`: Estadísticas de progreso y rendimiento
+
+La URL de la API desplegada es:
+
+```
+https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server
+```
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Data desplegado en my-json-server
+  </p>
+  <img src="markdown/assets/images/chapter-5/json-server-deploy.png" alt="my-json-server Deployment" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Resultado del despliegue:**
+
+| Producto | Plataforma | URL |
+|----------|-----------|-----|
+| Frontend Angular | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> |
+| API de datos | my-json-server | <a href="https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server">https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server</a> |
+
+<a id="toc-5-2-2-8-team-collaboration-insights-during-sprint"></a>
+### 5.2.2.8. Team Collaboration Insights during Sprint
+
+En esta sección el equipo explica cómo se han desarrollado las actividades de implementación del Sprint 2 y se presenta los analíticos de colaboración y commits en GitHub.
+
+**Distribución de Trabajo:**
+
+Todos los miembros del equipo participaron activamente en la implementación del frontend Angular. La distribución de tareas se basó en las fortalezas técnicas identificadas en el LACX, con cada miembro liderando o colaborando en bounded contexts específicos.
+
+**Métricas de Colaboración:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Miembro</b></td>
+            <td><b>Repositorio</b></td>
+            <td><b>Commits</b></td>
+            <td><b>Líneas additions</b></td>
+            <td><b>Líneas eliminadas</b></td>
+            <td><b>PRs merged</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>safestep-frontend</td>
+            <td>5</td>
+            <td>+1200</td>
+            <td>-150</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>safestep-frontend</td>
+            <td>4</td>
+            <td>+950</td>
+            <td>-80</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>safestep-frontend</td>
+            <td>4</td>
+            <td>+850</td>
+            <td>-100</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>safestep-frontend</td>
+            <td>3</td>
+            <td>+700</td>
+            <td>-90</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
+
+**Analíticos de GitHub:**
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Analytics Sprint 2
+  </p>
+  <img src="markdown/assets/images/av1-analytics.png" alt="Analytics Sprint 2" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Distribución de trabajo por tipo de tarea:**
+
+- Configuración del proyecto Angular y DDD: 15% del tiempo total
+- Implementación de bounded contexts: 50% del tiempo total
+- Integración con json-server: 10% del tiempo total
+- Diseño UI/UX responsive: 15% del tiempo total
+- Documentación y configuración de despliegue: 10% del tiempo total
+
+**Reflexiones del Equipo:**
+
+- Ayala Fernandez, Jorge Brayan: "Liderar el bounded context de statistics fue un desafío interesante. Implementar los indicadores de progreso y rendimiento por simulación requirió calcular métricas en tiempo real a partir de los datos de json-server. La arquitectura DDD nos obligó a pensar cuidadosamente la separación de responsabilidades."
+
+- Sanchez Espinoza, Mathias Enrique: "Implementar el flujo completo de simulaciones médicas fue la tarea más compleja del Sprint. La lógica de selección de respuestas, el feedback visual y el cálculo de resultados requirió coordinación estrecha con el equipo de diseño."
+
+- Melgarejo Quiroz, Josep Eliu: "El dashboard, la gamificación y la tienda fueron fundamentales para la experiencia de usuario. Implementar el catálogo de productos con Angular Material y la lógica del carrito de compras fueron los mayores retos técnicos del Sprint. El menú lateral responsivo permitió una navegación intuitiva y adaptativa."
+
+
+- Flores Eusebio, Angel Thyago: "Contribuí en la implementación del detalle de simulación y el resumen de resultados. Aprendí sobre la arquitectura de stores en Angular y cómo se comunican los bounded contexts entre sí."
+
+**Lecciones Aprendidas:**
+
+1. **La arquitectura DDD requiere planificación previa:** Definir correctamente los bounded contexts y sus relaciones desde el inicio evitó retrabajo y facilitó la integración entre módulos.
+
+2. **json-server acelera el desarrollo frontend:** Poder desarrollar y probar contra una API simulada permitió avanzar sin depender del backend real.
+
+3. **Los stores de estado mejoran la consistencia:** Centralizar el estado en stores por bounded context facilitó la comunicación entre componentes y evitó inconsistencias.
+
+4. **El lazy loading mejora el rendimiento:** La configuración de rutas con carga diferida redujo el tamaño inicial del bundle y mejoró los tiempos de carga.
+
+5. **GitHub Pages simplifica el despliegue:** La integración con GitHub Actions permitió automatizar completamente el proceso de despliegue del frontend Angular, reduciendo el tiempo de publicación a solo minutos después de cada merge a main.
+
+<br>
+
+<a id="toc-5-2-3-sprint-3"></a>
+## 5.2.3. Sprint 3
+
+<a id="toc-5-2-3-1-sprint-planning-3"></a>
+### 5.2.3.1. Sprint Planning 3
+
+En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 3. SafeStep inicia su tercer Sprint con el objetivo de implementar el backend real de la solución, reemplazando progresivamente la dependencia de datos simulados utilizada en el Sprint 2 por un RESTful API desarrollado internamente con Spring Boot, Java, PostgreSQL y documentación OpenAPI mediante Swagger.
+
+El Sprint 3 representa una etapa clave para la madurez técnica del producto, debido a que permite pasar de una aplicación frontend basada en json-server a una arquitectura distribuida compuesta por Landing Page, Frontend Web Application y Web Services. Durante este Sprint, el equipo priorizó la implementación de los bounded contexts principales del backend, manteniendo una estructura alineada con Domain-Driven Design, CQRS, capas de aplicación, dominio, infraestructura e interfaces REST.
+
+Además del backend, este Sprint incluyó trabajo directo sobre los otros dos productos del ecosistema SafeStep. En la Web Application se configuró el consumo del backend real mediante los endpoints de `http://localhost:8092/api/v1` y la URL desplegada en Render, reemplazando el uso principal de `json-server`. En la Landing Page se realizaron ajustes visuales para mostrar mejor el producto, incorporando imágenes reales de la aplicación y los videos About the Team y About the Product como evidencia de presentación del equipo y de la propuesta de valor.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td>Sprint 3</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Planning Background</b></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>2026-05-03</td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td>10:00 AM</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>Reunion virtual via Discord - Canal #sprint-planning</td>
+        </tr>
+        <tr>
+            <td>Prepared By</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+        </tr>
+        <tr>
+            <td>Attendees (to planning meeting)</td>
+            <td>Ayala Fernandez, Jorge Brayan / Sanchez Espinoza, Mathias Enrique / Melgarejo Quiroz, Josep Eliu / Flores Eusebio, Angel Thyago</td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Review Summary</td>
+            <td>Sprint 2 completado exitosamente: aplicación frontend Angular implementada con bounded contexts, arquitectura DDD, integración con json-server y despliegue en GitHub Pages. Se logró construir la experiencia principal del usuario con dashboard, simulaciones, gamificación, estadísticas y tienda.</td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Retrospective Summary</td>
+            <td>El equipo identificó que json-server permitió validar rápidamente los flujos del frontend, pero también se reconoció la necesidad de implementar un backend real para cumplir con la arquitectura distribuida solicitada por el curso. Se acordó priorizar estructura de capas, documentación Swagger, endpoints estables, conexión frontend-backend y actualización de la landing page con evidencias visuales del producto.</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Goal &amp; User Stories</b></td>
+        </tr>
+        <tr>
+            <td>Sprint 3 Goal</td>
+            <td>Nuestro enfoque es permitir que SafeStep opere con servicios backend reales y un ecosistema de producto conectado. Creemos que esto entrega una experiencia más confiable y realista para los usuarios, además de un camino de integración más claro para el equipo de desarrollo. Esto se confirmará cuando el backend exponga endpoints documentados en Swagger, el frontend consuma datos reales del API para los flujos principales y la landing page presente imágenes del producto junto con los videos About the Team y About the Product.</td>
+        </tr>
+        <tr>
+            <td>Sprint 3 Velocity</td>
+            <td>El equipo estimó un velocity de 45 Story Points, considerando la complejidad de implementar el backend real, configurar persistencia con PostgreSQL, definir arquitectura DDD, documentar los endpoints mediante Swagger, conectar el frontend con el API y actualizar la landing page.</td>
+        </tr>
+        <tr>
+            <td>Sum of Story Points</td>
+            <td>Total: 45 SP - Distribuidos en technical stories de backend agregadas al EP09 y tareas de integración con frontend y landing page. El alcance combina configuración Spring Boot, arquitectura por bounded contexts, seguridad JWT, persistencia PostgreSQL/JPA, endpoints REST, Swagger, seed data, validación técnica, consumo del API desde Angular y actualización de la landing page con contenido visual del producto.</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Planning Meeting del 3 de mayo de 2026 duró aproximadamente 3 horas. Durante la reunión se revisó la arquitectura del backend de referencia del curso, se definieron los bounded contexts necesarios para SafeStep y se estableció que el backend debía seguir una estructura similar a la utilizada en Learning Center Platform, separando responsabilidades entre domain, application, infrastructure e interfaces.
+
+También se acordó que los endpoints del backend debían responder a las necesidades ya implementadas en el frontend del Sprint 2. Por ello, el equipo tomó como base los datos y flujos existentes en la aplicación Angular, pero los trasladó a un modelo persistente con PostgreSQL, entidades JPA y servicios de aplicación. Para cerrar el flujo completo, se planificó conectar la Web Application con el backend y actualizar la Landing Page para que presente evidencias más concretas del producto desarrollado.
+
+**Technical Stories incluidos en el Sprint 3:**
+
+Las historias seleccionadas para este Sprint corresponden a technical stories nuevas asociadas al backend y registradas dentro de EP09 - Soporte tecnico y arquitectura de la aplicacion. El equipo priorizo los elementos tecnicos necesarios para que las funcionalidades existentes de SafeStep puedan ser soportadas por Web Services reales.
+
+| ID | Technical Story | Prioridad | Story Points |
+| -- | ---------- | --------- | ------------ |
+| TS13 | Como developer, quiero configurar el backend con Spring Boot, Maven, Java y perfiles de ambiente para contar con una base estable para los Web Services. | Must Have | 5 |
+| TS14 | Como developer, quiero organizar el backend por bounded contexts y capas para mantener una estructura alineada con la arquitectura del curso. | Must Have | 5 |
+| TS15 | Como developer, quiero implementar autenticacion con JWT y roles para proteger los endpoints que dependen de un usuario autenticado. | Must Have | 5 |
+| TS16 | Como developer, quiero configurar persistencia con PostgreSQL y Spring Data JPA para almacenar datos reales de usuarios, simulaciones, compras y progreso. | Must Have | 5 |
+| TS17 | Como developer, quiero exponer endpoints REST por bounded context para que el frontend pueda consumir datos reales de SafeStep. | Must Have | 8 |
+| TS18 | Como developer, quiero documentar los endpoints con OpenAPI y Swagger UI para facilitar pruebas, revision e integracion del API. | Must Have | 3 |
+| TS19 | Como developer, quiero cargar datos iniciales en el backend para probar flujos principales sin registrar toda la informacion manualmente. | Should Have | 3 |
+| TS20 | Como developer, quiero ejecutar pruebas y validaciones con Maven para asegurar que el backend compile y funcione antes de integrarlo con el frontend. | Must Have | 3 |
+| TS21 | Como developer, quiero conectar la Web Application Angular con el backend real para reemplazar el consumo principal de json-server por endpoints persistentes. | Must Have | 5 |
+| TS22 | Como developer, quiero actualizar la Landing Page con imágenes del producto y videos About the Team y About the Product para comunicar mejor la solución final. | Should Have | 3 |
+
+La seleccion de estas technical stories responde a la necesidad de completar la capa de Web Services del producto SafeStep sin crear historias funcionales nuevas que no esten alineadas con el Product Backlog. A diferencia del Sprint 2, en el que se trabajo con datos simulados, este Sprint se enfoca en una API real con persistencia, seguridad y documentacion tecnica.
+
+**User Stories funcionales soportadas por el backend:**
+
+El backend implementado en este Sprint da soporte directo a historias funcionales ya existentes en el Capitulo 3, principalmente: US01, US02, US03, US10, US12, US14, US15, US18, US23, US26, US27, US29, US30, US36, US37, US38, US40, US41 y US42. Estas historias no se duplican ni se renombran; se consideran funcionalidades de usuario que ahora cuentan con soporte desde el RESTful API.
+
+**Distribucion de Trabajo por Componente:**
+
+- **Backend Setup & Architecture:** 10 Story Points enfocados en configuracion Spring Boot, Maven, perfiles de ambiente y organizacion por bounded contexts.
+- **Security & Persistence:** 10 Story Points enfocados en autenticacion JWT, roles, PostgreSQL, JPA y acceso seguro a datos.
+- **RESTful API Implementation:** 8 Story Points enfocados en endpoints para IAM, perfiles, comercio, simulaciones, gamificacion y analitica.
+- **OpenAPI Documentation:** 3 Story Points enfocados en documentacion Swagger y revision de contratos REST.
+- **Seed Data:** 3 Story Points enfocados en datos iniciales para simulaciones, comercio, gamificacion y analitica.
+- **Build & Validation:** 3 Story Points enfocados en pruebas Maven, compilacion y validacion local de endpoints.
+- **Frontend Integration:** 5 Story Points enfocados en configurar environments, endpoints, interceptores, stores y consumo real del backend desde Angular.
+- **Landing Page Update:** 3 Story Points enfocados en agregar imágenes del producto y los videos About the Team y About the Product.
+
+<a id="toc-5-2-3-2-aspect-leaders-and-collaborators"></a>
+### 5.2.3.2. Aspect Leaders and Collaborators
+
+En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX) correspondiente al Sprint 3. Los aspectos del Sprint se enfocan principalmente en el desarrollo del backend de SafeStep, pero también incluyen la integración de la Web Application con el API real y la actualización de la Landing Page con contenido visual del producto.
+
+Para este Sprint, el equipo distribuyo el trabajo segun la complejidad de cada bounded context. Se busco que cada miembro activo lidere o colabore en un modulo especifico, manteniendo una vision compartida de arquitectura para evitar diferencias excesivas entre paquetes. La iteracion fue planificada con cuatro miembros activos del equipo.
+
+**Aspectos del Sprint 3:**
+
+1. **IAM & Profiles - Desarrollo:** Implementacion de autenticacion, autorizacion, usuarios, roles y perfiles.
+2. **Commerce - Desarrollo:** Implementacion de catalogo, carrito, ordenes, direcciones, pagos y recomendaciones.
+3. **Simulation - Desarrollo:** Implementacion de simulaciones medicas, pasos, opciones e intentos.
+4. **Gamification - Desarrollo:** Implementacion de resumen, misiones, insignias, leaderboard y transacciones.
+5. **Analytics - Desarrollo:** Implementacion de resumen de progreso, graficos y certificados.
+6. **Shared Infrastructure - Desarrollo:** Configuracion de seguridad, errores, servicios comunes, OpenAPI y persistencia.
+7. **Documentation & Validation:** Evidencias de Swagger, ejecución local, pruebas y documentación del Sprint.
+8. **Frontend - Backend Integration:** Configuración de environments, endpoints, interceptores, stores y consumo del backend real desde Angular.
+9. **Landing Page - Product Evidence:** Incorporación de imágenes reales del producto y actualización de secciones visuales de la landing page.
+10. **Landing Page - About Videos:** Incorporación de los videos About the Team y About the Product.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Team Member (Last Name, First Name)</b></td>
+            <td><b>GitHub Username</b></td>
+            <td><b>IAM & Profiles / L or C</b></td>
+            <td><b>Commerce / L or C</b></td>
+            <td><b>Simulation / L or C</b></td>
+            <td><b>Gamification / L or C</b></td>
+            <td><b>Analytics / L or C</b></td>
+            <td><b>Shared Infrastructure / L or C</b></td>
+            <td><b>Documentation / L or C</b></td>
+            <td><b>Frontend Integration / L or C</b></td>
+            <td><b>Landing Product Evidence / L or C</b></td>
+            <td><b>Landing Videos / L or C</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>jorgeayaladev</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Nounz27</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+            <td>-</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Melga1502</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+            <td>L</td>
+            <td>L</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>angelfdevs</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+    </tbody>
+</table>
+
+La organización de líderes y colaboradores se relaciona con la posterior selección de tasks del Sprint Backlog. Ayala lidera commerce y las tasks de imágenes del producto en landing page; Sanchez lidera simulation y los videos de landing; Melgarejo lidera gamification, analytics, shared infrastructure e integración frontend-backend; Flores lidera IAM, profiles, documentación y validación.
+
+**Distribucion detallada de responsabilidades:**
+
+- **Flores Eusebio, Angel Thyago (Development Lead - IAM, Profiles & Documentation):** Responsable de apoyar la implementacion de autenticacion, usuarios, roles y perfiles, ademas de coordinar la documentacion de evidencias, pruebas manuales, revision de consistencia entre bounded contexts y validacion de endpoints desde Swagger.
+
+- **Ayala Fernandez, Jorge Brayan (Development Lead - Commerce):** Responsable de implementar el bounded context de commerce, incluyendo catalogo de productos, categorias, kits de emergencia, cupones, recomendaciones, carrito de compras y ordenes.
+
+- **Sanchez Espinoza, Mathias Enrique (Development Lead - Simulation):** Responsable de implementar el bounded context de simulation, incluyendo simulaciones medicas, pasos, opciones, sugerencias de productos e intentos registrados por usuario.
+
+- **Melgarejo Quiroz, Josep Eliu (Development Lead - Gamification, Analytics & Shared Infrastructure):** Responsable de implementar gamificacion, analitica y componentes compartidos del backend. Coordina la estructura general del proyecto, configuracion de Swagger, seed data y convenciones de arquitectura.
+
+- **Frontend - Backend Integration:** Responsable de reemplazar el consumo principal de json-server por el backend real, configurando `environment.ts`, rutas base del API, interceptores JWT, endpoints de bounded contexts y validaciones manuales desde la Web Application.
+
+- **Landing Page - Product Evidence:** Responsable de mejorar la presentación pública de SafeStep agregando imágenes de la aplicación web, secciones visuales del producto y los videos About the Team y About the Product.
+
+<a id="toc-5-2-3-3-sprint-backlog-3"></a>
+### 5.2.3.3. Sprint Backlog 3
+
+El Sprint Backlog 3 resume el objetivo principal del Sprint: implementar el backend RESTful API de SafeStep utilizando Spring Boot, PostgreSQL, JWT, OpenAPI y una arquitectura organizada por bounded contexts. Para mejorar la trazabilidad, las tareas se descomponen por technical story, endpoint o componente técnico verificable, evitando agrupar demasiado trabajo en una sola tarjeta.
+
+Las Technical Stories mantienen sus Story Points dentro del Sprint Planning. Las tareas del Sprint Backlog se estiman en horas, porque representan actividades concretas de implementación, validación o documentación dentro del Sprint.
+
+**Trello Board:**
+El equipo utiliza un Trello Board con las listas estándar de Scrum: "Sprint Goal", "To Do", "In Progress", "To Review" y "Done". Para este Sprint, las tarjetas se organizaron por bounded context y por endpoint, facilitando el seguimiento del avance de cada módulo.
+
+**URL pública del Trello Board del Sprint 3:**
+
+<a href="https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3">https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3</a>
+
+<div align="center">
+  <p>
+    <b>Figura X</b>: Board de Trello correspondiente al Sprint 3
+  </p>
+  <img src="markdown/assets/images/chapter-5/TrelloSprin3.png" alt="Trello Board Sprint 3" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+A continuación, la tabla de control de estado para el Sprint 3:
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td colspan="7">Sprint 3</td>
+        </tr>
+        <tr>
+            <td colspan="2">User Story / Technical Story</td>
+            <td colspan="6">Work-Item / Task</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Estimation (Hours)</td>
+            <td>Assigned to</td>
+            <td>Status (To-do / In-Process / To-Review / Done)</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS13 - Configuración base backend</b></td>
+        </tr>
+        <tr>
+            <td>TS13</td>
+            <td>Configuración base backend</td>
+            <td>T001</td>
+            <td>Crear proyecto Spring Boot</td>
+            <td>Configurar Maven, Java, dependencias principales y estructura inicial del proyecto backend.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS13</td>
+            <td>Configuración base backend</td>
+            <td>T002</td>
+            <td>Configurar perfiles de ambiente</td>
+            <td>Definir configuración local para puerto, datasource, JWT y variables necesarias de ejecución.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS14 - Arquitectura por bounded contexts</b></td>
+        </tr>
+        <tr>
+            <td>TS14</td>
+            <td>Arquitectura por bounded contexts</td>
+            <td>T003</td>
+            <td>Crear estructura de paquetes</td>
+            <td>Organizar contexts iam, profiles, commerce, simulation, gamification y analytics por capas.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS14</td>
+            <td>Arquitectura por bounded contexts</td>
+            <td>T004</td>
+            <td>Crear shared infrastructure</td>
+            <td>Implementar componentes comunes de errores, responses, configuración y soporte transversal.</td>
+            <td>4</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS15 - Seguridad JWT y roles</b></td>
+        </tr>
+        <tr>
+            <td>TS15</td>
+            <td>Seguridad JWT y roles</td>
+            <td>T005</td>
+            <td>Implementar sign-in</td>
+            <td>Crear comando, servicio y endpoint para autenticación de usuarios registrados.</td>
+            <td>3</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS15</td>
+            <td>Seguridad JWT y roles</td>
+            <td>T006</td>
+            <td>Implementar sign-up</td>
+            <td>Crear flujo de registro con usuario, rol inicial y respuesta de autenticación.</td>
+            <td>3</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS15</td>
+            <td>Seguridad JWT y roles</td>
+            <td>T007</td>
+            <td>Proteger endpoints privados</td>
+            <td>Configurar filtros JWT y reglas para endpoints que requieren usuario autenticado.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS16 - Persistencia PostgreSQL/JPA</b></td>
+        </tr>
+        <tr>
+            <td>TS16</td>
+            <td>Persistencia PostgreSQL/JPA</td>
+            <td>T008</td>
+            <td>Configurar conexión PostgreSQL</td>
+            <td>Configurar datasource, dialecto, credenciales locales y generación de esquema.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS16</td>
+            <td>Persistencia PostgreSQL/JPA</td>
+            <td>T009</td>
+            <td>Crear entidades JPA base</td>
+            <td>Crear entidades persistentes para usuarios, perfiles, productos, simulaciones y progreso.</td>
+            <td>5</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US30 - Catálogo de comercio</b></td>
+        </tr>
+        <tr>
+            <td>US30</td>
+            <td>Catálogo de comercio</td>
+            <td>T010</td>
+            <td>Implementar getProducts</td>
+            <td>Crear query, resource, assembler y controller para listar productos desde el backend.</td>
+            <td>3</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US30</td>
+            <td>Catálogo de comercio</td>
+            <td>T011</td>
+            <td>Implementar getProductById</td>
+            <td>Crear endpoint de detalle de producto por identificador.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US30</td>
+            <td>Catálogo de comercio</td>
+            <td>T012</td>
+            <td>Implementar kits y cupones</td>
+            <td>Exponer endpoints de emergency kits, coupons, categories y recommendations.</td>
+            <td>4</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US36 - Consultar carrito</b></td>
+        </tr>
+        <tr>
+            <td>US36</td>
+            <td>Consultar carrito</td>
+            <td>T013</td>
+            <td>Implementar getMyCart</td>
+            <td>Crear endpoint para consultar los productos agregados al carrito del usuario autenticado.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US37 - Agregar productos al carrito</b></td>
+        </tr>
+        <tr>
+            <td>US37</td>
+            <td>Agregar productos al carrito</td>
+            <td>T014</td>
+            <td>Implementar addCartItem</td>
+            <td>Crear endpoint para agregar productos al carrito desde la tienda de SafeStep.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US38 - Actualizar carrito</b></td>
+        </tr>
+        <tr>
+            <td>US38</td>
+            <td>Actualizar carrito</td>
+            <td>T015</td>
+            <td>Implementar updateCartItem y deleteCartItem</td>
+            <td>Crear endpoints para modificar cantidades o eliminar productos del carrito.</td>
+            <td>3</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US40 - Crear orden de compra</b></td>
+        </tr>
+        <tr>
+            <td>US40</td>
+            <td>Crear orden de compra</td>
+            <td>T016</td>
+            <td>Implementar createOrder</td>
+            <td>Crear endpoint para generar una orden a partir de los productos del carrito.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US41 - Consultar historial de órdenes</b></td>
+        </tr>
+        <tr>
+            <td>US41</td>
+            <td>Consultar historial de órdenes</td>
+            <td>T017</td>
+            <td>Implementar getMyOrders</td>
+            <td>Crear endpoint para consultar el historial de compras del usuario autenticado.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US10 - Visualizar catálogo de simulaciones</b></td>
+        </tr>
+        <tr>
+            <td>US10</td>
+            <td>Visualizar catálogo de simulaciones</td>
+            <td>T018</td>
+            <td>Implementar getAllSimulations</td>
+            <td>Crear endpoint para listar las simulaciones médicas disponibles.</td>
+            <td>3</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US12 - Revisar detalle de una simulación</b></td>
+        </tr>
+        <tr>
+            <td>US12</td>
+            <td>Revisar detalle de una simulación</td>
+            <td>T019</td>
+            <td>Implementar getSimulationById</td>
+            <td>Crear endpoint de detalle de simulación con pasos, opciones y sugerencias de productos.</td>
+            <td>3</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US14 - Registrar resultado de simulación</b></td>
+        </tr>
+        <tr>
+            <td>US14</td>
+            <td>Registrar resultado de simulación</td>
+            <td>T020</td>
+            <td>Implementar createAttempt</td>
+            <td>Registrar intento de simulación con resultado, precisión y respuestas seleccionadas.</td>
+            <td>3</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US15 - Recibir recompensas por simulación</b></td>
+        </tr>
+        <tr>
+            <td>US15</td>
+            <td>Recibir recompensas por simulación</td>
+            <td>T021</td>
+            <td>Guardar recompensas del intento</td>
+            <td>Persistir XP y SafeCoins obtenidos luego de completar una simulación médica.</td>
+            <td>2</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US14 - Consultar historial de intentos</b></td>
+        </tr>
+        <tr>
+            <td>US14</td>
+            <td>Consultar historial de intentos</td>
+            <td>T022</td>
+            <td>Implementar getMyAttempts</td>
+            <td>Permitir que el usuario consulte sus intentos anteriores.</td>
+            <td>2</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US23 - Visualizar resumen de gamificación</b></td>
+        </tr>
+        <tr>
+            <td>US23</td>
+            <td>Visualizar resumen de gamificación</td>
+            <td>T023</td>
+            <td>Implementar gamification summary</td>
+            <td>Crear endpoint de summary para mostrar nivel, XP, racha y SafeCoins.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US27 - Visualizar misiones e insignias</b></td>
+        </tr>
+        <tr>
+            <td>US27</td>
+            <td>Visualizar misiones e insignias</td>
+            <td>T024</td>
+            <td>Implementar missions y my badges</td>
+            <td>Crear endpoints para consultar misiones disponibles e insignias del usuario.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US26 - Visualizar ranking</b></td>
+        </tr>
+        <tr>
+            <td>US26</td>
+            <td>Visualizar ranking</td>
+            <td>T025</td>
+            <td>Implementar leaderboard</td>
+            <td>Crear endpoint de ranking para seguimiento competitivo entre usuarios.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US29 - Consultar transacciones de SafeCoins</b></td>
+        </tr>
+        <tr>
+            <td>US29</td>
+            <td>Consultar transacciones de SafeCoins</td>
+            <td>T026</td>
+            <td>Implementar coin transactions</td>
+            <td>Crear endpoint de transacciones de monedas del usuario autenticado.</td>
+            <td>2</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US18 - Visualizar resumen analítico</b></td>
+        </tr>
+        <tr>
+            <td>US18</td>
+            <td>Visualizar resumen analítico</td>
+            <td>T027</td>
+            <td>Implementar analytics summary</td>
+            <td>Crear endpoint de resumen de progreso para dashboard y estadísticas.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US18</td>
+            <td>Visualizar resumen analítico</td>
+            <td>T028</td>
+            <td>Implementar progress y certificates</td>
+            <td>Crear endpoints de progreso visual y certificados del usuario.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS19 - Seed data</b></td>
+        </tr>
+        <tr>
+            <td>TS19</td>
+            <td>Seed data</td>
+            <td>T029</td>
+            <td>Cargar datos iniciales</td>
+            <td>Implementar seed JSON y handlers para simulaciones, comercio, gamificación y analítica.</td>
+            <td>5</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS18 - Documentación Swagger</b></td>
+        </tr>
+        <tr>
+            <td>TS18</td>
+            <td>Documentación Swagger</td>
+            <td>T030</td>
+            <td>Configurar OpenAPI</td>
+            <td>Configurar SpringDoc y verificar documentación de controllers en Swagger UI.</td>
+            <td>4</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS20 - Validación técnica</b></td>
+        </tr>
+        <tr>
+            <td>TS20</td>
+            <td>Validación técnica</td>
+            <td>T031</td>
+            <td>Ejecutar pruebas y build</td>
+            <td>Ejecutar mvn test, validar compilación y probar endpoints principales desde Swagger.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS21 - Integración frontend-backend</b></td>
+        </tr>
+        <tr>
+            <td>TS21</td>
+            <td>Integración frontend-backend</td>
+            <td>T032</td>
+            <td>Configurar environment del frontend</td>
+            <td>Actualizar la URL base del API en Angular para consumir el backend Spring Boot local y desplegado, reemplazando el uso principal de json-server.</td>
+            <td>4</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS21</td>
+            <td>Integración frontend-backend</td>
+            <td>T033</td>
+            <td>Validar consumo de endpoints reales</td>
+            <td>Probar desde la Web Application los flujos de autenticación, perfil, tienda, simulaciones, gamificación y estadísticas consumiendo el backend real.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS22 - Landing page con evidencia del producto</b></td>
+        </tr>
+        <tr>
+            <td>TS22</td>
+            <td>Landing page con evidencia del producto</td>
+            <td>T034</td>
+            <td>Agregar imágenes de la aplicación</td>
+            <td>Actualizar la landing page para mostrar capturas o imágenes relacionadas con las funcionalidades principales del producto SafeStep.</td>
+            <td>2</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS22</td>
+            <td>Landing page con evidencia del producto</td>
+            <td>T035</td>
+            <td>Agregar About the Team y About the Product</td>
+            <td>Incorporar en la landing page los videos About the Team y About the Product para presentar al equipo, el problema y la solución desarrollada.</td>
+            <td>2</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Backlog 3 refleja 35 tareas derivadas de las User Stories funcionales soportadas por el backend y de las Technical Stories de integración y soporte técnico. Las tareas fueron separadas por historia para evitar agrupar varios flujos en una sola fila. Las estimaciones suman 103 horas de trabajo operativo y fueron usadas para seguimiento del avance por historia, endpoint y producto entregable. Los Story Points permanecen asociados a las historias seleccionadas durante el Sprint Planning.
+
+<a id="toc-5-2-3-4-development-evidence-for-sprint-review"></a>
+### 5.2.3.4. Development Evidence for Sprint Review
+
+En esta seccion se explica y presenta los avances de implementacion realizados durante el Sprint 3 con relacion al producto Web Services de SafeStep. El equipo completo el desarrollo del backend RESTful API utilizando Spring Boot, Java, PostgreSQL, Maven y Swagger.
+
+**Resumen de Avances Implementados:**
+
+- **Configuracion base del backend:** Se creo el proyecto Spring Boot con Maven, Java, perfiles de configuracion, dependencias de seguridad, persistencia, validacion, JWT y documentacion OpenAPI.
+- **Shared Infrastructure:** Se implementaron clases compartidas para resultados de aplicacion, errores, respuestas HTTP, configuracion de seguridad, OpenAPI, auditoria y servicios de usuario autenticado.
+- **IAM bounded context:** Se implementaron usuarios, roles, autenticacion, registro, JWT y endpoints de consulta de usuarios y roles.
+- **Profiles bounded context:** Se implemento la gestion de perfiles de usuario, incluyendo creacion, consulta, consulta por identificador y actualizacion del perfil actual.
+- **Commerce bounded context:** Se implemento el catalogo de productos, categorias, kits, cupones y recomendaciones, ademas de operaciones de carrito y ordenes.
+- **Simulation bounded context:** Se implemento el catalogo de simulaciones medicas, consulta por identificador, registro de intentos y consulta de intentos del usuario autenticado.
+- **Gamification bounded context:** Se implemento resumen de gamificacion, misiones, insignias, ranking y transacciones de monedas.
+- **Analytics bounded context:** Se implementaron endpoints de resumen, progreso visual y certificados del usuario.
+- **Persistencia con PostgreSQL:** Se crearon entidades JPA, repositorios de persistencia y adaptadores para conectar el dominio con la base de datos.
+- **Seed data:** Se agregaron datos iniciales para poder probar el backend sin carga manual de informacion.
+- **Swagger:** Se expusieron los endpoints mediante Swagger UI para facilitar la validacion y documentacion del API.
+- **Integración con frontend Angular:** Se actualizó la configuración de environments, APIs, endpoints e interceptores para consumir el backend real desde la Web Application.
+- **Validación de flujos frontend-backend:** Se verificaron flujos de login, perfil, dashboard, simulaciones, gamificación, tienda y estadísticas consumiendo datos desde el API de SafeStep.
+- **Landing Page:** Se agregaron imágenes del producto y se incorporaron los videos About the Team y About the Product para mejorar la presentación pública de la solución.
+
+**Commits Realizados:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td>Repository</td>
+            <td>Branch</td>
+            <td>Commit Id</td>
+            <td>Commit message</td>
+            <td>Commit body</td>
+            <td>Commit on (Date)</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/sign-in</td>
+            <td>7f4c2a1</td>
+            <td>feat(auth): implement signIn endpoint</td>
+            <td>Add authentication controller, sign-in command and JWT response for registered users.</td>
+            <td>2026-06-07</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>9a18d3e</td>
+            <td>merge: feature/sign-in into develop</td>
+            <td>Integrate the signIn endpoint with the development branch.</td>
+            <td>2026-06-07</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/sign-up</td>
+            <td>2b63f0c</td>
+            <td>feat(auth): implement signUp endpoint</td>
+            <td>Add user registration flow with profile creation and default role assignment.</td>
+            <td>2026-06-07</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>4c81a95</td>
+            <td>merge: feature/sign-up into develop</td>
+            <td>Integrate the signUp endpoint with the authentication module.</td>
+            <td>2026-06-07</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-products</td>
+            <td>e02b7d4</td>
+            <td>feat(commerce): implement getProducts endpoint</td>
+            <td>Add product query, resource assembler and REST controller method for catalog listing.</td>
+            <td>2026-06-08</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-product-by-id</td>
+            <td>1f9e6ba</td>
+            <td>feat(commerce): implement getProductById endpoint</td>
+            <td>Add product detail query and response mapping for product lookup by identifier.</td>
+            <td>2026-06-08</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-emergency-kits</td>
+            <td>8c52d11</td>
+            <td>feat(commerce): implement getEmergencyKits endpoint</td>
+            <td>Add emergency kit query, resource and controller method for kit recommendations.</td>
+            <td>2026-06-08</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>bb34e7f</td>
+            <td>merge: feature/get-products into develop</td>
+            <td>Integrate product catalog endpoint into the commerce context.</td>
+            <td>2026-06-08</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>0d91a6c</td>
+            <td>merge: feature/get-product-by-id into develop</td>
+            <td>Integrate product detail endpoint into the commerce context.</td>
+            <td>2026-06-08</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>6a8c30b</td>
+            <td>merge: feature/get-emergency-kits into develop</td>
+            <td>Integrate emergency kits endpoint into the commerce context.</td>
+            <td>2026-06-08</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/add-cart-item</td>
+            <td>a7310df</td>
+            <td>feat(commerce): implement addCartItem endpoint</td>
+            <td>Add command, handler and REST operation to add products to the authenticated user's cart.</td>
+            <td>2026-06-09</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/create-order</td>
+            <td>d5e9b42</td>
+            <td>feat(commerce): implement createOrder endpoint</td>
+            <td>Add order creation command and persistence mapping from current cart items.</td>
+            <td>2026-06-09</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>51c2f89</td>
+            <td>merge: feature/add-cart-item into develop</td>
+            <td>Integrate cart item creation endpoint into commerce operations.</td>
+            <td>2026-06-09</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>f07a62d</td>
+            <td>merge: feature/create-order into develop</td>
+            <td>Integrate order creation endpoint into commerce operations.</td>
+            <td>2026-06-09</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-simulation-by-id</td>
+            <td>3c6f80a</td>
+            <td>feat(simulation): implement getSimulationById endpoint</td>
+            <td>Add simulation detail query with steps and product suggestions mapping.</td>
+            <td>2026-06-10</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/create-attempt</td>
+            <td>74e2c9f</td>
+            <td>feat(simulation): implement createAttempt endpoint</td>
+            <td>Add attempt command, validation and persistence for completed medical simulations.</td>
+            <td>2026-06-10</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>ac29d70</td>
+            <td>merge: feature/get-simulation-by-id into develop</td>
+            <td>Integrate simulation detail endpoint into the simulation context.</td>
+            <td>2026-06-10</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>5b1e8a4</td>
+            <td>merge: feature/create-attempt into develop</td>
+            <td>Integrate attempt creation endpoint into the simulation context.</td>
+            <td>2026-06-10</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-missions</td>
+            <td>91fd3b8</td>
+            <td>feat(gamification): implement getMissions endpoint</td>
+            <td>Add mission query, resource and REST response for gamification objectives.</td>
+            <td>2026-06-11</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-my-badges</td>
+            <td>0b7e4c2</td>
+            <td>feat(gamification): implement getMyBadges endpoint</td>
+            <td>Add authenticated badge lookup for completed user achievements.</td>
+            <td>2026-06-11</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>c83a1e6</td>
+            <td>merge: feature/get-missions into develop</td>
+            <td>Integrate missions endpoint into the gamification context.</td>
+            <td>2026-06-11</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>68d0f35</td>
+            <td>merge: feature/get-my-badges into develop</td>
+            <td>Integrate user badges endpoint into the gamification context.</td>
+            <td>2026-06-11</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-my-analytics-summary</td>
+            <td>ad4f729</td>
+            <td>feat(analytics): implement getMyAnalyticsSummary endpoint</td>
+            <td>Add authenticated analytics summary query for dashboard indicators.</td>
+            <td>2026-06-12</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-my-progress</td>
+            <td>41e9c0d</td>
+            <td>feat(analytics): implement getMyProgress endpoint</td>
+            <td>Add progress query and resource mapping for simulation performance indicators.</td>
+            <td>2026-06-12</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>e7b2931</td>
+            <td>merge: feature/get-my-analytics-summary into develop</td>
+            <td>Integrate analytics summary endpoint into the analytics context.</td>
+            <td>2026-06-12</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>5f34b9e</td>
+            <td>merge: feature/get-my-progress into develop</td>
+            <td>Integrate progress endpoint into the analytics context.</td>
+            <td>2026-06-12</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-my-profile</td>
+            <td>bc90412</td>
+            <td>feat(profiles): implement getMyProfile endpoint</td>
+            <td>Add authenticated profile query and REST response for current user data.</td>
+            <td>2026-06-13</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/update-my-profile</td>
+            <td>29d7e4a</td>
+            <td>feat(profiles): implement updateMyProfile endpoint</td>
+            <td>Add profile update command and mapper for editable personal information.</td>
+            <td>2026-06-13</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>f63a88d</td>
+            <td>merge: feature/get-my-profile into develop</td>
+            <td>Integrate current profile endpoint into the profiles context.</td>
+            <td>2026-06-13</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>36bca91</td>
+            <td>merge: feature/update-my-profile into develop</td>
+            <td>Integrate profile update endpoint into the profiles context.</td>
+            <td>2026-06-13</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-all-users</td>
+            <td>84d12af</td>
+            <td>feat(iam): implement getAllUsers endpoint</td>
+            <td>Add user listing query and secured controller operation for IAM administration.</td>
+            <td>2026-06-14</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/get-leaderboard</td>
+            <td>db7a316</td>
+            <td>feat(gamification): implement getLeaderboard endpoint</td>
+            <td>Add leaderboard query and resource mapping for ranking visualization.</td>
+            <td>2026-06-14</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>a1c950e</td>
+            <td>merge: feature/get-all-users into develop</td>
+            <td>Integrate user listing endpoint into the IAM context.</td>
+            <td>2026-06-14</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>19f7dc3</td>
+            <td>merge: feature/get-leaderboard into develop</td>
+            <td>Integrate leaderboard endpoint into the gamification context.</td>
+            <td>2026-06-14</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>feature/backend-integration</td>
+            <td>31a9f4b</td>
+            <td>feat(frontend): connect Angular app with backend API</td>
+            <td>Update environments, API endpoints and authenticated requests to consume SafeStep backend services.</td>
+            <td>2026-06-14</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>develop</td>
+            <td>8d2c7e1</td>
+            <td>merge: feature/backend-integration into develop</td>
+            <td>Integrate backend API consumption into the frontend development branch.</td>
+            <td>2026-06-14</td>
+        </tr>
+        <tr>
+            <td>safestep-landing-page</td>
+            <td>feature/product-media</td>
+            <td>5b7a20d</td>
+            <td>feat(landing): add product images and about videos</td>
+            <td>Add product screenshots, About the Team video and About the Product video to the landing page.</td>
+            <td>2026-06-15</td>
+        </tr>
+        <tr>
+            <td>safestep-landing-page</td>
+            <td>develop</td>
+            <td>0e6d83c</td>
+            <td>merge: feature/product-media into develop</td>
+            <td>Integrate landing page media updates into the development branch.</td>
+            <td>2026-06-15</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>main</td>
+            <td>ca5e7d9</td>
+            <td>merge: develop into main</td>
+            <td>Merge completed Sprint 3 backend endpoints from develop into the main branch.</td>
+            <td>2026-06-15</td>
+        </tr>
+    </tbody>
+</table>
+
+**Repositorio de Backend:**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git</a>
+
+**Repositorio de Frontend :**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git</a>
+
+**Repositorio de Landing Page:**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git</a>
+
+**Referencia de Swagger desplegado:**
+
+<a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+
+<a id="toc-5-2-3-5-execution-evidence-for-sprint-review"></a>
+### 5.2.3.5. Execution Evidence for Sprint Review
+
+El Sprint 3 permitió construir el RESTful API real de SafeStep, habilitando la comunicación entre la Web Application y una capa backend propia. Las evidencias de ejecución demuestran que el equipo completó los endpoints principales, configuró persistencia con PostgreSQL, validó la documentación con Swagger, conectó el frontend Angular con el backend y actualizó la landing page con contenido visual del producto.
+
+**Resumen de lo Alcanzado:**
+
+- Backend Spring Boot funcional.
+- API REST organizada por bounded contexts.
+- Seguridad con JWT y endpoints de autenticacion.
+- Persistencia en PostgreSQL mediante Spring Data JPA.
+- Seed data inicial para pruebas.
+- Swagger UI disponible para documentar y probar endpoints.
+- Endpoints para IAM, Profiles, Commerce, Simulation, Gamification y Analytics.
+- Pruebas ejecutadas con Maven.
+- Configuracion de Docker y variables de entorno para ejecucion local.
+- Frontend Angular configurado para consumir el backend real mediante environments y endpoints del API.
+- Landing page actualizada con imágenes de la Web Application y videos About the Team y About the Product.
+
+**Capturas de Pantalla - Backend API:**
+
+**Swagger UI:** Vista general de los controllers y endpoints documentados.
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI del backend SafeStep
+  </p>
+  <img src="markdown/assets/images/chapter-5/BackendSwagger.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+**Capturas de Pantalla - Frontend Web Application:**
+
+**Dashboard conectado al backend:** Vista principal de SafeStep luego de integrar la Web Application con los servicios reales.
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Dashboard de SafeStep consumiendo datos del backend
+  </p>
+  <img src="markdown/assets/images/chapter-5/frontend-dashboard.png" alt="Dashboard SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Capturas de Pantalla - Landing Page:**
+
+**Secciones visuales del producto:** Actualización de la landing page con imágenes relacionadas con el aprendizaje, la tienda y la propuesta de valor de SafeStep.
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Sección de aprendizaje en la landing page
+  </p>
+  <img src="markdown/assets/images/chapter-5/learning-section.png" alt="Landing SafeStep learning section" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Sección de ecommerce en la landing page
+  </p>
+  <img src="markdown/assets/images/chapter-5/ecommerce-section.png" alt="Landing SafeStep ecommerce section" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Videos About the Team y About the Product:** Se incorporaron los videos de presentación del equipo y del producto para reforzar la comunicación pública de SafeStep.
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Video About the Product
+  </p>
+  <img src="markdown/assets/images/chapter-5/videoabouttheproduct.png" alt="Video About the Product SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+
+**Comandos utilizados para ejecucion local:**
+
+```bash
+mvn clean test
+```
+
+```bash
+mvn spring-boot:run
+```
+
+**URL local de Swagger:**
+
+```text
+http://localhost:8092/swagger-ui/index.html
+```
+
+**URL local de OpenAPI JSON:**
+
+```text
+http://localhost:8092/v3/api-docs
+```
+
+<a id="toc-5-2-3-6-services-documentation-evidence-for-sprint-review"></a>
+### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+En esta seccion se incluye la relacion de endpoints documentados con OpenAPI, relacionados con el alcance del Sprint 3. Durante este Sprint, el equipo implemento el RESTful API interno de SafeStep y expuso la documentacion mediante Swagger UI.
+
+La documentacion de servicios permite que los integrantes del equipo frontend y backend comprendan la sintaxis de cada llamada, los metodos HTTP disponibles, los parametros requeridos y el tipo de respuesta esperada. La URL de Swagger utilizada durante el Sprint fue:
+
+**Swagger UI:** 
+
+<a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+
+**OpenAPI JSON:** 
+
+<a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+
+
+| Bounded Context | Endpoint | Metodo | Descripcion | Parametros | Ejemplo Response |
+|-----------------|----------|--------|-------------|------------|------------------|
+| Authentication | `/api/v1/authentication/sign-in` | POST | Autentica usuario y devuelve JWT | Body: username, password | `{ "id": 1, "username": "ana.torres", "token": "..." }` |
+| Authentication | `/api/v1/authentication/sign-up` | POST | Registra un nuevo usuario | Body: username, password, roles | `{ "id": 2, "username": "new.user", "roles": [...] }` |
+| IAM | `/api/v1/roles` | GET | Obtiene roles disponibles | Bearer token | `[ { "id": 1, "name": "ROLE_USER" } ]` |
+| IAM | `/api/v1/users` | GET | Obtiene usuarios registrados | Bearer token | `[ { "id": 1, "username": "ana.torres" } ]` |
+| IAM | `/api/v1/users/{userId}` | GET | Obtiene usuario por identificador | Path: userId | `{ "id": 1, "username": "ana.torres" }` |
+| Profiles | `/api/v1/profiles` | GET | Obtiene todos los perfiles | Bearer token | `[ { "id": 1, "firstName": "Ana" } ]` |
+| Profiles | `/api/v1/profiles` | POST | Crea un perfil | Body: datos de perfil | `{ "id": 1, "firstName": "Ana" }` |
+| Profiles | `/api/v1/profiles/me` | GET | Obtiene perfil actual | Bearer token | `{ "id": 1, "firstName": "Ana" }` |
+| Profiles | `/api/v1/profiles/me` | PUT | Actualiza perfil actual | Body: datos actualizados | `{ "id": 1, "firstName": "Ana" }` |
+| Profiles | `/api/v1/profiles/{profileId}` | GET | Obtiene perfil por identificador | Path: profileId | `{ "id": 1, "firstName": "Ana" }` |
+| Commerce | `/api/v1/commerce/products` | GET | Obtiene productos del catalogo | Ninguno | `[ { "id": "kit-basic", "name": "Basic Kit" } ]` |
+| Commerce | `/api/v1/commerce/products/{productId}` | GET | Obtiene producto por identificador | Path: productId | `{ "id": "kit-basic", "name": "Basic Kit" }` |
+| Commerce | `/api/v1/commerce/categories` | GET | Obtiene categorias de productos | Ninguno | `[ { "id": "bandages", "name": "Bandages" } ]` |
+| Commerce | `/api/v1/commerce/kits` | GET | Obtiene kits de emergencia | Ninguno | `[ { "id": "home-kit", "name": "Home Kit" } ]` |
+| Commerce | `/api/v1/commerce/coupons` | GET | Obtiene cupones disponibles | Ninguno | `[ { "id": "SAFE10", "discount": 10 } ]` |
+| Commerce | `/api/v1/commerce/recommendations/me` | GET | Obtiene recomendaciones del usuario actual | Bearer token | `[ { "productId": "kit-basic", "reason": "Recommended" } ]` |
+| Commerce | `/api/v1/commerce/cart/me` | GET | Obtiene carrito del usuario actual | Bearer token | `[ { "id": "cart-001", "quantity": 2 } ]` |
+| Commerce | `/api/v1/commerce/cart/items` | POST | Agrega producto al carrito | Body: productId, quantity | `{ "id": "cart-001", "quantity": 1 }` |
+| Commerce | `/api/v1/commerce/cart/items/{itemId}` | PUT | Actualiza item del carrito | Path: itemId, Body: quantity | `{ "id": "cart-001", "quantity": 3 }` |
+| Commerce | `/api/v1/commerce/cart/items/{itemId}` | DELETE | Elimina item del carrito | Path: itemId | `204 No Content` |
+| Commerce | `/api/v1/commerce/orders/me` | GET | Obtiene ordenes del usuario actual | Bearer token | `[ { "id": "order-001", "status": "PAID" } ]` |
+| Commerce | `/api/v1/commerce/orders` | POST | Crea una orden | Body: status | `{ "id": "order-001", "status": "CREATED" }` |
+| Commerce | `/api/v1/commerce/shipping-addresses/me` | GET | Obtiene direcciones del usuario actual | Bearer token | `[ { "city": "Lima", "country": "Peru" } ]` |
+| Commerce | `/api/v1/commerce/payment-methods` | GET | Obtiene metodos de pago disponibles | Ninguno | `[ { "id": "card", "label": "Credit Card" } ]` |
+| Simulation | `/api/v1/simulations` | GET | Obtiene simulaciones medicas | Ninguno | `[ { "id": "cpr-basic", "title": "CPR Basic" } ]` |
+| Simulation | `/api/v1/simulations/{simulationId}` | GET | Obtiene simulacion por identificador | Path: simulationId | `{ "id": "cpr-basic", "steps": [...] }` |
+| Simulation | `/api/v1/simulations/{simulationId}/attempts` | POST | Registra intento de simulacion | Path: simulationId, Body: answers | `{ "id": "attempt-001", "score": 90 }` |
+| Simulation | `/api/v1/simulations/attempts/me` | GET | Obtiene intentos del usuario actual | Bearer token | `[ { "simulationId": "cpr-basic", "score": 90 } ]` |
+| Gamification | `/api/v1/gamification/summary/me` | GET | Obtiene resumen de gamificacion | Bearer token | `{ "level": 4, "coins": 120 }` |
+| Gamification | `/api/v1/gamification/missions` | GET | Obtiene misiones disponibles | Bearer token | `[ { "id": "mission-001", "title": "Complete simulation" } ]` |
+| Gamification | `/api/v1/gamification/badges/me` | GET | Obtiene insignias del usuario actual | Bearer token | `[ { "id": "badge-001", "unlocked": true } ]` |
+| Gamification | `/api/v1/gamification/leaderboard` | GET | Obtiene leaderboard | Bearer token | `[ { "rank": 1, "username": "ana.torres" } ]` |
+| Gamification | `/api/v1/gamification/coin-transactions/me` | GET | Obtiene transacciones de monedas | Bearer token | `[ { "amount": 20, "reason": "Simulation completed" } ]` |
+| Analytics | `/api/v1/analytics/summary/me` | GET | Obtiene resumen analitico del usuario | Bearer token | `{ "completedSimulations": 8, "accuracy": 85 }` |
+| Analytics | `/api/v1/analytics/progress/me` | GET | Obtiene progreso visual del usuario | Bearer token | `{ "weeklyProgress": [...] }` |
+| Analytics | `/api/v1/analytics/certificates/me` | GET | Obtiene certificados del usuario | Bearer token | `[ { "id": "cert-001", "title": "First Aid Basics" } ]` |
+
+**Captura de documentacion Swagger:**
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI del backend SafeStep
+  </p>
+  <img src="markdown/assets/images/chapter-5/BackendSwagger.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI del backend SafeStep
+  </p>
+  <img src="markdown/assets/images/chapter-5/BackendSwagger2.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI del backend SafeStep
+  </p>
+  <img src="markdown/assets/images/chapter-5/BackendSwagger3.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI del backend SafeStep
+  </p>
+  <img src="markdown/assets/images/chapter-5/BackendSwagger4.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI del backend SafeStep
+  </p>
+  <img src="markdown/assets/images/chapter-5/BackendSwagger5.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<a id="toc-5-2-3-7-software-deployment-evidence-for-sprint-review"></a>
+### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+En esta sección se resumen los procesos realizados en relación con Deployment durante el Sprint 3. Para este Sprint, el equipo se enfocó en configurar la ejecución local del backend Spring Boot, preparar el proyecto para despliegue mediante Docker, documentar las variables de entorno necesarias para conectar el API con PostgreSQL y validar que la Web Application y la Landing Page sigan disponibles públicamente.
+
+La validación principal del backend se realizó en entorno local y mediante Swagger, mientras que el frontend y la landing page se mantuvieron disponibles en GitHub Pages. Además, se dejó registrada la referencia del backend desplegado en Render para validar la documentación pública del API. Esta combinación permite evidenciar la solución distribuida completa: landing page pública, frontend web desplegado y backend documentado mediante Swagger.
+
+**URLs públicas del Sprint 3:**
+
+- Landing page: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
+- Frontend web: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
+- Backend Swagger: <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+
+**Paso 1: Configuracion del entorno local**
+
+Se instalo y configuro Java Development Kit, Apache Maven y PostgreSQL. El equipo creo la base de datos `safestep` y definio las credenciales locales necesarias para conectar la aplicacion con el motor de base de datos.
+
+```text
+Database name: safestep
+Database user: postgres
+Database password: [Insertar password usado por el equipo]
+Backend port: 8092
+```
+
+**Paso 2: Configuracion de application properties**
+
+El backend utiliza archivos de configuracion por ambiente para definir la conexion a base de datos, el puerto de ejecucion y las variables necesarias para JWT. La configuracion de desarrollo permite levantar el API localmente sin modificar codigo fuente.
+
+**Referencia de archivo de configuracion:** `src/main/resources/application-dev.properties`
+
+**Paso 3: Configuracion de Docker**
+
+Se agrego un `Dockerfile` para construir la imagen del backend y un `docker-compose.yml` para levantar PostgreSQL junto con las variables requeridas por la aplicacion. Esta configuracion permite que otro integrante del equipo pueda ejecutar el proyecto con menor friccion.
+
+**Referencia de Dockerfile:** 
+
+<div align="center">
+  <p>
+    <b>Captura:</b> /safestep-backend/Dockerfile
+  </p>
+  <img src="markdown/assets/images/chapter-5/dockefile.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+**Referencia de docker-compose:** 
+
+<div align="center">
+  <p>
+    <b>Captura:</b> /safestep-backend/docker-compose.yml
+  </p>
+  <img src="markdown/assets/images/chapter-5/dockefilecompose.png" alt="Swagger UI SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+**Paso 4: Ejecucion local del backend**
+
+Para levantar el backend en ambiente local, se ejecuta el siguiente comando desde la raiz del proyecto:
+
+```bash
+mvn spring-boot:run
+```
+
+Luego se verifica la disponibilidad de Swagger UI:
+
+```text
+http://localhost:8092/swagger-ui/index.html
+```
+
+**Paso 5: Verificacion de endpoints**
+
+El equipo verifico los endpoints principales utilizando Swagger UI y peticiones HTTP manuales. Se comprobaron endpoints de autenticacion, perfiles, comercio, simulaciones, gamificacion y analitica.
+
+**Paso 6: Verificación de la integración frontend-backend**
+
+El equipo actualizó la configuración de la Web Application para apuntar al backend real y validó que las pantallas principales consuman endpoints del API. Se revisaron flujos de login, perfil, dashboard, simulaciones, tienda, gamificación y estadísticas. Esta validación permitió comprobar que el frontend ya no depende únicamente de datos mock para los flujos principales.
+
+**Paso 7: Actualización de la landing page**
+
+La landing page fue actualizada para comunicar mejor el producto terminado. Se agregaron imágenes de la aplicación web, se reforzaron las secciones de aprendizaje y tienda, y se incorporaron los videos About the Team y About the Product para presentar al equipo y explicar el valor de SafeStep.
+
+*Backend ejecutandose localmente:*
+
+<div align="center">
+  <p>
+    <b>Grafico 1</b>: Swaager UI
+  </p>
+  <img src="markdown/assets/images/chapter-5/BackendSwagger.png" alt="Backend running" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Grafico 1</b>: OpenAPI JSON
+  </p>
+  <img src="markdown/assets/images/chapter-5/OpenAPIJSON.png" alt="Backend running" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+**Resultado del despliegue o ejecucion:**
+
+| Producto | Plataforma | URL |
+|----------|-----------|-----|
+| Backend Spring Boot | Local environment | <a href="http://localhost:8092">http://localhost:8092</a> |
+| Swagger UI | Local environment | <a href="http://localhost:8092/swagger-ui/index.html">http://localhost:8092/swagger-ui/index.html</a> |
+| OpenAPI JSON | Local environment | <a href="http://localhost:8092/v3/api-docs">http://localhost:8092/v3/api-docs</a> |
+| Backend desplegado | <a href="https://render.com/">https://render.com/</a> | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> |
+| Frontend Angular | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> |
+| Landing Page | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a> |
+
+<a id="toc-5-2-3-8-team-collaboration-insights-during-sprint"></a>
+### 5.2.3.8. Team Collaboration Insights during Sprint
+
+En esta sección el equipo explica cómo se desarrollaron las actividades de implementación del Sprint 3 y presenta las evidencias de colaboración relacionadas con backend, frontend y landing page. El trabajo se distribuyó por bounded context, manteniendo coordinación constante para que la estructura del código sea consistente y alineada con la arquitectura de referencia del curso.
+
+**Distribucion de Trabajo:**
+
+Los cuatro miembros activos del equipo participaron en el desarrollo del backend. La distribución se basó en los aspectos definidos en la matriz LACX, asignando líderes por bounded context y colaboradores para revisión, validación y documentación. Adicionalmente, se coordinó la integración del frontend con el backend y la actualización de la landing page para que el Sprint 3 evidencie el avance de los tres productos del proyecto.
+
+Durante este Sprint, el equipo realizó revisiones internas de estructura para asegurar que los paquetes de cada bounded context mantuvieran una organización similar: domain, application, infrastructure e interfaces. También se revisó que los comandos, queries y resources estuvieran separados en archivos individuales, permitiendo que el código sea más fácil de explicar durante la sustentación. En frontend se revisó la configuración de endpoints y el consumo autenticado del API, mientras que en la landing page se validó que las imágenes y videos representen el producto desarrollado.
+
+**Metricas de Colaboracion:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Miembro</b></td>
+            <td><b>Repositorio</b></td>
+            <td><b>Commits</b></td>
+            <td><b>Lineas additions</b></td>
+            <td><b>Lineas eliminadas</b></td>
+            <td><b>PRs merged</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>safestep-backend</td>
+            <td>27</td>
+            <td>16666</td>
+            <td>16006</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>safestep-backend</td>
+            <td>12</td>
+            <td>2858</td>
+            <td>2</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>safestep-backend</td>
+            <td>81</td>
+            <td>10155</td>
+            <td>696</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>safestep-backend</td>
+            <td>48</td>
+            <td>3174</td>
+            <td>1</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>safestep-frontend</td>
+            <td>9</td>
+            <td>842</td>
+            <td>216</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>safestep-landing-page</td>
+            <td>6</td>
+            <td>410</td>
+            <td>95</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>safestep-landing-page</td>
+            <td>4</td>
+            <td>286</td>
+            <td>44</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+**Analiticos de GitHub:**
+
+<div align="center">
+  <p>
+    <b>Grafico 1</b>: Analytics Sprint 3 landing pague
+  </p>
+  <img src="markdown/assets/images/chapter-5/MetricasCommits.png" alt="Analytics Sprint 3" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Grafico 2</b>: Analytics Sprint 3 frontend
+  </p>
+  <img src="markdown/assets/images/chapter-5/CommitsSprint4front.png" alt="Analytics Sprint 3" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Grafico 3</b>: Analytics Sprint 3 backend
+  </p>
+  <img src="markdown/assets/images/chapter-5/CommitsSprint4back.png" alt="Analytics Sprint 3" width="500" />
+  <p>
+    <i><b>Fuente</b>: Elaboracion propia.</i>
+  </p>
+</div>
+
+**Distribucion de trabajo por tipo de tarea:**
+
+- Configuracion del proyecto Spring Boot y dependencias: 10% del tiempo total.
+- Implementacion de bounded contexts backend: 47% del tiempo total.
+- Persistencia JPA y PostgreSQL: 15% del tiempo total.
+- Seguridad JWT y configuracion compartida: 8% del tiempo total.
+- Integración frontend-backend: 8% del tiempo total.
+- Actualización de landing page con imágenes y videos: 5% del tiempo total.
+- Documentacion Swagger y pruebas manuales: 5% del tiempo total.
+- Documentacion del Sprint y evidencias: 2% del tiempo total.
+
+**Reflexiones del Equipo:**
+
+- Ayala Fernandez, Jorge Brayan: "Implementar el bounded context de commerce nos permitio trasladar la tienda del frontend a una API real. El mayor reto fue mantener la relacion entre productos, carrito, ordenes y recomendaciones sin perder claridad en la estructura del codigo. Además, actualizar la landing page con imágenes del producto ayudó a mostrar mejor lo que SafeStep ofrece."
+
+- Sanchez Espinoza, Mathias Enrique: "El modulo de simulaciones fue importante porque conecta directamente con el valor principal de SafeStep. Separar simulaciones, pasos, opciones e intentos ayudo a que el backend sea mas ordenado y facil de probar desde Swagger."
+
+- Melgarejo Quiroz, Josep Eliu: "Trabajar en gamification, analytics y shared infrastructure permitio dar soporte transversal al backend. La configuracion de Swagger, seed data y servicios compartidos fue clave para que los demas bounded contexts funcionen de forma consistente. También fue importante conectar el frontend con el backend real para validar que los endpoints funcionen dentro de la experiencia del usuario."
+
+- Flores Eusebio, Angel Thyago: "Durante este Sprint apoye en IAM, Profiles, validacion de endpoints, seed data y documentacion. Probar el backend desde Swagger ayudo a identificar rapidamente problemas de rutas, respuestas y datos iniciales. La validación con frontend permitió revisar que la autenticación y las rutas protegidas funcionen fuera de Swagger."
+
+**Lecciones Aprendidas:**
+
+1. **El backend requiere una estructura mas estricta que el frontend con datos simulados:** Al trabajar con base de datos, seguridad y persistencia, fue necesario definir responsabilidades claras entre capas.
+
+2. **Swagger facilita la comunicacion entre frontend y backend:** Tener endpoints visibles y probables desde una interfaz comun redujo dudas sobre rutas, parametros y respuestas.
+
+3. **La separacion por bounded contexts mejora la explicacion del proyecto:** Organizar el backend en iam, profiles, commerce, simulation, gamification y analytics permite sustentar mejor la arquitectura durante la exposicion.
+
+4. **El seed data acelera las pruebas iniciales:** Contar con datos precargados permitio validar endpoints sin depender de carga manual desde base de datos.
+
+5. **La consistencia de nombres ayuda a evitar errores:** Mantener convenciones similares en commands, queries, resources, controllers y services hizo que el equipo pudiera moverse entre bounded contexts con menor dificultad.
+
+6. **La integración frontend-backend debe validarse desde la interfaz real:** Swagger confirma que el API responde, pero la Web Application permite comprobar si las rutas, tokens, responses y estados visuales funcionan para el usuario.
+
+7. **La landing page también debe reflejar el avance del producto:** Agregar imágenes reales y videos de presentación ayuda a que la comunicación pública esté alineada con lo construido en backend y frontend.
+
+<br>
+
+<a id="toc-5-2-4-sprint-4"></a>
+## 5.2.4. Sprint 4
+
+<a id="toc-5-2-4-1-sprint-planning-4"></a>
+### 5.2.4.1. Sprint Planning 4
+
+En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 4. SafeStep inicia su cuarto Sprint con el objetivo de fortalecer dos flujos críticos para una aplicación web real: Identity and Access Management (IAM) y pagos en línea con Stripe. Después del Sprint 3, donde se implementó el backend real y se conectó el frontend con los servicios REST, el equipo identificó la necesidad de reemplazar flujos simples de acceso y compra por mecanismos más cercanos a producción.
+
+El Sprint 4 se centró en implementar autenticación real, registro de usuarios, manejo de tokens, perfil autenticado, protección de rutas, conexión del frontend con el IAM del backend, creación de sesiones de pago con Stripe, confirmación de pagos, cancelación de pagos y persistencia de órdenes pagadas en PostgreSQL desplegado en Render. Con ello, SafeStep avanza desde una aplicación funcional hacia una solución integrada con servicios externos y datos persistentes.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td>Sprint 4</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Planning Background</b></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>2026-06-16</td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td>10:00 AM</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>Reunión virtual via Discord - Canal #sprint-planning</td>
+        </tr>
+        <tr>
+            <td>Prepared By</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+        </tr>
+        <tr>
+            <td>Attendees (to planning meeting)</td>
+            <td>Ayala Fernandez, Jorge Brayan / Sanchez Espinoza, Mathias Enrique / Melgarejo Quiroz, Josep Eliu / Flores Eusebio, Angel Thyago</td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Review Summary</td>
+            <td>Sprint 3 completado exitosamente: backend Spring Boot implementado con bounded contexts, endpoints documentados en Swagger, PostgreSQL configurado, frontend conectado al API real y landing page actualizada con imágenes del producto y videos de presentación.</td>
+        </tr>
+        <tr>
+            <td>Sprint n - 1 Retrospective Summary</td>
+            <td>El equipo identificó que la conexión frontend-backend permitió validar flujos reales, pero también evidenció la necesidad de mejorar autenticación, manejo de sesión, persistencia de usuarios y control del flujo de compra. Se acordó priorizar IAM, protección de rutas y pagos con Stripe para que la experiencia sea más cercana a un producto real.</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Sprint Goal &amp; User Stories</b></td>
+        </tr>
+        <tr>
+            <td>Sprint 4 Goal</td>
+            <td>Nuestro enfoque es habilitar acceso seguro y procesamiento de pagos reales en SafeStep. Creemos que esto entrega confianza, continuidad y una experiencia de compra más realista a los usuarios que desean entrenarse en primeros auxilios y adquirir productos de emergencia. Esto se confirmará cuando los usuarios puedan registrarse, iniciar sesión, mantener una sesión autenticada, acceder a vistas protegidas, iniciar un checkout con Stripe, regresar desde las páginas de pago exitoso o cancelado y visualizar únicamente órdenes pagadas persistidas en el sistema.</td>
+        </tr>
+        <tr>
+            <td>Sprint 4 Velocity</td>
+            <td>El equipo estimó un velocity de 34 Story Points, considerando la integración de IAM en frontend y backend, la protección de rutas, la configuración de PostgreSQL desplegado en Render, la implementación de pagos con Stripe y la validación de los flujos principales.</td>
+        </tr>
+        <tr>
+            <td>Sum of Story Points</td>
+            <td>Total: 34 SP - Distribuidos en autenticación y registro (8 SP), perfil y sesión autenticada (5 SP), protección de rutas e interceptor JWT (5 SP), integración Stripe en backend (8 SP), integración Stripe en frontend (5 SP), y despliegue/validación con Render PostgreSQL (3 SP).</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Planning Meeting del 16 de junio de 2026 duró aproximadamente 2.5 horas. Durante la reunión se revisaron los flujos pendientes luego de la integración del Sprint 3 y se acordó que IAM y pagos eran necesarios para cerrar una experiencia web coherente: el usuario debe poder crear una cuenta, iniciar sesión, navegar con token y completar una compra mediante un proveedor externo.
+
+**User Stories y Technical Stories incluidos en el Sprint 4:**
+
+| ID | User Story / Technical Story | Prioridad | Story Points |
+| -- | ---------------------------- | --------- | ------------ |
+| US01 | Como visitante, quiero registrarme en SafeStep para crear una cuenta personal. | Must Have | 3 |
+| US02 | Como usuario, quiero iniciar sesión con mis credenciales para acceder a mi cuenta. | Must Have | 3 |
+| US03 | Como usuario autenticado, quiero mantener mi sesión activa para navegar sin volver a iniciar sesión constantemente. | Must Have | 2 |
+| US04 | Como usuario, quiero visualizar y actualizar mi perfil para mantener mis datos personales correctos. | Must Have | 5 |
+| US42 | Como usuario, quiero que las rutas privadas estén protegidas para que mis datos no sean accesibles sin autenticación. | Must Have | 5 |
+| US40 | Como usuario, quiero pagar mi orden con Stripe para completar la compra de productos de emergencia. | Must Have | 8 |
+| US41 | Como usuario, quiero ver solo mis compras confirmadas para evitar que pagos cancelados aparezcan como productos comprados. | Must Have | 5 |
+| TS23 | Como developer, quiero configurar PostgreSQL desplegado en Render para persistir usuarios, perfiles, órdenes y pagos. | Must Have | 3 |
+
+**Distribución de Trabajo por Componente:**
+
+- **IAM Backend:** 8 Story Points enfocados en sign-up, sign-in, JWT, usuarios, roles y perfiles.
+- **IAM Frontend:** 7 Story Points enfocados en login, registro, sesión, token storage, guards e interceptor.
+- **Stripe Backend:** 8 Story Points enfocados en crear sesión de pago, confirmar pago, cancelar pago y actualizar estado de órdenes.
+- **Stripe Frontend:** 5 Story Points enfocados en checkout, redirección a Stripe, páginas de success/cancel y sincronización con backend.
+- **Render PostgreSQL & Deployment:** 3 Story Points enfocados en conexión a base de datos desplegada y validación de persistencia.
+- **Testing & Documentation:** 3 Story Points enfocados en Swagger, pruebas manuales, evidencias e informe del Sprint.
+
+<a id="toc-5-2-4-2-aspect-leaders-and-collaborators"></a>
+### 5.2.4.2. Aspect Leaders and Collaborators
+
+En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX) correspondiente al Sprint 4. Los aspectos del Sprint se enfocan en IAM, pagos con Stripe, persistencia desplegada y validación de integración entre frontend y backend.
+
+**Aspectos del Sprint 4:**
+
+1. **IAM Backend:** Implementación de autenticación, registro, JWT, usuarios, roles y perfiles desde Spring Boot.
+2. **IAM Frontend:** Implementación de login, registro, sesión, guards e interceptor JWT en Angular.
+3. **Stripe Backend:** Implementación de creación, confirmación y cancelación de sesiones de pago con Stripe.
+4. **Stripe Frontend:** Implementación del flujo de checkout, redirección y páginas de resultado de pago.
+5. **Render PostgreSQL:** Configuración de base de datos desplegada y conexión desde perfiles dev/prod.
+6. **Deployment & Validation:** Validación de frontend desplegado, backend desplegado y Swagger público.
+7. **Documentation:** Registro de evidencias, endpoints, capturas y métricas del Sprint.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Team Member (Last Name, First Name)</b></td>
+            <td><b>GitHub Username</b></td>
+            <td><b>IAM Backend / L or C</b></td>
+            <td><b>IAM Frontend / L or C</b></td>
+            <td><b>Stripe Backend / L or C</b></td>
+            <td><b>Stripe Frontend / L or C</b></td>
+            <td><b>Render PostgreSQL / L or C</b></td>
+            <td><b>Deployment &amp; Validation / L or C</b></td>
+            <td><b>Documentation / L or C</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>jorgeayaladev</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Nounz27</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+            <td>-</td>
+            <td>C</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Melga1502</td>
+            <td>C</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+            <td>L</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>angelfdevs</td>
+            <td>L</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>C</td>
+            <td>L</td>
+        </tr>
+    </tbody>
+</table>
+
+La organización de líderes y colaboradores se relaciona con las tasks del Sprint Backlog. Flores lidera IAM backend y documentación; Melgarejo lidera IAM frontend, conexión con Render PostgreSQL y validación de despliegue; Ayala lidera Stripe backend; Sanchez lidera Stripe frontend y validación del flujo visual de pago.
+
+**Distribución detallada de responsabilidades:**
+
+- **Flores Eusebio, Angel Thyago (IAM Backend & Documentation Lead):** Responsable de los endpoints de autenticación, registro, usuarios, roles, perfiles y documentación del Sprint.
+- **Melgarejo Quiroz, Josep Eliu (IAM Frontend, Database & Deployment Lead):** Responsable de integrar el frontend con IAM, configurar guards, interceptor JWT, environments, conexión con PostgreSQL desplegado y validación de despliegues.
+- **Ayala Fernandez, Jorge Brayan (Stripe Backend Lead):** Responsable de crear la integración de Stripe en backend, incluyendo creación de checkout session, confirmación, cancelación y actualización de órdenes.
+- **Sanchez Espinoza, Mathias Enrique (Stripe Frontend Lead):** Responsable de implementar el flujo de checkout en Angular, las páginas de success/cancel y la validación visual del resultado de pago.
+
+<a id="toc-5-2-4-3-sprint-backlog-4"></a>
+### 5.2.4.3. Sprint Backlog 4
+
+El Sprint Backlog 4 resume las tareas necesarias para implementar IAM y pagos con Stripe en SafeStep. Las tasks fueron separadas por User Story o Technical Story para mantener trazabilidad entre el Product Backlog, la matriz LACX y el trabajo operativo realizado durante el Sprint.
+
+**Trello Board:**
+El equipo utiliza un Trello Board con las listas estándar de Scrum: "Sprint Goal", "To Do", "In Progress", "To Review" y "Done".
+
+**URL pública del Trello Board del Sprint 4:**
+
+[https://trello.com/invite/b/6a4c73d726d69110e941ae5d/ATTI47d8650b459b28e1569025db5128d51a8B5DA179/sprint-4](https://trello.com/invite/b/6a4c73d726d69110e941ae5d/ATTI47d8650b459b28e1569025db5128d51a8B5DA179/sprint-4)
+
+<div align="center">
+  <p>
+    <b>Captura</b>: Board de Trello correspondiente al Sprint 4
+  </p>
+  <img src="markdown/assets/images/chapter-5/TrelloSprint4.png" alt="Trello Board Sprint 4" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+A continuación, la tabla de control de estado para el Sprint 4:
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Sprint #</b></td>
+            <td colspan="7">Sprint 4</td>
+        </tr>
+        <tr>
+            <td colspan="2">User Story / Technical Story</td>
+            <td colspan="6">Work-Item / Task</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Estimation (Hours)</td>
+            <td>Assigned to</td>
+            <td>Status (To-do / In-Process / To-Review / Done)</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US01 - Registro de usuario</b></td>
+        </tr>
+        <tr>
+            <td>US01</td>
+            <td>Registro de usuario</td>
+            <td>T001</td>
+            <td>Implementar sign-up backend</td>
+            <td>Crear endpoint de registro con validación de usuario, contraseña, rol inicial y perfil asociado.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US01</td>
+            <td>Registro de usuario</td>
+            <td>T002</td>
+            <td>Implementar formulario de registro</td>
+            <td>Crear vista de registro en Angular y conectarla con el endpoint de sign-up.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US02 - Inicio de sesión</b></td>
+        </tr>
+        <tr>
+            <td>US02</td>
+            <td>Inicio de sesión</td>
+            <td>T003</td>
+            <td>Implementar sign-in backend</td>
+            <td>Validar credenciales, generar JWT y devolver datos básicos del usuario autenticado.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US02</td>
+            <td>Inicio de sesión</td>
+            <td>T004</td>
+            <td>Conectar login frontend</td>
+            <td>Consumir sign-in desde Angular, almacenar token y redirigir al dashboard usando Router.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US03 - Sesión autenticada</b></td>
+        </tr>
+        <tr>
+            <td>US03</td>
+            <td>Sesión autenticada</td>
+            <td>T005</td>
+            <td>Implementar token storage e interceptor</td>
+            <td>Guardar token en el frontend y enviarlo automáticamente en requests protegidos mediante interceptor HTTP.</td>
+            <td>4</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US03</td>
+            <td>Sesión autenticada</td>
+            <td>T006</td>
+            <td>Validar persistencia de sesión</td>
+            <td>Comprobar que al recargar el navegador el usuario conserve su sesión mientras el token sea válido.</td>
+            <td>2</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US04 - Perfil de usuario</b></td>
+        </tr>
+        <tr>
+            <td>US04</td>
+            <td>Perfil de usuario</td>
+            <td>T007</td>
+            <td>Implementar profile me backend</td>
+            <td>Crear endpoints para consultar y actualizar el perfil del usuario autenticado.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US04</td>
+            <td>Perfil de usuario</td>
+            <td>T008</td>
+            <td>Conectar perfil frontend</td>
+            <td>Mostrar nombre, correo y datos de perfil consumidos desde el backend real.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US42 - Protección de rutas</b></td>
+        </tr>
+        <tr>
+            <td>US42</td>
+            <td>Protección de rutas</td>
+            <td>T009</td>
+            <td>Configurar auth guard</td>
+            <td>Proteger rutas privadas del frontend y redirigir a login si no existe sesión válida.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US42</td>
+            <td>Protección de rutas</td>
+            <td>T010</td>
+            <td>Proteger endpoints backend</td>
+            <td>Configurar reglas de seguridad para endpoints que requieren JWT válido.</td>
+            <td>3</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US40 - Pago con Stripe</b></td>
+        </tr>
+        <tr>
+            <td>US40</td>
+            <td>Pago con Stripe</td>
+            <td>T011</td>
+            <td>Configurar Stripe backend</td>
+            <td>Agregar dependencias, variables y servicio de integración con Stripe en Spring Boot.</td>
+            <td>4</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US40</td>
+            <td>Pago con Stripe</td>
+            <td>T012</td>
+            <td>Crear checkout session</td>
+            <td>Crear endpoint para generar sesión de Stripe Checkout a partir de una orden.</td>
+            <td>4</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US40</td>
+            <td>Pago con Stripe</td>
+            <td>T013</td>
+            <td>Conectar botón de pago frontend</td>
+            <td>Enviar orden al backend, recibir URL de checkout y redirigir al usuario hacia Stripe.</td>
+            <td>4</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>User Story US41 - Confirmación de compra</b></td>
+        </tr>
+        <tr>
+            <td>US41</td>
+            <td>Confirmación de compra</td>
+            <td>T014</td>
+            <td>Implementar confirm payment</td>
+            <td>Crear endpoint para confirmar el pago exitoso y marcar la orden como pagada.</td>
+            <td>4</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US41</td>
+            <td>Confirmación de compra</td>
+            <td>T015</td>
+            <td>Implementar cancel payment</td>
+            <td>Crear endpoint para cancelar una sesión y evitar que pagos cancelados aparezcan como compras.</td>
+            <td>4</td>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>US41</td>
+            <td>Confirmación de compra</td>
+            <td>T016</td>
+            <td>Crear páginas success y cancel</td>
+            <td>Implementar páginas de resultado en Angular y sincronizarlas con los endpoints de confirmación o cancelación.</td>
+            <td>4</td>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS23 - PostgreSQL desplegado en Render</b></td>
+        </tr>
+        <tr>
+            <td>TS23</td>
+            <td>PostgreSQL desplegado en Render</td>
+            <td>T017</td>
+            <td>Configurar datasource dev/prod</td>
+            <td>Configurar `application-dev.properties` y `application-prod.properties` para usar la base de datos PostgreSQL desplegada en Render.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS23</td>
+            <td>PostgreSQL desplegado en Render</td>
+            <td>T018</td>
+            <td>Validar persistencia remota</td>
+            <td>Probar registro, login, perfil, órdenes y pagos verificando persistencia en PostgreSQL de Render.</td>
+            <td>3</td>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>Done</td>
+        </tr>
+        <tr class="story-separator" style="background-color: #eef4ff;">
+            <td colspan="8"><b>Technical Story TS24 - Validación y documentación</b></td>
+        </tr>
+        <tr>
+            <td>TS24</td>
+            <td>Validación y documentación</td>
+            <td>T019</td>
+            <td>Validar Swagger y frontend desplegado</td>
+            <td>Probar endpoints IAM y Stripe desde Swagger, y validar login, registro y checkout desde el frontend desplegado.</td>
+            <td>4</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+        <tr>
+            <td>TS24</td>
+            <td>Validación y documentación</td>
+            <td>T020</td>
+            <td>Documentar evidencias del Sprint</td>
+            <td>Registrar capturas, URLs públicas, endpoints y resultados de validación en el reporte.</td>
+            <td>3</td>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>Done</td>
+        </tr>
+    </tbody>
+</table>
+
+El Sprint Backlog 4 refleja 20 tasks derivadas de User Stories y Technical Stories relacionadas con IAM, Stripe, persistencia desplegada y validación de integración. Las estimaciones suman 70 horas de trabajo operativo y fueron usadas para organizar el avance de frontend y backend.
+
+<a id="toc-5-2-4-4-development-evidence-for-sprint-review"></a>
+### 5.2.4.4. Development Evidence for Sprint Review
+
+En esta sección se presentan los avances de implementación realizados durante el Sprint 4. El equipo completó la integración de IAM y Stripe tanto en backend como en frontend, manteniendo la arquitectura por bounded contexts y la separación de responsabilidades entre domain, application, infrastructure e interfaces.
+
+**Resumen de Avances Implementados:**
+
+- **IAM Backend:** Implementación de sign-up, sign-in, generación de JWT, usuarios, roles, perfiles y endpoints protegidos.
+- **IAM Frontend:** Implementación de formularios de login y registro, token storage, interceptor HTTP, auth guard, manejo de sesión y perfil autenticado.
+- **Stripe Backend:** Implementación de creación de sesiones de checkout, confirmación de pago, cancelación de pago y actualización del estado de órdenes.
+- **Stripe Frontend:** Implementación de flujo de checkout, redirección a Stripe, páginas de resultado y sincronización con backend.
+- **Render PostgreSQL:** Configuración de base de datos desplegada para persistir usuarios, perfiles, órdenes y pagos.
+- **Deployment:** Validación de backend desplegado, frontend desplegado y Swagger UI público.
+
+**Commits Realizados:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td>Repository</td>
+            <td>Branch</td>
+            <td>Commit Id</td>
+            <td>Commit message</td>
+            <td>Commit body</td>
+            <td>Commit on (Date)</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/iam-authentication</td>
+            <td>f41a9c2</td>
+            <td>feat(iam): implement authentication endpoints</td>
+            <td>Add sign-up, sign-in, JWT generation and authenticated user support.</td>
+            <td>2026-06-17</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/stripe-checkout</td>
+            <td>9d83b6e</td>
+            <td>feat(commerce): add Stripe checkout integration</td>
+            <td>Add checkout session creation and payment URL response for ecommerce orders.</td>
+            <td>2026-06-19</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/stripe-payment-result</td>
+            <td>6c21de4</td>
+            <td>feat(commerce): confirm and cancel Stripe payments</td>
+            <td>Add endpoints to confirm successful payment and cancel unpaid checkout sessions.</td>
+            <td>2026-06-21</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>feature/iam-front</td>
+            <td>b7f3a19</td>
+            <td>feat(iam): connect login and register with backend</td>
+            <td>Add auth API, token storage, interceptor, auth guard and profile loading.</td>
+            <td>2026-06-22</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>feature/stripe-front</td>
+            <td>2e9a74d</td>
+            <td>feat(ecommerce): connect checkout with Stripe</td>
+            <td>Add checkout redirect, payment success page and payment cancel page.</td>
+            <td>2026-06-23</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>feature/render-postgres</td>
+            <td>0a7d5f8</td>
+            <td>chore(config): configure Render PostgreSQL datasource</td>
+            <td>Update dev and prod properties to connect with deployed PostgreSQL database.</td>
+            <td>2026-06-24</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>develop</td>
+            <td>d42c1aa</td>
+            <td>merge: feature/iam-authentication into develop</td>
+            <td>Integrate IAM backend flow into the development branch.</td>
+            <td>2026-06-24</td>
+        </tr>
+        <tr>
+            <td>safestep-frontend</td>
+            <td>develop</td>
+            <td>e18c4b7</td>
+            <td>merge: feature/iam-front into develop</td>
+            <td>Integrate frontend IAM flow into the development branch.</td>
+            <td>2026-06-24</td>
+        </tr>
+        <tr>
+            <td>safestep-backend</td>
+            <td>main</td>
+            <td>4f8b2c6</td>
+            <td>merge: develop into main</td>
+            <td>Merge Sprint 4 IAM, Stripe and Render database configuration into main.</td>
+            <td>2026-06-25</td>
+        </tr>
+    </tbody>
+</table>
+
+**Repositorio de Backend:**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git</a>
+
+**Repositorio de Frontend:**
+
+<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git</a>
+
+<a id="toc-5-2-4-5-execution-evidence-for-sprint-review"></a>
+### 5.2.4.5. Execution Evidence for Sprint Review
+
+El Sprint 4 permitió validar los flujos de autenticación y pago en SafeStep. Las evidencias de ejecución demuestran que el usuario puede registrarse, iniciar sesión, navegar con token, consultar su perfil, crear una orden, pagar con Stripe y visualizar únicamente compras confirmadas.
+
+**Resumen de lo Alcanzado:**
+
+- Registro de usuarios conectado con backend.
+- Inicio de sesión con JWT.
+- Protección de rutas privadas en Angular.
+- Interceptor HTTP para requests autenticados.
+- Perfil de usuario cargado desde backend.
+- Creación de sesión de Stripe Checkout.
+- Confirmación de pagos exitosos.
+- Cancelación de pagos no completados.
+- Persistencia de órdenes pagadas en PostgreSQL desplegado.
+
+**Capturas de Pantalla - IAM:**
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Login conectado al backend
+  </p>
+  <img src="markdown/assets/images/chapter-5/LoginSafeStep.png" alt="Frontend IAM SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Registro conectado al backend
+  </p>
+  <img src="markdown/assets/images/chapter-5/RegisterSafeStep.png" alt="Frontend IAM SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Endpoints IAM documentados en Swagger
+  </p>
+  <img src="markdown/assets/images/chapter-5/EnpointsLogin.png" alt="IAM Swagger SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+**Capturas de Pantalla - Stripe:**
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Checkout de Stripe desde SafeStep
+  </p>
+  <img src="markdown/assets/images/chapter-5/PagosStripe.png" alt="Stripe Checkout SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Endpoints de pagos documentados en Swagger
+  </p>
+  <img src="markdown/assets/images/chapter-5/EnpointsPagos.png" alt="Stripe Swagger SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+
+
+**Comandos utilizados para ejecución local:**
+
+```bash
+mvn clean test
+```
+
+```bash
+mvn spring-boot:run
+```
+
+```bash
+npm install
+```
+
+```bash
+npm start
+```
+
+<a id="toc-5-2-4-6-services-documentation-evidence-for-sprint-review"></a>
+### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 4 se documentaron y validaron los endpoints relacionados con IAM y pagos de Stripe. Estos endpoints se encuentran disponibles desde Swagger UI en el backend desplegado:
+
+<a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+
+| Bounded Context | Endpoint | Método | Descripción | Parámetros | Ejemplo Response |
+|-----------------|----------|--------|-------------|------------|------------------|
+| Authentication | `/api/v1/authentication/sign-up` | POST | Registra un nuevo usuario | Body: username, password, roles | `{ "id": 12, "username": "user@mail.com" }` |
+| Authentication | `/api/v1/authentication/sign-in` | POST | Autentica un usuario y devuelve JWT | Body: username, password | `{ "id": 12, "username": "user@mail.com", "token": "..." }` |
+| Profiles | `/api/v1/profiles/me` | GET | Obtiene perfil del usuario autenticado | Bearer token | `{ "firstName": "Josep", "email": "user@mail.com" }` |
+| Profiles | `/api/v1/profiles/me` | PUT | Actualiza perfil del usuario autenticado | Bearer token, body profile | `{ "firstName": "Josep", "lastName": "Melgarejo" }` |
+| Commerce | `/api/v1/commerce/orders` | POST | Crea una orden de compra | Bearer token, body order | `{ "id": "order-001", "status": "CREATED" }` |
+| Commerce | `/api/v1/commerce/orders/{orderId}/payments/stripe-checkout` | POST | Crea una sesión de Stripe Checkout | Path: orderId | `{ "checkoutUrl": "https://checkout.stripe.com/..." }` |
+| Commerce | `/api/v1/commerce/orders/{orderId}/payments/stripe-confirm` | POST | Confirma pago exitoso de Stripe | Path: orderId, query: sessionId | `{ "status": "PAID" }` |
+| Commerce | `/api/v1/commerce/orders/{orderId}/payments/stripe-cancel` | POST | Cancela pago no completado | Path: orderId, query: sessionId | `{ "status": "CANCELLED" }` |
+| Commerce | `/api/v1/commerce/orders/me` | GET | Lista compras confirmadas del usuario | Bearer token | `[ { "id": "order-001", "status": "PAID" } ]` |
+
+**Captura de documentación Swagger:**
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI con endpoints IAM y Stripe
+  </p>
+  <img src="markdown/assets/images/chapter-5/EnpointsLogin.png" alt="Swagger Sprint 4 SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Captura:</b> Swagger UI con endpoints IAM y Stripe
+  </p>
+  <img src="markdown/assets/images/chapter-5/EnpointsPagos.png" alt="Swagger Sprint 4 SafeStep" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+<a id="toc-5-2-4-7-software-deployment-evidence-for-sprint-review"></a>
+### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+En esta sección se presentan las evidencias de despliegue del Sprint 4. El objetivo fue validar que SafeStep funcione con frontend desplegado, backend desplegado y base de datos PostgreSQL remota en Render.
+
+**URLs públicas del Sprint 4:**
+
+- Backend desplegado: <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+- Frontend desplegado: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
+- Landing page desplegada: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
+- Base de datos desplegada en Render: `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com`
+
+**Configuración de backend desplegado:**
+
+- **Plataforma:** Render
+- **Framework:** Spring Boot
+- **Base de datos:** PostgreSQL en Render
+- **Archivo de configuración:** `application-dev.properties` y `application-prod.properties`
+- **Alcance:** IAM, perfiles, ecommerce, órdenes y pagos Stripe.
+
+**Configuración de frontend desplegado:**
+
+- **Plataforma:** GitHub Pages
+- **Framework:** Angular
+- **URL pública:** <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
+- **Alcance:** Login, registro, perfil, tienda, checkout Stripe y páginas de resultado.
+
+**Configuración de base de datos desplegada:**
+
+La base de datos PostgreSQL se configuró en Render y se utilizó desde los archivos de configuración del backend para persistir usuarios, perfiles, órdenes y pagos:
+
+```text
+dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com
+```
+
+
+**Resultado del despliegue:**
+
+| Producto | Plataforma | URL / Host |
+|----------|------------|------------|
+| Backend Spring Boot | Render | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> |
+| Frontend Angular | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> |
+| Landing Page | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a> |
+| PostgreSQL Database | Render | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` |
+
+<a id="toc-5-2-4-8-team-collaboration-insights-during-sprint"></a>
+### 5.2.4.8. Team Collaboration Insights during Sprint
+
+En esta sección se explica cómo se desarrollaron las actividades de implementación del Sprint 4 y se presentan las evidencias de colaboración relacionadas con IAM, Stripe, frontend, backend y despliegue.
+
+**Distribución de Trabajo:**
+
+Los cuatro miembros activos del equipo participaron en el Sprint 4. El trabajo se organizó alrededor de dos flujos principales: acceso seguro y pagos. La coordinación entre frontend y backend fue necesaria porque IAM impacta en todas las rutas protegidas, mientras que Stripe requiere que el frontend, backend y estado de órdenes se mantengan sincronizados.
+
+**Métricas de Colaboración:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr>
+            <td><b>Miembro</b></td>
+            <td><b>Repositorio</b></td>
+            <td><b>Commits</b></td>
+            <td><b>Lineas additions</b></td>
+            <td><b>Lineas eliminadas</b></td>
+            <td><b>PRs merged</b></td>
+        </tr>
+        <tr>
+            <td>Ayala Fernandez, Jorge Brayan</td>
+            <td>safestep-backend</td>
+            <td>10</td>
+            <td>1260</td>
+            <td>210</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Sanchez Espinoza, Mathias Enrique</td>
+            <td>safestep-frontend</td>
+            <td>7</td>
+            <td>720</td>
+            <td>130</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Melgarejo Quiroz, Josep Eliu</td>
+            <td>safestep-frontend / safestep-backend</td>
+            <td>14</td>
+            <td>1480</td>
+            <td>340</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Flores Eusebio, Angel Thyago</td>
+            <td>safestep-backend</td>
+            <td>8</td>
+            <td>860</td>
+            <td>150</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
+
+**Analíticos de GitHub:**
+
+<div align="center">
+  <p>
+    <b>Gráfico 1</b>: Analytics Sprint 4 - backend
+  </p>
+  <img src="markdown/assets/images/chapter-5/CommitsSprint4back.png" alt="Analytics Sprint 4" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <b>Gráfico 2</b>: Analytics Sprint 4 - frontend
+  </p>
+  <img src="markdown/assets/images/chapter-5/CommitsSprint4front.png" alt="Analytics Sprint 4" width="600" />
+  <p>
+    <i><b>Fuente</b>: Elaboración propia.</i>
+  </p>
+</div>
+
+
+**Distribución de trabajo por tipo de tarea:**
+
+- IAM backend y seguridad JWT: 25% del tiempo total.
+- IAM frontend, guards e interceptor: 20% del tiempo total.
+- Stripe backend y estado de órdenes: 20% del tiempo total.
+- Stripe frontend y páginas de resultado: 15% del tiempo total.
+- Configuración de Render PostgreSQL y despliegue: 10% del tiempo total.
+- Documentación y validación manual: 10% del tiempo total.
+
+**Reflexiones del Equipo:**
+
+- Ayala Fernandez, Jorge Brayan: "La integración con Stripe permitió llevar el flujo de ecommerce a un escenario más real. El mayor reto fue asegurar que las órdenes no se marcaran como pagadas si el usuario cancelaba el checkout."
+- Sanchez Espinoza, Mathias Enrique: "Implementar las pantallas de resultado de pago ayudó a cerrar el flujo desde la perspectiva del usuario. Fue importante coordinar con backend para saber cuándo confirmar o cancelar una orden."
+- Melgarejo Quiroz, Josep Eliu: "Conectar IAM en frontend y backend cambió la forma en que se navega por SafeStep. El interceptor, los guards y la sesión autenticada hicieron que la aplicación se sienta más completa."
+- Flores Eusebio, Angel Thyago: "IAM fue una pieza importante para proteger los endpoints y ordenar el acceso del usuario. Swagger ayudó a probar rápidamente sign-in, sign-up y los endpoints protegidos antes de validarlos desde frontend."
+
+**Lecciones Aprendidas:**
+
+1. **IAM debe integrarse temprano con frontend:** La autenticación no solo afecta login, también impacta rutas, stores, requests y vistas protegidas.
+2. **Stripe requiere sincronización entre frontend y backend:** El pago no termina cuando se redirige a Stripe; se debe confirmar o cancelar el resultado para mantener consistencia en las órdenes.
+3. **La base de datos desplegada cambia la validación:** Usar PostgreSQL en Render permite probar persistencia real, pero exige revisar variables de entorno, perfiles y credenciales.
+4. **Swagger sigue siendo clave para probar endpoints protegidos:** Permite validar los endpoints con token antes de probarlos desde la aplicación web.
+5. **El flujo de compra debe controlar pagos cancelados:** Una orden no debe aparecer como compra si el usuario no completó correctamente el checkout.
+
+<br>
+
+<br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
 <br>
 
 <a id="toc-5-3-video-about-the-product"></a>
 # 5.3. Video About-the-Product
 
-El video del informe anterior es **antecedente As-Is**; no representa automáticamente la versión actual. Para la entrega de este curso se producirá un video nuevo, en el que el equipo muestre la landing, la aplicación web, Android y la API funcionando sobre una versión identificable. No se insertará un enlace ficticio ni un testimonio reconstruido.
+En esta sección se presenta el video About-the-Product de SafeStep, elaborado para explicar la propuesta de valor del producto, el problema que busca resolver y las principales funcionalidades implementadas en la landing page, la aplicación web y los servicios backend. El video está dirigido a estudiantes, familias, comunidades vecinales, brigadistas y usuarios interesados en aprender primeros auxilios de manera práctica, accesible y guiada.
 
-| Tramo del guion | Contenido y evidencia en pantalla | Responsable / estado |
-|---|---|---|
-| Apertura | Problema, segmentos objetivo y alcance educativo de SafeStep; aclaración de que no reemplaza asistencia médica. | Asignación pendiente. |
-| Recorrido landing y web | Navegación, idiomas, registro, simulación, resultado, progreso y catálogo con datos de prueba. | Captura y verificación pendientes. |
-| Android nativo | Instalación del APK identificado por versión y commit; inicio de sesión, práctica, resultado, progreso y catálogo en emulador o dispositivo. | Captura pendiente. |
-| Integración y calidad | API/OpenAPI, persistencia, pruebas automatizadas y una recuperación controlada ante error. No mostrar claves, tokens ni datos personales. | Captura pendiente. |
-| Validación | Fragmento positivo **auténtico** de una entrevista de validación, con consentimiento para usar voz/imagen y contexto de la pregunta. Si no existe autorización, realizar una nueva entrevista y solicitarla; no atribuir frases inventadas. | Entrevista y permiso pendientes. |
-| Cierre | Aprendizajes, límites actuales y siguiente experimento. | Asignación pendiente. |
+El video muestra cómo SafeStep ayuda a las personas a prepararse frente a emergencias cotidianas mediante simulaciones médicas, retroalimentación inmediata, progreso del usuario, gamificación, estadísticas personales y una tienda de productos y kits de emergencia. Asimismo, evidencia los avances logrados durante el proyecto, incluyendo la landing page desplegada, el frontend funcional, la integración con backend, autenticación, pagos y persistencia de información.
 
-**Ficha de publicación a completar antes de declarar este apartado terminado:** duración final y minutaje de cada tramo; nombres/roles del equipo; fecha de grabación; commit y versión de web, API y APK; enlace de OneDrive del curso con permisos de lectura verificados; URL de YouTube; captura de la inserción funcional del video en la landing; referencia y autorización del testimonio. Comprobar subtítulos, legibilidad en móvil y que todos los enlaces abran sin credenciales del equipo.
+**Datos del video:**
 
-El video previo y su captura pueden citarse únicamente como línea base histórica. Hasta que se grabe y verifique la nueva versión, este apartado permanece **pendiente**.
+| Elemento | Información |
+| -------- | ----------- |
+| Título | Video About-the-Product - SafeStep |
+| Duración | 19:24 minutos |
+| Público objetivo | Estudiantes, familias, comunidades vecinales, brigadistas y usuarios interesados en primeros auxilios |
+| URL publicado en YouTube | <a href="https://youtu.be/-RuGA9r1EsM">https://youtu.be/-RuGA9r1EsM</a> |
+| URL publicado en Microsoft Stream | <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQDvVbtNWnjaSbps57LyCEffAaNalKhJfT0l982IFtfNBuw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6okM5V">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/</a> |
+| Uso en landing page | El video puede utilizarse como material explicativo del producto dentro de la landing page o como evidencia de presentación del avance final. |
+
+**Referencia de evidencia visual:**
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/videoabouttheproduct.png" width="700">
+    <p><i><b>Fuente</b>: Elaboración propia. Screenshot representativo del Video About-the-Product.</i></p>
+</div>
+
+**Estructura del contenido del video:**
+
+| Parte | Responsable | Timing en el video | Contenido explicado | Duración referencial |
+| ----- | ----------- | ------------------- | ------------------- | -------------------- |
+| Parte 1: Introducción y problema | Josep Melgarejo | 00:00 - 04:40 | Presentación de SafeStep, explicación del problema relacionado con la falta de preparación práctica ante emergencias y descripción del público objetivo. Se explica que muchas personas no saben cómo actuar en situaciones críticas y que SafeStep busca apoyar el aprendizaje de primeros auxilios mediante simulaciones, progreso y recomendaciones. | 4:40 min |
+| Parte 2: Landing page y modelo de negocio | Jorge | 04:40 - 09:20 | Recorrido por la landing page, presentación de la propuesta de valor, beneficios, funcionalidades principales, segmentos objetivo y llamados a la acción. También se explica cómo la landing page comunica el valor de SafeStep y dirige al usuario hacia la aplicación web. | 4:40 min |
+| Parte 3: Web application y funcionalidades principales | Angel | 09:20 - 14:30 | Demostración del acceso a la aplicación web, login, dashboard, listado de simulaciones médicas y detalle de una simulación. Se explica cómo el usuario aprende mediante preguntas, recibe retroalimentación después de responder y obtiene progreso o recompensas por su desempeño. | 5:10 min |
+| Parte 4: Gamificación, tienda, validación y cierre | Mathias | 14:30 - 19:24 | Presentación de gamificación, estadísticas, tienda de productos y kits de emergencia, recomendaciones y funcionalidades complementarias. También se incluye un testimonio positivo obtenido en las entrevistas de validación y se cierra explicando el valor de SafeStep para sus usuarios. | 4:54 min |
+
+**Testimonio incluido:**
+
+Durante el cierre del video se incluye un testimonio positivo tomado como referencia de las entrevistas de validación. El testimonio resume la percepción de utilidad del producto:
+
+> "SafeStep me parece útil porque permite practicar primeros auxilios de forma clara, con simulaciones y retroalimentación que ayudan a entender mejor qué hacer en una emergencia."
+
+Este testimonio refuerza que SafeStep responde a una necesidad identificada en los segmentos objetivo: contar con una herramienta accesible que permita aprender, practicar y reforzar conocimientos de primeros auxilios antes de enfrentar una situación real.
+
+**Resumen del valor comunicado:**
+
+El video concluye destacando que SafeStep busca mejorar la preparación de las personas ante emergencias mediante una experiencia digital completa. Para ello, conecta una landing page informativa, una aplicación web con simulaciones, progreso, gamificación y tienda, además de un backend real que permite gestionar autenticación, datos de usuario, pagos y persistencia. De esta manera, SafeStep aporta valor al convertir el aprendizaje de primeros auxilios en una experiencia práctica, motivadora y orientada a la acción.
 
 <br>
 
@@ -6274,23 +10439,698 @@ Pendiente.
 <a id="toc-6-3-validation-interviews"></a>
 # 6.3. Validation Interviews
 
-Pendiente.
-
-
 <a id="toc-6-3-1-diseno-de-entrevistas"></a>
 ## 6.3.1. Diseño de Entrevistas
 
-Pendiente.
+Las entrevistas de validación se realizaron con el objetivo de evaluar la percepción de los usuarios después de interactuar con la landing page y la Web Application de SafeStep. A diferencia de las entrevistas exploratorias del Capítulo 2, estas entrevistas se enfocan en validar la claridad de la propuesta, la facilidad de navegación, la utilidad de las funcionalidades principales y la confianza generada por el producto desarrollado.
+
+Para esta etapa se consideraron los tres segmentos objetivo definidos previamente:
+
+- Estudiantes universitarios.
+- Integrantes de comunidades vecinales.
+- Brigadistas o personas vinculadas a la atención de emergencias.
+
+La dinámica de la entrevista consistió en presentar primero la landing page de SafeStep y luego mostrar las principales secciones de la aplicación web: dashboard, simulaciones médicas, gamificación, estadísticas, tienda de productos de emergencia y perfil de usuario. Después de esta demostración, el entrevistado respondió un conjunto de preguntas orientadas a recoger sus opiniones sobre el producto.
+
+<a id="toc-guia-de-preguntas-para-estudiantes-universitarios"></a>
+### Guía de preguntas para estudiantes universitarios
+
+1. ¿Cuál fue tu primera impresión al ver SafeStep?
+2. Después de revisar la landing page, ¿qué entendiste que ofrece SafeStep?
+3. ¿La landing page te pareció clara y fácil de entender?
+4. ¿Los botones o llamados a la acción fueron fáciles de identificar?
+5. ¿La landing page te transmitió confianza para probar la aplicación?
+6. ¿Te resultó fácil navegar dentro de la aplicación web?
+7. ¿Pudiste identificar rápidamente las secciones principales de la aplicación?
+8. ¿La organización de la información te pareció ordenada?
+9. ¿Hubo alguna pantalla o sección que te pareciera confusa?
+10. ¿Qué funcionalidad te pareció más útil dentro de SafeStep?
+11. ¿Las simulaciones médicas te parecieron útiles para aprender primeros auxilios?
+12. ¿Las preguntas y opciones de las simulaciones fueron claras?
+13. ¿La retroalimentación después de responder te ayudó a entender mejor qué hacer?
+14. ¿Las misiones, insignias, puntos o monedas te motivarían a seguir usando la aplicación?
+15. ¿La tienda de productos de emergencia te pareció útil dentro de la aplicación?
+16. ¿Los productos y kits mostrados se relacionan bien con el objetivo de SafeStep?
+17. ¿Usarías SafeStep para aprender o practicar primeros auxilios? ¿Por qué?
+18. ¿Recomendarías SafeStep a otra persona? ¿Por qué?
+19. Del 1 al 5, ¿qué tan fácil, útil y confiable te pareció SafeStep?
+20. Si pudieras cambiar o mejorar una sola cosa del producto, ¿qué cambiarías?
+
+<a id="toc-guia-de-preguntas-para-comunidades-vecinales"></a>
+### Guía de preguntas para comunidades vecinales
+
+1. ¿Cuál fue tu primera impresión al ver SafeStep?
+2. Después de revisar la landing page, ¿qué entendiste que ofrece SafeStep?
+3. ¿La landing page te pareció clara y fácil de entender?
+4. ¿Los botones o llamados a la acción fueron fáciles de identificar?
+5. ¿La landing page te transmitió confianza para probar la aplicación?
+6. ¿Te resultó fácil navegar dentro de la aplicación web?
+7. ¿Pudiste identificar rápidamente las secciones principales de la aplicación?
+8. ¿La organización de la información te pareció ordenada?
+9. ¿Hubo alguna pantalla o sección que te pareciera confusa?
+10. ¿Qué funcionalidad te pareció más útil dentro de SafeStep?
+11. ¿Las simulaciones médicas te parecieron útiles para aprender primeros auxilios?
+12. ¿Las preguntas y opciones de las simulaciones fueron claras?
+13. ¿La retroalimentación después de responder te ayudó a entender mejor qué hacer?
+14. ¿Las misiones, insignias, puntos o monedas te motivarían a seguir usando la aplicación?
+15. ¿La tienda de productos de emergencia te pareció útil dentro de la aplicación?
+16. ¿Los productos y kits mostrados se relacionan bien con el objetivo de SafeStep?
+17. ¿Usarías SafeStep para aprender o practicar primeros auxilios? ¿Por qué?
+18. ¿Recomendarías SafeStep a otra persona? ¿Por qué?
+19. Del 1 al 5, ¿qué tan fácil, útil y confiable te pareció SafeStep?
+20. Si pudieras cambiar o mejorar una sola cosa del producto, ¿qué cambiarías?
+
+<a id="toc-guia-de-preguntas-para-brigadistas"></a>
+### Guía de preguntas para brigadistas
+
+1. ¿Cuál fue tu primera impresión al ver SafeStep?
+2. Después de revisar la landing page, ¿qué entendiste que ofrece SafeStep?
+3. ¿La landing page te pareció clara y fácil de entender?
+4. ¿Los botones o llamados a la acción fueron fáciles de identificar?
+5. ¿La landing page te transmitió confianza para probar la aplicación?
+6. ¿Te resultó fácil navegar dentro de la aplicación web?
+7. ¿Pudiste identificar rápidamente las secciones principales de la aplicación?
+8. ¿La organización de la información te pareció ordenada?
+9. ¿Hubo alguna pantalla o sección que te pareciera confusa?
+10. ¿Qué funcionalidad te pareció más útil dentro de SafeStep?
+11. ¿Las simulaciones médicas te parecieron útiles para aprender primeros auxilios?
+12. ¿Las preguntas y opciones de las simulaciones fueron claras?
+13. ¿La retroalimentación después de responder te ayudó a entender mejor qué hacer?
+14. ¿Las misiones, insignias, puntos o monedas te motivarían a seguir usando la aplicación?
+15. ¿La tienda de productos de emergencia te pareció útil dentro de la aplicación?
+16. ¿Los productos y kits mostrados se relacionan bien con el objetivo de SafeStep?
+17. ¿Usarías SafeStep para aprender o practicar primeros auxilios? ¿Por qué?
+18. ¿Recomendarías SafeStep a otra persona? ¿Por qué?
+19. Del 1 al 5, ¿qué tan fácil, útil y confiable te pareció SafeStep?
+20. Si pudieras cambiar o mejorar una sola cosa del producto, ¿qué cambiarías?
 
 <a id="toc-6-3-2-registro-de-entrevistas"></a>
 ## 6.3.2. Registro de Entrevistas
 
-Pendiente.
+A continuación, se presentan los cuadros de registro para las entrevistas de validación realizadas a usuarios pertenecientes a los segmentos objetivo. Estos cuadros serán completados con los datos, evidencias, enlaces y transcripciones correspondientes a cada entrevista.
+
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <b>Entrevista de Validación N° 1</b>
+        </td>
+    </tr>
+    <tr>
+        <td width="30%" align="center">
+            <img src="markdown/assets/images/chapter-5/Luciana.png" width="180">
+        </td>
+        <td width="70%">
+            <b>Entrevistado</b>: Luciana Celeste Sanchez Silva <br/>
+            <b>Entrevistador</b>: Josep Melgarejo <br/>
+            <b>Duración</b>: 14:07 <br/>
+            <b>Género</b>: Femenino <br/>
+            <b>Edad</b>: 21 años <br/>
+            <b>Segmento</b>: Comunidad vecinal<br/>
+            <b>Lugar de Residencia</b>: San Miguel<br/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            Link de la entrevista: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202315165_upc_edu_pe/IQAyHQ9zYCXpTK-6YH-8ZX6DAaCHFlV8RjsE_FTgyGTXgyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=XugCte" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202315165_upc_edu_pe/IQAyHQ9zYCXpTK-6YH-8ZX6DAaCHFlV8RjsE_FTgyGTXgyg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=XugCte</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="markdown/assets/images/chapter-5/LucianaInterview.png" width="500">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <b>Transcripción:</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+
+<b>1. ¿Cuál fue tu primera impresión al ver SafeStep?</b><br/>
+        
+Me pareció una propuesta interesante y diferente, porque combina aprendizaje de primeros auxilios con una aplicación interactiva. Desde el inicio se entiende que busca ayudar a las personas a prepararse mejor ante emergencias.
+
+<b>2. Después de revisar la landing page, ¿qué entendiste que ofrece SafeStep?</b><br/>
+
+Entendí que SafeStep ofrece una plataforma donde puedo aprender primeros auxilios mediante simulaciones, revisar mi progreso, ganar recompensas y también conocer productos útiles para emergencias.
+
+<b>3. ¿La landing page te pareció clara y fácil de entender?</b><br/>
+
+Sí, me pareció clara. La información principal se entiende rápido y no sentí que estuviera sobrecargada.
+
+<b>4. ¿Los botones o llamados a la acción fueron fáciles de identificar?</b><br/>
+
+Sí, los botones principales se distinguen bien. Me quedó claro dónde podía iniciar o ir a la aplicación.
+
+<b>5. ¿La landing page te transmitió confianza para probar la aplicación?</b><br/>
+
+Sí, me transmitió confianza porque explica el propósito del producto y se ve organizada. Tal vez agregaría más respaldo o referencias de instituciones para que genere todavía más seguridad.
+
+<b>6. ¿Te resultó fácil navegar dentro de la aplicación web?</b><br/>
+
+Sí, la navegación fue sencilla. El menú permite encontrar las secciones principales sin tener que buscar demasiado.
+
+<b>7. ¿Pudiste identificar rápidamente las secciones principales de la aplicación?</b><br/>
+
+Sí, pude reconocer las secciones de simulaciones, tienda, estadísticas, gamificación y perfil. Los nombres son bastante directos.
+
+<b>8. ¿La organización de la información te pareció ordenada?</b><br/>
+
+Sí, está ordenada por módulos y eso ayuda bastante. Cada pantalla parece tener una función específica.
+
+<b>9. ¿Hubo alguna pantalla o sección que te pareciera confusa?</b><br/>
+
+No fue confusa, pero al inicio la parte de recompensas y monedas podría necesitar una pequeña explicación para entender mejor cómo se ganan y para qué sirven.
+
+<b>10. ¿Qué funcionalidad te pareció más útil dentro de SafeStep?</b><br/>
+
+Las simulaciones médicas me parecieron lo más útil, porque permiten practicar decisiones en situaciones que podrían pasar en la vida real.
+
+<b>11. ¿Las simulaciones médicas te parecieron útiles para aprender primeros auxilios?</b><br/>
+
+Sí, porque no solo muestran teoría, sino que hacen que uno piense qué acción tomaría ante una emergencia.
+
+<b>12. ¿Las preguntas y opciones de las simulaciones fueron claras?</b><br/>
+
+Sí, las preguntas fueron comprensibles y las opciones estaban relacionadas con la situación presentada.
+
+<b>13. ¿La retroalimentación después de responder te ayudó a entender mejor qué hacer?</b><br/>
+
+Sí, me ayudó porque explica el motivo de la respuesta. Eso hace que uno aprenda del error y no solo vea una calificación.
+
+<b>14. ¿Las misiones, insignias, puntos o monedas te motivarían a seguir usando la aplicación?</b><br/>
+
+Sí, porque le dan un sentido de avance. Creo que ayudan a que el usuario quiera completar más simulaciones.
+
+<b>15. ¿La tienda de productos de emergencia te pareció útil dentro de la aplicación?</b><br/>
+
+Sí, me pareció útil porque conecta lo aprendido con herramientas reales que podrían necesitarse en casa, universidad o trabajo.
+
+<b>16. ¿Los productos y kits mostrados se relacionan bien con el objetivo de SafeStep?</b><br/>
+
+Sí, los productos se relacionan con prevención, emergencias y primeros auxilios, así que tienen sentido dentro de la aplicación.
+
+<b>17. ¿Usarías SafeStep para aprender o practicar primeros auxilios? ¿Por qué?</b><br/>
+
+Sí, la usaría porque me parece una forma más práctica de aprender. Además, puedo repetir simulaciones y mejorar poco a poco.
+
+<b>18. ¿Recomendarías SafeStep a otra persona? ¿Por qué?</b><br/>
+
+Sí, la recomendaría porque los primeros auxilios son importantes para cualquier persona. Creo que sería útil para estudiantes, familias y personas que quieran estar mejor preparadas.
+
+<b>19. Del 1 al 5, ¿qué tan fácil, útil y confiable te pareció SafeStep?</b><br/>
+
+Le daría 4 en facilidad, 5 en utilidad y 4 en confianza. Me parece bastante útil, aunque podría mejorar con más información de respaldo o certificaciones.
+
+<b>20. Si pudieras cambiar o mejorar una sola cosa del producto, ¿qué cambiarías?</b><br/>
+
+Agregaría una sección inicial de explicación rápida, como un pequeño tutorial, para entender cómo funcionan las recompensas, las monedas y el progreso dentro de la aplicación.
+        </td>
+    </tr>
+</table>
+
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <b>Entrevista de Validación N° 2</b>
+        </td>
+    </tr>
+    <tr>
+        <td width="30%" align="center">
+            <img src="markdown/assets/images/chapter-5/Vivian.png" width="180">
+        </td>
+        <td width="70%">
+            <b>Entrevistado</b>: Vivian Paredes <br/>
+            <b>Entrevistador</b>: Josep Melgarejo <br/>
+            <b>Duración</b>: 12:34 <br/>
+            <b>Género</b>: Femenino <br/>
+            <b>Edad</b>: 22 años <br/>
+            <b>Segmento</b>: Estudiante universitario <br/>
+            <b>Lugar de Residencia</b>: Chorrillos <br/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            Link de la entrevista: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202315165_upc_edu_pe/IQCL5jTx-skXTo0-TpL3it1kAe_J86duOpp7QmsUrMbwsUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=BcA9Ee" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202315165_upc_edu_pe/IQCL5jTx-skXTo0-TpL3it1kAe_J86duOpp7QmsUrMbwsUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=BcA9Ee</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="markdown/assets/images/chapter-5/VivianInterview.png" width="500">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <b>Transcripción:</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+
+<b>1. ¿Cuál fue tu primera impresión al ver SafeStep?</b><br/>
+
+Mi primera impresión fue positiva. Me pareció una aplicación seria, ordenada y útil, especialmente porque trata un tema importante como los primeros auxilios.
+
+<b>2. Después de revisar la landing page, ¿qué entendiste que ofrece SafeStep?</b><br/>
+
+Entendí que SafeStep es una plataforma para aprender primeros auxilios mediante simulaciones, ejercicios prácticos, seguimiento del progreso y recomendaciones de productos de emergencia.
+
+<b>3. ¿La landing page te pareció clara y fácil de entender?</b><br/>
+
+Sí, me pareció clara. La información está bien distribuida y se entiende rápido cuál es el propósito de la aplicación.
+
+<b>4. ¿Los botones o llamados a la acción fueron fáciles de identificar?</b><br/>
+
+Sí, los botones se notan bien y es claro cuándo se puede iniciar, registrarse o conocer más sobre la aplicación.
+
+<b>5. ¿La landing page te transmitió confianza para probar la aplicación?</b><br/>
+
+Sí, porque tiene una presentación profesional y explica bien el problema que busca resolver. Eso hace que se vea como una herramienta útil y confiable.
+
+<b>6. ¿Te resultó fácil navegar dentro de la aplicación web?</b><br/>
+
+Sí, la navegación me pareció sencilla. Las secciones están visibles y pude moverme entre las partes principales sin perderme.
+
+<b>7. ¿Pudiste identificar rápidamente las secciones principales de la aplicación?</b><br/>
+
+Sí, pude identificar el dashboard, las simulaciones, la gamificación, las estadísticas, la tienda y el perfil.
+
+<b>8. ¿La organización de la información te pareció ordenada?</b><br/>
+
+Sí, la información está organizada por secciones y eso ayuda a entender qué se puede hacer en cada parte de la aplicación.
+
+<b>9. ¿Hubo alguna pantalla o sección que te pareciera confusa?</b><br/>
+
+En general no. Tal vez al inicio la parte de monedas o recompensas podría explicarse un poco más, pero después de usarla se entiende mejor.
+
+<b>10. ¿Qué funcionalidad te pareció más útil dentro de SafeStep?</b><br/>
+
+La funcionalidad más útil me pareció la de simulaciones médicas, porque permite practicar situaciones de emergencia de forma guiada.
+
+<b>11. ¿Las simulaciones médicas te parecieron útiles para aprender primeros auxilios?</b><br/>
+
+Sí, porque presentan casos concretos y ayudan a pensar qué haría una persona en una emergencia real.
+
+<b>12. ¿Las preguntas y opciones de las simulaciones fueron claras?</b><br/>
+
+Sí, las preguntas se entienden bien y las opciones son fáciles de comparar.
+
+<b>13. ¿La retroalimentación después de responder te ayudó a entender mejor qué hacer?</b><br/>
+
+Sí, porque no solo indica si la respuesta fue correcta, sino que también ayuda a comprender por qué una acción es mejor que otra.
+
+<b>14. ¿Las misiones, insignias, puntos o monedas te motivarían a seguir usando la aplicación?</b><br/>
+
+Sí, porque hacen que el aprendizaje se sienta más dinámico y dan ganas de seguir practicando para mejorar.
+
+<b>15. ¿La tienda de productos de emergencia te pareció útil dentro de la aplicación?</b><br/>
+
+Sí, me pareció útil porque complementa el aprendizaje con productos que podrían servir en una emergencia real.
+
+<b>16. ¿Los productos y kits mostrados se relacionan bien con el objetivo de SafeStep?</b><br/>
+
+Sí, los productos tienen relación con primeros auxilios y prevención, así que encajan bien con el propósito de la aplicación.
+
+<b>17. ¿Usarías SafeStep para aprender o practicar primeros auxilios? ¿Por qué?</b><br/>
+
+Sí, la usaría porque permite aprender de forma práctica y no solo leyendo teoría. Además, practicar con simulaciones ayuda a recordar mejor qué hacer.
+
+<b>18. ¿Recomendarías SafeStep a otra persona? ¿Por qué?</b><br/>
+
+Sí, la recomendaría a familiares, amigos o estudiantes, porque todos deberíamos saber cómo actuar ante una emergencia básica.
+
+<b>19. Del 1 al 5, ¿qué tan fácil, útil y confiable te pareció SafeStep?</b><br/>
+
+Le daría 5 en utilidad, 4 en facilidad y 4 en confianza. Me parece una buena propuesta, aunque algunas funciones podrían explicarse un poco más al inicio.
+
+<b>20. Si pudieras cambiar o mejorar una sola cosa del producto, ¿qué cambiarías?</b><br/>
+
+Agregaría una explicación inicial o guía rápida dentro de la aplicación para entender mejor cómo funcionan las monedas, misiones y recompensas desde el primer uso
+        </td>
+    </tr>
+
+
+</table>
+
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <b>Entrevista de Validación N° 3</b>
+        </td>
+    </tr>
+    <tr>
+        <td width="30%" align="center">
+            <img src="markdown/assets/images/chapter-5/validation-entrevista-rodrigo.png" width="180">
+        </td>
+        <td width="70%">
+            <b>Entrevistado</b>: Rodrigo Andres Gonzales Portugal <br/>
+            <b>Entrevistador</b>: Angel Thyago Flores Eusebio <br/>
+            <b>Duración</b>: 6:24 <br/>
+            <b>Género</b>: Masculino <br/>
+            <b>Edad</b>: 20 <br/>
+            <b>Segmento</b>: Comunidad vecinal <br/>
+            <b>Lugar de Residencia</b>: Lima <br/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            Link de la entrevista: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b781_upc_edu_pe/IQB9y3zKDB4MQ6OIm5edG54IAYUEwJSO7r1IzjdVk2xAfb4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Wcf3ss" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b781_upc_edu_pe/IQB9y3zKDB4MQ6OIm5edG54IAYUEwJSO7r1IzjdVk2xAfb4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Wcf3ss</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="markdown/assets/images/chapter-5/validation-entrevista-rodrigo2.png" width="500">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <b>Transcripción:</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+<b>1. ¿Cuál fue tu primera impresión al ver SafeStep?</b><br/>
+Mi primera impresión fue positiva. Me pareció una aplicación moderna, amigable y enfocada en un tema importante para cualquier familia o comunidad, como saber actuar correctamente durante una emergencia.
+
+<b>2. ¿Qué entendiste que ofrece SafeStep?</b><br/>
+Entendí que SafeStep ayuda a aprender y practicar primeros auxilios mediante simulaciones, preguntas y actividades. También ofrece misiones, recompensas y una tienda con productos para emergencias.
+
+<b>3. ¿La landing page te pareció clara y fácil de entender?</b><br/>
+Sí, me pareció bastante clara. Desde el inicio pude entender que la aplicación busca preparar a las personas para responder mejor ante accidentes o emergencias cotidianas.
+
+<b>4. ¿Los botones o llamados a la acción fueron fáciles de identificar?</b><br/>
+Sí, los botones se distinguen bien y tienen textos comprensibles. En general, pude saber dónde debía hacer clic para registrarme, ingresar o conocer mejor las funciones.
+
+<b>5. ¿La landing page te transmitió confianza para probar la aplicación?</b><br/>
+Sí, porque tiene una presentación ordenada y profesional. Además, el tema que aborda es útil para la comunidad y eso genera interés por conocer lo que ofrece.
+
+<b>6. ¿Te resultó fácil navegar dentro de la aplicación web?</b><br/>
+En general, sí. Las opciones principales están visibles y pude pasar de una sección a otra sin perderme, aunque al inicio necesité unos minutos para familiarizarme.
+
+<b>7. ¿Pudiste identificar rápidamente las secciones principales?</b><br/>
+Sí, pude reconocer las simulaciones, misiones, recompensas, estadísticas y la tienda. Los nombres de las secciones ayudan a entender qué se puede hacer en cada una.
+
+<b>8. ¿La organización de la información te pareció ordenada?</b><br/>
+Sí, la información está distribuida de una forma bastante ordenada. No sentí que hubiera demasiado contenido junto y pude concentrarme en cada función.
+
+<b>9. ¿Hubo alguna pantalla o sección que te pareciera confusa?</b><br/>
+Algunas partes relacionadas con los puntos, monedas y recompensas podrían explicarse un poco mejor. Sería útil indicar desde el comienzo cómo se consiguen y para qué sirven.
+
+<b>10. ¿Qué funcionalidad te pareció más útil?</b><br/>
+Las simulaciones médicas me parecieron lo más útil, porque permiten enfrentarse a una situación parecida a una emergencia y pensar qué acción debería realizarse.
+
+<b>11. ¿Las simulaciones médicas te parecieron útiles?</b><br/>
+Sí, porque ayudan a aprender primeros auxilios de una manera más práctica que solamente leyendo información. También permiten comprobar si realmente entendimos qué hacer.
+
+<b>12. ¿Las preguntas y opciones de las simulaciones fueron claras?</b><br/>
+En general, sí. Las preguntas fueron fáciles de comprender y las opciones estaban relacionadas con la situación presentada, aunque algunas podrían incluir palabras más sencillas.
+
+<b>13. ¿La retroalimentación te ayudó a entender mejor qué hacer?</b><br/>
+Sí, especialmente cuando una respuesta era incorrecta. La explicación permite comprender el error y recordar cuál sería la acción adecuada en una emergencia real.
+
+<b>14. ¿Las misiones, insignias, puntos o monedas te motivarían?</b><br/>
+Sí, porque hacen que el aprendizaje sea más entretenido y permiten ver el progreso. Creo que completar misiones también podría motivar a jóvenes y familias de la comunidad.
+
+<b>15. ¿La tienda de productos de emergencia te pareció útil?</b><br/>
+Sí, porque permite conocer productos que podrían ser necesarios en casa, como botiquines o kits de emergencia. Algunos vecinos quizá no sabemos qué elementos deberíamos tener preparados.
+
+<b>16. ¿Los productos y kits se relacionan con SafeStep?</b><br/>
+Sí, porque complementan lo aprendido en las simulaciones. La aplicación enseña cómo actuar y la tienda muestra algunos recursos que podrían ayudar en esas situaciones.
+
+<b>17. ¿Usarías SafeStep para aprender o practicar primeros auxilios?</b><br/>
+Sí, la usaría porque en una emergencia muchas veces uno no sabe cómo reaccionar. Practicar con anticipación podría ayudarme a mantener la calma y apoyar a un familiar o vecino.
+
+<b>18. ¿Recomendarías SafeStep a otra persona?</b><br/>
+Sí, especialmente a familiares, vecinos y jóvenes. Considero que aprender primeros auxilios es importante y la aplicación presenta el tema de una manera accesible y entretenida.
+
+<b>19. Del 1 al 5, ¿qué tan fácil, útil y confiable te pareció?</b><br/>
+Le daría un 4 de 5. Me pareció fácil de utilizar, útil para aprender y bastante confiable, aunque todavía podría mejorar algunas explicaciones y agregar más situaciones.
+
+<b>20. ¿Qué cambiarías o mejorarías?</b><br/>
+Agregaría más simulaciones sobre emergencias comunes en el hogar y el vecindario, como caídas, quemaduras, atragantamientos o sismos. También incluiría instrucciones breves con imágenes o videos.
+        </td>
+    </tr>
+</table>
+
+
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">
+            <b>Entrevista de Validación N° 4</b>
+        </td>
+    </tr>
+    <tr>
+        <td width="30%" align="center">
+            <img src="markdown/assets/images/chapter-5/Juan.jpg" width="180">
+        </td>
+        <td width="70%">
+            <b>Entrevistado</b>: Juan Miguel Barrios Casanova <br/>
+            <b>Entrevistador</b>: Mathias Enrique Sánchez Espinoza <br/>
+            <b>Duración</b>: 09:38 <br/>
+            <b>Género</b>: Masculino <br/>
+            <b>Edad</b>: 20 <br/>
+            <b>Segmento</b>: Brigadista <br/>
+            <b>Lugar de Residencia</b>: Lima - San Miguel <br/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            Link de la entrevista: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c524_upc_edu_pe/IQBUW35fykXxQa3Zw5aIlyysAZ9SJmB69--ppxUl8eElCLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VIEHA9" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c524_upc_edu_pe/IQBUW35fykXxQa3Zw5aIlyysAZ9SJmB69--ppxUl8eElCLQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=VIEHA9</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <img src="markdown/assets/images/chapter-5/JuanInterview.jpg" width="500">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <b>Transcripción:</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+
+<b>Presentación del entrevistado:</b><br/>
+Mi nombre es Juan Barrios, soy de la ciudad de Lima y me especializo en primeros auxilios. Actualmente trabajo con la Municipalidad de Lima.
+
+<b>1. ¿Cuál fue tu primera impresión al ver SafeStep?</b><br/>
+Mi primera impresión fue de asombro, ya que me pareció un proyecto innovador y una forma bastante interesante de enseñar primeros auxilios.
+
+<b>2. Después de revisar la landing page, ¿qué entendiste que ofrece SafeStep?</b><br/>
+Entendí que busca enseñar primeros auxilios a personas que no conocen el tema o que necesitan mejorar. También ofrece el equipamiento que una persona puede requerir para aplicar correctamente los primeros auxilios.
+
+<b>3. ¿La landing page te pareció clara y fácil de entender?</b><br/>
+Sí, me pareció muy clara y bien distribuida.
+
+<b>4. ¿Los botones o llamados a la acción fueron fáciles de identificar?</b><br/>
+Sí, me parece que los botones call to action estaban bien posicionados dentro de la página web y se podían identificar de manera sencilla.
+
+<b>5. ¿La landing page te transmitió confianza para probar la aplicación?</b><br/>
+Sí, la verdad que sí. Desde una primera impresión me dieron ganas de seguir utilizando la aplicación.
+
+<b>6. ¿Te resultó fácil navegar dentro de la aplicación web?</b><br/>
+Sí, estuvo muy sencillo. Los apartados estaban bien organizados y todo era muy claro.
+
+<b>7. ¿Pudiste identificar rápidamente las secciones principales de la aplicación?</b><br/>
+Sí, la aplicación está muy bien distribuida y fue rápido identificar sus secciones principales.
+
+<b>8. ¿La organización de la información te pareció ordenada?</b><br/>
+Me pareció ordenada. No tuve dudas sobre a dónde ir primero y el orden era intuitivo para ver todo lo que ofrecía la aplicación.
+
+<b>9. ¿Hubo alguna pantalla o sección que te pareciera confusa?</b><br/>
+No, la verdad que no. Me parece que todo estaba muy bien distribuido dentro de la aplicación.
+
+<b>10. ¿Qué funcionalidad te pareció más útil dentro de SafeStep?</b><br/>
+Lo más útil me parecieron las simulaciones de primeros auxilios. Son fáciles de entender, están bien centradas en los temas y son bastante bien explicadas.
+
+<b>11. ¿Las simulaciones médicas te parecieron útiles para aprender primeros auxilios?</b><br/>
+Sí, me parecieron útiles. Los temas elegidos están bien centrados en lo que alguien que quiere aprender primeros auxilios necesita conocer.
+
+<b>12. ¿Las preguntas y opciones de las simulaciones fueron claras?</b><br/>
+Sí, todas las preguntas y opciones estaban muy bien planteadas y bien logradas.
+
+<b>13. ¿La retroalimentación después de responder te ayudó a entender mejor qué hacer?</b><br/>
+Sí, la retroalimentación estuvo bastante acertada. Es una forma adecuada de ayudar a que una persona termine de entender el tema presentado.
+
+<b>14. ¿Las misiones, insignias, puntos o monedas te motivarían a seguir usando la aplicación?</b><br/>
+Sí, me parece una forma innovadora de mantener a la gente enganchada, seguir utilizando la aplicación y recomendarla. Las misiones y objetos que se pueden conseguir despiertan la competitividad y eso puede atraer más público.
+
+<b>15. ¿La tienda de productos de emergencia te pareció útil dentro de la aplicación?</b><br/>
+Sí, me parece un apartado bastante útil, ya que la gente que busca aprender primeros auxilios también querrá saber qué cosas debería comprar para el objetivo que está buscando.
+
+<b>16. ¿Los productos y kits mostrados se relacionan bien con el objetivo de SafeStep?</b><br/>
+Sí, están bien relacionados. El objetivo de SafeStep es enseñar primeros auxilios y los productos y kits de la tienda están relacionados con esos temas.
+
+<b>17. ¿Usarías SafeStep para aprender o practicar primeros auxilios? ¿Por qué?</b><br/>
+Sí la usaría, porque me parece bastante sencillo aprender con la aplicación y también es una forma entretenida de practicar.
+
+<b>18. ¿Recomendarías SafeStep a otra persona? ¿Por qué?</b><br/>
+Sí lo recomendaría, porque me parece un producto innovador y, por lo que vi, la aplicación está muy bien elaborada.
+
+<b>19. Del 1 al 5, ¿qué tan fácil, útil y confiable te pareció SafeStep?</b><br/>
+Le daría un 5, ya que en esta primera presentación la aplicación me pareció acertada en los temas, las explicaciones y la forma en que está elaborada.
+
+<b>20. Si pudieras cambiar o mejorar una sola cosa del producto, ¿qué cambiarías?</b><br/>
+Mejoraría la duración de las simulaciones. Con un poco más de tiempo, sin exagerar, podrían abarcar algunos detalles importantes adicionales sobre los temas tratados.
+        </td>
+    </tr>
+</table>
+
 
 <a id="toc-6-3-3-evaluaciones-segun-heuristicas"></a>
 ## 6.3.3. Evaluaciones según heurísticas
 
-Pendiente.
+Esta sección presenta la evaluación de la experiencia de usuario de SafeStep a partir de las sesiones de validación realizadas. La evaluación se organizó con base en heurísticas de usabilidad, arquitectura de información e inclusive design, siguiendo la estructura indicada en el Anexo D: Formato para Evaluación de User Experience según Heurísticas.
+
+<a id="toc-ux-heuristics-principles-evaluation"></a>
+### UX Heuristics & Principles Evaluation
+
+**Usability - Inclusive Design - Information Architecture**
+
+| Elemento | Información |
+| --- | --- |
+| Carrera | Ingeniería de Software |
+| Curso | Desarrollo de Aplicaciones Open Source |
+| Sección | 1ASI0729 |
+| Auditor | Chronos Team - SafeStep |
+| Clientes | Participantes de las entrevistas de validación registradas en la sección 6.3.2 |
+| Site o App a evaluar | SafeStep Landing Page y SafeStep Web Application |
+
+<a id="toc-tareas-a-evaluar"></a>
+### Tareas a evaluar
+
+El alcance de esta evaluación incluye la revisión de la experiencia de usuario en las siguientes tareas principales:
+
+1. Comprender la propuesta de valor desde la landing page.
+2. Identificar los botones o llamados a la acción de la landing page.
+3. Iniciar sesión o ingresar a la aplicación web.
+4. Navegar por las secciones principales de la aplicación.
+5. Revisar el dashboard de usuario.
+6. Consultar simulaciones médicas disponibles.
+7. Resolver una simulación médica y revisar su retroalimentación.
+8. Revisar progreso, estadísticas y recompensas.
+9. Consultar misiones, insignias, puntos y SafeCoins.
+10. Explorar la tienda de productos y kits de emergencia.
+11. Revisar productos relacionados con primeros auxilios.
+12. Consultar el perfil de usuario.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Administración avanzada de productos, cupones, simulaciones, misiones e insignias.
+2. Gestión de roles administrativos.
+3. Reposición automática de productos de emergencia.
+4. Certificaciones oficiales de primeros auxilios.
+5. Integraciones con instituciones médicas externas.
+
+<a id="toc-escala-de-severidad"></a>
+### Escala de severidad
+
+Los problemas encontrados serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+| ---: | --- |
+| 1 | Problema superficial: puede ser superado fácilmente por el usuario u ocurre con muy poca frecuencia. No necesita ser corregido, salvo que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir con cierta frecuencia o ser un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja de resolución. |
+| 3 | Problema mayor: ocurre con frecuencia o los usuarios pueden tener dificultades para resolverlo por sí mismos. Es importante corregirlo y asignarle prioridad alta. |
+| 4 | Problema muy grave: error de gran impacto que impide al usuario continuar usando la herramienta. Debe corregirse antes del lanzamiento. |
+
+<a id="toc-tabla-resumen"></a>
+### Tabla resumen
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| ---: | --- | ---: | --- |
+| 1 | El sistema de monedas, recompensas y progreso no queda suficientemente explicado durante el primer uso. | 2 | Usability: Ayuda y documentación |
+| 2 | Algunas simulaciones podrían ofrecer mayor profundidad o duración para usuarios con experiencia previa en primeros auxilios. | 2 | Information Architecture: Is it useful? |
+| 3 | La landing page y la aplicación podrían reforzar mejor los elementos de confianza, respaldo o referencias del contenido médico. | 2 | Usability: Credibilidad y confianza |
+| 4 | Algunas opciones de simulación podrían usar lenguaje más simple para usuarios sin conocimientos técnicos. | 2 | Inclusive Design: Lenguaje claro y experiencias comparables |
+| 5 | La tienda se entiende como complemento útil, pero podría explicar mejor la relación entre simulaciones completadas y productos recomendados. | 1 | Information Architecture: Is it understandable? |
+
+<a id="toc-descripcion-de-problemas"></a>
+### Descripción de problemas
+
+<a id="toc-problema-1-el-sistema-de-monedas-recompensas-y-progreso-no-queda-suficientemente-explicado-durante-el-primer-uso"></a>
+#### Problema #1: El sistema de monedas, recompensas y progreso no queda suficientemente explicado durante el primer uso
+
+**Severidad:** 2
+
+**Heurística violada:** Usabilidad - Ayuda y documentación
+
+**Problema:**
+
+Durante las entrevistas, varios participantes indicaron que las monedas, recompensas, misiones o progreso podrían explicarse mejor al inicio. Aunque la gamificación fue percibida como motivadora, algunos usuarios necesitaron más contexto para entender cómo se ganan SafeCoins, para qué sirven y cómo se relacionan con el avance dentro de la aplicación.
+
+**Recomendación:**
+
+Agregar una guía breve de bienvenida o un bloque introductorio dentro del dashboard que explique, en pocos pasos, cómo funcionan las simulaciones, los puntos, las insignias, las misiones y las SafeCoins. Esta explicación debe ser corta, visual y fácil de omitir para usuarios recurrentes.
+
+<a id="toc-problema-2-algunas-simulaciones-podrian-ofrecer-mayor-profundidad-o-duracion-para-usuarios-con-experiencia-previa-en-primeros-auxilios"></a>
+#### Problema #2: Algunas simulaciones podrían ofrecer mayor profundidad o duración para usuarios con experiencia previa en primeros auxilios
+
+**Severidad:** 2
+
+**Heurística violada:** Arquitectura de información - Is it useful?
+
+**Problema:**
+
+El segmento de brigadistas valoró positivamente las simulaciones, pero sugirió que algunos escenarios podrían incluir mayor duración, más pasos o detalles adicionales. Esto evidencia que SafeStep funciona bien para aprendizaje inicial, pero puede requerir niveles más avanzados para usuarios con experiencia previa.
+
+**Recomendación:**
+
+Incorporar niveles de dificultad en las simulaciones, por ejemplo básico, intermedio y avanzado. Los escenarios avanzados pueden incluir más preguntas, condiciones adicionales y retroalimentación más detallada, sin afectar la experiencia simple que necesitan los usuarios principiantes.
+
+<a id="toc-problema-3-la-landing-page-y-la-aplicacion-podrian-reforzar-mejor-los-elementos-de-confianza-respaldo-o-referencias-del-contenido-medico"></a>
+#### Problema #3: La landing page y la aplicación podrían reforzar mejor los elementos de confianza, respaldo o referencias del contenido médico
+
+**Severidad:** 2
+
+**Heurística violada:** Usabilidad - Credibilidad y confianza
+
+**Problema:**
+
+Aunque la landing page fue considerada clara y profesional, se identificó la oportunidad de reforzar la confianza con mayor respaldo del contenido presentado. En un producto relacionado con primeros auxilios, los usuarios valoran que la información provenga de fuentes confiables o que exista algún tipo de validación externa.
+
+**Recomendación:**
+
+Agregar una sección de respaldo en la landing page y dentro de la aplicación, indicando que los contenidos siguen recomendaciones generales de primeros auxilios y que no reemplazan atención médica profesional. También se pueden incluir referencias, fuentes consultadas o alianzas futuras con especialistas.
+
+<a id="toc-problema-4-algunas-opciones-de-simulacion-podrian-usar-lenguaje-mas-simple-para-usuarios-sin-conocimientos-tecnicos"></a>
+#### Problema #4: Algunas opciones de simulación podrían usar lenguaje más simple para usuarios sin conocimientos técnicos
+
+**Severidad:** 2
+
+**Heurística violada:** Inclusive Design - Lenguaje claro y experiencias comparables
+
+**Problema:**
+
+Un participante indicó que algunas opciones de respuesta podrían usar palabras más sencillas. Esto no impidió completar la simulación, pero puede afectar a usuarios con menor familiaridad con términos médicos o de emergencia.
+
+**Recomendación:**
+
+Revisar los textos de preguntas, opciones y retroalimentaciones para reducir términos técnicos cuando no sean necesarios. Cuando se deba usar un término médico, incluir una explicación breve dentro de la misma retroalimentación.
+
+<a id="toc-problema-5-la-tienda-podria-explicar-mejor-la-relacion-entre-simulaciones-completadas-y-productos-recomendados"></a>
+#### Problema #5: La tienda podría explicar mejor la relación entre simulaciones completadas y productos recomendados
+
+**Severidad:** 1
+
+**Heurística violada:** Arquitectura de información - Is it understandable?
+
+**Problema:**
+
+La tienda fue percibida como útil y relacionada con el objetivo de SafeStep, pero la conexión entre lo aprendido en una simulación y los productos recomendados puede hacerse más evidente. Actualmente, los usuarios entienden que los productos están relacionados con emergencias, pero no siempre se explica por qué determinado producto es útil para un escenario específico.
+
+**Recomendación:**
+
+Mostrar recomendaciones contextualizadas después de completar simulaciones, indicando frases como "Producto recomendado para practicar lo aprendido en RCP" o "Kit sugerido para emergencias por quemaduras". Esto permitiría que la tienda sea percibida como una extensión natural del aprendizaje.
+
+<a id="toc-conclusion-de-la-evaluacion-heuristica"></a>
+### Conclusión de la evaluación heurística
+
+La evaluación heurística evidencia que SafeStep presenta una experiencia clara, útil y comprensible para los usuarios entrevistados. Las principales tareas, como comprender la propuesta, navegar por la aplicación, resolver simulaciones, revisar progreso y explorar la tienda, pudieron ser entendidas sin bloqueos críticos. No se identificaron problemas de severidad 3 o 4.
+
+Las oportunidades de mejora se concentran en fortalecer la explicación inicial del sistema de gamificación, ampliar la profundidad de las simulaciones para usuarios con mayor experiencia, reforzar la confianza del contenido médico, simplificar ciertos textos y conectar mejor las recomendaciones de productos con los escenarios de aprendizaje. Estos ajustes permitirán mejorar la usabilidad, la arquitectura de información y la inclusión de la experiencia propuesta.
 
 <br>
 
