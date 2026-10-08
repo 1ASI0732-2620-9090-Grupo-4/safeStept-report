@@ -557,6 +557,104 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
             <td>Como usuario, quiero ver mi saldo de SafeCoins en la interfaz principal para saber cuántos puntos puedo usar.</td>
             <td align="center">2</td>
         </tr>
+        <tr>
+            <td align="center">77</td>
+            <td align="center">US57</td>
+            <td>Visualizar el panel de administracion</td>
+            <td>Como administrador, quiero ver un panel con accesos y conteos de los módulos gestionables para administrar la plataforma desde un solo lugar.</td>
+            <td align="center">3</td>
+        </tr>
+        <tr>
+            <td align="center">78</td>
+            <td align="center">US58</td>
+            <td>Gestionar roles de los usuarios</td>
+            <td>Como administrador, quiero asignar o quitar roles a los usuarios para controlar quién puede gestionar la plataforma.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">79</td>
+            <td align="center">US59</td>
+            <td>Canjear un cupon con SafeCoins</td>
+            <td>Como usuario, quiero canjear un cupón del catálogo con mis SafeCoins para obtener un descuento en mi próxima compra.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">80</td>
+            <td align="center">US60</td>
+            <td>Aplicar un cupon canjeado en el checkout</td>
+            <td>Como usuario, quiero elegir uno de mis cupones canjeados al pagar para que el total a pagar incluya el descuento.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">81</td>
+            <td align="center">US61</td>
+            <td>Consultar mis cupones canjeados</td>
+            <td>Como usuario, quiero ver mis cupones canjeados separados en disponibles y usados para saber cuáles puedo aplicar.</td>
+            <td align="center">2</td>
+        </tr>
+        <tr>
+            <td align="center">82</td>
+            <td align="center">TS25</td>
+            <td>Pruebas unitarias de entidades y servicios de aplicacion</td>
+            <td>Como developer, quiero cubrir con pruebas unitarias las entidades de dominio y los servicios de aplicación para detectar regresiones sin levantar el sistema completo.</td>
+            <td align="center">8</td>
+        </tr>
+        <tr>
+            <td align="center">83</td>
+            <td align="center">TS26</td>
+            <td>Umbral de cobertura con JaCoCo</td>
+            <td>Como developer, quiero medir la cobertura con JaCoCo y exigir un mínimo de 80 % para evitar que el código de negocio quede sin verificar.</td>
+            <td align="center">3</td>
+        </tr>
+        <tr>
+            <td align="center">84</td>
+            <td align="center">TS27</td>
+            <td>Analisis de estilo con Checkstyle</td>
+            <td>Como developer, quiero analizar el estilo del código con Checkstyle y las reglas de Google para tener una referencia objetiva de calidad.</td>
+            <td align="center">2</td>
+        </tr>
+        <tr>
+            <td align="center">85</td>
+            <td align="center">TS28</td>
+            <td>Pruebas de aceptacion BDD con Cucumber</td>
+            <td>Como developer, quiero automatizar los criterios de aceptación en archivos Gherkin con Cucumber para verificar el comportamiento esperado de las historias.</td>
+            <td align="center">8</td>
+        </tr>
+        <tr>
+            <td align="center">86</td>
+            <td align="center">TS29</td>
+            <td>Pruebas de integracion de API con Karate</td>
+            <td>Como developer, quiero probar los endpoints REST con Karate para validar contratos, estados HTTP y reglas de seguridad de extremo a extremo.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">87</td>
+            <td align="center">TS30</td>
+            <td>Pruebas de sistema web con Selenium y Cucumber</td>
+            <td>Como developer, quiero automatizar flujos de usuario en un navegador real con Selenium y Gherkin para verificar que frontend y backend funcionan juntos.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">88</td>
+            <td align="center">TS31</td>
+            <td>Pipeline de integracion continua con Jenkins</td>
+            <td>Como developer, quiero un Jenkinsfile que compile, valide y pruebe el backend en cada ejecución para recibir retroalimentación automática.</td>
+            <td align="center">8</td>
+        </tr>
+        <tr>
+            <td align="center">89</td>
+            <td align="center">TS32</td>
+            <td>Analisis de calidad con SonarQube y Quality Gate</td>
+            <td>Como developer, quiero enviar el análisis a SonarQube y detener el pipeline si no supera el Quality Gate para evitar que código con defectos avance.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">90</td>
+            <td align="center">TS33</td>
+            <td>Imagen Docker y ejecucion contenedorizada en CI</td>
+            <td>Como developer, quiero construir la imagen Docker y ejecutarla con PostgreSQL desechable en el pipeline para probar el artefacto que se desplegará.</td>
+            <td align="center">3</td>
+        </tr>
     </tbody>
 </table>
 
