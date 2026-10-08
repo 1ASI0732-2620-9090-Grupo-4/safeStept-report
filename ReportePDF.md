@@ -11510,8 +11510,8 @@ Feature: Administration panel access
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
         <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
-        <tr><td>safestept-frontend</td><td>feature/e2e-system-tests</td><td>836c756</td><td>test(e2e): add Selenium + Cucumber system tests for the web app</td><td>Gherkin scenarios (12) run in headless Chrome against the Angular app and cover route protection, registration, sign-in/out, simulations and store catalogues, the coupon redemption page and the admin panel access rules. An &quot;e2e&quot; Angular configuration points the app to the isolated test backend so the suite never touches the development database.</td><td>08/10/2026</td></tr>
-        <tr><td>safestept-frontend</td><td>feature/story-traceability-tags</td><td>e7a351f</td><td>test(e2e): tag features with the new US57-US59 story ids</td><td>—</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-frontend</td><td>feature/e2e-system-tests</td><td>67e3886</td><td>test(e2e): add Selenium + Cucumber system tests for the web app</td><td>Gherkin scenarios (12) run in headless Chrome against the Angular app and cover route protection, registration, sign-in/out, simulations and store catalogues, the coupon redemption page and the admin panel access rules. An &quot;e2e&quot; Angular configuration points the app to the isolated test backend so the suite never touches the development database.</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-frontend</td><td>feature/story-traceability-tags</td><td>e02a73a</td><td>test(e2e): tag features with the new US57-US59 story ids</td><td>—</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
