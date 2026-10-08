@@ -67,6 +67,9 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | Prettier | Formateador de código Opinionated para mantener consistencia en el código | <a href="https://prettier.io">https://prettier.io</a> | Descargable (npm) |
 | Markdown | Lenguaje de formato para documentación técnica | <a href="https://www.markdownguide.org">https://www.markdownguide.org</a> | Referencia |
 | OpenAPI (Swagger) | Especificación para documentar APIs REST | <a href="https://swagger.io/specification">https://swagger.io/specification</a> | Referencia |
+| Checkstyle 14.3 | Análisis estático de estilo del código Java con las reglas de Google (`google_checks.xml`), configurado en modo reporte | <a href="https://checkstyle.org">https://checkstyle.org</a> | Descargable (plugin Maven) |
+| JaCoCo 0.8.15 | Medición de cobertura de pruebas y verificación del umbral mínimo de 80 % | <a href="https://www.jacoco.org/jacoco">https://www.jacoco.org/jacoco</a> | Descargable (plugin Maven) |
+| SonarQube (LTS Community) | Análisis de calidad y seguridad del código con Quality Gate integrado al pipeline | <a href="https://www.sonarsource.com/products/sonarqube">https://www.sonarsource.com/products/sonarqube</a> | Descargable (contenedor Docker) |
 
 ### 5.1.1.7. Herramientas de Despliegue
 
@@ -76,16 +79,22 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | GitHub Pages | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> | SaaS |
 | Render | Plataforma de despliegue para el backend Spring Boot de SafeStep | <a href="https://render.com">https://render.com</a> | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> | SaaS |
 | Render PostgreSQL | Base de datos PostgreSQL desplegada para persistencia del backend | <a href="https://render.com">https://render.com</a> | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` | SaaS |
+| Docker | Construcción de la imagen del backend y ejecución de contenedores (Jenkins, SonarQube, PostgreSQL y API) en la red `spring-postgres-net` | <a href="https://www.docker.com">https://www.docker.com</a> | No aplica (ejecución local) | Descargable |
+| Jenkins (LTS, JDK 25) | Servidor de integración continua que ejecuta el `Jenkinsfile` del backend; se configura como código con JCasC | <a href="https://www.jenkins.io">https://www.jenkins.io</a> | `http://localhost:9089` (entorno local del equipo) | Descargable (contenedor Docker) |
 
 ### 5.1.1.8. Herramientas de Testing
 
 | Herramienta | Propósito |URL de Referencia | Tipo |
 |-------------|-----------|------------------|------|
-| Jasmine | Framework de testing para aplicaciones Angular | <a href="https://jasmine.github.io">https://jasmine.github.io</a> | Descargable (npm) |
-| Karma | Test runner para Angular que permite ejecutar pruebas en múltiples navegadores | <a href="https://karma-runner.github.io">https://karma-runner.github.io</a> | Descargable (npm) |
-| Jest | Framework de testing alternativo para aplicaciones JavaScript/TypeScript | <a href="https://jestjs.io">https://jestjs.io</a> | Descargable (npm) |
-| JUnit | Framework de testing para aplicaciones Java/Spring Boot | <a href="https://junit.org/junit5">https://junit.org/junit5</a> | Descargable |
-| Postman | Herramienta para testing manual de endpoints API | <a href="https://www.postman.com">https://www.postman.com</a> | Descargable |
+| JUnit Jupiter 6.0 | Framework de pruebas unitarias y de integración del backend Java/Spring Boot | <a href="https://junit.org">https://junit.org</a> | Descargable (Maven) |
+| Mockito 5 | Dobles de prueba para aislar servicios de aplicación de repositorios y fachadas de otros bounded contexts | <a href="https://site.mockito.org">https://site.mockito.org</a> | Descargable (Maven) |
+| AssertJ | Aserciones fluidas para las pruebas unitarias | <a href="https://assertj.github.io/doc">https://assertj.github.io/doc</a> | Descargable (Maven) |
+| Spring Boot Test + H2 | Pruebas con contexto de Spring completo sobre una base de datos en memoria aislada | <a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a> | Descargable (Maven) |
+| Cucumber-JVM 8 (Gherkin) | Ejecución de los criterios de aceptación escritos en Gherkin (BDD) sobre el backend y sobre el navegador | <a href="https://cucumber.io">https://cucumber.io</a> | Descargable (Maven) |
+| Karate 2.1 | Pruebas de integración de la API REST desde fuera de la aplicación | <a href="https://github.com/karatelabs/karate">https://github.com/karatelabs/karate</a> | Descargable (Maven) |
+| Selenium WebDriver 4.50 + ChromeDriver | Automatización de flujos de usuario en un navegador Chrome real (pruebas de sistema) | <a href="https://www.selenium.dev">https://www.selenium.dev</a> | Descargable (Maven) |
+| Vitest | Ejecutor de pruebas unitarias del frontend Angular | <a href="https://vitest.dev">https://vitest.dev</a> | Descargable (npm) |
+| Postman | Prueba manual exploratoria de endpoints durante el desarrollo | <a href="https://www.postman.com">https://www.postman.com</a> | Descargable |
 
 ### 5.1.1.9. Requisitos del Sistema por Miembro del Equipo
 
@@ -271,6 +280,8 @@ El equipo adopta el "Google Java Style Guide" como referencia principal para el 
 
 **Anotaciones:** Las anotaciones se colocan en la línea anterior al elemento que anotan. Se evita la anotación redundante. Las anotaciones de Spring se ordenan primero, seguidas de anotaciones personalizadas.
 
+**Verificación automática del estilo:** Desde el Trabajo Parcial el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis inicial sobre las 378 clases del backend reportó 8,034 observaciones en 367 archivos (5,573 de indentación, 677 de longitud de línea y 827 de Javadoc faltante), porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
+
 ### 5.1.3.6. Convenciones para Gherkin (Specifications)
 
 El equipo utiliza las "Gherkin Conventions for Readable Specifications" para escribir user stories en formato Given-When-Then y para crear pruebas de aceptación automatizadas.
@@ -280,6 +291,8 @@ El equipo utiliza las "Gherkin Conventions for Readable Specifications" para esc
 **Escritura de Escenarios:** Los escenarios siguen la estructura Given-When-Then. Given establece el contexto inicial, When describe la acción a realizar, Then verifica el resultado esperado. Se evita escribir pasos demasiado largos o complejos.
 
 **Step Definitions:** Los step definitions en el código deben ser reutilizables. Se parametrizan los valores que cambian entre escenarios. Se agrupan los steps relacionados en archivos lógicos.
+
+**Aplicación en SafeStep:** Los archivos `.feature` se ubican en `src/test/resources/features` y cada escenario lleva una etiqueta con el identificador de la historia que verifica (por ejemplo `@US42`), lo que permite rastrear cada criterio de aceptación de 3.2 hasta su prueba automatizada. Los pasos se redactan en inglés con la estructura Given-When-Then y los datos de cada escenario se crean con nombres únicos para que la suite pueda repetirse sobre una base de datos con información previa. Los step definitions se agrupan por funcionalidad (autenticación, cupones, checkout, roles, recompensas) y comparten un contexto por escenario.
 
 ## 5.1.4. Software Deployment Configuration
 
@@ -306,6 +319,8 @@ Para el repositorio de Frontend (Angular), el pipeline de CI/CD incluye las sigu
 Para el repositorio de Web Services (Spring Boot), el pipeline incluye: verificación de código con herramientas de análisis estático, compilación del proyecto con Maven, ejecución de pruebas unitarias y de integración, y construcción del artefacto JAR.
 
 Para el repositorio de Landing Page, se implementa un pipeline simplificado que incluye build estático y despliegue automático a GitHub Pages.
+
+A partir del Trabajo Parcial el backend cuenta además con un pipeline de Jenkins definido en el `Jenkinsfile` de la raíz del repositorio. Jenkins y SonarQube se ejecutan como contenedores Docker en la red `spring-postgres-net` (Jenkins en el puerto 9089 y SonarQube en el 9000, con el webhook `http://jenkins-master:9089/sonarqube-webhook/`), y toda su configuración (servidor SonarQube, credencial del token y el job `safestep-backend`) se versiona como código en la carpeta `ci/`. Las etapas, su orden y los reportes que archiva cada una se describen en el capítulo 7.1.
 
 ### 5.1.4.2. Configuración de Plataformas de Despliegue
 
