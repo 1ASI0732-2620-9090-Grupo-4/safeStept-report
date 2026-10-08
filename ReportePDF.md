@@ -196,6 +196,16 @@
       - [5.2.4.6. Services Documentation Evidence for Sprint Review](#toc-5-2-4-6-services-documentation-evidence-for-sprint-review)
       - [5.2.4.7. Software Deployment Evidence for Sprint Review](#toc-5-2-4-7-software-deployment-evidence-for-sprint-review)
       - [5.2.4.8. Team Collaboration Insights during Sprint](#toc-5-2-4-8-team-collaboration-insights-during-sprint)
+    - [5.2.5. Sprint 5](#toc-5-2-5-sprint-5)
+      - [5.2.5.1. Sprint Planning 5](#toc-5-2-5-1-sprint-planning-5)
+      - [5.2.5.2. Aspect Leaders and Collaborators](#toc-5-2-5-2-aspect-leaders-and-collaborators)
+      - [5.2.5.3. Sprint Backlog 5](#toc-5-2-5-3-sprint-backlog-5)
+      - [5.2.5.4. Development Evidence for Sprint Review](#toc-5-2-5-4-development-evidence-for-sprint-review)
+      - [5.2.5.5. Testing Suite Evidence for Sprint Review](#toc-5-2-5-5-testing-suite-evidence-for-sprint-review)
+      - [5.2.5.6. Execution Evidence for Sprint Review](#toc-5-2-5-6-execution-evidence-for-sprint-review)
+      - [5.2.5.7. Services Documentation Evidence for Sprint Review](#toc-5-2-5-7-services-documentation-evidence-for-sprint-review)
+      - [5.2.5.8. Software Deployment Evidence for Sprint Review](#toc-5-2-5-8-software-deployment-evidence-for-sprint-review)
+      - [5.2.5.9. Team Collaboration Insights during Sprint](#toc-5-2-5-9-team-collaboration-insights-during-sprint)
   - [5.3. Video About-the-Product](#toc-5-3-video-about-the-product)
 
 **Capítulo VI: Product Verification & Validation**
@@ -328,6 +338,26 @@
         <td>Melgarejo Quiroz, Josep Eliu</td>
         <td>Capítulo V: Product Implementation.</td>
     </tr>
+    <tr>
+        <td align="center">1.6</td>
+        <td>Melgarejo Quiroz, Josep Eliu</td>
+        <td>Capítulo III: actualización del Product Backlog con las historias US57 a US61 y las technical stories TS25 a TS33. Capítulo V: actualización de 5.1 (herramientas de testing, calidad y CI/CD) y Sprint 5.</td>
+    </tr>
+    <tr>
+        <td align="center">1.7</td>
+        <td>Melgarejo Quiroz, Josep Eliu</td>
+        <td>Capítulo VI: 6.1 Testing Suites &amp; Validation (pruebas unitarias, de integración, BDD y de sistema) y 6.3 Validation Interviews.</td>
+    </tr>
+    <tr>
+        <td align="center">1.8</td>
+        <td>Melgarejo Quiroz, Josep Eliu</td>
+        <td>Capítulo VII: 7.1 Continuous Integration, 7.2 Continuous Delivery y 7.3 Continuous deployment (pipeline de Jenkins, SonarQube y Docker).</td>
+    </tr>
+    <tr>
+        <td align="center">1.9</td>
+        <td>Melgarejo Quiroz, Josep Eliu</td>
+        <td>Avance de Conclusiones y actualización del Student Outcome 4 con el Trabajo Parcial.</td>
+    </tr>
 </table>
 
 <br>
@@ -428,7 +458,7 @@
 
 **Criterio:** La capacidad de reconocer responsabilidades éticas y profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
 
-En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 4, tomando como referencia el Avance 1 (AV1) del proyecto SafeStep, correspondiente a la documentación de los capítulos I al V elaborada hasta el momento.
+En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 4, tomando como referencia el Avance 1 (AV1) del proyecto SafeStep, correspondiente a la documentación de los capítulos I al V elaborada hasta el momento, y el Trabajo Parcial (TP), que añade las pruebas, la verificación y el pipeline de integración continua (capítulos VI y VII).
 
 <table>
     <tr>
@@ -444,10 +474,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Palacios Jáuregui, Kalid Jesus</b> <br/>
             <i>AV1</i>
             <p>Al redactar el Startup Profile y el Solution Profile (capítulo I), documenté explícitamente que SafeStep es una herramienta educativa complementaria que <b>no sustituye</b> la capacitación práctica de profesionales acreditados, la evaluación médica ni la comunicación con servicios de emergencia, para evitar que el producto sea percibido como una fuente de decisiones clínicas.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
         <td rowspan="5">
             <i>AV1</i>
             <p>El equipo reconoció que trabajar sobre un dominio sensible como primeros auxilios exige límites éticos explícitos en el propio producto y en el informe: deslindar responsabilidad médica, no presentar el modelo de negocio como validado cuando aún es una hipótesis, tratar los datos de las personas entrevistadas con consentimiento y resguardo de su identidad, y documentar honestamente las limitaciones técnicas y de seguridad detectadas en lugar de ocultarlas para mostrar un avance más completo del que realmente existe. Estas decisiones se reflejan de forma trazable en los capítulos I a V del informe y en el código de los repositorios de SafeStep.</p>
+            <i>TP</i>
+            <p>En el Trabajo Parcial el equipo reconoció que afirmar la calidad del producto exige evidencia verificable: las suites automatizadas, la cobertura, el reporte de estilo y el análisis estático se publican con sus resultados reales, incluidos los desfavorables (observaciones de estilo, vulnerabilidades pendientes y el módulo de perfiles por debajo del umbral de cobertura), y las limitaciones se documentan como deuda técnica en lugar de omitirse. También se protegieron las credenciales y los datos de usuarios al diseñar los entornos de prueba.</p>
         </td>
     </tr>
     <tr>
@@ -455,6 +489,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Sanchez Arenas, Manuel Angel</b> <br/>
             <i>AV1</i>
             <p>En el capítulo II (Needfinding y entrevistas) apliqué el resguardo de la identidad de las personas entrevistadas usando resúmenes en lugar de transcripciones completas, y evité atribuir citas o conclusiones que los entrevistados no expresaron, para no distorsionar los hallazgos usados como base del producto.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
     </tr>
     <tr>
@@ -462,6 +498,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Tello Palacios, Fabrizio Rafael</b> <br/>
             <i>AV1</i>
             <p>Al construir el Product Backlog (capítulo III) evité priorizar arbitrariamente historias técnicas de seguridad o autenticación por encima de historias de valor para el usuario, siguiendo el criterio de priorización por valor de negocio indicado en el statement, para no simular un avance orientado solo a infraestructura interna.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
     </tr>
     <tr>
@@ -469,6 +507,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Aylas De La Cruz, Paulo Smit</b> <br/>
             <i>AV1</i>
             <p>Al diseñar el modelo de base de datos (capítulo IV) apliqué las tres formas de normalización y documenté los archivos SQL como artefactos de diseño, no como scripts de migración listos para producción, para no dar a entender que existe una base de datos productiva con información real de usuarios.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
     </tr>
     <tr>
@@ -476,6 +516,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Melgarejo Quiroz, Josep Eliu</b> <br/>
             <i>AV1</i>
             <p>Al preparar la configuración y el despliegue (capítulo V), identifiqué una credencial de base de datos que había quedado versionada en el historial de Git y documenté que debe rotarse en el proveedor en lugar de solo eliminarla del archivo actual; también detecté que cuentas con rol de usuario común podían ver controles de administración en la web y agregué restricciones de rol (<code>@PreAuthorize</code> en el backend y un <code>adminGuard</code> en el frontend) antes de reportar el avance como funcional.</p>
+            <i>TP</i>
+            <p>En las pruebas y el pipeline del Trabajo Parcial (capítulos VI y VII) no oculté los resultados desfavorables de la medición de calidad: documenté que Checkstyle reporta 8,034 observaciones sobre el código existente, que SonarQube marca 2 vulnerabilidades (CORS abierto a cualquier origen y CSRF deshabilitado) y que el Quality Gate aprueba únicamente porque en el primer análisis no existe código nuevo que evaluar. También evité que las credenciales generadas para Jenkins y SonarQube se versionen (quedan en un archivo ignorado por Git) y devolví a una variable de entorno la clave de Stripe que se había escrito directamente en <code>application.properties</code>.</p>
         </td>
     </tr>
     <tr>
@@ -486,10 +528,14 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Palacios Jáuregui, Kalid Jesus</b> <br/>
             <i>AV1</i>
             <p>En el Solution Profile documenté el modelo de negocio de SafeStep (venta de productos de primeros auxilios y posibles servicios digitales) explícitamente como una <b>hipótesis por validar</b>, no como ingresos comprobados, para no sustentar decisiones de producto sobre supuestos económicos no verificados.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
         <td rowspan="5">
             <i>AV1</i>
             <p>El equipo emitió juicios informados al reconocer que el modelo de negocio de SafeStep todavía es una hipótesis económica sin validar, que los segmentos de usuario (estudiantes, comunidades vecinales y brigadistas) enfrentan contextos sociales y de acceso distintos entre sí, que el idioma por defecto debe ampliarse a inglés para no limitar el alcance social del producto, y que el diseño de datos debe evitar exponer información personal entre bounded contexts. En conjunto, estas decisiones muestran que el equipo considera el impacto económico, social y de protección de datos de sus decisiones de ingeniería antes de presentarlas como parte del producto, en lugar de evaluarlas únicamente desde un criterio técnico.</p>
+            <i>TP</i>
+            <p>Al automatizar las pruebas y el pipeline el equipo emitió juicios informados sobre el impacto de sus decisiones: aislar los datos de prueba para no afectar a usuarios reales, garantizar que el sistema de recompensas y cupones no cause pérdidas al usuario, y señalar que el despliegue a producción permanece manual hasta contar con credenciales y controles apropiados, en lugar de presentar una automatización completa que aún no existe.</p>
         </td>
     </tr>
     <tr>
@@ -497,6 +543,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Sanchez Arenas, Manuel Angel</b> <br/>
             <i>AV1</i>
             <p>Al analizar los segmentos objetivo (estudiantes universitarios, comunidades vecinales y brigadistas) en el capítulo I y II, consideré diferencias de contexto social y de acceso a la preparación en primeros auxilios entre estos grupos, en lugar de asumir un único perfil de usuario homogéneo para todo el país.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
     </tr>
     <tr>
@@ -504,6 +552,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Tello Palacios, Fabrizio Rafael</b> <br/>
             <i>AV1</i>
             <p>Al redactar los criterios de aceptación de las historias de usuario, incluí historias relacionadas con el cambio de idioma (español/inglés) de la aplicación, reconociendo que el statement exige inglés como idioma por defecto para ampliar el alcance social del producto más allá de un único idioma.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
     </tr>
     <tr>
@@ -511,6 +561,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Aylas De La Cruz, Paulo Smit</b> <br/>
             <i>AV1</i>
             <p>Al diseñar el diagrama de base de datos evité incluir columnas o relaciones que expusieran innecesariamente datos personales entre bounded contexts (por ejemplo, referencias lógicas en vez de llaves foráneas físicas entre usuario y otros contextos), como medida orientada a la protección de datos de los futuros usuarios.</p>
+            <i>TP</i>
+            <p><b>[POR COMPLETAR POR EL EQUIPO]</b></p>
         </td>
     </tr>
     <tr>
@@ -518,11 +570,13 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <b>Melgarejo Quiroz, Josep Eliu</b> <br/>
             <i>AV1</i>
             <p>Documenté en el capítulo V que el puntaje y los pasos correctos de un intento de simulación son calculados por el cliente y que el backend todavía no los valida contra las respuestas reales, dejando explícito que esos datos <b>no deben usarse aún</b> como medición confiable para recompensas ni para futuras decisiones experimentales, evitando así un impacto negativo por decisiones basadas en datos no verificados.</p>
+            <i>TP</i>
+            <p>Al decidir cómo probar el sistema consideré el impacto sobre los datos de personas reales: las pruebas BDD usan una base en memoria, las de API usan una base PostgreSQL desechable y las de sistema se ejecutan contra una instancia aislada, de modo que ninguna suite toca datos de desarrollo ni de producción. Además, al diseñar el canje de cupones con SafeCoins verifiqué con pruebas que el saldo no cambia cuando el canje se rechaza y que un cupón vuelve a estar disponible si el pago falla, para que el sistema de recompensas no perjudique económicamente a quien lo usa.</p>
         </td>
     </tr>
 </table>
 
-Como conclusión general, el equipo SafeStep evidencia el cumplimiento del ABET – EAC - Student Outcome 4 en el Avance 1 porque, al documentar el estado real del producto y del informe, reconoció límites éticos y profesionales propios de un dominio sensible (primeros auxilios) y evitó presentar como validado, seguro o terminado aquello que todavía es una hipótesis, una limitación conocida o un riesgo pendiente de resolver. Esta autocrítica se mantendrá y profundizará en las siguientes entregas del curso conforme el producto y sus validaciones avancen.
+Como conclusión general, el equipo SafeStep evidencia el cumplimiento del ABET – EAC - Student Outcome 4 en el Avance 1 y lo sostiene en el Trabajo Parcial porque, al documentar el estado real del producto y del informe, reconoció límites éticos y profesionales propios de un dominio sensible (primeros auxilios) y evitó presentar como validado, seguro o terminado aquello que todavía es una hipótesis, una limitación conocida o un riesgo pendiente de resolver. Esta autocrítica se mantendrá y profundizará en las siguientes entregas del curso conforme el producto y sus validaciones avancen.
 
 <br>
 
@@ -2691,6 +2745,104 @@ En la columna **Priority**, `#1` indica la mayor prioridad y cada número corres
     <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> ejecutar pruebas y validaciones con Maven, <b>para</b> asegurar que el backend compile y funcione antes de integrarlo con el frontend.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
     <tr><td colspan="4">- <b>Dado que</b> el equipo ejecuta las pruebas del backend, <b>Cuando</b> se corre Maven test, <b>Entonces</b> las pruebas finalizan sin errores.<br><br>- <b>Dado que</b> se realizan cambios en el backend, <b>Cuando</b> se ejecuta el build, <b>Entonces</b> el proyecto genera el artefacto correspondiente sin fallas de compilacion.</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US57</td><td>administrador</td><td>#77</td><td>EP07</td></tr>
+    <tr><th>Title</th><td colspan="3">Visualizar el panel de administracion</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> administrador, <b>quiero</b> visualizar un panel con accesos y conteos de simulaciones, productos, cupones, misiones, insignias y usuarios, <b>para</b> gestionar la plataforma desde un solo lugar.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene el rol de administrador, <b>Cuando</b> abre el panel de administracion, <b>Entonces</b> el sistema muestra una tarjeta por cada modulo gestionable con su cantidad de registros<br><br>- <b>Dado que</b> el usuario no es administrador, <b>Cuando</b> intenta abrir la ruta del panel, <b>Entonces</b> el sistema lo redirige al dashboard y no muestra la opcion en el menu</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US58</td><td>administrador</td><td>#78</td><td>EP01</td></tr>
+    <tr><th>Title</th><td colspan="3">Gestionar roles de los usuarios</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> administrador, <b>quiero</b> asignar o quitar roles a los usuarios registrados, <b>para</b> controlar quien puede gestionar la plataforma.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> un administrador selecciona un usuario y un conjunto de roles validos, <b>Cuando</b> guarda el cambio, <b>Entonces</b> el sistema actualiza los roles del usuario y los muestra en el listado<br><br>- <b>Dado que</b> un administrador intenta quitarse a si mismo el rol de administrador, <b>Cuando</b> guarda el cambio, <b>Entonces</b> el sistema rechaza la operacion e informa la regla de negocio incumplida</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US59</td><td>usuario</td><td>#79</td><td>EP06</td></tr>
+    <tr><th>Title</th><td colspan="3">Canjear un cupon con SafeCoins</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> canjear un cupon del catalogo con mis SafeCoins, <b>para</b> obtener un descuento para mi proxima compra.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene SafeCoins suficientes, <b>Cuando</b> canjea un cupon, <b>Entonces</b> el sistema descuenta el costo del saldo, registra el gasto y agrega el cupon a los cupones del usuario como disponible<br><br>- <b>Dado que</b> el usuario no tiene SafeCoins suficientes, <b>Cuando</b> intenta canjear un cupon, <b>Entonces</b> el sistema rechaza el canje y su saldo no cambia</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US60</td><td>usuario</td><td>#80</td><td>EP06</td></tr>
+    <tr><th>Title</th><td colspan="3">Aplicar un cupon canjeado en el checkout</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> elegir uno de mis cupones canjeados al pagar, <b>para</b> que el total a pagar incluya el descuento.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene un cupon disponible y su compra cumple el monto minimo, <b>Cuando</b> lo selecciona en el checkout, <b>Entonces</b> el total final se calcula con el porcentaje de descuento y el cupon pasa a estado usado al crear la orden<br><br>- <b>Dado que</b> el monto de la compra no alcanza el minimo del cupon, <b>Cuando</b> el usuario revisa sus cupones en el checkout, <b>Entonces</b> el cupon aparece deshabilitado<br><br>- <b>Dado que</b> el pago de la orden falla o se cancela, <b>Cuando</b> el sistema registra el resultado, <b>Entonces</b> el cupon vuelve a estar disponible</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US61</td><td>usuario</td><td>#81</td><td>EP06</td></tr>
+    <tr><th>Title</th><td colspan="3">Consultar mis cupones canjeados</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> ver mis cupones canjeados separados en disponibles y usados, <b>para</b> saber cuales puedo aplicar en mis compras.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario canjeo cupones, <b>Cuando</b> abre la pagina de cupones, <b>Entonces</b> el sistema muestra los disponibles y los usados en pestanas separadas<br><br>- <b>Dado que</b> el usuario no tiene cupones, <b>Cuando</b> abre la pagina de cupones, <b>Entonces</b> el sistema muestra un mensaje indicando que aun no tiene cupones</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS25</td><td>developer</td><td>#82</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pruebas unitarias de entidades y servicios de aplicacion</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> cubrir con pruebas unitarias JUnit y Mockito las entidades de dominio y los servicios de aplicacion de cada bounded context, <b>para</b> detectar regresiones en las reglas de negocio sin levantar el sistema completo.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> existen entidades y servicios con reglas de negocio, <b>Cuando</b> se ejecuta Maven test, <b>Entonces</b> cada regla relevante tiene al menos una prueba con estructura Arrange-Act-Assert<br><br>- <b>Dado que</b> un servicio depende de repositorios o fachadas de otros contextos, <b>Cuando</b> se prueba, <b>Entonces</b> las dependencias se reemplazan con dobles de prueba</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS26</td><td>developer</td><td>#83</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Umbral de cobertura con JaCoCo</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> medir la cobertura de las pruebas con JaCoCo y exigir un minimo de 80 %, <b>para</b> evitar que el codigo de negocio quede sin verificar.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> se ejecutan las pruebas, <b>Cuando</b> finaliza el build, <b>Entonces</b> se genera un reporte de cobertura HTML y XML<br><br>- <b>Dado que</b> la cobertura de instrucciones del codigo medido es menor a 80 %, <b>Cuando</b> se ejecuta la verificacion de cobertura, <b>Entonces</b> el build falla</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS27</td><td>developer</td><td>#84</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Analisis de estilo con Checkstyle</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> analizar el estilo del codigo Java con Checkstyle y las reglas de Google, <b>para</b> mantener una referencia objetiva de la calidad del codigo.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> se ejecuta el analisis de estilo, <b>Cuando</b> finaliza, <b>Entonces</b> se genera un reporte con las observaciones por archivo<br><br>- <b>Dado que</b> el codigo existente aun tiene observaciones de formato, <b>Cuando</b> se ejecuta en el pipeline, <b>Entonces</b> el reporte se archiva sin interrumpir el build</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS28</td><td>developer</td><td>#85</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pruebas de aceptacion BDD con Cucumber</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> automatizar los criterios de aceptacion en archivos Gherkin ejecutados con Cucumber sobre la aplicacion levantada, <b>para</b> verificar el comportamiento esperado de las historias de usuario.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> una historia de usuario tiene criterios Dado/Cuando/Entonces, <b>Cuando</b> se escribe su feature, <b>Entonces</b> cada escenario queda etiquetado con el identificador de la historia<br><br>- <b>Dado que</b> se ejecuta Maven test, <b>Cuando</b> corren los escenarios, <b>Entonces</b> se levanta el contexto de Spring con una base de datos aislada y se genera un reporte HTML</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS29</td><td>developer</td><td>#86</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pruebas de integracion de API con Karate</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> probar los endpoints REST desde fuera de la aplicacion con Karate, <b>para</b> validar contratos, codigos de estado y reglas de seguridad de extremo a extremo.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> la API esta ejecutandose, <b>Cuando</b> se corren las pruebas Karate, <b>Entonces</b> se verifican autenticacion, autorizacion, catalogo, cupones y recompensas<br><br>- <b>Dado que</b> las pruebas se repiten, <b>Cuando</b> se ejecutan sobre una base de datos con datos previos, <b>Entonces</b> siguen pasando porque crean usuarios unicos</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS30</td><td>developer</td><td>#87</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pruebas de sistema web con Selenium y Cucumber</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> automatizar flujos de usuario en un navegador real con Selenium y escenarios Gherkin, <b>para</b> verificar que el frontend y el backend funcionan juntos.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el frontend y el backend estan levantados, <b>Cuando</b> se ejecutan las pruebas de sistema, <b>Entonces</b> un navegador Chrome recorre registro, inicio de sesion, catalogos, cupones y panel de administracion<br><br>- <b>Dado que</b> termina cada escenario, <b>Cuando</b> se genera el reporte, <b>Entonces</b> incluye una captura de pantalla del estado final</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS31</td><td>developer</td><td>#88</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pipeline de integracion continua con Jenkins</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> definir un Jenkinsfile que compile, valide y pruebe el backend en cada ejecucion, <b>para</b> obtener retroalimentacion automatica sobre la calidad de cada cambio.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> existe un cambio en la rama develop, <b>Cuando</b> se ejecuta el pipeline, <b>Entonces</b> se ejecutan las etapas de compilacion, estilo, pruebas, cobertura, analisis, empaquetado, imagen Docker y pruebas de API<br><br>- <b>Dado que</b> una etapa falla, <b>Cuando</b> Jenkins registra el resultado, <b>Entonces</b> las etapas siguientes no se ejecutan y se conservan los reportes para el diagnostico</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS32</td><td>developer</td><td>#89</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Analisis de calidad con SonarQube y Quality Gate</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> enviar el analisis del backend a SonarQube y detener el pipeline si no supera el Quality Gate, <b>para</b> evitar que codigo con defectos o vulnerabilidades avance en el pipeline.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> se ejecuta el analisis, <b>Cuando</b> SonarQube termina, <b>Entonces</b> notifica a Jenkins mediante un webhook y el pipeline conoce el resultado<br><br>- <b>Dado que</b> el resultado del Quality Gate no es aprobado, <b>Cuando</b> Jenkins lo recibe, <b>Entonces</b> el pipeline se detiene con un mensaje claro</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS33</td><td>developer</td><td>#90</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Imagen Docker y ejecucion contenedorizada en CI</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> construir la imagen Docker del backend y ejecutarla junto a una base de datos PostgreSQL desechable durante el pipeline, <b>para</b> probar el artefacto que se desplegara y no solo el codigo fuente.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> las pruebas y el analisis fueron aprobados, <b>Cuando</b> el pipeline continua, <b>Entonces</b> se construye una imagen etiquetada con el numero de ejecucion<br><br>- <b>Dado que</b> la imagen fue construida, <b>Cuando</b> se ejecutan las pruebas de API, <b>Entonces</b> se prueban contra un contenedor con PostgreSQL que se elimina al finalizar</td></tr>
   </tbody>
 </table>
 
@@ -3255,6 +3407,104 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
             <td>Ver saldo de SafeCoins en la navegacion</td>
             <td>Como usuario, quiero ver mi saldo de SafeCoins en la interfaz principal para saber cuántos puntos puedo usar.</td>
             <td align="center">2</td>
+        </tr>
+        <tr>
+            <td align="center">77</td>
+            <td align="center">US57</td>
+            <td>Visualizar el panel de administracion</td>
+            <td>Como administrador, quiero ver un panel con accesos y conteos de los módulos gestionables para administrar la plataforma desde un solo lugar.</td>
+            <td align="center">3</td>
+        </tr>
+        <tr>
+            <td align="center">78</td>
+            <td align="center">US58</td>
+            <td>Gestionar roles de los usuarios</td>
+            <td>Como administrador, quiero asignar o quitar roles a los usuarios para controlar quién puede gestionar la plataforma.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">79</td>
+            <td align="center">US59</td>
+            <td>Canjear un cupon con SafeCoins</td>
+            <td>Como usuario, quiero canjear un cupón del catálogo con mis SafeCoins para obtener un descuento en mi próxima compra.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">80</td>
+            <td align="center">US60</td>
+            <td>Aplicar un cupon canjeado en el checkout</td>
+            <td>Como usuario, quiero elegir uno de mis cupones canjeados al pagar para que el total a pagar incluya el descuento.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">81</td>
+            <td align="center">US61</td>
+            <td>Consultar mis cupones canjeados</td>
+            <td>Como usuario, quiero ver mis cupones canjeados separados en disponibles y usados para saber cuáles puedo aplicar.</td>
+            <td align="center">2</td>
+        </tr>
+        <tr>
+            <td align="center">82</td>
+            <td align="center">TS25</td>
+            <td>Pruebas unitarias de entidades y servicios de aplicacion</td>
+            <td>Como developer, quiero cubrir con pruebas unitarias las entidades de dominio y los servicios de aplicación para detectar regresiones sin levantar el sistema completo.</td>
+            <td align="center">8</td>
+        </tr>
+        <tr>
+            <td align="center">83</td>
+            <td align="center">TS26</td>
+            <td>Umbral de cobertura con JaCoCo</td>
+            <td>Como developer, quiero medir la cobertura con JaCoCo y exigir un mínimo de 80 % para evitar que el código de negocio quede sin verificar.</td>
+            <td align="center">3</td>
+        </tr>
+        <tr>
+            <td align="center">84</td>
+            <td align="center">TS27</td>
+            <td>Analisis de estilo con Checkstyle</td>
+            <td>Como developer, quiero analizar el estilo del código con Checkstyle y las reglas de Google para tener una referencia objetiva de calidad.</td>
+            <td align="center">2</td>
+        </tr>
+        <tr>
+            <td align="center">85</td>
+            <td align="center">TS28</td>
+            <td>Pruebas de aceptacion BDD con Cucumber</td>
+            <td>Como developer, quiero automatizar los criterios de aceptación en archivos Gherkin con Cucumber para verificar el comportamiento esperado de las historias.</td>
+            <td align="center">8</td>
+        </tr>
+        <tr>
+            <td align="center">86</td>
+            <td align="center">TS29</td>
+            <td>Pruebas de integracion de API con Karate</td>
+            <td>Como developer, quiero probar los endpoints REST con Karate para validar contratos, estados HTTP y reglas de seguridad de extremo a extremo.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">87</td>
+            <td align="center">TS30</td>
+            <td>Pruebas de sistema web con Selenium y Cucumber</td>
+            <td>Como developer, quiero automatizar flujos de usuario en un navegador real con Selenium y Gherkin para verificar que frontend y backend funcionan juntos.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">88</td>
+            <td align="center">TS31</td>
+            <td>Pipeline de integracion continua con Jenkins</td>
+            <td>Como developer, quiero un Jenkinsfile que compile, valide y pruebe el backend en cada ejecución para recibir retroalimentación automática.</td>
+            <td align="center">8</td>
+        </tr>
+        <tr>
+            <td align="center">89</td>
+            <td align="center">TS32</td>
+            <td>Analisis de calidad con SonarQube y Quality Gate</td>
+            <td>Como developer, quiero enviar el análisis a SonarQube y detener el pipeline si no supera el Quality Gate para evitar que código con defectos avance.</td>
+            <td align="center">5</td>
+        </tr>
+        <tr>
+            <td align="center">90</td>
+            <td align="center">TS33</td>
+            <td>Imagen Docker y ejecucion contenedorizada en CI</td>
+            <td>Como developer, quiero construir la imagen Docker y ejecutarla con PostgreSQL desechable en el pipeline para probar el artefacto que se desplegará.</td>
+            <td align="center">3</td>
         </tr>
     </tbody>
 </table>
@@ -5916,6 +6166,9 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | Prettier | Formateador de código Opinionated para mantener consistencia en el código | <a href="https://prettier.io">https://prettier.io</a> | Descargable (npm) |
 | Markdown | Lenguaje de formato para documentación técnica | <a href="https://www.markdownguide.org">https://www.markdownguide.org</a> | Referencia |
 | OpenAPI (Swagger) | Especificación para documentar APIs REST | <a href="https://swagger.io/specification">https://swagger.io/specification</a> | Referencia |
+| Checkstyle 14.3 | Análisis estático de estilo del código Java con las reglas de Google (`google_checks.xml`), configurado en modo reporte | <a href="https://checkstyle.org">https://checkstyle.org</a> | Descargable (plugin Maven) |
+| JaCoCo 0.8.15 | Medición de cobertura de pruebas y verificación del umbral mínimo de 80 % | <a href="https://www.jacoco.org/jacoco">https://www.jacoco.org/jacoco</a> | Descargable (plugin Maven) |
+| SonarQube (LTS Community) | Análisis de calidad y seguridad del código con Quality Gate integrado al pipeline | <a href="https://www.sonarsource.com/products/sonarqube">https://www.sonarsource.com/products/sonarqube</a> | Descargable (contenedor Docker) |
 
 <a id="toc-5-1-1-7-herramientas-de-despliegue"></a>
 ### 5.1.1.7. Herramientas de Despliegue
@@ -5926,17 +6179,23 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | GitHub Pages | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> | SaaS |
 | Render | Plataforma de despliegue para el backend Spring Boot de SafeStep | <a href="https://render.com">https://render.com</a> | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> | SaaS |
 | Render PostgreSQL | Base de datos PostgreSQL desplegada para persistencia del backend | <a href="https://render.com">https://render.com</a> | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` | SaaS |
+| Docker | Construcción de la imagen del backend y ejecución de contenedores (Jenkins, SonarQube, PostgreSQL y API) en la red `spring-postgres-net` | <a href="https://www.docker.com">https://www.docker.com</a> | No aplica (ejecución local) | Descargable |
+| Jenkins (LTS, JDK 25) | Servidor de integración continua que ejecuta el `Jenkinsfile` del backend; se configura como código con JCasC | <a href="https://www.jenkins.io">https://www.jenkins.io</a> | `http://localhost:9089` (entorno local del equipo) | Descargable (contenedor Docker) |
 
 <a id="toc-5-1-1-8-herramientas-de-testing"></a>
 ### 5.1.1.8. Herramientas de Testing
 
 | Herramienta | Propósito |URL de Referencia | Tipo |
 |-------------|-----------|------------------|------|
-| Jasmine | Framework de testing para aplicaciones Angular | <a href="https://jasmine.github.io">https://jasmine.github.io</a> | Descargable (npm) |
-| Karma | Test runner para Angular que permite ejecutar pruebas en múltiples navegadores | <a href="https://karma-runner.github.io">https://karma-runner.github.io</a> | Descargable (npm) |
-| Jest | Framework de testing alternativo para aplicaciones JavaScript/TypeScript | <a href="https://jestjs.io">https://jestjs.io</a> | Descargable (npm) |
-| JUnit | Framework de testing para aplicaciones Java/Spring Boot | <a href="https://junit.org/junit5">https://junit.org/junit5</a> | Descargable |
-| Postman | Herramienta para testing manual de endpoints API | <a href="https://www.postman.com">https://www.postman.com</a> | Descargable |
+| JUnit Jupiter 6.0 | Framework de pruebas unitarias y de integración del backend Java/Spring Boot | <a href="https://junit.org">https://junit.org</a> | Descargable (Maven) |
+| Mockito 5 | Dobles de prueba para aislar servicios de aplicación de repositorios y fachadas de otros bounded contexts | <a href="https://site.mockito.org">https://site.mockito.org</a> | Descargable (Maven) |
+| AssertJ | Aserciones fluidas para las pruebas unitarias | <a href="https://assertj.github.io/doc">https://assertj.github.io/doc</a> | Descargable (Maven) |
+| Spring Boot Test + H2 | Pruebas con contexto de Spring completo sobre una base de datos en memoria aislada | <a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a> | Descargable (Maven) |
+| Cucumber-JVM 8 (Gherkin) | Ejecución de los criterios de aceptación escritos en Gherkin (BDD) sobre el backend y sobre el navegador | <a href="https://cucumber.io">https://cucumber.io</a> | Descargable (Maven) |
+| Karate 2.1 | Pruebas de integración de la API REST desde fuera de la aplicación | <a href="https://github.com/karatelabs/karate">https://github.com/karatelabs/karate</a> | Descargable (Maven) |
+| Selenium WebDriver 4.50 + ChromeDriver | Automatización de flujos de usuario en un navegador Chrome real (pruebas de sistema) | <a href="https://www.selenium.dev">https://www.selenium.dev</a> | Descargable (Maven) |
+| Vitest | Ejecutor de pruebas unitarias del frontend Angular | <a href="https://vitest.dev">https://vitest.dev</a> | Descargable (npm) |
+| Postman | Prueba manual exploratoria de endpoints durante el desarrollo | <a href="https://www.postman.com">https://www.postman.com</a> | Descargable |
 
 <a id="toc-5-1-1-9-requisitos-del-sistema-por-miembro-del-equipo"></a>
 ### 5.1.1.9. Requisitos del Sistema por Miembro del Equipo
@@ -6140,6 +6399,8 @@ El equipo adopta el "Google Java Style Guide" como referencia principal para el 
 
 **Anotaciones:** Las anotaciones se colocan en la línea anterior al elemento que anotan. Se evita la anotación redundante. Las anotaciones de Spring se ordenan primero, seguidas de anotaciones personalizadas.
 
+**Verificación automática del estilo:** Desde el Trabajo Parcial el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis inicial sobre las 378 clases del backend reportó 8,034 observaciones en 367 archivos (5,573 de indentación, 677 de longitud de línea y 827 de Javadoc faltante), porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
+
 <a id="toc-5-1-3-6-convenciones-para-gherkin-specifications"></a>
 ### 5.1.3.6. Convenciones para Gherkin (Specifications)
 
@@ -6150,6 +6411,8 @@ El equipo utiliza las "Gherkin Conventions for Readable Specifications" para esc
 **Escritura de Escenarios:** Los escenarios siguen la estructura Given-When-Then. Given establece el contexto inicial, When describe la acción a realizar, Then verifica el resultado esperado. Se evita escribir pasos demasiado largos o complejos.
 
 **Step Definitions:** Los step definitions en el código deben ser reutilizables. Se parametrizan los valores que cambian entre escenarios. Se agrupan los steps relacionados en archivos lógicos.
+
+**Aplicación en SafeStep:** Los archivos `.feature` se ubican en `src/test/resources/features` y cada escenario lleva una etiqueta con el identificador de la historia que verifica (por ejemplo `@US42`), lo que permite rastrear cada criterio de aceptación de 3.2 hasta su prueba automatizada. Los pasos se redactan en inglés con la estructura Given-When-Then y los datos de cada escenario se crean con nombres únicos para que la suite pueda repetirse sobre una base de datos con información previa. Los step definitions se agrupan por funcionalidad (autenticación, cupones, checkout, roles, recompensas) y comparten un contexto por escenario.
 
 <a id="toc-5-1-4-software-deployment-configuration"></a>
 ## 5.1.4. Software Deployment Configuration
@@ -6180,6 +6443,8 @@ Para el repositorio de Frontend (Angular), el pipeline de CI/CD incluye las sigu
 Para el repositorio de Web Services (Spring Boot), el pipeline incluye: verificación de código con herramientas de análisis estático, compilación del proyecto con Maven, ejecución de pruebas unitarias y de integración, y construcción del artefacto JAR.
 
 Para el repositorio de Landing Page, se implementa un pipeline simplificado que incluye build estático y despliegue automático a GitHub Pages.
+
+A partir del Trabajo Parcial el backend cuenta además con un pipeline de Jenkins definido en el `Jenkinsfile` de la raíz del repositorio. Jenkins y SonarQube se ejecutan como contenedores Docker en la red `spring-postgres-net` (Jenkins en el puerto 9089 y SonarQube en el 9000, con el webhook `http://jenkins-master:9089/sonarqube-webhook/`), y toda su configuración (servidor SonarQube, credencial del token y el job `safestep-backend`) se versiona como código en la carpeta `ci/`. Las etapas, su orden y los reportes que archiva cada una se describen en el capítulo 7.1.
 
 <a id="toc-5-1-4-2-configuracion-de-plataformas-de-despliegue"></a>
 ### 5.1.4.2. Configuración de Plataformas de Despliegue
@@ -10323,6 +10588,1072 @@ Los cuatro miembros activos del equipo participaron en el Sprint 4. El trabajo s
 
 <br>
 
+<a id="toc-5-2-5-sprint-5"></a>
+## 5.2.5. Sprint 5
+
+<a id="toc-5-2-5-1-sprint-planning-5"></a>
+### 5.2.5.1. Sprint Planning 5
+
+En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 5. Con el Sprint 4 el producto quedó funcional de punta a punta (autenticación, pagos y backend desplegado), por lo que el quinto Sprint se dedica a **demostrar y proteger esa calidad**: construir las suites de pruebas unitarias, de integración, de comportamiento (BDD) y de sistema, medir la cobertura y el estilo del código, y automatizar todo en un pipeline de integración continua con Jenkins, SonarQube y Docker. En paralelo se incorporan al backlog y se completan las historias de usuario del panel de administración y del canje de cupones con SafeCoins, que son los flujos nuevos que las pruebas deben cubrir.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Sprint #</b></td><td>Sprint 5</td></tr>
+        <tr><td colspan="2"><b>Sprint Planning Background</b></td></tr>
+        <tr><td>Date</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Time</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Location</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Prepared By</td><td>Melgarejo Quiroz, Josep Eliu</td></tr>
+        <tr><td>Attendees (to planning meeting)</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Sprint n - 1 Review Summary</td><td>Sprint 4 completado: autenticación real con JWT, registro, perfil autenticado, protección de rutas, pago con Stripe y base de datos PostgreSQL desplegada, con el frontend conectado al backend real. Quedó pendiente respaldar esos flujos con pruebas automatizadas y un pipeline que las ejecute.</td></tr>
+        <tr><td>Sprint n - 1 Retrospective Summary</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td colspan="2"><b>Sprint Goal &amp; User Stories</b></td></tr>
+        <tr><td>Sprint 5 Goal</td><td>Nuestro enfoque es verificar de forma automática el comportamiento de SafeStep y entregar cada cambio a través de un pipeline repetible. Creemos que esto da confianza para seguir evolucionando el producto sin romper lo que ya funciona. La meta se considera cumplida si las suites unitarias, BDD, de API y de sistema aprueban, la cobertura del código de aplicación supera el 80 % y el pipeline de Jenkins termina en éxito con el análisis de SonarQube y la imagen Docker verificada.</td></tr>
+        <tr><td>Sprint 5 Velocity</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b> (la suma de los puntos de las historias incluidas es 67 SP; el equipo debe confirmar si coincide con el velocity acordado).</td></tr>
+        <tr><td>Sum of Story Points</td><td>Total: 67 SP - Panel de administración y roles (8 SP), cupones canjeables (12 SP), pruebas unitarias y umbral de cobertura (13 SP), BDD (8 SP), pruebas de API (5 SP), pruebas de sistema (5 SP) y CI/CD (16 SP).</td></tr>
+    </tbody>
+</table>
+
+**User Stories y Technical Stories incluidos en el Sprint 5:**
+
+| ID | User Story / Technical Story | Prioridad | Story Points |
+| -- | ---------------------------- | --------- | ------------ |
+| US57 | Como administrador, quiero ver un panel con accesos y conteos de los módulos gestionables para administrar la plataforma desde un solo lugar. | Should Have | 3 |
+| US58 | Como administrador, quiero asignar o quitar roles a los usuarios para controlar quién puede gestionar la plataforma. | Should Have | 5 |
+| US59 | Como usuario, quiero canjear un cupón del catálogo con mis SafeCoins para obtener un descuento en mi próxima compra. | Must Have | 5 |
+| US60 | Como usuario, quiero elegir uno de mis cupones canjeados al pagar para que el total a pagar incluya el descuento. | Must Have | 5 |
+| US61 | Como usuario, quiero ver mis cupones canjeados separados en disponibles y usados para saber cuáles puedo aplicar. | Should Have | 2 |
+| TS25 | Como developer, quiero cubrir con pruebas unitarias las entidades de dominio y los servicios de aplicación para detectar regresiones sin levantar el sistema completo. | Must Have | 8 |
+| TS26 | Como developer, quiero medir la cobertura con JaCoCo y exigir un mínimo de 80 % para evitar que el código de negocio quede sin verificar. | Must Have | 3 |
+| TS27 | Como developer, quiero analizar el estilo del código con Checkstyle y las reglas de Google para tener una referencia objetiva de calidad. | Could Have | 2 |
+| TS28 | Como developer, quiero automatizar los criterios de aceptación en archivos Gherkin con Cucumber para verificar el comportamiento esperado de las historias. | Must Have | 8 |
+| TS29 | Como developer, quiero probar los endpoints REST con Karate para validar contratos, estados HTTP y reglas de seguridad de extremo a extremo. | Must Have | 5 |
+| TS30 | Como developer, quiero automatizar flujos de usuario en un navegador real con Selenium y Gherkin para verificar que frontend y backend funcionan juntos. | Should Have | 5 |
+| TS31 | Como developer, quiero un Jenkinsfile que compile, valide y pruebe el backend en cada ejecución para recibir retroalimentación automática. | Must Have | 8 |
+| TS32 | Como developer, quiero enviar el análisis a SonarQube y detener el pipeline si no supera el Quality Gate para evitar que código con defectos avance. | Should Have | 5 |
+| TS33 | Como developer, quiero construir la imagen Docker y ejecutarla con PostgreSQL desechable en el pipeline para probar el artefacto que se desplegará. | Should Have | 3 |
+
+**Distribución de Trabajo por Componente:**
+
+- **Panel de administración y roles (US57, US58):** 8 Story Points en backend (usuarios, roles y reglas de protección) y frontend.
+- **Cupones canjeables (US59, US60, US61):** 12 Story Points: rediseño del cupón, agregado `RedeemedCoupon`, gasto de SafeCoins entre bounded contexts, descuento en la orden y página de canje.
+- **Pruebas unitarias y cobertura (TS25, TS26, TS27):** 13 Story Points.
+- **BDD, API y sistema (TS28, TS29, TS30):** 18 Story Points.
+- **CI/CD (TS31, TS32, TS33):** 16 Story Points.
+
+<a id="toc-5-2-5-2-aspect-leaders-and-collaborators"></a>
+### 5.2.5.2. Aspect Leaders and Collaborators
+
+En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LACX) del Sprint 5. Los aspectos del Sprint son:
+
+1. **Admin & Coupons:** panel de administración, roles y canje de cupones (backend y frontend).
+2. **Unit Tests & Coverage:** pruebas unitarias, JaCoCo y Checkstyle.
+3. **BDD & API Tests:** pruebas Cucumber y Karate.
+4. **System Tests:** pruebas Selenium sobre el frontend.
+5. **CI/CD Pipeline:** Jenkins, SonarQube y Docker.
+6. **Documentation:** evidencias, reportes y capítulos del informe.
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Team Member (Last Name, First Name)</b></td><td><b>GitHub Username</b></td><td><b>Admin &amp; Coupons / L or C</b></td><td><b>Unit Tests &amp; Coverage / L or C</b></td><td><b>BDD &amp; API Tests / L or C</b></td><td><b>System Tests / L or C</b></td><td><b>CI/CD Pipeline / L or C</b></td><td><b>Documentation / L or C</b></td></tr>
+        <tr><td>Ayala Fernandez, Jorge Brayan</td><td>jorgeayaladev</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>L</td><td>L</td><td>L</td><td>L</td><td>L</td><td>L</td></tr>
+        <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+    </tbody>
+</table>
+
+<a id="toc-5-2-5-3-sprint-backlog-5"></a>
+### 5.2.5.3. Sprint Backlog 5
+
+El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las tasks se separaron por historia para mantener la trazabilidad entre el Product Backlog (3.3), la matriz LACX y el trabajo operativo realizado. Las horas de estimación no se registraron durante el Sprint.
+
+**Trello Board:** el equipo utiliza un Trello Board con las listas estándar de Scrum: "Sprint Goal", "To Do", "In Progress", "To Review" y "Done".
+
+**URL pública del Trello Board del Sprint 5:** <b>[POR COMPLETAR POR EL EQUIPO]</b>
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Sprint #</b></td><td colspan="7">Sprint 5</td></tr>
+        <tr><td colspan="2">User Story / Technical Story</td><td colspan="6">Work-Item / Task</td></tr>
+        <tr><td>Id</td><td>Title</td><td>Id</td><td>Title</td><td>Description</td><td>Estimation (Hours)</td><td>Assigned to</td><td>Status (To-do / In-Process / To-Review / Done)</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US57 - Visualizar el panel de administración</b></td></tr>
+        <tr><td>US57</td><td>Visualizar el panel de administración</td><td>T501</td><td>Panel de administración</td><td>Crear la página /app/admin con una tarjeta de conteo por módulo y la ruta protegida con adminGuard.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US58 - Gestionar roles de los usuarios</b></td></tr>
+        <tr><td>US58</td><td>Gestionar roles de los usuarios</td><td>T502</td><td>Endpoints de usuarios y roles</td><td>Exponer GET /users, GET /roles y PUT /users/{id}/roles con las reglas: no quitarse el propio rol de administrador y conservar al menos un administrador.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US58</td><td>Gestionar roles de los usuarios</td><td>T503</td><td>Gestión de roles en el frontend</td><td>Listado de usuarios y formulario de roles en el módulo identity-access.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US59 - Canjear un cupón con SafeCoins</b></td></tr>
+        <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T504</td><td>Rediseño del cupón</td><td>Reemplazar el campo discount por type, discountPercentage y minPurchaseAmount, con validaciones.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T505</td><td>Canje de cupones</td><td>Crear el agregado RedeemedCoupon, el endpoint POST /commerce/coupons/{id}/redeem y el gasto de SafeCoins por la fachada ACL de gamificación (PlayerProgress.spendCoins, CoinSpend).</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T506</td><td>Página de canje</td><td>Crear /app/store/coupons con el catálogo de cupones y el botón de canje.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US60 - Aplicar un cupón canjeado en el checkout</b></td></tr>
+        <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T507</td><td>Descuento en la orden</td><td>Agregar Order.finalTotal() y el descuento aplicado; cobrar el total final en Stripe.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T508</td><td>Selector de cupones en el checkout</td><td>Reemplazar el campo de texto por la lista de cupones disponibles, deshabilitando los que no cumplen el monto mínimo.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T509</td><td>Liberación del cupón</td><td>Devolver el cupón a disponible cuando el pago de Stripe falla o se cancela.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US61 - Consultar mis cupones canjeados</b></td></tr>
+        <tr><td>US61</td><td>Consultar mis cupones canjeados</td><td>T510</td><td>Mis cupones</td><td>Exponer GET /commerce/coupons/redeemed/me y mostrar pestañas de disponibles y usados.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS25 - Pruebas unitarias de entidades y servicios</b></td></tr>
+        <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T511</td><td>Pruebas de commerce, iam y gamification</td><td>Pruebas JUnit/Mockito de agregados, servicios de comandos y consultas, ACL y manejadores de eventos.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T512</td><td>Pruebas de simulation, analytics, profiles y shared</td><td>Pruebas de intentos, certificados, perfiles, Result y manejador global de excepciones.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS26 - Umbral de cobertura con JaCoCo</b></td></tr>
+        <tr><td>TS26</td><td>Umbral de cobertura con JaCoCo</td><td>T513</td><td>Configurar JaCoCo</td><td>Reporte HTML/XML, regla de 80 % y exclusiones tomadas del proyecto de referencia del curso.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS27 - Análisis de estilo con Checkstyle</b></td></tr>
+        <tr><td>TS27</td><td>Análisis de estilo con Checkstyle</td><td>T514</td><td>Configurar Checkstyle</td><td>Reglas de Google sin modificar, en modo reporte; medir la línea base (8,034 observaciones).</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS28 - Pruebas de aceptación BDD con Cucumber</b></td></tr>
+        <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T515</td><td>Features y steps</td><td>Cinco features Gherkin etiquetados con historias y sus step definitions.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T516</td><td>Infraestructura de BDD</td><td>Contexto de Spring Boot con puerto aleatorio y base H2 aislada, cliente HTTP y fábrica de jugadores.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS29 - Pruebas de integración con Karate</b></td></tr>
+        <tr><td>TS29</td><td>Pruebas de integración con Karate</td><td>T517</td><td>Proyecto `api-tests`</td><td>Cinco features Karate (36 escenarios) contra una API en ejecución, con datos únicos por ejecución.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS30 - Pruebas de sistema con Selenium</b></td></tr>
+        <tr><td>TS30</td><td>Pruebas de sistema con Selenium</td><td>T518</td><td>Proyecto `e2e-tests`</td><td>Doce escenarios Gherkin con Selenium y Chrome, page objects y captura de pantalla por escenario.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS30</td><td>Pruebas de sistema con Selenium</td><td>T519</td><td>Configuración `e2e` de Angular</td><td>Entorno y configuración de compilación que apuntan al backend de pruebas.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS31 - Pipeline de integración continua con Jenkins</b></td></tr>
+        <tr><td>TS31</td><td>Pipeline de integración continua con Jenkins</td><td>T520</td><td>Jenkinsfile</td><td>Etapas de compilación, estilo, pruebas, cobertura, SonarQube, empaquetado, imagen Docker y pruebas de API.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS31</td><td>Pipeline de integración continua con Jenkins</td><td>T521</td><td>Jenkins como código</td><td>Imagen de Jenkins con JDK 26, Maven y Docker CLI; plugins.txt, casc.yaml y docker-compose.yml.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS32 - Análisis de calidad con SonarQube y Quality Gate</b></td></tr>
+        <tr><td>TS32</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T522</td><td>SonarQube y webhook</td><td>Servidor SonarQube, token como credencial de Jenkins, webhook y waitForQualityGate().</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS33 - Imagen Docker y ejecución contenedorizada en CI</b></td></tr>
+        <tr><td>TS33</td><td>Imagen Docker y ejecución contenedorizada en CI</td><td>T523</td><td>Verificación de la imagen</td><td>Etapa que levanta PostgreSQL y la imagen recién construida, ejecuta Karate y elimina los contenedores.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+    </tbody>
+</table>
+
+<a id="toc-5-2-5-4-development-evidence-for-sprint-review"></a>
+### 5.2.5.4. Development Evidence for Sprint Review
+
+En esta sección se presentan los avances de implementación del Sprint 5. Todo el trabajo se integró mediante GitFlow: cada pieza se desarrolló en una rama `feature/*`, se confirmó con Conventional Commits y se fusionó a `develop` con `--no-ff`.
+
+**Resumen de Avances Implementados:**
+
+- **Panel de administración y roles (backend y frontend):** panel `/app/admin` con conteos por módulo, listado de usuarios y roles, y asignación de roles con las reglas de protección del administrador.
+- **Cupones canjeables (backend y frontend):** rediseño del cupón en dos tipos (descuento simple y descuento con compra mínima), canje con SafeCoins mediante la fachada ACL de gamificación, descuento aplicado a la orden y cobrado por Stripe, y liberación del cupón si el pago falla.
+- **Suites de pruebas:** 201 pruebas unitarias y de integración, 33 escenarios BDD, 36 escenarios de API y 12 escenarios de sistema (ver 5.2.5.5 y 6.1).
+- **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube (ver 6.1 y 7.1).
+- **Pipeline de CI/CD:** `Jenkinsfile` con diez etapas, Jenkins y SonarQube configurados como código y verificación de la imagen Docker (ver 7.1 y 7.2).
+
+**Commits Realizados (desarrollo de producto):**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
+        <tr><td>safestept-backend</td><td>main</td><td>f77dfef</td><td>feat: add coupon redemption feature</td><td>—</td><td>17/09/2026</td></tr>
+    </tbody>
+</table>
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
+        <tr><td>safestept-frontend</td><td>main</td><td>be56a72</td><td>feat: add admin and coupon redemption features</td><td>—</td><td>17/09/2026</td></tr>
+    </tbody>
+</table>
+
+<a id="toc-5-2-5-5-testing-suite-evidence-for-sprint-review"></a>
+### 5.2.5.5. Testing Suite Evidence for Sprint Review
+
+En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acceptance Tests automatizados que verifican los User Stories del Sprint. Los resultados completos, la cobertura y los reportes se analizan en 6.1; aquí se incluye la relación de pruebas diseñadas.
+
+**Repositorios de los proyectos de testing:**
+
+| Suite | Repositorio | Ruta |
+|-------|-------------|------|
+| Pruebas unitarias y BDD del backend | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `src/test` |
+| Pruebas de integración de API (Karate) | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `api-tests` |
+| Pruebas de sistema (Selenium + Cucumber) | [1ASI0732-2620-9090-Grupo-4/safestept-frontend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend) | `e2e-tests` |
+
+**Unit Tests.** Las 201 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Bounded context</b></td><td><b>Clase de prueba</b></td><td><b>Clase(s) bajo prueba</b></td><td><b>Pruebas</b></td><td><b>Comportamientos verificados</b></td></tr>
+        <tr><td>analytics</td><td><code>CertificateCommandServiceImplTest</code></td><td><code>CertificateCommandServiceImpl</code></td><td align='center'>4</td><td>• issue should refuse scores below 80<br>• issue should not issue the same certificate twice<br>• issue should grade the achievement level from the score<br>• issue should build a sanitized verification code and public urls</td></tr>
+        <tr><td>analytics</td><td><code>AnalyticsQueryServiceImplTest</code></td><td><code>AnalyticsQueryServiceImpl</code></td><td align='center'>4</td><td>• handle(GetSummaryQuery) should build metrics, skills and mistakes from real attempts<br>• handle(GetSummaryQuery) should return zeroed metrics when the user has no attempts<br>• handle(GetProgressQuery) should classify each simulation by its best score<br>• handle(GetCertificatesQuery) should delegate to the certificate repository</td></tr>
+        <tr><td>commerce</td><td><code>CommerceCartAndOrderCommandServiceTest</code></td><td><code>CommerceCartAndOrderCommandService</code></td><td align='center'>15</td><td>• handle(AddCartItemCommand) should add a valid item to the cart<br>• handle(AddCartItemCommand) should reject unknown products and quantities above the stock<br>• handle(UpdateCartItemCommand) should change the quantity of an existing item<br>• handle(UpdateCartItemCommand) should reject missing items and quantities above the stock<br>• deleteCartItem should remove the item only when it belongs to the user<br>• handle(CreateOrderCommand) should fail when the cart is empty<br>• handle(CreateOrderCommand) should fail when a cart product no longer exists or lacks stock<br>• handle(CreateOrderCommand) should create the order, reduce stock and empty the cart<br>• handle(CreateOrderCommand) should reject unknown, foreign or already used coupons<br>• handle(CreateStripeCheckoutSessionCommand) should reject paid orders and Stripe failures<br>• handle(ConfirmStripePaymentCommand) should mark the order as paid when Stripe confirms<br>• handle(ConfirmStripePaymentCommand) should reject foreign orders, other sessions and unpaid sessions<br>• handle(CancelStripePaymentCommand) should fail the payment and release the redeemed coupon<br>• handle(CaptureStripeWebhookCommand) should react to completed and expired sessions<br>• handle(RedeemCouponCommand) should fail for an unknown coupon without touching the wallet</td></tr>
+        <tr><td>commerce</td><td><code>CommerceCatalogCommandServiceTest</code></td><td><code>CommerceCatalogCommandService</code></td><td align='center'>8</td><td>• handle(CreateProductCommand) should save a new product and require an id<br>• handle(UpdateProductCommand) should reject blank and unknown product ids<br>• handle(DeleteProductCommand) should delete an existing product<br>• handle(CreateCouponCommand) should save valid simple and minimum-purchase coupons<br>• handle(CreateCouponCommand) should enforce id, percentage range, minimum purchase and uniqueness<br>• handle(UpdateCouponCommand) should keep the stored id and apply the new discount<br>• handle(UpdateCouponCommand) should reject blank, unknown, negative-cost and invalid coupons<br>• handle(DeleteCouponCommand) should delete existing coupons and report unknown ones</td></tr>
+        <tr><td>commerce</td><td><code>CommerceCouponRedemptionCommandServiceTest</code></td><td><code>CommerceCouponRedemptionCommandService</code></td><td align='center'>5</td><td>—</td></tr>
+        <tr><td>commerce</td><td><code>CommerceStripeCommandServiceTest</code></td><td><code>CommerceStripeCommandService</code></td><td align='center'>9</td><td>—</td></tr>
+        <tr><td>commerce</td><td><code>CommerceQueryServiceImplTest</code></td><td><code>CommerceQueryServiceImpl</code></td><td align='center'>3</td><td>• catalog queries should return what the repositories hold<br>• user scoped queries should filter by username<br>• recommendations should fall back to the global list when the user has none</td></tr>
+        <tr><td>commerce</td><td><code>CouponAndRedeemedCouponTest</code></td><td><code>CouponAndRedeemedCoupon</code></td><td align='center'>5</td><td>• Coupon should default to a simple percentage type when none is given<br>• Coupon should keep the minimum purchase only for the minimum-purchase type<br>• RedeemedCoupon should start available and become used once<br>• RedeemedCoupon should become available again when released<br>• RedeemedCoupon should default the type and status when they are missing</td></tr>
+        <tr><td>commerce</td><td><code>OrderTest</code></td><td><code>Order</code></td><td align='center'>6</td><td>—</td></tr>
+        <tr><td>commerce</td><td><code>ProductTest</code></td><td><code>Product</code></td><td align='center'>1</td><td>—</td></tr>
+        <tr><td>commerce</td><td><code>CartAndOrderItemTest</code></td><td><code>CartAndOrderItem</code></td><td align='center'>2</td><td>• CartItem should reject quantities below one at creation and on change<br>• OrderItem should compute its subtotal and reject empty quantities</td></tr>
+        <tr><td>commerce</td><td><code>CommerceValueObjectsTest</code></td><td><code>CommerceValueObjects</code></td><td align='center'>4</td><td>• Money should round to two decimals and reject negative amounts<br>• Stock should reject negative quantities<br>• OrderStatus.from should understand English and Spanish labels<br>• lenient enums should fall back to a safe default for unknown values</td></tr>
+        <tr><td>commerce</td><td><code>CommerceResourcesValidationTest</code></td><td><code>CommerceResourcesValidation</code></td><td align='center'>3</td><td>—</td></tr>
+        <tr><td>commerce</td><td><code>CommerceResourceAssemblerTest</code></td><td><code>CommerceResourceAssembler</code></td><td align='center'>5</td><td>• product mapping should round trip price, stock and tags<br>• coupon mapping should keep type, percentage and minimum purchase<br>• toResource(RedeemedCoupon) should expose status and snapshot data<br>• toResource(CartItem) should map the cart line<br>• toResource(Order) should expose total, discounted total and coupon reference</td></tr>
+        <tr><td>gamification</td><td><code>GamificationCommandServiceImplTest</code></td><td><code>GamificationCommandServiceImpl</code></td><td align='center'>13</td><td>—</td></tr>
+        <tr><td>gamification</td><td><code>SimulationAttemptCompletedIntegrationEventHandlerTest</code></td><td><code>SimulationAttemptCompletedIntegrationEventHandler</code></td><td align='center'>3</td><td>• on should be idempotent for an attempt that was already rewarded<br>• on should reward a brand new player, record the transaction and unlock the first badge<br>• on should add the reward to the existing player progress</td></tr>
+        <tr><td>gamification</td><td><code>GamificationContextFacadeImplTest</code></td><td><code>GamificationContextFacadeImpl</code></td><td align='center'>5</td><td>• progressByUsername should expose the stored progress as a snapshot<br>• progressByUsername should default to level one for unknown players<br>• spendCoins should debit the balance and record the spend when there are enough coins<br>• spendCoins should refuse and persist nothing when the balance is insufficient<br>• spendCoins should refuse non-positive amounts and unknown players</td></tr>
+        <tr><td>gamification</td><td><code>GamificationQueryServiceImplTest</code></td><td><code>GamificationQueryServiceImpl</code></td><td align='center'>4</td><td>• handle(GetSummaryQuery) should return the stored progress when it exists<br>• handle(GetSummaryQuery) should return a level one default for unknown players<br>• list queries should delegate to their repositories<br>• achievement queries should delegate to the achievement repository</td></tr>
+        <tr><td>gamification</td><td><code>CoinSpendAndValueObjectsTest</code></td><td><code>CoinSpendAndValueObjects</code></td><td align='center'>4</td><td>• CoinSpend should keep the coupon and amount it was created with<br>• PlayerProgress should reject non-positive and excessive coin spends<br>• PlayerProgress should normalise negative inputs and reset the streak after a gap<br>• gamification value objects should validate their ranges</td></tr>
+        <tr><td>gamification</td><td><code>PlayerProgressTest</code></td><td><code>PlayerProgress</code></td><td align='center'>3</td><td>—</td></tr>
+        <tr><td>gamification</td><td><code>GamificationResourceAssemblerTest</code></td><td><code>GamificationResourceAssembler</code></td><td align='center'>5</td><td>• toResource(PlayerProgress) should map the summary fields<br>• toResource(PlayerProgress, rank) should build a leaderboard entry<br>• mission mapping should round trip cadence, rewards and progress<br>• badge mapping should round trip rarity and unlocked flag<br>• toResource(CoinTransaction) should always flag the transaction as successful</td></tr>
+        <tr><td>iam</td><td><code>AdminSeedCommandServiceImplTest</code></td><td><code>AdminSeedCommandServiceImpl</code></td><td align='center'>6</td><td>• handle should skip the seed when the credentials are not configured<br>• handle should skip the seed when an admin already exists<br>• handle should skip the seed when the username belongs to a non-admin user<br>• handle should skip the seed when ROLE_ADMIN has not been seeded yet<br>• handle should create the bootstrap admin with an encoded password<br>• handle should never let a persistence failure stop the application</td></tr>
+        <tr><td>iam</td><td><code>UserCommandServiceImplTest</code></td><td><code>UserCommandServiceImpl</code></td><td align='center'>13</td><td>• handle(SignInCommand) should reject an unknown username<br>• handle(SignInCommand) should reject a wrong password<br>• handle(SignInCommand) should reject disabled accounts<br>• handle(SignUpCommand) should reject a duplicated username<br>• handle(SignUpCommand) should fail when a requested role does not exist<br>• handle(UpdateUserStatusCommand) should update the account flags<br>• handle(UpdateUserStatusCommand) should fail for an unknown user<br>• handle(UpdateUserRolesCommand) should promote a regular user to admin<br>• handle(UpdateUserRolesCommand) should fail for an unknown user<br>• handle(UpdateUserRolesCommand) should fail when a role name has no stored role<br>• handle(UpdateUserRolesCommand) should forbid an admin from removing their own admin role<br>• handle(UpdateUserRolesCommand) should keep at least one admin in the system<br>• handle(UpdateUserRolesCommand) should demote an admin when another admin remains</td></tr>
+        <tr><td>iam</td><td><code>UserTest</code></td><td><code>User</code></td><td align='center'>6</td><td>• a new user should start enabled with every account flag open<br>• replaceRoles should swap the whole role set<br>• replaceRoles should fall back to the default role when given none<br>• updateStatus should set the four account flags<br>• addRole and addRoles should accumulate roles without duplicates<br>• Role.toRoleFromName should reject names that are not a known role</td></tr>
+        <tr><td>iam</td><td><code>IamContextFacadeTest</code></td><td><code>IamContextFacade</code></td><td align='center'>5</td><td>• createUser(username, password) should sign up with the default role and return the id<br>• createUser should return 0 when the sign up fails<br>• createUser(username, password, roles) should treat null roles as an empty list<br>• fetchUserIdByUsername should return the id or 0 when the user is missing<br>• fetchUsernameByUserId should return the username or an empty string</td></tr>
+        <tr><td>iam</td><td><code>IamSecurityIntegrationTest</code></td><td><code>IamSecurityIntegration</code></td><td align='center'>9</td><td>—</td></tr>
+        <tr><td>iam</td><td><code>AuthenticationResourcesValidationTest</code></td><td><code>AuthenticationResourcesValidation</code></td><td align='center'>2</td><td>—</td></tr>
+        <tr><td>profiles</td><td><code>ProfileCommandServiceImplTest</code></td><td><code>ProfileCommandServiceImpl</code></td><td align='center'>7</td><td>• handle(CreateProfileCommand) should save a new profile<br>• handle(CreateProfileCommand) should report a conflict for a duplicated email<br>• handle(CreateProfileCommand) should map invalid data to a validation error<br>• handle(CreateProfileCommand) should map persistence failures to an unexpected error<br>• handle(UpdateProfileCommand) should update the stored profile<br>• handle(UpdateProfileCommand) should fail for an unknown profile<br>• handle(UpdateProfileCommand) should reject invalid data without saving</td></tr>
+        <tr><td>profiles</td><td><code>ProfileQueryServiceImplTest</code></td><td><code>ProfileQueryServiceImpl</code></td><td align='center'>2</td><td>• queries should delegate to the profile repository<br>• ProfilesContextFacadeImpl should expose profile ids to other contexts</td></tr>
+        <tr><td>(aplicación)</td><td><code>SafeStepPlatformApplicationTests</code></td><td><code>SafeStepPlatformApplicationTests</code></td><td align='center'>1</td><td>—</td></tr>
+        <tr><td>shared</td><td><code>ResultTest</code></td><td><code>Result</code></td><td align='center'>7</td><td>• success and failure factories should report their state<br>• toOptional should only contain the value of a success<br>• getOrElse should fall back to the default for failures<br>• map should transform successes and keep failures untouched<br>• flatMap should chain successes and short-circuit failures<br>• mapError should translate the error of failures only<br>• recover should replace a failure and leave a success alone</td></tr>
+        <tr><td>shared</td><td><code>LocaleConfigurationTest</code></td><td><code>LocaleConfiguration</code></td><td align='center'>1</td><td>—</td></tr>
+        <tr><td>shared</td><td><code>GlobalExceptionHandlerTest</code></td><td><code>GlobalExceptionHandler</code></td><td align='center'>7</td><td>—</td></tr>
+        <tr><td>shared</td><td><code>ErrorResponseAssemblerTest</code></td><td><code>ErrorResponseAssembler</code></td><td align='center'>3</td><td>—</td></tr>
+        <tr><td>simulation</td><td><code>SimulationAttemptCommandServiceImplTest</code></td><td><code>SimulationAttemptCommandServiceImpl</code></td><td align='center'>5</td><td>• handle(CreateSimulationAttemptCommand) should fail for an unknown simulation<br>• handle(CreateSimulationAttemptCommand) should store a completed attempt with its errors<br>• handle(CreateSimulationCommand) should reject duplicated slugs and save new simulations<br>• handle(UpdateSimulationCommand) should keep the stored id and reject blank or unknown ids<br>• handle(DeleteSimulationCommand) should delete existing simulations only</td></tr>
+        <tr><td>simulation</td><td><code>SimulationCommandServiceImplTest</code></td><td><code>SimulationCommandServiceImpl</code></td><td align='center'>3</td><td>—</td></tr>
+        <tr><td>simulation</td><td><code>SimulationDomainTest</code></td><td><code>SimulationDomain</code></td><td align='center'>5</td><td>• markCompleted should publish a completed event carrying the simulation reward<br>• markCompleted should derive accuracy from the score when there are no steps<br>• value objects should validate scores, slugs and rewards<br>• lenient enums should understand Spanish labels and fall back to defaults<br>• MedicalSimulation should default missing collections to empty lists</td></tr>
+        <tr><td>simulation</td><td><code>CreateAttemptResourceValidationTest</code></td><td><code>CreateAttemptResourceValidation</code></td><td align='center'>2</td><td>—</td></tr>
+        <tr><td>simulation</td><td><code>SimulationResourceAssemblerTest</code></td><td><code>SimulationResourceAssembler</code></td><td align='center'>6</td><td>• toResource(MedicalSimulation) should map every field including steps and suggestions<br>• toSimulation(SimulationResource) should rebuild the aggregate from the resource<br>• toSimulation(SimulationResource) should tolerate null collections<br>• toCommand should map the attempt resource and its errors to a command<br>• toCommand should use an empty error list when the resource has none<br>• toResource(SimulationAttempt) should expose the attempt with lowercase mode</td></tr>
+    </tbody>
+</table>
+
+**Acceptance Tests (BDD, backend).** Los archivos `.feature` se relacionan con las historias de usuario mediante las etiquetas `@USnn`: `authentication` con US01 y US02; `coupon-redemption` con US42, US59 y US61; `checkout-with-coupon` con US40 y US60; `role-management` con US57 y US58; `simulation-rewards` con US15 y US16. Los pasos están implementados en la carpeta `src/test/java/com/safestep/acceptance/steps`, por ejemplo:
+
+```java
+    @Given("an administrator is signed in")
+    public void anAdministratorIsSignedIn() {
+        var admin = createUser("admin", "ROLE_ADMIN");
+        context.userId(admin.getId());
+        players.signIn(context, admin.getUsername());
+    }
+```
+
+**`authentication.feature`**
+
+```gherkin
+@authentication @US01 @US02
+Feature: Account registration and sign in
+  As a visitor of SafeStep
+  I want to create an account and sign in
+  So that my training progress is saved and protected
+
+  Scenario: A visitor registers a new account
+    When a visitor registers with a new username and a valid password
+    Then the response status is 201
+    And the new account only has the role "ROLE_USER"
+
+  Scenario: A visitor cannot grant themselves the admin role
+    When a visitor registers requesting the role "ROLE_ADMIN"
+    Then the response status is 201
+    And the new account only has the role "ROLE_USER"
+
+  Scenario: A registered user signs in with valid credentials
+    Given a registered user
+    When the user signs in with the right password
+    Then the response status is 200
+    And the response contains an access token
+
+  Scenario: A user cannot register the same username twice
+    Given a registered user
+    When a visitor registers with the username of the registered user
+    Then the response status is 409
+
+  Scenario Outline: Invalid registration data is rejected
+    When a visitor registers with the username "<username>" and the password "<password>"
+    Then the response status is 400
+
+    Examples:
+      | username | password      |
+      | ab       | SecurePass1!  |
+      | valid    | short         |
+
+  Scenario Outline: A registered user cannot sign in with invalid credentials
+    Given a registered user
+    When the user signs in with the password "<password>"
+    Then the response status is 400
+
+    Examples:
+      | password      |
+      | WrongPass123! |
+      | short         |
+```
+
+**`coupon-redemption.feature`**
+
+```gherkin
+@coupons @US42 @US59 @US61
+Feature: Redeem SafeCoins for store coupons
+  As a player who earns SafeCoins by training
+  I want to exchange my SafeCoins for discount coupons
+  So that I pay less when I buy emergency products
+
+  Background:
+    Given a signed-in player with 500 SafeCoins
+
+  Scenario: A player redeems a coupon they can afford
+    When the player redeems the coupon "cpn-5"
+    Then the response status is 201
+    And the player has 350 SafeCoins left
+    And the coupon "cpn-5" is listed as available in the player's coupons
+
+  Scenario: A player cannot redeem a coupon that costs more than their balance
+    When the player redeems the coupon "cpn-15"
+    Then the response status is 422
+    And the response contains the error code "BUSINESS_RULE_VIOLATION"
+    And the player has 500 SafeCoins left
+    And the player has no redeemed coupons
+
+  Scenario: A player cannot redeem a coupon that does not exist
+    When the player redeems the coupon "cpn-ghost"
+    Then the response status is 404
+
+  Scenario: An anonymous visitor cannot redeem coupons
+    When an anonymous visitor redeems the coupon "cpn-5"
+    Then the response status is 401
+
+  Scenario Outline: Every catalogue coupon is charged at its published price
+    When the player redeems the coupon "<coupon>"
+    Then the response status is 201
+    And the player has <remaining> SafeCoins left
+    And the redeemed coupon gives <discount> percent off
+
+    Examples:
+      | coupon     | remaining | discount |
+      | cpn-5      | 350       | 5        |
+      | cpn-10     | 150       | 10       |
+      | cpn-min-5  | 380       | 5        |
+      | cpn-min-10 | 200       | 10       |
+```
+
+**`checkout-with-coupon.feature`**
+
+```gherkin
+@checkout @US40 @US60
+Feature: Use a redeemed coupon at checkout
+  As a player who redeemed a discount coupon
+  I want the discount applied when I create my order
+  So that I pay the discounted price for the products in my cart
+
+  Background:
+    Given a signed-in player with 1000 SafeCoins
+
+  Scenario: A redeemed coupon discounts the whole order
+    Given the player has redeemed the coupon "cpn-10"
+    And the cart contains 1 unit of the product "mochila-emergencia"
+    When the player creates an order using the redeemed coupon
+    Then the response status is 201
+    And the order total is 159.90 and the final total is 143.91
+    And the redeemed coupon is no longer available
+
+  Scenario: A minimum purchase coupon is rejected below its minimum
+    Given the player has redeemed the coupon "cpn-min-15"
+    And the cart contains 1 unit of the product "mochila-emergencia"
+    When the player creates an order using the redeemed coupon
+    Then the response status is 422
+    And the redeemed coupon is still available
+
+  Scenario: A minimum purchase coupon is accepted once the minimum is reached
+    Given the player has redeemed the coupon "cpn-min-15"
+    And the cart contains 2 units of the product "mochila-emergencia"
+    When the player creates an order using the redeemed coupon
+    Then the response status is 201
+    And the order total is 319.80 and the final total is 271.83
+
+  Scenario: A coupon cannot be used twice
+    Given the player has redeemed the coupon "cpn-5"
+    And the cart contains 1 unit of the product "mochila-emergencia"
+    And the player creates an order using the redeemed coupon
+    And the cart contains 1 unit of the product "mochila-emergencia"
+    When the player creates an order using the redeemed coupon
+    Then the response status is 422
+
+  Scenario: An order without a coupon charges the full price
+    Given the cart contains 1 unit of the product "mascarilla-rcp"
+    When the player creates an order without a coupon
+    Then the response status is 201
+    And the order total is 24.90 and the final total is 24.90
+
+  Scenario: A player cannot create an order with an empty cart
+    When the player creates an order without a coupon
+    Then the response status is 422
+```
+
+**`role-management.feature`**
+
+```gherkin
+@admin @roles @US57 @US58
+Feature: Role management by administrators
+  As an administrator of SafeStep
+  I want to assign roles to users from the admin dashboard
+  So that only trusted people can manage the platform data
+
+  Background:
+    Given an administrator is signed in
+    And a regular player exists
+
+  Scenario: An administrator grants the instructor role
+    When the administrator assigns the roles "ROLE_USER,ROLE_INSTRUCTOR" to the regular player
+    Then the response status is 200
+    And the regular player has the roles "ROLE_USER,ROLE_INSTRUCTOR"
+
+  Scenario: An administrator promotes a player to administrator
+    When the administrator assigns the roles "ROLE_ADMIN" to the regular player
+    Then the response status is 200
+    And the regular player has the roles "ROLE_ADMIN"
+
+  Scenario: A regular player cannot manage roles
+    When the regular player tries to assign the roles "ROLE_ADMIN" to themselves
+    Then the response status is 403
+
+  Scenario: An anonymous visitor cannot list the users
+    When an anonymous visitor lists the users
+    Then the response status is 401
+
+  Scenario: An administrator cannot remove their own administrator role
+    Given another administrator exists
+    When the administrator removes their own administrator role
+    Then the response status is 422
+    And the response contains the error code "BUSINESS_RULE_VIOLATION"
+
+  Scenario: An administrator cannot assign a role that does not exist
+    When the administrator assigns the roles "ROLE_ROOT" to the regular player
+    Then the response status is 400
+```
+
+**`simulation-rewards.feature`**
+
+```gherkin
+@gamification @simulation @US15 @US16
+Feature: Earn SafeCoins and XP by completing simulations
+  As a player training first aid
+  I want to be rewarded when I complete a medical simulation
+  So that I stay motivated and can later exchange coins for coupons
+
+  Scenario: Completing a simulation rewards the player with coins and XP
+    Given a signed-in player with no SafeCoins
+    When the player completes the simulation "rcp-basico" with a score of 90
+    Then the response status is 201
+    And the player's summary shows 101 SafeCoins and 420 XP
+
+  Scenario: Completing a simulation counts it in the player's summary
+    Given a signed-in player with no SafeCoins
+    When the player completes the simulation "rcp-basico" with a score of 80
+    Then the player's summary shows 1 completed simulation
+
+  Scenario: A player cannot complete a simulation that does not exist
+    Given a signed-in player with no SafeCoins
+    When the player completes the simulation "ghost-simulation" with a score of 90
+    Then the response status is 404
+
+  Scenario Outline: An attempt with an out of range score is rejected
+    Given a signed-in player with no SafeCoins
+    When the player completes the simulation "rcp-basico" with a score of <score>
+    Then the response status is 400
+
+    Examples:
+      | score |
+      | -1    |
+      | 101   |
+```
+
+
+**Integration Tests (API, Karate).** Cubren US01, US02 (autenticación), US57 y US58 (autorización y roles), US30 y US31 (catálogos), US15, US40, US59 y US60 (flujo de cupones) y US15 y US16 (recompensas).
+
+**`authentication/authentication.feature`**
+
+```gherkin
+@authentication @US01 @US02
+Feature: Authentication API (/api/v1/authentication)
+
+  Background:
+    * url karate.properties['api.baseUrl']
+
+  # Data-driven: every record of users-batch.json becomes one scenario execution.
+  # A random suffix keeps the suite repeatable against a database that already holds earlier runs.
+  Scenario Outline: A visitor registers - <username>
+    * def uniqueUsername = '<username>-' + java.util.UUID.randomUUID().toString().substring(0, 6)
+    Given path 'api/v1/authentication/sign-up'
+    And request { username: '#(uniqueUsername)', password: '<password>' }
+    When method post
+    Then status 201
+    And match response.id == '#number'
+    And match response.username == uniqueUsername
+    And match response.roles == ['ROLE_USER']
+
+    Examples:
+      | read('classpath:com/safestep/apitests/authentication/data/users-batch.json') |
+
+  Scenario: Public registration never grants the admin role
+    * def username = 'karate-sneaky-' + java.util.UUID.randomUUID().toString().substring(0, 8)
+    Given path 'api/v1/authentication/sign-up'
+    And request { username: '#(username)', password: 'SecurePass123!', roles: ['ROLE_ADMIN'] }
+    When method post
+    Then status 201
+    And match response.roles == ['ROLE_USER']
+
+  Scenario: A registered user signs in and receives both tokens
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+    Given path 'api/v1/authentication/sign-in'
+    And request { username: '#(player.username)', password: '#(player.password)' }
+    When method post
+    Then status 200
+    And match response.token == '#string'
+    And match response.refreshToken == '#string'
+    And match response.roles contains 'ROLE_USER'
+
+  Scenario: A refresh token can only be used once
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+    Given path 'api/v1/authentication/sign-in'
+    And request { username: '#(player.username)', password: '#(player.password)' }
+    When method post
+    Then status 200
+    * def firstRefresh = response.refreshToken
+    Given path 'api/v1/authentication/refresh-token'
+    And request { refreshToken: '#(firstRefresh)' }
+    When method post
+    Then status 200
+    And match response.refreshToken != firstRefresh
+    Given path 'api/v1/authentication/refresh-token'
+    And request { refreshToken: '#(firstRefresh)' }
+    When method post
+    Then status 400
+
+  Scenario: Registering the same username twice is a conflict
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+    Given path 'api/v1/authentication/sign-up'
+    And request { username: '#(player.username)', password: 'SecurePass123!' }
+    When method post
+    Then status 409
+
+  Scenario Outline: Invalid sign-up data is rejected - <description>
+    Given path 'api/v1/authentication/sign-up'
+    And request { username: '<username>', password: '<password>' }
+    When method post
+    Then status 400
+    And match response.code == 'VALIDATION_ERROR'
+
+    Examples:
+      | description        | username | password     |
+      | username too short | ab       | SecurePass1! |
+      | password too short | validuser| short        |
+
+  Scenario: A wrong password is refused
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+    Given path 'api/v1/authentication/sign-in'
+    And request { username: '#(player.username)', password: 'WrongPass123!' }
+    When method post
+    Then status 400
+```
+
+**`security/authorization.feature`**
+
+```gherkin
+@security @admin @US57 @US58
+Feature: Authorization rules of the API
+
+  Background:
+    * url karate.properties['api.baseUrl']
+    * def admin = call read('classpath:com/safestep/apitests/helpers/sign-in-admin.feature')
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+
+  Scenario: Protected endpoints reject anonymous requests
+    Given path 'api/v1/commerce/products'
+    When method get
+    Then status 401
+
+  Scenario Outline: Administrator-only endpoints reject regular players - <method> <path>
+    Given path '<path>'
+    And header Authorization = 'Bearer ' + player.token
+    When method <method>
+    Then status 403
+
+    Examples:
+      | method | path                                  |
+      | get    | api/v1/users                          |
+      | get    | api/v1/roles                          |
+      | delete | api/v1/commerce/products/not-present  |
+      | delete | api/v1/gamification/missions/not-here |
+      | delete | api/v1/simulations/not-present        |
+
+  Scenario: An administrator can list users and roles
+    Given path 'api/v1/users'
+    And header Authorization = 'Bearer ' + admin.token
+    When method get
+    Then status 200
+    And match response == '#[_ > 0]'
+    And match response[*].username contains admin.username
+    Given path 'api/v1/roles'
+    And header Authorization = 'Bearer ' + admin.token
+    When method get
+    Then status 200
+    And match response[*].name contains 'ROLE_ADMIN'
+
+  Scenario: An administrator promotes a player and the change is visible
+    Given path 'api/v1/users', player.userId, 'roles'
+    And header Authorization = 'Bearer ' + admin.token
+    And request { roles: ['ROLE_USER', 'ROLE_INSTRUCTOR'] }
+    When method put
+    Then status 200
+    And match response.roles contains 'ROLE_INSTRUCTOR'
+    Given path 'api/v1/users', player.userId
+    And header Authorization = 'Bearer ' + admin.token
+    When method get
+    Then status 200
+    And match response.roles contains only ['ROLE_USER', 'ROLE_INSTRUCTOR']
+
+  Scenario: An administrator cannot remove their own administrator role
+    Given path 'api/v1/users', admin.userId, 'roles'
+    And header Authorization = 'Bearer ' + admin.token
+    And request { roles: ['ROLE_USER'] }
+    When method put
+    Then status 422
+    And match response.code == 'BUSINESS_RULE_VIOLATION'
+```
+
+**`catalog/catalog.feature`**
+
+```gherkin
+@catalog @US30 @US31
+Feature: Store catalogue API (/api/v1/commerce)
+
+  Background:
+    * url karate.properties['api.baseUrl']
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+
+  Scenario: A player lists the product catalogue
+    Given path 'api/v1/commerce/products'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response == '#[_ > 29]'
+    And match each response contains { id: '#string', name: '#string', price: '#number', stock: '#number' }
+
+  Scenario: A player opens one product
+    Given path 'api/v1/commerce/products/mochila-emergencia'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response.id == 'mochila-emergencia'
+    And match response.price == 159.9
+
+  Scenario: An unknown product is not found
+    Given path 'api/v1/commerce/products/does-not-exist'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 404
+
+  Scenario Outline: Reference catalogues are available - <resource>
+    Given path 'api/v1/commerce/<resource>'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response == '#[_ > 0]'
+
+    Examples:
+      | resource   |
+      | categories |
+      | kits       |
+      | coupons    |
+
+  Scenario: The coupon catalogue only offers the two supported coupon types
+    Given path 'api/v1/commerce/coupons'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match each response contains { id: '#string', costCoins: '#number', discountPercentage: '#number' }
+    And match each response[*].type == '#regex PERCENTAGE_OFF|PERCENTAGE_OFF_MIN_PURCHASE'
+```
+
+**`commerce/coupon-flow.feature`**
+
+```gherkin
+@commerce @coupons @US15 @US40 @US59 @US60
+Feature: End-to-end SafeCoins coupon flow
+
+  Background:
+    * url karate.properties['api.baseUrl']
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+    * call read('classpath:com/safestep/apitests/helpers/restock-product.feature') { productId: 'mochila-emergencia', stock: 100 }
+
+  Scenario: A player earns SafeCoins, redeems a coupon and uses it in an order
+    # 1. Earn coins by completing the same simulation twice (101 SafeCoins each)
+    * call read('classpath:com/safestep/apitests/helpers/complete-simulation.feature') { token: '#(player.token)', slug: 'rcp-basico', score: 90 }
+    * call read('classpath:com/safestep/apitests/helpers/complete-simulation.feature') { token: '#(player.token)', slug: 'rcp-basico', score: 95 }
+    Given path 'api/v1/gamification/summary/me'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response.safeCoins == 202
+
+    # 2. Redeem the 5% coupon, which costs 150 SafeCoins
+    Given path 'api/v1/commerce/coupons/cpn-5/redeem'
+    And header Authorization = 'Bearer ' + player.token
+    And request {}
+    When method post
+    Then status 201
+    And match response.status == 'AVAILABLE'
+    And match response.discountPercentage == 5
+    * def redeemedId = response.id
+    Given path 'api/v1/gamification/summary/me'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response.safeCoins == 52
+
+    # 3. Use the redeemed coupon in an order
+    Given path 'api/v1/commerce/cart/items'
+    And header Authorization = 'Bearer ' + player.token
+    And request { productId: 'mochila-emergencia', quantity: 1 }
+    When method post
+    Then status 201
+    Given path 'api/v1/commerce/orders'
+    And header Authorization = 'Bearer ' + player.token
+    And request { status: 'PENDING', redeemedCouponExternalId: '#(redeemedId)' }
+    When method post
+    Then status 201
+    And match response.total == 159.9
+    And match response.finalTotal == 151.9
+    And match response.appliedDiscountPercentage == 5
+
+    # 4. The coupon is now consumed
+    Given path 'api/v1/commerce/coupons/redeemed/me'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response[0].status == 'USED'
+
+  Scenario: Redeeming a coupon without enough SafeCoins is refused
+    Given path 'api/v1/commerce/coupons/cpn-15/redeem'
+    And header Authorization = 'Bearer ' + player.token
+    And request {}
+    When method post
+    Then status 422
+    And match response.code == 'BUSINESS_RULE_VIOLATION'
+
+  Scenario: A coupon that does not exist cannot be redeemed
+    Given path 'api/v1/commerce/coupons/cpn-ghost/redeem'
+    And header Authorization = 'Bearer ' + player.token
+    And request {}
+    When method post
+    Then status 404
+```
+
+**`gamification/rewards.feature`**
+
+```gherkin
+@gamification @US15 @US16
+Feature: Simulation rewards API
+
+  Background:
+    * url karate.properties['api.baseUrl']
+    * def player = call read('classpath:com/safestep/apitests/helpers/register-and-sign-in.feature')
+
+  Scenario: A new player starts without SafeCoins
+    Given path 'api/v1/gamification/summary/me'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response == { username: '#(player.username)', level: 1, xp: 0, safeCoins: 0, streak: 0, completedSimulations: 0 }
+
+  Scenario: Completing a simulation rewards coins and XP and is recorded in the coin history
+    * call read('classpath:com/safestep/apitests/helpers/complete-simulation.feature') { token: '#(player.token)', slug: 'rcp-basico', score: 90 }
+    Given path 'api/v1/gamification/summary/me'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response.safeCoins == 101
+    And match response.xp == 420
+    And match response.completedSimulations == 1
+    Given path 'api/v1/gamification/coin-transactions/me'
+    And header Authorization = 'Bearer ' + player.token
+    When method get
+    Then status 200
+    And match response == '#[1]'
+    And match response[0].earnedCoins == 101
+
+  Scenario Outline: An attempt with an out of range score is rejected - <score>
+    Given path 'api/v1/simulations/rcp-basico/attempts'
+    And header Authorization = 'Bearer ' + player.token
+    And request { mode: 'practice', startedAt: '2026-09-14T15:00:00Z', score: <score>, totalSteps: 5, correctSteps: 4, timeElapsed: 100 }
+    When method post
+    Then status 400
+
+    Examples:
+      | score |
+      | -1    |
+      | 101   |
+
+  Scenario: A simulation that does not exist cannot be attempted
+    Given path 'api/v1/simulations/ghost/attempts'
+    And header Authorization = 'Bearer ' + player.token
+    And request { mode: 'practice', startedAt: '2026-09-14T15:00:00Z', score: 80, totalSteps: 5, correctSteps: 4, timeElapsed: 100 }
+    When method post
+    Then status 404
+```
+
+
+**System Tests (Selenium + Cucumber).** Verifican en un navegador real US01 y US02 (autenticación), US30 y US31 (catálogos), US42 y US59 (cupones) y US57 y US58 (panel de administración).
+
+**`authentication.feature`**
+
+```gherkin
+@system @authentication @US01 @US02
+Feature: Authentication in the web application
+  As a visitor I want to create an account and sign in
+  so that I can start training with the first aid simulations
+
+  Scenario: A visitor without session is redirected to the login form
+    Given a visitor who is not signed in
+    When the visitor opens the dashboard address directly
+    Then the login form is displayed
+
+  Scenario: A visitor creates an account
+    Given a visitor who is not signed in
+    When the visitor registers a new account with valid data
+    Then the account is created and the login form is prefilled with the e-mail
+
+  Scenario: A visitor cannot register with two different passwords
+    Given a visitor who is not signed in
+    When the visitor registers with two different passwords
+    Then a validation error is shown and no account is created
+
+  Scenario: A registered player signs in
+    Given a registered player who is not signed in
+    When the player signs in with the correct credentials
+    Then the player lands on the dashboard
+
+  Scenario: A wrong password is rejected
+    Given a registered player who is not signed in
+    When the player signs in with a wrong password
+    Then an authentication error is shown and the player stays on the login page
+
+  Scenario: A signed in player signs out
+    Given a registered player who is signed in
+    When the player signs out
+    Then the login form is displayed
+```
+
+**`catalogs.feature`**
+
+```gherkin
+@system @catalog @US30 @US31
+Feature: Browsing the simulations catalogue and the store
+  As a player I want to browse the available simulations and products
+
+  Background:
+    Given a registered player who is signed in
+
+  Scenario: The simulations catalogue lists the available simulations
+    When the player opens the simulations catalogue
+    Then the catalogue lists at least 3 simulations
+    And the first filter is selected by default
+
+  Scenario: Choosing a filter highlights it
+    When the player opens the simulations catalogue
+    And the player picks the second simulation filter
+    Then that filter is highlighted as the active one
+
+  Scenario: The store lists the products
+    When the player opens the store
+    Then the store lists at least 3 products
+```
+
+**`coupon-redemption.feature`**
+
+```gherkin
+@system @coupons @US42 @US59
+Feature: Coupon redemption page
+  As a player I want to see which coupons I can buy with SafeCoins
+
+  Scenario: A new player cannot afford any coupon
+    Given a registered player who is signed in
+    When the player opens the coupon redemption page
+    Then the balance shown is 0 SafeCoins
+    And at least one coupon is offered and none of them can be redeemed
+    And the player has no coupons of their own yet
+```
+
+**`administration.feature`**
+
+```gherkin
+@system @administration @US57 @US58
+Feature: Administration panel access
+  Only administrators can reach the administration panel
+
+  Scenario: An administrator reaches the administration panel
+    Given an administrator who is signed in
+    Then the administration entry is available in the navigation
+    When the administrator opens the administration panel
+    Then the administration panel shows 6 management cards
+
+  Scenario: A regular player cannot reach the administration panel
+    Given a registered player who is signed in
+    Then the administration entry is not available in the navigation
+    When the player opens the administration panel address directly
+    Then the player is sent back to the dashboard
+```
+
+
+**Commits relacionados con testing:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
+        <tr><td>safestept-backend</td><td>feature/quality-tooling</td><td>0e786d1</td><td>build: add checkstyle, jacoco and sonar maven plugins</td><td>Checkstyle runs the stock Google checks in report-only mode (8,034 violations measured on the current codebase). JaCoCo gates the application/assembler layers at 80% instruction coverage, excluding domain, infrastructure, REST resources and controllers like the course reference project. The Sonar scanner plugin is registered for the CI pipeline.</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/unit-tests</td><td>4a9c28f</td><td>test(commerce): cover cart, order, stripe, catalog and coupon redemption rules</td><td>Adds AAA unit tests for CommerceCommandServiceImpl (cart, order creation with coupons, Stripe confirm/cancel/webhook, product and coupon CRUD), the query service, the resource assembler and the Coupon/RedeemedCoupon entities.</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/unit-tests</td><td>acdda81</td><td>test(iam): cover role management, admin seed and ACL facade</td><td>Covers self-demotion and last-admin protections in UpdateUserRolesCommand, the bootstrap admin seed branches, sign-in/sign-up failures and IamContextFacade.</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/unit-tests</td><td>0d80b69</td><td>test(gamification): cover mission/badge rules, coin spending and event handler</td><td>Covers GamificationCommandServiceImpl validation, the attempt-completed integration handler, query service, SafeCoins spend ACL and CoinSpend entity.</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/unit-tests</td><td>ef66f12</td><td>test(simulation): cover attempt registration, simulation CRUD and domain events</td><td>—</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/unit-tests</td><td>3c1fd47</td><td>test(analytics): cover summary, progress and certificate issuing rules</td><td>—</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/unit-tests</td><td>ecec0f6</td><td>test(profiles): cover profile commands, queries and ACL facade</td><td>—</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/unit-tests</td><td>53af96d</td><td>test(shared): cover Result type and global exception handler branches</td><td>—</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/bdd-acceptance-tests</td><td>053ca94</td><td>build: add cucumber dependencies for BDD acceptance tests</td><td>—</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/bdd-acceptance-tests</td><td>a8c59d1</td><td>test(bdd): add Gherkin acceptance features and Cucumber step definitions</td><td>Five features (authentication, coupon redemption, checkout with coupon, role management, simulation rewards) tagged with the user stories they validate. Steps drive the real REST API of the Spring Boot application started on a random port, with its own in-memory database.</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/api-tests-karate</td><td>4f9460d</td><td>test(api): add Karate integration tests for the REST API</td><td>Black-box suite (5 features, 36 scenarios) that exercises authentication, authorization, the store catalogue, the SafeCoins coupon flow and simulation rewards over HTTP. Data-driven sign-up reads users-batch.json and every run creates uniquely named users, so it is repeatable on a persistent database.</td><td>07/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/jenkins-pipeline</td><td>824c870</td><td>ci(jenkins): add pipeline, Jenkins/SonarQube Docker setup and job as code</td><td>Jenkinsfile stages: compile, Checkstyle report, unit + BDD tests, JaCoCo gate, SonarQube analysis with quality gate, package, Docker image and Karate API tests against the new container. The ci/ folder builds the Jenkins image (JDK 26, Maven, Docker CLI), runs SonarQube on the shared network and configures Jenkins with JCasC (SonarQube server, token credential, job). The application image no longer re-runs the tests that the pipeline already ran.</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/jenkins-pipeline</td><td>9c0160b</td><td>fix(ci): use SonarQube Community Build and allow local checkout in Jenkins</td><td>SonarQube 9.9 LTS cannot parse the Java 21+ syntax used by the project (switch patterns, unnamed variables), so the compose file now uses the current Community Build image. Jenkins is started with ALLOW_LOCAL_CHECKOUT because the job reads the repository mounted from the host.</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/jenkins-pipeline</td><td>ef4af3e</td><td>chore(ci): allow anonymous read access to the local Jenkins and SonarQube dashboards</td><td>Builds and configuration still require the generated admin user; read access lets the dashboards be inspected and captured as evidence without logging in.</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>feature/story-traceability-tags</td><td>26ee2e9</td><td>test: tag features with the new US57-US61 story ids</td><td>—</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>7957753</td><td>docs(api-tests): align the story ids with the product backlog</td><td>—</td><td>08/10/2026</td></tr>
+    </tbody>
+</table>
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
+        <tr><td>safestept-frontend</td><td>feature/e2e-system-tests</td><td>836c756</td><td>test(e2e): add Selenium + Cucumber system tests for the web app</td><td>Gherkin scenarios (12) run in headless Chrome against the Angular app and cover route protection, registration, sign-in/out, simulations and store catalogues, the coupon redemption page and the admin panel access rules. An &quot;e2e&quot; Angular configuration points the app to the isolated test backend so the suite never touches the development database.</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-frontend</td><td>feature/story-traceability-tags</td><td>e7a351f</td><td>test(e2e): tag features with the new US57-US59 story ids</td><td>—</td><td>08/10/2026</td></tr>
+    </tbody>
+</table>
+
+<a id="toc-5-2-5-6-execution-evidence-for-sprint-review"></a>
+### 5.2.5.6. Execution Evidence for Sprint Review
+
+El Sprint 5 permitió validar de forma automática los flujos principales de SafeStep. Las capturas siguientes provienen de las pruebas de sistema: son el estado final de cada escenario, recogido por Selenium en un navegador Chrome real con datos creados por la propia prueba.
+
+**Resumen de lo Alcanzado:**
+
+- Registro e inicio de sesión de jugadores, con redirección al dashboard.
+- Protección de rutas: un visitante sin sesión vuelve al login.
+- Catálogo de simulaciones con filtros y catálogo de la tienda.
+- Página de canje de cupones: un jugador nuevo ve los cupones del catálogo y no puede costearlos.
+- Panel de administración con seis módulos, visible solo para administradores.
+
+<div align="center">
+  <p><b>Captura:</b> Dashboard después de iniciar sesión con una cuenta nueva</p>
+  <img src="markdown/assets/images/chapter-6/selenium-a-registered-player-signs-in.png" alt="Dashboard tras iniciar sesión" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Catálogo de simulaciones</p>
+  <img src="markdown/assets/images/chapter-6/selenium-the-simulations-catalogue-lists-the-available-simulations.png" alt="Catálogo de simulaciones" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Tienda de productos</p>
+  <img src="markdown/assets/images/chapter-6/selenium-the-store-lists-the-products.png" alt="Tienda" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Página de canje de cupones de un jugador sin SafeCoins</p>
+  <img src="markdown/assets/images/chapter-6/selenium-a-new-player-cannot-afford-any-coupon.png" alt="Canje de cupones" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Panel de administración</p>
+  <img src="markdown/assets/images/chapter-6/selenium-an-administrator-reaches-the-administration-panel.png" alt="Panel de administración" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+
+**Video de la navegación del Sprint:** <b>[POR COMPLETAR POR EL EQUIPO]</b>
+
+<a id="toc-5-2-5-7-services-documentation-evidence-for-sprint-review"></a>
+### 5.2.5.7. Services Documentation Evidence for Sprint Review
+
+El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de roles y de canje de cupones, y modificó la creación de órdenes. Todos están publicados en la Swagger UI del backend (`/swagger-ui/index.html`), que en este Sprint se consultó en la instancia local de pruebas (`http://localhost:8093/swagger-ui/index.html`). Todos requieren autenticación; los de roles requieren además `ROLE_ADMIN`.
+
+| Endpoint | Verbo | Descripción | Parámetros | Respuesta |
+|----------|-------|-------------|------------|-----------|
+| `/api/v1/users` | GET | Lista los usuarios (solo administrador) | — | 200 con la lista de usuarios y sus roles; 403 si no es administrador |
+| `/api/v1/roles` | GET | Lista los roles disponibles (solo administrador) | — | 200 con `ROLE_USER`, `ROLE_INSTRUCTOR`, `ROLE_ADMIN` |
+| `/api/v1/users/{userId}/roles` | PUT | Reemplaza los roles de un usuario | Ruta: `userId`. Cuerpo: `{"roles": ["ROLE_USER", "ROLE_INSTRUCTOR"]}` | 200 con el usuario actualizado; 422 `BUSINESS_RULE_VIOLATION` si el administrador intenta quitarse su propio rol o dejar al sistema sin administrador |
+| `/api/v1/commerce/coupons/{couponId}/redeem` | POST | Canjea un cupón con los SafeCoins del usuario autenticado | Ruta: `couponId` (identificador del cupón del catálogo). Sin cuerpo | 201 con el cupón canjeado (`id`, `status: AVAILABLE`, `discountPercentage`, `minPurchaseAmount`); 422 si el saldo no alcanza; 404 si el cupón no existe |
+| `/api/v1/commerce/coupons/redeemed/me` | GET | Lista los cupones canjeados por el usuario autenticado | — | 200 con la lista, cada cupón con su estado `AVAILABLE` o `USED` |
+| `/api/v1/commerce/orders` | POST | Crea una orden; ahora acepta un cupón canjeado | Cuerpo: `status` y, opcional, `redeemedCouponExternalId` | 201 con `total`, `finalTotal` y `appliedDiscountPercentage`; 422 si el cupón no es del usuario, ya se usó o la compra no alcanza el mínimo |
+
+<div align="center">
+  <p><b>Captura:</b> Endpoint de canje de cupones en Swagger UI</p>
+  <img src="markdown/assets/images/chapter-5/sprint5-swagger-redeem-coupon.jpg" alt="Swagger redeemCoupon" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Endpoint de actualización de roles en Swagger UI</p>
+  <img src="markdown/assets/images/chapter-5/sprint5-swagger-update-roles.jpg" alt="Swagger updateUserRoles" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+
+**Repositorio de Web Services:** [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend). Los commits de este Sprint relacionados con servicios están en la tabla de 5.2.5.4 (`feat: add coupon redemption feature`).
+
+**Observación sobre la documentación.** El response `200` del endpoint de canje aparece documentado con un cuerpo vacío (`{}`) aunque el servicio responde 201 con el cupón canjeado; la anotación de respuesta debe corregirse en el siguiente Sprint.
+
+<a id="toc-5-2-5-8-software-deployment-evidence-for-sprint-review"></a>
+### 5.2.5.8. Software Deployment Evidence for Sprint Review
+
+El trabajo de despliegue del Sprint 5 consistió en automatizar la integración y la entrega del backend. No se crearon cuentas ni recursos nuevos en proveedores cloud: la infraestructura del pipeline se ejecuta como contenedores Docker en el equipo del desarrollador y se describe como código en la carpeta `ci/` del backend.
+
+**Actividades realizadas:**
+
+1. Construcción de la imagen `safestep-jenkins:1.0` (Jenkins LTS con JDK 25 y, para compilar el proyecto, JDK 26, Maven 3.9.11 y Docker CLI).
+2. Creación del `docker-compose.yml` con Jenkins (puerto 9089) y SonarQube (puerto 9000) en la red `spring-postgres-net`.
+3. Configuración de Jenkins con *Configuration as Code*: usuario administrador, servidor SonarQube `MiSonarServer`, credencial del token y el job `safestep-backend`.
+4. Registro del webhook `http://jenkins-master:9089/sonarqube-webhook/` en SonarQube.
+5. Escritura del `Jenkinsfile` y ejecución del pipeline sobre la rama `develop`.
+6. Construcción de la imagen del backend `safestep-backend:<n.º de ejecución>` y verificación contra un contenedor con PostgreSQL.
+
+<div align="center">
+  <p><b>Captura:</b> Pipeline `safestep-backend` en Jenkins con sus etapas y ejecuciones</p>
+  <img src="markdown/assets/images/chapter-7/jenkins-pipeline-stage-view.png" alt="Stage View de Jenkins" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Panel de SonarQube del backend</p>
+  <img src="markdown/assets/images/chapter-7/sonarqube-dashboard.png" alt="SonarQube" width="620" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+
+**Imágenes Docker generadas por el pipeline:**
+
+```text
+REPOSITORY         TAG      IMAGE ID       SIZE
+safestep-backend   4        64e385aea78a   655MB
+safestep-backend   latest   64e385aea78a   655MB
+safestep-backend   3        2ec1ddbbaad0   655MB
+safestep-backend   2        769ccc045c41   655MB
+```
+
+**Pendiente.** La publicación en Docker Hub y el despliegue automático en Render están implementados parcialmente (etapa de publicación con el parámetro `PUSH_IMAGE`) pero no se ejecutaron porque requieren credenciales del equipo; el detalle está en 7.2 y 7.3.
+
+<a id="toc-5-2-5-9-team-collaboration-insights-during-sprint"></a>
+### 5.2.5.9. Team Collaboration Insights during Sprint
+
+En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 y se presentan los analíticos de colaboración.
+
+**Distribución de Trabajo:** <b>[POR COMPLETAR POR EL EQUIPO]</b>
+
+**Métricas de Colaboración:**
+
+<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tbody>
+        <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
+        <tr><td>Ayala Fernandez, Jorge Brayan</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>20</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+    </tbody>
+</table>
+
+El conteo de commits de Melgarejo Quiroz, Josep Eliu corresponde a los commits locales de `develop` en los repositorios de backend y frontend durante este Sprint. Las capturas de GitHub Insights (Contributors, Commits) y la interpretación del equipo deben añadirse una vez publicadas las ramas en GitHub, porque los analíticos de GitHub solo reflejan lo que está en el repositorio remoto.
+
+<br>
+
 <br>
 <br>
 
@@ -10386,28 +11717,217 @@ El video concluye destacando que SafeStep busca mejorar la preparación de las p
 <a id="toc-6-1-testing-suites-validation"></a>
 # 6.1. Testing Suites & Validation
 
-Pendiente.
+Esta sección documenta las suites de prueba que verifican SafeStep. La estrategia sigue la pirámide de pruebas: muchas pruebas unitarias rápidas sobre las entidades y los servicios de aplicación, pruebas de integración de la API desde fuera del sistema, pruebas de comportamiento (BDD) que automatizan los criterios de aceptación de las historias de usuario, y pruebas de sistema que recorren la aplicación completa en un navegador real. Todas se ejecutan de forma automática: las tres primeras dentro del pipeline de Jenkins descrito en 7.1 y las de sistema contra un frontend y un backend levantados localmente.
 
+| Nivel | Herramienta | Repositorio y carpeta | Pruebas | Resultado de la última ejecución |
+|-------|-------------|-----------------------|---------|----------------------------------|
+| Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 201 | 201 aprobadas, 0 fallidas |
+| Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
+| BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
+| Sistema (web) | Selenium 4.50 + Cucumber | `safeStept-frontend/e2e-tests` | 12 escenarios (4 features) | 12 aprobados, 0 fallidos |
+
+Las 234 pruebas del backend que ejecuta Maven (201 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 49.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 201 métodos en 39 clases.
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>
+  <p><i><b>Figura 6.1.1.</b> Resultado de las 234 pruebas del backend en Jenkins (ejecución #4). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 <a id="toc-6-1-1-core-entities-unit-tests"></a>
 ## 6.1.1. Core Entities Unit Tests
 
-Pendiente.
+Las pruebas unitarias validan en aislamiento las entidades de dominio (agregados, entidades y value objects) y los servicios de aplicación (command y query services, manejadores de eventos y fachadas ACL) de cada bounded context. Todas están escritas con JUnit Jupiter y siguen la estructura **Arrange-Act-Assert**; cuando una clase depende de repositorios o de la fachada de otro contexto (por ejemplo, el canje de cupones consulta al contexto de gamificación) esas dependencias se sustituyen con dobles de Mockito, de modo que cada prueba verifica una sola unidad sin base de datos.
+
+**Pruebas por bounded context:**
+
+| Bounded context | Pruebas | Qué se verifica |
+|-----------------|---------|-----------------|
+| `commerce` | 66 | Reglas de carrito y órdenes, cálculo del total y del total final con descuento, catálogo de productos y cupones, canje de cupones con SafeCoins, liberación del cupón cuando falla el pago, sesión de pago con Stripe, value objects y validaciones de los recursos REST |
+| `iam` | 41 | Registro e inicio de sesión, asignación de roles, regla que impide al administrador quitarse su propio rol, semilla del primer administrador, fachada ACL e integración con la seguridad JWT |
+| `gamification` | 37 | Recompensas por simulación, misiones e insignias, gasto de SafeCoins (`PlayerProgress.spendCoins`), registro del gasto (`CoinSpend`), manejador del evento de intento completado y fachada ACL |
+| `simulation` | 21 | Registro de intentos, CRUD de simulaciones, eventos de dominio y validación del puntaje |
+| `shared` | 18 | Tipo `Result`, manejador global de excepciones, ensamblador de errores y configuración de idioma |
+| `profiles` | 9 | Comandos y consultas de perfiles |
+| `analytics` | 8 | Resumen, progreso y emisión de certificados |
+| Contexto de aplicación | 1 | Arranque de Spring Boot |
+
+**Ejemplo de prueba de entidad.** El cupón canjeado solo puede usarse una vez y vuelve a estar disponible si el pago falla:
+
+```java
+@Test
+@DisplayName("RedeemedCoupon should start available and become used once (AAA)")
+void redeemedCoupon_IsUsedOnlyOnce() {
+    // Arrange
+    var coupon = availableCoupon();
+    var usedAt = Instant.parse("2026-09-15T10:00:00Z");
+
+    // Act
+    coupon.markUsed(usedAt);
+
+    // Assert
+    assertEquals(RedemptionStatus.USED, coupon.getStatus());
+    assertEquals(usedAt, coupon.getUsedAt());
+    assertThrows(IllegalStateException.class, () -> coupon.markUsed(Instant.now()));
+}
+```
+
+**Cobertura.** JaCoCo mide la cobertura de instrucciones y el build exige un mínimo de 80 %. Siguiendo el proyecto de referencia del curso, la medición excluye las clases que no contienen lógica de aplicación: el paquete `domain` completo, la capa `infrastructure`, los recursos y controladores REST, y la clase de arranque (`**/*Application*`). La regla vive en el `pom.xml` (`jacoco:check`, `COVEREDRATIO` mínimo de `0.80`) y por tanto rompe el build si la cobertura baja.
+
+| Medición | Antes del Trabajo Parcial | Después |
+|----------|---------------------------|---------|
+| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,145 de 5,488 instrucciones) |
+| Pruebas del backend | 54 métodos | 234 pruebas |
+
+| Bounded context | Clases medidas | Cobertura |
+|-----------------|----------------|-----------|
+| `analytics` | 3 | 100.0 % |
+| `gamification` | 6 | 100.0 % |
+| `commerce` | 3 | 98.6 % |
+| `shared` | 7 | 94.3 % |
+| `iam` | 17 | 92.0 % |
+| `simulation` | 11 | 91.2 % |
+| `profiles` | 7 | 62.1 % |
+
+El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.7 % de cobertura sobre 974 líneas medibles (ver 7.1.2).
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-6/jacoco-coverage-report.png" alt="Reporte de cobertura JaCoCo"/>
+  <p><i><b>Figura 6.1.2.</b> Reporte HTML de JaCoCo generado por el pipeline. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+**Cómo ejecutarlas:**
+
+```bash
+mvn test            # unitarias + BDD, genera target/site/jacoco
+mvn jacoco:check    # falla si la cobertura es menor a 80 %
+```
 
 <a id="toc-6-1-2-core-integration-tests"></a>
 ## 6.1.2. Core Integration Tests
 
-Pendiente.
+Las pruebas de integración verifican que el backend funciona correctamente cuando se consume como lo haría el frontend: por HTTP, atravesando seguridad JWT, controladores, servicios, persistencia en PostgreSQL y la comunicación entre bounded contexts. Se escribieron con **Karate** en un proyecto Maven independiente (`api-tests`) que solo conoce la URL base de la API, por lo que sirve contra una instancia local, el contenedor que levanta Jenkins o un entorno desplegado.
+
+| Feature | Historias | Escenarios | Qué valida |
+|---------|-----------|------------|------------|
+| `authentication` | US01, US02 | 12 | Registro dirigido por datos (`users-batch.json`), inicio de sesión, rotación del refresh token, conflicto por usuario duplicado y validaciones |
+| `security/authorization` | US57, US58 | 9 | Respuestas 401 sin token y 403 para jugadores en rutas de administrador, listado de usuarios y roles, asignación de roles y protección contra auto-degradación (422) |
+| `catalog` | US30, US31 | 7 | Catálogos de productos, categorías, kits y cupones |
+| `commerce/coupon-flow` | US15, US40, US59, US60 | 3 | El jugador gana SafeCoins, canjea un cupón y lo usa en una orden con el descuento aplicado |
+| `gamification/rewards` | US15, US16 | 5 | Recompensas por simulación completada, historial de monedas y rechazo de puntajes fuera de rango |
+
+Cada escenario crea sus propios usuarios con nombres aleatorios, por lo que la suite puede repetirse sobre una base de datos con datos previos; se ejecutó tres veces consecutivas sin fallos. El flujo extremo a extremo de cupones ilustra el estilo de las pruebas:
+
+```gherkin
+<a id="toc-2-redeem-the-5-coupon-which-costs-150-safecoins"></a>
+# 2. Redeem the 5% coupon, which costs 150 SafeCoins
+Given path 'api/v1/commerce/coupons/cpn-5/redeem'
+And header Authorization = 'Bearer ' + player.token
+And request {}
+When method post
+Then status 201
+And match response.status == 'AVAILABLE'
+And match response.discountPercentage == 5
+```
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-6/karate-summary-report.png" alt="Reporte de Karate"/>
+  <p><i><b>Figura 6.1.3.</b> Resumen del reporte HTML de Karate: 5 features y 36 escenarios aprobados en el pipeline. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+**Hallazgo.** Durante el desarrollo de estas pruebas se detectó que la API responde HTTP 500 (`UNEXPECTED_ERROR`) cuando recibe un cuerpo JSON mal formado, en lugar de un 400. El manejador global de excepciones atiende `RuntimeException` de forma genérica y no registra el error. El defecto queda registrado para corregirse en un sprint posterior; las pruebas actuales no dependen de ese comportamiento.
+
+**Cómo ejecutarlas:**
+
+```bash
+cd api-tests
+mvn test -Dapi.baseUrl=http://localhost:8092 -Dapi.admin.username=<admin> -Dapi.admin.password=<clave>
+```
 
 <a id="toc-6-1-3-core-behavior-driven-development"></a>
 ## 6.1.3. Core Behavior-Driven Development
 
-Pendiente.
+Los criterios de aceptación redactados en Gherkin en 3.2 se automatizaron con **Cucumber-JVM**. Cada archivo `.feature` describe una historia con su narrativa (*As a… I want… So that…*), cada escenario lleva una etiqueta con el identificador de la historia que verifica (por ejemplo `@US42`) y los pasos se implementan en clases `*Steps` que comparten un contexto por escenario. Los escenarios levantan la aplicación Spring Boot completa en un puerto aleatorio sobre una base de datos H2 aislada y la consumen por HTTP, por lo que prueban el comportamiento real sin tocar la base de datos de desarrollo.
+
+| Feature | Historias | Escenarios |
+|---------|-----------|------------|
+| `authentication.feature` | US01, US02 | 6 |
+| `coupon-redemption.feature` | US42, US59, US61 | 5 (uno es un *Scenario Outline* con un ejemplo por cupón del catálogo) |
+| `checkout-with-coupon.feature` | US60 | 6 |
+| `role-management.feature` | US57, US58 | 6 |
+| `simulation-rewards.feature` | US15, US16 | 4 |
+
+La ejecución produce 33 escenarios, todos aprobados. Ejemplo del feature de canje de cupones:
+
+```gherkin
+@coupons @US42
+Feature: Redeem SafeCoins for store coupons
+  As a player who earns SafeCoins by training
+  I want to exchange my SafeCoins for discount coupons
+  So that I pay less when I buy emergency products
+
+  Background:
+    Given a signed-in player with 500 SafeCoins
+
+  Scenario: A player cannot redeem a coupon that costs more than their balance
+    When the player redeems the coupon "cpn-15"
+    Then the response status is 422
+    And the response contains the error code "BUSINESS_RULE_VIOLATION"
+    And the player has 500 SafeCoins left
+    And the player has no redeemed coupons
+```
+
+Y el step definition que lo implementa:
+
+```java
+@When("the player redeems the coupon {string}")
+public void thePlayerRedeemsTheCoupon(String couponId) {
+    context.response(api.post("/api/v1/commerce/coupons/%s/redeem".formatted(couponId), Map.of(), context.token()));
+    if (context.response().status() == 201) {
+        context.redeemedCouponId(context.response().text("id"));
+    }
+}
+```
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-6/cucumber-backend-report.png" alt="Reporte Cucumber del backend"/>
+  <p><i><b>Figura 6.1.4.</b> Reporte HTML de Cucumber: 33 de 33 escenarios aprobados. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 <a id="toc-6-1-4-core-system-tests"></a>
 ## 6.1.4. Core System Tests
 
-Pendiente.
+Las pruebas de sistema validan la aplicación web completa: el frontend Angular, el backend Spring Boot y PostgreSQL funcionando juntos, usados desde un navegador **Chrome** real controlado con **Selenium WebDriver**. Los escenarios están escritos en Gherkin y se ejecutan con Cucumber sobre JUnit Platform, siguiendo la estructura del proyecto de referencia del curso (`deisw-testingweb-java`) pero con ChromeDriver gestionado automáticamente por Selenium Manager y con el patrón *page object* para aislar los selectores de los pasos.
+
+Para no tocar la base de datos de desarrollo, el frontend se sirve con una configuración `e2e` de Angular (`ng serve --configuration e2e`) que apunta a una instancia aislada del backend. Cada escenario registra su propio jugador con un correo único y, al terminar, el reporte adjunta una captura de pantalla del estado final.
+
+| Feature | Escenarios | Flujo validado |
+|---------|------------|----------------|
+| `authentication.feature` | 6 | Redirección al login sin sesión, registro de cuenta, contraseñas distintas, inicio de sesión, contraseña incorrecta, cierre de sesión |
+| `catalogs.feature` | 3 | Catálogo de simulaciones, filtros y catálogo de la tienda |
+| `coupon-redemption.feature` | 1 | Un jugador nuevo ve los cupones pero no puede costearlos y no tiene cupones propios |
+| `administration.feature` | 2 | El administrador accede al panel con sus seis tarjetas; un jugador es devuelto al dashboard |
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-6/selenium-an-administrator-reaches-the-administration-panel.png" alt="Panel de administración en la prueba de sistema"/>
+  <p><i><b>Figura 6.1.5.</b> Captura adjunta por la prueba «An administrator reaches the administration panel». <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-6/selenium-a-new-player-cannot-afford-any-coupon.png" alt="Página de cupones en la prueba de sistema"/>
+  <p><i><b>Figura 6.1.6.</b> Captura adjunta por la prueba «A new player cannot afford any coupon». <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+La suite se ejecutó dos veces seguidas con los 12 escenarios aprobados (cerca de 57 segundos por ejecución). Durante la primera ejecución una prueba falló por un defecto de la propia prueba, no de la aplicación: el paso de inicio de sesión no esperaba a que el dashboard terminara de cargar y la navegación directa siguiente interrumpió el login; el paso se corrigió para esperar el dashboard.
+
+**Alcance y limitaciones.** Las pruebas de sistema cubren la aplicación web. La aplicación Android (`safestept-android`) no cuenta aún con pruebas de sistema automatizadas y se valida manualmente; automatizarlas (por ejemplo con Appium) queda como trabajo futuro. Tampoco se automatizan todavía los flujos que dependen de pasarelas externas (pago con Stripe), que se verifican en las pruebas de integración con dobles del cliente de Stripe.
+
+**Cómo ejecutarlas:**
+
+```bash
+npx ng serve --configuration e2e --port 4300      # frontend apuntando al backend de pruebas
+cd e2e-tests
+mvn test -De2e.baseUrl=http://localhost:4300      # -De2e.headless=false para ver el navegador
+```
 
 <br>
 
@@ -11187,53 +12707,210 @@ Pendiente.
 <a id="toc-7-1-continuous-integration"></a>
 # 7.1. Continuous Integration
 
-Pendiente.
+La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la arquitectura del material del curso: Jenkins y SonarQube se ejecutan como contenedores Docker en una red compartida y el pipeline se define como código en un `Jenkinsfile` versionado junto al backend. Cada ejecución del pipeline parte del código de la rama `develop`, lo compila, mide su estilo, ejecuta todas las pruebas, verifica la cobertura, lo analiza con SonarQube, genera el artefacto, construye la imagen Docker y prueba esa imagen con la suite de API.
 
 <a id="toc-7-1-1-tools-and-practices"></a>
 ## 7.1.1. Tools and Practices
 
-Pendiente.
+**Herramientas**
+
+| Herramienta | Versión | Rol en la integración continua |
+|-------------|---------|--------------------------------|
+| Jenkins | LTS sobre JDK 25 (imagen `safestep-jenkins:1.0`) | Orquesta el pipeline declarativo; plugins: Pipeline, Git, Pipeline Stage View, SonarQube Scanner, Job DSL y Configuration as Code |
+| Docker y Docker Compose | 29.6 | Ejecutan Jenkins, SonarQube, PostgreSQL y la imagen de la API; el contenedor de Jenkins usa el daemon del anfitrión mediante `/var/run/docker.sock` |
+| Maven | 3.9.11 | Compilación, pruebas, cobertura y análisis |
+| JDK Eclipse Temurin | 26 | Compila y prueba el backend (se instala en la imagen de Jenkins y se selecciona con `JAVA_HOME_26`) |
+| Checkstyle | 14.3.0 (reglas de Google) | Reporte de estilo |
+| JUnit Jupiter, Mockito, Cucumber, Karate | ver 6.1 | Suites de prueba que ejecuta el pipeline |
+| JaCoCo | 0.8.15 | Cobertura y umbral de 80 % |
+| SonarQube Community Build | 26.9 | Análisis de calidad y seguridad con Quality Gate |
+| PostgreSQL | 18 (imagen `postgres:18-alpine`) | Base de datos desechable para las pruebas de API |
+
+**Prácticas**
+
+- **Pipeline como código.** El `Jenkinsfile` está en la raíz de `safeStept-backend`; los cambios al pipeline se revisan y versionan como cualquier otro cambio.
+- **Infraestructura como código.** La carpeta `ci/` contiene el `Dockerfile` de Jenkins, `plugins.txt`, el `docker-compose.yml` y `casc.yaml`, que configura Jenkins con *Configuration as Code*: usuario administrador, servidor SonarQube (`MiSonarServer`), credencial del token (`sonarqube-token-id`) y el job `safestep-backend`, que se crea solo al iniciar. El script `ci/start-ci.sh` levanta ambos servicios, genera el token de análisis, registra el webhook y arranca Jenkins; las claves generadas se guardan en `ci/.env`, que Git ignora.
+- **Fallar rápido.** Las etapas están ordenadas de la más barata a la más costosa y una etapa fallida detiene las siguientes.
+- **Un único origen de verdad para las reglas de calidad.** Las exclusiones de cobertura de JaCoCo y de SonarQube son las mismas.
+- **Pruebas aisladas.** Las pruebas BDD usan H2 en memoria y las de API usan un PostgreSQL desechable, de modo que nunca tocan datos de desarrollo ni producción.
+- **Evidencia conservada.** Cada etapa archiva sus reportes (resultados JUnit, Checkstyle, JaCoCo, Cucumber, Karate y el JAR) como artefactos de la ejecución.
+- **Secretos fuera del repositorio.** Las credenciales de Jenkins y SonarQube se generan en cada instalación, la clave de Stripe se lee de la variable `STRIPE_SECRET_KEY` y la publicación en Docker Hub usa una credencial de Jenkins (`DOCKER_HUB_CREDENTIALS`).
+- **Flujo de ramas.** Jenkins construye `develop`; los cambios llegan desde ramas `feature/*` con Conventional Commits, tal como se describe en 5.1.2.
 
 <a id="toc-7-1-2-build-test-suite-pipeline-components"></a>
 ## 7.1.2. Build & Test Suite Pipeline Components
 
-Pendiente.
+El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #4 en Jenkins (4 min 37 s de principio a fin, resultado **SUCCESS**).
+
+| # | Etapa | Comando | Qué verifica o produce | Si falla | Tiempo |
+|---|-------|---------|------------------------|----------|--------|
+| 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 1 s |
+| 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 46 s |
+| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 22 s |
+| 4 | Unit and BDD Tests | `mvn test` | 201 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 8 s |
+| 5 | Validate Test Coverage | `mvn jacoco:check` | Cobertura de instrucciones ≥ 80 % sobre las clases medidas (resultado: 93.8 %) | Se detiene | 4 s |
+| 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 48 s |
+| 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 13 s |
+| 8 | Build Docker Image | `docker build` | Imagen `safestep-backend:<n.º de ejecución>` y `latest` | Se detiene | 2 s (con capas en caché) |
+| 9 | API Tests (Karate) | contenedores + `mvn test` en `api-tests` | Levanta PostgreSQL y la imagen recién construida y ejecuta los 36 escenarios Karate contra ese contenedor; luego elimina ambos | Se detiene (los contenedores se eliminan siempre) | 45 s |
+| 10 | Publish Docker Image | `docker push` | Publica la imagen en Docker Hub; solo si el parámetro `PUSH_IMAGE` es verdadero | — | No ejecutada |
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-7/jenkins-pipeline-stage-view.png" alt="Stage View del pipeline de Jenkins"/>
+  <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins con el historial de ejecuciones. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2, #3 y #4 terminaron en SUCCESS. La primera ejecución que construyó la imagen desde cero tardó 2 min 57 s en esa etapa, que luego bajó a 2–4 s con las capas en caché.
+
+**Integración con SonarQube.** La primera instalación usó la imagen `sonarqube:lts-community` (9.9) del material del curso. Su analizador de Java no puede leer la sintaxis moderna que usa el backend (`switch` con patrones y variables sin nombre `_`) y registró errores de análisis en tres archivos, por lo que el equipo cambió a la imagen vigente `sonarqube:community`, con la que el análisis termina sin errores de lectura. SonarQube notifica a Jenkins mediante el webhook `http://jenkins-master:9089/sonarqube-webhook/`, y `waitForQualityGate()` retoma el pipeline cuando llega el resultado.
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-7/sonarqube-dashboard.png" alt="Panel de SonarQube del backend"/>
+  <p><i><b>Figura 7.1.2.</b> Panel de SonarQube del backend SafeStep (código completo). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+| Métrica de SonarQube | Valor |
+|----------------------|-------|
+| Líneas de código | 9,854 en 370 archivos |
+| Quality Gate (Sonar way) | **Aprobado** |
+| Cobertura | 91.7 % sobre 974 líneas medibles |
+| Duplicación | 1.0 % |
+| Vulnerabilidades | 2 (calificación de seguridad D) |
+| Bugs | 3 (la calificación de fiabilidad es B, con 7 incidencias de fiabilidad) |
+| Code smells | 207 (calificación de mantenibilidad A) |
+| Hotspots de seguridad | 0 |
+
+El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**; como este fue el primer análisis del proyecto no hay código nuevo que evaluar y el gate aprueba. Por eso las incidencias existentes se tratan como deuda técnica y se listan a continuación en lugar de ocultarse.
+
+**Hallazgos de seguridad y fiabilidad (6.2.1.2):**
+
+| Tipo | Gravedad | Regla | Archivo | Descripción | Valoración del equipo |
+|------|----------|-------|---------|-------------|-----------------------|
+| Vulnerabilidad | Crítica | `java:S4502` | `WebSecurityConfiguration` | La protección CSRF de Spring Security está deshabilitada | Aceptable en esta API: es *stateless*, autentica con JWT en el encabezado `Authorization` y no usa cookies de sesión; debe marcarse como revisada |
+| Vulnerabilidad | Mayor | `java:S5122` | `WebSecurityConfiguration` | CORS permite cualquier origen (`*`) | Real: conviene restringirlo a los dominios del frontend desplegado y de desarrollo antes de producción |
+| Bug | Menor | `java:S2184` | `StripeCheckoutClientImpl` | Posible desbordamiento en una resta de enteros que se convierte a `long` | Real y de bajo riesgo: convertir un operando a `long` |
+| Bug | Menor | `java:S2637` | `ErrorResponseAssembler` (2) | Se devuelve `null` desde métodos marcados como no nulos (`@NullMarked`) | Real: devolver `Optional` o anotar el retorno como anulable |
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-7/sonarqube-issues.png" alt="Incidencias de seguridad y fiabilidad en SonarQube"/>
+  <p><i><b>Figura 7.1.3.</b> Vulnerabilidades y bugs reportados por SonarQube. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+Estas incidencias no se corrigieron en este hito para mantener el alcance del sprint en las pruebas y el pipeline; quedan registradas para el siguiente sprint, junto con el defecto de la respuesta 500 ante JSON mal formado descrito en 6.1.2.
+
+**Reportes y artefactos de cada ejecución.**
+
+<div align="center">
+  <img src="markdown/assets/images/chapter-7/jenkins-build-artifacts.png" alt="Artefactos de la ejecución en Jenkins"/>
+  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #4 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber, Karate). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+**Cómo reproducir el entorno de CI:**
+
+```bash
+cd safeStept-backend/ci
+bash start-ci.sh          # SonarQube :9000, Jenkins :9089 (usuario admin, clave en ci/.env)
+```
+
+Jenkins ejecuta el job `safestep-backend` sobre la rama `develop`; también puede iniciarse manualmente desde la interfaz con *Build with Parameters*.
 
 <br>
 
 <a id="toc-7-2-continuous-delivery"></a>
 # 7.2. Continuous Delivery
 
-Pendiente.
-
+La entrega continua extiende la integración continua de 7.1 hasta dejar un artefacto **desplegable y verificado**: cada ejecución exitosa del pipeline produce una imagen Docker del backend etiquetada con el número de ejecución, que ya fue probada ejecutándose dentro de un contenedor con una base de datos PostgreSQL. A partir de esa imagen cualquier entorno puede desplegarse sin recompilar.
 
 <a id="toc-7-2-1-tools-and-practices"></a>
 ## 7.2.1. Tools and Practices
 
-Pendiente.
+**Herramientas**
+
+| Herramienta | Rol en la entrega continua |
+|-------------|----------------------------|
+| Jenkins (`Jenkinsfile`) | Ejecuta las etapas de entrega a continuación de las de integración |
+| Docker | Construye la imagen del backend con el `Dockerfile` de varias etapas y ejecuta los contenedores del entorno de verificación |
+| Imagen `eclipse-temurin:26-jre` | Base ligera de ejecución de la imagen final |
+| PostgreSQL 18 (`postgres:18-alpine`) | Base de datos desechable del entorno de verificación |
+| Karate | Suite de verificación que se ejecuta contra la imagen construida |
+| Docker Hub | Registro de destino de la imagen (publicación opcional mediante la credencial `DOCKER_HUB_CREDENTIALS`) |
+
+**Prácticas**
+
+- **Construir una vez, desplegar el mismo artefacto.** La imagen se construye en una etapa y es esa misma imagen la que se prueba y, si se publica, la que se despliega; no se recompila para cada entorno.
+- **Versionado inmutable.** Cada imagen lleva la etiqueta del número de ejecución de Jenkins (`safestep-backend:4`) y además `latest`, lo que permite volver a una versión anterior con solo desplegar su etiqueta.
+- **Configuración por variables de entorno.** La imagen arranca con el perfil `prod` y recibe del entorno la conexión a la base de datos (`DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`), el secreto JWT (`JWT_SECRET`), el administrador inicial (`SAFESTEP_ADMIN_USERNAME`, `SAFESTEP_ADMIN_PASSWORD`) y las claves de Stripe. Ningún secreto se guarda en la imagen ni en el repositorio.
+- **Entorno de verificación efímero y reproducible.** El entorno se crea y destruye en cada ejecución, con credenciales generadas al azar, de modo que no deja estado entre ejecuciones y siempre parte de una base de datos vacía poblada por la semilla (`safestep-seed.json`).
+- **Publicación explícita.** Publicar en un registro es una decisión, no un efecto automático de cada ejecución: la etapa de publicación solo corre cuando se marca el parámetro `PUSH_IMAGE`.
+- **Pruebas de la imagen, no solo del código.** La verificación se hace contra el contenedor real, con el perfil de producción y PostgreSQL, que es lo que más se parece al entorno final.
 
 <a id="toc-7-2-2-stages-deployment-pipeline-components"></a>
 ## 7.2.2. Stages Deployment Pipeline Components
 
-Pendiente.
+Las etapas de entrega corresponden a las etapas 7 a 10 del pipeline descrito en 7.1.2.
+
+| Etapa | Descripción | Resultado de la ejecución #4 |
+|-------|-------------|------------------------------|
+| Package Project | `mvn package -DskipTests` genera `safestep-platform-1.0.0.jar` y lo archiva con su huella digital | SUCCESS, 13 s |
+| Build Docker Image | `docker build -t safestep-backend:<n> -t safestep-backend:latest .` compila el JAR dentro de la imagen y deja una imagen de ejecución con JRE 26 | SUCCESS, 2 s con capas en caché (2 min 57 s la primera vez) |
+| API Tests (Karate) | Crea el entorno de verificación, espera a que la API responda y ejecuta la suite Karate; siempre elimina los contenedores y archiva el registro del contenedor de la API (`api-container.log`) | SUCCESS, 45 s, 36 de 36 escenarios |
+| Publish Docker Image | Inicia sesión en Docker Hub con la credencial `DOCKER_HUB_CREDENTIALS`, etiqueta la imagen con el usuario del registro y la publica con la etiqueta del número de ejecución y con `latest` | No ejecutada: requiere cuenta y credencial de Docker Hub del equipo |
+
+**Detalle de la etapa de verificación (API Tests):**
+
+1. Se crea, si no existe, la red `spring-postgres-net` compartida con Jenkins.
+2. Se inicia un contenedor `postgres:18-alpine` con una base `safestep` y se espera con `pg_isready`.
+3. Se inicia la imagen recién construida con `SPRING_PROFILES_ACTIVE=prod`, el nombre del contenedor de PostgreSQL como `DATABASE_URL`, un `JWT_SECRET` aleatorio y un administrador inicial con clave aleatoria.
+4. Se consulta un endpoint protegido hasta obtener HTTP 401, señal de que la aplicación arrancó y la seguridad está activa (hasta 3 minutos).
+5. Se ejecuta la suite Karate (`api-tests`) apuntando a `http://<contenedor>:8092`.
+6. En todos los casos se archivan los reportes y el registro del contenedor y se eliminan ambos contenedores.
+
+**Estado de la publicación.** La etapa de publicación está implementada pero no se ha ejecutado porque depende de credenciales del equipo que no deben incluirse en el repositorio: la cuenta de Docker Hub y su credencial en Jenkins (`DOCKER_HUB_CREDENTIALS`, de tipo usuario y contraseña, según la guía del curso). Para activarla basta crear la credencial en Jenkins, ajustar `REGISTRY_USER` en el `Jenkinsfile` y ejecutar el job con `PUSH_IMAGE` activado.
 
 <br>
 
 <a id="toc-7-3-continuous-deployment"></a>
 # 7.3. Continuous deployment
 
-Pendiente.
-
+El despliegue continuo lleva a producción los artefactos verificados en 7.1 y 7.2. En SafeStep cada producto digital se publica en una plataforma distinta (ver 5.1.4); esta sección describe cómo se despliega cada uno, qué automatiza hoy el equipo y qué falta para que el despliegue del backend también lo dispare el pipeline de Jenkins.
 
 <a id="toc-7-3-1-tools-and-practices"></a>
 ## 7.3.1. Tools and Practices
 
-Pendiente.
+**Herramientas**
+
+| Producto | Plataforma | Mecanismo de despliegue | Configuración |
+|----------|------------|--------------------------|---------------|
+| Backend (Spring Boot) | Render | Render construye el servicio desde el repositorio del backend con su `Dockerfile` y lo ejecuta con el perfil `prod` | Variables de entorno en Render: `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`, `JWT_SECRET`, `PORT`, `SPRING_PROFILES_ACTIVE=prod`, claves de Stripe |
+| Base de datos | Render PostgreSQL | Servicio gestionado, conectado al backend por variables de entorno | Esquema administrado por Hibernate (`ddl-auto=update`) y datos iniciales con la semilla |
+| Frontend (Angular) | GitHub Pages | GitHub Actions ejecuta pruebas, construye con `npm run build` y publica los archivos estáticos | Entorno de producción en `src/environments/environment.ts` apuntando al backend de Render |
+| Landing page | GitHub Pages | GitHub Actions publica el sitio estático al hacer push a `main` | — |
+
+**Prácticas**
+
+- **El mismo `Dockerfile` en todos los entornos.** La imagen que Jenkins construye y prueba en 7.2 se basa en el mismo `Dockerfile` que usa Render, por lo que lo que se prueba es lo que se despliega. Para ello el `Dockerfile` ya no repite las pruebas al construir la imagen: las ejecuta antes el pipeline (`mvn -B clean package -DskipTests` dentro de la imagen).
+- **Configuración y secretos por entorno.** Ninguna credencial de producción está en el repositorio; todas se inyectan como variables de entorno de la plataforma, y el perfil `prod` falla al arrancar si falta alguna.
+- **Un entorno por perfil.** `application-dev.properties` (base de datos local) y `application-prod.properties` (todo por variables) separan desarrollo y producción.
+- **Verificación posterior al despliegue.** Después de cada despliegue se realizan pruebas de humo sobre las URL públicas (Swagger UI del backend y página principal del frontend), como se establece en 5.1.4.3.2.
+- **Reversión.** Se vuelve a la versión anterior volviendo a desplegar el commit previo en Render o, cuando se publique la imagen en un registro, la etiqueta anterior (ver 5.1.4.3.3).
 
 <a id="toc-7-3-2-production-deployment-pipeline-components"></a>
 ## 7.3.2. Production Deployment Pipeline Components
 
-Pendiente.
+**Flujo de despliegue a producción del backend:**
+
+| Paso | Qué ocurre | Quién lo ejecuta | Estado |
+|------|-----------|------------------|--------|
+| 1 | Los cambios llegan a `develop` desde ramas `feature/*` | Equipo (Git) | Implementado |
+| 2 | Jenkins compila, prueba, mide la cobertura, analiza con SonarQube, empaqueta, construye la imagen y la prueba con Karate (7.1 y 7.2) | Jenkins | Implementado y ejecutado (ejecución #4, SUCCESS) |
+| 3 | Los cambios aprobados se integran en la rama `main` del repositorio del backend mediante Pull Request | Equipo (Git) | Implementado según el GitFlow de 5.1.2 |
+| 4 | Render detecta el cambio, construye el servicio con el `Dockerfile` y lo reinicia con las variables de entorno de producción | Render | Implementado |
+| 5 | Prueba de humo sobre la Swagger UI y un endpoint protegido (debe responder 401 sin token) | Equipo | Manual |
+| 6 | Si falla, se vuelve a desplegar el commit anterior | Equipo | Manual |
+
+**Frontend y landing page.** El frontend se despliega con un workflow de GitHub Actions que instala dependencias, ejecuta las pruebas, construye la aplicación Angular y publica el resultado en GitHub Pages; la landing page se publica automáticamente al hacer push a `main`.
+
+**Brecha frente al despliegue continuo completo.** Hoy el despliegue del backend lo dispara el repositorio (Render), no Jenkins, de modo que el pipeline de Jenkins llega hasta dejar una imagen verificada pero no promueve nada a producción por sí mismo. Para cerrar la brecha el equipo planea, una vez disponibles las credenciales de Docker Hub y de Render, añadir al `Jenkinsfile` dos etapas finales: publicar la imagen (ya implementada, ver 7.2.2) y llamar al *deploy hook* de Render para que despliegue esa etiqueta, seguidas de una prueba de humo automática que haga fracasar la ejecución si el servicio no responde. Hasta entonces el paso de promoción a producción es deliberadamente manual.
 
 <br>
 
@@ -11487,6 +13164,10 @@ Durante el Sprint 3 se implemento el backend de SafeStep con Spring Boot, Java, 
 
 Durante el Sprint 4 se fortalecio el producto con la implementacion de IAM y pagos con Stripe tanto en frontend como en backend. La autenticacion con JWT, las rutas protegidas, el manejo de perfil de usuario, la integracion con Stripe Checkout y la persistencia en PostgreSQL desplegado en Render hicieron que SafeStep pasara de ser una simulacion academica a una aplicacion web mas cercana a un entorno real. Este sprint tambien permitio validar flujos criticos como registro, inicio de sesion, compra de productos, confirmacion de pago y despliegue publico.
 
+Durante el Sprint 5 el foco se desplazo de construir funcionalidades a demostrar y proteger su calidad. Se incorporaron al Product Backlog el panel de administracion, la gestion de roles y el canje de cupones con SafeCoins (US57 a US61) junto con nueve technical stories de pruebas y DevOps (TS25 a TS33), y se construyeron cuatro suites automatizadas: 201 pruebas unitarias y de integracion, 33 escenarios BDD con Cucumber, 36 escenarios de API con Karate y 12 escenarios de sistema con Selenium sobre un navegador real. La cobertura de instrucciones del codigo de aplicacion paso de 44.3 % a 93.8 % y el build exige ahora un minimo de 80 %. Estas suites se ejecutan dentro de un pipeline de Jenkins que tambien mide el estilo con Checkstyle, analiza el codigo con SonarQube, empaqueta el backend, construye su imagen Docker y la prueba contra un contenedor con PostgreSQL; la ultima ejecucion termino en exito en 4 minutos y 37 segundos.
+
+El trabajo de verificacion tambien produjo hallazgos que el equipo decidio documentar en lugar de ocultar: Checkstyle reporta 8,034 observaciones de estilo sobre el codigo existente (en su mayoria de indentacion, porque el proyecto usa cuatro espacios y las reglas de Google exigen dos), SonarQube senala dos vulnerabilidades (CORS abierto a cualquier origen y proteccion CSRF deshabilitada, esta ultima aceptable en una API con JWT) y tres bugs menores, el modulo de perfiles tiene una cobertura de 62.1 %, y la API responde HTTP 500 en lugar de 400 cuando recibe un JSON mal formado. El Quality Gate de SonarQube aprueba porque en el primer analisis no existe codigo nuevo que evaluar; por eso estos puntos quedan como deuda tecnica priorizada para el siguiente sprint. Ademas, el despliegue a produccion sigue siendo manual: el pipeline deja una imagen verificada, pero publicar en Docker Hub y desplegar en Render requiere credenciales que aun deben configurarse.
+
 Las entrevistas de validacion y la evaluacion heuristica evidenciaron que SafeStep es percibido como un producto claro, util y coherente con su objetivo. Los usuarios comprendieron la propuesta de valor desde la Landing Page, identificaron las secciones principales de la aplicacion y valoraron especialmente las simulaciones medicas, la retroalimentacion posterior a cada respuesta, el seguimiento del progreso y la relacion entre aprendizaje y productos de emergencia. No se identificaron problemas criticos de severidad alta en la experiencia evaluada.
 
 En relacion con el trabajo colaborativo, el equipo logro distribuir responsabilidades entre los cuatro integrantes activos: Jorge, Mathias, Josep y Angel. Cada integrante participo en actividades de documentacion, frontend, backend, despliegue, validacion y presentacion del producto. Esta organizacion permitio avanzar de manera incremental y mantener trazabilidad entre las historias de usuario, los sprints, los commits, las evidencias y los entregables finales.
@@ -11516,7 +13197,9 @@ En sintesis, el contraste entre Lean UX y los resultados obtenidos muestra que S
 
 **Mediano plazo:** Se recomienda ampliar las simulaciones con niveles de dificultad, mayor cantidad de pasos y escenarios mas detallados. Esto permitiria atender tanto a usuarios principiantes como a brigadistas o personas con experiencia previa en primeros auxilios.
 
-**Mediano plazo:** Se recomienda fortalecer las pruebas del frontend y backend, incluyendo flujos de autenticacion, pagos con Stripe, persistencia de compras, endpoints protegidos, manejo de errores y validacion de formularios. Esto ayudara a sostener la estabilidad del producto a medida que crezca.
+**Corto plazo:** Se recomienda atender los hallazgos del analisis estatico: restringir CORS a los dominios del frontend, corregir la conversion a long y los retornos nulos que reporta SonarQube, devolver HTTP 400 ante JSON mal formado y subir la cobertura del modulo de perfiles. Despues conviene decidir si se migra el codigo a la indentacion de dos espacios de las reglas de Google para que Checkstyle pase a ser una puerta de calidad y no solo un reporte.
+
+**Mediano plazo:** Se recomienda ampliar las pruebas de sistema a los flujos que hoy quedan fuera (pago con Stripe, finalizacion de simulaciones y canje y uso de un cupon de punta a punta en el navegador), automatizar las pruebas de la aplicacion Android y completar el pipeline con la publicacion de la imagen y el despliegue automatico en Render.
 
 **Mediano plazo:** Se recomienda realizar nuevas validaciones con usuarios utilizando la aplicacion desplegada durante mas tiempo. Esto permitiria medir indicadores reales como retencion, finalizacion de simulaciones, errores frecuentes, confianza percibida antes y despues del entrenamiento, y conversion en la tienda.
 
@@ -11627,6 +13310,7 @@ Este anexo reune de forma progresiva los videos de exposicion correspondientes a
 - Video About-the-Product - SafeStep Microsoft Stream: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQDvVbtNWnjaSbps57LyCEffAaNalKhJfT0l982IFtfNBuw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6okM5V" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQDvVbtNWnjaSbps57LyCEffAaNalKhJfT0l982IFtfNBuw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6okM5V</a>
 - Video About-the-Team - SafeStep: <a href="https://www.youtube.com/watch?v=jmA1L_1_8bk" style="word-break: break-all; overflow-wrap: anywhere;">https://www.youtube.com/watch?v=jmA1L_1_8bk</a>
 - Video About-the-Team - SafeStep Microsoft Stream: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQA4urSyPkX-QLZVQSOsKYhzAax2ZRFU7R0_nyz0d4gm7Tk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7O4QqF" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQA4urSyPkX-QLZVQSOsKYhzAax2ZRFU7R0_nyz0d4gm7Tk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7O4QqF</a>
+- Video de exposición del Trabajo Parcial (Hito 2, Semana 7): **pendiente de grabar y publicar**; el enlace se agregará en este anexo indicando la entrega a la que corresponde.
 
 <div style="page-break-before: always;"></div>
 
@@ -11640,6 +13324,7 @@ Este anexo incluye los reportes de desempeno elaborados para las entregas del pr
 - Performance Report TB1: <a href="markdown/assets/reports/performance-report-tb1.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-tb1.md</a>
 - Performance Report AV2: <a href="markdown/assets/reports/performance-report-av2.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-av2.md</a>
 - Performance Report TB2: <a href="markdown/assets/reports/performance-report-tb2.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-tb2.md</a>
+- Performance Report del Trabajo Parcial (TP): **pendiente de elaborar por el coordinador del equipo**.
 
 <div style="page-break-before: always;"></div>
 
@@ -11704,6 +13389,12 @@ Este anexo centraliza los repositorios oficiales del equipo Chronos y los enlace
 - Product Backlog en Trello: <a href="https://trello.com/b/UHs6EvyH/safestep-team-3" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/b/UHs6EvyH/safestep-team-3</a>
 - Sprint Backlog 1 en Trello: <a href="https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource</a>
 - Sprint Backlog 3 en Trello: <a href="https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3</a>
+- Pruebas de integración de API (Karate): <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/api-tests" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/api-tests</a>
+- Pruebas de sistema (Selenium y Cucumber): <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend/tree/develop/e2e-tests" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend/tree/develop/e2e-tests</a>
+- Pipeline de integración continua (`Jenkinsfile` y carpeta `ci`): <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/ci" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/ci</a>
+- Jenkins y SonarQube del equipo: se ejecutan en contenedores Docker locales (`http://localhost:9089` y `http://localhost:9000`) mediante `ci/start-ci.sh`; no tienen despliegue público.
+
+*Nota:* los enlaces a `tree/develop` funcionarán cuando las ramas locales del Trabajo Parcial se publiquen en GitHub.
 
 <div style="page-break-before: always;"></div>
 
@@ -11725,6 +13416,14 @@ Este anexo lista las herramientas principales utilizadas por el equipo durante e
 - Miro, para EventStorming y modelado colaborativo: <a href="https://miro.com" style="word-break: break-all; overflow-wrap: anywhere;">https://miro.com</a>
 - Visual Studio Code, para edicion de codigo y documentacion: <a href="https://code.visualstudio.com" style="word-break: break-all; overflow-wrap: anywhere;">https://code.visualstudio.com</a>
 - Apache Maven, para gestion y construccion del backend Java: <a href="https://maven.apache.org" style="word-break: break-all; overflow-wrap: anywhere;">https://maven.apache.org</a>
+- Jenkins, para integración continua: <a href="https://www.jenkins.io" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jenkins.io</a>
+- SonarQube, para análisis de calidad y seguridad del código: <a href="https://www.sonarsource.com/products/sonarqube" style="word-break: break-all; overflow-wrap: anywhere;">https://www.sonarsource.com/products/sonarqube</a>
+- Docker, para contenedores y construcción de imágenes: <a href="https://www.docker.com" style="word-break: break-all; overflow-wrap: anywhere;">https://www.docker.com</a>
+- JUnit y Mockito, para pruebas unitarias: <a href="https://junit.org" style="word-break: break-all; overflow-wrap: anywhere;">https://junit.org</a> y <a href="https://site.mockito.org" style="word-break: break-all; overflow-wrap: anywhere;">https://site.mockito.org</a>
+- Cucumber, para pruebas BDD con Gherkin: <a href="https://cucumber.io" style="word-break: break-all; overflow-wrap: anywhere;">https://cucumber.io</a>
+- Karate, para pruebas de integración de API: <a href="https://github.com/karatelabs/karate" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/karatelabs/karate</a>
+- Selenium WebDriver, para pruebas de sistema en navegador: <a href="https://www.selenium.dev" style="word-break: break-all; overflow-wrap: anywhere;">https://www.selenium.dev</a>
+- JaCoCo y Checkstyle, para cobertura y estilo del código: <a href="https://www.jacoco.org/jacoco" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jacoco.org/jacoco</a> y <a href="https://checkstyle.org" style="word-break: break-all; overflow-wrap: anywhere;">https://checkstyle.org</a>
 
 <div style="page-break-before: always;"></div>
 
@@ -11739,5 +13438,10 @@ Este anexo contiene referencias externas utilizadas como apoyo conceptual para e
 - Angular Documentation: <a href="https://angular.dev/overview" style="word-break: break-all; overflow-wrap: anywhere;">https://angular.dev/overview</a>
 - Stripe Documentation: <a href="https://docs.stripe.com" style="word-break: break-all; overflow-wrap: anywhere;">https://docs.stripe.com</a>
 - Render Documentation: <a href="https://docs.render.com" style="word-break: break-all; overflow-wrap: anywhere;">https://docs.render.com</a>
+- Karate Documentation: <a href="https://github.com/karatelabs/karate" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/karatelabs/karate</a>
+- Selenium Documentation: <a href="https://www.selenium.dev/documentation/" style="word-break: break-all; overflow-wrap: anywhere;">https://www.selenium.dev/documentation/</a>
+- Jenkins Pipeline Documentation: <a href="https://www.jenkins.io/doc/book/pipeline/" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jenkins.io/doc/book/pipeline/</a>
+- SonarQube Documentation: <a href="https://docs.sonarsource.com/sonarqube-community-build/" style="word-break: break-all; overflow-wrap: anywhere;">https://docs.sonarsource.com/sonarqube-community-build/</a>
+- JaCoCo Documentation: <a href="https://www.jacoco.org/jacoco/trunk/doc/" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jacoco.org/jacoco/trunk/doc/</a>
 
 </div>

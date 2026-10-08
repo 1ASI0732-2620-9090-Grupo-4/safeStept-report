@@ -203,6 +203,16 @@
       - [5.2.4.6. Services Documentation Evidence for Sprint Review](./markdown/content/chapter-5/5-2-4-Sprint-4.md#5246-services-documentation-evidence-for-sprint-review)
       - [5.2.4.7. Software Deployment Evidence for Sprint Review](./markdown/content/chapter-5/5-2-4-Sprint-4.md#5247-software-deployment-evidence-for-sprint-review)
       - [5.2.4.8. Team Collaboration Insights during Sprint](./markdown/content/chapter-5/5-2-4-Sprint-4.md#5248-team-collaboration-insights-during-sprint)
+    - [5.2.5. Sprint 5](./markdown/content/chapter-5/5-2-5-Sprint-5.md#525-sprint-5)
+      - [5.2.5.1. Sprint Planning 5](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5251-sprint-planning-5)
+      - [5.2.5.2. Aspect Leaders and Collaborators](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5252-aspect-leaders-and-collaborators)
+      - [5.2.5.3. Sprint Backlog 5](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5253-sprint-backlog-5)
+      - [5.2.5.4. Development Evidence for Sprint Review](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5254-development-evidence-for-sprint-review)
+      - [5.2.5.5. Testing Suite Evidence for Sprint Review](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5255-testing-suite-evidence-for-sprint-review)
+      - [5.2.5.6. Execution Evidence for Sprint Review](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5256-execution-evidence-for-sprint-review)
+      - [5.2.5.7. Services Documentation Evidence for Sprint Review](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5257-services-documentation-evidence-for-sprint-review)
+      - [5.2.5.8. Software Deployment Evidence for Sprint Review](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5258-software-deployment-evidence-for-sprint-review)
+      - [5.2.5.9. Team Collaboration Insights during Sprint](./markdown/content/chapter-5/5-2-5-Sprint-5.md#5259-team-collaboration-insights-during-sprint)
   - [5.3. Video About-the-Product](./markdown/content/chapter-5/5-3-Video-About-the-Product.md)
 
 **Part II: Verification, Validation & Pipeline**
