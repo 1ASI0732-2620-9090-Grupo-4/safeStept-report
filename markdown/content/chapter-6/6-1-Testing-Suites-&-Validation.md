@@ -1,19 +1,18 @@
 # 6.1. Testing Suites & Validation
 
-Esta sección documenta las suites de prueba que verifican SafeStep. La estrategia sigue la pirámide de pruebas: muchas pruebas unitarias rápidas sobre las entidades y los servicios de aplicación, pruebas de integración de la API desde fuera del sistema, pruebas de comportamiento (BDD) que automatizan los criterios de aceptación de las historias de usuario, y pruebas de sistema que recorren la aplicación completa en un navegador real. Todas se ejecutan de forma automática: las tres primeras dentro del pipeline de Jenkins descrito en 7.1 y las de sistema contra un frontend y un backend levantados localmente.
+Esta sección documenta las suites de prueba que verifican SafeStep. La estrategia sigue la pirámide de pruebas: muchas pruebas unitarias rápidas sobre las entidades y los servicios de aplicación, pruebas de integración de la API desde fuera del sistema y pruebas de comportamiento (BDD) que automatizan los criterios de aceptación de las historias de usuario. Las pruebas unitarias y las de BDD se ejecutan dentro del pipeline de Jenkins descrito en 7.1; las de integración de la API se ejecutan contra una instancia del backend levantada localmente. Las pruebas de sistema (6.1.4) no forman parte de esta entrega.
 
 | Nivel | Herramienta | Repositorio y carpeta | Pruebas | Resultado de la última ejecución |
 |-------|-------------|-----------------------|---------|----------------------------------|
 | Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 201 | 201 aprobadas, 0 fallidas |
 | Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
-| Sistema (web) | Selenium 4.50 + Cucumber | `safeStept-frontend/e2e-tests` | 12 escenarios (4 features) | 12 aprobados, 0 fallidos |
 
-Las 234 pruebas del backend que ejecuta Maven (201 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 49.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 201 métodos en 39 clases.
+Las 234 pruebas del backend que ejecuta Maven (201 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 57.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 201 métodos en 39 clases.
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>
-  <p><i><b>Figura 6.1.1.</b> Resultado de las 234 pruebas del backend en Jenkins (ejecución #4). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.1.</b> Resultado de las 234 pruebas del backend en Jenkins (ejecución #5). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 ## 6.1.1. Core Entities Unit Tests
@@ -86,7 +85,7 @@ mvn jacoco:check    # falla si la cobertura es menor a 80 %
 
 ## 6.1.2. Core Integration Tests
 
-Las pruebas de integración verifican que el backend funciona correctamente cuando se consume como lo haría el frontend: por HTTP, atravesando seguridad JWT, controladores, servicios, persistencia en PostgreSQL y la comunicación entre bounded contexts. Se escribieron con **Karate** en un proyecto Maven independiente (`api-tests`) que solo conoce la URL base de la API, por lo que sirve contra una instancia local, el contenedor que levanta Jenkins o un entorno desplegado.
+Las pruebas de integración verifican que el backend funciona correctamente cuando se consume como lo haría el frontend: por HTTP, atravesando seguridad JWT, controladores, servicios, persistencia en PostgreSQL y la comunicación entre bounded contexts. Se escribieron con **Karate** en un proyecto Maven independiente (`api-tests`) que solo conoce la URL base de la API, por lo que sirve contra una instancia local o un entorno desplegado.
 
 | Feature | Historias | Escenarios | Qué valida |
 |---------|-----------|------------|------------|
@@ -111,7 +110,7 @@ And match response.discountPercentage == 5
 
 <div align="center">
   <img src="../../assets/images/chapter-6/karate-summary-report.png" alt="Reporte de Karate"/>
-  <p><i><b>Figura 6.1.3.</b> Resumen del reporte HTML de Karate: 5 features y 36 escenarios aprobados en el pipeline. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.3.</b> Resumen del reporte HTML de Karate: 5 features y 36 escenarios aprobados contra una instancia local del backend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Hallazgo.** Durante el desarrollo de estas pruebas se detectó que la API responde HTTP 500 (`UNEXPECTED_ERROR`) cuando recibe un cuerpo JSON mal formado, en lugar de un 400. El manejador global de excepciones atiende `RuntimeException` de forma genérica y no registra el error. El defecto queda registrado para corregirse en un sprint posterior; las pruebas actuales no dependen de ese comportamiento.
@@ -174,35 +173,4 @@ public void thePlayerRedeemsTheCoupon(String couponId) {
 
 ## 6.1.4. Core System Tests
 
-Las pruebas de sistema validan la aplicación web completa: el frontend Angular, el backend Spring Boot y PostgreSQL funcionando juntos, usados desde un navegador **Chrome** real controlado con **Selenium WebDriver**. Los escenarios están escritos en Gherkin y se ejecutan con Cucumber sobre JUnit Platform, siguiendo la estructura del proyecto de referencia del curso (`deisw-testingweb-java`) pero con ChromeDriver gestionado automáticamente por Selenium Manager y con el patrón *page object* para aislar los selectores de los pasos.
-
-Para no tocar la base de datos de desarrollo, el frontend se sirve con una configuración `e2e` de Angular (`ng serve --configuration e2e`) que apunta a una instancia aislada del backend. Cada escenario registra su propio jugador con un correo único y, al terminar, el reporte adjunta una captura de pantalla del estado final.
-
-| Feature | Escenarios | Flujo validado |
-|---------|------------|----------------|
-| `authentication.feature` | 6 | Redirección al login sin sesión, registro de cuenta, contraseñas distintas, inicio de sesión, contraseña incorrecta, cierre de sesión |
-| `catalogs.feature` | 3 | Catálogo de simulaciones, filtros y catálogo de la tienda |
-| `coupon-redemption.feature` | 1 | Un jugador nuevo ve los cupones pero no puede costearlos y no tiene cupones propios |
-| `administration.feature` | 2 | El administrador accede al panel con sus seis tarjetas; un jugador es devuelto al dashboard |
-
-<div align="center">
-  <img src="../../assets/images/chapter-6/selenium-an-administrator-reaches-the-administration-panel.png" alt="Panel de administración en la prueba de sistema"/>
-  <p><i><b>Figura 6.1.5.</b> Captura adjunta por la prueba «An administrator reaches the administration panel». <b>Fuente</b>: Elaboración propia</i></p>
-</div>
-
-<div align="center">
-  <img src="../../assets/images/chapter-6/selenium-a-new-player-cannot-afford-any-coupon.png" alt="Página de cupones en la prueba de sistema"/>
-  <p><i><b>Figura 6.1.6.</b> Captura adjunta por la prueba «A new player cannot afford any coupon». <b>Fuente</b>: Elaboración propia</i></p>
-</div>
-
-La suite se ejecutó dos veces seguidas con los 12 escenarios aprobados (cerca de 57 segundos por ejecución). Durante la primera ejecución una prueba falló por un defecto de la propia prueba, no de la aplicación: el paso de inicio de sesión no esperaba a que el dashboard terminara de cargar y la navegación directa siguiente interrumpió el login; el paso se corrigió para esperar el dashboard.
-
-**Alcance y limitaciones.** Las pruebas de sistema cubren la aplicación web. La aplicación Android (`safestept-android`) no cuenta aún con pruebas de sistema automatizadas y se valida manualmente; automatizarlas (por ejemplo con Appium) queda como trabajo futuro. Tampoco se automatizan todavía los flujos que dependen de pasarelas externas (pago con Stripe), que se verifican en las pruebas de integración con dobles del cliente de Stripe.
-
-**Cómo ejecutarlas:**
-
-```bash
-npx ng serve --configuration e2e --port 4300      # frontend apuntando al backend de pruebas
-cd e2e-tests
-mvn test -De2e.baseUrl=http://localhost:4300      # -De2e.headless=false para ver el navegador
-```
+Pendiente.

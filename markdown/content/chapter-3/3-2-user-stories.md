@@ -686,32 +686,18 @@ En la columna **Priority**, `#1` indica la mayor prioridad y cada número corres
     <tr><td colspan="4">- <b>Dado que</b> la API esta ejecutandose, <b>Cuando</b> se corren las pruebas Karate, <b>Entonces</b> se verifican autenticacion, autorizacion, catalogo, cupones y recompensas<br><br>- <b>Dado que</b> las pruebas se repiten, <b>Cuando</b> se ejecutan sobre una base de datos con datos previos, <b>Entonces</b> siguen pasando porque crean usuarios unicos</td></tr>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
     <tr><td>TS30</td><td>developer</td><td>#87</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Pruebas de sistema web con Selenium y Cucumber</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> automatizar flujos de usuario en un navegador real con Selenium y escenarios Gherkin, <b>para</b> verificar que el frontend y el backend funcionan juntos.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4">- <b>Dado que</b> el frontend y el backend estan levantados, <b>Cuando</b> se ejecutan las pruebas de sistema, <b>Entonces</b> un navegador Chrome recorre registro, inicio de sesion, catalogos, cupones y panel de administracion<br><br>- <b>Dado que</b> termina cada escenario, <b>Cuando</b> se genera el reporte, <b>Entonces</b> incluye una captura de pantalla del estado final</td></tr>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS31</td><td>developer</td><td>#88</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Pipeline de integracion continua con Jenkins</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> definir un Jenkinsfile que compile, valide y pruebe el backend en cada ejecucion, <b>para</b> obtener retroalimentacion automatica sobre la calidad de cada cambio.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4">- <b>Dado que</b> existe un cambio en la rama develop, <b>Cuando</b> se ejecuta el pipeline, <b>Entonces</b> se ejecutan las etapas de compilacion, estilo, pruebas, cobertura, analisis, empaquetado, imagen Docker y pruebas de API<br><br>- <b>Dado que</b> una etapa falla, <b>Cuando</b> Jenkins registra el resultado, <b>Entonces</b> las etapas siguientes no se ejecutan y se conservan los reportes para el diagnostico</td></tr>
+    <tr><td colspan="4">- <b>Dado que</b> existe un cambio en la rama develop, <b>Cuando</b> se ejecuta el pipeline, <b>Entonces</b> se ejecutan las etapas de compilacion, estilo, pruebas, cobertura, analisis, y empaquetado<br><br>- <b>Dado que</b> una etapa falla, <b>Cuando</b> Jenkins registra el resultado, <b>Entonces</b> las etapas siguientes no se ejecutan y se conservan los reportes para el diagnostico</td></tr>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS32</td><td>developer</td><td>#89</td><td>EP09</td></tr>
+    <tr><td>TS31</td><td>developer</td><td>#88</td><td>EP09</td></tr>
     <tr><th>Title</th><td colspan="3">Analisis de calidad con SonarQube y Quality Gate</td></tr>
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> enviar el analisis del backend a SonarQube y detener el pipeline si no supera el Quality Gate, <b>para</b> evitar que codigo con defectos o vulnerabilidades avance en el pipeline.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
     <tr><td colspan="4">- <b>Dado que</b> se ejecuta el analisis, <b>Cuando</b> SonarQube termina, <b>Entonces</b> notifica a Jenkins mediante un webhook y el pipeline conoce el resultado<br><br>- <b>Dado que</b> el resultado del Quality Gate no es aprobado, <b>Cuando</b> Jenkins lo recibe, <b>Entonces</b> el pipeline se detiene con un mensaje claro</td></tr>
-    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-    <tr><td>TS33</td><td>developer</td><td>#90</td><td>EP09</td></tr>
-    <tr><th>Title</th><td colspan="3">Imagen Docker y ejecucion contenedorizada en CI</td></tr>
-    <tr><th colspan="4">Description</th></tr>
-    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> construir la imagen Docker del backend y ejecutarla junto a una base de datos PostgreSQL desechable durante el pipeline, <b>para</b> probar el artefacto que se desplegara y no solo el codigo fuente.</td></tr>
-    <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4">- <b>Dado que</b> las pruebas y el analisis fueron aprobados, <b>Cuando</b> el pipeline continua, <b>Entonces</b> se construye una imagen etiquetada con el numero de ejecucion<br><br>- <b>Dado que</b> la imagen fue construida, <b>Cuando</b> se ejecutan las pruebas de API, <b>Entonces</b> se prueban contra un contenedor con PostgreSQL que se elimina al finalizar</td></tr>
   </tbody>
 </table>
 

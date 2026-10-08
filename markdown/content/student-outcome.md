@@ -81,7 +81,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <i>AV1</i>
             <p>El equipo emitió juicios informados al reconocer que el modelo de negocio de SafeStep todavía es una hipótesis económica sin validar, que los segmentos de usuario (estudiantes, comunidades vecinales y brigadistas) enfrentan contextos sociales y de acceso distintos entre sí, que el idioma por defecto debe ampliarse a inglés para no limitar el alcance social del producto, y que el diseño de datos debe evitar exponer información personal entre bounded contexts. En conjunto, estas decisiones muestran que el equipo considera el impacto económico, social y de protección de datos de sus decisiones de ingeniería antes de presentarlas como parte del producto, en lugar de evaluarlas únicamente desde un criterio técnico.</p>
             <i>TP</i>
-            <p>Al automatizar las pruebas y el pipeline el equipo emitió juicios informados sobre el impacto de sus decisiones: aislar los datos de prueba para no afectar a usuarios reales, garantizar que el sistema de recompensas y cupones no cause pérdidas al usuario, y señalar que el despliegue a producción permanece manual hasta contar con credenciales y controles apropiados, en lugar de presentar una automatización completa que aún no existe.</p>
+            <p>Al automatizar las pruebas y el pipeline el equipo emitió juicios informados sobre el impacto de sus decisiones: aislar los datos de prueba para no afectar a usuarios reales, garantizar que el sistema de recompensas y cupones no cause pérdidas al usuario, y declarar como pendientes los hallazgos de seguridad encontrados, en lugar de presentar la calidad del producto como resuelta.</p>
         </td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <i>AV1</i>
             <p>Documenté en el capítulo V que el puntaje y los pasos correctos de un intento de simulación son calculados por el cliente y que el backend todavía no los valida contra las respuestas reales, dejando explícito que esos datos <b>no deben usarse aún</b> como medición confiable para recompensas ni para futuras decisiones experimentales, evitando así un impacto negativo por decisiones basadas en datos no verificados.</p>
             <i>TP</i>
-            <p>Al decidir cómo probar el sistema consideré el impacto sobre los datos de personas reales: las pruebas BDD usan una base en memoria, las de API usan una base PostgreSQL desechable y las de sistema se ejecutan contra una instancia aislada, de modo que ninguna suite toca datos de desarrollo ni de producción. Además, al diseñar el canje de cupones con SafeCoins verifiqué con pruebas que el saldo no cambia cuando el canje se rechaza y que un cupón vuelve a estar disponible si el pago falla, para que el sistema de recompensas no perjudique económicamente a quien lo usa.</p>
+            <p>Al decidir cómo probar el sistema consideré el impacto sobre los datos de personas reales: las pruebas BDD usan una base en memoria y las de API se ejecutan contra una instancia del backend con su propia base de datos, de modo que ninguna suite toca datos de desarrollo ni de producción. Además, al diseñar el canje de cupones con SafeCoins verifiqué con pruebas que el saldo no cambia cuando el canje se rechaza y que un cupón vuelve a estar disponible si el pago falla, para que el sistema de recompensas no perjudique económicamente a quien lo usa.</p>
         </td>
     </tr>
 </table>

@@ -630,30 +630,16 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
         <tr>
             <td align="center">87</td>
             <td align="center">TS30</td>
-            <td>Pruebas de sistema web con Selenium y Cucumber</td>
-            <td>Como developer, quiero automatizar flujos de usuario en un navegador real con Selenium y Gherkin para verificar que frontend y backend funcionan juntos.</td>
-            <td align="center">5</td>
-        </tr>
-        <tr>
-            <td align="center">88</td>
-            <td align="center">TS31</td>
             <td>Pipeline de integracion continua con Jenkins</td>
             <td>Como developer, quiero un Jenkinsfile que compile, valide y pruebe el backend en cada ejecución para recibir retroalimentación automática.</td>
             <td align="center">8</td>
         </tr>
         <tr>
-            <td align="center">89</td>
-            <td align="center">TS32</td>
+            <td align="center">88</td>
+            <td align="center">TS31</td>
             <td>Analisis de calidad con SonarQube y Quality Gate</td>
             <td>Como developer, quiero enviar el análisis a SonarQube y detener el pipeline si no supera el Quality Gate para evitar que código con defectos avance.</td>
             <td align="center">5</td>
-        </tr>
-        <tr>
-            <td align="center">90</td>
-            <td align="center">TS33</td>
-            <td>Imagen Docker y ejecucion contenedorizada en CI</td>
-            <td>Como developer, quiero construir la imagen Docker y ejecutarla con PostgreSQL desechable en el pipeline para probar el artefacto que se desplegará.</td>
-            <td align="center">3</td>
         </tr>
     </tbody>
 </table>

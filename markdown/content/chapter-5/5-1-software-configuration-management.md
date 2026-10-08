@@ -69,7 +69,7 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | OpenAPI (Swagger) | Especificación para documentar APIs REST | <a href="https://swagger.io/specification">https://swagger.io/specification</a> | Referencia |
 | Checkstyle 14.3 | Análisis estático de estilo del código Java con las reglas de Google (`google_checks.xml`), configurado en modo reporte | <a href="https://checkstyle.org">https://checkstyle.org</a> | Descargable (plugin Maven) |
 | JaCoCo 0.8.15 | Medición de cobertura de pruebas y verificación del umbral mínimo de 80 % | <a href="https://www.jacoco.org/jacoco">https://www.jacoco.org/jacoco</a> | Descargable (plugin Maven) |
-| SonarQube (LTS Community) | Análisis de calidad y seguridad del código con Quality Gate integrado al pipeline | <a href="https://www.sonarsource.com/products/sonarqube">https://www.sonarsource.com/products/sonarqube</a> | Descargable (contenedor Docker) |
+| SonarQube (Community Build) | Análisis de calidad y seguridad del código con Quality Gate integrado al pipeline | <a href="https://www.sonarsource.com/products/sonarqube">https://www.sonarsource.com/products/sonarqube</a> | Descargable (contenedor Docker) |
 
 ### 5.1.1.7. Herramientas de Despliegue
 
@@ -79,7 +79,7 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | GitHub Pages | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> | SaaS |
 | Render | Plataforma de despliegue para el backend Spring Boot de SafeStep | <a href="https://render.com">https://render.com</a> | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> | SaaS |
 | Render PostgreSQL | Base de datos PostgreSQL desplegada para persistencia del backend | <a href="https://render.com">https://render.com</a> | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` | SaaS |
-| Docker | Construcción de la imagen del backend y ejecución de contenedores (Jenkins, SonarQube, PostgreSQL y API) en la red `spring-postgres-net` | <a href="https://www.docker.com">https://www.docker.com</a> | No aplica (ejecución local) | Descargable |
+| Docker | Ejecución de Jenkins y SonarQube como contenedores en la red `spring-postgres-net` | <a href="https://www.docker.com">https://www.docker.com</a> | No aplica (ejecución local) | Descargable |
 | Jenkins (LTS, JDK 25) | Servidor de integración continua que ejecuta el `Jenkinsfile` del backend; se configura como código con JCasC | <a href="https://www.jenkins.io">https://www.jenkins.io</a> | `http://localhost:9089` (entorno local del equipo) | Descargable (contenedor Docker) |
 
 ### 5.1.1.8. Herramientas de Testing
@@ -90,9 +90,8 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | Mockito 5 | Dobles de prueba para aislar servicios de aplicación de repositorios y fachadas de otros bounded contexts | <a href="https://site.mockito.org">https://site.mockito.org</a> | Descargable (Maven) |
 | AssertJ | Aserciones fluidas para las pruebas unitarias | <a href="https://assertj.github.io/doc">https://assertj.github.io/doc</a> | Descargable (Maven) |
 | Spring Boot Test + H2 | Pruebas con contexto de Spring completo sobre una base de datos en memoria aislada | <a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a> | Descargable (Maven) |
-| Cucumber-JVM 8 (Gherkin) | Ejecución de los criterios de aceptación escritos en Gherkin (BDD) sobre el backend y sobre el navegador | <a href="https://cucumber.io">https://cucumber.io</a> | Descargable (Maven) |
+| Cucumber-JVM 8 (Gherkin) | Ejecución de los criterios de aceptación escritos en Gherkin (BDD) sobre el backend | <a href="https://cucumber.io">https://cucumber.io</a> | Descargable (Maven) |
 | Karate 2.1 | Pruebas de integración de la API REST desde fuera de la aplicación | <a href="https://github.com/karatelabs/karate">https://github.com/karatelabs/karate</a> | Descargable (Maven) |
-| Selenium WebDriver 4.50 + ChromeDriver | Automatización de flujos de usuario en un navegador Chrome real (pruebas de sistema) | <a href="https://www.selenium.dev">https://www.selenium.dev</a> | Descargable (Maven) |
 | Vitest | Ejecutor de pruebas unitarias del frontend Angular | <a href="https://vitest.dev">https://vitest.dev</a> | Descargable (npm) |
 | Postman | Prueba manual exploratoria de endpoints durante el desarrollo | <a href="https://www.postman.com">https://www.postman.com</a> | Descargable |
 

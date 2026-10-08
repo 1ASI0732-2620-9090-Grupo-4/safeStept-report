@@ -88,7 +88,6 @@ Este anexo centraliza los repositorios oficiales del equipo Chronos y los enlace
 - Sprint Backlog 1 en Trello: <a href="https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource</a>
 - Sprint Backlog 3 en Trello: <a href="https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3</a>
 - Pruebas de integración de API (Karate): <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/api-tests" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/api-tests</a>
-- Pruebas de sistema (Selenium y Cucumber): <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend/tree/develop/e2e-tests" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend/tree/develop/e2e-tests</a>
 - Pipeline de integración continua (`Jenkinsfile` y carpeta `ci`): <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/ci" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/ci</a>
 - Jenkins y SonarQube del equipo: se ejecutan en contenedores Docker locales (`http://localhost:9089` y `http://localhost:9000`) mediante `ci/start-ci.sh`; no tienen despliegue público.
 
@@ -115,11 +114,10 @@ Este anexo lista las herramientas principales utilizadas por el equipo durante e
 - Apache Maven, para gestion y construccion del backend Java: <a href="https://maven.apache.org" style="word-break: break-all; overflow-wrap: anywhere;">https://maven.apache.org</a>
 - Jenkins, para integración continua: <a href="https://www.jenkins.io" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jenkins.io</a>
 - SonarQube, para análisis de calidad y seguridad del código: <a href="https://www.sonarsource.com/products/sonarqube" style="word-break: break-all; overflow-wrap: anywhere;">https://www.sonarsource.com/products/sonarqube</a>
-- Docker, para contenedores y construcción de imágenes: <a href="https://www.docker.com" style="word-break: break-all; overflow-wrap: anywhere;">https://www.docker.com</a>
+- Docker, para ejecutar Jenkins y SonarQube en contenedores: <a href="https://www.docker.com" style="word-break: break-all; overflow-wrap: anywhere;">https://www.docker.com</a>
 - JUnit y Mockito, para pruebas unitarias: <a href="https://junit.org" style="word-break: break-all; overflow-wrap: anywhere;">https://junit.org</a> y <a href="https://site.mockito.org" style="word-break: break-all; overflow-wrap: anywhere;">https://site.mockito.org</a>
 - Cucumber, para pruebas BDD con Gherkin: <a href="https://cucumber.io" style="word-break: break-all; overflow-wrap: anywhere;">https://cucumber.io</a>
 - Karate, para pruebas de integración de API: <a href="https://github.com/karatelabs/karate" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/karatelabs/karate</a>
-- Selenium WebDriver, para pruebas de sistema en navegador: <a href="https://www.selenium.dev" style="word-break: break-all; overflow-wrap: anywhere;">https://www.selenium.dev</a>
 - JaCoCo y Checkstyle, para cobertura y estilo del código: <a href="https://www.jacoco.org/jacoco" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jacoco.org/jacoco</a> y <a href="https://checkstyle.org" style="word-break: break-all; overflow-wrap: anywhere;">https://checkstyle.org</a>
 
 <div style="page-break-before: always;"></div>
@@ -135,7 +133,6 @@ Este anexo contiene referencias externas utilizadas como apoyo conceptual para e
 - Stripe Documentation: <a href="https://docs.stripe.com" style="word-break: break-all; overflow-wrap: anywhere;">https://docs.stripe.com</a>
 - Render Documentation: <a href="https://docs.render.com" style="word-break: break-all; overflow-wrap: anywhere;">https://docs.render.com</a>
 - Karate Documentation: <a href="https://github.com/karatelabs/karate" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/karatelabs/karate</a>
-- Selenium Documentation: <a href="https://www.selenium.dev/documentation/" style="word-break: break-all; overflow-wrap: anywhere;">https://www.selenium.dev/documentation/</a>
 - Jenkins Pipeline Documentation: <a href="https://www.jenkins.io/doc/book/pipeline/" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jenkins.io/doc/book/pipeline/</a>
 - SonarQube Documentation: <a href="https://docs.sonarsource.com/sonarqube-community-build/" style="word-break: break-all; overflow-wrap: anywhere;">https://docs.sonarsource.com/sonarqube-community-build/</a>
 - JaCoCo Documentation: <a href="https://www.jacoco.org/jacoco/trunk/doc/" style="word-break: break-all; overflow-wrap: anywhere;">https://www.jacoco.org/jacoco/trunk/doc/</a>

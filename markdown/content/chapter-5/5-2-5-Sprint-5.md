@@ -14,7 +14,7 @@
 
 ### 5.2.5.1. Sprint Planning 5
 
-En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 5. Con el Sprint 4 el producto quedó funcional de punta a punta (autenticación, pagos y backend desplegado), por lo que el quinto Sprint se dedica a **demostrar y proteger esa calidad**: construir las suites de pruebas unitarias, de integración, de comportamiento (BDD) y de sistema, medir la cobertura y el estilo del código, y automatizar todo en un pipeline de integración continua con Jenkins, SonarQube y Docker. En paralelo se incorporan al backlog y se completan las historias de usuario del panel de administración y del canje de cupones con SafeCoins, que son los flujos nuevos que las pruebas deben cubrir.
+En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 5. Con el Sprint 4 el producto quedó funcional de punta a punta (autenticación, pagos y backend desplegado), por lo que el quinto Sprint se dedica a **demostrar y proteger esa calidad**: construir las suites de pruebas unitarias, de integración y de comportamiento (BDD), medir la cobertura y el estilo del código, y automatizar la verificación en un pipeline de integración continua con Jenkins y SonarQube. En paralelo se incorporan al backlog y se completan las historias de usuario del panel de administración y del canje de cupones con SafeCoins, que son los flujos nuevos que las pruebas deben cubrir.
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
@@ -28,9 +28,9 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
         <tr><td>Sprint n - 1 Review Summary</td><td>Sprint 4 completado: autenticación real con JWT, registro, perfil autenticado, protección de rutas, pago con Stripe y base de datos PostgreSQL desplegada, con el frontend conectado al backend real. Quedó pendiente respaldar esos flujos con pruebas automatizadas y un pipeline que las ejecute.</td></tr>
         <tr><td>Sprint n - 1 Retrospective Summary</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td colspan="2"><b>Sprint Goal &amp; User Stories</b></td></tr>
-        <tr><td>Sprint 5 Goal</td><td>Nuestro enfoque es verificar de forma automática el comportamiento de SafeStep y entregar cada cambio a través de un pipeline repetible. Creemos que esto da confianza para seguir evolucionando el producto sin romper lo que ya funciona. La meta se considera cumplida si las suites unitarias, BDD, de API y de sistema aprueban, la cobertura del código de aplicación supera el 80 % y el pipeline de Jenkins termina en éxito con el análisis de SonarQube y la imagen Docker verificada.</td></tr>
-        <tr><td>Sprint 5 Velocity</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b> (la suma de los puntos de las historias incluidas es 67 SP; el equipo debe confirmar si coincide con el velocity acordado).</td></tr>
-        <tr><td>Sum of Story Points</td><td>Total: 67 SP - Panel de administración y roles (8 SP), cupones canjeables (12 SP), pruebas unitarias y umbral de cobertura (13 SP), BDD (8 SP), pruebas de API (5 SP), pruebas de sistema (5 SP) y CI/CD (16 SP).</td></tr>
+        <tr><td>Sprint 5 Goal</td><td>Nuestro enfoque es verificar de forma automática el comportamiento de SafeStep y entregar cada cambio a través de un pipeline repetible. Creemos que esto da confianza para seguir evolucionando el producto sin romper lo que ya funciona. La meta se considera cumplida si las suites unitarias, BDD y de API aprueban, la cobertura del código de aplicación supera el 80 % y el pipeline de Jenkins termina en éxito con el análisis de SonarQube.</td></tr>
+        <tr><td>Sprint 5 Velocity</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b> (la suma de los puntos de las historias incluidas es 59 SP; el equipo debe confirmar si coincide con el velocity acordado).</td></tr>
+        <tr><td>Sum of Story Points</td><td>Total: 59 SP - Panel de administración y roles (8 SP), cupones canjeables (12 SP), pruebas unitarias y umbral de cobertura (13 SP), BDD (8 SP), pruebas de API (5 SP) e integración continua (13 SP).</td></tr>
     </tbody>
 </table>
 
@@ -48,18 +48,16 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
 | TS27 | Como developer, quiero analizar el estilo del código con Checkstyle y las reglas de Google para tener una referencia objetiva de calidad. | Could Have | 2 |
 | TS28 | Como developer, quiero automatizar los criterios de aceptación en archivos Gherkin con Cucumber para verificar el comportamiento esperado de las historias. | Must Have | 8 |
 | TS29 | Como developer, quiero probar los endpoints REST con Karate para validar contratos, estados HTTP y reglas de seguridad de extremo a extremo. | Must Have | 5 |
-| TS30 | Como developer, quiero automatizar flujos de usuario en un navegador real con Selenium y Gherkin para verificar que frontend y backend funcionan juntos. | Should Have | 5 |
-| TS31 | Como developer, quiero un Jenkinsfile que compile, valide y pruebe el backend en cada ejecución para recibir retroalimentación automática. | Must Have | 8 |
-| TS32 | Como developer, quiero enviar el análisis a SonarQube y detener el pipeline si no supera el Quality Gate para evitar que código con defectos avance. | Should Have | 5 |
-| TS33 | Como developer, quiero construir la imagen Docker y ejecutarla con PostgreSQL desechable en el pipeline para probar el artefacto que se desplegará. | Should Have | 3 |
+| TS30 | Como developer, quiero un Jenkinsfile que compile, valide y pruebe el backend en cada ejecución para recibir retroalimentación automática. | Must Have | 8 |
+| TS31 | Como developer, quiero enviar el análisis a SonarQube y detener el pipeline si no supera el Quality Gate para evitar que código con defectos avance. | Should Have | 5 |
 
 **Distribución de Trabajo por Componente:**
 
 - **Panel de administración y roles (US57, US58):** 8 Story Points en backend (usuarios, roles y reglas de protección) y frontend.
 - **Cupones canjeables (US59, US60, US61):** 12 Story Points: rediseño del cupón, agregado `RedeemedCoupon`, gasto de SafeCoins entre bounded contexts, descuento en la orden y página de canje.
 - **Pruebas unitarias y cobertura (TS25, TS26, TS27):** 13 Story Points.
-- **BDD, API y sistema (TS28, TS29, TS30):** 18 Story Points.
-- **CI/CD (TS31, TS32, TS33):** 16 Story Points.
+- **BDD y API (TS28, TS29):** 13 Story Points.
+- **Integración continua (TS30, TS31):** 13 Story Points.
 
 ### 5.2.5.2. Aspect Leaders and Collaborators
 
@@ -68,17 +66,16 @@ En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LA
 1. **Admin & Coupons:** panel de administración, roles y canje de cupones (backend y frontend).
 2. **Unit Tests & Coverage:** pruebas unitarias, JaCoCo y Checkstyle.
 3. **BDD & API Tests:** pruebas Cucumber y Karate.
-4. **System Tests:** pruebas Selenium sobre el frontend.
-5. **CI/CD Pipeline:** Jenkins, SonarQube y Docker.
-6. **Documentation:** evidencias, reportes y capítulos del informe.
+4. **CI Pipeline:** Jenkins y SonarQube.
+5. **Documentation:** evidencias, reportes y capítulos del informe.
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
-        <tr><td><b>Team Member (Last Name, First Name)</b></td><td><b>GitHub Username</b></td><td><b>Admin &amp; Coupons / L or C</b></td><td><b>Unit Tests &amp; Coverage / L or C</b></td><td><b>BDD &amp; API Tests / L or C</b></td><td><b>System Tests / L or C</b></td><td><b>CI/CD Pipeline / L or C</b></td><td><b>Documentation / L or C</b></td></tr>
-        <tr><td>Ayala Fernandez, Jorge Brayan</td><td>jorgeayaladev</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>L</td><td>L</td><td>L</td><td>L</td><td>L</td><td>L</td></tr>
-        <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td><b>Team Member (Last Name, First Name)</b></td><td><b>GitHub Username</b></td><td><b>Admin &amp; Coupons / L or C</b></td><td><b>Unit Tests &amp; Coverage / L or C</b></td><td><b>BDD &amp; API Tests / L or C</b></td><td><b>CI Pipeline / L or C</b></td><td><b>Documentation / L or C</b></td></tr>
+        <tr><td>Ayala Fernandez, Jorge Brayan</td><td>jorgeayaladev</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>L</td><td>L</td><td>L</td><td>L</td><td>L</td></tr>
+        <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
     </tbody>
 </table>
 
@@ -122,16 +119,11 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T516</td><td>Infraestructura de BDD</td><td>Contexto de Spring Boot con puerto aleatorio y base H2 aislada, cliente HTTP y fábrica de jugadores.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS29 - Pruebas de integración con Karate</b></td></tr>
         <tr><td>TS29</td><td>Pruebas de integración con Karate</td><td>T517</td><td>Proyecto `api-tests`</td><td>Cinco features Karate (36 escenarios) contra una API en ejecución, con datos únicos por ejecución.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS30 - Pruebas de sistema con Selenium</b></td></tr>
-        <tr><td>TS30</td><td>Pruebas de sistema con Selenium</td><td>T518</td><td>Proyecto `e2e-tests`</td><td>Doce escenarios Gherkin con Selenium y Chrome, page objects y captura de pantalla por escenario.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>TS30</td><td>Pruebas de sistema con Selenium</td><td>T519</td><td>Configuración `e2e` de Angular</td><td>Entorno y configuración de compilación que apuntan al backend de pruebas.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS31 - Pipeline de integración continua con Jenkins</b></td></tr>
-        <tr><td>TS31</td><td>Pipeline de integración continua con Jenkins</td><td>T520</td><td>Jenkinsfile</td><td>Etapas de compilación, estilo, pruebas, cobertura, SonarQube, empaquetado, imagen Docker y pruebas de API.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>TS31</td><td>Pipeline de integración continua con Jenkins</td><td>T521</td><td>Jenkins como código</td><td>Imagen de Jenkins con JDK 26, Maven y Docker CLI; plugins.txt, casc.yaml y docker-compose.yml.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS32 - Análisis de calidad con SonarQube y Quality Gate</b></td></tr>
-        <tr><td>TS32</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T522</td><td>SonarQube y webhook</td><td>Servidor SonarQube, token como credencial de Jenkins, webhook y waitForQualityGate().</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS33 - Imagen Docker y ejecución contenedorizada en CI</b></td></tr>
-        <tr><td>TS33</td><td>Imagen Docker y ejecución contenedorizada en CI</td><td>T523</td><td>Verificación de la imagen</td><td>Etapa que levanta PostgreSQL y la imagen recién construida, ejecuta Karate y elimina los contenedores.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS30 - Pipeline de integración continua con Jenkins</b></td></tr>
+        <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T518</td><td>Jenkinsfile</td><td>Etapas de compilación, estilo, pruebas, cobertura, SonarQube y empaquetado.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T519</td><td>Jenkins como código</td><td>Imagen de Jenkins con JDK 26 y Maven; plugins.txt, casc.yaml y docker-compose.yml.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS31 - Análisis de calidad con SonarQube y Quality Gate</b></td></tr>
+        <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T520</td><td>SonarQube y webhook</td><td>Servidor SonarQube, token como credencial de Jenkins, webhook y waitForQualityGate().</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
     </tbody>
 </table>
 
@@ -143,9 +135,9 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
 
 - **Panel de administración y roles (backend y frontend):** panel `/app/admin` con conteos por módulo, listado de usuarios y roles, y asignación de roles con las reglas de protección del administrador.
 - **Cupones canjeables (backend y frontend):** rediseño del cupón en dos tipos (descuento simple y descuento con compra mínima), canje con SafeCoins mediante la fachada ACL de gamificación, descuento aplicado a la orden y cobrado por Stripe, y liberación del cupón si el pago falla.
-- **Suites de pruebas:** 201 pruebas unitarias y de integración, 33 escenarios BDD, 36 escenarios de API y 12 escenarios de sistema (ver 5.2.5.5 y 6.1).
+- **Suites de pruebas:** 201 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.5.5 y 6.1).
 - **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube (ver 6.1 y 7.1).
-- **Pipeline de CI/CD:** `Jenkinsfile` con diez etapas, Jenkins y SonarQube configurados como código y verificación de la imagen Docker (ver 7.1 y 7.2).
+- **Pipeline de integración continua:** `Jenkinsfile` con siete etapas, y Jenkins y SonarQube configurados como código (ver 7.1).
 
 **Commits Realizados (desarrollo de producto):**
 
@@ -173,7 +165,6 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
 |-------|-------------|------|
 | Pruebas unitarias y BDD del backend | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `src/test` |
 | Pruebas de integración de API (Karate) | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `api-tests` |
-| Pruebas de sistema (Selenium + Cucumber) | [1ASI0732-2620-9090-Grupo-4/safestept-frontend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend) | `e2e-tests` |
 
 **Unit Tests.** Las 201 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
 
@@ -797,108 +788,6 @@ Feature: Simulation rewards API
 ```
 
 
-**System Tests (Selenium + Cucumber).** Verifican en un navegador real US01 y US02 (autenticación), US30 y US31 (catálogos), US42 y US59 (cupones) y US57 y US58 (panel de administración).
-
-**`authentication.feature`**
-
-```gherkin
-@system @authentication @US01 @US02
-Feature: Authentication in the web application
-  As a visitor I want to create an account and sign in
-  so that I can start training with the first aid simulations
-
-  Scenario: A visitor without session is redirected to the login form
-    Given a visitor who is not signed in
-    When the visitor opens the dashboard address directly
-    Then the login form is displayed
-
-  Scenario: A visitor creates an account
-    Given a visitor who is not signed in
-    When the visitor registers a new account with valid data
-    Then the account is created and the login form is prefilled with the e-mail
-
-  Scenario: A visitor cannot register with two different passwords
-    Given a visitor who is not signed in
-    When the visitor registers with two different passwords
-    Then a validation error is shown and no account is created
-
-  Scenario: A registered player signs in
-    Given a registered player who is not signed in
-    When the player signs in with the correct credentials
-    Then the player lands on the dashboard
-
-  Scenario: A wrong password is rejected
-    Given a registered player who is not signed in
-    When the player signs in with a wrong password
-    Then an authentication error is shown and the player stays on the login page
-
-  Scenario: A signed in player signs out
-    Given a registered player who is signed in
-    When the player signs out
-    Then the login form is displayed
-```
-
-**`catalogs.feature`**
-
-```gherkin
-@system @catalog @US30 @US31
-Feature: Browsing the simulations catalogue and the store
-  As a player I want to browse the available simulations and products
-
-  Background:
-    Given a registered player who is signed in
-
-  Scenario: The simulations catalogue lists the available simulations
-    When the player opens the simulations catalogue
-    Then the catalogue lists at least 3 simulations
-    And the first filter is selected by default
-
-  Scenario: Choosing a filter highlights it
-    When the player opens the simulations catalogue
-    And the player picks the second simulation filter
-    Then that filter is highlighted as the active one
-
-  Scenario: The store lists the products
-    When the player opens the store
-    Then the store lists at least 3 products
-```
-
-**`coupon-redemption.feature`**
-
-```gherkin
-@system @coupons @US42 @US59
-Feature: Coupon redemption page
-  As a player I want to see which coupons I can buy with SafeCoins
-
-  Scenario: A new player cannot afford any coupon
-    Given a registered player who is signed in
-    When the player opens the coupon redemption page
-    Then the balance shown is 0 SafeCoins
-    And at least one coupon is offered and none of them can be redeemed
-    And the player has no coupons of their own yet
-```
-
-**`administration.feature`**
-
-```gherkin
-@system @administration @US57 @US58
-Feature: Administration panel access
-  Only administrators can reach the administration panel
-
-  Scenario: An administrator reaches the administration panel
-    Given an administrator who is signed in
-    Then the administration entry is available in the navigation
-    When the administrator opens the administration panel
-    Then the administration panel shows 6 management cards
-
-  Scenario: A regular player cannot reach the administration panel
-    Given a registered player who is signed in
-    Then the administration entry is not available in the navigation
-    When the player opens the administration panel address directly
-    Then the player is sent back to the dashboard
-```
-
-
 **Commits relacionados con testing:**
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
@@ -920,56 +809,48 @@ Feature: Administration panel access
         <tr><td>safestept-backend</td><td>feature/jenkins-pipeline</td><td>b327a39</td><td>chore(ci): allow anonymous read access to the local Jenkins and SonarQube dashboards</td><td>Builds and configuration still require the generated admin user; read access lets the dashboards be inspected and captured as evidence without logging in.</td><td>08/10/2026</td></tr>
         <tr><td>safestept-backend</td><td>feature/story-traceability-tags</td><td>ad364ca</td><td>test: tag features with the new US57-US61 story ids</td><td>—</td><td>08/10/2026</td></tr>
         <tr><td>safestept-backend</td><td>develop</td><td>dd3c9dc</td><td>docs(api-tests): align the story ids with the product backlog</td><td>—</td><td>08/10/2026</td></tr>
-    </tbody>
-</table>
-
-<table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
-    <tbody>
-        <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
-        <tr><td>safestept-frontend</td><td>feature/e2e-system-tests</td><td>67e3886</td><td>test(e2e): add Selenium + Cucumber system tests for the web app</td><td>Gherkin scenarios (12) run in headless Chrome against the Angular app and cover route protection, registration, sign-in/out, simulations and store catalogues, the coupon redemption page and the admin panel access rules. An &quot;e2e&quot; Angular configuration points the app to the isolated test backend so the suite never touches the development database.</td><td>08/10/2026</td></tr>
-        <tr><td>safestept-frontend</td><td>feature/story-traceability-tags</td><td>e02a73a</td><td>test(e2e): tag features with the new US57-US59 story ids</td><td>—</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>dd3a16e</td><td>ci: limit the pipeline to continuous integration</td><td>Delivery and deployment are out of scope for this delivery, so the Docker image, the Karate run against a container and the Docker Hub publication are removed from the Jenkinsfile. The application Dockerfile is restored and the Jenkins image no longer carries the Docker CLI nor the host socket.</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
 ### 5.2.5.6. Execution Evidence for Sprint Review
 
-El Sprint 5 permitió validar de forma automática los flujos principales de SafeStep. Las capturas siguientes provienen de las pruebas de sistema: son el estado final de cada escenario, recogido por Selenium en un navegador Chrome real con datos creados por la propia prueba.
+El Sprint 5 dejó listas las vistas de administración y de canje de cupones y las suites de pruebas que las verifican. Las capturas siguientes muestran las vistas principales de la aplicación web, tomadas con una cuenta nueva creada para la captura y con el catálogo de datos de ejemplo.
 
 **Resumen de lo Alcanzado:**
 
-- Registro e inicio de sesión de jugadores, con redirección al dashboard.
-- Protección de rutas: un visitante sin sesión vuelve al login.
+- Dashboard del jugador después de iniciar sesión.
 - Catálogo de simulaciones con filtros y catálogo de la tienda.
-- Página de canje de cupones: un jugador nuevo ve los cupones del catálogo y no puede costearlos.
+- Página de canje de cupones: el jugador ve los cupones del catálogo y, sin SafeCoins, no puede canjearlos.
 - Panel de administración con seis módulos, visible solo para administradores.
 
 <div align="center">
-  <p><b>Captura:</b> Dashboard después de iniciar sesión con una cuenta nueva</p>
-  <img src="../../assets/images/chapter-6/selenium-a-registered-player-signs-in.png" alt="Dashboard tras iniciar sesión" width="700" />
+  <p><b>Captura:</b> Dashboard de un jugador que acaba de iniciar sesión</p>
+  <img src="../../assets/images/chapter-5/sprint5-vista-dashboard.png" alt="Dashboard tras iniciar sesión" width="700" />
   <p><i><b>Fuente</b>: Elaboración propia.</i></p>
 </div>
 
 <div align="center">
   <p><b>Captura:</b> Catálogo de simulaciones</p>
-  <img src="../../assets/images/chapter-6/selenium-the-simulations-catalogue-lists-the-available-simulations.png" alt="Catálogo de simulaciones" width="700" />
+  <img src="../../assets/images/chapter-5/sprint5-vista-simulaciones.png" alt="Catálogo de simulaciones" width="700" />
   <p><i><b>Fuente</b>: Elaboración propia.</i></p>
 </div>
 
 <div align="center">
   <p><b>Captura:</b> Tienda de productos</p>
-  <img src="../../assets/images/chapter-6/selenium-the-store-lists-the-products.png" alt="Tienda" width="700" />
+  <img src="../../assets/images/chapter-5/sprint5-vista-tienda.png" alt="Tienda" width="700" />
   <p><i><b>Fuente</b>: Elaboración propia.</i></p>
 </div>
 
 <div align="center">
   <p><b>Captura:</b> Página de canje de cupones de un jugador sin SafeCoins</p>
-  <img src="../../assets/images/chapter-6/selenium-a-new-player-cannot-afford-any-coupon.png" alt="Canje de cupones" width="700" />
+  <img src="../../assets/images/chapter-5/sprint5-vista-canje-cupones.png" alt="Canje de cupones" width="700" />
   <p><i><b>Fuente</b>: Elaboración propia.</i></p>
 </div>
 
 <div align="center">
   <p><b>Captura:</b> Panel de administración</p>
-  <img src="../../assets/images/chapter-6/selenium-an-administrator-reaches-the-administration-panel.png" alt="Panel de administración" width="700" />
+  <img src="../../assets/images/chapter-5/sprint5-vista-panel-admin.png" alt="Panel de administración" width="700" />
   <p><i><b>Fuente</b>: Elaboración propia.</i></p>
 </div>
 
@@ -1008,16 +889,15 @@ El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de r
 
 ### 5.2.5.8. Software Deployment Evidence for Sprint Review
 
-El trabajo de despliegue del Sprint 5 consistió en automatizar la integración y la entrega del backend. No se crearon cuentas ni recursos nuevos en proveedores cloud: la infraestructura del pipeline se ejecuta como contenedores Docker en el equipo del desarrollador y se describe como código en la carpeta `ci/` del backend.
+El trabajo de despliegue del Sprint 5 consistió en automatizar la integración continua del backend. No se crearon cuentas ni recursos nuevos en proveedores cloud: la infraestructura del pipeline se ejecuta como contenedores Docker en el equipo del desarrollador y se describe como código en la carpeta `ci/` del backend.
 
 **Actividades realizadas:**
 
-1. Construcción de la imagen `safestep-jenkins:1.0` (Jenkins LTS con JDK 25 y, para compilar el proyecto, JDK 26, Maven 3.9.11 y Docker CLI).
+1. Construcción de la imagen `safestep-jenkins:1.0` (Jenkins LTS con JDK 25 y, para compilar el proyecto, JDK 26 y Maven 3.9.11).
 2. Creación del `docker-compose.yml` con Jenkins (puerto 9089) y SonarQube (puerto 9000) en la red `spring-postgres-net`.
 3. Configuración de Jenkins con *Configuration as Code*: usuario administrador, servidor SonarQube `MiSonarServer`, credencial del token y el job `safestep-backend`.
 4. Registro del webhook `http://jenkins-master:9089/sonarqube-webhook/` en SonarQube.
 5. Escritura del `Jenkinsfile` y ejecución del pipeline sobre la rama `develop`.
-6. Construcción de la imagen del backend `safestep-backend:<n.º de ejecución>` y verificación contra un contenedor con PostgreSQL.
 
 <div align="center">
   <p><b>Captura:</b> Pipeline `safestep-backend` en Jenkins con sus etapas y ejecuciones</p>
@@ -1032,18 +912,6 @@ El trabajo de despliegue del Sprint 5 consistió en automatizar la integración 
 </div>
 
 
-**Imágenes Docker generadas por el pipeline:**
-
-```text
-REPOSITORY         TAG      IMAGE ID       SIZE
-safestep-backend   4        64e385aea78a   655MB
-safestep-backend   latest   64e385aea78a   655MB
-safestep-backend   3        2ec1ddbbaad0   655MB
-safestep-backend   2        769ccc045c41   655MB
-```
-
-**Pendiente.** La publicación en Docker Hub y el despliegue automático en Render están implementados parcialmente (etapa de publicación con el parámetro `PUSH_IMAGE`) pero no se ejecutaron porque requieren credenciales del equipo; el detalle está en 7.2 y 7.3.
-
 ### 5.2.5.9. Team Collaboration Insights during Sprint
 
 En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 y se presentan los analíticos de colaboración.
@@ -1057,7 +925,7 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
         <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
         <tr><td>Ayala Fernandez, Jorge Brayan</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>20</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>19</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
     </tbody>
 </table>
