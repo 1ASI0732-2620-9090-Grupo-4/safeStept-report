@@ -72,13 +72,15 @@ En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LA
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
         <tr><td><b>Team Member (Last Name, First Name)</b></td><td><b>GitHub Username</b></td><td><b>Admin &amp; Coupons / L or C</b></td><td><b>Unit Tests &amp; Coverage / L or C</b></td><td><b>BDD &amp; API Tests / L or C</b></td><td><b>CI Pipeline / L or C</b></td><td><b>Documentation / L or C</b></td></tr>
-        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>L</td><td>L</td><td>L</td><td>L</td><td>L</td></tr>
-        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>C</td><td>L</td><td>—</td><td>—</td><td>C</td></tr>
+        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>—</td><td>C</td><td>L</td><td>—</td><td>C</td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>C</td><td>—</td><td>—</td><td>—</td><td>L</td></tr>
+        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>—</td><td>—</td><td>—</td><td>L</td><td>C</td></tr>
+        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>L</td><td>—</td><td>—</td><td>—</td><td>C</td></tr>
     </tbody>
 </table>
+
+**Nota sobre la asignación.** Los cinco integrantes trabajaron de forma rotativa en una misma laptop y con una sola identidad de Git, por lo que los commits y el historial no permiten reconstruir quién realizó cada tarea. Para mantener la trazabilidad del Sprint, el equipo acordó repartir las 21 tareas del Sprint Backlog 5 de forma equitativa (cuatro o cinco tareas por integrante) y agruparlas por área; cada integrante lidera un área (L) y colabora (C) en aquellas donde tiene tareas asignadas. Esta es la asignación que figura en el Sprint Backlog 5 y en esta matriz.
 
 #### 5.2.1.5.3. Sprint Backlog 5
 
@@ -94,12 +96,12 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td colspan="2">User Story / Technical Story</td><td colspan="6">Work-Item / Task</td></tr>
         <tr><td>Id</td><td>Title</td><td>Id</td><td>Title</td><td>Description</td><td>Estimation (Hours)</td><td>Assigned to</td><td>Status (To-do / In-Process / To-Review / Done)</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US57 - Visualizar el panel de administración</b></td></tr>
-        <tr><td>US57</td><td>Visualizar el panel de administración</td><td>T501</td><td>Panel de administración</td><td>Crear la página /app/admin con una tarjeta de conteo por módulo y la ruta protegida con adminGuard.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US57</td><td>Visualizar el panel de administración</td><td>T501</td><td>Panel de administración</td><td>Crear la página /app/admin con una tarjeta de conteo por módulo y la ruta protegida con adminGuard.</td><td>—</td><td>Aylas De La Cruz, Paulo Smit</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US58 - Gestionar roles de los usuarios</b></td></tr>
-        <tr><td>US58</td><td>Gestionar roles de los usuarios</td><td>T502</td><td>Endpoints de usuarios y roles</td><td>Exponer GET /users, GET /roles y PUT /users/{id}/roles con las reglas: no quitarse el propio rol de administrador y conservar al menos un administrador.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>US58</td><td>Gestionar roles de los usuarios</td><td>T503</td><td>Gestión de roles en el frontend</td><td>Listado de usuarios y formulario de roles en el módulo identity-access.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US58</td><td>Gestionar roles de los usuarios</td><td>T502</td><td>Endpoints de usuarios y roles</td><td>Exponer GET /users, GET /roles y PUT /users/{id}/roles con las reglas: no quitarse el propio rol de administrador y conservar al menos un administrador.</td><td>—</td><td>Aylas De La Cruz, Paulo Smit</td><td>Done</td></tr>
+        <tr><td>US58</td><td>Gestionar roles de los usuarios</td><td>T503</td><td>Gestión de roles en el frontend</td><td>Listado de usuarios y formulario de roles en el módulo identity-access.</td><td>—</td><td>Aylas De La Cruz, Paulo Smit</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US59 - Canjear un cupón con SafeCoins</b></td></tr>
-        <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T504</td><td>Rediseño del cupón</td><td>Reemplazar el campo discount por type, discountPercentage y minPurchaseAmount, con validaciones.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T504</td><td>Rediseño del cupón</td><td>Reemplazar el campo discount por type, discountPercentage y minPurchaseAmount, con validaciones.</td><td>—</td><td>Aylas De La Cruz, Paulo Smit</td><td>Done</td></tr>
         <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T505</td><td>Canje de cupones</td><td>Crear el agregado RedeemedCoupon, el endpoint POST /commerce/coupons/{id}/redeem y el gasto de SafeCoins por la fachada ACL de gamificación (PlayerProgress.spendCoins, CoinSpend).</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T506</td><td>Página de canje</td><td>Crear /app/store/coupons con el catálogo de cupones y el botón de canje.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US60 - Aplicar un cupón canjeado en el checkout</b></td></tr>
@@ -107,25 +109,25 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T508</td><td>Selector de cupones en el checkout</td><td>Reemplazar el campo de texto por la lista de cupones disponibles, deshabilitando los que no cumplen el monto mínimo.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T509</td><td>Liberación del cupón</td><td>Devolver el cupón a disponible cuando el pago de Stripe falla o se cancela.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>User Story US61 - Consultar mis cupones canjeados</b></td></tr>
-        <tr><td>US61</td><td>Consultar mis cupones canjeados</td><td>T510</td><td>Mis cupones</td><td>Exponer GET /commerce/coupons/redeemed/me y mostrar pestañas de disponibles y usados.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US61</td><td>Consultar mis cupones canjeados</td><td>T510</td><td>Mis cupones</td><td>Exponer GET /commerce/coupons/redeemed/me y mostrar pestañas de disponibles y usados.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS25 - Pruebas unitarias de entidades y servicios</b></td></tr>
-        <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T511</td><td>Pruebas de commerce, iam y gamification</td><td>Pruebas JUnit/Mockito de agregados, servicios de comandos y consultas, ACL y manejadores de eventos.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T512</td><td>Pruebas de simulation, analytics, profiles y shared</td><td>Pruebas de intentos, certificados, perfiles, Result y manejador global de excepciones.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T511</td><td>Pruebas de commerce, iam y gamification</td><td>Pruebas JUnit/Mockito de agregados, servicios de comandos y consultas, ACL y manejadores de eventos.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
+        <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T512</td><td>Pruebas de simulation, analytics, profiles y shared</td><td>Pruebas de intentos, certificados, perfiles, Result y manejador global de excepciones.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS26 - Umbral de cobertura con JaCoCo</b></td></tr>
-        <tr><td>TS26</td><td>Umbral de cobertura con JaCoCo</td><td>T513</td><td>Configurar JaCoCo</td><td>Reporte HTML/XML, regla de 80 % y exclusiones tomadas del proyecto de referencia del curso.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS26</td><td>Umbral de cobertura con JaCoCo</td><td>T513</td><td>Configurar JaCoCo</td><td>Reporte HTML/XML, regla de 80 % y exclusiones tomadas del proyecto de referencia del curso.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS27 - Análisis de estilo con Checkstyle</b></td></tr>
-        <tr><td>TS27</td><td>Análisis de estilo con Checkstyle</td><td>T514</td><td>Configurar Checkstyle</td><td>Reglas de Google sin modificar, en modo reporte; medir la línea base (8,034 observaciones).</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS27</td><td>Análisis de estilo con Checkstyle</td><td>T514</td><td>Configurar Checkstyle</td><td>Reglas de Google sin modificar, en modo reporte; medir la línea base (8,034 observaciones).</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS28 - Pruebas de aceptación BDD con Cucumber</b></td></tr>
-        <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T515</td><td>Features y steps</td><td>Cinco features Gherkin etiquetados con historias y sus step definitions.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T516</td><td>Infraestructura de BDD</td><td>Contexto de Spring Boot con puerto aleatorio y base H2 aislada, cliente HTTP y fábrica de jugadores.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T515</td><td>Features y steps</td><td>Cinco features Gherkin etiquetados con historias y sus step definitions.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
+        <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T516</td><td>Infraestructura de BDD</td><td>Contexto de Spring Boot con puerto aleatorio y base H2 aislada, cliente HTTP y fábrica de jugadores.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS29 - Pruebas de integración con Karate</b></td></tr>
-        <tr><td>TS29</td><td>Pruebas de integración con Karate</td><td>T517</td><td>Proyecto `api-tests`</td><td>Cinco features Karate (36 escenarios) contra una API en ejecución, con datos únicos por ejecución.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS29</td><td>Pruebas de integración con Karate</td><td>T517</td><td>Proyecto `api-tests`</td><td>Cinco features Karate (36 escenarios) contra una API en ejecución, con datos únicos por ejecución.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS30 - Pipeline de integración continua con Jenkins</b></td></tr>
-        <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T518</td><td>Jenkinsfile</td><td>Etapas de compilación, estilo, pruebas, cobertura, SonarQube y empaquetado.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T519</td><td>Jenkins como código</td><td>Imagen de Jenkins con JDK 26 y Maven; plugins.txt, casc.yaml y docker-compose.yml.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T518</td><td>Jenkinsfile</td><td>Etapas de compilación, estilo, pruebas, cobertura, SonarQube y empaquetado.</td><td>—</td><td>Tello Palacios, Fabrizio Rafael</td><td>Done</td></tr>
+        <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T519</td><td>Jenkins como código</td><td>Imagen de Jenkins con JDK 26 y Maven; plugins.txt, casc.yaml y docker-compose.yml.</td><td>—</td><td>Tello Palacios, Fabrizio Rafael</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS31 - Análisis de calidad con SonarQube y Quality Gate</b></td></tr>
-        <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T520</td><td>SonarQube y webhook</td><td>Servidor SonarQube, token como credencial de Jenkins, webhook y waitForQualityGate().</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T521</td><td>Corrección de hallazgos</td><td>Responder 400 ante JSON mal formado, restringir CORS a orígenes configurables y resolver los bugs java:S2184 y java:S2637 de SonarQube, con pruebas nuevas.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T520</td><td>SonarQube y webhook</td><td>Servidor SonarQube, token como credencial de Jenkins, webhook y waitForQualityGate().</td><td>—</td><td>Tello Palacios, Fabrizio Rafael</td><td>Done</td></tr>
+        <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T521</td><td>Corrección de hallazgos</td><td>Responder 400 ante JSON mal formado, restringir CORS a orígenes configurables y resolver los bugs java:S2184 y java:S2637 de SonarQube, con pruebas nuevas.</td><td>—</td><td>Tello Palacios, Fabrizio Rafael</td><td>Done</td></tr>
     </tbody>
 </table>
 
@@ -1022,7 +1024,7 @@ El despliegue a Render no lo realiza Jenkins: lo dispara el propio repositorio o
 
 En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 y se presentan los analíticos de colaboración.
 
-**Distribución de Trabajo:** <b>[POR COMPLETAR POR EL EQUIPO]</b>
+**Distribución de Trabajo:** el equipo repartió las 21 tareas del Sprint Backlog 5 por áreas (ver la nota de asignación en 5.2.1.5.2): Aylas De La Cruz, Paulo Smit (panel de administración, roles y rediseño del cupón: T501 a T504); Melgarejo Quiroz, Josep Eliu (canje y descuento de cupones, y documentación: T505 a T509); Palacios Jáuregui, Kalid Jesus (mis cupones, pruebas unitarias y JaCoCo: T510 a T513); Sanchez Arenas, Manuel Angel (Checkstyle, BDD y Karate: T514 a T517) y Tello Palacios, Fabrizio Rafael (Jenkins, SonarQube y corrección de hallazgos: T518 a T521).
 
 **Métricas de Colaboración:**
 
@@ -1037,5 +1039,5 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
     </tbody>
 </table>
 
-El conteo de commits de Melgarejo Quiroz, Josep Eliu corresponde a los commits locales de `develop` en los repositorios de backend y frontend durante este Sprint. Las capturas de GitHub Insights (Contributors, Commits) y la interpretación del equipo deben añadirse una vez publicadas las ramas en GitHub, porque los analíticos de GitHub solo reflejan lo que está en el repositorio remoto.
+Los 23 commits figuran bajo la identidad de Git de Melgarejo Quiroz, Josep Eliu y corresponden a todos los commits locales de `develop` en los repositorios de backend y frontend durante este Sprint; como los cinco integrantes trabajaron de forma rotativa en la misma laptop, no se pueden atribuir por separado y las métricas individuales de los demás integrantes no se han podido reconstruir. Las capturas de GitHub Insights (Contributors, Commits) y la interpretación del equipo deben añadirse una vez publicadas las ramas en GitHub, porque los analíticos de GitHub solo reflejan lo que está en el repositorio remoto.
 
