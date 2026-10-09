@@ -76,9 +76,9 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | Herramienta | Propósito |URL de Referencia | URL de Despliegue | Tipo |
 |-------------|-----------|------------------|-------------------|------|
 | GitHub Pages | Plataforma de despliegue para el landing page estático de SafeStep | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a> | SaaS |
-| GitHub Pages | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> | SaaS |
-| Render | Plataforma de despliegue para el backend Spring Boot de SafeStep | <a href="https://render.com">https://render.com</a> | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> | SaaS |
-| Render PostgreSQL | Base de datos PostgreSQL desplegada para persistencia del backend | <a href="https://render.com">https://render.com</a> | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` | SaaS |
+| Render (Static Site) | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://render.com">https://render.com</a> | <a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a> | SaaS |
+| Render (Web Service, Docker) | Plataforma de despliegue para el backend Spring Boot de SafeStep, construido desde su `Dockerfile` | <a href="https://render.com">https://render.com</a> | <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a> | SaaS |
+| Render PostgreSQL | Base de datos PostgreSQL 18 (`safestep-db`, plan gratuito, región Frankfurt) para la persistencia del backend | <a href="https://render.com">https://render.com</a> | Hostname interno de Render, accesible solo desde los servicios de la misma región | SaaS |
 | Docker | Ejecución de Jenkins y SonarQube como contenedores en la red `spring-postgres-net` | <a href="https://www.docker.com">https://www.docker.com</a> | No aplica (ejecución local) | Descargable |
 | Jenkins (LTS, JDK 25) | Servidor de integración continua que ejecuta el `Jenkinsfile` del backend; se configura como código con JCasC | <a href="https://www.jenkins.io">https://www.jenkins.io</a> | `http://localhost:9089` (entorno local del equipo) | Descargable (contenedor Docker) |
 
@@ -305,15 +305,15 @@ El equipo SafeStep adopta una estrategia de despliegue progresivo que permite en
 
 El proyecto cuenta con tres productos desplegados en plataformas independientes. El primer producto es la Landing Page, desplegada en GitHub Pages como sitio estático, permitiendo una presentación pública del producto SafeStep con alta disponibilidad y sin costos operativos.
 
-El segundo producto es el Frontend Angular, desplegado en GitHub Pages como aplicación web estática. Esta plataforma fue seleccionada por su integración con GitHub, su disponibilidad pública mediante HTTPS y su facilidad para publicar builds frontend desde el repositorio.
+El segundo producto es el Frontend Angular, desplegado en Render como Static Site. Esta plataforma fue seleccionada porque compila el proyecto desde el repositorio en cada commit, sirve los archivos estáticos por HTTPS y permite configurar la reescritura de rutas que necesita una aplicación de una sola página.
 
-El tercer producto es el Backend API, desplegado en Render como un servicio Spring Boot documentado con Swagger. Este backend se conecta a una base de datos PostgreSQL desplegada en Render, utilizada para persistir usuarios, perfiles, simulaciones, órdenes, pagos y datos principales de la aplicación.
+El tercer producto es el Backend API, desplegado en Render como un Web Service con runtime Docker que ejecuta la aplicación Spring Boot documentada con Swagger. Este backend se conecta a la base de datos PostgreSQL `safestep-db`, también en Render y en la misma región (Frankfurt), utilizada para persistir usuarios, perfiles, simulaciones, órdenes, pagos y datos principales de la aplicación. Los tres recursos de Render, sus variables de entorno y los resultados de cada despliegue se evidencian en 5.2.5.8.
 
 #### 5.1.4.1.2. Pipeline de CI/CD
 
-El equipo implementa pipelines de Integración Continua y Entrega Continua (CI/CD) utilizando GitHub Actions. Cada repositorio cuenta con su propio pipeline de CI/CD adaptado a sus características específicas.
+El equipo automatiza la construcción y la publicación de cada producto con la herramienta que corresponde a su plataforma: GitHub Actions para la Landing Page, Render para el frontend y el backend, y Jenkins para la integración continua del backend. Cada repositorio tiene un proceso adaptado a sus características.
 
-Para el repositorio de Frontend (Angular), el pipeline de CI/CD incluye las siguientes etapas: instalación de dependencias con npm install, verificación de código con ESLint y análisis estático, ejecución de pruebas unitarias con Karma o Jest, construcción de la aplicación para producción, y despliegue automático a GitHub Pages si las pruebas pasan exitosamente.
+Para el repositorio de Frontend (Angular), Render ejecuta en cada commit a `main` la instalación reproducible de dependencias con `npm ci` y la construcción de producción con `npm run build`, y publica el resultado si el build termina sin errores.
 
 Para el repositorio de Web Services (Spring Boot), el pipeline incluye: verificación de código con herramientas de análisis estático, compilación del proyecto con Maven, ejecución de pruebas unitarias y de integración, y construcción del artefacto JAR.
 
@@ -335,31 +335,42 @@ La URL pública del landing page es:
 
 <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
 
-#### 5.1.4.2.2. Configuración de Frontend en GitHub Pages
+#### 5.1.4.2.2. Configuración de Frontend en Render
 
-El Frontend Angular se despliega en GitHub Pages como aplicación web estática. Los pasos de configuración incluyen generar el build de Angular, configurar la ruta base del proyecto y publicar los archivos generados en el repositorio correspondiente.
+El Frontend Angular se despliega en Render como Static Site conectado al repositorio `safestept-frontend`. La URL del backend de producción se define en `src/environments/environment.ts` (`platformProviderApiBaseUrl`), por lo que ese archivo debe apuntar al backend antes de construir el sitio.
 
-El despliegue publica los archivos estáticos generados por Angular. Para ello, el workflow toma el directorio de salida del build y lo envía a GitHub Pages:
+| Parámetro | Valor |
+|-----------|-------|
+| Nombre | `safestept-frontend-experimentos` |
+| Rama | `main` |
+| Build Command | `npm ci && npm run build` |
+| Publish Directory | `dist/safestep-frontend-v2/browser` |
+| Variable de entorno | `NODE_VERSION=22` (Angular 21 exige Node 20.19, 22.12 o superior) |
+| Redirects/Rewrites | Origen `/*`, destino `/index.html`, acción *Rewrite* |
+| Auto-Deploy | On Commit |
 
-```bash
-npm run build
-```
+La regla de reescritura es necesaria porque Angular resuelve las rutas en el navegador: sin ella, abrir o recargar `/app/dashboard` devolvería un 404. La URL pública del frontend es:
 
-La URL pública del frontend es:
-
-<a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
+<a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a>
 
 #### 5.1.4.2.3. Configuración de Backend API en Render
 
-El Backend API se despliega en Render como una aplicación Spring Boot. Esta plataforma fue seleccionada porque permite publicar el servicio web, conectar variables de entorno, exponer la documentación Swagger y mantener disponible el API para el frontend desplegado.
+El Backend API se despliega en Render como un Web Service con runtime Docker conectado al repositorio `safestept-backend`. Esta plataforma fue seleccionada porque construye la imagen a partir del `Dockerfile` del repositorio, permite definir variables de entorno y secretos, expone la documentación Swagger y mantiene disponible el API para el frontend desplegado.
 
-La configuración del backend se realiza mediante los archivos `application-dev.properties` y `application-prod.properties`, donde se define la conexión a PostgreSQL, el perfil de ejecución, las credenciales mediante variables de entorno y los parámetros necesarios para JWT y Stripe.
+| Parámetro | Valor |
+|-----------|-------|
+| Nombre | `safestept-backend-experimentos` |
+| Región | Frankfurt (la misma de la base de datos, para usar su hostname interno) |
+| Rama | `main` |
+| Runtime | Docker (`./Dockerfile`) |
+| Plan | Free |
+| Auto-Deploy | On Commit |
 
-La URL pública del backend desplegado es: <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+La configuración se realiza mediante `application-prod.properties`, que lee la conexión a PostgreSQL, el secreto JWT y las claves de Stripe de variables de entorno; si falta alguna variable obligatoria, la aplicación no arranca. El perfil `prod` se activa con `SPRING_PROFILES_ACTIVE=prod` y el puerto lo toma la aplicación de la variable `PORT` que asigna Render. Desde el Trabajo Parcial el backend solo acepta peticiones de navegador desde los orígenes listados en `SAFESTEP_CORS_ALLOWED_ORIGINS`. La tabla completa de variables está en 5.2.5.8.
 
-La base de datos PostgreSQL desplegada en Render utiliza el siguiente host:
+La URL pública de la documentación del backend desplegado es: <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a>
 
-`dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com`
+La base de datos PostgreSQL `safestep-db` (versión 18, plan gratuito, región Frankfurt) se comunica con el backend por la red privada de Render usando su hostname interno. El plan gratuito caduca el 7 de noviembre de 2026.
 
 ### 5.1.4.3. Procedimientos de Despliegue
 
@@ -369,21 +380,21 @@ El equipo establece procedimientos detallados para ejecutar despliegues, asegura
 
 Cada componente tiene su propio procedimiento de despliegue a producción. Para la Landing Page en GitHub Pages, el despliegue se activa automáticamente mediante GitHub Actions al hacer push a la rama `main`, ejecutando el build estático y publicando en la rama `gh-pages`.
 
-Para el Frontend en GitHub Pages, el despliegue se realiza mediante GitHub Actions, donde el pipeline ejecuta las pruebas, construye la aplicación y publica los archivos estáticos generados.
+Para el Frontend en Render, el despliegue se activa al hacer commit en la rama `main`: Render instala las dependencias, construye la aplicación Angular y publica los archivos estáticos generados.
 
-Para el Backend en Render, el despliegue se realiza desde el repositorio del backend. Render construye la aplicación Spring Boot, ejecuta el artefacto generado y conecta el servicio con la base de datos PostgreSQL configurada mediante variables de entorno y archivos de propiedades.
+Para el Backend en Render, el despliegue se realiza desde la rama `main` del repositorio del backend, ya sea automáticamente al recibir un commit o manualmente desde el panel. Render construye la imagen con el `Dockerfile` (que ejecuta las pruebas), inicia el servicio y lo conecta con la base de datos PostgreSQL configurada mediante variables de entorno. Los cambios llegan a `main` desde `develop` mediante un merge, siguiendo el GitFlow de 5.1.2.
 
 #### 5.1.4.3.2. Verificación Post-Despliegue
 
-Después de cada despliegue, el equipo debe verificar el correcto funcionamiento de cada componente accediendo a las URLs de despliegue correspondientes y realizando pruebas de humo (smoke tests) para confirmar que la aplicación responde correctamente.
+Después de cada despliegue, el equipo debe verificar el correcto funcionamiento de cada componente accediendo a las URLs de despliegue correspondientes y realizando pruebas de humo (smoke tests) para confirmar que la aplicación responde correctamente: Swagger UI del backend con respuesta 200, un endpoint protegido sin token con respuesta 401, la pantalla de inicio de sesión del frontend, la apertura directa de una ruta interna (`/app/dashboard`) y la petición previa de CORS desde el origen del frontend. Los resultados de la última verificación están en 5.2.5.8.
 
 #### 5.1.4.3.3. Rollback
 
-En caso de problemas en producción, el equipo puede realizar un rollback a la versión anterior. GitHub Pages permite revertir el despliegue restaurando el contenido anterior de la rama `gh-pages`. Para Render, el rollback se realiza restaurando una versión anterior del backend o revirtiendo el commit desplegado desde el repositorio.
+En caso de problemas en producción, el equipo puede realizar un rollback a la versión anterior. Para la Landing Page, GitHub Pages permite revertir el despliegue restaurando el contenido anterior de la rama `gh-pages`. Para el frontend y el backend en Render, el rollback se realiza volviendo a desplegar un despliegue anterior desde el historial de *Deploys* del panel o revirtiendo el commit desplegado en `main`.
 
 ### 5.1.4.4. Monitoreo y Logging
 
-El equipo implementa capacidades de monitoreo y logging para mantener visibilidad sobre el estado de la aplicación en producción. GitHub Pages expone métricas básicas de uso a través de GitHub Insights. Para el tracking de errores, se puede integrar servicios como Sentry. Estas herramientas permiten identificar y resolver problemas rápidamente, asegurando la disponibilidad y calidad del servicio para los usuarios finales.
+El equipo implementa capacidades de monitoreo y logging para mantener visibilidad sobre el estado de la aplicación en producción. Render ofrece registros en vivo, métricas del servicio y el historial de eventos y despliegues del frontend y del backend, y el backend registra con SLF4J los errores inesperados que no controla ningún manejador específico. GitHub Pages expone métricas básicas de uso de la Landing Page a través de GitHub Insights. Para el tracking de errores, se puede integrar servicios como Sentry. Estas herramientas permiten identificar y resolver problemas rápidamente, asegurando la disponibilidad y calidad del servicio para los usuarios finales.
 
 
 

@@ -39,7 +39,7 @@
     <tr>
         <td align="center">1.6</td>
         <td>Melgarejo Quiroz, Josep Eliu</td>
-        <td>Capítulo III: actualización del Product Backlog con las historias US57 a US61 y las technical stories TS25 a TS33. Capítulo V: actualización de 5.1 (herramientas de testing, calidad y CI/CD) y Sprint 5.</td>
+        <td>Capítulo III: actualización del Product Backlog con las historias US57 a US61 y las technical stories TS25 a TS31. Capítulo V: actualización de 5.1 (herramientas de testing, calidad, CI y despliegue en Render) y Sprint 5 con la evidencia de despliegue.</td>
     </tr>
     <tr>
         <td align="center">1.7</td>

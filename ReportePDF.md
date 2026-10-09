@@ -341,7 +341,7 @@
     <tr>
         <td align="center">1.6</td>
         <td>Melgarejo Quiroz, Josep Eliu</td>
-        <td>Capítulo III: actualización del Product Backlog con las historias US57 a US61 y las technical stories TS25 a TS33. Capítulo V: actualización de 5.1 (herramientas de testing, calidad y CI/CD) y Sprint 5.</td>
+        <td>Capítulo III: actualización del Product Backlog con las historias US57 a US61 y las technical stories TS25 a TS31. Capítulo V: actualización de 5.1 (herramientas de testing, calidad, CI y despliegue en Render) y Sprint 5 con la evidencia de despliegue.</td>
     </tr>
     <tr>
         <td align="center">1.7</td>
@@ -517,7 +517,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <i>AV1</i>
             <p>Al preparar la configuración y el despliegue (capítulo V), identifiqué una credencial de base de datos que había quedado versionada en el historial de Git y documenté que debe rotarse en el proveedor en lugar de solo eliminarla del archivo actual; también detecté que cuentas con rol de usuario común podían ver controles de administración en la web y agregué restricciones de rol (<code>@PreAuthorize</code> en el backend y un <code>adminGuard</code> en el frontend) antes de reportar el avance como funcional.</p>
             <i>TP</i>
-            <p>En las pruebas y el pipeline del Trabajo Parcial (capítulos VI y VII) no oculté los resultados desfavorables de la medición de calidad: documenté que Checkstyle reporta 8,034 observaciones sobre el código existente, que SonarQube marcó 2 vulnerabilidades y 3 bugs. Corregí los que eran reales (entre ellos CORS abierto a cualquier origen) y dejé documentada como decisión de diseño la protección CSRF deshabilitada, en lugar de silenciar la regla; además dejé que el Quality Gate fallara cuando mi propio código nuevo tuvo una incidencia. También evité que las credenciales generadas para Jenkins y SonarQube se versionen (quedan en un archivo ignorado por Git) y devolví a una variable de entorno la clave de Stripe que se había escrito directamente en <code>application.properties</code>.</p>
+            <p>En las pruebas y el pipeline del Trabajo Parcial (capítulos VI y VII) no oculté los resultados desfavorables de la medición de calidad: documenté que Checkstyle reporta 8,034 observaciones sobre el código existente, que SonarQube marcó 2 vulnerabilidades y 3 bugs. Corregí los que eran reales (entre ellos CORS abierto a cualquier origen) y dejé documentada como decisión de diseño la protección CSRF deshabilitada, en lugar de silenciar la regla; además dejé que el Quality Gate fallara cuando mi propio código nuevo tuvo una incidencia. También evité que las credenciales generadas para Jenkins y SonarQube se versionen (quedan en un archivo ignorado por Git) y devolví a una variable de entorno la clave de Stripe que se había escrito directamente en <code>application.properties</code>. Al desplegar en Render configuré todos los secretos solo como variables de entorno, reemplacé una contraseña de administrador débil por una larga y cambié el usuario por defecto, y restringí CORS al frontend publicado en lugar de dejar la API abierta a cualquier sitio web.</p>
         </td>
     </tr>
     <tr>
@@ -6148,9 +6148,9 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | Herramienta | Propósito |URL de Referencia | URL de Despliegue | Tipo |
 |-------------|-----------|------------------|-------------------|------|
 | GitHub Pages | Plataforma de despliegue para el landing page estático de SafeStep | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a> | SaaS |
-| GitHub Pages | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://pages.github.com">https://pages.github.com</a> | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> | SaaS |
-| Render | Plataforma de despliegue para el backend Spring Boot de SafeStep | <a href="https://render.com">https://render.com</a> | <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a> | SaaS |
-| Render PostgreSQL | Base de datos PostgreSQL desplegada para persistencia del backend | <a href="https://render.com">https://render.com</a> | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` | SaaS |
+| Render (Static Site) | Plataforma de despliegue para la aplicación frontend Angular | <a href="https://render.com">https://render.com</a> | <a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a> | SaaS |
+| Render (Web Service, Docker) | Plataforma de despliegue para el backend Spring Boot de SafeStep, construido desde su `Dockerfile` | <a href="https://render.com">https://render.com</a> | <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a> | SaaS |
+| Render PostgreSQL | Base de datos PostgreSQL 18 (`safestep-db`, plan gratuito, región Frankfurt) para la persistencia del backend | <a href="https://render.com">https://render.com</a> | Hostname interno de Render, accesible solo desde los servicios de la misma región | SaaS |
 | Docker | Ejecución de Jenkins y SonarQube como contenedores en la red `spring-postgres-net` | <a href="https://www.docker.com">https://www.docker.com</a> | No aplica (ejecución local) | Descargable |
 | Jenkins (LTS, JDK 25) | Servidor de integración continua que ejecuta el `Jenkinsfile` del backend; se configura como código con JCasC | <a href="https://www.jenkins.io">https://www.jenkins.io</a> | `http://localhost:9089` (entorno local del equipo) | Descargable (contenedor Docker) |
 
@@ -6400,16 +6400,16 @@ El equipo SafeStep adopta una estrategia de despliegue progresivo que permite en
 
 El proyecto cuenta con tres productos desplegados en plataformas independientes. El primer producto es la Landing Page, desplegada en GitHub Pages como sitio estático, permitiendo una presentación pública del producto SafeStep con alta disponibilidad y sin costos operativos.
 
-El segundo producto es el Frontend Angular, desplegado en GitHub Pages como aplicación web estática. Esta plataforma fue seleccionada por su integración con GitHub, su disponibilidad pública mediante HTTPS y su facilidad para publicar builds frontend desde el repositorio.
+El segundo producto es el Frontend Angular, desplegado en Render como Static Site. Esta plataforma fue seleccionada porque compila el proyecto desde el repositorio en cada commit, sirve los archivos estáticos por HTTPS y permite configurar la reescritura de rutas que necesita una aplicación de una sola página.
 
-El tercer producto es el Backend API, desplegado en Render como un servicio Spring Boot documentado con Swagger. Este backend se conecta a una base de datos PostgreSQL desplegada en Render, utilizada para persistir usuarios, perfiles, simulaciones, órdenes, pagos y datos principales de la aplicación.
+El tercer producto es el Backend API, desplegado en Render como un Web Service con runtime Docker que ejecuta la aplicación Spring Boot documentada con Swagger. Este backend se conecta a la base de datos PostgreSQL `safestep-db`, también en Render y en la misma región (Frankfurt), utilizada para persistir usuarios, perfiles, simulaciones, órdenes, pagos y datos principales de la aplicación. Los tres recursos de Render, sus variables de entorno y los resultados de cada despliegue se evidencian en 5.2.5.8.
 
 <a id="toc-5-1-4-1-2-pipeline-de-ci-cd"></a>
 #### 5.1.4.1.2. Pipeline de CI/CD
 
-El equipo implementa pipelines de Integración Continua y Entrega Continua (CI/CD) utilizando GitHub Actions. Cada repositorio cuenta con su propio pipeline de CI/CD adaptado a sus características específicas.
+El equipo automatiza la construcción y la publicación de cada producto con la herramienta que corresponde a su plataforma: GitHub Actions para la Landing Page, Render para el frontend y el backend, y Jenkins para la integración continua del backend. Cada repositorio tiene un proceso adaptado a sus características.
 
-Para el repositorio de Frontend (Angular), el pipeline de CI/CD incluye las siguientes etapas: instalación de dependencias con npm install, verificación de código con ESLint y análisis estático, ejecución de pruebas unitarias con Karma o Jest, construcción de la aplicación para producción, y despliegue automático a GitHub Pages si las pruebas pasan exitosamente.
+Para el repositorio de Frontend (Angular), Render ejecuta en cada commit a `main` la instalación reproducible de dependencias con `npm ci` y la construcción de producción con `npm run build`, y publica el resultado si el build termina sin errores.
 
 Para el repositorio de Web Services (Spring Boot), el pipeline incluye: verificación de código con herramientas de análisis estático, compilación del proyecto con Maven, ejecución de pruebas unitarias y de integración, y construcción del artefacto JAR.
 
@@ -6433,33 +6433,44 @@ La URL pública del landing page es:
 
 <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
 
-<a id="toc-5-1-4-2-2-configuracion-de-frontend-en-github-pages"></a>
-#### 5.1.4.2.2. Configuración de Frontend en GitHub Pages
+<a id="toc-5-1-4-2-2-configuracion-de-frontend-en-render"></a>
+#### 5.1.4.2.2. Configuración de Frontend en Render
 
-El Frontend Angular se despliega en GitHub Pages como aplicación web estática. Los pasos de configuración incluyen generar el build de Angular, configurar la ruta base del proyecto y publicar los archivos generados en el repositorio correspondiente.
+El Frontend Angular se despliega en Render como Static Site conectado al repositorio `safestept-frontend`. La URL del backend de producción se define en `src/environments/environment.ts` (`platformProviderApiBaseUrl`), por lo que ese archivo debe apuntar al backend antes de construir el sitio.
 
-El despliegue publica los archivos estáticos generados por Angular. Para ello, el workflow toma el directorio de salida del build y lo envía a GitHub Pages:
+| Parámetro | Valor |
+|-----------|-------|
+| Nombre | `safestept-frontend-experimentos` |
+| Rama | `main` |
+| Build Command | `npm ci && npm run build` |
+| Publish Directory | `dist/safestep-frontend-v2/browser` |
+| Variable de entorno | `NODE_VERSION=22` (Angular 21 exige Node 20.19, 22.12 o superior) |
+| Redirects/Rewrites | Origen `/*`, destino `/index.html`, acción *Rewrite* |
+| Auto-Deploy | On Commit |
 
-```bash
-npm run build
-```
+La regla de reescritura es necesaria porque Angular resuelve las rutas en el navegador: sin ella, abrir o recargar `/app/dashboard` devolvería un 404. La URL pública del frontend es:
 
-La URL pública del frontend es:
-
-<a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
+<a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a>
 
 <a id="toc-5-1-4-2-3-configuracion-de-backend-api-en-render"></a>
 #### 5.1.4.2.3. Configuración de Backend API en Render
 
-El Backend API se despliega en Render como una aplicación Spring Boot. Esta plataforma fue seleccionada porque permite publicar el servicio web, conectar variables de entorno, exponer la documentación Swagger y mantener disponible el API para el frontend desplegado.
+El Backend API se despliega en Render como un Web Service con runtime Docker conectado al repositorio `safestept-backend`. Esta plataforma fue seleccionada porque construye la imagen a partir del `Dockerfile` del repositorio, permite definir variables de entorno y secretos, expone la documentación Swagger y mantiene disponible el API para el frontend desplegado.
 
-La configuración del backend se realiza mediante los archivos `application-dev.properties` y `application-prod.properties`, donde se define la conexión a PostgreSQL, el perfil de ejecución, las credenciales mediante variables de entorno y los parámetros necesarios para JWT y Stripe.
+| Parámetro | Valor |
+|-----------|-------|
+| Nombre | `safestept-backend-experimentos` |
+| Región | Frankfurt (la misma de la base de datos, para usar su hostname interno) |
+| Rama | `main` |
+| Runtime | Docker (`./Dockerfile`) |
+| Plan | Free |
+| Auto-Deploy | On Commit |
 
-La URL pública del backend desplegado es: <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
+La configuración se realiza mediante `application-prod.properties`, que lee la conexión a PostgreSQL, el secreto JWT y las claves de Stripe de variables de entorno; si falta alguna variable obligatoria, la aplicación no arranca. El perfil `prod` se activa con `SPRING_PROFILES_ACTIVE=prod` y el puerto lo toma la aplicación de la variable `PORT` que asigna Render. Desde el Trabajo Parcial el backend solo acepta peticiones de navegador desde los orígenes listados en `SAFESTEP_CORS_ALLOWED_ORIGINS`. La tabla completa de variables está en 5.2.5.8.
 
-La base de datos PostgreSQL desplegada en Render utiliza el siguiente host:
+La URL pública de la documentación del backend desplegado es: <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a>
 
-`dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com`
+La base de datos PostgreSQL `safestep-db` (versión 18, plan gratuito, región Frankfurt) se comunica con el backend por la red privada de Render usando su hostname interno. El plan gratuito caduca el 7 de noviembre de 2026.
 
 <a id="toc-5-1-4-3-procedimientos-de-despliegue"></a>
 ### 5.1.4.3. Procedimientos de Despliegue
@@ -6471,24 +6482,24 @@ El equipo establece procedimientos detallados para ejecutar despliegues, asegura
 
 Cada componente tiene su propio procedimiento de despliegue a producción. Para la Landing Page en GitHub Pages, el despliegue se activa automáticamente mediante GitHub Actions al hacer push a la rama `main`, ejecutando el build estático y publicando en la rama `gh-pages`.
 
-Para el Frontend en GitHub Pages, el despliegue se realiza mediante GitHub Actions, donde el pipeline ejecuta las pruebas, construye la aplicación y publica los archivos estáticos generados.
+Para el Frontend en Render, el despliegue se activa al hacer commit en la rama `main`: Render instala las dependencias, construye la aplicación Angular y publica los archivos estáticos generados.
 
-Para el Backend en Render, el despliegue se realiza desde el repositorio del backend. Render construye la aplicación Spring Boot, ejecuta el artefacto generado y conecta el servicio con la base de datos PostgreSQL configurada mediante variables de entorno y archivos de propiedades.
+Para el Backend en Render, el despliegue se realiza desde la rama `main` del repositorio del backend, ya sea automáticamente al recibir un commit o manualmente desde el panel. Render construye la imagen con el `Dockerfile` (que ejecuta las pruebas), inicia el servicio y lo conecta con la base de datos PostgreSQL configurada mediante variables de entorno. Los cambios llegan a `main` desde `develop` mediante un merge, siguiendo el GitFlow de 5.1.2.
 
 <a id="toc-5-1-4-3-2-verificacion-post-despliegue"></a>
 #### 5.1.4.3.2. Verificación Post-Despliegue
 
-Después de cada despliegue, el equipo debe verificar el correcto funcionamiento de cada componente accediendo a las URLs de despliegue correspondientes y realizando pruebas de humo (smoke tests) para confirmar que la aplicación responde correctamente.
+Después de cada despliegue, el equipo debe verificar el correcto funcionamiento de cada componente accediendo a las URLs de despliegue correspondientes y realizando pruebas de humo (smoke tests) para confirmar que la aplicación responde correctamente: Swagger UI del backend con respuesta 200, un endpoint protegido sin token con respuesta 401, la pantalla de inicio de sesión del frontend, la apertura directa de una ruta interna (`/app/dashboard`) y la petición previa de CORS desde el origen del frontend. Los resultados de la última verificación están en 5.2.5.8.
 
 <a id="toc-5-1-4-3-3-rollback"></a>
 #### 5.1.4.3.3. Rollback
 
-En caso de problemas en producción, el equipo puede realizar un rollback a la versión anterior. GitHub Pages permite revertir el despliegue restaurando el contenido anterior de la rama `gh-pages`. Para Render, el rollback se realiza restaurando una versión anterior del backend o revirtiendo el commit desplegado desde el repositorio.
+En caso de problemas en producción, el equipo puede realizar un rollback a la versión anterior. Para la Landing Page, GitHub Pages permite revertir el despliegue restaurando el contenido anterior de la rama `gh-pages`. Para el frontend y el backend en Render, el rollback se realiza volviendo a desplegar un despliegue anterior desde el historial de *Deploys* del panel o revirtiendo el commit desplegado en `main`.
 
 <a id="toc-5-1-4-4-monitoreo-y-logging"></a>
 ### 5.1.4.4. Monitoreo y Logging
 
-El equipo implementa capacidades de monitoreo y logging para mantener visibilidad sobre el estado de la aplicación en producción. GitHub Pages expone métricas básicas de uso a través de GitHub Insights. Para el tracking de errores, se puede integrar servicios como Sentry. Estas herramientas permiten identificar y resolver problemas rápidamente, asegurando la disponibilidad y calidad del servicio para los usuarios finales.
+El equipo implementa capacidades de monitoreo y logging para mantener visibilidad sobre el estado de la aplicación en producción. Render ofrece registros en vivo, métricas del servicio y el historial de eventos y despliegues del frontend y del backend, y el backend registra con SLF4J los errores inesperados que no controla ningún manejador específico. GitHub Pages expone métricas básicas de uso de la Landing Page a través de GitHub Insights. Para el tracking de errores, se puede integrar servicios como Sentry. Estas herramientas permiten identificar y resolver problemas rápidamente, asegurando la disponibilidad y calidad del servicio para los usuarios finales.
 
 <br>
 
@@ -10692,6 +10703,7 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
 - **Cupones canjeables (backend y frontend):** rediseño del cupón en dos tipos (descuento simple y descuento con compra mínima), canje con SafeCoins mediante la fachada ACL de gamificación, descuento aplicado a la orden y cobrado por Stripe, y liberación del cupón si el pago falla.
 - **Suites de pruebas:** 205 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.5.5 y 6.1).
 - **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube con el Quality Gate aprobado (ver 6.1 y 7.1).
+- **Despliegue:** frontend, backend y base de datos publicados en Render, en una cuenta propia del equipo (ver 5.2.5.8).
 - **Hallazgos corregidos:** la API responde 400 ante un JSON mal formado, CORS ya no admite cualquier origen y se resolvieron los bugs que reportó SonarQube; solo queda abierta la regla de CSRF, que es una decisión de diseño (ver 7.1).
 - **Pipeline de integración continua:** `Jenkinsfile` con siete etapas, y Jenkins y SonarQube configurados como código (ver 7.1).
 
@@ -10710,6 +10722,7 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
     <tbody>
         <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
         <tr><td>safestept-frontend</td><td>main</td><td>be56a72</td><td>feat: add admin and coupon redemption features</td><td>—</td><td>17/09/2026</td></tr>
+        <tr><td>safestept-frontend</td><td>main</td><td>d9845f5</td><td>chore: point the production environment to the new Render backend</td><td>—</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
@@ -11422,7 +11435,14 @@ El Sprint 5 dejó listas las vistas de administración y de canje de cupones y l
 <a id="toc-5-2-5-7-services-documentation-evidence-for-sprint-review"></a>
 ### 5.2.5.7. Services Documentation Evidence for Sprint Review
 
-El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de roles y de canje de cupones, y modificó la creación de órdenes. Todos están publicados en la Swagger UI del backend (`/swagger-ui/index.html`), que en este Sprint se consultó en la instancia local de pruebas (`http://localhost:8093/swagger-ui/index.html`). Todos requieren autenticación; los de roles requieren además `ROLE_ADMIN`.
+El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de roles y de canje de cupones, y modificó la creación de órdenes. Todos están publicados en la Swagger UI del backend desplegado en Render, <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a>, que lista 73 operaciones; la definición OpenAPI está en `/v3/api-docs`. Todos requieren autenticación; los de roles requieren además `ROLE_ADMIN`.
+
+<div align="center">
+  <p><b>Captura:</b> Swagger UI del backend publicado en Render</p>
+  <img src="markdown/assets/images/chapter-5/DespliegueMelgarejo/BackendDesplegado.png" alt="Swagger UI del backend desplegado" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
 
 | Endpoint | Verbo | Descripción | Parámetros | Respuesta |
 |----------|-------|-------------|------------|-----------|
@@ -11453,15 +11473,105 @@ El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de r
 <a id="toc-5-2-5-8-software-deployment-evidence-for-sprint-review"></a>
 ### 5.2.5.8. Software Deployment Evidence for Sprint Review
 
-El trabajo de despliegue del Sprint 5 consistió en automatizar la integración continua del backend. No se crearon cuentas ni recursos nuevos en proveedores cloud: la infraestructura del pipeline se ejecuta como contenedores Docker en el equipo del desarrollador y se describe como código en la carpeta `ci/` del backend.
+En el Sprint 5 el equipo desplegó el frontend, el backend y la base de datos en **Render**, en una cuenta propia, y dejó el proceso de integración continua con Jenkins y SonarQube corriendo en contenedores Docker locales. La Landing Page sigue publicada en GitHub Pages sin cambios.
+
+**Recursos creados en Render (región Frankfurt):**
+
+| Recurso | Tipo | Plan | Origen | URL |
+|---------|------|------|--------|-----|
+| `safestep-db` | PostgreSQL 18 | Free (1 GB) | Servicio gestionado | Hostname interno, accesible solo desde los servicios de la misma región |
+| `safestept-backend-experimentos` | Web Service (runtime Docker) | Free | Repositorio `safestept-backend`, rama `main` | <a href="https://safestept-backend-experimentos.onrender.com">https://safestept-backend-experimentos.onrender.com</a> |
+| `safestept-frontend-experimentos` | Static Site | Free | Repositorio `safestept-frontend`, rama `main` | <a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a> |
 
 **Actividades realizadas:**
+
+1. Creación de la base de datos PostgreSQL `safestep-db`; Render generó el nombre de la base (`safestep_i9f3`), el usuario y la contraseña.
+2. Creación del Web Service del backend a partir del `Dockerfile` del repositorio, en la misma región que la base de datos para usar su hostname interno.
+3. Configuración de las variables de entorno del backend (tabla siguiente); ningún secreto se guarda en el repositorio.
+4. Cambio de `src/environments/environment.ts` del frontend para apuntar a la URL del backend nuevo, y confirmación del cambio en `main` (commit `d9845f5`).
+5. Creación del Static Site del frontend con el comando de compilación `npm ci && npm run build`, el directorio de publicación `dist/safestep-frontend-v2/browser` y la variable `NODE_VERSION=22`.
+6. Regla de reescritura `/*` hacia `/index.html` para que las rutas de Angular (por ejemplo `/app/dashboard`) funcionen al recargar la página.
+7. Registro del origen del frontend en la variable `SAFESTEP_CORS_ALLOWED_ORIGINS` del backend, que desde este Sprint ya no admite cualquier origen.
+8. Activación del despliegue automático al recibir un commit (*Auto-Deploy: On Commit*) en ambos servicios.
+
+**Variables de entorno del backend:**
+
+| Variable | Contenido | Secreto |
+|----------|-----------|---------|
+| `DATABASE_URL` | Hostname interno de la base de datos | No |
+| `DATABASE_PORT` | `5432` | No |
+| `DATABASE_NAME` | `safestep_i9f3` | No |
+| `DATABASE_USER` | `safestep` | No |
+| `DATABASE_PASSWORD` | Contraseña de la base de datos | Sí |
+| `JWT_SECRET` | Clave de firma de los tokens, generada al azar | Sí |
+| `SPRING_PROFILES_ACTIVE` | `prod` | No |
+| `SAFESTEP_ADMIN_USERNAME` y `SAFESTEP_ADMIN_PASSWORD` | Primer usuario administrador (se crea solo si no existe ninguno) | Sí |
+| `SAFESTEP_CORS_ALLOWED_ORIGINS` | `http://localhost:4200` y la URL del frontend desplegado | No |
+| `STRIPE_SECRET_KEY` | Clave secreta de Stripe | Sí |
+
+**Resultado de los despliegues:**
+
+| Servicio | Commit | Disparador | Duración | Estado | Fecha |
+|----------|--------|------------|----------|--------|-------|
+| Frontend | `d9845f5` chore: point the production environment to the new Render backend | Primer despliegue | 47 s | Deploy succeeded, Live | 8-10-2026, 8:03 PM (GMT-5) |
+| Backend | `e47b082` Merge branch 'develop' into main | Manual desde el panel | 3 min 35 s | Deploy succeeded, Live | 8-10-2026, 8:10 PM (GMT-5) |
+
+Al construir la imagen, el backend ejecuta en Render las 238 pruebas (sin fallos) antes de empaquetar el JAR. La compilación del frontend usó Node.js 22.23.3 y emitió una advertencia: el paquete inicial supera el presupuesto de 700 kB en 36.6 kB (736.61 kB en total).
+
+<div align="center">
+  <p><b>Captura:</b> Panel de la base de datos safestep-db en Render</p>
+  <img src="markdown/assets/images/chapter-5/DespliegueMelgarejo/RenderBaseDatosDashboard.png" alt="Base de datos en Render" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Variables de entorno del backend en Render (los secretos aparecen ocultos)</p>
+  <img src="markdown/assets/images/chapter-5/DespliegueMelgarejo/VariablesEntornoBackend.png" alt="Variables de entorno del backend" width="640" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Despliegue del backend en Render: Deploy succeeded, Live</p>
+  <img src="markdown/assets/images/chapter-5/DespliegueMelgarejo/RenderBackendDashboard.png" alt="Despliegue del backend en Render" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+<div align="center">
+  <p><b>Captura:</b> Despliegue del frontend en Render: Deploy succeeded, Live</p>
+  <img src="markdown/assets/images/chapter-5/DespliegueMelgarejo/RenderFrontendDashboard.png" alt="Despliegue del frontend en Render" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+
+**Verificación posterior al despliegue** (pruebas de humo contra las URL públicas):
+
+| Prueba | Resultado |
+|--------|-----------|
+| Frontend: `/`, `/auth` y `/app/dashboard` | HTTP 200; la regla de reescritura permite abrir rutas internas directamente |
+| Backend: `/swagger-ui/index.html` y `/v3/api-docs` | HTTP 200 (73 operaciones publicadas) |
+| Backend: endpoint protegido sin token | HTTP 401 |
+| Backend: cuerpo JSON mal formado | HTTP 400 con `VALIDATION_ERROR` |
+| CORS: petición previa desde el frontend desplegado | HTTP 200 con `Access-Control-Allow-Origin` igual a la URL del frontend |
+| CORS: petición previa desde un origen desconocido | HTTP 403 |
+
+<div align="center">
+  <p><b>Captura:</b> Frontend de SafeStep publicado en Render (pantalla de inicio de sesión)</p>
+  <img src="markdown/assets/images/chapter-5/DespliegueMelgarejo/FrontendDesplegado.png" alt="Frontend desplegado" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
+
+
+**Limitaciones del plan gratuito.** El backend se suspende tras unos 15 minutos sin tráfico y la primera petición posterior tarda al menos 50 segundos, y bastante más en este proyecto porque Spring Boot necesita varios minutos para arrancar con 0.1 CPU. La base de datos gratuita **caduca el 7 de noviembre de 2026** y se elimina si no se pasa a un plan de pago, por lo que debe migrarse o recrearse antes de esa fecha si el producto sigue en uso.
+
+**Integración continua local.** Además del despliegue en Render, el trabajo de este Sprint incluyó los siguientes pasos de infraestructura de integración continua, que corren en el equipo del desarrollador:
 
 1. Construcción de la imagen `safestep-jenkins:1.0` (Jenkins LTS con JDK 25 y, para compilar el proyecto, JDK 26 y Maven 3.9.11).
 2. Creación del `docker-compose.yml` con Jenkins (puerto 9089) y SonarQube (puerto 9000) en la red `spring-postgres-net`.
 3. Configuración de Jenkins con *Configuration as Code*: usuario administrador, servidor SonarQube `MiSonarServer`, credencial del token y el job `safestep-backend`.
 4. Registro del webhook `http://jenkins-master:9089/sonarqube-webhook/` en SonarQube.
 5. Escritura del `Jenkinsfile` y ejecución del pipeline sobre la rama `develop`.
+
+El despliegue a Render no lo realiza Jenkins: lo dispara el propio repositorio o se lanza a mano desde el panel de Render; la entrega y el despliegue continuos mediante pipeline no forman parte de esta entrega.
 
 <div align="center">
   <p><b>Captura:</b> Pipeline `safestep-backend` en Jenkins con sus etapas y ejecuciones</p>
@@ -11490,7 +11600,7 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
         <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
         <tr><td>Ayala Fernandez, Jorge Brayan</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>22</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>23</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
     </tbody>
 </table>
@@ -12911,9 +13021,9 @@ Durante el Sprint 3 se implemento el backend de SafeStep con Spring Boot, Java, 
 
 Durante el Sprint 4 se fortalecio el producto con la implementacion de IAM y pagos con Stripe tanto en frontend como en backend. La autenticacion con JWT, las rutas protegidas, el manejo de perfil de usuario, la integracion con Stripe Checkout y la persistencia en PostgreSQL desplegado en Render hicieron que SafeStep pasara de ser una simulacion academica a una aplicacion web mas cercana a un entorno real. Este sprint tambien permitio validar flujos criticos como registro, inicio de sesion, compra de productos, confirmacion de pago y despliegue publico.
 
-Durante el Sprint 5 el foco se desplazo de construir funcionalidades a demostrar y proteger su calidad. Se incorporaron al Product Backlog el panel de administracion, la gestion de roles y el canje de cupones con SafeCoins (US57 a US61) junto con nueve technical stories de pruebas y DevOps (TS25 a TS33), y se construyeron tres suites automatizadas: 205 pruebas unitarias y de integracion, 33 escenarios BDD con Cucumber y 36 escenarios de API con Karate. La cobertura de instrucciones del codigo de aplicacion paso de 44.3 % a 93.8 % y el build exige ahora un minimo de 80 %. Las pruebas unitarias y BDD se ejecutan dentro de un pipeline de Jenkins que tambien mide el estilo con Checkstyle, verifica la cobertura, analiza el codigo con SonarQube y empaqueta el backend; la ultima ejecucion termino en exito en 3 minutos y 42 segundos. Las pruebas de API se ejecutan contra una instancia local del backend.
+Durante el Sprint 5 el foco se desplazo de construir funcionalidades a demostrar y proteger su calidad. Se incorporaron al Product Backlog el panel de administracion, la gestion de roles y el canje de cupones con SafeCoins (US57 a US61) junto con siete technical stories de pruebas e integracion continua (TS25 a TS31), y se construyeron tres suites automatizadas: 205 pruebas unitarias y de integracion, 33 escenarios BDD con Cucumber y 36 escenarios de API con Karate. La cobertura de instrucciones del codigo de aplicacion paso de 44.3 % a 93.8 % y el build exige ahora un minimo de 80 %. Las pruebas unitarias y BDD se ejecutan dentro de un pipeline de Jenkins que tambien mide el estilo con Checkstyle, verifica la cobertura, analiza el codigo con SonarQube y empaqueta el backend; la ultima ejecucion termino en exito en 3 minutos y 42 segundos. Las pruebas de API se ejecutan contra una instancia local del backend. Ademas, el equipo desplego por su cuenta el frontend, el backend y la base de datos en Render (Static Site, Web Service con Docker y PostgreSQL 18), con CORS restringido al frontend publicado, y verifico los tres con pruebas de humo contra las URL publicas.
 
-El trabajo de verificacion tambien produjo hallazgos que el equipo decidio documentar y, cuando eran reales, corregir: la API respondia HTTP 500 en lugar de 400 ante un JSON mal formado, CORS estaba abierto a cualquier origen y SonarQube senalaba tres bugs menores. Los tres problemas se corrigieron y se verificaron con pruebas nuevas y con el pipeline; el Quality Gate, que evalua el codigo nuevo, llego a fallar una vez por una incidencia de estilo en el codigo recien escrito y volvio a aprobar tras corregirla. Quedan como puntos abiertos que Checkstyle reporta 8,034 observaciones de estilo sobre el codigo existente (en su mayoria de indentacion, porque el proyecto usa cuatro espacios y las reglas de Google exigen dos), que SonarQube mantiene una vulnerabilidad por la proteccion CSRF deshabilitada, aceptable en una API con JWT, y que el modulo de perfiles tiene una cobertura de 62.1 %.
+El trabajo de verificacion tambien produjo hallazgos que el equipo decidio documentar y, cuando eran reales, corregir: la API respondia HTTP 500 en lugar de 400 ante un JSON mal formado, CORS estaba abierto a cualquier origen y SonarQube senalaba tres bugs menores. Los tres problemas se corrigieron y se verificaron con pruebas nuevas y con el pipeline; el Quality Gate, que evalua el codigo nuevo, llego a fallar una vez por una incidencia de estilo en el codigo recien escrito y volvio a aprobar tras corregirla. Quedan como puntos abiertos que Checkstyle reporta 8,034 observaciones de estilo sobre el codigo existente (en su mayoria de indentacion, porque el proyecto usa cuatro espacios y las reglas de Google exigen dos), que SonarQube mantiene una vulnerabilidad por la proteccion CSRF deshabilitada, aceptable en una API con JWT, que el modulo de perfiles tiene una cobertura de 62.1 %, y que el plan gratuito de la base de datos en Render caduca el 7 de noviembre de 2026 y el backend gratuito se suspende por inactividad y tarda varios minutos en despertar.
 
 Las entrevistas de validacion y la evaluacion heuristica evidenciaron que SafeStep es percibido como un producto claro, util y coherente con su objetivo. Los usuarios comprendieron la propuesta de valor desde la Landing Page, identificaron las secciones principales de la aplicacion y valoraron especialmente las simulaciones medicas, la retroalimentacion posterior a cada respuesta, el seguimiento del progreso y la relacion entre aprendizaje y productos de emergencia. No se identificaron problemas criticos de severidad alta en la experiencia evaluada.
 
@@ -12944,7 +13054,7 @@ En sintesis, el contraste entre Lean UX y los resultados obtenidos muestra que S
 
 **Mediano plazo:** Se recomienda ampliar las simulaciones con niveles de dificultad, mayor cantidad de pasos y escenarios mas detallados. Esto permitiria atender tanto a usuarios principiantes como a brigadistas o personas con experiencia previa en primeros auxilios.
 
-**Corto plazo:** Se recomienda subir la cobertura del modulo de perfiles, revisar los 206 code smells que reporta SonarQube y decidir si se migra el codigo a la indentacion de dos espacios de las reglas de Google para que Checkstyle pase a ser una puerta de calidad y no solo un reporte. Tambien conviene marcar en SonarQube como revisada la regla de CSRF, que es una decision de diseno.
+**Corto plazo:** Se recomienda migrar o recrear la base de datos de Render antes del 7 de noviembre de 2026 si el producto sigue en uso, activar un servicio externo que despierte el backend antes de las demostraciones, subir la cobertura del modulo de perfiles, revisar los 206 code smells que reporta SonarQube y decidir si se migra el codigo a la indentacion de dos espacios de las reglas de Google para que Checkstyle pase a ser una puerta de calidad y no solo un reporte. Tambien conviene marcar en SonarQube como revisada la regla de CSRF, que es una decision de diseno.
 
 **Mediano plazo:** Se recomienda ampliar las pruebas a los flujos que hoy quedan fuera (pago con Stripe y finalizacion de simulaciones), incorporar pruebas de sistema de la aplicacion web y movil y extender el pipeline con la entrega y el despliegue continuos.
 
@@ -13130,9 +13240,9 @@ Este anexo centraliza los repositorios oficiales del equipo Chronos y los enlace
 - Repositorio del frontend web: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git</a>
 - Repositorio del backend web: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git</a>
 - Landing page desplegada: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/" style="word-break: break-all; overflow-wrap: anywhere;">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a>
-- Frontend web desplegado: <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/" style="word-break: break-all; overflow-wrap: anywhere;">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a>
-- Backend desplegado en Render: <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html" style="word-break: break-all; overflow-wrap: anywhere;">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
-- Base de datos PostgreSQL en Render: `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com`
+- Frontend web desplegado en Render: <a href="https://safestept-frontend-experimentos.onrender.com" style="word-break: break-all; overflow-wrap: anywhere;">https://safestept-frontend-experimentos.onrender.com</a>
+- Backend desplegado en Render (Swagger UI): <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html" style="word-break: break-all; overflow-wrap: anywhere;">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a>
+- Base de datos PostgreSQL en Render: `safestep-db` (PostgreSQL 18, plan gratuito, región Frankfurt; acceso solo por la red privada de Render)
 - Product Backlog en Trello: <a href="https://trello.com/b/UHs6EvyH/safestep-team-3" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/b/UHs6EvyH/safestep-team-3</a>
 - Sprint Backlog 1 en Trello: <a href="https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/invite/b/6a33714212af251d16ad5375/ATTIc66162c0ecd0e36388869fdbf265255955DE7093/sprint-1-opensource</a>
 - Sprint Backlog 3 en Trello: <a href="https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3" style="word-break: break-all; overflow-wrap: anywhere;">https://trello.com/invite/b/6a3366e7a1ab6de28a2182fc/ATTI70030143a2ae3b808fd71a72133e3950E86F42D3/sprint-3</a>
