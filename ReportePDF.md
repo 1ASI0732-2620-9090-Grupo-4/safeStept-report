@@ -11767,6 +11767,7 @@ La Landing Page se publica en GitHub Pages a partir de la rama `gh-pages`, con H
         <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Committed on (Date)</b></td></tr>
         <tr><td>safestept-landing-page</td><td>main</td><td>76700a8</td><td>Initial commit</td><td>05/09/2026</td></tr>
         <tr><td>safestept-landing-page</td><td>main</td><td>d20a0d8</td><td>chore: add initial project files and assets</td><td>05/09/2026</td></tr>
+        <tr><td>safestept-landing-page</td><td>main</td><td>208e670</td><td>fix: point frontend call-to-action links to the new deployed application</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
@@ -12196,7 +12197,7 @@ El historial de commits de la rama `main`, tal como está publicado en GitHub, e
 <a id="toc-5-2-7-restful-api-documentation"></a>
 ## 5.2.7. RESTful API documentation
 
-Esta sección documenta los endpoints de la API REST de SafeStep. La documentación se genera con OpenAPI 3.1 a partir de las anotaciones de los controladores y se publica con Swagger UI en el backend desplegado. Las tablas siguientes se obtuvieron de la definición OpenAPI publicada en <a href="https://safestept-backend-experimentos.onrender.com/v3/api-docs">https://safestept-backend-experimentos.onrender.com/v3/api-docs</a>, por lo que reflejan exactamente lo que el servicio desplegado expone: **73 operaciones** agrupadas en nueve controladores y **29 modelos** de datos.
+Esta sección documenta los endpoints de la API REST de SafeStep. La documentación se genera con OpenAPI 3.1 a partir de las anotaciones de los controladores y se publica con Swagger UI en el backend desplegado. Las tablas siguientes se obtuvieron de la definición OpenAPI publicada en <a href="https://safestept-backend-experimentos.onrender.com/v3/api-docs">https://safestept-backend-experimentos.onrender.com/v3/api-docs</a>, por lo que reflejan exactamente lo que el servicio desplegado expone: **73 operaciones** agrupadas en nueve controladores y **52 modelos** de datos.
 
 | Elemento | Enlace |
 |----------|--------|
@@ -12276,9 +12277,9 @@ Perfil de la persona usuaria.
 
 | Verbo | Ruta | Descripción | Acceso | Parámetros | Cuerpo de la solicitud | Respuestas |
 |-------|------|-------------|--------|------------|------------------------|------------|
-| GET | `/api/v1/profiles/me` | Get current SafeStep profile | Sesión iniciada | — | — | 200 |
-| PUT | `/api/v1/profiles/me` | Update current SafeStep profile | Sesión iniciada | — | `UpdateProfileResource` (firstName*: texto, lastName*: texto, email*: texto, street*: texto, number: texto, city*: texto, postalCode*: texto, …) | 200 |
-| GET | `/api/v1/profiles` | Get all profiles | Sesión iniciada | — | — | 200 → `ProfileResponse` |
+| GET | `/api/v1/profiles/me` | Get current SafeStep profile | Sesión iniciada | — | — | 200 → `ProfileResponse`, 404 |
+| PUT | `/api/v1/profiles/me` | Update current SafeStep profile | Sesión iniciada | — | `UpdateProfileResource` (firstName*: texto, lastName*: texto, email*: texto, street*: texto, number: texto, city*: texto, postalCode*: texto, …) | 200 → `ProfileResponse`, 201 → `ProfileResponse` |
+| GET | `/api/v1/profiles` | Get all profiles | Sesión iniciada | — | — | 200 → `ProfileResponse[]` |
 | POST | `/api/v1/profiles` | Create a new profile | Sesión iniciada | — | `CreateProfileRequest` (firstName*: texto, lastName*: texto, email*: texto, street*: texto, number: texto, city*: texto, postalCode*: texto, …) | 201 → `ProfileResponse`, 400, 409 |
 | GET | `/api/v1/profiles/{profileId}` | Get profile by ID | Sesión iniciada | `profileId` (path, entero, obligatorio) | — | 200 → `ProfileResponse`, 404 |
 
@@ -12290,14 +12291,14 @@ Catálogo de simulaciones médicas y registro de intentos.
 
 | Verbo | Ruta | Descripción | Acceso | Parámetros | Cuerpo de la solicitud | Respuestas |
 |-------|------|-------------|--------|------------|------------------------|------------|
-| GET | `/api/v1/simulations/{simulationId}` | Get medical simulation by identifier | Sesión iniciada | `simulationId` (path, texto, obligatorio) | — | 200 |
-| PUT | `/api/v1/simulations/{simulationId}` | Update medical simulation | Administrador | `simulationId` (path, texto, obligatorio) | `SimulationResource` (id: texto, title: texto, emergencyType: texto, difficulty: texto, durationMinutes: entero, xpReward: entero, imageUrl: texto, …) | 200 |
-| DELETE | `/api/v1/simulations/{simulationId}` | Delete medical simulation | Administrador | `simulationId` (path, texto, obligatorio) | — | 200 |
+| GET | `/api/v1/simulations/{simulationId}` | Get medical simulation by identifier | Sesión iniciada | `simulationId` (path, texto, obligatorio) | — | 200 → `SimulationResource`, 404 |
+| PUT | `/api/v1/simulations/{simulationId}` | Update medical simulation | Administrador | `simulationId` (path, texto, obligatorio) | `SimulationResource` (id: texto, title: texto, emergencyType: texto, difficulty: texto, durationMinutes: entero, xpReward: entero, imageUrl: texto, …) | 200 → `SimulationResource` |
+| DELETE | `/api/v1/simulations/{simulationId}` | Delete medical simulation | Administrador | `simulationId` (path, texto, obligatorio) | — | 204 |
 | GET | `/api/v1/simulations` | Get all medical simulations | Sesión iniciada | — | — | 200 → `SimulationResource[]` |
-| POST | `/api/v1/simulations` | Create medical simulation | Administrador | — | `SimulationResource` (id: texto, title: texto, emergencyType: texto, difficulty: texto, durationMinutes: entero, xpReward: entero, imageUrl: texto, …) | 200 |
-| POST | `/api/v1/simulations/{simulationId}/attempts` | Create a medical simulation attempt | Sesión iniciada | `simulationId` (path, texto, obligatorio) | `CreateAttemptResource` (mode*: texto, startedAt*: fecha-hora, completedAt: fecha-hora, score: entero, totalSteps: entero, correctSteps: entero, timeElapsed: entero, …) | 200 |
-| GET | `/api/v1/simulations/attempts/me` | Get current user simulation attempts | Sesión iniciada | — | — | 200 |
-| DELETE | `/api/v1/simulations/` | Delete medical simulation | Administrador | — | — | 200 |
+| POST | `/api/v1/simulations` | Create medical simulation | Administrador | — | `SimulationResource` (id: texto, title: texto, emergencyType: texto, difficulty: texto, durationMinutes: entero, xpReward: entero, imageUrl: texto, …) | 201 → `SimulationResource` |
+| POST | `/api/v1/simulations/{simulationId}/attempts` | Create a medical simulation attempt | Sesión iniciada | `simulationId` (path, texto, obligatorio) | `CreateAttemptResource` (mode*: texto, startedAt*: fecha-hora, completedAt: fecha-hora, score: entero, totalSteps: entero, correctSteps: entero, timeElapsed: entero, …) | 201 → `SimulationAttemptResource` |
+| GET | `/api/v1/simulations/attempts/me` | Get current user simulation attempts | Sesión iniciada | — | — | 200 → `SimulationAttemptResource[]` |
+| DELETE | `/api/v1/simulations/` | Delete medical simulation | Administrador | — | — | 204 |
 
 
 <a id="toc-5-2-7-8-gamification"></a>
@@ -12307,23 +12308,23 @@ Resumen de progreso, misiones, insignias, ranking y movimientos de SafeCoins.
 
 | Verbo | Ruta | Descripción | Acceso | Parámetros | Cuerpo de la solicitud | Respuestas |
 |-------|------|-------------|--------|------------|------------------------|------------|
-| PUT | `/api/v1/gamification/missions/{missionId}` | Update mission | Administrador | `missionId` (path, texto, obligatorio) | `MissionResource` (id: texto, title: texto, cadence: texto, progress: entero, goal: entero, rewardXp: entero, rewardCoins: entero, …) | 200 |
-| DELETE | `/api/v1/gamification/missions/{missionId}` | Delete mission | Administrador | `missionId` (path, texto, obligatorio) | — | 200 |
-| PUT | `/api/v1/gamification/badges/{badgeId}` | Update badge | Administrador | `badgeId` (path, texto, obligatorio) | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 200 |
-| DELETE | `/api/v1/gamification/badges/{badgeId}` | Delete badge | Administrador | `badgeId` (path, texto, obligatorio) | — | 200 |
-| PUT | `/api/v1/gamification/badges/me/{badgeId}` | Update badge | Administrador | `badgeId` (path, texto, obligatorio) | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 200 |
-| DELETE | `/api/v1/gamification/badges/me/{badgeId}` | Delete badge | Administrador | `badgeId` (path, texto, obligatorio) | — | 200 |
-| GET | `/api/v1/gamification/missions` | Get available missions | Sesión iniciada | — | — | 200 |
-| POST | `/api/v1/gamification/missions` | Create mission | Administrador | — | `MissionResource` (id: texto, title: texto, cadence: texto, progress: entero, goal: entero, rewardXp: entero, rewardCoins: entero, …) | 200 |
-| GET | `/api/v1/gamification/badges/me` | Get current user badges | Sesión iniciada | — | — | 200 |
-| POST | `/api/v1/gamification/badges/me` | Create badge | Administrador | — | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 200 |
-| POST | `/api/v1/gamification/badges` | Create badge | Administrador | — | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 200 |
-| GET | `/api/v1/gamification/summary/me` | Get current user gamification summary | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/gamification/leaderboard` | Get SafeStep leaderboard | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/gamification/coin-transactions/me` | Get current user coin transactions | Sesión iniciada | — | — | 200 |
-| DELETE | `/api/v1/gamification/missions/` | Delete mission | Administrador | — | — | 200 |
-| DELETE | `/api/v1/gamification/badges/me/` | Delete badge | Administrador | — | — | 200 |
-| DELETE | `/api/v1/gamification/badges/` | Delete badge | Administrador | — | — | 200 |
+| PUT | `/api/v1/gamification/missions/{missionId}` | Update mission | Administrador | `missionId` (path, texto, obligatorio) | `MissionResource` (id: texto, title: texto, cadence: texto, progress: entero, goal: entero, rewardXp: entero, rewardCoins: entero, …) | 200 → `MissionResource` |
+| DELETE | `/api/v1/gamification/missions/{missionId}` | Delete mission | Administrador | `missionId` (path, texto, obligatorio) | — | 204 |
+| PUT | `/api/v1/gamification/badges/{badgeId}` | Update badge | Administrador | `badgeId` (path, texto, obligatorio) | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 200 → `BadgeResource` |
+| DELETE | `/api/v1/gamification/badges/{badgeId}` | Delete badge | Administrador | `badgeId` (path, texto, obligatorio) | — | 204 |
+| PUT | `/api/v1/gamification/badges/me/{badgeId}` | Update badge | Administrador | `badgeId` (path, texto, obligatorio) | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 200 → `BadgeResource` |
+| DELETE | `/api/v1/gamification/badges/me/{badgeId}` | Delete badge | Administrador | `badgeId` (path, texto, obligatorio) | — | 204 |
+| GET | `/api/v1/gamification/missions` | Get available missions | Sesión iniciada | — | — | 200 → `MissionResource[]` |
+| POST | `/api/v1/gamification/missions` | Create mission | Administrador | — | `MissionResource` (id: texto, title: texto, cadence: texto, progress: entero, goal: entero, rewardXp: entero, rewardCoins: entero, …) | 201 → `MissionResource` |
+| GET | `/api/v1/gamification/badges/me` | Get current user badges | Sesión iniciada | — | — | 200 → `BadgeResource[]` |
+| POST | `/api/v1/gamification/badges/me` | Create badge | Administrador | — | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 201 → `BadgeResource` |
+| POST | `/api/v1/gamification/badges` | Create badge | Administrador | — | `BadgeResource` (id: texto, name: texto, rarity: texto, unlocked: booleano, description: texto, unlockRequirement: texto) | 201 → `BadgeResource` |
+| GET | `/api/v1/gamification/summary/me` | Get current user gamification summary | Sesión iniciada | — | — | 200 → `SummaryResource` |
+| GET | `/api/v1/gamification/leaderboard` | Get SafeStep leaderboard | Sesión iniciada | — | — | 200 → `LeaderboardResource[]` |
+| GET | `/api/v1/gamification/coin-transactions/me` | Get current user coin transactions | Sesión iniciada | — | — | 200 → `CoinTransactionResource[]` |
+| DELETE | `/api/v1/gamification/missions/` | Delete mission | Administrador | — | — | 204 |
+| DELETE | `/api/v1/gamification/badges/me/` | Delete badge | Administrador | — | — | 204 |
+| DELETE | `/api/v1/gamification/badges/` | Delete badge | Administrador | — | — | 204 |
 
 
 <a id="toc-5-2-7-9-commerce-catalog"></a>
@@ -12333,21 +12334,21 @@ Productos, categorías, kits, reseñas, recomendaciones y catálogo de cupones.
 
 | Verbo | Ruta | Descripción | Acceso | Parámetros | Cuerpo de la solicitud | Respuestas |
 |-------|------|-------------|--------|------------|------------------------|------------|
-| GET | `/api/v1/commerce/products/{productId}` | Get store product by identifier | Sesión iniciada | `productId` (path, texto, obligatorio) | — | 200 |
-| PUT | `/api/v1/commerce/products/{productId}` | Update store product | Administrador | `productId` (path, texto, obligatorio) | `ProductResource` (id: texto, name: texto, category: texto, type: texto, price: número, oldPrice: número, rating: número, …) | 200 |
-| DELETE | `/api/v1/commerce/products/{productId}` | Delete store product | Administrador | `productId` (path, texto, obligatorio) | — | 200 |
-| PUT | `/api/v1/commerce/coupons/{couponId}` | Update redeemable coupon | Administrador | `couponId` (path, texto, obligatorio) | `CouponResource` (id: texto, title: texto, costCoins: entero, type: texto, discountPercentage: entero, minPurchaseAmount: número) | 200 |
-| DELETE | `/api/v1/commerce/coupons/{couponId}` | Delete redeemable coupon | Administrador | `couponId` (path, texto, obligatorio) | — | 200 |
-| GET | `/api/v1/commerce/products` | Get all store products | Sesión iniciada | — | — | 200 |
-| POST | `/api/v1/commerce/products` | Create store product | Administrador | — | `ProductResource` (id: texto, name: texto, category: texto, type: texto, price: número, oldPrice: número, rating: número, …) | 200 |
-| GET | `/api/v1/commerce/coupons` | Get redeemable coupons | Sesión iniciada | — | — | 200 |
-| POST | `/api/v1/commerce/coupons` | Create redeemable coupon | Administrador | — | `CouponResource` (id: texto, title: texto, costCoins: entero, type: texto, discountPercentage: entero, minPurchaseAmount: número) | 200 |
-| GET | `/api/v1/commerce/reviews` | Get product reviews | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/commerce/recommendations/me` | Get current user personalized product recommendations | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/commerce/kits` | Get emergency kits | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/commerce/categories` | Get product categories | Sesión iniciada | — | — | 200 |
-| DELETE | `/api/v1/commerce/products/` | Delete store product | Administrador | — | — | 200 |
-| DELETE | `/api/v1/commerce/coupons/` | Delete redeemable coupon | Administrador | — | — | 200 |
+| GET | `/api/v1/commerce/products/{productId}` | Get store product by identifier | Sesión iniciada | `productId` (path, texto, obligatorio) | — | 200 → `ProductResource`, 404 |
+| PUT | `/api/v1/commerce/products/{productId}` | Update store product | Administrador | `productId` (path, texto, obligatorio) | `ProductResource` (id: texto, name: texto, category: texto, type: texto, price: número, oldPrice: número, rating: número, …) | 200 → `ProductResource` |
+| DELETE | `/api/v1/commerce/products/{productId}` | Delete store product | Administrador | `productId` (path, texto, obligatorio) | — | 204 |
+| PUT | `/api/v1/commerce/coupons/{couponId}` | Update redeemable coupon | Administrador | `couponId` (path, texto, obligatorio) | `CouponResource` (id: texto, title: texto, costCoins: entero, type: texto, discountPercentage: entero, minPurchaseAmount: número) | 200 → `CouponResource` |
+| DELETE | `/api/v1/commerce/coupons/{couponId}` | Delete redeemable coupon | Administrador | `couponId` (path, texto, obligatorio) | — | 204 |
+| GET | `/api/v1/commerce/products` | Get all store products | Sesión iniciada | — | — | 200 → `ProductResource[]` |
+| POST | `/api/v1/commerce/products` | Create store product | Administrador | — | `ProductResource` (id: texto, name: texto, category: texto, type: texto, price: número, oldPrice: número, rating: número, …) | 201 → `ProductResource` |
+| GET | `/api/v1/commerce/coupons` | Get redeemable coupons | Sesión iniciada | — | — | 200 → `CouponResource[]` |
+| POST | `/api/v1/commerce/coupons` | Create redeemable coupon | Administrador | — | `CouponResource` (id: texto, title: texto, costCoins: entero, type: texto, discountPercentage: entero, minPurchaseAmount: número) | 201 → `CouponResource` |
+| GET | `/api/v1/commerce/reviews` | Get product reviews | Sesión iniciada | — | — | 200 → `objeto[]` |
+| GET | `/api/v1/commerce/recommendations/me` | Get current user personalized product recommendations | Sesión iniciada | — | — | 200 → `ProductRecommendation[]` |
+| GET | `/api/v1/commerce/kits` | Get emergency kits | Sesión iniciada | — | — | 200 → `EmergencyKit[]` |
+| GET | `/api/v1/commerce/categories` | Get product categories | Sesión iniciada | — | — | 200 → `Category[]` |
+| DELETE | `/api/v1/commerce/products/` | Delete store product | Administrador | — | — | 204 |
+| DELETE | `/api/v1/commerce/coupons/` | Delete redeemable coupon | Administrador | — | — | 204 |
 
 
 <a id="toc-5-2-7-10-commerce-operations"></a>
@@ -12357,20 +12358,20 @@ Carrito, órdenes, pagos con Stripe, direcciones, métodos de pago y canje de cu
 
 | Verbo | Ruta | Descripción | Acceso | Parámetros | Cuerpo de la solicitud | Respuestas |
 |-------|------|-------------|--------|------------|------------------------|------------|
-| PUT | `/api/v1/commerce/cart/items/{itemId}` | Update current user cart item | Sesión iniciada | `itemId` (path, texto, obligatorio) | `UpdateCartItemResource` (quantity: entero) | 200 |
-| DELETE | `/api/v1/commerce/cart/items/{itemId}` | Delete current user cart item | Sesión iniciada | `itemId` (path, texto, obligatorio) | — | 200 |
-| POST | `/api/v1/commerce/payments/stripe/webhook` | Capture Stripe payment webhook | Público | `Stripe-Signature` (header, texto) | application/json: texto | 200 |
-| POST | `/api/v1/commerce/orders` | Create current user order | Sesión iniciada | — | `CreateOrderResource` (status: enum, redeemedCouponExternalId: texto) | 200 |
-| POST | `/api/v1/commerce/orders/{orderId}/payments/stripe-confirm` | Confirm Stripe Checkout payment for an order | Sesión iniciada | `orderId` (path, texto, obligatorio); `sessionId` (query, texto, obligatorio) | — | 200 |
-| POST | `/api/v1/commerce/orders/{orderId}/payments/stripe-checkout` | Create Stripe Checkout session for an order | Sesión iniciada | `orderId` (path, texto, obligatorio) | — | 200 |
-| POST | `/api/v1/commerce/orders/{orderId}/payments/stripe-cancel` | Cancel Stripe Checkout payment for an order | Sesión iniciada | `orderId` (path, texto, obligatorio); `sessionId` (query, texto) | — | 200 |
-| POST | `/api/v1/commerce/coupons/{couponId}/redeem` | Redeem a coupon using current user's SafeCoins | Sesión iniciada | `couponId` (path, texto, obligatorio) | — | 200 |
-| POST | `/api/v1/commerce/cart/items` | Add item to current user cart | Sesión iniciada | — | `AddCartItemResource` (productId*: texto, quantity: entero) | 200 |
-| GET | `/api/v1/commerce/shipping-addresses/me` | Get current user shipping addresses | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/commerce/payment-methods` | Get available payment methods | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/commerce/orders/me` | Get current user orders | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/commerce/coupons/redeemed/me` | Get current user's redeemed coupons | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/commerce/cart/me` | Get current user cart | Sesión iniciada | — | — | 200 |
+| PUT | `/api/v1/commerce/cart/items/{itemId}` | Update current user cart item | Sesión iniciada | `itemId` (path, texto, obligatorio) | `UpdateCartItemResource` (quantity: entero) | 200 → `CartItemResource` |
+| DELETE | `/api/v1/commerce/cart/items/{itemId}` | Delete current user cart item | Sesión iniciada | `itemId` (path, texto, obligatorio) | — | 204 |
+| POST | `/api/v1/commerce/payments/stripe/webhook` | Capture Stripe payment webhook | Público | `Stripe-Signature` (header, texto) | application/json: texto | 200 → `StripeWebhookResponseResource`, 204 |
+| POST | `/api/v1/commerce/orders` | Create current user order | Sesión iniciada | — | `CreateOrderResource` (status: enum, redeemedCouponExternalId: texto) | 201 → `OrderResource` |
+| POST | `/api/v1/commerce/orders/{orderId}/payments/stripe-confirm` | Confirm Stripe Checkout payment for an order | Sesión iniciada | `orderId` (path, texto, obligatorio); `sessionId` (query, texto, obligatorio) | — | 200 → `OrderResource` |
+| POST | `/api/v1/commerce/orders/{orderId}/payments/stripe-checkout` | Create Stripe Checkout session for an order | Sesión iniciada | `orderId` (path, texto, obligatorio) | — | 200 → `StripeCheckoutSessionResource` |
+| POST | `/api/v1/commerce/orders/{orderId}/payments/stripe-cancel` | Cancel Stripe Checkout payment for an order | Sesión iniciada | `orderId` (path, texto, obligatorio); `sessionId` (query, texto) | — | 200 → `OrderResource` |
+| POST | `/api/v1/commerce/coupons/{couponId}/redeem` | Redeem a coupon using current user's SafeCoins | Sesión iniciada | `couponId` (path, texto, obligatorio) | — | 201 → `RedeemedCouponResource` |
+| POST | `/api/v1/commerce/cart/items` | Add item to current user cart | Sesión iniciada | — | `AddCartItemResource` (productId*: texto, quantity: entero) | 201 → `CartItemResource` |
+| GET | `/api/v1/commerce/shipping-addresses/me` | Get current user shipping addresses | Sesión iniciada | — | — | 200 → `ShippingAddress[]` |
+| GET | `/api/v1/commerce/payment-methods` | Get available payment methods | Sesión iniciada | — | — | 200 → `PaymentMethod[]` |
+| GET | `/api/v1/commerce/orders/me` | Get current user orders | Sesión iniciada | — | — | 200 → `OrderResource[]` |
+| GET | `/api/v1/commerce/coupons/redeemed/me` | Get current user's redeemed coupons | Sesión iniciada | — | — | 200 → `RedeemedCouponResource[]` |
+| GET | `/api/v1/commerce/cart/me` | Get current user cart | Sesión iniciada | — | — | 200 → `CartItemResource[]` |
 
 
 <a id="toc-5-2-7-11-analytics"></a>
@@ -12380,9 +12381,9 @@ Resumen, progreso y certificados de la persona usuaria.
 
 | Verbo | Ruta | Descripción | Acceso | Parámetros | Cuerpo de la solicitud | Respuestas |
 |-------|------|-------------|--------|------------|------------------------|------------|
-| GET | `/api/v1/analytics/summary/me` | Get current user analytics summary | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/analytics/progress/me` | Get current user progress visuals | Sesión iniciada | — | — | 200 |
-| GET | `/api/v1/analytics/certificates/me` | Get current user certificates | Sesión iniciada | — | — | 200 |
+| GET | `/api/v1/analytics/summary/me` | Get current user analytics summary | Sesión iniciada | — | — | 200 → `AnalyticsSummary` |
+| GET | `/api/v1/analytics/progress/me` | Get current user progress visuals | Sesión iniciada | — | — | 200 → `ProgressVisual[]` |
+| GET | `/api/v1/analytics/certificates/me` | Get current user certificates | Sesión iniciada | — | — | 200 → `Certificate[]` |
 
 
 <a id="toc-5-2-7-12-ejemplos-de-uso"></a>
@@ -12483,23 +12484,26 @@ Explicación: reemplaza los roles del usuario; responde `422` si el administrado
 <a id="toc-5-2-7-14-observaciones-sobre-la-documentacion"></a>
 ### 5.2.7.14. Observaciones sobre la documentación
 
-La documentación publicada se revisó contra el comportamiento real de la API (pruebas de Karate y de BDD) y se registran estas limitaciones, que quedan como mejora para el siguiente Sprint:
+La documentación publicada se revisó contra el comportamiento real de la API (pruebas de Karate y de BDD). La revisión encontró cuatro limitaciones; tres se corrigieron en este hito con la rama `feature/openapi-response-documentation` y una se mantiene a propósito:
 
-- **Respuestas sin modelo.** 58 de las 73 operaciones no describen el cuerpo de su respuesta de éxito en OpenAPI (los controladores de comercio, gamificación y simulación devuelven `ResponseEntity<?>`); su respuesta se verifica con las pruebas.
-- **Códigos de éxito.** Las operaciones de creación y de canje se documentan con `200`, aunque el servicio responde `201`.
-- **Listas.** Algunas consultas de colecciones (por ejemplo, `GET /api/v1/users`) declaran el modelo de un elemento en la respuesta `200` y el de una lista en los códigos de error; en la tabla se muestra la forma real, una lista.
-- **Rutas duplicadas.** Hay cinco operaciones `DELETE` con la ruta terminada en `/` (sin identificador) que se registran como operaciones propias porque un mismo método atiende dos rutas.
+- **Respuestas sin modelo (corregida).** 58 de las 73 operaciones no describían el cuerpo de su respuesta de éxito porque los controladores devuelven `ResponseEntity<?>`. Se anotaron 49 operaciones con `@ApiResponse` y su esquema; ahora las 73 operaciones describen su respuesta de éxito (las eliminaciones, sin cuerpo, con `204`). La única respuesta sin modelo propio es la de `GET /api/v1/commerce/reviews`, que siempre devuelve una lista vacía porque las reseñas aún no están implementadas.
+- **Códigos de éxito (corregida).** Las operaciones de creación y de canje se documentaban con `200` aunque el servicio responde `201`, y las eliminaciones no declaraban su `204`. Ahora cada código documentado coincide con el real.
+- **Listas (corregida).** Las consultas de colecciones (por ejemplo, `GET /api/v1/users`) declaraban el modelo de un elemento en la respuesta `200` y el de una lista en los códigos de error. Ahora el `200` declara una lista y las respuestas de error no repiten el modelo de éxito.
+- **Rutas duplicadas (se mantiene).** Hay cinco operaciones `DELETE` con la ruta terminada en `/` (sin identificador) que se registran como operaciones propias porque un mismo método atiende dos rutas. Eliminarlas exigiría cambiar las rutas expuestas, un riesgo mayor que el beneficio, por lo que se deja documentado.
+
+Para que estas correcciones no se pierdan, se añadió la clase `OpenApiDocumentationIntegrationTest` con cuatro pruebas que leen `/v3/api-docs` y fallan si una operación pierde su esquema de éxito, si una creación deja de documentarse como `201`, si una lista deja de declararse como arreglo o si un error repite el modelo de éxito. Con ellas la suite local del backend pasa a 242 pruebas (209 unitarias y de integración más 33 escenarios BDD). Las ejecuciones de Jenkins y de Render citadas en este informe son anteriores a este cambio y corresponden a las 238 pruebas previas.
 
 <a id="toc-5-2-7-15-commits-relacionados-con-la-documentacion"></a>
 ### 5.2.7.15. Commits relacionados con la documentación
 
-Commits de la rama `main` que modificaron la configuración de OpenAPI o los controladores REST anotados:
+Commits de la rama `develop` que modificaron la configuración de OpenAPI o los controladores REST anotados:
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
         <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Committed on (Date)</b></td></tr>
-        <tr><td>safestept-backend</td><td>main</td><td>0222e59</td><td>chore: add initial project structure and files</td><td>05/09/2026</td></tr>
-        <tr><td>safestept-backend</td><td>main</td><td>f77dfef</td><td>feat: add coupon redemption feature</td><td>17/09/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>0222e59</td><td>chore: add initial project structure and files</td><td>05/09/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>f77dfef</td><td>feat: add coupon redemption feature</td><td>17/09/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>8a060b0</td><td>docs(api): document the real success responses of the REST endpoints</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
@@ -12576,7 +12580,7 @@ Esta sección documenta las suites de prueba que verifican SafeStep. La estrateg
 | Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
 
-Las 238 pruebas del backend que ejecuta Maven (205 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 59.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 205 métodos en 40 clases.
+Las 238 pruebas del backend que ejecuta Maven (205 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 59.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 205 métodos en 40 clases. Después de la ejecución #7, la corrección de la documentación OpenAPI (5.2.7.14) añadió la clase `OpenApiDocumentationIntegrationTest` con cuatro pruebas; la suite local actual suma 242 pruebas (209 unitarias y de integración más 33 escenarios BDD), todas aprobadas con `mvn verify`.
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>

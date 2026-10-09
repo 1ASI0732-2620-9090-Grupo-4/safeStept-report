@@ -8,7 +8,7 @@ Esta sección documenta las suites de prueba que verifican SafeStep. La estrateg
 | Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
 
-Las 238 pruebas del backend que ejecuta Maven (205 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 59.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 205 métodos en 40 clases.
+Las 238 pruebas del backend que ejecuta Maven (205 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 59.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 205 métodos en 40 clases. Después de la ejecución #7, la corrección de la documentación OpenAPI (5.2.7.14) añadió la clase `OpenApiDocumentationIntegrationTest` con cuatro pruebas; la suite local actual suma 242 pruebas (209 unitarias y de integración más 33 escenarios BDD), todas aprobadas con `mvn verify`.
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>

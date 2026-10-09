@@ -94,5 +94,6 @@ La Landing Page se publica en GitHub Pages a partir de la rama `gh-pages`, con H
         <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Committed on (Date)</b></td></tr>
         <tr><td>safestept-landing-page</td><td>main</td><td>76700a8</td><td>Initial commit</td><td>05/09/2026</td></tr>
         <tr><td>safestept-landing-page</td><td>main</td><td>d20a0d8</td><td>chore: add initial project files and assets</td><td>05/09/2026</td></tr>
+        <tr><td>safestept-landing-page</td><td>main</td><td>208e670</td><td>fix: point frontend call-to-action links to the new deployed application</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
