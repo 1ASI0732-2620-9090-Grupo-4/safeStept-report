@@ -14,7 +14,7 @@
         <td colspan="2"><b>Entrega</b></td>
         <td>TB1</td>
         <td colspan="2"><b>Team Leader</b></td>
-        <td colspan="3"><b>[POR COMPLETAR POR EL TEAM LEADER]</b></td>
+        <td colspan="3"><b>Melgarejo Quiroz, Josep Eliu</b></td>
     </tr>
     <tr>
         <td><b>Item</b></td>
@@ -34,7 +34,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><b>[POR COMPLETAR POR EL TEAM LEADER]</b></td>
+        <td><b>20</b></td>
     </tr>
     <tr>
         <td><b>2</b></td>
@@ -44,7 +44,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><b>[POR COMPLETAR POR EL TEAM LEADER]</b></td>
+        <td><b>20</b></td>
     </tr>
     <tr>
         <td><b>3</b></td>
@@ -54,7 +54,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><b>[POR COMPLETAR POR EL TEAM LEADER]</b></td>
+        <td><b>20</b></td>
     </tr>
     <tr>
         <td><b>4</b></td>
@@ -64,7 +64,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><b>[POR COMPLETAR POR EL TEAM LEADER]</b></td>
+        <td><b>20</b></td>
     </tr>
     <tr>
         <td><b>5</b></td>
@@ -74,6 +74,6 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><b>[POR COMPLETAR POR EL TEAM LEADER]</b></td>
+        <td><b>20</b></td>
     </tr>
 </table>
