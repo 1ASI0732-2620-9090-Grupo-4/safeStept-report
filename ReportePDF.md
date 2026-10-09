@@ -355,6 +355,7 @@
 
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/registro-versiones.md -->
 <a id="toc-registro-de-versiones-del-informe"></a>
 # Registro de Versiones del informe
 
@@ -426,10 +427,9 @@
     </tr>
 </table>
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/report-collaboration.md -->
 <a id="toc-project-report-collaboration-insights"></a>
 # Project Report Collaboration Insights
 
@@ -516,10 +516,9 @@
   </p>
 </div>
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/student-outcome.md -->
 <a id="toc-student-outcome"></a>
 # Student Outcome
 
@@ -560,7 +559,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <i>AV1</i>
             <p>En el capítulo II (Needfinding y entrevistas) apliqué el resguardo de la identidad de las personas entrevistadas usando resúmenes en lugar de transcripciones completas, y evité atribuir citas o conclusiones que los entrevistados no expresaron, para no distorsionar los hallazgos usados como base del producto.</p>
             <i>TB1</i>
-            <p>En el TB1 configuré Checkstyle con las reglas de Google sin modificarlas, medí la línea base real (8,034 observaciones) y la dejé en modo reporte en lugar de desactivar reglas para que el conteo pareciera menor. En las pruebas BDD y de API verifiqué los permisos (401 sin sesión, 403 para jugadores en rutas de administrador y 422 cuando un administrador intenta quitarse su propio rol) y etiqueté cada escenario con la historia de usuario que respalda.</p>
+            <p>En el TB1 configuré Checkstyle con las reglas de Google sin modificarlas, medí la línea base real (8,128 observaciones) y la dejé en modo reporte en lugar de desactivar reglas para que el conteo pareciera menor. En las pruebas BDD y de API verifiqué los permisos (401 sin sesión, 403 para jugadores en rutas de administrador y 422 cuando un administrador intenta quitarse su propio rol) y etiqueté cada escenario con la historia de usuario que respalda.</p>
         </td>
     </tr>
     <tr>
@@ -648,10 +647,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 Como conclusión general, el equipo SafeStep evidencia el cumplimiento del ABET – EAC - Student Outcome 4 en el Avance 1 y lo sostiene en el TB1 porque, al documentar el estado real del producto y del informe, reconoció límites éticos y profesionales propios de un dominio sensible (primeros auxilios) y evitó presentar como validado, seguro o terminado aquello que todavía es una hipótesis, una limitación conocida o un riesgo pendiente de resolver. Esta autocrítica se mantendrá y profundizará en las siguientes entregas del curso conforme el producto y sus validaciones avancen.
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-1/1-1-startup-profile.md -->
 <br>
 <br>
 
@@ -762,8 +760,9 @@ Ser una plataforma latinoamericana de referencia en educación preventiva digita
 
 </table>
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-1/1-2-solution-profile.md -->
 <br>
 <br>
 
@@ -1059,8 +1058,9 @@ Las posibles soluciones futuras —como modo offline, suscripción premium o un 
 
 El canvas se revisará después de cada ciclo de aprendizaje. Los cambios deberán sustentarse con resultados del Question Backlog, los experimentos y las entrevistas, evitando convertir una observación aislada en una conclusión general.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-1/1-3-segmentos-objetivo.md -->
 <br>
 <br>
 
@@ -1117,7 +1117,7 @@ La intención de compra, la disposición de pago y la frecuencia de uso no se co
 <a id="toc-1-3-2-comunidades-vecinales"></a>
 ## 1.3.2. Comunidades vecinales
 
-<a id="toc-caracteristicas-demograficas-y-contextuales-1"></a>
+<a id="toc-caracteristicas-demograficas-y-contextuales-2"></a>
 ### Características demográficas y contextuales
 
 - **Edad de referencia:** personas adultas, principalmente entre 25 y 60 años.
@@ -1131,7 +1131,7 @@ El Gobierno Regional de La Libertad (2017) señaló que el 70 % de los peruanos 
 
 Las comunidades vecinales comprenden perfiles diversos. Una persona encargada del cuidado de niños, una persona que convive con adultos mayores y un coordinador de seguridad vecinal pueden tener prioridades distintas. En consecuencia, futuras investigaciones deberán precisar subsegmentos y evitar diseñar una única experiencia basada en el concepto genérico de “familia”.
 
-<a id="toc-necesidades-y-comportamiento-esperado-1"></a>
+<a id="toc-necesidades-y-comportamiento-esperado-2"></a>
 ### Necesidades y comportamiento esperado
 
 Este segmento puede requerir:
@@ -1145,7 +1145,7 @@ Este segmento puede requerir:
 
 No debe asumirse que todas las personas poseen alta familiaridad con comercio electrónico ni que desean comprar inmediatamente después de aprender. La confianza, la utilidad percibida y la aceptación de recomendaciones deberán investigarse.
 
-<a id="toc-relacion-con-la-propuesta-de-valor-1"></a>
+<a id="toc-relacion-con-la-propuesta-de-valor-2"></a>
 ### Relación con la propuesta de valor
 
 SafeStep puede aportar práctica guiada y acceso flexible a contenidos preventivos. La tienda puede facilitar el reconocimiento de insumos básicos no farmacológicos, siempre que las recomendaciones se mantengan separadas de prescripciones médicas y no utilicen miedo o urgencia artificial para incentivar compras.
@@ -1155,7 +1155,7 @@ Las posibles compras familiares, reposiciones o modelos de suscripción constitu
 <a id="toc-1-3-3-brigadistas"></a>
 ## 1.3.3. Brigadistas
 
-<a id="toc-caracteristicas-demograficas-y-contextuales-2"></a>
+<a id="toc-caracteristicas-demograficas-y-contextuales-3"></a>
 ### Características demográficas y contextuales
 
 - **Edad:** población adulta; el rango dependerá del tipo de institución y de sus requisitos.
@@ -1167,7 +1167,7 @@ Las posibles compras familiares, reposiciones o modelos de suscripción constitu
 
 El Ministerio de Salud del Perú (2025) informó que más de 4000 brigadistas de primera respuesta en salud habían sido formados mediante programas que incluyen gestión de riesgos, atención sanitaria básica, primeros auxilios y transporte asistido. Por su parte, el Poder Judicial del Perú (2019) presenta criterios particulares para la preparación de brigadas de emergencia. Estos antecedentes confirman que el brigadismo posee requisitos institucionales y no debe caracterizarse mediante un único rango de edad universal.
 
-<a id="toc-necesidades-y-comportamiento-esperado-2"></a>
+<a id="toc-necesidades-y-comportamiento-esperado-3"></a>
 ### Necesidades y comportamiento esperado
 
 En comparación con usuarios sin formación, los brigadistas pueden requerir:
@@ -1181,7 +1181,7 @@ En comparación con usuarios sin formación, los brigadistas pueden requerir:
 
 No debe asumirse que todos los brigadistas desean comprar equipos profesionales ni que poseen autoridad para realizar adquisiciones institucionales. Es necesario distinguir entre usuario, comprador y decisor de una organización.
 
-<a id="toc-relacion-con-la-propuesta-de-valor-2"></a>
+<a id="toc-relacion-con-la-propuesta-de-valor-3"></a>
 ### Relación con la propuesta de valor
 
 SafeStep puede utilizarse como recurso complementario para repaso y práctica individual. Antes de diseñar funcionalidades especializadas, deberá comprobarse si los escenarios actuales ofrecen suficiente profundidad y si la retroalimentación satisface las expectativas de personas con experiencia previa.
@@ -1219,10 +1219,9 @@ Para mantener coherencia entre el Capítulo I y los experimentos posteriores, el
 
 No se recopilarán diagnósticos médicos ni otros datos sensibles que no sean necesarios para responder las preguntas experimentales. Los resultados deberán presentarse de forma agregada o anonimizada.
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-2/2-1-competidores.md -->
 <br>
 <br>
 
@@ -1349,7 +1348,7 @@ Estas ofertas no equivalen automáticamente a SafeStep. La comparación se centr
   </tr>
 </table>
 
-Las descripciones de los competidores se basan en las fichas oficiales enlazadas en la cabecera; el estado de SafeStep se delimita en [1.2. Solution Profile](../chapter-1/1-2-solution-profile.md). «No se ha evaluado» expresa un límite de este análisis, no la ausencia de una capacidad del competidor. Ningún cuestionario, insignia o certificado interno equivale por sí solo a una acreditación profesional.
+Las descripciones de los competidores se basan en las fichas oficiales enlazadas en la cabecera; el estado de SafeStep se delimita en [1.2. Solution Profile](#toc-1-2-solution-profile). «No se ha evaluado» expresa un límite de este análisis, no la ausencia de una capacidad del competidor. Ningún cuestionario, insignia o certificado interno equivale por sí solo a una acreditación profesional.
 
 **Conclusión:** SafeStep no puede alegar «única app interactiva», «única app gamificada» ni superioridad pedagógica general: IFRC y American Red Cross ya ofrecen cuestionarios, y IFRC incluye progreso e insignias. La **posible** ventaja de SafeStep es un recorrido web localizado de decisiones, explicación de errores y repetición que facilite comprender y completar una primera simulación. Esa ventaja queda como hipótesis de comparación y deberá medirse en el Capítulo VIII.
 
@@ -1369,8 +1368,9 @@ Las acciones siguientes responden a hallazgos del Landscape y del FODA. Se disti
 
 No se declara como táctica vigente una alianza con la Cruz Roja, MINSA u otra institución: requiere coordinación y autorización de dichas entidades. La estrategia de corto plazo es mejorar y medir el producto propio; una acreditación externa sería un proyecto distinto.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-2/2-2-entrevistas.md -->
 <br>
 <br>
 
@@ -1926,8 +1926,9 @@ Se analizaron diez entrevistas semiestructuradas: cuatro estudiantes (E01–E04)
 
 **Limitaciones:** selección por conveniencia, muestras de tres o cuatro personas por segmento, preguntas con ejemplos y posible sesgo de deseabilidad. Los porcentajes describen solamente a las personas entrevistadas. El registro base contiene inconsistencias que requieren contraste con video, por ejemplo la carrera de E04. Las citas textuales y rasgos no verificados se omiten del análisis para evitar atribuciones erróneas. Los mapas y User Personas deben revisarse a partir de esta matriz, sin reescribir retrospectivamente los testimonios.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-2/2-3-needfinding.md -->
 <br>
 <br>
 
@@ -2130,8 +2131,9 @@ Fases: identificación de brecha, consulta de fuentes, ensayo y mantenimiento de
 
 **Pendiente para conformidad formal con el statement:** corregir las tres fichas, tres journeys y tres empathy maps en UXPressia, y elaborar los tres escenarios As-Is previos a SafeStep en Miro/Lucidchart; exportar capturas legibles, documentar enlaces editables y registrar la revisión del equipo.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-2/2-4-ubiquitous-language.md -->
 <br>
 <br>
 
@@ -2167,10 +2169,9 @@ Es el lenguaje común compartido entre desarrolladores y expertos del negocio qu
 <br>
 <br>
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-3/3-1-to-be-scenario-mapping.md -->
 <br>
 <br>
 
@@ -2196,8 +2197,9 @@ Este mapa plantea de forma gráfica una comparación de la experiencia de nuestr
   </p>
 </div>
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-3/3-2-user-stories.md -->
 <br>
 <br>
 
@@ -2902,8 +2904,9 @@ En la columna **Priority**, `#1` indica la mayor prioridad y cada número corres
   </tbody>
 </table>
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-3/3-3-product-backlog.md -->
 <br>
 <br>
 
@@ -3565,8 +3568,9 @@ Cada elemento incluye su estimación en story points utilizando la escala Fibona
   </p>
 </div>
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-3/3-4-impact-mapping.md -->
 <br>
 <br>
 
@@ -3592,10 +3596,9 @@ Este impact mapping representa el resumen de todo lo obtenido por las historias 
   </p>
 </div>
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-1-style-guidelines.md -->
 <br>
 <br>
 
@@ -3755,8 +3758,9 @@ Referencias: [Apple Human Interface Guidelines: Layout](https://developer.apple.
 
 Referencias: [Android: System bars](https://developer.android.com/design/ui/mobile/guides/foundations/system-bars), [Accessibility](https://developer.android.com/design/ui/mobile/guides/foundations/accessibility) y [Layouts and navigation patterns](https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-patterns).
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-2-information-architecture.md -->
 <br>
 <br>
 
@@ -3902,8 +3906,9 @@ Para iOS y Android se conservarán las categorías de contenido, pero la navegac
 
 El flujo debe admitir teclado en web, foco visible, nombres comprensibles para lectores de pantalla y retorno predecible. En móvil se adaptará a VoiceOver o TalkBack. Antes de cerrar esta arquitectura, el equipo debe probar con participantes tareas concretas: encontrar una práctica, interpretar su resultado, volver al catálogo y localizar una compra. Se registrarán errores de navegación, etiquetas ambiguas y rutas sin salida, y se actualizarán el mapa, las historias y las pantallas de diseño con esos hallazgos.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-3-landing-page-ui-design.md -->
 <br>
 <br>
 
@@ -4313,7 +4318,7 @@ El mock-up evidencia la aplicación del Design System a través de:
 - Espaciado uniforme
 - Bordes y radios consistentes
 
-<a id="toc-diseno-inclusivo-1"></a>
+<a id="toc-diseno-inclusivo-2"></a>
 #### Diseño Inclusivo
 
 - Contraste suficiente (WCAG AA mínimo)
@@ -4430,8 +4435,9 @@ El mock-up aplica diseño responsivo a través de:
 - Lazy loading en imágenes below fold
 - Placeholder durante carga
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-4-Mobile-Applications-UX-UI-Design.md -->
 <a id="toc-4-4-mobile-applications-ux-ui-design"></a>
 # 4.4. Mobile Applications UX/UI Design
 
@@ -4457,8 +4463,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-5-Mobile-Applications-Prototyping.md -->
 <a id="toc-4-5-mobile-applications-prototyping"></a>
 # 4.5. Mobile Applications Prototyping
 
@@ -4474,8 +4481,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-6-web-applications-ux-ui-design.md -->
 <br>
 <br>
 
@@ -4575,7 +4583,7 @@ La página de simulación es donde el usuario practica situaciones de emergencia
   </p>
 </div>
 
-<a id="toc-elementos-clave-1"></a>
+<a id="toc-elementos-clave-2"></a>
 #### Elementos Clave
 
 - **Progress bar**: Muestra avance en la simulación
@@ -4602,7 +4610,7 @@ La página de tienda muestra el catálogo de productos disponibles.
   </p>
 </div>
 
-<a id="toc-elementos-clave-2"></a>
+<a id="toc-elementos-clave-3"></a>
 #### Elementos Clave
 
 - **Search bar**: Búsqueda de productos
@@ -4718,7 +4726,7 @@ Cada wireflow incluye:
 
 **User Goal**: El usuario desea practicar una simulación de emergencia específica.
 
-<a id="toc-flujo-principal-1"></a>
+<a id="toc-flujo-principal-2"></a>
 #### Flujo Principal
 
 <div align="center">
@@ -4736,7 +4744,7 @@ Cada wireflow incluye:
 
 **User Goal**: El usuario desea comprar productos de primeros auxilios.
 
-<a id="toc-flujo-principal-2"></a>
+<a id="toc-flujo-principal-3"></a>
 #### Flujo Principal
 
 <div align="center">
@@ -4754,7 +4762,7 @@ Cada wireflow incluye:
 
 **User Goal**: El usuario desea actualizar su información personal y preferencias.
 
-<a id="toc-flujo-principal-3"></a>
+<a id="toc-flujo-principal-4"></a>
 #### Flujo Principal
 
 <div align="center">
@@ -4808,7 +4816,7 @@ El mock-up del Dashboard implementa la estructura del wireframe con tratamiento 
 
 Mock-up de página de módulos y lecciones:
 
-<a id="toc-elementos-visuales-1"></a>
+<a id="toc-elementos-visuales-2"></a>
 #### Elementos Visuales
 
 **Filtros:**
@@ -4828,7 +4836,7 @@ Mock-up de página de módulos y lecciones:
 
 Mock-up de la interfaz de simulación interactiva:
 
-<a id="toc-elementos-visuales-2"></a>
+<a id="toc-elementos-visuales-3"></a>
 #### Elementos Visuales
 
 **Progress indicator:**
@@ -4852,7 +4860,7 @@ Mock-up de la interfaz de simulación interactiva:
 
 Mock-up del catálogo de tienda:
 
-<a id="toc-elementos-visuales-3"></a>
+<a id="toc-elementos-visuales-4"></a>
 #### Elementos Visuales
 
 **Product Cards:**
@@ -4875,7 +4883,7 @@ Mock-up del catálogo de tienda:
 
 Mock-up de página de detalle de producto:
 
-<a id="toc-elementos-visuales-4"></a>
+<a id="toc-elementos-visuales-5"></a>
 #### Elementos Visuales
 
 **Galería:**
@@ -4894,7 +4902,7 @@ Mock-up de página de detalle de producto:
 
 Mock-up de configuración de perfil:
 
-<a id="toc-elementos-visuales-5"></a>
+<a id="toc-elementos-visuales-6"></a>
 #### Elementos Visuales
 
 **Avatar:**
@@ -5002,7 +5010,7 @@ Cada user flow incluye:
 
 **User Type**: Estudiante / Usuario que busca certificación
 
-<a id="toc-happy-path-1"></a>
+<a id="toc-happy-path-2"></a>
 #### Happy Path
 
 <div align="center">
@@ -5015,7 +5023,7 @@ Cada user flow incluye:
   </p>
 </div>
 
-<a id="toc-unhappy-paths-1"></a>
+<a id="toc-unhappy-paths-2"></a>
 #### Unhappy Paths
 
 **Respuesta incorrecta:**
@@ -5049,7 +5057,7 @@ Cada user flow incluye:
 
 **User Type**: Comprador / Cliente
 
-<a id="toc-happy-path-2"></a>
+<a id="toc-happy-path-3"></a>
 #### Happy Path
 
 <div align="center">
@@ -5062,7 +5070,7 @@ Cada user flow incluye:
   </p>
 </div>
 
-<a id="toc-unhappy-paths-2"></a>
+<a id="toc-unhappy-paths-3"></a>
 #### Unhappy Paths
 
 **Producto sin stock:**
@@ -5108,7 +5116,7 @@ Cada user flow incluye:
 
 **User Type**: Visitante nuevo
 
-<a id="toc-happy-path-3"></a>
+<a id="toc-happy-path-4"></a>
 #### Happy Path
 
 <div align="center">
@@ -5121,7 +5129,7 @@ Cada user flow incluye:
   </p>
 </div>
 
-<a id="toc-unhappy-paths-3"></a>
+<a id="toc-unhappy-paths-4"></a>
 #### Unhappy Paths
 
 **Email ya registrado:**
@@ -5155,7 +5163,7 @@ Cada user flow incluye:
 
 **User Type**: Usuario con cuenta pero sin acceso
 
-<a id="toc-happy-path-4"></a>
+<a id="toc-happy-path-5"></a>
 #### Happy Path
 
 <div align="center">
@@ -5168,7 +5176,7 @@ Cada user flow incluye:
   </p>
 </div>
 
-<a id="toc-unhappy-paths-4"></a>
+<a id="toc-unhappy-paths-5"></a>
 #### Unhappy Paths
 
 **Email no encontrado:**
@@ -5215,8 +5223,9 @@ Los User Flows de SafeStep consideran:
 - Patrones familiares
 - Terminología consistente
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-7-web-applications-prototyping.md -->
 <br>
 <br>
 
@@ -5401,7 +5410,7 @@ El flujo principal mostrado:
 
 El prototipo de simulación muestra la experiencia de práctica:
 
-<a id="toc-screenshot-de-referencia-1"></a>
+<a id="toc-screenshot-de-referencia-2"></a>
 #### Screenshot de Referencia
 
 <div align="center">
@@ -5434,7 +5443,7 @@ El prototipo de simulación muestra la experiencia de práctica:
   </p>
 </div>
 
-<a id="toc-descripcion-visual-1"></a>
+<a id="toc-descripcion-visual-2"></a>
 #### Descripción Visual
 
 La página de simulación muestra:
@@ -5443,7 +5452,7 @@ La página de simulación muestra:
 - Opciones de respuesta en formato de cards
 - Botones de ayuda y controls
 
-<a id="toc-interacciones-demostradas-1"></a>
+<a id="toc-interacciones-demostradas-2"></a>
 #### Interacciones Demostradas
 
 - Click en opción selecciona respuesta
@@ -5452,7 +5461,7 @@ La página de simulación muestra:
 - Botón "Pista" muestra ayuda
 - Timer counting down
 
-<a id="toc-explicacion-del-flujo-1"></a>
+<a id="toc-explicacion-del-flujo-2"></a>
 #### Explicación del Flujo
 
 El flujo de simulación:
@@ -5469,7 +5478,7 @@ El flujo de simulación:
 
 El prototipo de checkout muestra el flujo de compra:
 
-<a id="toc-screenshot-de-referencia-2"></a>
+<a id="toc-screenshot-de-referencia-3"></a>
 #### Screenshot de Referencia
 
 <div align="center">
@@ -5522,7 +5531,7 @@ El prototipo de checkout muestra el flujo de compra:
   </p>
 </div>
 
-<a id="toc-descripcion-visual-2"></a>
+<a id="toc-descripcion-visual-3"></a>
 #### Descripción Visual
 
 El checkout muestra:
@@ -5531,7 +5540,7 @@ El checkout muestra:
 - Forms de información
 - Resumen de orden
 
-<a id="toc-interacciones-demostradas-2"></a>
+<a id="toc-interacciones-demostradas-3"></a>
 #### Interacciones Demostradas
 
 - Navegación entre pasos
@@ -5540,7 +5549,7 @@ El checkout muestra:
 - Selección de método de pago
 - Confirmación de orden
 
-<a id="toc-explicacion-del-flujo-2"></a>
+<a id="toc-explicacion-del-flujo-3"></a>
 #### Explicación del Flujo
 
 El flujo de compra:
@@ -5592,7 +5601,7 @@ El prototipo mobile presenta la experiencia optimizada para dispositivos táctil
 
 El prototipo mobile de SafeStep recrea la experiencia en formato móvil, considerando las limitaciones y fortalezas de dispositivos táctiles.
 
-<a id="toc-caracteristicas-tecnicas-1"></a>
+<a id="toc-caracteristicas-tecnicas-2"></a>
 #### Características Técnicas
 
 **Resolución:**
@@ -5621,7 +5630,7 @@ Las siguientes vistas están incluidas:
 
 El prototipo del dashboard móvil:
 
-<a id="toc-screenshot-de-referencia-3"></a>
+<a id="toc-screenshot-de-referencia-4"></a>
 #### Screenshot de Referencia
 
 <div align="center">
@@ -5634,7 +5643,7 @@ El prototipo del dashboard móvil:
   </p>
 </div>
 
-<a id="toc-descripcion-visual-3"></a>
+<a id="toc-descripcion-visual-4"></a>
 #### Descripción Visual
 
 El dashboard móvil muestra:
@@ -5643,7 +5652,7 @@ El dashboard móvil muestra:
 - Bottom navigation bar para acceso rápido
 - Cards apiladas verticalmente
 
-<a id="toc-interacciones-demostradas-3"></a>
+<a id="toc-interacciones-demostradas-4"></a>
 #### Interacciones Demostradas
 
 - Hamburger menu abre drawer
@@ -5656,7 +5665,7 @@ El dashboard móvil muestra:
 
 El prototipo de simulación móvil:
 
-<a id="toc-screenshot-de-referencia-4"></a>
+<a id="toc-screenshot-de-referencia-5"></a>
 #### Screenshot de Referencia
 
 <div align="center">
@@ -5689,7 +5698,7 @@ El prototipo de simulación móvil:
   </p>
 </div>
 
-<a id="toc-descripcion-visual-4"></a>
+<a id="toc-descripcion-visual-5"></a>
 #### Descripción Visual
 
 La simulación móvil muestra:
@@ -5698,7 +5707,7 @@ La simulación móvil muestra:
 - Espacio suficiente entre opciones
 - Botones de control accesibles
 
-<a id="toc-interacciones-demostradas-4"></a>
+<a id="toc-interacciones-demostradas-5"></a>
 #### Interacciones Demostradas
 
 - Tap simple en opciones
@@ -5711,7 +5720,7 @@ La simulación móvil muestra:
 
 El prototipo de tienda móvil:
 
-<a id="toc-screenshot-de-referencia-5"></a>
+<a id="toc-screenshot-de-referencia-6"></a>
 #### Screenshot de Referencia
 
 <div align="center">
@@ -5764,7 +5773,7 @@ El prototipo de tienda móvil:
   </p>
 </div>
 
-<a id="toc-descripcion-visual-5"></a>
+<a id="toc-descripcion-visual-6"></a>
 #### Descripción Visual
 
 La tienda móvil muestra:
@@ -5778,7 +5787,7 @@ La tienda móvil muestra:
 
 El video del prototipo mobile demuestra las interacciones touch:
 
-<a id="toc-contenido-del-video-1"></a>
+<a id="toc-contenido-del-video-2"></a>
 #### Contenido del Video
 
 El video incluye:
@@ -5789,7 +5798,7 @@ El video incluye:
 5. Completar lección móvil (1:30-2:30)
 6. Tienda y compra (2:30-4:00)
 
-<a id="toc-enlace-de-video-1"></a>
+<a id="toc-enlace-de-video-2"></a>
 #### Enlace de Video
 
 <div align="center">
@@ -5899,8 +5908,9 @@ El prototipo cumple con:
 - Transiciones suaves 60fps
 - Loading states apropiados
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-8-domain-driven-software-architecture.md -->
 <br>
 <br>
 
@@ -5942,8 +5952,9 @@ Este diagrama representa el tercer nivel de detalle del modelo C4, realizando un
     <img src="markdown/assets/images/chapter-4/DiagramaComponeneteSafeStept.png" alt="Diagrama de Componentes de SafeStep" />
 </div>
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-9-software-object-oriented-design.md -->
 <br>
 <br>
 
@@ -6060,8 +6071,9 @@ El diccionario describe las clases representadas en los diagramas anteriores y a
 
 En conjunto, el UML describe estructura y colaboración entre clases, mientras que el ERD del apartado 4.10 describe persistencia. Por ello el número de clases no coincide con el de tablas.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-4/4-10-database-design.md -->
 <br>
 <br>
 
@@ -6127,10 +6139,9 @@ El siguiente Diagrama Entidad-Relación (ERD) representa la estructura de datos 
 
 <p align="center"><strong>Diagrama ERD Simulation</strong></p>
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-5/5-1-software-configuration-management.md -->
 <br>
 <br>
 
@@ -6572,8 +6583,9 @@ En caso de problemas en producción, el equipo puede realizar un rollback a la v
 
 El equipo implementa capacidades de monitoreo y logging para mantener visibilidad sobre el estado de la aplicación en producción. Render ofrece registros en vivo, métricas del servicio y el historial de eventos y despliegues del frontend y del backend, y el backend registra con SLF4J los errores inesperados que no controla ningún manejador específico. GitHub Pages expone métricas básicas de uso de la Landing Page a través de GitHub Insights. Para el tracking de errores, se puede integrar servicios como Sentry. Estas herramientas permiten identificar y resolver problemas rápidamente, asegurando la disponibilidad y calidad del servicio para los usuarios finales.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-5/5-2-1-Sprint-Backlogs.md -->
 <br>
 <br>
 
@@ -6602,7 +6614,21 @@ El desarrollo de SafeStep se organizó en cinco Sprints. Cada Sprint se document
 
 Las secciones 5.2.2 a 5.2.7 consolidan, por producto, la evidencia que cada Sprint fue construyendo: la Landing Page (5.2.2), la aplicación web (5.2.3), el acuerdo de servicio (5.2.4), la aplicación móvil (5.2.5), el backend (5.2.6) y la documentación de su API (5.2.7).
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-1-1-Sprint-1.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-2"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-1-1-sprint-1"></a>
 ### 5.2.1.1. Sprint 1
@@ -7374,7 +7400,21 @@ El equipo identifica las siguientes lecciones de este Sprint 1:
 
 5. **Las estimaciones iniciales fueron acertadas pero con margen de mejora:** El equipo logró completar todas las tareas dentro del tiempo estimado, aunque algunas tareas requirieron ajuste de prioridades para cumplir con el Sprint Goal.
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-1-2-Sprint-2.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-3"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-1-2-sprint-2"></a>
 ### 5.2.1.2. Sprint 2
@@ -8276,7 +8316,21 @@ Todos los miembros del equipo participaron activamente en la implementación del
 
 5. **GitHub Pages simplifica el despliegue:** La integración con GitHub Actions permitió automatizar completamente el proceso de despliegue del frontend Angular, reduciendo el tiempo de publicación a solo minutos después de cada merge a main.
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-1-3-Sprint-3.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-4"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-1-3-sprint-3"></a>
 ### 5.2.1.3. Sprint 3
@@ -9816,7 +9870,21 @@ Durante este Sprint, el equipo realizó revisiones internas de estructura para a
 
 7. **La landing page también debe reflejar el avance del producto:** Agregar imágenes reales y videos de presentación ayuda a que la comunicación pública esté alineada con lo construido en backend y frontend.
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-1-4-Sprint-4.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-5"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-1-4-sprint-4"></a>
 ### 5.2.1.4. Sprint 4
@@ -10656,7 +10724,21 @@ Los cuatro miembros activos del equipo participaron en el Sprint 4. El trabajo s
 4. **Swagger sigue siendo clave para probar endpoints protegidos:** Permite validar los endpoints con token antes de probarlos desde la aplicación web.
 5. **El flujo de compra debe controlar pagos cancelados:** Una orden no debe aparecer como compra si el usuario no completó correctamente el checkout.
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-1-5-Sprint-5.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-6"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-1-5-sprint-5"></a>
 ### 5.2.1.5. Sprint 5
@@ -10723,11 +10805,11 @@ En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LA
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
         <tr><td><b>Team Member (Last Name, First Name)</b></td><td><b>GitHub Username</b></td><td><b>Admin &amp; Coupons / L or C</b></td><td><b>Unit Tests &amp; Coverage / L or C</b></td><td><b>BDD &amp; API Tests / L or C</b></td><td><b>CI Pipeline / L or C</b></td><td><b>Documentation / L or C</b></td></tr>
-        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>C</td><td>L</td><td>—</td><td>—</td><td>C</td></tr>
-        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>—</td><td>C</td><td>L</td><td>—</td><td>C</td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>C</td><td>—</td><td>—</td><td>—</td><td>L</td></tr>
-        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>—</td><td>—</td><td>—</td><td>L</td><td>C</td></tr>
-        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>L</td><td>—</td><td>—</td><td>—</td><td>C</td></tr>
+        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>kalidpalacios</b></td><td>C</td><td>L</td><td>—</td><td>—</td><td>C</td></tr>
+        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>manuael7sa</b></td><td>—</td><td>C</td><td>L</td><td>—</td><td>C</td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td><b>Melga1502</b></td><td>C</td><td>—</td><td>—</td><td>—</td><td>L</td></tr>
+        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>f4bris</b></td><td>—</td><td>—</td><td>—</td><td>L</td><td>C</td></tr>
+        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>paulosmi</b></td><td>L</td><td>—</td><td>—</td><td>—</td><td>C</td></tr>
     </tbody>
 </table>
 
@@ -10738,7 +10820,13 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
 
 **Trello Board:** el equipo utiliza un Trello Board con las listas estándar de Scrum: "Sprint Goal", "To Do", "In Progress", "To Review" y "Done".
 
-**URL pública del Trello Board del Sprint 5:** <b>[POR COMPLETAR POR EL EQUIPO]</b>
+**URL pública del Trello Board del Sprint 5:** <b>[Link de el trello](https://trello.com/invite/b/6ac878bc705a63654f4cb9fc/ATTIdf002a5dd36142d08ccde7d5b979962651FA20DA/sprint-5-safestep)</b>
+
+<div align="center">
+  <p><b>Captura:</b> Tablero de trello</p>
+  <img src="markdown/assets/images/chapter-5/Sprint5trello.png" alt="Swagger UI del backend desplegado" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
@@ -10758,7 +10846,7 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T511</td><td>Pruebas de commerce, iam y gamification</td><td>Pruebas JUnit/Mockito de agregados, servicios de comandos y consultas, ACL y manejadores de eventos.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
         <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T512</td><td>Pruebas de simulation, analytics, profiles y shared</td><td>Pruebas de intentos, certificados, perfiles, Result y manejador global de excepciones.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
         <tr><td>TS26</td><td>Umbral de cobertura con JaCoCo</td><td>T513</td><td>Configurar JaCoCo</td><td>Reporte HTML/XML, regla de 80 % y exclusiones tomadas del proyecto de referencia del curso.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
-        <tr><td>TS27</td><td>Análisis de estilo con Checkstyle</td><td>T514</td><td>Configurar Checkstyle</td><td>Reglas de Google sin modificar, en modo reporte; medir la línea base (8,034 observaciones).</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
+        <tr><td>TS27</td><td>Análisis de estilo con Checkstyle</td><td>T514</td><td>Configurar Checkstyle</td><td>Reglas de Google sin modificar, en modo reporte; medir la línea base (8,128 observaciones).</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T515</td><td>Features y steps</td><td>Cinco features Gherkin etiquetados con historias y sus step definitions.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T516</td><td>Infraestructura de BDD</td><td>Contexto de Spring Boot con puerto aleatorio y base H2 aislada, cliente HTTP y fábrica de jugadores.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr><td>TS29</td><td>Pruebas de integración con Karate</td><td>T517</td><td>Proyecto `api-tests`</td><td>Cinco features Karate (36 escenarios) contra una API en ejecución, con datos únicos por ejecución.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
@@ -11686,7 +11774,21 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
 
 Los commits se asocian a cada integrante según las tareas del Sprint Backlog 5 (5.2.1.5.3) que implementan, y cada commit se cuenta una sola vez, en el área principal que modifica. Se consideran los 25 commits de desarrollo del Sprint en los repositorios de backend y frontend (23 y 2 respectivamente; los commits de las pruebas de sistema del frontend, que se retiraron del alcance, no se cuentan). Los commits asociados son: Palacios (`d0e6e94`, `78aaf5d`, `c60f963`, `1c9d1ed`, `1aa5aaf`, `2e17510`, `15f374c`), Sanchez (`13728a1`, `68b41bc`, `0d82694`, `cf31022`, `ad364ca`, `dd3c9dc`), Melgarejo (`f77dfef`, `d9845f5`, `8a060b0`, `88478a2`), Tello (`837a2c2`, `3f287c5`, `b327a39`, `dd3a16e`, `5dfcbdb`, `c95ca77`, `d5faeed`) y Aylas (`be56a72`). Las líneas se obtuvieron con `git show --numstat` sobre esos commits. La columna de PRs queda vacía porque no se registraron Pull Requests: la integración se hizo con ramas `feature/*` fusionadas a `develop`. Las capturas de GitHub Insights (Contributors, Commits) y la interpretación del equipo deben añadirse una vez publicadas las ramas en GitHub, porque los analíticos de GitHub solo reflejan lo que está en el repositorio remoto.
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-2-Implemented-Landing-Page-Evidence.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-7"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-2-implemented-landing-page-evidence"></a>
 ## 5.2.2. Implemented Landing Page Evidence
@@ -11782,7 +11884,21 @@ La Landing Page se publica en GitHub Pages a partir de la rama `gh-pages`, con H
     </tbody>
 </table>
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-3-Implemented-Frontend-Web-Application-Evidence.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-8"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-3-implemented-frontend-web-application-evidence"></a>
 ## 5.2.3. Implemented Frontend-Web Application Evidence
@@ -11920,7 +12036,21 @@ El historial de commits de la rama `main` del repositorio, tal como está public
     </tbody>
 </table>
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-4-Acuerdo-de-Servicio-SaaS.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-9"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-4-acuerdo-de-servicio-saas"></a>
 ## 5.2.4. Acuerdo de Servicio - SaaS
@@ -12074,7 +12204,21 @@ El Proveedor no vende los datos personales ni los usa para fines distintos de lo
 
 El enunciado indica que este acuerdo debe integrarse públicamente en la sección «Términos y Condiciones» del sitio web. En la Landing Page actual el pie de página muestra el aviso «Términos y privacidad en revisión para el piloto académico», y los enlaces «Términos y Condiciones» y «Política de Privacidad» de la página «Acerca de» todavía apuntan a un marcador vacío. La publicación de este texto como página propia del sitio queda **pendiente** y es el paso necesario para cumplir el criterio de accesibilidad del acuerdo.
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-5-Implemented-Native-Mobile-Application-Evidence.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-10"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-5-implemented-native-mobile-application-evidence"></a>
 ## 5.2.5. Implemented Native-Mobile Application Evidence
@@ -12194,7 +12338,21 @@ Capturas tomadas en el emulador durante el recorrido anterior.
 - **Sin distribución.** No existe un APK firmado de publicación ni una publicación en una tienda; el repositorio contenía un único commit inicial al momento de la verificación.
 - **Entorno de Windows.** La ruta del proyecto contiene la letra «ñ», con la que Gradle no localiza las clases de prueba; las pruebas se ejecutaron montando la carpeta en una unidad con ruta ASCII (`subst`), como indica el README del repositorio.
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-6-Implemented-RESTful-API-Evidence.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-11"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-6-implemented-restful-api-and-or-serverless-backend-evidence"></a>
 ## 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
@@ -12316,7 +12474,21 @@ El historial de commits de la rama `main`, tal como está publicado en GitHub, e
     </tbody>
 </table>
 
+<div style="page-break-before: always;"></div>
+
+<!-- Source: markdown/content/chapter-5/5-2-7-RESTful-API-documentation.md -->
 <br>
+<br>
+
+<div align="center">
+    <img src="markdown/assets/images/chapter-5/capitulo-5.png" alt="Capitulo 5" />
+</div>
+
+<br>
+<br>
+
+<a id="toc-5-2-landing-page-services-applications-implementation-12"></a>
+# 5.2. Landing Page, Services & Applications Implementation.
 
 <a id="toc-5-2-7-restful-api-documentation"></a>
 ## 5.2.7. RESTful API documentation
@@ -12631,8 +12803,9 @@ Commits de la rama `develop` que modificaron la configuración de OpenAPI o los 
     </tbody>
 </table>
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-5/5-3-Video-About-the-Product.md -->
 <br>
 <br>
 
@@ -12689,10 +12862,9 @@ Este testimonio refuerza que SafeStep responde a una necesidad identificada en l
 
 El video concluye destacando que SafeStep busca mejorar la preparación de las personas ante emergencias mediante una experiencia digital completa. Para ello, conecta una landing page informativa, una aplicación web con simulaciones, progreso, gamificación y tienda, además de un backend real que permite gestionar autenticación, datos de usuario, pagos y persistencia. De esta manera, SafeStep aporta valor al convertir el aprendizaje de primeros auxilios en una experiencia práctica, motivadora y orientada a la acción.
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-6/6-1-Testing-Suites-&-Validation.md -->
 <a id="toc-6-1-testing-suites-validation"></a>
 # 6.1. Testing Suites & Validation
 
@@ -12796,7 +12968,6 @@ Las pruebas de integración verifican que el backend funciona correctamente cuan
 Cada escenario crea sus propios usuarios con nombres aleatorios, por lo que la suite puede repetirse sobre una base de datos con datos previos; se ejecutó tres veces consecutivas sin fallos. El flujo extremo a extremo de cupones ilustra el estilo de las pruebas:
 
 ```gherkin
-<a id="toc-2-redeem-the-5-coupon-which-costs-150-safecoins"></a>
 # 2. Redeem the 5% coupon, which costs 150 SafeCoins
 Given path 'api/v1/commerce/coupons/cpn-5/redeem'
 And header Authorization = 'Bearer ' + player.token
@@ -12876,8 +13047,9 @@ public void thePlayerRedeemsTheCoupon(String couponId) {
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-6/6-2-Static-testing-&-Verification.md -->
 <a id="toc-6-2-static-testing-verification"></a>
 # 6.2. Static testing & Verification
 
@@ -12901,8 +13073,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-6/6-3-Validation-Interviews.md -->
 <a id="toc-6-3-validation-interviews"></a>
 # 6.3. Validation Interviews
 
@@ -13599,8 +13772,9 @@ La evaluación heurística evidencia que SafeStep presenta una experiencia clara
 
 Las oportunidades de mejora se concentran en fortalecer la explicación inicial del sistema de gamificación, ampliar la profundidad de las simulaciones para usuarios con mayor experiencia, reforzar la confianza del contenido médico, simplificar ciertos textos y conectar mejor las recomendaciones de productos con los escenarios de aprendizaje. Estos ajustes permitirán mejorar la usabilidad, la arquitectura de información y la inclusión de la experiencia propuesta.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-6/6-4-Auditoría-de-Experiencias-de-Usuario.md -->
 <a id="toc-6-4-auditoria-de-experiencias-de-usuario"></a>
 # 6.4. Auditoría de Experiencias de Usuario
 
@@ -13647,10 +13821,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-7/7-1-ContinuousIntegration.md -->
 <a id="toc-7-1-continuous-integration"></a>
 # 7.1. Continuous Integration
 
@@ -13758,8 +13931,9 @@ bash start-ci.sh          # SonarQube :9000, Jenkins :9089 (usuario admin, clave
 
 Jenkins ejecuta el job `safestep-backend` sobre la rama `develop`; también puede iniciarse manualmente desde la interfaz con *Build Now*.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-7/7-2-Continuous-Delivery.md -->
 <a id="toc-7-2-continuous-delivery"></a>
 # 7.2. Continuous Delivery
 
@@ -13776,8 +13950,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-7/7-3-Continuous-deployment.md -->
 <a id="toc-7-3-continuous-deployment"></a>
 # 7.3. Continuous deployment
 
@@ -13794,8 +13969,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-7/7-4-Continuous-Monitoring.md -->
 <a id="toc-7-4-continuous-monitoring"></a>
 # 7.4. Continuous Monitoring
 
@@ -13822,10 +13998,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-8/8-1-Experiment-Planning.md -->
 <a id="toc-8-1-experiment-planning"></a>
 # 8.1. Experiment Planning
 
@@ -13857,8 +14032,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-8/8-2-Experiment-Design.md -->
 <a id="toc-8-2-experiment-design"></a>
 # 8.2. Experiment Design
 
@@ -13905,8 +14081,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-8/8-3-Experimentation.md -->
 <a id="toc-8-3-experimentation"></a>
 # 8.3. Experimentation
 
@@ -13974,8 +14151,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-8/8-4-Experiment-Aftermath-&-Analysis.md -->
 <a id="toc-8-4-experiment-aftermath-analysis"></a>
 # 8.4. Experiment Aftermath & Analysis
 
@@ -13992,8 +14170,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-8/8-5-Continuous-Learning.md -->
 <a id="toc-8-5-continuous-learning"></a>
 # 8.5. Continuous Learning
 
@@ -14005,8 +14184,9 @@ Pendiente.
 
 Pendiente.
 
-<br>
+<div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/chapter-8/8-6-To-Be-Software-Platform-Pre-launch.md -->
 <a id="toc-8-6-to-be-software-platform-pre-launch"></a>
 # 8.6. To-Be Software Platform Pre-launch
 
@@ -14023,17 +14203,16 @@ Pendiente.
 
 Pendiente.
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/conclusiones.md -->
 <a id="toc-conclusiones"></a>
 # Conclusiones
 
 <a id="toc-conclusiones-y-recomendaciones"></a>
 ## Conclusiones y recomendaciones
 
-<a id="toc-conclusiones-1"></a>
+<a id="toc-conclusiones-2"></a>
 ### Conclusiones
 
 El desarrollo de SafeStep permitio validar la necesidad de una solucion digital orientada al aprendizaje practico de primeros auxilios. A partir del analisis del problema, las entrevistas, las validaciones y la implementacion progresiva del producto, se confirmo que muchos usuarios reconocen la importancia de saber actuar ante emergencias, pero no siempre cuentan con una forma accesible, guiada y constante para practicar. SafeStep responde a esa necesidad mediante una aplicacion web que integra simulaciones medicas, retroalimentacion, progreso, gamificacion y una tienda de productos de emergencia.
@@ -14132,10 +14311,9 @@ El video About The Team presenta la participacion de los cuatro integrantes acti
 
 El contenido del video complementa la seccion Student Outcome porque evidencia la comunicacion oral del equipo, la coordinacion interna y la capacidad de presentar resultados tecnicos y funcionales de manera comprensible. Ademas, funciona como soporte publico para mostrar el proceso de construccion de SafeStep y el aporte de cada integrante durante el trabajo final.
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/bibliografia.md -->
 <a id="toc-bibliografia"></a>
 # Bibliografía
 
@@ -14207,10 +14385,9 @@ Stripe. (s. f.). *Test mode*. Consultado el 8 de octubre de 2026. <https://docs.
 
 White, L. (2024). First Aid Training and CPR Skills Retention (Informe de investigación). *CSA Group*. <a href="https://www.csagroup.org/wp-content/uploads/CSA-Group-Research-First-Aid-Training-and-CPR-Skill-Retention.pdf">https://www.csagroup.org/wp-content/uploads/CSA-Group-Research-First-Aid-Training-and-CPR-Skill-Retention.pdf</a>
 
-<br>
-
 <div style="page-break-before: always;"></div>
 
+<!-- Source: markdown/content/anexos.md -->
 <a id="toc-anexos"></a>
 # Anexos
 
@@ -14237,9 +14414,9 @@ Este anexo reune de forma progresiva los videos de exposicion correspondientes a
 
 Este anexo incluye los reportes de desempeno elaborados para las entregas del proyecto. Estos documentos registran la participacion del equipo, la distribucion de responsabilidades y las evidencias de avance por cada hito.
 
-- Performance Report AV1: <a href="markdown/assets/reports/performance-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-av1.md</a> (versión PDF: <a href="markdown/assets/reports/upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf</a>)
+- Performance Report AV1: <a href="markdown/assets/reports/performance-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-av1.md</a> (versión PDF: <a href="markdown/assets/reports/upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf</a>)
 - Final Report AV1 (informe completo en PDF): <a href="upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf</a>
-- Performance Report TB1: <a href="markdown/assets/reports/performance-report-tb1.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-tb1.md</a>
+- Performance Report TB1: <a href="markdown/assets/reports/performance-report-tb1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-tb1.md</a>
 - Performance Report AV2: se elaborará en la entrega correspondiente.
 - Performance Report TB2: se elaborará en la entrega correspondiente.
 
