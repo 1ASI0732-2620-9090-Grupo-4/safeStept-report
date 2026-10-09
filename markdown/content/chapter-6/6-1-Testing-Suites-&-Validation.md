@@ -4,15 +4,15 @@ Esta sección documenta las suites de prueba que verifican SafeStep. La estrateg
 
 | Nivel | Herramienta | Repositorio y carpeta | Pruebas | Resultado de la última ejecución |
 |-------|-------------|-----------------------|---------|----------------------------------|
-| Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 201 | 201 aprobadas, 0 fallidas |
+| Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 205 | 205 aprobadas, 0 fallidas |
 | Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
 
-Las 234 pruebas del backend que ejecuta Maven (201 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 57.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 201 métodos en 39 clases.
+Las 238 pruebas del backend que ejecuta Maven (205 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 59.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 205 métodos en 40 clases.
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>
-  <p><i><b>Figura 6.1.1.</b> Resultado de las 234 pruebas del backend en Jenkins (ejecución #5). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.1.</b> Resultado de las 238 pruebas del backend en Jenkins (ejecución #7). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 ## 6.1.1. Core Entities Unit Tests
@@ -27,7 +27,7 @@ Las pruebas unitarias validan en aislamiento las entidades de dominio (agregados
 | `iam` | 41 | Registro e inicio de sesión, asignación de roles, regla que impide al administrador quitarse su propio rol, semilla del primer administrador, fachada ACL e integración con la seguridad JWT |
 | `gamification` | 37 | Recompensas por simulación, misiones e insignias, gasto de SafeCoins (`PlayerProgress.spendCoins`), registro del gasto (`CoinSpend`), manejador del evento de intento completado y fachada ACL |
 | `simulation` | 21 | Registro de intentos, CRUD de simulaciones, eventos de dominio y validación del puntaje |
-| `shared` | 18 | Tipo `Result`, manejador global de excepciones, ensamblador de errores y configuración de idioma |
+| `shared` | 22 | Tipo `Result`, manejador global de excepciones, ensamblador de errores y configuración de idioma |
 | `profiles` | 9 | Comandos y consultas de perfiles |
 | `analytics` | 8 | Resumen, progreso y emisión de certificados |
 | Contexto de aplicación | 1 | Arranque de Spring Boot |
@@ -56,20 +56,20 @@ void redeemedCoupon_IsUsedOnlyOnce() {
 
 | Medición | Antes del Trabajo Parcial | Después |
 |----------|---------------------------|---------|
-| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,145 de 5,488 instrucciones) |
-| Pruebas del backend | 54 métodos | 234 pruebas |
+| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,164 de 5,506 instrucciones) |
+| Pruebas del backend | 54 métodos | 238 pruebas |
 
 | Bounded context | Clases medidas | Cobertura |
 |-----------------|----------------|-----------|
 | `analytics` | 3 | 100.0 % |
 | `gamification` | 6 | 100.0 % |
 | `commerce` | 3 | 98.6 % |
-| `shared` | 7 | 94.3 % |
+| `shared` | 7 | 94.6 % |
 | `iam` | 17 | 92.0 % |
 | `simulation` | 11 | 91.2 % |
 | `profiles` | 7 | 62.1 % |
 
-El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.7 % de cobertura sobre 974 líneas medibles (ver 7.1.2).
+El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.7 % de cobertura sobre 980 líneas medibles (ver 7.1.2).
 
 <div align="center">
   <img src="../../assets/images/chapter-6/jacoco-coverage-report.png" alt="Reporte de cobertura JaCoCo"/>
@@ -113,7 +113,7 @@ And match response.discountPercentage == 5
   <p><i><b>Figura 6.1.3.</b> Resumen del reporte HTML de Karate: 5 features y 36 escenarios aprobados contra una instancia local del backend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Hallazgo.** Durante el desarrollo de estas pruebas se detectó que la API responde HTTP 500 (`UNEXPECTED_ERROR`) cuando recibe un cuerpo JSON mal formado, en lugar de un 400. El manejador global de excepciones atiende `RuntimeException` de forma genérica y no registra el error. El defecto queda registrado para corregirse en un sprint posterior; las pruebas actuales no dependen de ese comportamiento.
+**Hallazgo corregido.** Durante el desarrollo de estas pruebas se detectó que la API respondía HTTP 500 (`UNEXPECTED_ERROR`) cuando recibía un cuerpo JSON mal formado, en lugar de un 400, porque el manejador global de excepciones atendía `RuntimeException` de forma genérica y no registraba el error. Se agregó un manejador específico que responde 400 con un error de validación, sin exponer el mensaje interno del analizador, y los errores inesperados ahora se registran. Lo verifican una prueba unitaria y una prueba de integración por HTTP (`ApiRobustnessIntegrationTest`).
 
 **Cómo ejecutarlas:**
 

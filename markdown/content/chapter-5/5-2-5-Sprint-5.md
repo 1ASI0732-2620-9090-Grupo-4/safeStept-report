@@ -124,6 +124,7 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T519</td><td>Jenkins como código</td><td>Imagen de Jenkins con JDK 26 y Maven; plugins.txt, casc.yaml y docker-compose.yml.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS31 - Análisis de calidad con SonarQube y Quality Gate</b></td></tr>
         <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T520</td><td>SonarQube y webhook</td><td>Servidor SonarQube, token como credencial de Jenkins, webhook y waitForQualityGate().</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T521</td><td>Corrección de hallazgos</td><td>Responder 400 ante JSON mal formado, restringir CORS a orígenes configurables y resolver los bugs java:S2184 y java:S2637 de SonarQube, con pruebas nuevas.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
     </tbody>
 </table>
 
@@ -135,8 +136,9 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
 
 - **Panel de administración y roles (backend y frontend):** panel `/app/admin` con conteos por módulo, listado de usuarios y roles, y asignación de roles con las reglas de protección del administrador.
 - **Cupones canjeables (backend y frontend):** rediseño del cupón en dos tipos (descuento simple y descuento con compra mínima), canje con SafeCoins mediante la fachada ACL de gamificación, descuento aplicado a la orden y cobrado por Stripe, y liberación del cupón si el pago falla.
-- **Suites de pruebas:** 201 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.5.5 y 6.1).
-- **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube (ver 6.1 y 7.1).
+- **Suites de pruebas:** 205 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.5.5 y 6.1).
+- **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube con el Quality Gate aprobado (ver 6.1 y 7.1).
+- **Hallazgos corregidos:** la API responde 400 ante un JSON mal formado, CORS ya no admite cualquier origen y se resolvieron los bugs que reportó SonarQube; solo queda abierta la regla de CSRF, que es una decisión de diseño (ver 7.1).
 - **Pipeline de integración continua:** `Jenkinsfile` con siete etapas, y Jenkins y SonarQube configurados como código (ver 7.1).
 
 **Commits Realizados (desarrollo de producto):**
@@ -145,6 +147,8 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
     <tbody>
         <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
         <tr><td>safestept-backend</td><td>main</td><td>f77dfef</td><td>feat: add coupon redemption feature</td><td>—</td><td>17/09/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>5dfcbdb</td><td>fix: answer 400 for malformed JSON, restrict CORS and clear Sonar findings</td><td>- GlobalExceptionHandler maps unreadable request bodies to a 400 validation error without leaking the parser message, and logs unexpected exceptions. - CORS no longer allows every origin: the allowed origins come from safestep.cors.allowed-origins (SAFESTEP_CORS_ALLOWED_ORIGINS), defaulting to the local frontend and the published frontends. - Discount factor uses long arithmetic (java:S2184). - ErrorResponseAssembler marks the nullable lookup as @Nullable (java:S2637).</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>d5faeed</td><td>fix: type the new unreadable-body handler response (java:S1452)</td><td>—</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
@@ -166,7 +170,7 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
 | Pruebas unitarias y BDD del backend | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `src/test` |
 | Pruebas de integración de API (Karate) | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `api-tests` |
 
-**Unit Tests.** Las 201 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
+**Unit Tests.** Las 205 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
@@ -203,7 +207,8 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
         <tr><td>(aplicación)</td><td><code>SafeStepPlatformApplicationTests</code></td><td><code>SafeStepPlatformApplicationTests</code></td><td align='center'>1</td><td>—</td></tr>
         <tr><td>shared</td><td><code>ResultTest</code></td><td><code>Result</code></td><td align='center'>7</td><td>• success and failure factories should report their state<br>• toOptional should only contain the value of a success<br>• getOrElse should fall back to the default for failures<br>• map should transform successes and keep failures untouched<br>• flatMap should chain successes and short-circuit failures<br>• mapError should translate the error of failures only<br>• recover should replace a failure and leave a success alone</td></tr>
         <tr><td>shared</td><td><code>LocaleConfigurationTest</code></td><td><code>LocaleConfiguration</code></td><td align='center'>1</td><td>—</td></tr>
-        <tr><td>shared</td><td><code>GlobalExceptionHandlerTest</code></td><td><code>GlobalExceptionHandler</code></td><td align='center'>7</td><td>—</td></tr>
+        <tr><td>shared</td><td><code>ApiRobustnessIntegrationTest</code></td><td><code>ApiRobustnessIntegration</code></td><td align='center'>3</td><td>• A malformed JSON body should be answered with 400 and a validation error, not with 500<br>• A preflight request from an allowed origin should receive the CORS headers<br>• A preflight request from a foreign origin should be rejected</td></tr>
+        <tr><td>shared</td><td><code>GlobalExceptionHandlerTest</code></td><td><code>GlobalExceptionHandler</code></td><td align='center'>8</td><td>—</td></tr>
         <tr><td>shared</td><td><code>ErrorResponseAssemblerTest</code></td><td><code>ErrorResponseAssembler</code></td><td align='center'>3</td><td>—</td></tr>
         <tr><td>simulation</td><td><code>SimulationAttemptCommandServiceImplTest</code></td><td><code>SimulationAttemptCommandServiceImpl</code></td><td align='center'>5</td><td>• handle(CreateSimulationAttemptCommand) should fail for an unknown simulation<br>• handle(CreateSimulationAttemptCommand) should store a completed attempt with its errors<br>• handle(CreateSimulationCommand) should reject duplicated slugs and save new simulations<br>• handle(UpdateSimulationCommand) should keep the stored id and reject blank or unknown ids<br>• handle(DeleteSimulationCommand) should delete existing simulations only</td></tr>
         <tr><td>simulation</td><td><code>SimulationCommandServiceImplTest</code></td><td><code>SimulationCommandServiceImpl</code></td><td align='center'>3</td><td>—</td></tr>
@@ -810,6 +815,7 @@ Feature: Simulation rewards API
         <tr><td>safestept-backend</td><td>feature/story-traceability-tags</td><td>ad364ca</td><td>test: tag features with the new US57-US61 story ids</td><td>—</td><td>08/10/2026</td></tr>
         <tr><td>safestept-backend</td><td>develop</td><td>dd3c9dc</td><td>docs(api-tests): align the story ids with the product backlog</td><td>—</td><td>08/10/2026</td></tr>
         <tr><td>safestept-backend</td><td>develop</td><td>dd3a16e</td><td>ci: limit the pipeline to continuous integration</td><td>Delivery and deployment are out of scope for this delivery, so the Docker image, the Karate run against a container and the Docker Hub publication are removed from the Jenkinsfile. The application Dockerfile is restored and the Jenkins image no longer carries the Docker CLI nor the host socket.</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>c95ca77</td><td>test: cover the 400 for malformed JSON and the CORS rules</td><td>Adds a unit test for the new handler and an HTTP integration test for the malformed body, an allowed origin and a foreign origin. The test configuration declares the CORS property because it replaces the main application.properties.</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
@@ -925,7 +931,7 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
         <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
         <tr><td>Ayala Fernandez, Jorge Brayan</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>19</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>22</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
     </tbody>
 </table>

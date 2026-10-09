@@ -30,24 +30,24 @@ La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la
 
 ## 7.1.2. Build & Test Suite Pipeline Components
 
-El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #5 en Jenkins (4 min 55 s de principio a fin, resultado **SUCCESS**).
+El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #7 en Jenkins (3 min 42 s de principio a fin, resultado **SUCCESS**).
 
 | # | Etapa | Comando | Qué verifica o produce | Si falla | Tiempo |
 |---|-------|---------|------------------------|----------|--------|
-| 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 2 s |
-| 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 56 s |
-| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 26 s |
-| 4 | Unit and BDD Tests | `mvn test` | 201 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 23 s |
+| 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 1 s |
+| 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 21 s |
+| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 17 s |
+| 4 | Unit and BDD Tests | `mvn test` | 205 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 23 s |
 | 5 | Validate Test Coverage | `mvn jacoco:check` | Cobertura de instrucciones ≥ 80 % sobre las clases medidas (resultado: 93.8 %) | Se detiene | 5 s |
-| 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 13 s |
-| 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 20 s |
+| 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 12 s |
+| 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 14 s |
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-pipeline-stage-view.png" alt="Stage View del pipeline de Jenkins"/>
-  <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins (ejecución #5). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins (ejecución #7). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron porque la entrega y el despliegue continuos no forman parte de esta entrega. La ejecución #5 corresponde al pipeline actual, de integración continua.
+**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron porque la entrega y el despliegue continuos no forman parte de esta entrega. La ejecución #5 fue la primera del pipeline de integración continua actual. Después de corregir los hallazgos de SonarQube (ver abajo), la ejecución #6 **falló a propósito del Quality Gate**: el código nuevo tenía una incidencia de estilo (`java:S1452`, un tipo genérico `ResponseEntity<?>` en el manejador nuevo) y el pipeline se detuvo en la etapa de SonarQube sin generar el JAR. Se corrigió el tipo de retorno y la ejecución #7 terminó en SUCCESS.
 
 **Integración con SonarQube.** La primera instalación usó la imagen `sonarqube:lts-community` (9.9) del material del curso. Su analizador de Java no puede leer la sintaxis moderna que usa el backend (`switch` con patrones y variables sin nombre `_`) y registró errores de análisis en tres archivos, por lo que el equipo cambió a la imagen vigente `sonarqube:community`, con la que el análisis termina sin errores de lectura. SonarQube notifica a Jenkins mediante el webhook `http://jenkins-master:9089/sonarqube-webhook/`, y `waitForQualityGate()` retoma el pipeline cuando llega el resultado.
 
@@ -58,38 +58,38 @@ El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la 
 
 | Métrica de SonarQube | Valor |
 |----------------------|-------|
-| Líneas de código | 9,854 en 370 archivos |
+| Líneas de código | 9,872 en 370 archivos |
 | Quality Gate (Sonar way) | **Aprobado** |
-| Cobertura | 91.7 % sobre 974 líneas medibles |
+| Cobertura | 91.7 % sobre 980 líneas medibles |
 | Duplicación | 1.0 % |
-| Vulnerabilidades | 2 (calificación de seguridad D) |
-| Bugs | 3 (la calificación de fiabilidad es B, con 7 incidencias de fiabilidad) |
-| Code smells | 207 (calificación de mantenibilidad A) |
+| Vulnerabilidades | 1 (calificación de seguridad D; es el CSRF deshabilitado a propósito) |
+| Bugs | 0 (calificación de fiabilidad A) |
+| Code smells | 206 (calificación de mantenibilidad A) |
 | Hotspots de seguridad | 0 |
 
-El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**; como este fue el primer análisis del proyecto no hay código nuevo que evaluar y el gate aprueba. Por eso las incidencias existentes se tratan como deuda técnica y se listan a continuación en lugar de ocultarse.
+El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**. En el primer análisis del proyecto no existía código nuevo que evaluar y el gate aprobó, por lo que las incidencias existentes se trataron como deuda técnica y se listaron en lugar de ocultarse. En los análisis posteriores sí hay código nuevo, y el gate lo evalúa con tres condiciones: cobertura del código nuevo de al menos 80 % (resultado: 100 %), duplicación menor a 3 % (0 %) y ninguna incidencia nueva (0).
 
-**Hallazgos de seguridad y fiabilidad (6.2.1.2):**
+**Hallazgos de seguridad y fiabilidad (6.2.1.2).** El primer análisis reportó 2 vulnerabilidades y 3 bugs. El equipo corrigió los hallazgos que eran reales y dejó, documentada, la que es una decisión de diseño:
 
-| Tipo | Gravedad | Regla | Archivo | Descripción | Valoración del equipo |
-|------|----------|-------|---------|-------------|-----------------------|
-| Vulnerabilidad | Crítica | `java:S4502` | `WebSecurityConfiguration` | La protección CSRF de Spring Security está deshabilitada | Aceptable en esta API: es *stateless*, autentica con JWT en el encabezado `Authorization` y no usa cookies de sesión; debe marcarse como revisada |
-| Vulnerabilidad | Mayor | `java:S5122` | `WebSecurityConfiguration` | CORS permite cualquier origen (`*`) | Real: conviene restringirlo a los dominios del frontend desplegado y de desarrollo antes de producción |
-| Bug | Menor | `java:S2184` | `StripeCheckoutClientImpl` | Posible desbordamiento en una resta de enteros que se convierte a `long` | Real y de bajo riesgo: convertir un operando a `long` |
-| Bug | Menor | `java:S2637` | `ErrorResponseAssembler` (2) | Se devuelve `null` desde métodos marcados como no nulos (`@NullMarked`) | Real: devolver `Optional` o anotar el retorno como anulable |
+| Tipo | Gravedad | Regla | Archivo | Descripción | Estado |
+|------|----------|-------|---------|-------------|--------|
+| Vulnerabilidad | Crítica | `java:S4502` | `WebSecurityConfiguration` | La protección CSRF de Spring Security está deshabilitada | **Se mantiene.** Es aceptable en esta API: es *stateless*, autentica con JWT en el encabezado `Authorization` y no usa cookies de sesión |
+| Vulnerabilidad | Mayor | `java:S5122` | `WebSecurityConfiguration` | CORS permitía cualquier origen (`*`) | **Corregido.** Los orígenes permitidos salen de la propiedad `safestep.cors.allowed-origins` (variable `SAFESTEP_CORS_ALLOWED_ORIGINS`), con el frontend local y los frontends publicados por defecto |
+| Bug | Menor | `java:S2184` | `StripeCheckoutClientImpl` | Posible desbordamiento en una resta de enteros que se convierte a `long` | **Corregido.** La resta usa aritmética `long` |
+| Bug | Menor | `java:S2637` | `ErrorResponseAssembler` (2) | Se devolvía `null` desde métodos marcados como no nulos (`@NullMarked`) | **Corregido.** El retorno se anotó como `@Nullable` |
 
 <div align="center">
   <img src="../../assets/images/chapter-7/sonarqube-issues.png" alt="Incidencias de seguridad y fiabilidad en SonarQube"/>
-  <p><i><b>Figura 7.1.3.</b> Vulnerabilidades y bugs reportados por SonarQube. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.3.</b> Vulnerabilidades y bugs que SonarQube mantiene abiertos tras las correcciones (solo el CSRF deshabilitado). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-Estas incidencias no se corrigieron en este hito para mantener el alcance del sprint en las pruebas y el pipeline; quedan registradas para el siguiente sprint, junto con el defecto de la respuesta 500 ante JSON mal formado descrito en 6.1.2.
+La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres de integración por HTTP sobre el cuerpo ilegible y las reglas de CORS), la ejecución completa de Jenkins con las 238 pruebas y una consulta real al backend levantado, que respondió 400 al JSON mal formado, aceptó la petición previa (*preflight*) del frontend publicado y rechazó con 403 la de un origen desconocido.
 
 **Reportes y artefactos de cada ejecución.**
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-build-artifacts.png" alt="Artefactos de la ejecución en Jenkins"/>
-  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #5 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #7 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Cómo reproducir el entorno de CI:**

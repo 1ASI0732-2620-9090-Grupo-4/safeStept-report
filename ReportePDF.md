@@ -517,7 +517,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <i>AV1</i>
             <p>Al preparar la configuración y el despliegue (capítulo V), identifiqué una credencial de base de datos que había quedado versionada en el historial de Git y documenté que debe rotarse en el proveedor en lugar de solo eliminarla del archivo actual; también detecté que cuentas con rol de usuario común podían ver controles de administración en la web y agregué restricciones de rol (<code>@PreAuthorize</code> en el backend y un <code>adminGuard</code> en el frontend) antes de reportar el avance como funcional.</p>
             <i>TP</i>
-            <p>En las pruebas y el pipeline del Trabajo Parcial (capítulos VI y VII) no oculté los resultados desfavorables de la medición de calidad: documenté que Checkstyle reporta 8,034 observaciones sobre el código existente, que SonarQube marca 2 vulnerabilidades (CORS abierto a cualquier origen y CSRF deshabilitado) y que el Quality Gate aprueba únicamente porque en el primer análisis no existe código nuevo que evaluar. También evité que las credenciales generadas para Jenkins y SonarQube se versionen (quedan en un archivo ignorado por Git) y devolví a una variable de entorno la clave de Stripe que se había escrito directamente en <code>application.properties</code>.</p>
+            <p>En las pruebas y el pipeline del Trabajo Parcial (capítulos VI y VII) no oculté los resultados desfavorables de la medición de calidad: documenté que Checkstyle reporta 8,034 observaciones sobre el código existente, que SonarQube marcó 2 vulnerabilidades y 3 bugs. Corregí los que eran reales (entre ellos CORS abierto a cualquier origen) y dejé documentada como decisión de diseño la protección CSRF deshabilitada, en lugar de silenciar la regla; además dejé que el Quality Gate fallara cuando mi propio código nuevo tuvo una incidencia. También evité que las credenciales generadas para Jenkins y SonarQube se versionen (quedan en un archivo ignorado por Git) y devolví a una variable de entorno la clave de Stripe que se había escrito directamente en <code>application.properties</code>.</p>
         </td>
     </tr>
     <tr>
@@ -10677,6 +10677,7 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td>TS30</td><td>Pipeline de integración continua con Jenkins</td><td>T519</td><td>Jenkins como código</td><td>Imagen de Jenkins con JDK 26 y Maven; plugins.txt, casc.yaml y docker-compose.yml.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr class="story-separator" style="background-color: #eef4ff;"><td colspan="8"><b>Technical Story TS31 - Análisis de calidad con SonarQube y Quality Gate</b></td></tr>
         <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T520</td><td>SonarQube y webhook</td><td>Servidor SonarQube, token como credencial de Jenkins, webhook y waitForQualityGate().</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>TS31</td><td>Análisis de calidad con SonarQube y Quality Gate</td><td>T521</td><td>Corrección de hallazgos</td><td>Responder 400 ante JSON mal formado, restringir CORS a orígenes configurables y resolver los bugs java:S2184 y java:S2637 de SonarQube, con pruebas nuevas.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
     </tbody>
 </table>
 
@@ -10689,8 +10690,9 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
 
 - **Panel de administración y roles (backend y frontend):** panel `/app/admin` con conteos por módulo, listado de usuarios y roles, y asignación de roles con las reglas de protección del administrador.
 - **Cupones canjeables (backend y frontend):** rediseño del cupón en dos tipos (descuento simple y descuento con compra mínima), canje con SafeCoins mediante la fachada ACL de gamificación, descuento aplicado a la orden y cobrado por Stripe, y liberación del cupón si el pago falla.
-- **Suites de pruebas:** 201 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.5.5 y 6.1).
-- **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube (ver 6.1 y 7.1).
+- **Suites de pruebas:** 205 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.5.5 y 6.1).
+- **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube con el Quality Gate aprobado (ver 6.1 y 7.1).
+- **Hallazgos corregidos:** la API responde 400 ante un JSON mal formado, CORS ya no admite cualquier origen y se resolvieron los bugs que reportó SonarQube; solo queda abierta la regla de CSRF, que es una decisión de diseño (ver 7.1).
 - **Pipeline de integración continua:** `Jenkinsfile` con siete etapas, y Jenkins y SonarQube configurados como código (ver 7.1).
 
 **Commits Realizados (desarrollo de producto):**
@@ -10699,6 +10701,8 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
     <tbody>
         <tr><td><b>Repository</b></td><td><b>Branch</b></td><td><b>Commit Id</b></td><td><b>Commit Message</b></td><td><b>Commit Message Body</b></td><td><b>Committed on (Date)</b></td></tr>
         <tr><td>safestept-backend</td><td>main</td><td>f77dfef</td><td>feat: add coupon redemption feature</td><td>—</td><td>17/09/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>5dfcbdb</td><td>fix: answer 400 for malformed JSON, restrict CORS and clear Sonar findings</td><td>- GlobalExceptionHandler maps unreadable request bodies to a 400 validation error without leaking the parser message, and logs unexpected exceptions. - CORS no longer allows every origin: the allowed origins come from safestep.cors.allowed-origins (SAFESTEP_CORS_ALLOWED_ORIGINS), defaulting to the local frontend and the published frontends. - Discount factor uses long arithmetic (java:S2184). - ErrorResponseAssembler marks the nullable lookup as @Nullable (java:S2637).</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>d5faeed</td><td>fix: type the new unreadable-body handler response (java:S1452)</td><td>—</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
@@ -10721,7 +10725,7 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
 | Pruebas unitarias y BDD del backend | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `src/test` |
 | Pruebas de integración de API (Karate) | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `api-tests` |
 
-**Unit Tests.** Las 201 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
+**Unit Tests.** Las 205 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
@@ -10758,7 +10762,8 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
         <tr><td>(aplicación)</td><td><code>SafeStepPlatformApplicationTests</code></td><td><code>SafeStepPlatformApplicationTests</code></td><td align='center'>1</td><td>—</td></tr>
         <tr><td>shared</td><td><code>ResultTest</code></td><td><code>Result</code></td><td align='center'>7</td><td>• success and failure factories should report their state<br>• toOptional should only contain the value of a success<br>• getOrElse should fall back to the default for failures<br>• map should transform successes and keep failures untouched<br>• flatMap should chain successes and short-circuit failures<br>• mapError should translate the error of failures only<br>• recover should replace a failure and leave a success alone</td></tr>
         <tr><td>shared</td><td><code>LocaleConfigurationTest</code></td><td><code>LocaleConfiguration</code></td><td align='center'>1</td><td>—</td></tr>
-        <tr><td>shared</td><td><code>GlobalExceptionHandlerTest</code></td><td><code>GlobalExceptionHandler</code></td><td align='center'>7</td><td>—</td></tr>
+        <tr><td>shared</td><td><code>ApiRobustnessIntegrationTest</code></td><td><code>ApiRobustnessIntegration</code></td><td align='center'>3</td><td>• A malformed JSON body should be answered with 400 and a validation error, not with 500<br>• A preflight request from an allowed origin should receive the CORS headers<br>• A preflight request from a foreign origin should be rejected</td></tr>
+        <tr><td>shared</td><td><code>GlobalExceptionHandlerTest</code></td><td><code>GlobalExceptionHandler</code></td><td align='center'>8</td><td>—</td></tr>
         <tr><td>shared</td><td><code>ErrorResponseAssemblerTest</code></td><td><code>ErrorResponseAssembler</code></td><td align='center'>3</td><td>—</td></tr>
         <tr><td>simulation</td><td><code>SimulationAttemptCommandServiceImplTest</code></td><td><code>SimulationAttemptCommandServiceImpl</code></td><td align='center'>5</td><td>• handle(CreateSimulationAttemptCommand) should fail for an unknown simulation<br>• handle(CreateSimulationAttemptCommand) should store a completed attempt with its errors<br>• handle(CreateSimulationCommand) should reject duplicated slugs and save new simulations<br>• handle(UpdateSimulationCommand) should keep the stored id and reject blank or unknown ids<br>• handle(DeleteSimulationCommand) should delete existing simulations only</td></tr>
         <tr><td>simulation</td><td><code>SimulationCommandServiceImplTest</code></td><td><code>SimulationCommandServiceImpl</code></td><td align='center'>3</td><td>—</td></tr>
@@ -11365,6 +11370,7 @@ Feature: Simulation rewards API
         <tr><td>safestept-backend</td><td>feature/story-traceability-tags</td><td>ad364ca</td><td>test: tag features with the new US57-US61 story ids</td><td>—</td><td>08/10/2026</td></tr>
         <tr><td>safestept-backend</td><td>develop</td><td>dd3c9dc</td><td>docs(api-tests): align the story ids with the product backlog</td><td>—</td><td>08/10/2026</td></tr>
         <tr><td>safestept-backend</td><td>develop</td><td>dd3a16e</td><td>ci: limit the pipeline to continuous integration</td><td>Delivery and deployment are out of scope for this delivery, so the Docker image, the Karate run against a container and the Docker Hub publication are removed from the Jenkinsfile. The application Dockerfile is restored and the Jenkins image no longer carries the Docker CLI nor the host socket.</td><td>08/10/2026</td></tr>
+        <tr><td>safestept-backend</td><td>develop</td><td>c95ca77</td><td>test: cover the 400 for malformed JSON and the CORS rules</td><td>Adds a unit test for the new handler and an HTTP integration test for the malformed body, an allowed origin and a foreign origin. The test configuration declares the CORS property because it replaces the main application.properties.</td><td>08/10/2026</td></tr>
     </tbody>
 </table>
 
@@ -11484,7 +11490,7 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
         <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
         <tr><td>Ayala Fernandez, Jorge Brayan</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>19</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>22</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
     </tbody>
 </table>
@@ -11560,15 +11566,15 @@ Esta sección documenta las suites de prueba que verifican SafeStep. La estrateg
 
 | Nivel | Herramienta | Repositorio y carpeta | Pruebas | Resultado de la última ejecución |
 |-------|-------------|-----------------------|---------|----------------------------------|
-| Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 201 | 201 aprobadas, 0 fallidas |
+| Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 205 | 205 aprobadas, 0 fallidas |
 | Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
 
-Las 234 pruebas del backend que ejecuta Maven (201 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 57.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 201 métodos en 39 clases.
+Las 238 pruebas del backend que ejecuta Maven (205 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 59.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 205 métodos en 40 clases.
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>
-  <p><i><b>Figura 6.1.1.</b> Resultado de las 234 pruebas del backend en Jenkins (ejecución #5). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.1.</b> Resultado de las 238 pruebas del backend en Jenkins (ejecución #7). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <a id="toc-6-1-1-core-entities-unit-tests"></a>
@@ -11584,7 +11590,7 @@ Las pruebas unitarias validan en aislamiento las entidades de dominio (agregados
 | `iam` | 41 | Registro e inicio de sesión, asignación de roles, regla que impide al administrador quitarse su propio rol, semilla del primer administrador, fachada ACL e integración con la seguridad JWT |
 | `gamification` | 37 | Recompensas por simulación, misiones e insignias, gasto de SafeCoins (`PlayerProgress.spendCoins`), registro del gasto (`CoinSpend`), manejador del evento de intento completado y fachada ACL |
 | `simulation` | 21 | Registro de intentos, CRUD de simulaciones, eventos de dominio y validación del puntaje |
-| `shared` | 18 | Tipo `Result`, manejador global de excepciones, ensamblador de errores y configuración de idioma |
+| `shared` | 22 | Tipo `Result`, manejador global de excepciones, ensamblador de errores y configuración de idioma |
 | `profiles` | 9 | Comandos y consultas de perfiles |
 | `analytics` | 8 | Resumen, progreso y emisión de certificados |
 | Contexto de aplicación | 1 | Arranque de Spring Boot |
@@ -11613,20 +11619,20 @@ void redeemedCoupon_IsUsedOnlyOnce() {
 
 | Medición | Antes del Trabajo Parcial | Después |
 |----------|---------------------------|---------|
-| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,145 de 5,488 instrucciones) |
-| Pruebas del backend | 54 métodos | 234 pruebas |
+| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,164 de 5,506 instrucciones) |
+| Pruebas del backend | 54 métodos | 238 pruebas |
 
 | Bounded context | Clases medidas | Cobertura |
 |-----------------|----------------|-----------|
 | `analytics` | 3 | 100.0 % |
 | `gamification` | 6 | 100.0 % |
 | `commerce` | 3 | 98.6 % |
-| `shared` | 7 | 94.3 % |
+| `shared` | 7 | 94.6 % |
 | `iam` | 17 | 92.0 % |
 | `simulation` | 11 | 91.2 % |
 | `profiles` | 7 | 62.1 % |
 
-El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.7 % de cobertura sobre 974 líneas medibles (ver 7.1.2).
+El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.7 % de cobertura sobre 980 líneas medibles (ver 7.1.2).
 
 <div align="center">
   <img src="markdown/assets/images/chapter-6/jacoco-coverage-report.png" alt="Reporte de cobertura JaCoCo"/>
@@ -11672,7 +11678,7 @@ And match response.discountPercentage == 5
   <p><i><b>Figura 6.1.3.</b> Resumen del reporte HTML de Karate: 5 features y 36 escenarios aprobados contra una instancia local del backend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Hallazgo.** Durante el desarrollo de estas pruebas se detectó que la API responde HTTP 500 (`UNEXPECTED_ERROR`) cuando recibe un cuerpo JSON mal formado, en lugar de un 400. El manejador global de excepciones atiende `RuntimeException` de forma genérica y no registra el error. El defecto queda registrado para corregirse en un sprint posterior; las pruebas actuales no dependen de ese comportamiento.
+**Hallazgo corregido.** Durante el desarrollo de estas pruebas se detectó que la API respondía HTTP 500 (`UNEXPECTED_ERROR`) cuando recibía un cuerpo JSON mal formado, en lugar de un 400, porque el manejador global de excepciones atendía `RuntimeException` de forma genérica y no registraba el error. Se agregó un manejador específico que responde 400 con un error de validación, sin exponer el mensaje interno del analizador, y los errores inesperados ahora se registran. Lo verifican una prueba unitaria y una prueba de integración por HTTP (`ApiRobustnessIntegrationTest`).
 
 **Cómo ejecutarlas:**
 
@@ -12546,24 +12552,24 @@ La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la
 <a id="toc-7-1-2-build-test-suite-pipeline-components"></a>
 ## 7.1.2. Build & Test Suite Pipeline Components
 
-El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #5 en Jenkins (4 min 55 s de principio a fin, resultado **SUCCESS**).
+El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #7 en Jenkins (3 min 42 s de principio a fin, resultado **SUCCESS**).
 
 | # | Etapa | Comando | Qué verifica o produce | Si falla | Tiempo |
 |---|-------|---------|------------------------|----------|--------|
-| 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 2 s |
-| 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 56 s |
-| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 26 s |
-| 4 | Unit and BDD Tests | `mvn test` | 201 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 23 s |
+| 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 1 s |
+| 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 21 s |
+| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 17 s |
+| 4 | Unit and BDD Tests | `mvn test` | 205 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 23 s |
 | 5 | Validate Test Coverage | `mvn jacoco:check` | Cobertura de instrucciones ≥ 80 % sobre las clases medidas (resultado: 93.8 %) | Se detiene | 5 s |
-| 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 13 s |
-| 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 20 s |
+| 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 12 s |
+| 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 14 s |
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/jenkins-pipeline-stage-view.png" alt="Stage View del pipeline de Jenkins"/>
-  <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins (ejecución #5). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins (ejecución #7). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron porque la entrega y el despliegue continuos no forman parte de esta entrega. La ejecución #5 corresponde al pipeline actual, de integración continua.
+**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron porque la entrega y el despliegue continuos no forman parte de esta entrega. La ejecución #5 fue la primera del pipeline de integración continua actual. Después de corregir los hallazgos de SonarQube (ver abajo), la ejecución #6 **falló a propósito del Quality Gate**: el código nuevo tenía una incidencia de estilo (`java:S1452`, un tipo genérico `ResponseEntity<?>` en el manejador nuevo) y el pipeline se detuvo en la etapa de SonarQube sin generar el JAR. Se corrigió el tipo de retorno y la ejecución #7 terminó en SUCCESS.
 
 **Integración con SonarQube.** La primera instalación usó la imagen `sonarqube:lts-community` (9.9) del material del curso. Su analizador de Java no puede leer la sintaxis moderna que usa el backend (`switch` con patrones y variables sin nombre `_`) y registró errores de análisis en tres archivos, por lo que el equipo cambió a la imagen vigente `sonarqube:community`, con la que el análisis termina sin errores de lectura. SonarQube notifica a Jenkins mediante el webhook `http://jenkins-master:9089/sonarqube-webhook/`, y `waitForQualityGate()` retoma el pipeline cuando llega el resultado.
 
@@ -12574,38 +12580,38 @@ El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la 
 
 | Métrica de SonarQube | Valor |
 |----------------------|-------|
-| Líneas de código | 9,854 en 370 archivos |
+| Líneas de código | 9,872 en 370 archivos |
 | Quality Gate (Sonar way) | **Aprobado** |
-| Cobertura | 91.7 % sobre 974 líneas medibles |
+| Cobertura | 91.7 % sobre 980 líneas medibles |
 | Duplicación | 1.0 % |
-| Vulnerabilidades | 2 (calificación de seguridad D) |
-| Bugs | 3 (la calificación de fiabilidad es B, con 7 incidencias de fiabilidad) |
-| Code smells | 207 (calificación de mantenibilidad A) |
+| Vulnerabilidades | 1 (calificación de seguridad D; es el CSRF deshabilitado a propósito) |
+| Bugs | 0 (calificación de fiabilidad A) |
+| Code smells | 206 (calificación de mantenibilidad A) |
 | Hotspots de seguridad | 0 |
 
-El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**; como este fue el primer análisis del proyecto no hay código nuevo que evaluar y el gate aprueba. Por eso las incidencias existentes se tratan como deuda técnica y se listan a continuación en lugar de ocultarse.
+El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**. En el primer análisis del proyecto no existía código nuevo que evaluar y el gate aprobó, por lo que las incidencias existentes se trataron como deuda técnica y se listaron en lugar de ocultarse. En los análisis posteriores sí hay código nuevo, y el gate lo evalúa con tres condiciones: cobertura del código nuevo de al menos 80 % (resultado: 100 %), duplicación menor a 3 % (0 %) y ninguna incidencia nueva (0).
 
-**Hallazgos de seguridad y fiabilidad (6.2.1.2):**
+**Hallazgos de seguridad y fiabilidad (6.2.1.2).** El primer análisis reportó 2 vulnerabilidades y 3 bugs. El equipo corrigió los hallazgos que eran reales y dejó, documentada, la que es una decisión de diseño:
 
-| Tipo | Gravedad | Regla | Archivo | Descripción | Valoración del equipo |
-|------|----------|-------|---------|-------------|-----------------------|
-| Vulnerabilidad | Crítica | `java:S4502` | `WebSecurityConfiguration` | La protección CSRF de Spring Security está deshabilitada | Aceptable en esta API: es *stateless*, autentica con JWT en el encabezado `Authorization` y no usa cookies de sesión; debe marcarse como revisada |
-| Vulnerabilidad | Mayor | `java:S5122` | `WebSecurityConfiguration` | CORS permite cualquier origen (`*`) | Real: conviene restringirlo a los dominios del frontend desplegado y de desarrollo antes de producción |
-| Bug | Menor | `java:S2184` | `StripeCheckoutClientImpl` | Posible desbordamiento en una resta de enteros que se convierte a `long` | Real y de bajo riesgo: convertir un operando a `long` |
-| Bug | Menor | `java:S2637` | `ErrorResponseAssembler` (2) | Se devuelve `null` desde métodos marcados como no nulos (`@NullMarked`) | Real: devolver `Optional` o anotar el retorno como anulable |
+| Tipo | Gravedad | Regla | Archivo | Descripción | Estado |
+|------|----------|-------|---------|-------------|--------|
+| Vulnerabilidad | Crítica | `java:S4502` | `WebSecurityConfiguration` | La protección CSRF de Spring Security está deshabilitada | **Se mantiene.** Es aceptable en esta API: es *stateless*, autentica con JWT en el encabezado `Authorization` y no usa cookies de sesión |
+| Vulnerabilidad | Mayor | `java:S5122` | `WebSecurityConfiguration` | CORS permitía cualquier origen (`*`) | **Corregido.** Los orígenes permitidos salen de la propiedad `safestep.cors.allowed-origins` (variable `SAFESTEP_CORS_ALLOWED_ORIGINS`), con el frontend local y los frontends publicados por defecto |
+| Bug | Menor | `java:S2184` | `StripeCheckoutClientImpl` | Posible desbordamiento en una resta de enteros que se convierte a `long` | **Corregido.** La resta usa aritmética `long` |
+| Bug | Menor | `java:S2637` | `ErrorResponseAssembler` (2) | Se devolvía `null` desde métodos marcados como no nulos (`@NullMarked`) | **Corregido.** El retorno se anotó como `@Nullable` |
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/sonarqube-issues.png" alt="Incidencias de seguridad y fiabilidad en SonarQube"/>
-  <p><i><b>Figura 7.1.3.</b> Vulnerabilidades y bugs reportados por SonarQube. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.3.</b> Vulnerabilidades y bugs que SonarQube mantiene abiertos tras las correcciones (solo el CSRF deshabilitado). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-Estas incidencias no se corrigieron en este hito para mantener el alcance del sprint en las pruebas y el pipeline; quedan registradas para el siguiente sprint, junto con el defecto de la respuesta 500 ante JSON mal formado descrito en 6.1.2.
+La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres de integración por HTTP sobre el cuerpo ilegible y las reglas de CORS), la ejecución completa de Jenkins con las 238 pruebas y una consulta real al backend levantado, que respondió 400 al JSON mal formado, aceptó la petición previa (*preflight*) del frontend publicado y rechazó con 403 la de un origen desconocido.
 
 **Reportes y artefactos de cada ejecución.**
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/jenkins-build-artifacts.png" alt="Artefactos de la ejecución en Jenkins"/>
-  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #5 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #7 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Cómo reproducir el entorno de CI:**
@@ -12905,9 +12911,9 @@ Durante el Sprint 3 se implemento el backend de SafeStep con Spring Boot, Java, 
 
 Durante el Sprint 4 se fortalecio el producto con la implementacion de IAM y pagos con Stripe tanto en frontend como en backend. La autenticacion con JWT, las rutas protegidas, el manejo de perfil de usuario, la integracion con Stripe Checkout y la persistencia en PostgreSQL desplegado en Render hicieron que SafeStep pasara de ser una simulacion academica a una aplicacion web mas cercana a un entorno real. Este sprint tambien permitio validar flujos criticos como registro, inicio de sesion, compra de productos, confirmacion de pago y despliegue publico.
 
-Durante el Sprint 5 el foco se desplazo de construir funcionalidades a demostrar y proteger su calidad. Se incorporaron al Product Backlog el panel de administracion, la gestion de roles y el canje de cupones con SafeCoins (US57 a US61) junto con nueve technical stories de pruebas y DevOps (TS25 a TS33), y se construyeron tres suites automatizadas: 201 pruebas unitarias y de integracion, 33 escenarios BDD con Cucumber y 36 escenarios de API con Karate. La cobertura de instrucciones del codigo de aplicacion paso de 44.3 % a 93.8 % y el build exige ahora un minimo de 80 %. Las pruebas unitarias y BDD se ejecutan dentro de un pipeline de Jenkins que tambien mide el estilo con Checkstyle, verifica la cobertura, analiza el codigo con SonarQube y empaqueta el backend; la ultima ejecucion termino en exito en 4 minutos y 55 segundos. Las pruebas de API se ejecutan contra una instancia local del backend.
+Durante el Sprint 5 el foco se desplazo de construir funcionalidades a demostrar y proteger su calidad. Se incorporaron al Product Backlog el panel de administracion, la gestion de roles y el canje de cupones con SafeCoins (US57 a US61) junto con nueve technical stories de pruebas y DevOps (TS25 a TS33), y se construyeron tres suites automatizadas: 205 pruebas unitarias y de integracion, 33 escenarios BDD con Cucumber y 36 escenarios de API con Karate. La cobertura de instrucciones del codigo de aplicacion paso de 44.3 % a 93.8 % y el build exige ahora un minimo de 80 %. Las pruebas unitarias y BDD se ejecutan dentro de un pipeline de Jenkins que tambien mide el estilo con Checkstyle, verifica la cobertura, analiza el codigo con SonarQube y empaqueta el backend; la ultima ejecucion termino en exito en 3 minutos y 42 segundos. Las pruebas de API se ejecutan contra una instancia local del backend.
 
-El trabajo de verificacion tambien produjo hallazgos que el equipo decidio documentar en lugar de ocultar: Checkstyle reporta 8,034 observaciones de estilo sobre el codigo existente (en su mayoria de indentacion, porque el proyecto usa cuatro espacios y las reglas de Google exigen dos), SonarQube senala dos vulnerabilidades (CORS abierto a cualquier origen y proteccion CSRF deshabilitada, esta ultima aceptable en una API con JWT) y tres bugs menores, el modulo de perfiles tiene una cobertura de 62.1 %, y la API responde HTTP 500 en lugar de 400 cuando recibe un JSON mal formado. El Quality Gate de SonarQube aprueba porque en el primer analisis no existe codigo nuevo que evaluar; por eso estos puntos quedan como deuda tecnica priorizada para el siguiente sprint.
+El trabajo de verificacion tambien produjo hallazgos que el equipo decidio documentar y, cuando eran reales, corregir: la API respondia HTTP 500 en lugar de 400 ante un JSON mal formado, CORS estaba abierto a cualquier origen y SonarQube senalaba tres bugs menores. Los tres problemas se corrigieron y se verificaron con pruebas nuevas y con el pipeline; el Quality Gate, que evalua el codigo nuevo, llego a fallar una vez por una incidencia de estilo en el codigo recien escrito y volvio a aprobar tras corregirla. Quedan como puntos abiertos que Checkstyle reporta 8,034 observaciones de estilo sobre el codigo existente (en su mayoria de indentacion, porque el proyecto usa cuatro espacios y las reglas de Google exigen dos), que SonarQube mantiene una vulnerabilidad por la proteccion CSRF deshabilitada, aceptable en una API con JWT, y que el modulo de perfiles tiene una cobertura de 62.1 %.
 
 Las entrevistas de validacion y la evaluacion heuristica evidenciaron que SafeStep es percibido como un producto claro, util y coherente con su objetivo. Los usuarios comprendieron la propuesta de valor desde la Landing Page, identificaron las secciones principales de la aplicacion y valoraron especialmente las simulaciones medicas, la retroalimentacion posterior a cada respuesta, el seguimiento del progreso y la relacion entre aprendizaje y productos de emergencia. No se identificaron problemas criticos de severidad alta en la experiencia evaluada.
 
@@ -12938,7 +12944,7 @@ En sintesis, el contraste entre Lean UX y los resultados obtenidos muestra que S
 
 **Mediano plazo:** Se recomienda ampliar las simulaciones con niveles de dificultad, mayor cantidad de pasos y escenarios mas detallados. Esto permitiria atender tanto a usuarios principiantes como a brigadistas o personas con experiencia previa en primeros auxilios.
 
-**Corto plazo:** Se recomienda atender los hallazgos del analisis estatico: restringir CORS a los dominios del frontend, corregir la conversion a long y los retornos nulos que reporta SonarQube, devolver HTTP 400 ante JSON mal formado y subir la cobertura del modulo de perfiles. Despues conviene decidir si se migra el codigo a la indentacion de dos espacios de las reglas de Google para que Checkstyle pase a ser una puerta de calidad y no solo un reporte.
+**Corto plazo:** Se recomienda subir la cobertura del modulo de perfiles, revisar los 206 code smells que reporta SonarQube y decidir si se migra el codigo a la indentacion de dos espacios de las reglas de Google para que Checkstyle pase a ser una puerta de calidad y no solo un reporte. Tambien conviene marcar en SonarQube como revisada la regla de CSRF, que es una decision de diseno.
 
 **Mediano plazo:** Se recomienda ampliar las pruebas a los flujos que hoy quedan fuera (pago con Stripe y finalizacion de simulaciones), incorporar pruebas de sistema de la aplicacion web y movil y extender el pipeline con la entrega y el despliegue continuos.
 
