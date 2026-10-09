@@ -280,7 +280,7 @@ El equipo adopta el "Google Java Style Guide" como referencia principal para el 
 
 **Anotaciones:** Las anotaciones se colocan en la línea anterior al elemento que anotan. Se evita la anotación redundante. Las anotaciones de Spring se ordenan primero, seguidas de anotaciones personalizadas.
 
-**Verificación automática del estilo:** Desde el Trabajo Parcial el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis inicial sobre las 378 clases del backend reportó 8,034 observaciones en 367 archivos (5,573 de indentación, 677 de longitud de línea y 827 de Javadoc faltante), porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
+**Verificación automática del estilo:** Desde el Trabajo Parcial el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis sobre las 378 clases del backend reporta 8,128 observaciones en 367 archivos (5,582 de indentación, 732 de longitud de línea y 827 de Javadoc faltante); la línea base inicial era de 8,034 y el aumento de 94 proviene de las anotaciones de documentación que se añadieron a los controladores. El conteo es alto porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
 
 ### 5.1.3.6. Convenciones para Gherkin (Specifications)
 

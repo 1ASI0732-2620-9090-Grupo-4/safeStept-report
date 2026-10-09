@@ -52,7 +52,7 @@ Además existe un contexto `shared` con el tipo `Result`, el manejo global de er
 
 ### 5.2.6.4. Verificación
 
-La API está respaldada por 205 pruebas unitarias y de integración (JUnit y Mockito), 33 escenarios de comportamiento con Cucumber y 36 escenarios de integración con Karate que la consumen por HTTP. La cobertura de instrucciones del código de aplicación es de 93.8 % y el pipeline de Jenkins las ejecuta junto con el análisis de SonarQube. El detalle está en 6.1 y 7.1.
+La API está respaldada por 209 pruebas unitarias y de integración (JUnit y Mockito), 33 escenarios de comportamiento con Cucumber y 36 escenarios de integración con Karate que la consumen por HTTP. La cobertura de instrucciones del código de aplicación es de 93.8 % y el pipeline de Jenkins las ejecuta junto con el análisis de SonarQube. El detalle está en 6.1 y 7.1.
 
 ### 5.2.6.5. Despliegue
 

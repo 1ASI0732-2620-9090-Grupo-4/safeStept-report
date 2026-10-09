@@ -577,7 +577,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <i>AV1</i>
             <p>Al preparar la configuración y el despliegue (capítulo V), identifiqué una credencial de base de datos que había quedado versionada en el historial de Git y documenté que debe rotarse en el proveedor en lugar de solo eliminarla del archivo actual; también detecté que cuentas con rol de usuario común podían ver controles de administración en la web y agregué restricciones de rol (<code>@PreAuthorize</code> en el backend y un <code>adminGuard</code> en el frontend) antes de reportar el avance como funcional.</p>
             <i>TP</i>
-            <p>En las pruebas y el pipeline del Trabajo Parcial (capítulos VI y VII) no oculté los resultados desfavorables de la medición de calidad: documenté que Checkstyle reporta 8,034 observaciones sobre el código existente, que SonarQube marcó 2 vulnerabilidades y 3 bugs. Corregí los que eran reales (entre ellos CORS abierto a cualquier origen) y dejé documentada como decisión de diseño la protección CSRF deshabilitada, en lugar de silenciar la regla; además dejé que el Quality Gate fallara cuando mi propio código nuevo tuvo una incidencia. También evité que las credenciales generadas para Jenkins y SonarQube se versionen (quedan en un archivo ignorado por Git) y devolví a una variable de entorno la clave de Stripe que se había escrito directamente en <code>application.properties</code>. Al desplegar en Render configuré todos los secretos solo como variables de entorno, reemplacé una contraseña de administrador débil por una larga y cambié el usuario por defecto, y restringí CORS al frontend publicado en lugar de dejar la API abierta a cualquier sitio web.</p>
+            <p>En las pruebas y el pipeline del Trabajo Parcial (capítulos VI y VII) no oculté los resultados desfavorables de la medición de calidad: documenté que Checkstyle reporta 8,128 observaciones sobre el código existente, que SonarQube marcó 2 vulnerabilidades y 3 bugs. Corregí los que eran reales (entre ellos CORS abierto a cualquier origen) y dejé documentada como decisión de diseño la protección CSRF deshabilitada, en lugar de silenciar la regla; además dejé que el Quality Gate fallara cuando mi propio código nuevo tuvo una incidencia. También evité que las credenciales generadas para Jenkins y SonarQube se versionen (quedan en un archivo ignorado por Git) y devolví a una variable de entorno la clave de Stripe que se había escrito directamente en <code>application.properties</code>. Al desplegar en Render configuré todos los secretos solo como variables de entorno, reemplacé una contraseña de administrador débil por una larga y cambié el usuario por defecto, y restringí CORS al frontend publicado en lugar de dejar la API abierta a cualquier sitio web.</p>
         </td>
     </tr>
     <tr>
@@ -6431,7 +6431,7 @@ El equipo adopta el "Google Java Style Guide" como referencia principal para el 
 
 **Anotaciones:** Las anotaciones se colocan en la línea anterior al elemento que anotan. Se evita la anotación redundante. Las anotaciones de Spring se ordenan primero, seguidas de anotaciones personalizadas.
 
-**Verificación automática del estilo:** Desde el Trabajo Parcial el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis inicial sobre las 378 clases del backend reportó 8,034 observaciones en 367 archivos (5,573 de indentación, 677 de longitud de línea y 827 de Javadoc faltante), porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
+**Verificación automática del estilo:** Desde el Trabajo Parcial el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis sobre las 378 clases del backend reporta 8,128 observaciones en 367 archivos (5,582 de indentación, 732 de longitud de línea y 827 de Javadoc faltante); la línea base inicial era de 8,034 y el aumento de 94 proviene de las anotaciones de documentación que se añadieron a los controladores. El conteo es alto porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
 
 <a id="toc-5-1-3-6-convenciones-para-gherkin-specifications"></a>
 ### 5.1.3.6. Convenciones para Gherkin (Specifications)
@@ -10768,7 +10768,7 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
 
 - **Panel de administración y roles (backend y frontend):** panel `/app/admin` con conteos por módulo, listado de usuarios y roles, y asignación de roles con las reglas de protección del administrador.
 - **Cupones canjeables (backend y frontend):** rediseño del cupón en dos tipos (descuento simple y descuento con compra mínima), canje con SafeCoins mediante la fachada ACL de gamificación, descuento aplicado a la orden y cobrado por Stripe, y liberación del cupón si el pago falla.
-- **Suites de pruebas:** 205 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.1.5.5 y 6.1).
+- **Suites de pruebas:** 209 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.1.5.5 y 6.1).
 - **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube con el Quality Gate aprobado (ver 6.1 y 7.1).
 - **Despliegue:** frontend, backend y base de datos publicados en Render, en una cuenta propia del equipo (ver 5.2.1.5.8).
 - **Hallazgos corregidos:** la API responde 400 ante un JSON mal formado, CORS ya no admite cualquier origen y se resolvieron los bugs que reportó SonarQube; solo queda abierta la regla de CSRF, que es una decisión de diseño (ver 7.1).
@@ -10805,7 +10805,7 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
 | Pruebas unitarias y BDD del backend | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `src/test` |
 | Pruebas de integración de API (Karate) | [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend) | `api-tests` |
 
-**Unit Tests.** Las 205 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
+**Unit Tests.** Las 209 pruebas unitarias y de integración con contexto de Spring se relacionan con las siguientes clases y comportamientos:
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
@@ -10845,6 +10845,7 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
         <tr><td>shared</td><td><b>Clase de prueba:</b><br><code>ApiRobustnessIntegrationTest</code><br><b>Clase bajo prueba:</b><br><code>GlobalExceptionHandler</code>, <code>WebSecurityConfiguration</code></td><td align='center'>3</td><td>• Un cuerpo JSON mal formado se responde con 400 y un error de validación, no con 500<br>• Una solicitud previa (preflight) desde un origen permitido recibe las cabeceras CORS<br>• Una solicitud previa (preflight) desde un origen ajeno se rechaza</td></tr>
         <tr><td>shared</td><td><b>Clase de prueba:</b><br><code>GlobalExceptionHandlerTest</code><br><b>Clase bajo prueba:</b><br><code>GlobalExceptionHandler</code></td><td align='center'>8</td><td>• Una excepción de ejecución usa el mensaje inesperado traducido<br>• Un cuerpo ilegible responde 400 sin revelar el mensaje del analizador<br>• Un argumento inválido une el mensaje de cada campo con error<br>• Un argumento inválido sin errores de campo usa un mensaje genérico<br>• El acceso denegado devuelve prohibido<br>• Una excepción cualquiera responde con error interno del servidor<br>• Un argumento ilegal sin mensaje usa los detalles por defecto<br>• Un argumento ilegal devuelve un error de validación</td></tr>
         <tr><td>shared</td><td><b>Clase de prueba:</b><br><code>ErrorResponseAssemblerTest</code><br><b>Clase bajo prueba:</b><br><code>ErrorResponseAssembler</code></td><td align='center'>3</td><td>• La respuesta de error usa el mensaje del archivo de idioma por defecto<br>• La respuesta de error usa el mensaje del archivo de idioma en español<br>• La respuesta de error usa la clave de la categoría cuando falta la específica</td></tr>
+        <tr><td>shared</td><td><b>Clase de prueba:</b><br><code>OpenApiDocumentationIntegrationTest</code><br><b>Clase bajo prueba:</b><br>La documentación OpenAPI publicada en <code>/v3/api-docs</code></td><td align='center'>4</td><td>• Cada operación documenta el esquema de su respuesta de éxito<br>• Las creaciones se documentan como <code>201</code> y no como <code>200</code><br>• Los listados documentan un arreglo en su respuesta de éxito<br>• Los errores no repiten el esquema de la respuesta de éxito</td></tr>
         <tr><td>simulation</td><td><b>Clase de prueba:</b><br><code>SimulationAttemptCommandServiceImplTest</code><br><b>Clase bajo prueba:</b><br><code>SimulationAttemptCommandServiceImpl</code></td><td align='center'>5</td><td>• <code>handle(CreateSimulationAttemptCommand)</code> falla con una simulación desconocida<br>• <code>handle(CreateSimulationAttemptCommand)</code> guarda un intento completado con sus errores<br>• <code>handle(CreateSimulationCommand)</code> rechaza slugs repetidos y guarda simulaciones nuevas<br>• <code>handle(UpdateSimulationCommand)</code> conserva el id guardado y rechaza ids vacíos o desconocidos<br>• <code>handle(DeleteSimulationCommand)</code> elimina solo las simulaciones existentes</td></tr>
         <tr><td>simulation</td><td><b>Clase de prueba:</b><br><code>SimulationCommandServiceImplTest</code><br><b>Clase bajo prueba:</b><br><code>SimulationCommandServiceImpl</code></td><td align='center'>3</td><td>• Crear una simulación rechaza un slug repetido<br>• Actualizar una simulación conserva el id de base de datos y el slug de la ruta<br>• Eliminar una simulación que no existe devuelve no encontrado</td></tr>
         <tr><td>simulation</td><td><b>Clase de prueba:</b><br><code>SimulationDomainTest</code><br><b>Clase bajo prueba:</b><br><code>MedicalSimulation</code>, <code>Score</code>, <code>SimulationSlug</code>, <code>SimulationReward</code></td><td align='center'>5</td><td>• <code>markCompleted</code> publica un evento de finalización con la recompensa de la simulación<br>• <code>markCompleted</code> toma el puntaje como precisión cuando no hay pasos<br>• Los objetos de valor validan puntajes, slugs y recompensas<br>• Los enums tolerantes entienden las etiquetas en español y usan valores por defecto<br>• <code>MedicalSimulation</code> usa listas vacías cuando faltan las colecciones</td></tr>
@@ -12232,7 +12233,7 @@ Además existe un contexto `shared` con el tipo `Result`, el manejo global de er
 <a id="toc-5-2-6-4-verificacion"></a>
 ### 5.2.6.4. Verificación
 
-La API está respaldada por 205 pruebas unitarias y de integración (JUnit y Mockito), 33 escenarios de comportamiento con Cucumber y 36 escenarios de integración con Karate que la consumen por HTTP. La cobertura de instrucciones del código de aplicación es de 93.8 % y el pipeline de Jenkins las ejecuta junto con el análisis de SonarQube. El detalle está en 6.1 y 7.1.
+La API está respaldada por 209 pruebas unitarias y de integración (JUnit y Mockito), 33 escenarios de comportamiento con Cucumber y 36 escenarios de integración con Karate que la consumen por HTTP. La cobertura de instrucciones del código de aplicación es de 93.8 % y el pipeline de Jenkins las ejecuta junto con el análisis de SonarQube. El detalle está en 6.1 y 7.1.
 
 <a id="toc-5-2-6-5-despliegue"></a>
 ### 5.2.6.5. Despliegue
@@ -12604,7 +12605,7 @@ La documentación publicada se revisó contra el comportamiento real de la API (
 - **Listas (corregida).** Las consultas de colecciones (por ejemplo, `GET /api/v1/users`) declaraban el modelo de un elemento en la respuesta `200` y el de una lista en los códigos de error. Ahora el `200` declara una lista y las respuestas de error no repiten el modelo de éxito.
 - **Rutas duplicadas (se mantiene).** Hay cinco operaciones `DELETE` con la ruta terminada en `/` (sin identificador) que se registran como operaciones propias porque un mismo método atiende dos rutas. Eliminarlas exigiría cambiar las rutas expuestas, un riesgo mayor que el beneficio, por lo que se deja documentado.
 
-Para que estas correcciones no se pierdan, se añadió la clase `OpenApiDocumentationIntegrationTest` con cuatro pruebas que leen `/v3/api-docs` y fallan si una operación pierde su esquema de éxito, si una creación deja de documentarse como `201`, si una lista deja de declararse como arreglo o si un error repite el modelo de éxito. Con ellas la suite local del backend pasa a 242 pruebas (209 unitarias y de integración más 33 escenarios BDD). Las ejecuciones de Jenkins y de Render citadas en este informe son anteriores a este cambio y corresponden a las 238 pruebas previas.
+Para que estas correcciones no se pierdan, se añadió la clase `OpenApiDocumentationIntegrationTest` con cuatro pruebas que leen `/v3/api-docs` y fallan si una operación pierde su esquema de éxito, si una creación deja de documentarse como `201`, si una lista deja de declararse como arreglo o si un error repite el modelo de éxito. Con ellas la suite del backend pasa a 242 pruebas (209 unitarias y de integración más 33 escenarios BDD), todas aprobadas en la ejecución #8 de Jenkins (7.1). El despliegue en Render citado en 5.2.1.5.8 ejecutó las 238 pruebas anteriores.
 
 <a id="toc-5-2-7-15-commits-relacionados-con-la-documentacion"></a>
 ### 5.2.7.15. Commits relacionados con la documentación
@@ -12689,15 +12690,15 @@ Esta sección documenta las suites de prueba que verifican SafeStep. La estrateg
 
 | Nivel | Herramienta | Repositorio y carpeta | Pruebas | Resultado de la última ejecución |
 |-------|-------------|-----------------------|---------|----------------------------------|
-| Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 205 | 205 aprobadas, 0 fallidas |
+| Unitarias de entidades y servicios | JUnit Jupiter 6, Mockito 5, AssertJ | `safeStept-backend/src/test/java/com/safestep/platform` | 209 | 209 aprobadas, 0 fallidas |
 | Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
 
-Las 238 pruebas del backend que ejecuta Maven (205 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins en 59.9 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 205 métodos en 40 clases. Después de la ejecución #7, la corrección de la documentación OpenAPI (5.2.7.14) añadió la clase `OpenApiDocumentationIntegrationTest` con cuatro pruebas; la suite local actual suma 242 pruebas (209 unitarias y de integración más 33 escenarios BDD), todas aprobadas con `mvn verify`.
+Las 242 pruebas del backend que ejecuta Maven (209 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins (ejecución #8) en 60.2 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 209 métodos en 41 clases. Entre ellas está `OpenApiDocumentationIntegrationTest`, con cuatro pruebas que verifican la documentación OpenAPI publicada (5.2.7.14).
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>
-  <p><i><b>Figura 6.1.1.</b> Resultado de las 238 pruebas del backend en Jenkins (ejecución #7). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.1.</b> Resultado de las 242 pruebas del backend en Jenkins (ejecución #8). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <a id="toc-6-1-1-core-entities-unit-tests"></a>
@@ -12713,7 +12714,7 @@ Las pruebas unitarias validan en aislamiento las entidades de dominio (agregados
 | `iam` | 41 | Registro e inicio de sesión, asignación de roles, regla que impide al administrador quitarse su propio rol, semilla del primer administrador, fachada ACL e integración con la seguridad JWT |
 | `gamification` | 37 | Recompensas por simulación, misiones e insignias, gasto de SafeCoins (`PlayerProgress.spendCoins`), registro del gasto (`CoinSpend`), manejador del evento de intento completado y fachada ACL |
 | `simulation` | 21 | Registro de intentos, CRUD de simulaciones, eventos de dominio y validación del puntaje |
-| `shared` | 22 | Tipo `Result`, manejador global de excepciones, ensamblador de errores y configuración de idioma |
+| `shared` | 26 | Tipo `Result`, manejador global de excepciones, ensamblador de errores, configuración de idioma y documentación OpenAPI publicada |
 | `profiles` | 9 | Comandos y consultas de perfiles |
 | `analytics` | 8 | Resumen, progreso y emisión de certificados |
 | Contexto de aplicación | 1 | Arranque de Spring Boot |
@@ -12742,15 +12743,15 @@ void redeemedCoupon_IsUsedOnlyOnce() {
 
 | Medición | Antes del Trabajo Parcial | Después |
 |----------|---------------------------|---------|
-| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,164 de 5,506 instrucciones) |
-| Pruebas del backend | 54 métodos | 238 pruebas |
+| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,169 de 5,512 instrucciones) |
+| Pruebas del backend | 54 métodos | 242 pruebas |
 
 | Bounded context | Clases medidas | Cobertura |
 |-----------------|----------------|-----------|
 | `analytics` | 3 | 100.0 % |
 | `gamification` | 6 | 100.0 % |
 | `commerce` | 3 | 98.6 % |
-| `shared` | 7 | 94.6 % |
+| `shared` | 7 | 94.5 % |
 | `iam` | 17 | 92.0 % |
 | `simulation` | 11 | 91.2 % |
 | `profiles` | 7 | 62.1 % |
@@ -13675,24 +13676,24 @@ La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la
 <a id="toc-7-1-2-build-test-suite-pipeline-components"></a>
 ## 7.1.2. Build & Test Suite Pipeline Components
 
-El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #7 en Jenkins (3 min 42 s de principio a fin, resultado **SUCCESS**).
+El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #8 en Jenkins (4 min 11 s de principio a fin, resultado **SUCCESS**).
 
 | # | Etapa | Comando | Qué verifica o produce | Si falla | Tiempo |
 |---|-------|---------|------------------------|----------|--------|
-| 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 1 s |
-| 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 21 s |
-| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 17 s |
-| 4 | Unit and BDD Tests | `mvn test` | 205 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 23 s |
-| 5 | Validate Test Coverage | `mvn jacoco:check` | Cobertura de instrucciones ≥ 80 % sobre las clases medidas (resultado: 93.8 %) | Se detiene | 5 s |
-| 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 12 s |
-| 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 14 s |
+| 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 1 s ||
+| 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 28 s ||
+| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 22 s ||
+| 4 | Unit and BDD Tests | `mvn test` | 209 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 27 s ||
+| 5 | Validate Test Coverage | `mvn jacoco:check` | Cobertura de instrucciones ≥ 80 % sobre las clases medidas (resultado: 93.8 %) | Se detiene | 7 s ||
+| 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 21 s ||
+| 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 15 s ||
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/jenkins-pipeline-stage-view.png" alt="Stage View del pipeline de Jenkins"/>
-  <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins (ejecución #7). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins (ejecuciones #5 a #8). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron porque la entrega y el despliegue continuos no forman parte de esta entrega. La ejecución #5 fue la primera del pipeline de integración continua actual. Después de corregir los hallazgos de SonarQube (ver abajo), la ejecución #6 **falló a propósito del Quality Gate**: el código nuevo tenía una incidencia de estilo (`java:S1452`, un tipo genérico `ResponseEntity<?>` en el manejador nuevo) y el pipeline se detuvo en la etapa de SonarQube sin generar el JAR. Se corrigió el tipo de retorno y la ejecución #7 terminó en SUCCESS.
+**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron porque la entrega y el despliegue continuos no forman parte de esta entrega. La ejecución #5 fue la primera del pipeline de integración continua actual. Después de corregir los hallazgos de SonarQube (ver abajo), la ejecución #6 **falló a propósito del Quality Gate**: el código nuevo tenía una incidencia de estilo (`java:S1452`, un tipo genérico `ResponseEntity<?>` en el manejador nuevo) y el pipeline se detuvo en la etapa de SonarQube sin generar el JAR. Se corrigió el tipo de retorno y la ejecución #7 terminó en SUCCESS. La ejecución #8, con la documentación OpenAPI corregida y las pruebas que la protegen, también terminó en SUCCESS, ahora con 242 pruebas.
 
 **Integración con SonarQube.** La primera instalación usó la imagen `sonarqube:lts-community` (9.9) del material del curso. Su analizador de Java no puede leer la sintaxis moderna que usa el backend (`switch` con patrones y variables sin nombre `_`) y registró errores de análisis en tres archivos, por lo que el equipo cambió a la imagen vigente `sonarqube:community`, con la que el análisis termina sin errores de lectura. SonarQube notifica a Jenkins mediante el webhook `http://jenkins-master:9089/sonarqube-webhook/`, y `waitForQualityGate()` retoma el pipeline cuando llega el resultado.
 
@@ -13703,13 +13704,14 @@ El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la 
 
 | Métrica de SonarQube | Valor |
 |----------------------|-------|
-| Líneas de código | 9,872 en 370 archivos |
+| Líneas de código | 9,964 en 370 archivos |
 | Quality Gate (Sonar way) | **Aprobado** |
 | Cobertura | 91.7 % sobre 980 líneas medibles |
 | Duplicación | 1.0 % |
 | Vulnerabilidades | 1 (calificación de seguridad D; es el CSRF deshabilitado a propósito) |
 | Bugs | 0 (calificación de fiabilidad A) |
-| Code smells | 206 (calificación de mantenibilidad A) |
+| Code smells | 207 (calificación de mantenibilidad A) |
+| Incidencias con impacto en fiabilidad | 4, de severidad informativa (`java:S8688`); no son bugs |
 | Hotspots de seguridad | 0 |
 
 El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**. En el primer análisis del proyecto no existía código nuevo que evaluar y el gate aprobó, por lo que las incidencias existentes se trataron como deuda técnica y se listaron en lugar de ocultarse. En los análisis posteriores sí hay código nuevo, y el gate lo evalúa con tres condiciones: cobertura del código nuevo de al menos 80 % (resultado: 100 %), duplicación menor a 3 % (0 %) y ninguna incidencia nueva (0).
@@ -13728,13 +13730,13 @@ El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**. En el pr
   <p><i><b>Figura 7.1.3.</b> Vulnerabilidades y bugs que SonarQube mantiene abiertos tras las correcciones (solo el CSRF deshabilitado). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres de integración por HTTP sobre el cuerpo ilegible y las reglas de CORS), la ejecución completa de Jenkins con las 238 pruebas y una consulta real al backend levantado, que respondió 400 al JSON mal formado, aceptó la petición previa (*preflight*) del frontend publicado y rechazó con 403 la de un origen desconocido.
+La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres de integración por HTTP sobre el cuerpo ilegible y las reglas de CORS), la ejecución completa de Jenkins con las 238 pruebas de entonces (ejecución #7) y una consulta real al backend levantado, que respondió 400 al JSON mal formado, aceptó la petición previa (*preflight*) del frontend publicado y rechazó con 403 la de un origen desconocido.
 
 **Reportes y artefactos de cada ejecución.**
 
 <div align="center">
   <img src="markdown/assets/images/chapter-7/jenkins-build-artifacts.png" alt="Artefactos de la ejecución en Jenkins"/>
-  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #7 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #8 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Cómo reproducir el entorno de CI:**
@@ -14034,9 +14036,9 @@ Durante el Sprint 3 se implemento el backend de SafeStep con Spring Boot, Java, 
 
 Durante el Sprint 4 se fortalecio el producto con la implementacion de IAM y pagos con Stripe tanto en frontend como en backend. La autenticacion con JWT, las rutas protegidas, el manejo de perfil de usuario, la integracion con Stripe Checkout y la persistencia en PostgreSQL desplegado en Render hicieron que SafeStep pasara de ser una simulacion academica a una aplicacion web mas cercana a un entorno real. Este sprint tambien permitio validar flujos criticos como registro, inicio de sesion, compra de productos, confirmacion de pago y despliegue publico.
 
-Durante el Sprint 5 el foco se desplazo de construir funcionalidades a demostrar y proteger su calidad. Se incorporaron al Product Backlog el panel de administracion, la gestion de roles y el canje de cupones con SafeCoins (US57 a US61) junto con siete technical stories de pruebas e integracion continua (TS25 a TS31), y se construyeron tres suites automatizadas: 205 pruebas unitarias y de integracion, 33 escenarios BDD con Cucumber y 36 escenarios de API con Karate. La cobertura de instrucciones del codigo de aplicacion paso de 44.3 % a 93.8 % y el build exige ahora un minimo de 80 %. Las pruebas unitarias y BDD se ejecutan dentro de un pipeline de Jenkins que tambien mide el estilo con Checkstyle, verifica la cobertura, analiza el codigo con SonarQube y empaqueta el backend; la ultima ejecucion termino en exito en 3 minutos y 42 segundos. Las pruebas de API se ejecutan contra una instancia local del backend. Ademas, el equipo desplego por su cuenta el frontend, el backend y la base de datos en Render (Static Site, Web Service con Docker y PostgreSQL 18), con CORS restringido al frontend publicado, y verifico los tres con pruebas de humo contra las URL publicas.
+Durante el Sprint 5 el foco se desplazo de construir funcionalidades a demostrar y proteger su calidad. Se incorporaron al Product Backlog el panel de administracion, la gestion de roles y el canje de cupones con SafeCoins (US57 a US61) junto con siete technical stories de pruebas e integracion continua (TS25 a TS31), y se construyeron tres suites automatizadas: 209 pruebas unitarias y de integracion, 33 escenarios BDD con Cucumber y 36 escenarios de API con Karate. La cobertura de instrucciones del codigo de aplicacion paso de 44.3 % a 93.8 % y el build exige ahora un minimo de 80 %. Las pruebas unitarias y BDD se ejecutan dentro de un pipeline de Jenkins que tambien mide el estilo con Checkstyle, verifica la cobertura, analiza el codigo con SonarQube y empaqueta el backend; la ultima ejecucion termino en exito en 3 minutos y 42 segundos. Las pruebas de API se ejecutan contra una instancia local del backend. Ademas, el equipo desplego por su cuenta el frontend, el backend y la base de datos en Render (Static Site, Web Service con Docker y PostgreSQL 18), con CORS restringido al frontend publicado, y verifico los tres con pruebas de humo contra las URL publicas.
 
-El trabajo de verificacion tambien produjo hallazgos que el equipo decidio documentar y, cuando eran reales, corregir: la API respondia HTTP 500 en lugar de 400 ante un JSON mal formado, CORS estaba abierto a cualquier origen y SonarQube senalaba tres bugs menores. Los tres problemas se corrigieron y se verificaron con pruebas nuevas y con el pipeline; el Quality Gate, que evalua el codigo nuevo, llego a fallar una vez por una incidencia de estilo en el codigo recien escrito y volvio a aprobar tras corregirla. Quedan como puntos abiertos que Checkstyle reporta 8,034 observaciones de estilo sobre el codigo existente (en su mayoria de indentacion, porque el proyecto usa cuatro espacios y las reglas de Google exigen dos), que SonarQube mantiene una vulnerabilidad por la proteccion CSRF deshabilitada, aceptable en una API con JWT, que el modulo de perfiles tiene una cobertura de 62.1 %, y que el plan gratuito de la base de datos en Render caduca el 7 de noviembre de 2026 y el backend gratuito se suspende por inactividad y tarda varios minutos en despertar.
+El trabajo de verificacion tambien produjo hallazgos que el equipo decidio documentar y, cuando eran reales, corregir: la API respondia HTTP 500 en lugar de 400 ante un JSON mal formado, CORS estaba abierto a cualquier origen y SonarQube senalaba tres bugs menores. Los tres problemas se corrigieron y se verificaron con pruebas nuevas y con el pipeline; el Quality Gate, que evalua el codigo nuevo, llego a fallar una vez por una incidencia de estilo en el codigo recien escrito y volvio a aprobar tras corregirla. Quedan como puntos abiertos que Checkstyle reporta 8,128 observaciones de estilo sobre el codigo existente (en su mayoria de indentacion, porque el proyecto usa cuatro espacios y las reglas de Google exigen dos), que SonarQube mantiene una vulnerabilidad por la proteccion CSRF deshabilitada, aceptable en una API con JWT, que el modulo de perfiles tiene una cobertura de 62.1 %, y que el plan gratuito de la base de datos en Render caduca el 7 de noviembre de 2026 y el backend gratuito se suspende por inactividad y tarda varios minutos en despertar.
 
 Las entrevistas de validacion y la evaluacion heuristica evidenciaron que SafeStep es percibido como un producto claro, util y coherente con su objetivo. Los usuarios comprendieron la propuesta de valor desde la Landing Page, identificaron las secciones principales de la aplicacion y valoraron especialmente las simulaciones medicas, la retroalimentacion posterior a cada respuesta, el seguimiento del progreso y la relacion entre aprendizaje y productos de emergencia. No se identificaron problemas criticos de severidad alta en la experiencia evaluada.
 
@@ -14067,7 +14069,7 @@ En sintesis, el contraste entre Lean UX y los resultados obtenidos muestra que S
 
 **Mediano plazo:** Se recomienda ampliar las simulaciones con niveles de dificultad, mayor cantidad de pasos y escenarios mas detallados. Esto permitiria atender tanto a usuarios principiantes como a brigadistas o personas con experiencia previa en primeros auxilios.
 
-**Corto plazo:** Se recomienda migrar o recrear la base de datos de Render antes del 7 de noviembre de 2026 si el producto sigue en uso, activar un servicio externo que despierte el backend antes de las demostraciones, subir la cobertura del modulo de perfiles, revisar los 206 code smells que reporta SonarQube y decidir si se migra el codigo a la indentacion de dos espacios de las reglas de Google para que Checkstyle pase a ser una puerta de calidad y no solo un reporte. Tambien conviene marcar en SonarQube como revisada la regla de CSRF, que es una decision de diseno.
+**Corto plazo:** Se recomienda migrar o recrear la base de datos de Render antes del 7 de noviembre de 2026 si el producto sigue en uso, activar un servicio externo que despierte el backend antes de las demostraciones, subir la cobertura del modulo de perfiles, revisar los 207 code smells que reporta SonarQube y decidir si se migra el codigo a la indentacion de dos espacios de las reglas de Google para que Checkstyle pase a ser una puerta de calidad y no solo un reporte. Tambien conviene marcar en SonarQube como revisada la regla de CSRF, que es una decision de diseno.
 
 **Mediano plazo:** Se recomienda ampliar las pruebas a los flujos que hoy quedan fuera (pago con Stripe y finalizacion de simulaciones), incorporar pruebas de sistema de la aplicacion web y movil y extender el pipeline con la entrega y el despliegue continuos.
 
