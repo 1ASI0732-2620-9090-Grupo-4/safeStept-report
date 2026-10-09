@@ -10,13 +10,13 @@
 
 # 5.2. Landing Page, Services & Applications Implementation.
 
-## 5.2.6. Acuerdo de Servicio - SaaS
+## 5.2.4. Acuerdo de Servicio - SaaS
 
 Esta sección establece los derechos, las obligaciones y las restricciones aplicables a las personas que usan la plataforma SafeStep, para que el uso del servicio sea transparente. Está redactada en lenguaje claro y describe el servicio tal como está implementado y desplegado, sin prometer capacidades que el producto no tiene. SafeStep se ofrece como **piloto académico** del curso Diseño de Experimentos de Ingeniería de Software de la UPC, desarrollado por el equipo Chronos; la Landing Page indica que durante el piloto no se ofrecen planes comerciales.
 
 **Versión del acuerdo:** 1.0 · **Fecha de redacción:** 8 de octubre de 2026.
 
-### 5.2.6.1. Resumen en lenguaje sencillo
+### 5.2.4.1. Resumen en lenguaje sencillo
 
 | Tema | Qué debe saber la persona usuaria |
 |------|-----------------------------------|
@@ -29,7 +29,7 @@ Esta sección establece los derechos, las obligaciones y las restricciones aplic
 | Datos personales | Se tratan según la Ley N.° 29733; se piden solo los datos necesarios para el servicio |
 | Cambios | Este acuerdo puede actualizarse; la versión vigente es la publicada |
 
-### 5.2.6.2. Partes y objeto del acuerdo
+### 5.2.4.2. Partes y objeto del acuerdo
 
 Este acuerdo se celebra entre el equipo **Chronos** (en adelante, «el Proveedor»), responsable del producto SafeStep en el marco del curso, y toda persona que se registra o usa la plataforma (en adelante, «el Usuario»). Su objeto es regular el acceso y el uso de los componentes del servicio:
 
@@ -42,7 +42,7 @@ Este acuerdo se celebra entre el equipo **Chronos** (en adelante, «el Proveedor
 
 Registrarse, iniciar sesión o usar la aplicación implica haber leído y aceptado este acuerdo. Quien no esté de acuerdo debe abstenerse de usar el servicio.
 
-### 5.2.6.3. Descripción y nivel de servicio
+### 5.2.4.3. Descripción y nivel de servicio
 
 El servicio se presta «tal como está», en modalidad de prueba, y **no incluye un acuerdo de nivel de servicio (SLA) ni garantías de disponibilidad**. Las condiciones reales de operación son las siguientes:
 
@@ -53,11 +53,11 @@ El servicio se presta «tal como está», en modalidad de prueba, y **no incluye
 | Base de datos | Plan gratuito con fecha de caducidad (7 de noviembre de 2026); pasada esa fecha los datos pueden eliminarse si no se migra a un plan de pago |
 | Copias de seguridad | No se garantizan copias de seguridad de los datos |
 | Mantenimiento | Puede interrumpirse el servicio para actualizar la aplicación o por mantenimiento de la plataforma de alojamiento, sin aviso previo |
-| Soporte | Por el canal indicado en 5.2.6.11, sin tiempos de respuesta garantizados |
+| Soporte | Por el canal indicado en 5.2.4.11, sin tiempos de respuesta garantizados |
 
 El Proveedor se esfuerza por mantener el servicio en funcionamiento durante los periodos de evaluación del curso, pero no responde por interrupciones, pérdidas de datos de prueba ni por la lentitud propia de la infraestructura gratuita.
 
-### 5.2.6.4. Cuentas, roles y acceso
+### 5.2.4.4. Cuentas, roles y acceso
 
 - **Registro.** Cualquier persona puede crear una cuenta indicando un usuario o correo y una contraseña. El registro público siempre otorga el rol de jugador (`ROLE_USER`); no se pueden solicitar roles distintos al registrarse.
 - **Roles.** Existen tres roles: jugador (`ROLE_USER`), instructor (`ROLE_INSTRUCTOR`) y administrador (`ROLE_ADMIN`). Solo un administrador puede cambiar los roles de otra persona; un administrador no puede quitarse a sí mismo el rol de administrador y el sistema siempre conserva al menos uno.
@@ -66,12 +66,12 @@ El Proveedor se esfuerza por mantener el servicio en funcionamiento durante los 
 - **Responsabilidad.** El Usuario es responsable de la actividad realizada con su cuenta, de mantener su contraseña en reserva y de avisar si sospecha un uso no autorizado. La cuenta es personal y no se puede ceder.
 - **Edad.** Las personas menores de edad deben usar la plataforma con autorización y supervisión de su madre, padre o representante legal.
 
-### 5.2.6.5. Derechos y obligaciones
+### 5.2.4.5. Derechos y obligaciones
 
 **Derechos del Usuario:**
 
 1. Acceder a las funciones de la plataforma según su rol, de forma gratuita durante el piloto.
-2. Conocer qué datos personales se tratan y para qué (ver 5.2.6.9) y ejercer sus derechos sobre ellos.
+2. Conocer qué datos personales se tratan y para qué (ver 5.2.4.9) y ejercer sus derechos sobre ellos.
 3. Dejar de usar el servicio en cualquier momento y solicitar la eliminación de su cuenta.
 4. Recibir información clara sobre el contenido educativo y sus límites.
 
@@ -86,7 +86,7 @@ El Proveedor se esfuerza por mantener el servicio en funcionamiento durante los 
 
 **Obligaciones del Proveedor:** prestar el servicio con diligencia razonable dentro de las limitaciones del piloto, proteger los datos personales con medidas técnicas razonables y mantener informada a la persona usuaria sobre cambios relevantes.
 
-### 5.2.6.6. Uso aceptable y restricciones
+### 5.2.4.6. Uso aceptable y restricciones
 
 Queda prohibido:
 
@@ -98,7 +98,7 @@ Queda prohibido:
 
 El incumplimiento puede dar lugar a la desactivación de la cuenta, que solo puede hacer un administrador.
 
-### 5.2.6.7. SafeCoins, cupones y compras
+### 5.2.4.7. SafeCoins, cupones y compras
 
 - **SafeCoins.** Son puntos virtuales que se ganan al completar simulaciones, según el puntaje y las repeticiones. **No tienen valor monetario**, no son transferibles y no se pueden canjear por dinero.
 - **Cupones.** Se canjean con SafeCoins del catálogo definido por el administrador: hay cupones de descuento porcentual sobre toda la compra y cupones de descuento porcentual que exigen un monto mínimo de compra. Cada cupón canjeado es personal, de **un solo uso** y conserva las condiciones con las que se canjeó, aunque el catálogo cambie después. Si el pago falla o se cancela, el cupón vuelve a estar disponible.
@@ -106,11 +106,11 @@ El incumplimiento puede dar lugar a la desactivación de la cuenta, que solo pue
 - **Compras.** La tienda ofrece productos y kits de emergencia. El pago se realiza en la página de Stripe Checkout y SafeStep no almacena números de tarjeta. **Durante el piloto, Stripe opera en modo de prueba: no se realizan cobros reales** y, al tratarse de un piloto, no se despachan productos físicos.
 - **Cambios del catálogo.** El Proveedor puede modificar precios, productos, cupones y recompensas en cualquier momento.
 
-### 5.2.6.8. Contenido educativo y responsabilidad médica
+### 5.2.4.8. Contenido educativo y responsabilidad médica
 
 SafeStep es una herramienta educativa complementaria. Las simulaciones y los textos se elaboraron con fines de aprendizaje y **no constituyen consejo médico, diagnóstico ni tratamiento**. No sustituyen la capacitación práctica con profesionales acreditados, la evaluación de un profesional de la salud ni la comunicación con los servicios de emergencia. Ante una emergencia real, la persona debe llamar a los servicios de emergencia locales y seguir sus indicaciones. El Proveedor no responde por decisiones tomadas en una situación real con base solo en el contenido de la plataforma.
 
-### 5.2.6.9. Privacidad y protección de datos personales
+### 5.2.4.9. Privacidad y protección de datos personales
 
 El tratamiento de los datos personales se rige por la Ley N.° 29733, Ley de Protección de Datos Personales del Perú.
 
@@ -127,7 +127,7 @@ El tratamiento de los datos personales se rige por la Ley N.° 29733, Ley de Pro
 
 El Proveedor no vende los datos personales ni los usa para fines distintos de los indicados.
 
-### 5.2.6.10. Propiedad intelectual y limitación de responsabilidad
+### 5.2.4.10. Propiedad intelectual y limitación de responsabilidad
 
 **Propiedad intelectual.** El código fuente del backend se publica bajo la licencia indicada en su repositorio (MIT); las bibliotecas de terceros conservan sus propias licencias. Los nombres, el logotipo y los textos de SafeStep pertenecen al equipo Chronos. El Usuario conserva los derechos sobre los datos que ingresa y otorga al Proveedor el permiso necesario para tratarlos con las finalidades de este acuerdo.
 
@@ -135,7 +135,7 @@ El Proveedor no vende los datos personales ni los usa para fines distintos de lo
 
 **Suspensión y terminación.** El Proveedor puede suspender o desactivar una cuenta que incumpla este acuerdo o ponga en riesgo la seguridad del servicio, y puede cerrar el piloto al terminar el curso. El Usuario puede dejar de usar la plataforma cuando quiera y solicitar la eliminación de su cuenta.
 
-### 5.2.6.11. Modificaciones, ley aplicable y contacto
+### 5.2.4.11. Modificaciones, ley aplicable y contacto
 
 - **Modificaciones.** El Proveedor puede actualizar este acuerdo; la versión vigente es la que figura publicada y el uso continuado del servicio después de un cambio implica su aceptación. Los cambios se registran en la tabla de versiones de esta sección.
 - **Ley aplicable.** El acuerdo se rige por las leyes de la República del Perú. Las controversias se resolverán ante los tribunales competentes del Perú.
@@ -145,6 +145,6 @@ El Proveedor no vende los datos personales ni los usa para fines distintos de lo
 |---------|-------|---------|
 | 1.0 | 8 de octubre de 2026 | Redacción inicial del acuerdo para el piloto académico |
 
-### 5.2.6.12. Integración en el sitio web
+### 5.2.4.12. Integración en el sitio web
 
 El enunciado indica que este acuerdo debe integrarse públicamente en la sección «Términos y Condiciones» del sitio web. En la Landing Page actual el pie de página muestra el aviso «Términos y privacidad en revisión para el piloto académico», y los enlaces «Términos y Condiciones» y «Política de Privacidad» de la página «Acerca de» todavía apuntan a un marcador vacío. La publicación de este texto como página propia del sitio queda **pendiente** y es el paso necesario para cumplir el criterio de accesibilidad del acuerdo.

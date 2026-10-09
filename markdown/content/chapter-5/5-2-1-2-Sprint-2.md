@@ -10,9 +10,9 @@
 
 # 5.2. Landing Page, Services & Applications Implementation.
 
-## 5.2.2. Sprint 2
+### 5.2.1.2. Sprint 2
 
-### 5.2.2.1. Sprint Planning 2
+#### 5.2.1.2.1. Sprint Planning 2
 
 En esta sección se especifica los aspectos principales del Sprint Planning Meeting. SafeStep inicia su segundo Sprint con el objetivo de implementar la aplicación frontend Angular con todos los bounded contexts siguiendo una arquitectura Domain-Driven Design, integrada con json-server para datos de prueba y desplegada en GitHub Pages. Este Sprint representa la iteración donde se construye la aplicación transaccional de SafeStep.
 
@@ -98,7 +98,7 @@ La selección de estos User Stories para el Sprint 2 responde a la necesidad de 
 
 - **Frontend Angular (EP02, EP03, EP04, EP05, EP06, EP07):** 43 Story Points distribuidos en progreso y estadísticas (5 SP), gamificación (3 SP), tienda (3 SP), dashboard (8 SP), simulaciones (16 SP) y navegación (8 SP).
 
-### 5.2.2.2. Aspect Leaders and Collaborators
+#### 5.2.1.2.2. Aspect Leaders and Collaborators
 
 En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX) para el Sprint 2. Los aspectos están centrados en el desarrollo de la aplicación frontend Angular con arquitectura Domain-Driven Design, incluyendo la configuración del proyecto, implementación de bounded contexts, y despliegue en GitHub Pages.
 
@@ -187,7 +187,7 @@ La organización de líderes y colaboradores se relaciona con la posterior selec
 
 - **Flores Eusebio, Angel Thyago (Documentation Lead & Development Collaborator):** Apoya en la implementación de los diferentes bounded contexts, participando en tareas de desarrollo del dashboard, simulaciones y configuración del proyecto. Además, lidera la documentación del Sprint 2, recopilando evidencias y verificando que los avances descritos coincidan con las tasks comprometidas.
 
-### 5.2.2.3. Sprint Backlog 2
+#### 5.2.1.2.3. Sprint Backlog 2
 
 El Sprint Backlog 2 resume el objetivo principal del Sprint: implementar la aplicación frontend Angular de SafeStep con arquitectura Domain-Driven Design, integración con json-server y despliegue en GitHub Pages. Para corregir la trazabilidad del Sprint, las tareas se organizaron como descomposición directa de las User Stories seleccionadas, evitando tareas demasiado generales que mezclen varias funcionalidades no relacionadas.
 
@@ -487,7 +487,7 @@ A continuación, la tabla de control de estado para el Sprint 2:
 
 El Sprint Backlog 2 refleja 22 tareas derivadas directamente de las User Stories comprometidas para la aplicación frontend. Las estimaciones suman 66 horas de trabajo operativo y fueron usadas para seguimiento diario dentro del Trello Board. Los Story Points se mantienen a nivel de User Story y no se convierten directamente a horas.
 
-### 5.2.2.4. Development Evidence for Sprint Review
+#### 5.2.1.2.4. Development Evidence for Sprint Review
 
 Durante el Sprint 2, el equipo SafeStep implementó la aplicación frontend Angular de SafeStep con una arquitectura modular basada en Domain-Driven Design. Se completaron 5 bounded contexts (identity-access, medical-simulation, statistics, gamification, ecommerce) más un módulo compartido (shared), cada uno con sus capas de domain, application, infrastructure y presentation.
 
@@ -610,7 +610,7 @@ La aplicación frontend implementada durante el Sprint 2 cuenta con las siguient
 
 <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server</a>
 
-### 5.2.2.5. Execution Evidence for Sprint Review
+#### 5.2.1.2.5. Execution Evidence for Sprint Review
 
 El Sprint 2 permitió construir la aplicación frontend Angular de SafeStep con todos los bounded contexts implementados siguiendo Domain-Driven Design. Las evidencias presentadas demuestran que el equipo cumplió satisfactoriamente con el Sprint Goal.
 
@@ -679,7 +679,7 @@ El Sprint 2 permitió construir la aplicación frontend Angular de SafeStep con 
   </p>
 </div>
 
-### 5.2.2.6. Services Documentation Evidence for Sprint Review
+#### 5.2.1.2.6. Services Documentation Evidence for Sprint Review
 
 En esta sección se incluye la relación de Endpoints documentados con OpenAPI, relacionados con el alcance del Sprint 2. Durante este Sprint, el equipo implementó la integración con json-server como backend de datos de prueba, exponiendo endpoints REST simulados para cada bounded context. La documentación de estos endpoints se realizó mediante la configuración de rutas en el archivo `routes.json` y la estructura de datos en `db.json`.
 
@@ -697,7 +697,7 @@ La API REST simulada expone los siguientes endpoints para cada bounded context, 
 
 La URL base de la API desplegada es: <a href="https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server">https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server</a>
 
-### 5.2.2.7. Software Deployment Evidence for Sprint Review
+#### 5.2.1.2.7. Software Deployment Evidence for Sprint Review
 
 En esta sección se resumen los procesos realizados en relación con Deployment durante el Sprint 2. Las actividades de despliegue incluyeron la configuración de GitHub Pages para la aplicación frontend Angular y la configuración de my-json-server para la API de datos de prueba.
 
@@ -803,7 +803,7 @@ https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safes
 | Frontend Angular | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> |
 | API de datos | my-json-server | <a href="https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server">https://my-json-server.typicode.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-json-server</a> |
 
-### 5.2.2.8. Team Collaboration Insights during Sprint
+#### 5.2.1.2.8. Team Collaboration Insights during Sprint
 
 En esta sección el equipo explica cómo se han desarrollado las actividades de implementación del Sprint 2 y se presenta los analíticos de colaboración y commits en GitHub.
 

@@ -10,9 +10,9 @@
 
 # 5.2. Landing Page, Services & Applications Implementation.
 
-## 5.2.4. Sprint 4
+### 5.2.1.4. Sprint 4
 
-### 5.2.4.1. Sprint Planning 4
+#### 5.2.1.4.1. Sprint Planning 4
 
 En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 4. SafeStep inicia su cuarto Sprint con el objetivo de fortalecer dos flujos críticos para una aplicación web real: Identity and Access Management (IAM) y pagos en línea con Stripe. Después del Sprint 3, donde se implementó el backend real y se conectó el frontend con los servicios REST, el equipo identificó la necesidad de reemplazar flujos simples de acceso y compra por mecanismos más cercanos a producción.
 
@@ -97,7 +97,7 @@ El Sprint Planning Meeting del 16 de junio de 2026 duró aproximadamente 2.5 hor
 - **Render PostgreSQL & Deployment:** 3 Story Points enfocados en conexión a base de datos desplegada y validación de persistencia.
 - **Testing & Documentation:** 3 Story Points enfocados en Swagger, pruebas manuales, evidencias e informe del Sprint.
 
-### 5.2.4.2. Aspect Leaders and Collaborators
+#### 5.2.1.4.2. Aspect Leaders and Collaborators
 
 En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX) correspondiente al Sprint 4. Los aspectos del Sprint se enfocan en IAM, pagos con Stripe, persistencia desplegada y validación de integración entre frontend y backend.
 
@@ -180,7 +180,7 @@ La organización de líderes y colaboradores se relaciona con las tasks del Spri
 - **Ayala Fernandez, Jorge Brayan (Stripe Backend Lead):** Responsable de crear la integración de Stripe en backend, incluyendo creación de checkout session, confirmación, cancelación y actualización de órdenes.
 - **Sanchez Espinoza, Mathias Enrique (Stripe Frontend Lead):** Responsable de implementar el flujo de checkout en Angular, las páginas de success/cancel y la validación visual del resultado de pago.
 
-### 5.2.4.3. Sprint Backlog 4
+#### 5.2.1.4.3. Sprint Backlog 4
 
 El Sprint Backlog 4 resume las tareas necesarias para implementar IAM y pagos con Stripe en SafeStep. Las tasks fueron separadas por User Story o Technical Story para mantener trazabilidad entre el Product Backlog, la matriz LACX y el trabajo operativo realizado durante el Sprint.
 
@@ -455,7 +455,7 @@ A continuación, la tabla de control de estado para el Sprint 4:
 
 El Sprint Backlog 4 refleja 20 tasks derivadas de User Stories y Technical Stories relacionadas con IAM, Stripe, persistencia desplegada y validación de integración. Las estimaciones suman 70 horas de trabajo operativo y fueron usadas para organizar el avance de frontend y backend.
 
-### 5.2.4.4. Development Evidence for Sprint Review
+#### 5.2.1.4.4. Development Evidence for Sprint Review
 
 En esta sección se presentan los avances de implementación realizados durante el Sprint 4. El equipo completó la integración de IAM y Stripe tanto en backend como en frontend, manteniendo la arquitectura por bounded contexts y la separación de responsabilidades entre domain, application, infrastructure e interfaces.
 
@@ -563,7 +563,7 @@ En esta sección se presentan los avances de implementación realizados durante 
 
 <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git</a>
 
-### 5.2.4.5. Execution Evidence for Sprint Review
+#### 5.2.1.4.5. Execution Evidence for Sprint Review
 
 El Sprint 4 permitió validar los flujos de autenticación y pago en SafeStep. Las evidencias de ejecución demuestran que el usuario puede registrarse, iniciar sesión, navegar con token, consultar su perfil, crear una orden, pagar con Stripe y visualizar únicamente compras confirmadas.
 
@@ -653,7 +653,7 @@ npm install
 npm start
 ```
 
-### 5.2.4.6. Services Documentation Evidence for Sprint Review
+#### 5.2.1.4.6. Services Documentation Evidence for Sprint Review
 
 Durante el Sprint 4 se documentaron y validaron los endpoints relacionados con IAM y pagos de Stripe. Estos endpoints se encuentran disponibles desde Swagger UI en el backend desplegado:
 
@@ -693,7 +693,7 @@ Durante el Sprint 4 se documentaron y validaron los endpoints relacionados con I
   </p>
 </div>
 
-### 5.2.4.7. Software Deployment Evidence for Sprint Review
+#### 5.2.1.4.7. Software Deployment Evidence for Sprint Review
 
 En esta sección se presentan las evidencias de despliegue del Sprint 4. El objetivo fue validar que SafeStep funcione con frontend desplegado, backend desplegado y base de datos PostgreSQL remota en Render.
 
@@ -737,7 +737,7 @@ dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com
 | Landing Page | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a> |
 | PostgreSQL Database | Render | `dpg-d8pj85v7f7vs73d1r4i0-a.oregon-postgres.render.com` |
 
-### 5.2.4.8. Team Collaboration Insights during Sprint
+#### 5.2.1.4.8. Team Collaboration Insights during Sprint
 
 En esta sección se explica cómo se desarrollaron las actividades de implementación del Sprint 4 y se presentan las evidencias de colaboración relacionadas con IAM, Stripe, frontend, backend y despliegue.
 

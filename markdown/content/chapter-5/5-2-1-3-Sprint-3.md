@@ -10,9 +10,9 @@
 
 # 5.2. Landing Page, Services & Applications Implementation.
 
-## 5.2.3. Sprint 3
+### 5.2.1.3. Sprint 3
 
-### 5.2.3.1. Sprint Planning 3
+#### 5.2.1.3.1. Sprint Planning 3
 
 En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 3. SafeStep inicia su tercer Sprint con el objetivo de implementar el backend real de la solución, reemplazando progresivamente la dependencia de datos simulados utilizada en el Sprint 2 por un RESTful API desarrollado internamente con Spring Boot, Java, PostgreSQL y documentación OpenAPI mediante Swagger.
 
@@ -113,7 +113,7 @@ El backend implementado en este Sprint da soporte directo a historias funcionale
 - **Frontend Integration:** 5 Story Points enfocados en configurar environments, endpoints, interceptores, stores y consumo real del backend desde Angular.
 - **Landing Page Update:** 3 Story Points enfocados en agregar imágenes del producto y los videos About the Team y About the Product.
 
-### 5.2.3.2. Aspect Leaders and Collaborators
+#### 5.2.1.3.2. Aspect Leaders and Collaborators
 
 En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX) correspondiente al Sprint 3. Los aspectos del Sprint se enfocan principalmente en el desarrollo del backend de SafeStep, pero también incluyen la integración de la Web Application con el API real y la actualización de la Landing Page con contenido visual del producto.
 
@@ -223,7 +223,7 @@ La organización de líderes y colaboradores se relaciona con la posterior selec
 
 - **Landing Page - Product Evidence:** Responsable de mejorar la presentación pública de SafeStep agregando imágenes de la aplicación web, secciones visuales del producto y los videos About the Team y About the Product.
 
-### 5.2.3.3. Sprint Backlog 3
+#### 5.2.1.3.3. Sprint Backlog 3
 
 El Sprint Backlog 3 resume el objetivo principal del Sprint: implementar el backend RESTful API de SafeStep utilizando Spring Boot, PostgreSQL, JWT, OpenAPI y una arquitectura organizada por bounded contexts. Para mejorar la trazabilidad, las tareas se descomponen por technical story, endpoint o componente técnico verificable, evitando agrupar demasiado trabajo en una sola tarjeta.
 
@@ -698,7 +698,7 @@ A continuación, la tabla de control de estado para el Sprint 3:
 
 El Sprint Backlog 3 refleja 35 tareas derivadas de las User Stories funcionales soportadas por el backend y de las Technical Stories de integración y soporte técnico. Las tareas fueron separadas por historia para evitar agrupar varios flujos en una sola fila. Las estimaciones suman 103 horas de trabajo operativo y fueron usadas para seguimiento del avance por historia, endpoint y producto entregable. Los Story Points permanecen asociados a las historias seleccionadas durante el Sprint Planning.
 
-### 5.2.3.4. Development Evidence for Sprint Review
+#### 5.2.1.3.4. Development Evidence for Sprint Review
 
 En esta seccion se explica y presenta los avances de implementacion realizados durante el Sprint 3 con relacion al producto Web Services de SafeStep. El equipo completo el desarrollo del backend RESTful API utilizando Spring Boot, Java, PostgreSQL, Maven y Swagger.
 
@@ -1062,7 +1062,7 @@ En esta seccion se explica y presenta los avances de implementacion realizados d
 
 <a href="https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html">https://safestep-backend-fxuw.onrender.com/swagger-ui/index.html</a>
 
-### 5.2.3.5. Execution Evidence for Sprint Review
+#### 5.2.1.3.5. Execution Evidence for Sprint Review
 
 El Sprint 3 permitió construir el RESTful API real de SafeStep, habilitando la comunicación entre la Web Application y una capa backend propia. Las evidencias de ejecución demuestran que el equipo completó los endpoints principales, configuró persistencia con PostgreSQL, validó la documentación con Swagger, conectó el frontend Angular con el backend y actualizó la landing page con contenido visual del producto.
 
@@ -1167,7 +1167,7 @@ http://localhost:8092/swagger-ui/index.html
 http://localhost:8092/v3/api-docs
 ```
 
-### 5.2.3.6. Services Documentation Evidence for Sprint Review
+#### 5.2.1.3.6. Services Documentation Evidence for Sprint Review
 
 En esta seccion se incluye la relacion de endpoints documentados con OpenAPI, relacionados con el alcance del Sprint 3. Durante este Sprint, el equipo implemento el RESTful API interno de SafeStep y expuso la documentacion mediante Swagger UI.
 
@@ -1273,7 +1273,7 @@ La documentacion de servicios permite que los integrantes del equipo frontend y 
   </p>
 </div>
 
-### 5.2.3.7. Software Deployment Evidence for Sprint Review
+#### 5.2.1.3.7. Software Deployment Evidence for Sprint Review
 
 En esta sección se resumen los procesos realizados en relación con Deployment durante el Sprint 3. Para este Sprint, el equipo se enfocó en configurar la ejecución local del backend Spring Boot, preparar el proyecto para despliegue mediante Docker, documentar las variables de entorno necesarias para conectar el API con PostgreSQL y validar que la Web Application y la Landing Page sigan disponibles públicamente.
 
@@ -1389,7 +1389,7 @@ La landing page fue actualizada para comunicar mejor el producto terminado. Se a
 | Frontend Angular | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-frontend/</a> |
 | Landing Page | GitHub Pages | <a href="https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/">https://upc-1asi0729-2610-11990-chronos-team-3.github.io/safestep-landing-page/</a> |
 
-### 5.2.3.8. Team Collaboration Insights during Sprint
+#### 5.2.1.3.8. Team Collaboration Insights during Sprint
 
 En esta sección el equipo explica cómo se desarrollaron las actividades de implementación del Sprint 3 y presenta las evidencias de colaboración relacionadas con backend, frontend y landing page. El trabajo se distribuyó por bounded context, manteniendo coordinación constante para que la estructura del código sea consistente y alineada con la arquitectura de referencia del curso.
 

@@ -10,9 +10,9 @@
 
 # 5.2. Landing Page, Services & Applications Implementation.
 
-## 5.2.1. Sprint 1
+### 5.2.1.1. Sprint 1
 
-### 5.2.1.1. Sprint Planning 1
+#### 5.2.1.1.1. Sprint Planning 1
 
 En esta sección se especifica los aspectos principales del Sprint Planning Meeting. SafeStep inicia su primer Sprint con el objetivo de establecer la presencia digital de la empresa mediante una Landing Page funcional que presente la propuesta de valor y facilite el registro de usuarios potenciales. Este Sprint representa la primera iteración del equipo SafeStep, donde se busca crear una primera impresión sólida ante potenciales usuarios que visitarán la plataforma por primera vez.
 
@@ -98,7 +98,7 @@ La selección de estos User Stories para el Sprint 1 responde a la necesidad de 
 
 La distribución de Story Points fue diseñada para que cada miembro del equipo tuviera una carga de trabajo equilibrada. Se priorizaron las tareas de implementación técnica (estructura HTML y estilos) sobre las tareas de configuración, reconociendo que la visibilidad del progreso es fundamental para mantener la motivación del equipo durante las primeras etapas del proyecto.
 
-### 5.2.1.2. Aspect Leaders and Collaborators
+#### 5.2.1.1.2. Aspect Leaders and Collaborators
 
 En esta sección el equipo elabora el artefacto Leadership-and-Collaboration Matrix (LACX), que indica por cada aspecto dentro del alcance del Sprint, quién es el líder y quién o quiénes son colaboradores en dicho aspecto, con el fin de brindar mayor claridad y efectividad en la comunicación al interior del equipo.
 
@@ -166,7 +166,7 @@ La organización de líderes y colaboradores tiene relación directa con las for
 
 - **Flores Eusebio, Angel Thyago (Documentation Lead & Development Collaborator):** Responsable de apoyar en el desarrollo de la Landing Page, participando en la implementación de la sección de preguntas frecuentes, el footer y los enlaces de registro. También lidera la documentación del Sprint, recopilando información del avance y verificando que las evidencias estén alineadas con las tasks realizadas.
 
-### 5.2.1.3. Sprint Backlog 1
+#### 5.2.1.1.3. Sprint Backlog 1
 
 El Sprint Backlog 1 resume el objetivo principal del Sprint: establecer la presencia digital de SafeStep mediante una Landing Page funcional que cubra las primeras User Stories de la Épica 08 del Product Backlog. Este documento representa el compromiso del equipo para completar las tareas identificadas durante el Sprint Planning y permite hacer seguimiento del avance de cada historia durante la iteración.
 
@@ -404,7 +404,7 @@ El Sprint Backlog refleja 16 tareas que descomponen directamente las User Storie
 
 El equipo se compromete a completar todas las tareas del Sprint Backlog antes de la fecha de Sprint Review programada para el final de la iteración. Se realizará seguimiento diario del progreso mediante las daily standups y se tomarán acciones correctivas en caso de identificar desviaciones significativas del plan.
 
-### 5.2.1.4. Development Evidence for Sprint Review
+#### 5.2.1.1.4. Development Evidence for Sprint Review
 
 En esta sección se explica y presenta los avances en implementación con relación a los productos de la solución según el alcance del Sprint 1: Landing Page (EP08). La sección resume los principales avances logrados durante este Sprint inicial y sirve como evidencia de que el equipo cumplió con el objetivo planificado.
 
@@ -527,7 +527,7 @@ El equipo realizó un total de 10 commits en el repositorio de Landing Page dura
 - Total de commits: 10
 - Total de contribuciones: 4 miembros activos del equipo
 
-### 5.2.1.5. Execution Evidence for Sprint Review
+#### 5.2.1.1.5. Execution Evidence for Sprint Review
 
 Esta sección resume lo alcanzado en el Sprint 1 y presenta las capturas de pantalla de las principales vistas implementadas, junto con enlaces que ilustran la visualización y navegación logradas durante este Sprint inicial. Las evidencias presentadas demuestran que el equipo cumplió satisfactoriamente con el Sprint Goal establecido durante el Planning.
 
@@ -572,13 +572,13 @@ La Landing Page implementada incluye las siguientes secciones principales:
 
 Se muestra la navegación por la Landing Page y su funcionamiento en diferentes dispositivos. El video tiene una duración aproximada de 3 minutos y demuestra las siguientes funcionalidades: navegación por las secciones mediante el menú, comportamiento responsivo en diferentes tamaños de pantalla, interacción con los botones de llamada a la acción, y acceso a los enlaces del footer.
 
-### 5.2.1.6. Services Documentation Evidence for Sprint Review
+#### 5.2.1.1.6. Services Documentation Evidence for Sprint Review
 
 En esta sección se incluye la relación de Endpoints documentados con OpenAPI, relacionados con el alcance del Sprint. Sin embargo, para el Sprint 1 esto no aplica, debido a que el alcance de esta primera iteración estuvo limitado exclusivamente al desarrollo de la Landing Page pública (EP08). La Landing Page es un sitio web estático que no expone servicios web ni APIs REST, por lo que no existe documentación de servicios que presentar en esta sección. El equipo se enfocó en establecer la presencia digital de SafeStep mediante HTML, CSS y JavaScript del lado del cliente, sin necesidad de implementar ni documentar endpoints de backend.
 
 La documentación de servicios web con OpenAPI/Swagger será abordada en sprints posteriores, cuando se implementen los componentes de Web Services (Backend API con Spring Boot) y el Frontend Angular que consumirá dichos endpoints. Específicamente, en el sprint correspondiente al desarrollo del backend (EP09 - Soporte técnico y arquitectura), se definirán y documentarán los endpoints REST necesarios para la aplicación. Por ahora, al tratarse de un producto puramente estático y de presentación, no existen endpoints que documentar ni interacciones con servicios web que evidenciar.
 
-### 5.2.1.7. Software Deployment Evidence for Sprint Review
+#### 5.2.1.1.7. Software Deployment Evidence for Sprint Review
 
 En esta sección se resumen los procesos realizados en relación con Deployment durante el Sprint 1. Para este Sprint, las actividades de despliegue se centraron exclusivamente en la Landing Page de SafeStep, utilizando GitHub Pages como plataforma de hosting estático. El proceso de despliegue implicó la creación y configuración del repositorio en GitHub, la implementación del contenido estático, y la configuración del pipeline de publicación para que la Landing Page estuviera accesible públicamente.
 
@@ -668,7 +668,7 @@ La Landing Page de SafeStep se encuentra actualmente en producción y accesible 
 
 El despliegue en GitHub Pages desde la rama `gh-pages` ha resultado ser una solución eficiente y sin costos para alojar la presencia digital inicial de SafeStep. Esta plataforma ofrece alta disponibilidad, CDN global para entrega de contenido, y escalabilidad automática, lo que garantiza una experiencia de usuario óptima independientemente del volumen de visitantes.
 
-### 5.2.1.8. Team Collaboration Insights during Sprint
+#### 5.2.1.1.8. Team Collaboration Insights during Sprint
 
 En esta sección el equipo explica cómo se han desarrollado las actividades de implementación y se presenta los analíticos de colaboración y commits en GitHub, realizados por los miembros del equipo. Esta información permite evaluar la efectividad del equipo y identificar oportunidades de mejora para sprints futuros.
 

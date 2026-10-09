@@ -39,7 +39,7 @@
     <tr>
         <td align="center">1.6</td>
         <td>Melgarejo Quiroz, Josep Eliu</td>
-        <td>Capítulo III: actualización del Product Backlog con las historias US57 a US61 y las technical stories TS25 a TS31. Capítulo V: actualización de 5.1 (herramientas de testing, calidad, CI y despliegue en Render) Sprint 5 con la evidencia de despliegue y 5.2.6 Acuerdo de Servicio - SaaS.</td>
+        <td>Capítulo III: actualización del Product Backlog con las historias US57 a US61 y las technical stories TS25 a TS31. Capítulo V: actualización de 5.1 (herramientas de testing, calidad, CI y despliegue en Render) Sprint 5 con la evidencia de despliegue. Reorganización de 5.2: los sprints pasan a 5.2.1.1 a 5.2.1.5 y se agregan 5.2.2 Landing Page, 5.2.3 Frontend-Web, 5.2.4 Acuerdo de Servicio - SaaS, 5.2.5 Aplicación móvil (pendiente), 5.2.6 Backend y 5.2.7 Documentación de la API.</td>
     </tr>
     <tr>
         <td align="center">1.7</td>

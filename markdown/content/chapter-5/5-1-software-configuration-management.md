@@ -307,7 +307,7 @@ El proyecto cuenta con tres productos desplegados en plataformas independientes.
 
 El segundo producto es el Frontend Angular, desplegado en Render como Static Site. Esta plataforma fue seleccionada porque compila el proyecto desde el repositorio en cada commit, sirve los archivos estáticos por HTTPS y permite configurar la reescritura de rutas que necesita una aplicación de una sola página.
 
-El tercer producto es el Backend API, desplegado en Render como un Web Service con runtime Docker que ejecuta la aplicación Spring Boot documentada con Swagger. Este backend se conecta a la base de datos PostgreSQL `safestep-db`, también en Render y en la misma región (Frankfurt), utilizada para persistir usuarios, perfiles, simulaciones, órdenes, pagos y datos principales de la aplicación. Los tres recursos de Render, sus variables de entorno y los resultados de cada despliegue se evidencian en 5.2.5.8.
+El tercer producto es el Backend API, desplegado en Render como un Web Service con runtime Docker que ejecuta la aplicación Spring Boot documentada con Swagger. Este backend se conecta a la base de datos PostgreSQL `safestep-db`, también en Render y en la misma región (Frankfurt), utilizada para persistir usuarios, perfiles, simulaciones, órdenes, pagos y datos principales de la aplicación. Los tres recursos de Render, sus variables de entorno y los resultados de cada despliegue se evidencian en 5.2.1.5.8.
 
 #### 5.1.4.1.2. Pipeline de CI/CD
 
@@ -366,7 +366,7 @@ El Backend API se despliega en Render como un Web Service con runtime Docker con
 | Plan | Free |
 | Auto-Deploy | On Commit |
 
-La configuración se realiza mediante `application-prod.properties`, que lee la conexión a PostgreSQL, el secreto JWT y las claves de Stripe de variables de entorno; si falta alguna variable obligatoria, la aplicación no arranca. El perfil `prod` se activa con `SPRING_PROFILES_ACTIVE=prod` y el puerto lo toma la aplicación de la variable `PORT` que asigna Render. Desde el Trabajo Parcial el backend solo acepta peticiones de navegador desde los orígenes listados en `SAFESTEP_CORS_ALLOWED_ORIGINS`. La tabla completa de variables está en 5.2.5.8.
+La configuración se realiza mediante `application-prod.properties`, que lee la conexión a PostgreSQL, el secreto JWT y las claves de Stripe de variables de entorno; si falta alguna variable obligatoria, la aplicación no arranca. El perfil `prod` se activa con `SPRING_PROFILES_ACTIVE=prod` y el puerto lo toma la aplicación de la variable `PORT` que asigna Render. Desde el Trabajo Parcial el backend solo acepta peticiones de navegador desde los orígenes listados en `SAFESTEP_CORS_ALLOWED_ORIGINS`. La tabla completa de variables está en 5.2.1.5.8.
 
 La URL pública de la documentación del backend desplegado es: <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a>
 
@@ -386,7 +386,7 @@ Para el Backend en Render, el despliegue se realiza desde la rama `main` del rep
 
 #### 5.1.4.3.2. Verificación Post-Despliegue
 
-Después de cada despliegue, el equipo debe verificar el correcto funcionamiento de cada componente accediendo a las URLs de despliegue correspondientes y realizando pruebas de humo (smoke tests) para confirmar que la aplicación responde correctamente: Swagger UI del backend con respuesta 200, un endpoint protegido sin token con respuesta 401, la pantalla de inicio de sesión del frontend, la apertura directa de una ruta interna (`/app/dashboard`) y la petición previa de CORS desde el origen del frontend. Los resultados de la última verificación están en 5.2.5.8.
+Después de cada despliegue, el equipo debe verificar el correcto funcionamiento de cada componente accediendo a las URLs de despliegue correspondientes y realizando pruebas de humo (smoke tests) para confirmar que la aplicación responde correctamente: Swagger UI del backend con respuesta 200, un endpoint protegido sin token con respuesta 401, la pantalla de inicio de sesión del frontend, la apertura directa de una ruta interna (`/app/dashboard`) y la petición previa de CORS desde el origen del frontend. Los resultados de la última verificación están en 5.2.1.5.8.
 
 #### 5.1.4.3.3. Rollback
 

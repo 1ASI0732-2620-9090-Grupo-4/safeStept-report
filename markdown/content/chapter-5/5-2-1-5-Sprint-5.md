@@ -10,9 +10,9 @@
 
 # 5.2. Landing Page, Services & Applications Implementation.
 
-## 5.2.5. Sprint 5
+### 5.2.1.5. Sprint 5
 
-### 5.2.5.1. Sprint Planning 5
+#### 5.2.1.5.1. Sprint Planning 5
 
 En esta sección se especifican los aspectos principales del Sprint Planning Meeting correspondiente al Sprint 5. Con el Sprint 4 el producto quedó funcional de punta a punta (autenticación, pagos y backend desplegado), por lo que el quinto Sprint se dedica a **demostrar y proteger esa calidad**: construir las suites de pruebas unitarias, de integración y de comportamiento (BDD), medir la cobertura y el estilo del código, y automatizar la verificación en un pipeline de integración continua con Jenkins y SonarQube. En paralelo se incorporan al backlog y se completan las historias de usuario del panel de administración y del canje de cupones con SafeCoins, que son los flujos nuevos que las pruebas deben cubrir.
 
@@ -59,7 +59,7 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
 - **BDD y API (TS28, TS29):** 13 Story Points.
 - **Integración continua (TS30, TS31):** 13 Story Points.
 
-### 5.2.5.2. Aspect Leaders and Collaborators
+#### 5.2.1.5.2. Aspect Leaders and Collaborators
 
 En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LACX) del Sprint 5. Los aspectos del Sprint son:
 
@@ -79,7 +79,7 @@ En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LA
     </tbody>
 </table>
 
-### 5.2.5.3. Sprint Backlog 5
+#### 5.2.1.5.3. Sprint Backlog 5
 
 El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las tasks se separaron por historia para mantener la trazabilidad entre el Product Backlog (3.3), la matriz LACX y el trabajo operativo realizado. Las horas de estimación no se registraron durante el Sprint.
 
@@ -128,7 +128,7 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
     </tbody>
 </table>
 
-### 5.2.5.4. Development Evidence for Sprint Review
+#### 5.2.1.5.4. Development Evidence for Sprint Review
 
 En esta sección se presentan los avances de implementación del Sprint 5. Todo el trabajo se integró mediante GitFlow: cada pieza se desarrolló en una rama `feature/*`, se confirmó con Conventional Commits y se fusionó a `develop` con `--no-ff`.
 
@@ -136,9 +136,9 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
 
 - **Panel de administración y roles (backend y frontend):** panel `/app/admin` con conteos por módulo, listado de usuarios y roles, y asignación de roles con las reglas de protección del administrador.
 - **Cupones canjeables (backend y frontend):** rediseño del cupón en dos tipos (descuento simple y descuento con compra mínima), canje con SafeCoins mediante la fachada ACL de gamificación, descuento aplicado a la orden y cobrado por Stripe, y liberación del cupón si el pago falla.
-- **Suites de pruebas:** 205 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.5.5 y 6.1).
+- **Suites de pruebas:** 205 pruebas unitarias y de integración, 33 escenarios BDD y 36 escenarios de API (ver 5.2.1.5.5 y 6.1).
 - **Calidad:** cobertura de 93.8 % sobre las clases medidas (antes 44.3 %), reporte de Checkstyle y análisis de SonarQube con el Quality Gate aprobado (ver 6.1 y 7.1).
-- **Despliegue:** frontend, backend y base de datos publicados en Render, en una cuenta propia del equipo (ver 5.2.5.8).
+- **Despliegue:** frontend, backend y base de datos publicados en Render, en una cuenta propia del equipo (ver 5.2.1.5.8).
 - **Hallazgos corregidos:** la API responde 400 ante un JSON mal formado, CORS ya no admite cualquier origen y se resolvieron los bugs que reportó SonarQube; solo queda abierta la regla de CSRF, que es una decisión de diseño (ver 7.1).
 - **Pipeline de integración continua:** `Jenkinsfile` con siete etapas, y Jenkins y SonarQube configurados como código (ver 7.1).
 
@@ -161,7 +161,7 @@ En esta sección se presentan los avances de implementación del Sprint 5. Todo 
     </tbody>
 </table>
 
-### 5.2.5.5. Testing Suite Evidence for Sprint Review
+#### 5.2.1.5.5. Testing Suite Evidence for Sprint Review
 
 En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acceptance Tests automatizados que verifican los User Stories del Sprint. Los resultados completos, la cobertura y los reportes se analizan en 6.1; aquí se incluye la relación de pruebas diseñadas.
 
@@ -821,7 +821,7 @@ Feature: Simulation rewards API
     </tbody>
 </table>
 
-### 5.2.5.6. Execution Evidence for Sprint Review
+#### 5.2.1.5.6. Execution Evidence for Sprint Review
 
 El Sprint 5 dejó listas las vistas de administración y de canje de cupones y las suites de pruebas que las verifican. Las capturas siguientes muestran las vistas principales de la aplicación web, tomadas con una cuenta nueva creada para la captura y con el catálogo de datos de ejemplo.
 
@@ -865,7 +865,7 @@ El Sprint 5 dejó listas las vistas de administración y de canje de cupones y l
 
 **Video de la navegación del Sprint:** <b>[POR COMPLETAR POR EL EQUIPO]</b>
 
-### 5.2.5.7. Services Documentation Evidence for Sprint Review
+#### 5.2.1.5.7. Services Documentation Evidence for Sprint Review
 
 El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de roles y de canje de cupones, y modificó la creación de órdenes. Todos están publicados en la Swagger UI del backend desplegado en Render, <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a>, que lista 73 operaciones; la definición OpenAPI está en `/v3/api-docs`. Todos requieren autenticación; los de roles requieren además `ROLE_ADMIN`.
 
@@ -898,11 +898,11 @@ El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de r
 </div>
 
 
-**Repositorio de Web Services:** [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend). Los commits de este Sprint relacionados con servicios están en la tabla de 5.2.5.4 (`feat: add coupon redemption feature`).
+**Repositorio de Web Services:** [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend). Los commits de este Sprint relacionados con servicios están en la tabla de 5.2.1.5.4 (`feat: add coupon redemption feature`).
 
 **Observación sobre la documentación.** El response `200` del endpoint de canje aparece documentado con un cuerpo vacío (`{}`) aunque el servicio responde 201 con el cupón canjeado; la anotación de respuesta debe corregirse en el siguiente Sprint.
 
-### 5.2.5.8. Software Deployment Evidence for Sprint Review
+#### 5.2.1.5.8. Software Deployment Evidence for Sprint Review
 
 En el Sprint 5 el equipo desplegó el frontend, el backend y la base de datos en **Render**, en una cuenta propia, y dejó el proceso de integración continua con Jenkins y SonarQube corriendo en contenedores Docker locales. La Landing Page sigue publicada en GitHub Pages sin cambios.
 
@@ -1017,7 +1017,7 @@ El despliegue a Render no lo realiza Jenkins: lo dispara el propio repositorio o
 </div>
 
 
-### 5.2.5.9. Team Collaboration Insights during Sprint
+#### 5.2.1.5.9. Team Collaboration Insights during Sprint
 
 En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 y se presentan los analíticos de colaboración.
 
