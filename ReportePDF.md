@@ -11757,7 +11757,7 @@ La Landing Page se publica en GitHub Pages a partir de la rama `gh-pages`, con H
 </div>
 
 
-**Enlace hacia la aplicación.** Los botones «Comenzar Gratis» abren la aplicación web. En el código actual de la landing apuntan a `https://safestep-frontend.onrender.com`, una instalación anterior; la aplicación desplegada por el equipo en este hito está en <a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a>, por lo que ese enlace debe actualizarse en el repositorio de la landing.
+**Enlace hacia la aplicación.** Los botones «Comenzar Gratis» abren la aplicación web. Tras la corrección del hito (commit `fix: point frontend call-to-action links to the new deployed application`), todos los botones de la landing («Comenzar Gratis» y «Explorar plataforma») apuntan a la aplicación desplegada por el equipo: <a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a>. Antes apuntaban a una instalación anterior del frontend.
 
 <a id="toc-5-2-2-5-repositorio-y-commits"></a>
 ### 5.2.2.5. Repositorio y commits
