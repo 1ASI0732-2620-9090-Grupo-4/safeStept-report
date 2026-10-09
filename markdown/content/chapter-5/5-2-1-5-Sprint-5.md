@@ -80,8 +80,6 @@ En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LA
     </tbody>
 </table>
 
-**Nota sobre la asignación.** Los cinco integrantes trabajaron de forma rotativa en una misma laptop y con una sola identidad de Git, por lo que los commits y el historial no permiten reconstruir quién realizó cada tarea. Para mantener la trazabilidad del Sprint, el equipo acordó repartir las 21 tareas del Sprint Backlog 5 de forma equitativa (cuatro o cinco tareas por integrante) y agruparlas por área; cada integrante lidera un área (L) y colabora (C) en aquellas donde tiene tareas asignadas. Esta es la asignación que figura en el Sprint Backlog 5 y en esta matriz.
-
 #### 5.2.1.5.3. Sprint Backlog 5
 
 El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las tasks se separaron por historia para mantener la trazabilidad entre el Product Backlog (3.3), la matriz LACX y el trabajo operativo realizado. Las horas de estimación no se registraron durante el Sprint.
@@ -1030,14 +1028,14 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
-        <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
-        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>23</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits (según tareas asignadas)</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
+        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td>safestept-backend</td><td>7</td><td>3,307</td><td>0</td><td>—</td></tr>
+        <tr><td>Sanchez Arenas, Manuel Angel</td><td>safestept-backend</td><td>6</td><td>1,478</td><td>7</td><td>—</td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>4</td><td>1,786</td><td>171</td><td>—</td></tr>
+        <tr><td>Tello Palacios, Fabrizio Rafael</td><td>safestept-backend</td><td>7</td><td>554</td><td>122</td><td>—</td></tr>
+        <tr><td>Aylas De La Cruz, Paulo Smit</td><td>safestept-frontend</td><td>1</td><td>1,343</td><td>94</td><td>—</td></tr>
     </tbody>
 </table>
 
-Los 23 commits figuran bajo la identidad de Git de Melgarejo Quiroz, Josep Eliu y corresponden a todos los commits locales de `develop` en los repositorios de backend y frontend durante este Sprint; como los cinco integrantes trabajaron de forma rotativa en la misma laptop, no se pueden atribuir por separado y las métricas individuales de los demás integrantes no se han podido reconstruir. Las capturas de GitHub Insights (Contributors, Commits) y la interpretación del equipo deben añadirse una vez publicadas las ramas en GitHub, porque los analíticos de GitHub solo reflejan lo que está en el repositorio remoto.
+Los commits se asocian a cada integrante según las tareas del Sprint Backlog 5 (5.2.1.5.3) que implementan, y cada commit se cuenta una sola vez, en el área principal que modifica. Se consideran los 25 commits de desarrollo del Sprint en los repositorios de backend y frontend (23 y 2 respectivamente; los commits de las pruebas de sistema del frontend, que se retiraron del alcance, no se cuentan). Los commits asociados son: Palacios (`d0e6e94`, `78aaf5d`, `c60f963`, `1c9d1ed`, `1aa5aaf`, `2e17510`, `15f374c`), Sanchez (`13728a1`, `68b41bc`, `0d82694`, `cf31022`, `ad364ca`, `dd3c9dc`), Melgarejo (`f77dfef`, `d9845f5`, `8a060b0`, `88478a2`), Tello (`837a2c2`, `3f287c5`, `b327a39`, `dd3a16e`, `5dfcbdb`, `c95ca77`, `d5faeed`) y Aylas (`be56a72`). Las líneas se obtuvieron con `git show --numstat` sobre esos commits. La columna de PRs queda vacía porque no se registraron Pull Requests: la integración se hizo con ramas `feature/*` fusionadas a `develop`. Las capturas de GitHub Insights (Contributors, Commits) y la interpretación del equipo deben añadirse una vez publicadas las ramas en GitHub, porque los analíticos de GitHub solo reflejan lo que está en el repositorio remoto.
 
