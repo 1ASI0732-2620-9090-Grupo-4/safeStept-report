@@ -72,11 +72,11 @@ En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LA
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
         <tr><td><b>Team Member (Last Name, First Name)</b></td><td><b>GitHub Username</b></td><td><b>Admin &amp; Coupons / L or C</b></td><td><b>Unit Tests &amp; Coverage / L or C</b></td><td><b>BDD &amp; API Tests / L or C</b></td><td><b>CI Pipeline / L or C</b></td><td><b>Documentation / L or C</b></td></tr>
-        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>C</td><td>L</td><td>—</td><td>—</td><td>C</td></tr>
-        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>—</td><td>C</td><td>L</td><td>—</td><td>C</td></tr>
-        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>C</td><td>—</td><td>—</td><td>—</td><td>L</td></tr>
-        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>—</td><td>—</td><td>—</td><td>L</td><td>C</td></tr>
-        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td>L</td><td>—</td><td>—</td><td>—</td><td>C</td></tr>
+        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>kalidpalacios</b></td><td>C</td><td>L</td><td>—</td><td>—</td><td>C</td></tr>
+        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>manuael7sa</b></td><td>—</td><td>C</td><td>L</td><td>—</td><td>C</td></tr>
+        <tr><td>Melgarejo Quiroz, Josep Eliu</td><td><b>Melga1502</b></td><td>C</td><td>—</td><td>—</td><td>—</td><td>L</td></tr>
+        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>f4bris</b></td><td>—</td><td>—</td><td>—</td><td>L</td><td>C</td></tr>
+        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>paulosmi</b></td><td>L</td><td>—</td><td>—</td><td>—</td><td>C</td></tr>
     </tbody>
 </table>
 
@@ -112,7 +112,7 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T511</td><td>Pruebas de commerce, iam y gamification</td><td>Pruebas JUnit/Mockito de agregados, servicios de comandos y consultas, ACL y manejadores de eventos.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
         <tr><td>TS25</td><td>Pruebas unitarias de entidades y servicios</td><td>T512</td><td>Pruebas de simulation, analytics, profiles y shared</td><td>Pruebas de intentos, certificados, perfiles, Result y manejador global de excepciones.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
         <tr><td>TS26</td><td>Umbral de cobertura con JaCoCo</td><td>T513</td><td>Configurar JaCoCo</td><td>Reporte HTML/XML, regla de 80 % y exclusiones tomadas del proyecto de referencia del curso.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
-        <tr><td>TS27</td><td>Análisis de estilo con Checkstyle</td><td>T514</td><td>Configurar Checkstyle</td><td>Reglas de Google sin modificar, en modo reporte; medir la línea base (8,034 observaciones).</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
+        <tr><td>TS27</td><td>Análisis de estilo con Checkstyle</td><td>T514</td><td>Configurar Checkstyle</td><td>Reglas de Google sin modificar, en modo reporte; medir la línea base (8,128 observaciones).</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T515</td><td>Features y steps</td><td>Cinco features Gherkin etiquetados con historias y sus step definitions.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr><td>TS28</td><td>Pruebas de aceptación BDD con Cucumber</td><td>T516</td><td>Infraestructura de BDD</td><td>Contexto de Spring Boot con puerto aleatorio y base H2 aislada, cliente HTTP y fábrica de jugadores.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>
         <tr><td>TS29</td><td>Pruebas de integración con Karate</td><td>T517</td><td>Proyecto `api-tests`</td><td>Cinco features Karate (36 escenarios) contra una API en ejecución, con datos únicos por ejecución.</td><td>—</td><td>Sanchez Arenas, Manuel Angel</td><td>Done</td></tr>

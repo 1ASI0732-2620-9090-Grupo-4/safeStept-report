@@ -36,7 +36,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
             <i>AV1</i>
             <p>En el capítulo II (Needfinding y entrevistas) apliqué el resguardo de la identidad de las personas entrevistadas usando resúmenes en lugar de transcripciones completas, y evité atribuir citas o conclusiones que los entrevistados no expresaron, para no distorsionar los hallazgos usados como base del producto.</p>
             <i>TB1</i>
-            <p>En el TB1 configuré Checkstyle con las reglas de Google sin modificarlas, medí la línea base real (8,034 observaciones) y la dejé en modo reporte en lugar de desactivar reglas para que el conteo pareciera menor. En las pruebas BDD y de API verifiqué los permisos (401 sin sesión, 403 para jugadores en rutas de administrador y 422 cuando un administrador intenta quitarse su propio rol) y etiqueté cada escenario con la historia de usuario que respalda.</p>
+            <p>En el TB1 configuré Checkstyle con las reglas de Google sin modificarlas, medí la línea base real (8,128 observaciones) y la dejé en modo reporte en lugar de desactivar reglas para que el conteo pareciera menor. En las pruebas BDD y de API verifiqué los permisos (401 sin sesión, 403 para jugadores en rutas de administrador y 422 cuando un administrador intenta quitarse su propio rol) y etiqueté cada escenario con la historia de usuario que respalda.</p>
         </td>
     </tr>
     <tr>
