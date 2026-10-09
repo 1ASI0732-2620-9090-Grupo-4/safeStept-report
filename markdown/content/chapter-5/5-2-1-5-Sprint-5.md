@@ -86,7 +86,13 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
 
 **Trello Board:** el equipo utiliza un Trello Board con las listas estándar de Scrum: "Sprint Goal", "To Do", "In Progress", "To Review" y "Done".
 
-**URL pública del Trello Board del Sprint 5:** <b>[POR COMPLETAR POR EL EQUIPO]</b>
+**URL pública del Trello Board del Sprint 5:** <b>[Link de el trello](https://trello.com/invite/b/6ac878bc705a63654f4cb9fc/ATTIdf002a5dd36142d08ccde7d5b979962651FA20DA/sprint-5-safestep)</b>
+
+<div align="center">
+  <p><b>Captura:</b> Tablero de trello</p>
+  <img src="../../assets/images/chapter-5/Sprint5trello.png" alt="Swagger UI del backend desplegado" width="760" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
