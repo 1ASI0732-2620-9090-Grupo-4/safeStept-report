@@ -99,4 +99,4 @@ cd safeStept-backend/ci
 bash start-ci.sh          # SonarQube :9000, Jenkins :9089 (usuario admin, clave en ci/.env)
 ```
 
-Jenkins ejecuta el job `safestep-backend` sobre la rama `develop`; también puede iniciarse manualmente desde la interfaz con *Build with Parameters*.
+Jenkins ejecuta el job `safestep-backend` sobre la rama `develop`; también puede iniciarse manualmente desde la interfaz con *Build Now*.

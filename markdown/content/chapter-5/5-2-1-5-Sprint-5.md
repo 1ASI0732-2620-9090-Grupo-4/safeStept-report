@@ -99,7 +99,7 @@ El Sprint Backlog 5 resume las tareas de cada User Story y Technical Story. Las 
         <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T504</td><td>Rediseño del cupón</td><td>Reemplazar el campo discount por type, discountPercentage y minPurchaseAmount, con validaciones.</td><td>—</td><td>Aylas De La Cruz, Paulo Smit</td><td>Done</td></tr>
         <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T505</td><td>Canje de cupones</td><td>Crear el agregado RedeemedCoupon, el endpoint POST /commerce/coupons/{id}/redeem y el gasto de SafeCoins por la fachada ACL de gamificación (PlayerProgress.spendCoins, CoinSpend).</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr><td>US59</td><td>Canjear un cupón con SafeCoins</td><td>T506</td><td>Página de canje</td><td>Crear /app/store/coupons con el catálogo de cupones y el botón de canje.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
-        <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T507</td><td>Descuento en la orden</td><td>Agregar Order.finalTotal() y el descuento aplicado; cobrar el total final en Stripe.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
+        <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T507</td><td>Descuento en la orden</td><td>Agregar Order.finalTotal() y el descuento aplicado; Stripe cobra cada producto con el descuento aplicado a su precio unitario.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T508</td><td>Selector de cupones en el checkout</td><td>Reemplazar el campo de texto por la lista de cupones disponibles, deshabilitando los que no cumplen el monto mínimo.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr><td>US60</td><td>Aplicar un cupón canjeado en el checkout</td><td>T509</td><td>Liberación del cupón</td><td>Devolver el cupón a disponible cuando el pago de Stripe falla o se cancela.</td><td>—</td><td>Melgarejo Quiroz, Josep Eliu</td><td>Done</td></tr>
         <tr><td>US61</td><td>Consultar mis cupones canjeados</td><td>T510</td><td>Mis cupones</td><td>Exponer GET /commerce/coupons/redeemed/me y mostrar pestañas de disponibles y usados.</td><td>—</td><td>Palacios Jáuregui, Kalid Jesus</td><td>Done</td></tr>
@@ -889,7 +889,7 @@ El Sprint 5 amplió la documentación OpenAPI del backend con los endpoints de r
 
 **Repositorio de Web Services:** [1ASI0732-2620-9090-Grupo-4/safestept-backend](https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend). Los commits de este Sprint relacionados con servicios están en la tabla de 5.2.1.5.4 (`feat: add coupon redemption feature`).
 
-**Observación sobre la documentación.** El response `200` del endpoint de canje aparece documentado con un cuerpo vacío (`{}`) aunque el servicio responde 201 con el cupón canjeado; la anotación de respuesta debe corregirse en el siguiente Sprint.
+**Observación sobre la documentación.** Al desplegar este Sprint, la respuesta del endpoint de canje aparecía documentada como `200` con un cuerpo vacío (`{}`) aunque el servicio responde `201` con el cupón canjeado. La anotación de respuesta se corrigió después, junto con las demás operaciones, y está descrita en 5.2.7.14.
 
 #### 5.2.1.5.8. Software Deployment Evidence for Sprint Review
 
@@ -1010,7 +1010,7 @@ El despliegue a Render no lo realiza Jenkins: lo dispara el propio repositorio o
 
 En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 y se presentan los analíticos de colaboración.
 
-**Distribución de Trabajo:** el equipo repartió las 21 tareas del Sprint Backlog 5 por áreas (ver la nota de asignación en 5.2.1.5.2): Aylas De La Cruz, Paulo Smit (panel de administración, roles y rediseño del cupón: T501 a T504); Melgarejo Quiroz, Josep Eliu (canje y descuento de cupones, y documentación: T505 a T509); Palacios Jáuregui, Kalid Jesus (mis cupones, pruebas unitarias y JaCoCo: T510 a T513); Sanchez Arenas, Manuel Angel (Checkstyle, BDD y Karate: T514 a T517) y Tello Palacios, Fabrizio Rafael (Jenkins, SonarQube y corrección de hallazgos: T518 a T521).
+**Distribución de Trabajo:** el equipo repartió las 21 tareas del Sprint Backlog 5 por áreas: Aylas De La Cruz, Paulo Smit (panel de administración, roles y rediseño del cupón: T501 a T504); Melgarejo Quiroz, Josep Eliu (canje y descuento de cupones, y documentación: T505 a T509); Palacios Jáuregui, Kalid Jesus (mis cupones, pruebas unitarias y JaCoCo: T510 a T513); Sanchez Arenas, Manuel Angel (Checkstyle, BDD y Karate: T514 a T517) y Tello Palacios, Fabrizio Rafael (Jenkins, SonarQube y corrección de hallazgos: T518 a T521).
 
 **Métricas de Colaboración:**
 
