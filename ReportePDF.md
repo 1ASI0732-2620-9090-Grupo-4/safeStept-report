@@ -10660,16 +10660,16 @@ En esta sección se especifican los aspectos principales del Sprint Planning Mee
     <tbody>
         <tr><td><b>Sprint #</b></td><td>Sprint 5</td></tr>
         <tr><td colspan="2"><b>Sprint Planning Background</b></td></tr>
-        <tr><td>Date</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Time</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Location</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Date</td><td>01/10/2026</td></tr>
+        <tr><td>Time</td><td>10:00 p. m.</td></tr>
+        <tr><td>Location</td><td>Discord (reunión virtual)</td></tr>
         <tr><td>Prepared By</td><td>Melgarejo Quiroz, Josep Eliu</td></tr>
-        <tr><td>Attendees (to planning meeting)</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Attendees (to planning meeting)</td><td>Palacios Jáuregui, Kalid Jesus; Sanchez Arenas, Manuel Angel; Melgarejo Quiroz, Josep Eliu; Tello Palacios, Fabrizio Rafael; Aylas De La Cruz, Paulo Smit</td></tr>
         <tr><td>Sprint n - 1 Review Summary</td><td>Sprint 4 completado: autenticación real con JWT, registro, perfil autenticado, protección de rutas, pago con Stripe y base de datos PostgreSQL desplegada, con el frontend conectado al backend real. Quedó pendiente respaldar esos flujos con pruebas automatizadas y un pipeline que las ejecute.</td></tr>
-        <tr><td>Sprint n - 1 Retrospective Summary</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Sprint n - 1 Retrospective Summary</td><td>El equipo identificó que el Sprint 4 dejó el producto funcional de punta a punta, con acceso seguro, pagos con Stripe y backend desplegado, pero que esos flujos solo se habían comprobado a mano y no existía una forma repetible de detectar regresiones. Se acordó dedicar el Sprint 5 a las pruebas automatizadas, la medición de cobertura y de estilo, y a un pipeline de integración continua, e incorporar al backlog el panel de administración y el canje de cupones para que las nuevas pruebas cubrieran también los flujos más recientes.</td></tr>
         <tr><td colspan="2"><b>Sprint Goal &amp; User Stories</b></td></tr>
         <tr><td>Sprint 5 Goal</td><td>Nuestro enfoque es verificar de forma automática el comportamiento de SafeStep y entregar cada cambio a través de un pipeline repetible. Creemos que esto da confianza para seguir evolucionando el producto sin romper lo que ya funciona. La meta se considera cumplida si las suites unitarias, BDD y de API aprueban, la cobertura del código de aplicación supera el 80 % y el pipeline de Jenkins termina en éxito con el análisis de SonarQube.</td></tr>
-        <tr><td>Sprint 5 Velocity</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b> (la suma de los puntos de las historias incluidas es 59 SP; el equipo debe confirmar si coincide con el velocity acordado).</td></tr>
+        <tr><td>Sprint 5 Velocity</td><td>El equipo acordó un velocity de 59 Story Points, que coincide con la suma de los puntos de las historias de usuario y technical stories incluidas en el Sprint.</td></tr>
         <tr><td>Sum of Story Points</td><td>Total: 59 SP - Panel de administración y roles (8 SP), cupones canjeables (12 SP), pruebas unitarias y umbral de cobertura (13 SP), BDD (8 SP), pruebas de API (5 SP) e integración continua (13 SP).</td></tr>
     </tbody>
 </table>
