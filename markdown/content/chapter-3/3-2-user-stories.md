@@ -614,6 +614,90 @@ En la columna **Priority**, `#1` indica la mayor prioridad y cada número corres
     <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> ejecutar pruebas y validaciones con Maven, <b>para</b> asegurar que el backend compile y funcione antes de integrarlo con el frontend.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
     <tr><td colspan="4">- <b>Dado que</b> el equipo ejecuta las pruebas del backend, <b>Cuando</b> se corre Maven test, <b>Entonces</b> las pruebas finalizan sin errores.<br><br>- <b>Dado que</b> se realizan cambios en el backend, <b>Cuando</b> se ejecuta el build, <b>Entonces</b> el proyecto genera el artefacto correspondiente sin fallas de compilacion.</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US57</td><td>administrador</td><td>#77</td><td>EP07</td></tr>
+    <tr><th>Title</th><td colspan="3">Visualizar el panel de administracion</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> administrador, <b>quiero</b> visualizar un panel con accesos y conteos de simulaciones, productos, cupones, misiones, insignias y usuarios, <b>para</b> gestionar la plataforma desde un solo lugar.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene el rol de administrador, <b>Cuando</b> abre el panel de administracion, <b>Entonces</b> el sistema muestra una tarjeta por cada modulo gestionable con su cantidad de registros<br><br>- <b>Dado que</b> el usuario no es administrador, <b>Cuando</b> intenta abrir la ruta del panel, <b>Entonces</b> el sistema lo redirige al dashboard y no muestra la opcion en el menu</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US58</td><td>administrador</td><td>#78</td><td>EP01</td></tr>
+    <tr><th>Title</th><td colspan="3">Gestionar roles de los usuarios</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> administrador, <b>quiero</b> asignar o quitar roles a los usuarios registrados, <b>para</b> controlar quien puede gestionar la plataforma.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> un administrador selecciona un usuario y un conjunto de roles validos, <b>Cuando</b> guarda el cambio, <b>Entonces</b> el sistema actualiza los roles del usuario y los muestra en el listado<br><br>- <b>Dado que</b> un administrador intenta quitarse a si mismo el rol de administrador, <b>Cuando</b> guarda el cambio, <b>Entonces</b> el sistema rechaza la operacion e informa la regla de negocio incumplida</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US59</td><td>usuario</td><td>#79</td><td>EP06</td></tr>
+    <tr><th>Title</th><td colspan="3">Canjear un cupon con SafeCoins</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> canjear un cupon del catalogo con mis SafeCoins, <b>para</b> obtener un descuento para mi proxima compra.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene SafeCoins suficientes, <b>Cuando</b> canjea un cupon, <b>Entonces</b> el sistema descuenta el costo del saldo, registra el gasto y agrega el cupon a los cupones del usuario como disponible<br><br>- <b>Dado que</b> el usuario no tiene SafeCoins suficientes, <b>Cuando</b> intenta canjear un cupon, <b>Entonces</b> el sistema rechaza el canje y su saldo no cambia</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US60</td><td>usuario</td><td>#80</td><td>EP06</td></tr>
+    <tr><th>Title</th><td colspan="3">Aplicar un cupon canjeado en el checkout</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> elegir uno de mis cupones canjeados al pagar, <b>para</b> que el total a pagar incluya el descuento.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene un cupon disponible y su compra cumple el monto minimo, <b>Cuando</b> lo selecciona en el checkout, <b>Entonces</b> el total final se calcula con el porcentaje de descuento y el cupon pasa a estado usado al crear la orden<br><br>- <b>Dado que</b> el monto de la compra no alcanza el minimo del cupon, <b>Cuando</b> el usuario revisa sus cupones en el checkout, <b>Entonces</b> el cupon aparece deshabilitado<br><br>- <b>Dado que</b> el pago de la orden falla o se cancela, <b>Cuando</b> el sistema registra el resultado, <b>Entonces</b> el cupon vuelve a estar disponible</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>US61</td><td>usuario</td><td>#81</td><td>EP06</td></tr>
+    <tr><th>Title</th><td colspan="3">Consultar mis cupones canjeados</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> ver mis cupones canjeados separados en disponibles y usados, <b>para</b> saber cuales puedo aplicar en mis compras.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario canjeo cupones, <b>Cuando</b> abre la pagina de cupones, <b>Entonces</b> el sistema muestra los disponibles y los usados en pestanas separadas<br><br>- <b>Dado que</b> el usuario no tiene cupones, <b>Cuando</b> abre la pagina de cupones, <b>Entonces</b> el sistema muestra un mensaje indicando que aun no tiene cupones</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS25</td><td>developer</td><td>#82</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pruebas unitarias de entidades y servicios de aplicacion</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> cubrir con pruebas unitarias JUnit y Mockito las entidades de dominio y los servicios de aplicacion de cada bounded context, <b>para</b> detectar regresiones en las reglas de negocio sin levantar el sistema completo.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> existen entidades y servicios con reglas de negocio, <b>Cuando</b> se ejecuta Maven test, <b>Entonces</b> cada regla relevante tiene al menos una prueba con estructura Arrange-Act-Assert<br><br>- <b>Dado que</b> un servicio depende de repositorios o fachadas de otros contextos, <b>Cuando</b> se prueba, <b>Entonces</b> las dependencias se reemplazan con dobles de prueba</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS26</td><td>developer</td><td>#83</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Umbral de cobertura con JaCoCo</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> medir la cobertura de las pruebas con JaCoCo y exigir un minimo de 80 %, <b>para</b> evitar que el codigo de negocio quede sin verificar.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> se ejecutan las pruebas, <b>Cuando</b> finaliza el build, <b>Entonces</b> se genera un reporte de cobertura HTML y XML<br><br>- <b>Dado que</b> la cobertura de instrucciones del codigo medido es menor a 80 %, <b>Cuando</b> se ejecuta la verificacion de cobertura, <b>Entonces</b> el build falla</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS27</td><td>developer</td><td>#84</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Analisis de estilo con Checkstyle</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> analizar el estilo del codigo Java con Checkstyle y las reglas de Google, <b>para</b> mantener una referencia objetiva de la calidad del codigo.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> se ejecuta el analisis de estilo, <b>Cuando</b> finaliza, <b>Entonces</b> se genera un reporte con las observaciones por archivo<br><br>- <b>Dado que</b> el codigo existente aun tiene observaciones de formato, <b>Cuando</b> se ejecuta en el pipeline, <b>Entonces</b> el reporte se archiva sin interrumpir el build</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS28</td><td>developer</td><td>#85</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pruebas de aceptacion BDD con Cucumber</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> automatizar los criterios de aceptacion en archivos Gherkin ejecutados con Cucumber sobre la aplicacion levantada, <b>para</b> verificar el comportamiento esperado de las historias de usuario.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> una historia de usuario tiene criterios Dado/Cuando/Entonces, <b>Cuando</b> se escribe su feature, <b>Entonces</b> cada escenario queda etiquetado con el identificador de la historia<br><br>- <b>Dado que</b> se ejecuta Maven test, <b>Cuando</b> corren los escenarios, <b>Entonces</b> se levanta el contexto de Spring con una base de datos aislada y se genera un reporte HTML</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS29</td><td>developer</td><td>#86</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pruebas de integracion de API con Karate</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> probar los endpoints REST desde fuera de la aplicacion con Karate, <b>para</b> validar contratos, codigos de estado y reglas de seguridad de extremo a extremo.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> la API esta ejecutandose, <b>Cuando</b> se corren las pruebas Karate, <b>Entonces</b> se verifican autenticacion, autorizacion, catalogo, cupones y recompensas<br><br>- <b>Dado que</b> las pruebas se repiten, <b>Cuando</b> se ejecutan sobre una base de datos con datos previos, <b>Entonces</b> siguen pasando porque crean usuarios unicos</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS30</td><td>developer</td><td>#87</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Pipeline de integracion continua con Jenkins</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> definir un Jenkinsfile que compile, valide y pruebe el backend en cada ejecucion, <b>para</b> obtener retroalimentacion automatica sobre la calidad de cada cambio.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> existe un cambio en la rama develop, <b>Cuando</b> se ejecuta el pipeline, <b>Entonces</b> se ejecutan las etapas de compilacion, estilo, pruebas, cobertura, analisis, y empaquetado<br><br>- <b>Dado que</b> una etapa falla, <b>Cuando</b> Jenkins registra el resultado, <b>Entonces</b> las etapas siguientes no se ejecutan y se conservan los reportes para el diagnostico</td></tr>
+    <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+    <tr><td>TS31</td><td>developer</td><td>#88</td><td>EP09</td></tr>
+    <tr><th>Title</th><td colspan="3">Analisis de calidad con SonarQube y Quality Gate</td></tr>
+    <tr><th colspan="4">Description</th></tr>
+    <tr><td colspan="4"><b>Como</b> developer, <b>quiero</b> enviar el analisis del backend a SonarQube y detener el pipeline si no supera el Quality Gate, <b>para</b> evitar que codigo con defectos o vulnerabilidades avance en el pipeline.</td></tr>
+    <tr><th colspan="4">Acceptance Criteria</th></tr>
+    <tr><td colspan="4">- <b>Dado que</b> se ejecuta el analisis, <b>Cuando</b> SonarQube termina, <b>Entonces</b> notifica a Jenkins mediante un webhook y el pipeline conoce el resultado<br><br>- <b>Dado que</b> el resultado del Quality Gate no es aprobado, <b>Cuando</b> Jenkins lo recibe, <b>Entonces</b> el pipeline se detiene con un mensaje claro</td></tr>
   </tbody>
 </table>
 
