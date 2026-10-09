@@ -21,12 +21,11 @@ Este anexo reune de forma progresiva los videos de exposicion correspondientes a
 
 Este anexo incluye los reportes de desempeno elaborados para las entregas del proyecto. Estos documentos registran la participacion del equipo, la distribucion de responsabilidades y las evidencias de avance por cada hito.
 
-- Performance Report AV1: <a href="../assets/reports/performance-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-av1.md</a>
-- Final Report AV1: <a href="../assets/reports/final-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/final-report-av1.md</a>
-- Performance Report TB1: <a href="../assets/reports/performance-report-tb1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-tb1.md</a>
-- Performance Report AV2: <a href="../assets/reports/performance-report-av2.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-av2.md</a>
-- Performance Report TB2: <a href="../assets/reports/performance-report-tb2.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-tb2.md</a>
-- Performance Report del Trabajo Parcial (TP): **pendiente de elaborar por el coordinador del equipo**.
+- Performance Report AV1: <a href="../assets/reports/performance-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-av1.md</a> (versión PDF: <a href="../assets/reports/upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf</a>)
+- Final Report AV1 (informe completo en PDF): <a href="../../upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf</a>
+- Performance Report TB1: **pendiente de elaborar por el líder del equipo**; se agregará en la carpeta `markdown/assets/reports` cuando esté disponible.
+- Performance Report AV2: se elaborará en la entrega correspondiente.
+- Performance Report TB2: se elaborará en la entrega correspondiente.
 
 <div style="page-break-before: always;"></div>
 

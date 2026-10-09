@@ -56,7 +56,7 @@
 </div>
 
 <h2 align="center"><strong>Período 202620</strong></h2>
-<h2 align="center"><strong>Septiembre 2026</strong></h2>
+<h2 align="center"><strong>Octubre 2026</strong></h2>
 
 </div>
 <div style="font-size: 18px; line-height: 1.65;">
@@ -206,6 +206,19 @@
       - [5.2.5.7. Services Documentation Evidence for Sprint Review](#toc-5-2-5-7-services-documentation-evidence-for-sprint-review)
       - [5.2.5.8. Software Deployment Evidence for Sprint Review](#toc-5-2-5-8-software-deployment-evidence-for-sprint-review)
       - [5.2.5.9. Team Collaboration Insights during Sprint](#toc-5-2-5-9-team-collaboration-insights-during-sprint)
+    - [5.2.6. Acuerdo de Servicio - SaaS](#toc-5-2-6-acuerdo-de-servicio-saas)
+      - [5.2.6.1. Resumen en lenguaje sencillo](#toc-5-2-6-1-resumen-en-lenguaje-sencillo)
+      - [5.2.6.2. Partes y objeto del acuerdo](#toc-5-2-6-2-partes-y-objeto-del-acuerdo)
+      - [5.2.6.3. Descripción y nivel de servicio](#toc-5-2-6-3-descripcion-y-nivel-de-servicio)
+      - [5.2.6.4. Cuentas, roles y acceso](#toc-5-2-6-4-cuentas-roles-y-acceso)
+      - [5.2.6.5. Derechos y obligaciones](#toc-5-2-6-5-derechos-y-obligaciones)
+      - [5.2.6.6. Uso aceptable y restricciones](#toc-5-2-6-6-uso-aceptable-y-restricciones)
+      - [5.2.6.7. SafeCoins, cupones y compras](#toc-5-2-6-7-safecoins-cupones-y-compras)
+      - [5.2.6.8. Contenido educativo y responsabilidad médica](#toc-5-2-6-8-contenido-educativo-y-responsabilidad-medica)
+      - [5.2.6.9. Privacidad y protección de datos personales](#toc-5-2-6-9-privacidad-y-proteccion-de-datos-personales)
+      - [5.2.6.10. Propiedad intelectual y limitación de responsabilidad](#toc-5-2-6-10-propiedad-intelectual-y-limitacion-de-responsabilidad)
+      - [5.2.6.11. Modificaciones, ley aplicable y contacto](#toc-5-2-6-11-modificaciones-ley-aplicable-y-contacto)
+      - [5.2.6.12. Integración en el sitio web](#toc-5-2-6-12-integracion-en-el-sitio-web)
   - [5.3. Video About-the-Product](#toc-5-3-video-about-the-product)
 
 **Capítulo VI: Product Verification & Validation**
@@ -11609,6 +11622,160 @@ El conteo de commits de Melgarejo Quiroz, Josep Eliu corresponde a los commits l
 
 <br>
 
+<a id="toc-5-2-6-acuerdo-de-servicio-saas"></a>
+## 5.2.6. Acuerdo de Servicio - SaaS
+
+Esta sección establece los derechos, las obligaciones y las restricciones aplicables a las personas que usan la plataforma SafeStep, para que el uso del servicio sea transparente. Está redactada en lenguaje claro y describe el servicio tal como está implementado y desplegado, sin prometer capacidades que el producto no tiene. SafeStep se ofrece como **piloto académico** del curso Diseño de Experimentos de Ingeniería de Software de la UPC, desarrollado por el equipo Chronos; la Landing Page indica que durante el piloto no se ofrecen planes comerciales.
+
+**Versión del acuerdo:** 1.0 · **Fecha de redacción:** 8 de octubre de 2026.
+
+<a id="toc-5-2-6-1-resumen-en-lenguaje-sencillo"></a>
+### 5.2.6.1. Resumen en lenguaje sencillo
+
+| Tema | Qué debe saber la persona usuaria |
+|------|-----------------------------------|
+| Qué es SafeStep | Una plataforma educativa para practicar primeros auxilios con simulaciones, misiones, insignias y una tienda de productos de emergencia |
+| Qué no es | No reemplaza una capacitación presencial, la atención de un profesional de la salud ni la llamada a los servicios de emergencia |
+| Disponibilidad | Es un piloto: el servicio puede estar lento, suspendido o fuera de línea sin aviso previo |
+| Cuenta | Es personal; la contraseña es responsabilidad de quien la crea |
+| SafeCoins y cupones | No tienen valor en dinero, no se pueden transferir ni cambiar por efectivo |
+| Pagos | Durante el piloto los pagos se procesan en el modo de prueba de Stripe: no se cobra dinero real |
+| Datos personales | Se tratan según la Ley N.° 29733; se piden solo los datos necesarios para el servicio |
+| Cambios | Este acuerdo puede actualizarse; la versión vigente es la publicada |
+
+<a id="toc-5-2-6-2-partes-y-objeto-del-acuerdo"></a>
+### 5.2.6.2. Partes y objeto del acuerdo
+
+Este acuerdo se celebra entre el equipo **Chronos** (en adelante, «el Proveedor»), responsable del producto SafeStep en el marco del curso, y toda persona que se registra o usa la plataforma (en adelante, «el Usuario»). Su objeto es regular el acceso y el uso de los componentes del servicio:
+
+| Componente | Descripción | Dirección |
+|------------|-------------|-----------|
+| Landing Page | Presenta el producto y sus funciones | Publicada en GitHub Pages |
+| Aplicación web | Aplicación Angular con simulaciones, progreso, gamificación, tienda y panel de administración | <a href="https://safestept-frontend-experimentos.onrender.com">https://safestept-frontend-experimentos.onrender.com</a> |
+| API REST | Servicios que consume la aplicación web, documentados con OpenAPI | <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a> |
+| Base de datos | PostgreSQL gestionada que guarda la información de la plataforma | No accesible públicamente |
+
+Registrarse, iniciar sesión o usar la aplicación implica haber leído y aceptado este acuerdo. Quien no esté de acuerdo debe abstenerse de usar el servicio.
+
+<a id="toc-5-2-6-3-descripcion-y-nivel-de-servicio"></a>
+### 5.2.6.3. Descripción y nivel de servicio
+
+El servicio se presta «tal como está», en modalidad de prueba, y **no incluye un acuerdo de nivel de servicio (SLA) ni garantías de disponibilidad**. Las condiciones reales de operación son las siguientes:
+
+| Aspecto | Condición actual |
+|---------|------------------|
+| Infraestructura | Servicios en el plan gratuito de Render (región Frankfurt, Unión Europea) |
+| Suspensión por inactividad | El backend se suspende tras unos 15 minutos sin tráfico; la primera petición posterior tarda al menos 50 segundos y puede tardar varios minutos mientras la aplicación arranca |
+| Base de datos | Plan gratuito con fecha de caducidad (7 de noviembre de 2026); pasada esa fecha los datos pueden eliminarse si no se migra a un plan de pago |
+| Copias de seguridad | No se garantizan copias de seguridad de los datos |
+| Mantenimiento | Puede interrumpirse el servicio para actualizar la aplicación o por mantenimiento de la plataforma de alojamiento, sin aviso previo |
+| Soporte | Por el canal indicado en 5.2.6.11, sin tiempos de respuesta garantizados |
+
+El Proveedor se esfuerza por mantener el servicio en funcionamiento durante los periodos de evaluación del curso, pero no responde por interrupciones, pérdidas de datos de prueba ni por la lentitud propia de la infraestructura gratuita.
+
+<a id="toc-5-2-6-4-cuentas-roles-y-acceso"></a>
+### 5.2.6.4. Cuentas, roles y acceso
+
+- **Registro.** Cualquier persona puede crear una cuenta indicando un usuario o correo y una contraseña. El registro público siempre otorga el rol de jugador (`ROLE_USER`); no se pueden solicitar roles distintos al registrarse.
+- **Roles.** Existen tres roles: jugador (`ROLE_USER`), instructor (`ROLE_INSTRUCTOR`) y administrador (`ROLE_ADMIN`). Solo un administrador puede cambiar los roles de otra persona; un administrador no puede quitarse a sí mismo el rol de administrador y el sistema siempre conserva al menos uno.
+- **Contraseña.** Debe tener como mínimo 8 caracteres; la pantalla de registro recomienda además incluir una mayúscula, un número y un carácter especial. El sistema guarda las contraseñas cifradas con el algoritmo BCrypt y el Proveedor no puede ver la contraseña original.
+- **Sesión.** Al iniciar sesión el sistema entrega un token firmado que vale 7 días y un token de renovación que vale 30 días. La aplicación web guarda esos datos en el almacenamiento local del navegador hasta que la persona cierra sesión.
+- **Responsabilidad.** El Usuario es responsable de la actividad realizada con su cuenta, de mantener su contraseña en reserva y de avisar si sospecha un uso no autorizado. La cuenta es personal y no se puede ceder.
+- **Edad.** Las personas menores de edad deben usar la plataforma con autorización y supervisión de su madre, padre o representante legal.
+
+<a id="toc-5-2-6-5-derechos-y-obligaciones"></a>
+### 5.2.6.5. Derechos y obligaciones
+
+**Derechos del Usuario:**
+
+1. Acceder a las funciones de la plataforma según su rol, de forma gratuita durante el piloto.
+2. Conocer qué datos personales se tratan y para qué (ver 5.2.6.9) y ejercer sus derechos sobre ellos.
+3. Dejar de usar el servicio en cualquier momento y solicitar la eliminación de su cuenta.
+4. Recibir información clara sobre el contenido educativo y sus límites.
+
+**Obligaciones del Usuario:**
+
+1. Proporcionar datos veraces y mantenerlos actualizados.
+2. Usar la plataforma solo con fines lícitos y de aprendizaje, conforme a este acuerdo.
+3. Respetar los derechos de las demás personas usuarias y del Proveedor.
+4. No intentar acceder a cuentas, datos o funciones que no le corresponden.
+
+**Derechos del Proveedor:** modificar, suspender o retirar funciones del servicio; desactivar cuentas que incumplan este acuerdo; y actualizar este acuerdo.
+
+**Obligaciones del Proveedor:** prestar el servicio con diligencia razonable dentro de las limitaciones del piloto, proteger los datos personales con medidas técnicas razonables y mantener informada a la persona usuaria sobre cambios relevantes.
+
+<a id="toc-5-2-6-6-uso-aceptable-y-restricciones"></a>
+### 5.2.6.6. Uso aceptable y restricciones
+
+Queda prohibido:
+
+- Intentar vulnerar la seguridad de la plataforma, sobrecargarla con peticiones automatizadas o explotar fallos para obtener ventajas (por ejemplo, manipular puntajes, SafeCoins o cupones).
+- Crear cuentas falsas o múltiples para acumular recompensas.
+- Publicar o transmitir contenido ilícito, ofensivo o que infrinja derechos de terceros.
+- Copiar, revender o explotar comercialmente el contenido de la plataforma fuera de lo que permite la licencia del código fuente.
+- Usar la plataforma como única fuente de decisión en una emergencia real.
+
+El incumplimiento puede dar lugar a la desactivación de la cuenta, que solo puede hacer un administrador.
+
+<a id="toc-5-2-6-7-safecoins-cupones-y-compras"></a>
+### 5.2.6.7. SafeCoins, cupones y compras
+
+- **SafeCoins.** Son puntos virtuales que se ganan al completar simulaciones, según el puntaje y las repeticiones. **No tienen valor monetario**, no son transferibles y no se pueden canjear por dinero.
+- **Cupones.** Se canjean con SafeCoins del catálogo definido por el administrador: hay cupones de descuento porcentual sobre toda la compra y cupones de descuento porcentual que exigen un monto mínimo de compra. Cada cupón canjeado es personal, de **un solo uso** y conserva las condiciones con las que se canjeó, aunque el catálogo cambie después. Si el pago falla o se cancela, el cupón vuelve a estar disponible.
+- **Saldo insuficiente.** Si el saldo no alcanza, el canje se rechaza y el saldo no cambia.
+- **Compras.** La tienda ofrece productos y kits de emergencia. El pago se realiza en la página de Stripe Checkout y SafeStep no almacena números de tarjeta. **Durante el piloto, Stripe opera en modo de prueba: no se realizan cobros reales** y, al tratarse de un piloto, no se despachan productos físicos.
+- **Cambios del catálogo.** El Proveedor puede modificar precios, productos, cupones y recompensas en cualquier momento.
+
+<a id="toc-5-2-6-8-contenido-educativo-y-responsabilidad-medica"></a>
+### 5.2.6.8. Contenido educativo y responsabilidad médica
+
+SafeStep es una herramienta educativa complementaria. Las simulaciones y los textos se elaboraron con fines de aprendizaje y **no constituyen consejo médico, diagnóstico ni tratamiento**. No sustituyen la capacitación práctica con profesionales acreditados, la evaluación de un profesional de la salud ni la comunicación con los servicios de emergencia. Ante una emergencia real, la persona debe llamar a los servicios de emergencia locales y seguir sus indicaciones. El Proveedor no responde por decisiones tomadas en una situación real con base solo en el contenido de la plataforma.
+
+<a id="toc-5-2-6-9-privacidad-y-proteccion-de-datos-personales"></a>
+### 5.2.6.9. Privacidad y protección de datos personales
+
+El tratamiento de los datos personales se rige por la Ley N.° 29733, Ley de Protección de Datos Personales del Perú.
+
+| Aspecto | Descripción |
+|---------|-------------|
+| Datos que se tratan | Usuario o correo, nombre y apellido, datos de contacto y dirección si la persona los registra, progreso (XP, nivel, racha), intentos de simulación y puntajes, movimientos de SafeCoins, cupones, carrito y órdenes, y registros técnicos del servidor |
+| Finalidad | Crear y mantener la cuenta, mostrar el progreso, calcular recompensas, procesar compras de prueba, mantener la seguridad y evaluar el piloto académico |
+| Base del tratamiento | Consentimiento otorgado al registrarse y al aceptar este acuerdo |
+| Terceros | Render (alojamiento, Unión Europea) y Stripe (procesamiento de pagos); cada uno aplica sus propias políticas |
+| Seguridad | Contraseñas cifradas con BCrypt, comunicación por HTTPS, acceso a la base de datos solo desde la red privada de la plataforma y control de acceso por roles |
+| Conservación | Durante el piloto; los datos pueden eliminarse al terminar el periodo académico o cuando caduque la infraestructura gratuita |
+| Derechos | La persona puede solicitar acceso, actualización, rectificación, supresión u oposición respecto de sus datos (derechos ARCO) mediante el canal de contacto |
+| Transferencia | Los datos se alojan en servidores fuera del Perú (Frankfurt, Unión Europea) |
+
+El Proveedor no vende los datos personales ni los usa para fines distintos de los indicados.
+
+<a id="toc-5-2-6-10-propiedad-intelectual-y-limitacion-de-responsabilidad"></a>
+### 5.2.6.10. Propiedad intelectual y limitación de responsabilidad
+
+**Propiedad intelectual.** El código fuente del backend se publica bajo la licencia indicada en su repositorio (MIT); las bibliotecas de terceros conservan sus propias licencias. Los nombres, el logotipo y los textos de SafeStep pertenecen al equipo Chronos. El Usuario conserva los derechos sobre los datos que ingresa y otorga al Proveedor el permiso necesario para tratarlos con las finalidades de este acuerdo.
+
+**Limitación de responsabilidad.** En la medida permitida por la ley, el Proveedor no responde por daños indirectos, pérdida de datos, interrupciones del servicio, errores del contenido ni por el uso que se haga de la información de la plataforma. Esta limitación no afecta los derechos que la ley reconoce a las personas consumidoras ni la responsabilidad que no pueda excluirse legalmente.
+
+**Suspensión y terminación.** El Proveedor puede suspender o desactivar una cuenta que incumpla este acuerdo o ponga en riesgo la seguridad del servicio, y puede cerrar el piloto al terminar el curso. El Usuario puede dejar de usar la plataforma cuando quiera y solicitar la eliminación de su cuenta.
+
+<a id="toc-5-2-6-11-modificaciones-ley-aplicable-y-contacto"></a>
+### 5.2.6.11. Modificaciones, ley aplicable y contacto
+
+- **Modificaciones.** El Proveedor puede actualizar este acuerdo; la versión vigente es la que figura publicada y el uso continuado del servicio después de un cambio implica su aceptación. Los cambios se registran en la tabla de versiones de esta sección.
+- **Ley aplicable.** El acuerdo se rige por las leyes de la República del Perú. Las controversias se resolverán ante los tribunales competentes del Perú.
+- **Contacto.** Las consultas, solicitudes sobre datos personales y reportes de problemas se canalizan mediante la organización del equipo en GitHub: <a href="https://github.com/1ASI0732-2620-9090-Grupo-4">https://github.com/1ASI0732-2620-9090-Grupo-4</a>.
+
+| Versión | Fecha | Cambios |
+|---------|-------|---------|
+| 1.0 | 8 de octubre de 2026 | Redacción inicial del acuerdo para el piloto académico |
+
+<a id="toc-5-2-6-12-integracion-en-el-sitio-web"></a>
+### 5.2.6.12. Integración en el sitio web
+
+El enunciado indica que este acuerdo debe integrarse públicamente en la sección «Términos y Condiciones» del sitio web. En la Landing Page actual el pie de página muestra el aviso «Términos y privacidad en revisión para el piloto académico», y los enlaces «Términos y Condiciones» y «Política de Privacidad» de la página «Acerca de» todavía apuntan a un marcador vacío. La publicación de este texto como página propia del sitio queda **pendiente** y es el paso necesario para cumplir el criterio de accesibilidad del acuerdo.
+
+<br>
+
 <br>
 <br>
 
@@ -13116,33 +13283,69 @@ El contenido del video complementa la seccion Student Outcome porque evidencia l
 
 American Red Cross. (s. f.). *Mobile apps & voice-enabled skills: First Aid App*. Consultado el 16 de septiembre de 2026. <https://www.redcross.org/get-help/how-to-prepare-for-emergencies/mobile-apps.html>
 
+Apache Software Foundation. (s. f.). *Apache Maven Project*. Consultado el 8 de octubre de 2026. <https://maven.apache.org>
+
 British Red Cross. (s. f.). *Free first aid apps*. Consultado el 16 de septiembre de 2026. <https://www.redcross.org.uk/first-aid/first-aid-apps>
 
 Caicedo Vega, J. L., & Zumbado Fernández, H. M. (2023). *Conocimiento sobre primeros auxilios en docentes de educación básica de la ciudad de Portoviejo, Ecuador*. Revista Eugenio Espejo, 17(2), 22-32. <a href="https://www.redalyc.org/journal/5728/572874846004/html/">https://www.redalyc.org/journal/5728/572874846004/html/</a> 
 
+Checkstyle. (s. f.). *Checkstyle*. Consultado el 8 de octubre de 2026. <https://checkstyle.org>
+
 Chuman Ramos, G. S., & Ramírez Mayorca, S. M. (2024). *Efectividad de una intervención educativa en el conocimiento sobre primeros auxilios en estudiantes de una institución educativa de Lima, 2023*. Tesis de Licenciatura. Fac. Enfermería , Univ. UPCH. [En línea]. <a href="https://repositorio.upch.edu.pe/bitstream/handle/20.500.12866/16365/Efectividad_ChumanRamos_Gemma.pdf?sequence=1">https://repositorio.upch.edu.pe/bitstream/handle/20.500.12866/16365/Efectividad_ChumanRamos_Gemma.pdf?sequence=1</a> 
+
+Congreso de la República del Perú. (2011, 3 de julio). *Ley N.° 29733, Ley de Protección de Datos Personales*. Consultado el 8 de octubre de 2026. <https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/243470-29733>
 
 Cruz Roja Peruana. (s. f.). *Escuela Nacional*. Consultado el 16 de septiembre de 2026. <https://cruzroja.org.pe/escuela_nacional.html>
 
+Cucumber. (s. f.). *Gherkin reference*. Consultado el 8 de octubre de 2026. <https://cucumber.io/docs/gherkin/>
+
 Do Thi, N., Hoang Thi, G., Lee, Y., Pham Minh, K., Nguyen Thanh, H., Shin, J.-S., & Luong Xuan, T. (2024). First-aid training for primary Healthcare providers on a remote Island: a mixed-methods study. *BMC Medical Education, 24*, Artículo 790. <a href="https://doi.org/10.1186/s12909-024-05768-6">https://doi.org/10.1186/s12909-024-05768-6</a>
+
+Docker, Inc. (s. f.). *Docker documentation*. Consultado el 8 de octubre de 2026. <https://docs.docker.com>
 
 Federación Internacional de Sociedades de la Cruz Roja y de la Media Luna Roja. (s. f.). *First Aid – IFRC* [Aplicación móvil]. Google Play. Consultado el 16 de septiembre de 2026. <https://play.google.com/store/apps/details?id=com.cube.gdpc.fa>
 
 Federación Internacional de Sociedades de la Cruz Roja y de la Media Luna Roja. (2025). *First aid*. Recuperado de <a href="https://www.ifrc.org/our-work/health-and-care/first-aid">https://www.ifrc.org/our-work/health-and-care/first-aid</a>
 
+Fowler, M. (2006). *Continuous integration*. Consultado el 8 de octubre de 2026. <https://martinfowler.com/articles/continuousIntegration.html>
+
+Fowler, M. (2012). *TestPyramid*. Consultado el 8 de octubre de 2026. <https://martinfowler.com/bliki/TestPyramid.html>
+
 García-Blaya, J. Á., Abraldes, J. A., & Vaquero-Cristóbal, R. (2025). Assessment of First Aid Knowledge at Different Stages of Education. *Healthcare*, 13(13), Artículo 1507. <a href="https://doi.org/10.3390/healthcare13131507">https://doi.org/10.3390/healthcare13131507</a>
 
 Gobierno Regional de La Libertad. (2017, 5 de septiembre). *Charla de primeros auxilios para casos de accidentes en la comunidad y hogar*. gob.pe. <a href="https://www.gob.pe/institucion/regionlalibertad/noticias/105724-charla-de-primeros-auxilios-para-casos-de-accidentes-en-la-comunidad-y-hogar">https://www.gob.pe/institucion/regionlalibertad/noticias/105724-charla-de-primeros-auxilios-para-casos-de-accidentes-en-la-comunidad-y-hogar</a> 
+
+Google. (s. f.). *Google Java style guide*. Consultado el 8 de octubre de 2026. <https://google.github.io/styleguide/javaguide.html>
+
+JaCoCo. (s. f.). *JaCoCo Java code coverage library*. Consultado el 8 de octubre de 2026. <https://www.jacoco.org/jacoco/>
+
+Jenkins. (s. f.). *Pipeline*. Consultado el 8 de octubre de 2026. <https://www.jenkins.io/doc/book/pipeline/>
+
+JUnit. (s. f.). *JUnit user guide*. Consultado el 8 de octubre de 2026. <https://docs.junit.org/current/user-guide/>
+
+Karate Labs. (s. f.). *Karate*. Consultado el 8 de octubre de 2026. <https://github.com/karatelabs/karate>
 
 Lozano Villegas, C. (2024). *Factores asociados al nivel de conocimiento en primeros auxilios en estudiantes de la Universidad Ricardo Palma durante el 2022*. Universidad Ricardo Palma - URP. Disponible en: <a href="https://hdl.handle.net/20.500.14138/7399">https://hdl.handle.net/20.500.14138/7399</a> 
 
 Ministerio de Salud del Perú. (2025, 20 de febrero). *Exigente formación de los brigadistas de primera respuesta en salud del Minsa garantiza atenciones de calidad ante los desastres*. gob.pe. <a href="https://www.gob.pe/institucion/minsa/noticias/1113583-exigente-formacion-de-los-brigadistas-de-primera-respuesta-en-salud-del-minsa-garantiza-atenciones-de-calidad-ante-los-desastres">https://www.gob.pe/institucion/minsa/noticias/1113583-exigente-formacion-de-los-brigadistas-de-primera-respuesta-en-salud-del-minsa-garantiza-atenciones-de-calidad-ante-los-desastres</a> 
 
+Mockito. (s. f.). *Mockito framework site*. Consultado el 8 de octubre de 2026. <https://site.mockito.org>
+
 Poder Judicial del Perú. (2019). *Preparación de brigadas de emergencia*. <a href="https://www.pj.gob.pe/wps/wcm/connect/9f79da0048ab19bf9fc0ff53388de097/PREPARACION%2BBRIGADAS%2BEMERGENCIA%2B-%2B31%2BENERO%2B2019.pdf?CACHEID=9f79da0048ab19bf9fc0ff53388de097&MOD=AJPERES">https://www.pj.gob.pe/wps/wcm/connect/9f79da0048ab19bf9fc0ff53388de097/PREPARACION%2BBRIGADAS%2BEMERGENCIA%2B-%2B31%2BENERO%2B2019.pdf?CACHEID=9f79da0048ab19bf9fc0ff53388de097&MOD=AJPERES</a> 
 
 Ramírez-Torres, C. A., Andrade-Gómez, E., Lozano-Ochoa, C., Caparrós-Civera, M. N., & Sapiña-Beltrán, E. (2023). Nursing students bringing first aid to the community. *Frontiers in Education*, 8, Artículo 1288508. <a href="https://doi.org/10.3389/feduc.2023.1288508">https://doi.org/10.3389/feduc.2023.1288508</a>
 
+Render. (s. f.). *Render documentation*. Consultado el 8 de octubre de 2026. <https://render.com/docs>
+
+Render. (s. f.). *Static sites*. Consultado el 8 de octubre de 2026. <https://render.com/docs/static-sites>
+
 Rodríguez-García, A., Ruiz-García, G., Navarro-Patón, R., & Mecías-Calvo, M. (2024). Attitudes and Skills in Basic Life Support after Two Types of Training: Traditional vs. Gamification, of Compulsory Secondary Education Students: A Simulation Study. *Pediatric Reports*, 16(3), 631–643. <a href="https://doi.org/10.3390/pediatric16030053">https://doi.org/10.3390/pediatric16030053</a>
+
+SonarSource. (s. f.). *SonarQube Community Build documentation*. Consultado el 8 de octubre de 2026. <https://docs.sonarsource.com/sonarqube-community-build/>
+
+Spring. (s. f.). *Spring Boot reference documentation*. Consultado el 8 de octubre de 2026. <https://docs.spring.io/spring-boot/index.html>
+
+Stripe. (s. f.). *Test mode*. Consultado el 8 de octubre de 2026. <https://docs.stripe.com/test-mode>
 
 White, L. (2024). First Aid Training and CPR Skills Retention (Informe de investigación). *CSA Group*. <a href="https://www.csagroup.org/wp-content/uploads/CSA-Group-Research-First-Aid-Training-and-CPR-Skill-Retention.pdf">https://www.csagroup.org/wp-content/uploads/CSA-Group-Research-First-Aid-Training-and-CPR-Skill-Retention.pdf</a>
 
@@ -13176,12 +13379,11 @@ Este anexo reune de forma progresiva los videos de exposicion correspondientes a
 
 Este anexo incluye los reportes de desempeno elaborados para las entregas del proyecto. Estos documentos registran la participacion del equipo, la distribucion de responsabilidades y las evidencias de avance por cada hito.
 
-- Performance Report AV1: <a href="markdown/assets/reports/performance-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-av1.md</a>
-- Final Report AV1: <a href="markdown/assets/reports/final-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/final-report-av1.md</a>
-- Performance Report TB1: <a href="markdown/assets/reports/performance-report-tb1.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-tb1.md</a>
-- Performance Report AV2: <a href="markdown/assets/reports/performance-report-av2.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-av2.md</a>
-- Performance Report TB2: <a href="markdown/assets/reports/performance-report-tb2.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-tb2.md</a>
-- Performance Report del Trabajo Parcial (TP): **pendiente de elaborar por el coordinador del equipo**.
+- Performance Report AV1: <a href="markdown/assets/reports/performance-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">markdown/assets/reports/performance-report-av1.md</a> (versión PDF: <a href="markdown/assets/reports/upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf</a>)
+- Final Report AV1 (informe completo en PDF): <a href="upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf</a>
+- Performance Report TB1: **pendiente de elaborar por el líder del equipo**; se agregará en la carpeta `markdown/assets/reports` cuando esté disponible.
+- Performance Report AV2: se elaborará en la entrega correspondiente.
+- Performance Report TB2: se elaborará en la entrega correspondiente.
 
 <div style="page-break-before: always;"></div>
 
