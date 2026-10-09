@@ -72,10 +72,11 @@ En esta sección se elabora el artefacto Leadership-and-Collaboration Matrix (LA
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
         <tr><td><b>Team Member (Last Name, First Name)</b></td><td><b>GitHub Username</b></td><td><b>Admin &amp; Coupons / L or C</b></td><td><b>Unit Tests &amp; Coverage / L or C</b></td><td><b>BDD &amp; API Tests / L or C</b></td><td><b>CI Pipeline / L or C</b></td><td><b>Documentation / L or C</b></td></tr>
-        <tr><td>Ayala Fernandez, Jorge Brayan</td><td>jorgeayaladev</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>Melga1502</td><td>L</td><td>L</td><td>L</td><td>L</td><td>L</td></tr>
-        <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
     </tbody>
 </table>
 
@@ -1028,10 +1029,11 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 5 
 <table align="center" border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
     <tbody>
         <tr><td><b>Miembro</b></td><td><b>Repositorio</b></td><td><b>Commits</b></td><td><b>Lineas additions</b></td><td><b>Lineas eliminadas</b></td><td><b>PRs merged</b></td></tr>
-        <tr><td>Ayala Fernandez, Jorge Brayan</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Sanchez Espinoza, Mathias Enrique</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Palacios Jáuregui, Kalid Jesus</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Sanchez Arenas, Manuel Angel</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
         <tr><td>Melgarejo Quiroz, Josep Eliu</td><td>safestept-backend / safestept-frontend</td><td>23</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
-        <tr><td>Flores Eusebio, Angel Thyago</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Tello Palacios, Fabrizio Rafael</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
+        <tr><td>Aylas De La Cruz, Paulo Smit</td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td><td><b>[POR COMPLETAR POR EL EQUIPO]</b></td></tr>
     </tbody>
 </table>
 
