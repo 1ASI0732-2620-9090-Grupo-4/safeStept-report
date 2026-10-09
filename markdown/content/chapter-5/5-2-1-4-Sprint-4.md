@@ -557,11 +557,11 @@ En esta sección se presentan los avances de implementación realizados durante 
 
 **Repositorio de Backend:**
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git</a>
 
 **Repositorio de Frontend:**
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git</a>
 
 #### 5.2.1.4.5. Execution Evidence for Sprint Review
 

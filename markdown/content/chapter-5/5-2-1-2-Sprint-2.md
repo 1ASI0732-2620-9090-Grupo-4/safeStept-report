@@ -604,7 +604,7 @@ La aplicación frontend implementada durante el Sprint 2 cuenta con las siguient
 
 **Repositorio de Frontend:**
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend</a>
 
 **Repositorio de json-server (datos de prueba):**
 

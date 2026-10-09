@@ -21,7 +21,7 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | Herramienta | Propósito |URL de Referencia | Tipo |
 |-------------|-----------|------------------|------|
 | Trello | Gestión del Product Backlog, Sprint Boards y seguimiento de tareas del proyecto | <a href="https://trello.com/b/UHs6EvyH/safestep-team-3">https://trello.com/b/UHs6EvyH/safestep-team-3</a> | SaaS |
-| GitHub Projects | Gestión de Issues y seguimiento del progreso del desarrollo en sincronización con los repositorios | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3">https://github.com/upc-1asi0729-2610-11990-chronos-team-3</a> | SaaS |
+| GitHub Projects | Gestión de Issues y seguimiento del progreso del desarrollo en sincronización con los repositorios | <a href="https://github.com/1ASI0732-2620-9090-Grupo-4">https://github.com/1ASI0732-2620-9090-Grupo-4</a> | SaaS |
 | Google Drive | Almacenamiento y colaboración documentos de análisis y requerimientos | <a href="https://drive.google.com">https://drive.google.com</a> | SaaS |
 | Discord | Comunicación en tiempo real del equipo y reuniones virtuales | <a href="https://discord.com">https://discord.com</a> | SaaS |
 
@@ -113,22 +113,23 @@ Cada miembro del equipo debe contar con las siguientes especificaciones mínimas
 - JDK 26 instalado y configurado en PATH
 - Maven instalado (versión 3.9.x o superior)
 - Visual Studio Code con extensiones recomendadas
-- Acceso a cuenta GitHub organization upc-chronos-team-3
+- Acceso a cuenta GitHub organization 1ASI0732-2620-9090-Grupo-4
 
 ## 5.1.2. Source Code Management
 
-En esta sección el equipo establece los medios y esquema de organización que aplicará para el seguimiento de modificaciones. Para ello utilizará GitHub como plataforma y sistema de control de versiones. Se incluye el URL del repositorio de GitHub para cada producto: Report, Landing Page, Backend, Frontend Web Applications. En el caso del Backend, se incluye en el repositorio el proyecto y los archivos de pruebas, tanto unitarias como de integración/aceptación. En esta sección se explica de qué forma se implementará GitFlow como Workflow de control de versiones.
+En esta sección el equipo establece los medios y esquema de organización que aplicará para el seguimiento de modificaciones. Para ello utilizará GitHub como plataforma y sistema de control de versiones. Se incluye el URL del repositorio de GitHub para cada producto: Report, Landing Page, Backend, Frontend Web Applications y Native Mobile Application. En el caso del Backend, se incluye en el repositorio el proyecto y los archivos de pruebas, tanto unitarias como de integración/aceptación. En esta sección se explica de qué forma se implementará GitFlow como Workflow de control de versiones.
 
 ### 5.1.2.1. Repositorios de GitHub
 
-El equipo Chronos utiliza la organización GitHub "upc-chronos-team-3" para gestionar los cuatro repositorios del proyecto, cada uno encargado de un componente específico de la solución:
+El equipo Chronos utiliza la organización GitHub "1ASI0732-2620-9090-Grupo-4" para gestionar los cinco repositorios del proyecto, cada uno encargado de un componente específico de la solución:
 
 | Repositorio | URL GitHub | Propósito |
 |-------------|-----------|-----------|
-| SafeStep Report | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-report</a> | Documentación del proyecto en formato markdown |
-| SafeStep Frontend | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend</a> | Aplicación web interactiva desarrollada en Angular |
-| SafeStep Backend | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend</a> | API RESTful desarrollada en Spring Boot |
-| SafeStep Landing | <a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page</a> | Página landing pública de presentación del producto |
+| SafeStep Report | <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-report">https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-report</a> | Documentación del proyecto en formato markdown |
+| SafeStep Frontend | <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend</a> | Aplicación web interactiva desarrollada en Angular |
+| SafeStep Backend | <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend</a> | API RESTful desarrollada en Spring Boot |
+| SafeStep Landing | <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page</a> | Página landing pública de presentación del producto |
+| SafeStep Android | <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-android">https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-android</a> | Aplicación móvil nativa desarrollada en Kotlin con Jetpack Compose |
 
 ### 5.1.2.2. GitFlow Implementation
 

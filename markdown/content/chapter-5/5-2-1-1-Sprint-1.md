@@ -519,7 +519,7 @@ El equipo realizó un total de 10 commits en el repositorio de Landing Page dura
 
 **Repositorio de Landing Page:**
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page</a>
 
 **Estadísticas del repositorio:**
 

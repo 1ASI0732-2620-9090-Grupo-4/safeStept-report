@@ -1048,15 +1048,15 @@ En esta seccion se explica y presenta los avances de implementacion realizados d
 
 **Repositorio de Backend:**
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-backend.git</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend.git</a>
 
 **Repositorio de Frontend :**
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-frontend.git</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-frontend.git</a>
 
 **Repositorio de Landing Page:**
 
-<a href="https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git">https://github.com/upc-1asi0729-2610-11990-chronos-team-3/safestep-landing-page.git</a>
+<a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page.git">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-landing-page.git</a>
 
 **Referencia de Swagger desplegado:**
 
