@@ -15,6 +15,10 @@ Las 242 pruebas del backend que ejecuta Maven (209 unitarias y de integración c
   <p><i><b>Figura 6.1.1.</b> Resultado de las 242 pruebas del backend en Jenkins (ejecución #8). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
+> **[CAPTURA PENDIENTE · C-601]** **Archivo:** `markdown/assets/images/chapter-6/jenkins-tendencia-pruebas.png` · **Pie:** *Figura 6.1.2.* Tendencia de los resultados de pruebas en Jenkins: las 242 pruebas aprobadas en cada ejecución del entorno reconstruido. · **Qué capturar:** el gráfico «Tendencia de los resultados de pruebas» de la página del job `safestep-backend`, con las ejecuciones #1, #2 y #3 (o las que haya) y el enlace «Últimos resultados de tests (Sin fallas)». · **Cómo:** Jenkins → `safestep-backend` (página principal del job). Captura el gráfico con sus ejes legibles.
+
+> **[CAPTURA PENDIENTE · C-602]** **Archivo:** `markdown/assets/images/chapter-6/jenkins-test-result-por-paquete.png` · **Pie:** *Figura 6.1.3.* Resultado de las pruebas por paquete en Jenkins: cada contexto delimitado con sus pruebas aprobadas. · **Qué capturar:** la página *Test Result* de una ejecución, con el desglose por paquete (por ejemplo `commerce`, `iam`, `gamification`) y la duración de cada uno. · **Cómo:** Jenkins → ejecución → *Test Result* → vista por paquetes. Captura la tabla completa.
+
 ## 6.1.1. Core Entities Unit Tests
 
 Las pruebas unitarias validan en aislamiento las entidades de dominio (agregados, entidades y value objects) y los servicios de aplicación (command y query services, manejadores de eventos y fachadas ACL) de cada bounded context. Todas están escritas con JUnit Jupiter y siguen la estructura **Arrange-Act-Assert**; cuando una clase depende de repositorios o de la fachada de otro contexto (por ejemplo, el canje de cupones consulta al contexto de gamificación) esas dependencias se sustituyen con dobles de Mockito, de modo que cada prueba verifica una sola unidad sin base de datos.
@@ -52,6 +56,8 @@ void redeemedCoupon_IsUsedOnlyOnce() {
 }
 ```
 
+> **[CAPTURA PENDIENTE · C-611]** **Archivo:** `markdown/assets/images/chapter-6/ide-openapi-test.png` · **Pie:** *Figura 6.1.4.* Ejecución de `OpenApiDocumentationIntegrationTest` en el IDE: sus cuatro pruebas verifican el contrato OpenAPI publicado. · **Qué capturar:** el panel de ejecución del IDE con la clase `OpenApiDocumentationIntegrationTest` y sus 4 pruebas en verde. · **Cómo:** en IntelliJ, clic derecho sobre la clase → *Run*; captura el panel de resultados con los nombres de las pruebas visibles. (Requiere *Project SDK = JDK 26*.)
+
 **Cobertura.** JaCoCo mide la cobertura de instrucciones y el build exige un mínimo de 80 %. Siguiendo el proyecto de referencia del curso, la medición excluye las clases que no contienen lógica de aplicación: el paquete `domain` completo, la capa `infrastructure`, los recursos y controladores REST, y la clase de arranque (`**/*Application*`). La regla vive en el `pom.xml` (`jacoco:check`, `COVEREDRATIO` mínimo de `0.80`) y por tanto rompe el build si la cobertura baja.
 
 | Medición | Antes del Trabajo Parcial | Después |
@@ -73,8 +79,14 @@ El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral 
 
 <div align="center">
   <img src="../../assets/images/chapter-6/jacoco-coverage-report.png" alt="Reporte de cobertura JaCoCo"/>
-  <p><i><b>Figura 6.1.2.</b> Reporte HTML de JaCoCo generado por el pipeline. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.5.</b> Reporte HTML de JaCoCo generado por el pipeline. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
+
+> **[CAPTURA PENDIENTE · C-603]** **Archivo:** `markdown/assets/images/chapter-6/jacoco-paquete-commerce.png` · **Pie:** *Figura 6.1.6.* Cobertura del contexto `commerce` en JaCoCo: las líneas verdes están cubiertas por las pruebas. · **Qué capturar:** el reporte de JaCoCo dentro del paquete de servicios de aplicación de `commerce` (por ejemplo `CommerceCommandServiceImpl`), con el porcentaje por clase y el código con líneas verdes. · **Cómo:** abre `target/site/jacoco/index.html` tras `mvn test`, entra al paquete de `commerce` y a la clase y captura.
+
+> **[CAPTURA PENDIENTE · C-604]** **Archivo:** `markdown/assets/images/chapter-6/jacoco-paquete-profiles.png` · **Pie:** *Figura 6.1.7.* Cobertura del contexto `profiles` (62.1 %), la deuda técnica identificada: las líneas rojas no tienen pruebas. · **Qué capturar:** el paquete de `profiles` en JaCoCo con su porcentaje y, dentro de una clase, líneas en rojo o amarillo. · **Cómo:** en el mismo reporte, entra al paquete de `profiles`.
+
+> **[CAPTURA PENDIENTE · C-605]** **Archivo:** `markdown/assets/images/chapter-6/jacoco-check-consola.png` · **Pie:** *Figura 6.1.8.* Verificación del umbral de cobertura: `jacoco:check` confirma que se cumple el mínimo de 80 %. · **Qué capturar:** el final de la salida de `mvn jacoco:check`, con el mensaje `All coverage checks have been met.` y `BUILD SUCCESS`. · **Cómo:** en CMD, dentro de `safeStept-backend`, ejecuta primero `mvn test` y después `mvn jacoco:check`.
 
 **Cómo ejecutarlas:**
 
@@ -110,10 +122,14 @@ And match response.discountPercentage == 5
 
 <div align="center">
   <img src="../../assets/images/chapter-6/karate-summary-report.png" alt="Reporte de Karate"/>
-  <p><i><b>Figura 6.1.3.</b> Resumen del reporte HTML de Karate: 5 features y 36 escenarios aprobados contra una instancia local del backend. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.9.</b> Resumen del reporte HTML de Karate: 5 features y 36 escenarios aprobados contra una instancia local del backend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
+> **[CAPTURA PENDIENTE · C-606]** **Archivo:** `markdown/assets/images/chapter-6/karate-escenario-cupones.png` · **Pie:** *Figura 6.1.10.* Detalle del escenario de cupones en el reporte de Karate: solicitudes, respuestas y verificaciones paso a paso. · **Qué capturar:** el reporte de Karate con el feature `commerce/coupon-flow` abierto y los pasos del escenario en verde, incluyendo el canje del cupón con respuesta 201. · **Cómo:** con la API levantada, ejecuta la suite (ver «Cómo ejecutarlas» abajo), abre `api-tests/target/karate-reports/karate-summary.html` y entra al feature `coupon-flow`. No captures la contraseña del administrador.
+
 **Hallazgo corregido.** Durante el desarrollo de estas pruebas se detectó que la API respondía HTTP 500 (`UNEXPECTED_ERROR`) cuando recibía un cuerpo JSON mal formado, en lugar de un 400, porque el manejador global de excepciones atendía `RuntimeException` de forma genérica y no registraba el error. Se agregó un manejador específico que responde 400 con un error de validación, sin exponer el mensaje interno del analizador, y los errores inesperados ahora se registran. Lo verifican una prueba unitaria y una prueba de integración por HTTP (`ApiRobustnessIntegrationTest`).
+
+> **[CAPTURA PENDIENTE · C-607]** **Archivo:** `markdown/assets/images/chapter-6/api-400-json-malformado.png` · **Pie:** *Figura 6.1.11.* Respuesta 400 de la API ante un cuerpo JSON mal formado (antes respondía 500). · **Qué capturar:** el comando enviado y la respuesta, donde se lean `HTTP/1.1 400` y el cuerpo con el error de validación, sin mensajes internos del analizador. · **Cómo:** con la API levantada (`docker compose up -d`), en CMD ejecuta `curl -i -X POST http://localhost:8092/api/v1/authentication/sign-in -H "Content-Type: application/json" -d "{mal"` y captura la salida.
 
 **Cómo ejecutarlas:**
 
@@ -168,8 +184,14 @@ public void thePlayerRedeemsTheCoupon(String couponId) {
 
 <div align="center">
   <img src="../../assets/images/chapter-6/cucumber-backend-report.png" alt="Reporte Cucumber del backend"/>
-  <p><i><b>Figura 6.1.4.</b> Reporte HTML de Cucumber: 33 de 33 escenarios aprobados. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.12.</b> Reporte HTML de Cucumber: 33 de 33 escenarios aprobados. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
+
+> **[CAPTURA PENDIENTE · C-608]** **Archivo:** `markdown/assets/images/chapter-6/cucumber-feature-detalle.png` · **Pie:** *Figura 6.1.13.* Detalle de un escenario del feature de canje de cupones en el reporte de Cucumber, con cada paso *Given/When/Then* aprobado. · **Qué capturar:** el reporte HTML de Cucumber con el feature `Redeem SafeCoins for store coupons` expandido y al menos un escenario con todos sus pasos en verde. · **Cómo:** ejecuta `mvn test` en `safeStept-backend`, abre `target/cucumber-reports/cucumber.html` en el navegador (pegando `file:///...` si el doble clic falla) y expande el feature.
+
+> **[CAPTURA PENDIENTE · C-609]** **Archivo:** `markdown/assets/images/chapter-6/feature-archivo-ide-etiquetas.png` · **Pie:** *Figura 6.1.14.* Archivo `coupon-redemption.feature` en el editor, con las etiquetas que enlazan cada escenario con su historia de usuario (`@US42`, `@coupons`). · **Qué capturar:** el archivo `src/test/resources/features/coupon-redemption.feature` abierto en el IDE, con la narrativa *As a / I want / So that* y las etiquetas a la vista. · **Cómo:** ábrelo en IntelliJ o VS Code y captura el editor con el nombre del archivo visible.
+
+> **[CAPTURA PENDIENTE · C-610]** **Archivo:** `markdown/assets/images/chapter-6/cucumber-reporte-resumen.png` · **Pie:** *Figura 6.1.15.* Resumen del reporte de Cucumber: los cinco features con sus escenarios aprobados. · **Qué capturar:** la parte superior del reporte HTML con los totales (features, escenarios y pasos aprobados) y la lista de features. · **Cómo:** en `target/cucumber-reports/cucumber.html`, sin expandir los features.
 
 ## 6.1.4. Core System Tests
 

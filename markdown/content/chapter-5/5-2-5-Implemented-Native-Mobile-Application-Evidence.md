@@ -91,6 +91,10 @@ Recorrido funcional manual:
 
 Las pruebas de la aplicación son pocas (tres) y no cubren el cliente de la API ni los errores de red; la garantía funcional del recorrido descansa sobre las suites del backend (6.1).
 
+> **[CAPTURA PENDIENTE · C-506]** **Archivo:** `markdown/assets/images/chapter-5/AndroidApp/android-pruebas-unitarias.png` · **Pie:** Pruebas unitarias de la app Android: `AttemptScorerTest` aprobada (2 de 2). · **Qué capturar:** el reporte HTML de pruebas de Gradle (`app/build/reports/tests/testDebugUnitTest/index.html`) o el panel de Android Studio con la clase `AttemptScorerTest` y sus 2 pruebas en verde. · **Cómo:** en `safeStept-android` ejecuta `gradlew testDebugUnitTest` (recuerda la unidad virtual `subst` por la ruta con «ñ», ver su README) y abre el reporte.
+
+> **[CAPTURA PENDIENTE · C-507]** **Archivo:** `markdown/assets/images/chapter-5/AndroidApp/android-prueba-instrumentada.png` · **Pie:** Prueba instrumentada `MainActivityTest` aprobada en el emulador (1 de 1). · **Qué capturar:** el resultado de la prueba instrumentada en Android Studio, con el emulador visible o el nombre del dispositivo (Pixel 7, Android 13). · **Cómo:** con el emulador encendido, ejecuta la prueba `MainActivityTest` desde Android Studio y captura el panel *Run* con el resultado.
+
 ### 5.2.5.4. Capturas del flujo
 
 Capturas tomadas en el emulador durante el recorrido anterior.
