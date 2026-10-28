@@ -1,6 +1,6 @@
 # 7.1. Continuous Integration
 
-La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la arquitectura del material del curso: Jenkins y SonarQube se ejecutan como contenedores Docker en una red compartida y el pipeline se define como código en un `Jenkinsfile` versionado junto al backend. Cada ejecución del pipeline parte del código de la rama `develop`, lo compila, mide su estilo, ejecuta las pruebas unitarias y de comportamiento (BDD), verifica la cobertura, lo analiza con SonarQube y genera el artefacto.
+La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la arquitectura del material del curso: Jenkins y SonarQube se ejecutan como contenedores Docker en una red compartida y el pipeline se define como código en un `Jenkinsfile` versionado junto al backend. Cada ejecución del pipeline parte del código de una rama del repositorio del backend (`develop` en las ejecuciones #1 a #8 que se documentan abajo y `main` en el entorno reconstruido, ver 7.2), lo compila, mide su estilo, ejecuta las pruebas unitarias y de comportamiento (BDD), verifica la cobertura, lo analiza con SonarQube y genera el artefacto. La construcción y publicación de la imagen Docker se documentan en 7.2.
 
 ## 7.1.1. Tools and Practices
 
@@ -26,7 +26,7 @@ La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la
 - **Pruebas aisladas.** Las pruebas BDD usan H2 en memoria, de modo que nunca tocan datos de desarrollo ni producción.
 - **Evidencia conservada.** Cada etapa archiva sus reportes (resultados JUnit, Checkstyle, JaCoCo, Cucumber y el JAR) como artefactos de la ejecución.
 - **Secretos fuera del repositorio.** Las credenciales de Jenkins y SonarQube se generan en cada instalación, y la clave de Stripe se lee de la variable `STRIPE_SECRET_KEY`.
-- **Flujo de ramas.** Jenkins construye `develop`; los cambios llegan desde ramas `feature/*` con Conventional Commits, tal como se describe en 5.1.2.
+- **Flujo de ramas.** El job de Jenkins construye la rama que declara `casc.yaml` (`develop` en las ejecuciones #1 a #8 y `main` en el entorno reconstruido); los cambios llegan con Conventional Commits, tal como se describe en 5.1.2.
 
 ## 7.1.2. Build & Test Suite Pipeline Components
 
@@ -42,18 +42,26 @@ El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la 
 | 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 21 s ||
 | 7 | Package Project | `mvn package -DskipTests` | Genera `safestep-platform-1.0.0.jar`, que se archiva con huella digital | Se detiene | 15 s ||
 
+En el entorno reconstruido el mismo pipeline añade dos etapas al final, *Build Docker Image* y *Publish Docker Image*, que pertenecen a la entrega continua y se describen en 7.2.2.
+
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-pipeline-stage-view.png" alt="Stage View del pipeline de Jenkins"/>
   <p><i><b>Figura 7.1.1.</b> Vista de etapas del job <code>safestep-backend</code> en Jenkins (ejecuciones #5 a #8). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron porque la entrega y el despliegue continuos no forman parte de esta entrega. La ejecución #5 fue la primera del pipeline de integración continua actual. Después de corregir los hallazgos de SonarQube (ver abajo), la ejecución #6 **falló a propósito del Quality Gate**: el código nuevo tenía una incidencia de estilo (`java:S1452`, un tipo genérico `ResponseEntity<?>` en el manejador nuevo) y el pipeline se detuvo en la etapa de SonarQube sin generar el JAR. Se corrigió el tipo de retorno y la ejecución #7 terminó en SUCCESS. La ejecución #8, con la documentación OpenAPI corregida y las pruebas que la protegen, también terminó en SUCCESS, ahora con 242 pruebas.
+**Historial de ejecuciones.** La ejecución #1 falló porque Jenkins bloquea por seguridad los checkouts de repositorios locales; se habilitó explícitamente (`hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT`) porque el job lee el repositorio montado desde el anfitrión. Las ejecuciones #2 a #4 terminaron en SUCCESS e incluían además etapas de construcción de imagen y pruebas de API en contenedor; esas etapas se retiraron en esa entrega porque la entrega y el despliegue continuos quedaron fuera de su alcance; se reincorporaron después y se documentan en 7.2. La ejecución #5 fue la primera del pipeline de integración continua actual. Después de corregir los hallazgos de SonarQube (ver abajo), la ejecución #6 **falló a propósito del Quality Gate**: el código nuevo tenía una incidencia de estilo (`java:S1452`, un tipo genérico `ResponseEntity<?>` en el manejador nuevo) y el pipeline se detuvo en la etapa de SonarQube sin generar el JAR. Se corrigió el tipo de retorno y la ejecución #7 terminó en SUCCESS. La ejecución #8, con la documentación OpenAPI corregida y las pruebas que la protegen, también terminó en SUCCESS, ahora con 242 pruebas.
 
 **Integración con SonarQube.** La primera instalación usó la imagen `sonarqube:lts-community` (9.9) del material del curso. Su analizador de Java no puede leer la sintaxis moderna que usa el backend (`switch` con patrones y variables sin nombre `_`) y registró errores de análisis en tres archivos, por lo que el equipo cambió a la imagen vigente `sonarqube:community`, con la que el análisis termina sin errores de lectura. SonarQube notifica a Jenkins mediante el webhook `http://jenkins-master:9089/sonarqube-webhook/`, y `waitForQualityGate()` retoma el pipeline cuando llega el resultado.
 
+**El webhook y las direcciones privadas.** Al reconstruir el entorno de CI con SonarQube 26.10, la primera ejecución del job (#1 del entorno reconstruido) se abortó en la etapa de SonarQube. El análisis terminó correctamente (`ANALYSIS SUCCESSFUL`) y SonarQube lo procesó, pero Jenkins esperó 10 minutos —el `timeout` del paso `waitForQualityGate()`— sin recibir el resultado. El registro de SonarQube explicaba la causa: `Invalid URL: loopback, wildcard, link-local, site-local, multicast, cloud metadata addresses ... are not allowed for webhooks`. Con su validación de webhooks activa (`sonar.validateWebhooks=true`, el valor por defecto), SonarQube rechaza las direcciones privadas, y el nombre `jenkins-master` se resuelve a una dirección privada de la red de Docker (`172.18.0.2`). Se descartó un problema de red: ambos contenedores comparten `spring-postgres-net` y el puerto 9089 de Jenkins respondía desde el contenedor de SonarQube. La solución fue desactivar esa validación únicamente en el SonarQube local, con la variable `SONAR_VALIDATEWEBHOOKS: "false"` en el servicio `sonarqube-server` de `ci/docker-compose.yml`; en la ejecución siguiente el aviso llegó y la espera del Quality Gate fue de 4 segundos.
+
+> **[CAPTURA PENDIENTE · C-701]** **Archivo:** `markdown/assets/images/chapter-7/sonarqube-webhook-delivery-log.png` · **Pie:** *Figura 7.1.2.* Registro de entregas del webhook `Jenkins-CI-Webhook` en SonarQube: la entrega fallida (dirección privada rechazada) y las exitosas posteriores. · **Qué capturar:** la ventana *Show delivery log* del webhook, con la entrega fallida y su mensaje de error, y una exitosa. · **Cómo:** en SonarQube (`http://localhost:9000`, usuario `admin`): *Administration → Configuration → Webhooks →* columna *Last delivery →* *Show delivery log*. Si la entrega fallida ya no aparece, captura solo las exitosas.
+
+> **[CAPTURA PENDIENTE · C-702]** **Archivo:** `markdown/assets/images/chapter-7/jenkins-ejecucion-1-abortada.png` · **Pie:** *Figura 7.1.3.* Ejecución #1 del entorno reconstruido: etapas anteriores en verde y la etapa de SonarQube abortada por el tiempo de espera del Quality Gate. · **Qué capturar:** la ejecución #1 en la *Stage View* (o su *Console Output* con `Timeout has been exceeded` y `Finished: ABORTED`). · **Cómo:** Jenkins → `safestep-backend` → ejecución #1 → *Pipeline Overview* o *Console Output*.
+
 <div align="center">
   <img src="../../assets/images/chapter-7/sonarqube-dashboard.png" alt="Panel de SonarQube del backend"/>
-  <p><i><b>Figura 7.1.2.</b> Panel de SonarQube del backend SafeStep (código completo). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.4.</b> Panel de SonarQube del backend SafeStep (código completo). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 | Métrica de SonarQube | Valor |
@@ -81,7 +89,7 @@ El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**. En el pr
 
 <div align="center">
   <img src="../../assets/images/chapter-7/sonarqube-issues.png" alt="Incidencias de seguridad y fiabilidad en SonarQube"/>
-  <p><i><b>Figura 7.1.3.</b> Vulnerabilidades y bugs que SonarQube mantiene abiertos tras las correcciones (solo el CSRF deshabilitado). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.5.</b> Vulnerabilidades y bugs que SonarQube mantiene abiertos tras las correcciones (solo el CSRF deshabilitado). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres de integración por HTTP sobre el cuerpo ilegible y las reglas de CORS), la ejecución completa de Jenkins con las 238 pruebas de entonces (ejecución #7) y una consulta real al backend levantado, que respondió 400 al JSON mal formado, aceptó la petición previa (*preflight*) del frontend publicado y rechazó con 403 la de un origen desconocido.
@@ -90,7 +98,7 @@ La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres 
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-build-artifacts.png" alt="Artefactos de la ejecución en Jenkins"/>
-  <p><i><b>Figura 7.1.4.</b> Página de la ejecución #8 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 7.1.6.</b> Página de la ejecución #8 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Cómo reproducir el entorno de CI:**
@@ -100,4 +108,4 @@ cd safeStept-backend/ci
 bash start-ci.sh          # SonarQube :9000, Jenkins :9089 (usuario admin, clave en ci/.env)
 ```
 
-Jenkins ejecuta el job `safestep-backend` sobre la rama `develop`; también puede iniciarse manualmente desde la interfaz con *Build Now*.
+Jenkins ejecuta el job `safestep-backend` sobre la rama que declara `ci/jenkins/casc.yaml` (`main` en el entorno reconstruido); también puede iniciarse manualmente desde la interfaz con *Build Now*.
