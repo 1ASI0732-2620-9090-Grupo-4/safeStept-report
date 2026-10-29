@@ -187,7 +187,11 @@ En esta sección se presenta el conjunto de Unit Tests, Integration Tests y Acce
   <p><i><b>Fuente</b>: Elaboración propia.</i></p>
 </div>
 
-> **[CAPTURA PENDIENTE · C-504]** **Archivo:** `markdown/assets/images/chapter-5/sprint5-test-cucumber-consola.png` · **Pie:** Salida de consola de Cucumber: pasos `Given/When/Then` de un escenario de canje de cupones, todos aprobados (✔). · **Qué capturar:** la salida de un escenario con sus pasos marcados con ✔ y los resúmenes finales de escenarios y pasos. · **Cómo:** `mvn test -Dtest=CucumberRunnerTest` en `safeStept-backend`; captura el tramo de un escenario y el resumen final.
+<div align="center">
+  <p><b>Captura:</b> Salida de consola de Cucumber: pasos <code>Given/When/Then</code> de un escenario de canje de cupones, todos aprobados (✔).</p>
+  <img src="../../assets/images/chapter-5/sprint5-test-cucumber-consola.png" alt="Consola de Cucumber: pasos aprobados de un escenario" width="700" />
+  <p><i><b>Fuente</b>: Elaboración propia.</i></p>
+</div>
 
 <div align="center">
   <p><b>Captura:</b> Ejecución de la suite de Karate contra la API: 5 features y 36 escenarios aprobados.</p>
