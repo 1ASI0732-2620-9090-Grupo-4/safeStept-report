@@ -13,7 +13,7 @@ Este anexo reune de forma progresiva los videos de exposicion correspondientes a
 - Video About-the-Product - SafeStep Microsoft Stream: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQDvVbtNWnjaSbps57LyCEffAaNalKhJfT0l982IFtfNBuw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6okM5V" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQDvVbtNWnjaSbps57LyCEffAaNalKhJfT0l982IFtfNBuw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6okM5V</a>
 - Video About-the-Team - SafeStep: <a href="https://www.youtube.com/watch?v=jmA1L_1_8bk" style="word-break: break-all; overflow-wrap: anywhere;">https://www.youtube.com/watch?v=jmA1L_1_8bk</a>
 - Video About-the-Team - SafeStep Microsoft Stream: <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQA4urSyPkX-QLZVQSOsKYhzAax2ZRFU7R0_nyz0d4gm7Tk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7O4QqF" style="word-break: break-all; overflow-wrap: anywhere;">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c030_upc_edu_pe/IQA4urSyPkX-QLZVQSOsKYhzAax2ZRFU7R0_nyz0d4gm7Tk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=7O4QqF</a>
-- Video de exposición del Trabajo Parcial (Hito 2, Semana 7): **pendiente de grabar y publicar**; el enlace se agregará en este anexo indicando la entrega a la que corresponde.
+- Video de exposición de la TB1 (Hito 2, Semana 7): **pendiente de grabar y publicar**; el enlace se agregará en este anexo indicando la entrega a la que corresponde.
 
 <div style="page-break-before: always;"></div>
 
@@ -91,7 +91,7 @@ Este anexo centraliza los repositorios oficiales del equipo Chronos y los enlace
 - Pipeline de integración continua (`Jenkinsfile` y carpeta `ci`): <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/ci" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safestept-backend/tree/develop/ci</a>
 - Jenkins y SonarQube del equipo: se ejecutan en contenedores Docker locales (`http://localhost:9089` y `http://localhost:9000`) mediante `ci/start-ci.sh`; no tienen despliegue público.
 
-*Nota:* los enlaces a `tree/develop` funcionarán cuando las ramas locales del Trabajo Parcial se publiquen en GitHub.
+*Nota:* los enlaces a `tree/develop` funcionarán cuando las ramas locales de la TB1 se publiquen en GitHub.
 
 <div style="page-break-before: always;"></div>
 

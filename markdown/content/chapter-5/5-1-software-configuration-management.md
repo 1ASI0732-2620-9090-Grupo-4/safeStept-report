@@ -280,7 +280,7 @@ El equipo adopta el "Google Java Style Guide" como referencia principal para el 
 
 **Anotaciones:** Las anotaciones se colocan en la línea anterior al elemento que anotan. Se evita la anotación redundante. Las anotaciones de Spring se ordenan primero, seguidas de anotaciones personalizadas.
 
-**Verificación automática del estilo:** Desde el Trabajo Parcial el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis sobre las 378 clases del backend reporta 8,128 observaciones en 367 archivos (5,582 de indentación, 732 de longitud de línea y 827 de Javadoc faltante); la línea base inicial era de 8,034 y el aumento de 94 proviene de las anotaciones de documentación que se añadieron a los controladores. El conteo es alto porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
+**Verificación automática del estilo:** Desde la TB1 el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis sobre las 378 clases del backend reporta 8,128 observaciones en 367 archivos (5,582 de indentación, 732 de longitud de línea y 827 de Javadoc faltante); la línea base inicial era de 8,034 y el aumento de 94 proviene de las anotaciones de documentación que se añadieron a los controladores. El conteo es alto porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
 
 ### 5.1.3.6. Convenciones para Gherkin (Specifications)
 
@@ -320,7 +320,7 @@ Para el repositorio de Web Services (Spring Boot), el pipeline incluye: verifica
 
 Para el repositorio de Landing Page, se implementa un pipeline simplificado que incluye build estático y despliegue automático a GitHub Pages.
 
-A partir del Trabajo Parcial el backend cuenta además con un pipeline de Jenkins definido en el `Jenkinsfile` de la raíz del repositorio. Jenkins y SonarQube se ejecutan como contenedores Docker en la red `spring-postgres-net` (Jenkins en el puerto 9089 y SonarQube en el 9000, con el webhook `http://jenkins-master:9089/sonarqube-webhook/`), y toda su configuración (servidor SonarQube, credencial del token y el job `safestep-backend`) se versiona como código en la carpeta `ci/`. Las etapas, su orden y los reportes que archiva cada una se describen en el capítulo 7.1.
+A partir de la TB1 el backend cuenta además con un pipeline de Jenkins definido en el `Jenkinsfile` de la raíz del repositorio. Jenkins y SonarQube se ejecutan como contenedores Docker en la red `spring-postgres-net` (Jenkins en el puerto 9089 y SonarQube en el 9000, con el webhook `http://jenkins-master:9089/sonarqube-webhook/`), y toda su configuración (servidor SonarQube, credencial del token y el job `safestep-backend`) se versiona como código en la carpeta `ci/`. Las etapas, su orden y los reportes que archiva cada una se describen en el capítulo 7.1.
 
 ### 5.1.4.2. Configuración de Plataformas de Despliegue
 
@@ -367,7 +367,7 @@ El Backend API se despliega en Render como un Web Service con runtime Docker con
 | Plan | Free |
 | Auto-Deploy | On Commit |
 
-La configuración se realiza mediante `application-prod.properties`, que lee la conexión a PostgreSQL, el secreto JWT y las claves de Stripe de variables de entorno; si falta alguna variable obligatoria, la aplicación no arranca. El perfil `prod` se activa con `SPRING_PROFILES_ACTIVE=prod` y el puerto lo toma la aplicación de la variable `PORT` que asigna Render. Desde el Trabajo Parcial el backend solo acepta peticiones de navegador desde los orígenes listados en `SAFESTEP_CORS_ALLOWED_ORIGINS`. La tabla completa de variables está en 5.2.1.5.8.
+La configuración se realiza mediante `application-prod.properties`, que lee la conexión a PostgreSQL, el secreto JWT y las claves de Stripe de variables de entorno; si falta alguna variable obligatoria, la aplicación no arranca. El perfil `prod` se activa con `SPRING_PROFILES_ACTIVE=prod` y el puerto lo toma la aplicación de la variable `PORT` que asigna Render. Desde la TB1 el backend solo acepta peticiones de navegador desde los orígenes listados en `SAFESTEP_CORS_ALLOWED_ORIGINS`. La tabla completa de variables está en 5.2.1.5.8.
 
 La URL pública de la documentación del backend desplegado es: <a href="https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html">https://safestept-backend-experimentos.onrender.com/swagger-ui/index.html</a>
 

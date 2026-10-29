@@ -8,7 +8,7 @@ Esta sección documenta las suites de prueba que verifican SafeStep. La estrateg
 | Integración de API | Karate 2.1.2 | `safeStept-backend/api-tests` | 36 escenarios (5 features) | 36 aprobados, 0 fallidos |
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
 
-Las 242 pruebas del backend que ejecuta Maven (209 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins (ejecución #8) en 60.2 segundos, sin fallos ni omisiones. Antes del Trabajo Parcial el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 209 métodos en 41 clases. Entre ellas está `OpenApiDocumentationIntegrationTest`, con cuatro pruebas que verifican la documentación OpenAPI publicada (5.2.7.14).
+Las 242 pruebas del backend que ejecuta Maven (209 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins (ejecución #8) en 60.2 segundos, sin fallos ni omisiones. Antes de la TB1 el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 209 métodos en 41 clases. Entre ellas está `OpenApiDocumentationIntegrationTest`, con cuatro pruebas que verifican la documentación OpenAPI publicada (5.2.7.14).
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>
@@ -60,7 +60,7 @@ void redeemedCoupon_IsUsedOnlyOnce() {
 
 **Cobertura.** JaCoCo mide la cobertura de instrucciones y el build exige un mínimo de 80 %. Siguiendo el proyecto de referencia del curso, la medición excluye las clases que no contienen lógica de aplicación: el paquete `domain` completo, la capa `infrastructure`, los recursos y controladores REST, y la clase de arranque (`**/*Application*`). La regla vive en el `pom.xml` (`jacoco:check`, `COVEREDRATIO` mínimo de `0.80`) y por tanto rompe el build si la cobertura baja.
 
-| Medición | Antes del Trabajo Parcial | Después |
+| Medición | Antes de la TB1 | Después |
 |----------|---------------------------|---------|
 | Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,169 de 5,512 instrucciones) |
 | Pruebas del backend | 54 métodos | 242 pruebas |
