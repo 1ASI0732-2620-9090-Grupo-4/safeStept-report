@@ -273,7 +273,7 @@
 
 **Part II: Verification, Validation & Pipeline**
 
-- **Capítulo VI: Product Verification & Validation** *(no exigible para AV1; 6.3 completo, resto pendiente)*
+- **Capítulo VI: Product Verification & Validation** *(no exigible para AV1; redactados 6.1.1-6.1.3, 6.2.1 y 6.3; pendientes 6.1.4, 6.2.2 y 6.4)*
 
   - [6.1. Testing Suites & Validation](./markdown/content/chapter-6/6-1-Testing-Suites-&-Validation.md)
     - [6.1.1. Core Entities Unit Tests](./markdown/content/chapter-6/6-1-Testing-Suites-&-Validation.md#611-core-entities-unit-tests)
@@ -300,7 +300,7 @@
       - [6.4.2.3. Contenido de auditoría recibida](./markdown/content/chapter-6/6-4-Auditoría-de-Experiencias-de-Usuario.md#6423-contenido-de-auditoría-recibida)
       - [6.4.2.4. Resumen de modificaciones para subsanar hallazgos](./markdown/content/chapter-6/6-4-Auditoría-de-Experiencias-de-Usuario.md#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 
-- **Capítulo VII: DevOps Practices** *(no exigible para AV1; pendiente)*
+- **Capítulo VII: DevOps Practices** *(no exigible para AV1; redactados 7.1, 7.2 y 7.3; pendiente 7.4)*
 
   - [7.1. Continuous Integration](./markdown/content/chapter-7/7-1-ContinuousIntegration.md)
     - [7.1.1. Tools and Practices](./markdown/content/chapter-7/7-1-ContinuousIntegration.md#711-tools-and-practices)
