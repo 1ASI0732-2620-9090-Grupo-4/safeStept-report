@@ -128,7 +128,10 @@ docker compose up -d --build
   <p><i><b>Figura 7.2.4.</b> Documentación Swagger servida por la API que corre en el contenedor. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-> **[CAPTURA PENDIENTE · C-707]** **Archivo:** `markdown/assets/images/chapter-7/docker-desktop-contenedores.png` · **Pie:** *Figura 7.2.5.* Contenedores del equipo en Docker Desktop: la aplicación (`safestep`) y las herramientas de CI (`safestep-ci`). · **Qué capturar:** la pestaña *Containers* de Docker Desktop con los grupos `safestep` y `safestep-ci` desplegados y en ejecución. · **Cómo:** enciende ambos grupos y captura la ventana de Docker Desktop.
+<div align="center">
+  <img src="../../assets/images/chapter-7/docker-desktop-contenedores.png" alt="Contenedores de la aplicación y de CI en Docker Desktop"/>
+  <p><i><b>Figura 7.2.5.</b> Contenedores del equipo en Docker Desktop: la aplicación (<code>safestep</code>) y las herramientas de CI (<code>safestep-ci</code>). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 **Docker dentro de Jenkins**
 
