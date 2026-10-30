@@ -144,7 +144,10 @@ Para que el pipeline construya imágenes, el contenedor de Jenkins necesita dos 
 
 **Verificación.** Desde el contenedor, `docker version` muestra el cliente 29.9.2 de Jenkins y el servidor de Docker Desktop (motor 29.9.1), `docker buildx version` responde con la versión 0.38.1 y `docker ps` lista los contenedores del equipo, incluidos `safestep-api`, `safestep-postgres` y el propio Jenkins. Reconstruir la imagen de Jenkins tardó 33.6 s, porque Maven y el JDK 26 quedaron en caché.
 
-> **[CAPTURA PENDIENTE · C-708]** **Archivo:** `markdown/assets/images/chapter-7/jenkins-docker-version.png` · **Pie:** *Figura 7.2.6.* Cliente de Docker dentro de Jenkins conectado al motor del anfitrión a través del socket. · **Qué capturar:** la salida de `docker exec jenkins-master docker version` con los bloques *Client* y *Server*. · **Cómo:** ejecuta el comando en CMD (con `safestep-ci` encendido) y captura la salida completa.
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-docker-version.png" alt="docker version ejecutado dentro del contenedor de Jenkins"/>
+  <p><i><b>Figura 7.2.6.</b> Cliente de Docker dentro de Jenkins conectado al motor del anfitrión a través del socket. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 **Credencial de Docker Hub como código**
 
@@ -165,7 +168,10 @@ credentials:
 
 El token se generó en Docker Hub (*Account Settings → Personal access tokens*) con la descripción `jenkins-token` y el permiso *Repo Read & Write*. Se eligió declarar la credencial en `casc.yaml` en lugar de crearla a mano en la interfaz de Jenkins para que se aplique en cada arranque y pueda reproducirse en otro equipo completando solo su `.env`. Se asume, sin haberlo comprobado, que una credencial creada manualmente podría perderse al reconstruir Jenkins, porque JCasC reaplica su configuración. La verificación se hizo en dos niveles: dentro del contenedor, `DOCKER_HUB_USER` vale `melga135` y el token tiene los 36 caracteres propios de un token de Docker Hub; y en Jenkins, la credencial aparece junto con `sonarqube-token-id`.
 
-> **[CAPTURA PENDIENTE · C-709]** **Archivo:** `markdown/assets/images/chapter-7/jenkins-credencial-dockerhub.png` · **Pie:** *Figura 7.2.7.* Credenciales globales de Jenkins: el token de SonarQube y el de Docker Hub (sin mostrar sus valores). · **Qué capturar:** la lista de credenciales con los identificadores `sonarqube-token-id` y `DOCKER_HUB_CREDENTIALS` y su tipo. · **Cómo:** en Jenkins, *Manage Jenkins → Credentials → System → Global credentials*. No abras ni edites la credencial, y no captures el archivo `.env`.
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-credencial-dockerhub.png" alt="Credenciales globales de Jenkins"/>
+  <p><i><b>Figura 7.2.7.</b> Credenciales globales de Jenkins: el token de SonarQube y el de Docker Hub (sin mostrar sus valores). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 ## 7.2.2. Stages Deployment Pipeline Components
 
@@ -240,13 +246,22 @@ El `Jenkinsfile` se validó con el verificador declarativo de Jenkins antes de c
 
 El Quality Gate de `SafeStep-Backend` quedó en `Passed` y las 242 pruebas del backend se aprobaron, sin fallos ni omisiones.
 
-> **[CAPTURA PENDIENTE · C-710]** **Archivo:** `markdown/assets/images/chapter-7/jenkins-ejecucion-3-etapas.png` · **Pie:** *Figura 7.2.8.* Vista de etapas del job `safestep-backend` (ejecución #3) con las etapas de construcción y publicación de la imagen. · **Qué capturar:** la *Stage View* con la fila de la ejecución #3 y las 10 columnas en verde, más el recuadro del Quality Gate (`Passed`) y el resultado de pruebas. · **Cómo:** en Jenkins, abre el job `safestep-backend` y, si solo aparece una fila, usa *Full Stage View*. Captura de modo que se lean los nombres de las etapas.
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-ejecucion-3-etapas.png" alt="Vista de etapas de la ejecución 3 con el Quality Gate aprobado"/>
+  <p><i><b>Figura 7.2.8.</b> Vista de etapas del job <code>safestep-backend</code> (ejecución #3) con las etapas de construcción y publicación de la imagen. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-711]** **Archivo:** `markdown/assets/images/chapter-7/jenkins-build-docker-image-consola.png` · **Pie:** *Figura 7.2.9.* Registro del final de la etapa *Build Docker Image*: la imagen se nombra `safestep-backend:3` y `latest`, y `docker image ls` lista las etiquetas. · **Qué capturar:** el tramo final de la etapa: las líneas `#16 exporting manifest ...`, `#16 naming to docker.io/library/safestep-backend:3 done` y `...:latest done`, seguidas de la tabla de `docker image ls safestep-backend` con las etiquetas `1.0`, `2`, `3` y `latest`. (El comando `docker buildx build` queda unas 4,500 líneas antes, por eso no entra en la misma captura.) · **Cómo:** Jenkins → `safestep-backend` → ejecución #3 → *Console Output* (`http://localhost:9089/job/safestep-backend/3/console`). Con `Ctrl+F` busca `naming to` y captura desde unas 4 líneas antes hasta el final de la tabla (unas 20 líneas; está hacia la línea 5,924 de 6,109).
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-build-docker-image-consola.png" alt="Final de la etapa Build Docker Image en la consola de Jenkins"/>
+  <p><i><b>Figura 7.2.9.</b> Registro del final de la etapa <i>Build Docker Image</i>: la imagen se nombra <code>safestep-backend:3</code> y <code>latest</code>, y <code>docker image ls</code> lista las etiquetas. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-712]** **Archivo:** `markdown/assets/images/chapter-7/jenkins-publish-docker-image-consola.png` · **Pie:** *Figura 7.2.10.* Registro de la etapa *Publish Docker Image*: inicio de sesión y subida de las etiquetas a Docker Hub. · **Qué capturar:** el tramo de la etapa *Publish Docker Image*: `+ echo ****` (el token oculto), `+ docker login -u melga135 --password-stdin`, `Login Succeeded`, los dos `docker tag` y el inicio de `docker push melga135/safestep-backend:3`. El token no debe aparecer en claro. · **Cómo:** en la misma página de consola, `Ctrl+F` y busca `Login Succeeded`; captura unas 20 líneas desde `+ echo ****`. El aviso de «credentials are stored unencrypted» es normal: la etapa ejecuta `docker logout` al final. Opcional: una segunda captura del final (`latest: digest: sha256:e489ef3e...` y `Removing login credentials`, líneas ~6,084 a 6,090), nombrada `C-712b.png`.
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-publish-docker-image-consola.png" alt="Etapa Publish Docker Image en la consola de Jenkins"/>
+  <p><i><b>Figura 7.2.10.</b> Registro de la etapa <i>Publish Docker Image</i>: el token aparece enmascarado (<code>****</code>), el inicio de sesión es exitoso y comienza la subida de las etiquetas a Docker Hub. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-**Evidencia de la publicación.** El repositorio `melga135/safestep-backend` se creó de forma manual en Docker Hub **antes** de la primera subida, con visibilidad **pública**: si se sube una imagen a un repositorio inexistente, Docker Hub lo crea público por defecto, por lo que se prefirió elegir la visibilidad de forma explícita. Después de la ejecución #3, la pestaña *Tags* muestra las etiquetas `3` y `latest` (imágenes para Linux, subidas minutos antes) y el repositorio ocupa 187.1 MB. Localmente, `docker image ls` muestra la imagen con un tamaño de contenido de 196 MB (645 MB de espacio en disco), mientras que Docker Hub informa 187.1 MB para el repositorio.
+**Evidencia de la publicación.** El repositorio `melga135/safestep-backend` se creó de forma manual en Docker Hub **antes** de la primera subida, con visibilidad **pública**: si se sube una imagen a un repositorio inexistente, Docker Hub lo crea público por defecto, por lo que se prefirió elegir la visibilidad de forma explícita. Después de la ejecución #3, la pestaña *Tags* muestra las etiquetas `3` y `latest` (imágenes para Linux, subidas minutos antes) y el repositorio ocupa 187.1 MB. El *digest* que Docker Hub muestra para cada etiqueta (`7bf35420ffc6`) es el del manifiesto específico de la plataforma `linux/amd64`, mientras que el que registran la consola de Jenkins y `docker pull` (`e489ef3efd67`) es el del índice de manifiestos que lo contiene; ambos corresponden a la misma imagen. Localmente, `docker image ls` muestra la imagen con un tamaño de contenido de 196 MB (645 MB de espacio en disco), mientras que Docker Hub informa 187.1 MB para el repositorio.
 
 | Imagen local | Origen |
 |--------------|--------|
@@ -255,11 +270,20 @@ El Quality Gate de `SafeStep-Backend` quedó en `Passed` y las 242 pruebas del b
 | `safestep-backend:3` y `safestep-backend:latest` | Construidas por Jenkins en la ejecución #3 (la etiqueta `latest` pasa a apuntar a la imagen más reciente) |
 | `melga135/safestep-backend:3` y `melga135/safestep-backend:latest` | La misma imagen de la ejecución #3 con el nombre del repositorio de Docker Hub; es lo que se publica |
 
-> **[CAPTURA PENDIENTE · C-713]** **Archivo:** `markdown/assets/images/chapter-7/dockerhub-tags.png` · **Pie:** *Figura 7.2.11.* Etiquetas publicadas en Docker Hub por el pipeline (`3` y `latest`). · **Qué capturar:** la pestaña *Tags* del repositorio `melga135/safestep-backend`, con las dos etiquetas, el sistema operativo y la fecha de subida. · **Cómo:** hub.docker.com → *Repositories* → `safestep-backend` → *Tags*. Si ya ejecutaste más builds, aparecerán etiquetas adicionales; está bien.
+<div align="center">
+  <img src="../../assets/images/chapter-7/dockerhub-tags.png" alt="Etiquetas del repositorio en Docker Hub"/>
+  <p><i><b>Figura 7.2.11.</b> Etiquetas publicadas en Docker Hub por el pipeline (<code>3</code> y <code>latest</code>). El resumen que muestra Docker Hub (<code>7bf35420ffc6</code>) es el del manifiesto <code>linux/amd64</code>. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-714]** **Archivo:** `markdown/assets/images/chapter-7/dockerhub-repositorio.png` · **Pie:** *Figura 7.2.12.* Repositorio público `melga135/safestep-backend` en Docker Hub. · **Qué capturar:** la página *General* del repositorio, donde se vean el nombre, el candado/estado público, la descripción, el tamaño y la fecha de la última subida. · **Cómo:** hub.docker.com → `melga135/safestep-backend`. No incluyas la configuración de tokens ni datos de facturación.
+<div align="center">
+  <img src="../../assets/images/chapter-7/dockerhub-repositorio.png" alt="Repositorio público melga135/safestep-backend en Docker Hub"/>
+  <p><i><b>Figura 7.2.12.</b> Repositorio público <code>melga135/safestep-backend</code> en Docker Hub. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-715]** **Archivo:** `markdown/assets/images/chapter-7/docker-image-ls.png` · **Pie:** *Figura 7.2.13.* Imágenes del backend en el equipo: la del entorno local y las construidas por Jenkins. · **Qué capturar:** la salida de `docker image ls` filtrada por `safestep-backend` y por `melga135/safestep-backend`, con etiquetas, identificadores y tamaños. · **Cómo:** en CMD, ejecuta `docker image ls safestep-backend` y `docker image ls melga135/safestep-backend`, y captura ambas salidas juntas.
+<div align="center">
+  <img src="../../assets/images/chapter-7/docker-image-ls.png" alt="Imágenes locales del backend con docker image ls"/>
+  <p><i><b>Figura 7.2.13.</b> Imágenes del backend en el equipo: la del entorno local y las construidas por Jenkins. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 **Consumo de la imagen publicada.** Cualquier persona puede descargar la imagen sin iniciar sesión, porque el repositorio es público:
 
@@ -269,7 +293,10 @@ docker pull melga135/safestep-backend:latest
 
 Para ejecutarla necesita una base PostgreSQL y las mismas variables de entorno del perfil `prod` que usa el entorno local (`DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD` y `JWT_SECRET`). Una prueba equivalente se realizó con la imagen construida localmente, conectada a un contenedor de PostgreSQL en la misma red.
 
-> **[CAPTURA PENDIENTE · C-716]** **Archivo:** `markdown/assets/images/chapter-7/docker-pull-imagen-publicada.png` · **Pie:** *Figura 7.2.14.* Descarga de la imagen publicada desde Docker Hub. · **Qué capturar:** la salida de `docker pull melga135/safestep-backend:latest` mostrando la descarga de capas (no el mensaje «Image is up to date»). · **Cómo:** primero toma C-715. Después borra las 4 etiquetas de esa imagen para que la descarga sea real: `docker rmi melga135/safestep-backend:3 melga135/safestep-backend:latest safestep-backend:3 safestep-backend:latest` (la API en ejecución usa `safestep-backend:1.0`, que es otra imagen y no se toca). Luego ejecuta `docker pull melga135/safestep-backend:latest` y captura la salida con las capas descargadas (`Pull complete`).
+<div align="center">
+  <img src="../../assets/images/chapter-7/docker-pull-imagen-publicada.png" alt="docker pull de la imagen publicada"/>
+  <p><i><b>Figura 7.2.14.</b> Descarga de la imagen publicada desde Docker Hub: se descargan las capas nuevas (<code>Pull complete</code>) y las que ya existían en el equipo no se repiten (<code>Already exists</code>). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 **Historial de ejecuciones del entorno reconstruido:**
 
