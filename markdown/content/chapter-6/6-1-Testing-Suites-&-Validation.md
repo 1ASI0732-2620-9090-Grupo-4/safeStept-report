@@ -67,7 +67,7 @@ void redeemedCoupon_IsUsedOnlyOnce() {
   <p><i><b>Figura 6.1.4.</b> Ejecución de <code>OpenApiDocumentationIntegrationTest</code> en el IDE: sus cuatro pruebas verifican el contrato OpenAPI publicado. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Cobertura.** JaCoCo mide la cobertura de instrucciones y el build exige un mínimo de 80 %. Siguiendo el proyecto de referencia del curso, la medición excluye las clases que no contienen lógica de aplicación: el paquete `domain` completo, la capa `infrastructure`, los recursos y controladores REST, y la clase de arranque (`**/*Application*`). La regla vive en el `pom.xml` (`jacoco:check`, `COVEREDRATIO` mínimo de `0.80`) y por tanto rompe el build si la cobertura baja.
+**Cobertura.** JaCoCo mide la cobertura de instrucciones y el build exige un mínimo de 80 %. Siguiendo la configuración de JaCoCo del proyecto de referencia del curso (`pom.xml` de `learning-center-platform-small`, que excluye `domain`, `infrastructure`, `interfaces/rest/resources`, los controladores y las clases `*Application*`), la medición excluye las clases que el equipo considera sin lógica de aplicación: el paquete `domain` completo, la capa `infrastructure`, los recursos y controladores REST, y las clases cuyo nombre contiene `Application` (`**/*Application*`). En 6.2.1.2 se detalla el alcance y se compara con la cobertura sin exclusiones. La regla vive en el `pom.xml` (`jacoco:check`, `COVEREDRATIO` mínimo de `0.80`) y por tanto rompe el build si la cobertura baja.
 
 | Medición | Antes de la TB1 | Después |
 |----------|---------------------------|---------|
