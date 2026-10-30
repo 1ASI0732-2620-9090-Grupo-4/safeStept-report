@@ -108,13 +108,25 @@ docker compose up -d --build
 | Contrato OpenAPI | 73 operaciones publicadas en `/v3/api-docs` |
 | Reconstrucción de imágenes con caché | 2.6 s |
 
-> **[CAPTURA PENDIENTE · C-703]** **Archivo:** `markdown/assets/images/chapter-7/compose-ps.png` · **Pie:** *Figura 7.2.1.* Servicios de la aplicación en ejecución: `postgres` en estado `healthy` y `api` activo. · **Qué capturar:** la salida de `docker compose ps` con los dos servicios, sus puertos (`8092` y `5435`) y la columna de estado. · **Cómo:** en CMD, dentro de `safeStept-backend`, ejecuta `docker compose ps` con el entorno levantado y captura la ventana.
+<div align="center">
+  <img src="../../assets/images/chapter-7/compose-ps.png" alt="Servicios de la aplicación en ejecución con docker compose ps"/>
+  <p><i><b>Figura 7.2.1.</b> Servicios de la aplicación en ejecución: <code>postgres</code> en estado <code>healthy</code> y <code>api</code> activo. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-704]** **Archivo:** `markdown/assets/images/chapter-7/compose-logs-api.png` · **Pie:** *Figura 7.2.2.* Registro de arranque de la API: la aplicación inicia y crea el administrador inicial. · **Qué capturar:** las últimas líneas de `docker compose logs api --tail 8`, donde se lea `Started SafeStepPlatformApplication` y `Bootstrap admin user ... created`. · **Cómo:** ejecuta el comando justo después de un `docker compose up -d` desde cero (por ejemplo, tras `docker compose down -v`). No muestres contraseñas.
+<div align="center">
+  <img src="../../assets/images/chapter-7/compose-logs-api.png" alt="Registro de arranque de la API"/>
+  <p><i><b>Figura 7.2.2.</b> Registro de arranque de la API (líneas filtradas del registro): la aplicación inicia y crea el administrador inicial. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-705]** **Archivo:** `markdown/assets/images/chapter-7/postgres-tablas.png` · **Pie:** *Figura 7.2.3.* Tablas creadas por la aplicación en la base `safestep` del contenedor. · **Qué capturar:** la lista de tablas y la línea final `(33 rows)`. · **Cómo:** `docker exec safestep-postgres psql -U postgres -d safestep -c "\dt"`.
+<div align="center">
+  <img src="../../assets/images/chapter-7/postgres-tablas.png" alt="Las 33 tablas de la base safestep"/>
+  <p><i><b>Figura 7.2.3.</b> Tablas creadas por la aplicación en la base <code>safestep</code> del contenedor. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-706]** **Archivo:** `markdown/assets/images/chapter-7/swagger-contenedor.png` · **Pie:** *Figura 7.2.4.* Documentación Swagger servida por la API que corre en el contenedor. · **Qué capturar:** el navegador en `http://localhost:8092/swagger-ui/index.html` con la barra de direcciones visible y la lista de grupos de endpoints. · **Cómo:** abre la URL con el entorno levantado y captura la ventana del navegador completa.
+<div align="center">
+  <img src="../../assets/images/chapter-7/swagger-contenedor.png" alt="Swagger servido por la API en el contenedor"/>
+  <p><i><b>Figura 7.2.4.</b> Documentación Swagger servida por la API que corre en el contenedor. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 > **[CAPTURA PENDIENTE · C-707]** **Archivo:** `markdown/assets/images/chapter-7/docker-desktop-contenedores.png` · **Pie:** *Figura 7.2.5.* Contenedores del equipo en Docker Desktop: la aplicación (`safestep`) y las herramientas de CI (`safestep-ci`). · **Qué capturar:** la pestaña *Containers* de Docker Desktop con los grupos `safestep` y `safestep-ci` desplegados y en ejecución. · **Cómo:** enciende ambos grupos y captura la ventana de Docker Desktop.
 
