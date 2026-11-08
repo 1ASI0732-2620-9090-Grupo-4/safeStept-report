@@ -67,7 +67,7 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 | Prettier | Formateador de código Opinionated para mantener consistencia en el código | <a href="https://prettier.io">https://prettier.io</a> | Descargable (npm) |
 | Markdown | Lenguaje de formato para documentación técnica | <a href="https://www.markdownguide.org">https://www.markdownguide.org</a> | Referencia |
 | OpenAPI (Swagger) | Especificación para documentar APIs REST | <a href="https://swagger.io/specification">https://swagger.io/specification</a> | Referencia |
-| Checkstyle 14.3 | Análisis estático de estilo del código Java con las reglas de Google (`google_checks.xml`), configurado en modo reporte | <a href="https://checkstyle.org">https://checkstyle.org</a> | Descargable (plugin Maven) |
+| Checkstyle 14.3 | Análisis estático de estilo del código Java con las reglas de Google (`google_checks.xml`), configurado como compuerta que falla el pipeline ante cualquier infracción | <a href="https://checkstyle.org">https://checkstyle.org</a> | Descargable (plugin Maven) |
 | JaCoCo 0.8.15 | Medición de cobertura de pruebas y verificación del umbral mínimo de 80 % | <a href="https://www.jacoco.org/jacoco">https://www.jacoco.org/jacoco</a> | Descargable (plugin Maven) |
 | SonarQube (Community Build) | Análisis de calidad y seguridad del código con Quality Gate integrado al pipeline | <a href="https://www.sonarsource.com/products/sonarqube">https://www.sonarsource.com/products/sonarqube</a> | Descargable (contenedor Docker) |
 
@@ -280,7 +280,7 @@ El equipo adopta el "Google Java Style Guide" como referencia principal para el 
 
 **Anotaciones:** Las anotaciones se colocan en la línea anterior al elemento que anotan. Se evita la anotación redundante. Las anotaciones de Spring se ordenan primero, seguidas de anotaciones personalizadas.
 
-**Verificación automática del estilo:** Desde la TB1 el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). El análisis sobre las 378 clases del backend reporta 8,128 observaciones en 367 archivos (5,582 de indentación, 732 de longitud de línea y 827 de Javadoc faltante); la línea base inicial era de 8,034 y el aumento de 94 proviene de las anotaciones de documentación que se añadieron a los controladores. El conteo es alto porque el código se escribió con sangría de 4 espacios y Google exige 2. Por ello el equipo decidió ejecutar Checkstyle en modo reporte: el pipeline lo archiva en cada ejecución pero no detiene el build, y el código nuevo debe evitar incrementar el conteo.
+**Verificación automática del estilo:** Desde la TB1 el estilo se mide con Checkstyle usando las reglas de Google sin modificaciones (`google_checks.xml`). La primera medición sobre el backend dio 8,128 observaciones en 367 de sus 377 archivos de `src/main` (5,582 de indentación, 732 de longitud de línea y 827 de Javadoc faltante), porque el código se escribió con sangría de 4 espacios y Google exige 2. El equipo lo corrigió por tandas (formato automático, importaciones y llaves, y documentación Javadoc) hasta llegar a **cero** infracciones, y la etapa `Validate Checkstyle` del pipeline ejecuta `checkstyle:check`, que detiene el build si reaparece una sola (ver 6.2.1.1 y 7.1.2).
 
 ### 5.1.3.6. Convenciones para Gherkin (Specifications)
 
