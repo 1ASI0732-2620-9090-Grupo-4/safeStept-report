@@ -81,7 +81,10 @@ El estándar de codificación del backend es la **Google Java Style Guide**, ver
   <p><i><b>Figura 6.2.5.</b> Informe de Checkstyle tras la tanda 5 (commit <code>0a34209</code>): 377 archivos, 0 advertencias y 0 errores. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-> **[CAPTURA PENDIENTE · C-535]** **Archivo:** `markdown/assets/images/chapter-6/checkstyle/plugin-intellij.png` · **Pie:** Plugin Checkstyle de IntelliJ IDEA con la regla *Google Checks*: el backend sin ninguna advertencia. · **Qué capturar:** el panel del plugin Checkstyle-IDEA con el alcance *All files in project* sobre `src/main` y la regla *Google Checks*, mostrando que no hay elementos. · **Cómo:** en IntelliJ, abre `safestept-backend`, pestaña *Checkstyle* y pulsa *Check Project* (la regla activa debe ser *Google Checks*).
+<div align="center">
+  <img src="../../assets/images/chapter-6/checkstyle/plugin-intellij.png" alt="Plugin Checkstyle de IntelliJ IDEA sin problemas" width="420"/>
+  <p><i><b>Figura 6.2.6.</b> Plugin Checkstyle de IntelliJ IDEA con la regla <i>Google Checks</i> sobre el proyecto <code>safestept-backend</code>: «Checkstyle found no problems in the file(s)». <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 **Compuerta en el pipeline.** El último commit (`1103ccf`) cambia la etapa del `Jenkinsfile` de reporte a validación: `mvn checkstyle:check`, con `failOnViolation` y severidad mínima `warning` en el `pom.xml`, de modo que cualquier advertencia detiene el pipeline antes de ejecutar las pruebas. La evidencia de una ejecución que falla por una infracción deliberada y de otra que la supera se muestra en 7.1.2.
 
