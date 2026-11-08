@@ -486,15 +486,15 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 **Backend: hallazgos abiertos y deuda técnica**
 
-Al cierre del análisis quedan 87 incidencias abiertas en el backend. Ninguna impide el Quality Gate, que evalúa solo el código nuevo, pero constituyen deuda técnica identificada:
+Al cierre del análisis quedan 87 incidencias abiertas en el backend. Ninguna impide el Quality Gate, que evalúa solo el código nuevo, pero constituyen deuda técnica identificada y se corrigieron después, como se documenta más abajo:
 
 | Regla | Cantidad | Descripción | Situación |
 |-------|----------|-------------|-----------|
-| `java:S1452` | 65 | Los comodines genéricos no deben usarse en tipos de retorno (`ResponseEntity<?>`) | Código anterior en controladores; pendiente de corregir |
-| `java:S1192` | 16 | Los literales de texto no deben duplicarse | Pendiente de corregir |
-| `java:S3776` | 2 | La complejidad cognitiva de los métodos no debe ser demasiado alta | Pendiente de corregir |
-| `java:S1186` | 2 | Los métodos no deben estar vacíos | Pendiente de corregir |
-| `java:S2696` | 1 | Los métodos de instancia no deben escribir en campos estáticos | Pendiente de corregir |
+| `java:S1452` | 65 | Los comodines genéricos no deben usarse en tipos de retorno (`ResponseEntity<?>`) | Código anterior en controladores. **Corregido** el 8 de noviembre (tanda 1 de la corrección) |
+| `java:S1192` | 16 | Los literales de texto no deben duplicarse | **Corregido** (tanda 2) |
+| `java:S3776` | 2 | La complejidad cognitiva de los métodos no debe ser demasiado alta | **Corregido** (tanda 3) |
+| `java:S1186` | 2 | Los métodos no deben estar vacíos | **Corregido** (tanda 2) |
+| `java:S2696` | 1 | Los métodos de instancia no deben escribir en campos estáticos | **Corregido** (tanda 2) |
 | `java:S4502` | 1 | Las protecciones CSRF no deben deshabilitarse | **Se mantiene a propósito**: la API es *stateless*, autentica con JWT en el encabezado `Authorization` y no usa cookies de sesión (7.1.2) |
 
 **Frontend: análisis en 3 etapas**
@@ -598,18 +598,78 @@ El frontend (Angular 21) se analizó con el mismo procedimiento. Un detalle de l
 
 | Regla | Cantidad | Descripción | Situación |
 |-------|----------|-------------|-----------|
-| `typescript:S9383` | 9 | Las promesas no deben quedar sin manejar | Pendiente de corregir |
-| `typescript:S7723` | 1 | Los constructores nativos deben llamarse de forma consistente con o sin `new` | Pendiente de corregir |
-| `typescript:S8786` | 1 | Las expresiones regulares no deben provocar retroceso no lineal | Pendiente de corregir |
+| `typescript:S9383` | 9 | Las promesas no deben quedar sin manejar | **Corregido** el 8 de noviembre |
+| `typescript:S7723` | 1 | Los constructores nativos deben llamarse de forma consistente con o sin `new` | **Corregido** |
+| `typescript:S8786` | 1 | Las expresiones regulares no deben provocar retroceso no lineal | **Corregido** |
 
-La **cobertura de pruebas del frontend es de 0.4 %**: solo existe la prueba de arranque del componente raíz. Es la principal limitación de calidad del frontend y la prioridad de mejora, junto con el manejo de las promesas.
+La **cobertura de pruebas del frontend es de 0.4 %**: solo existe la prueba de arranque del componente raíz. Es la principal limitación de calidad del frontend y la prioridad de mejora.
+
+**Corrección de la deuda técnica sobre los proyectos reales**
+
+El 8 de noviembre de 2026 se corrigieron los hallazgos abiertos de las dos secciones anteriores, esta vez sobre los proyectos reales de SonarQube y no sobre los de las etapas: `safestep-backend`, que es el que alimenta el pipeline de Jenkins, y `safestep-frontend`, creado para analizar el código actual de `main`. A ambos se les asignó el perfil *Sonar way extended* (337 reglas en Java y 251 en TypeScript y JavaScript), que reemplazó al perfil por defecto (*Sonar way core*). Con el perfil por defecto el backend no tenía ninguna incidencia de mantenibilidad; con *extended* aparecen las 86 que se enumeraron arriba. Cada tanda es un commit, con las pruebas completas y Checkstyle en cero antes de analizar.
+
+*Backend*
+
+| Tanda | Commit | Corrección | Mantenibilidad abierta |
+|:-----:|--------|------------|:----------------------:|
+| Inicio | `1103ccf` | Perfil *Sonar way extended* aplicado al proyecto real | 86 |
+| 1 | `7daa9dd` | `java:S1452` (65): los métodos de la capa REST devuelven `ResponseEntity<Object>` en lugar de un tipo con comodín | 21 |
+| 2 | `f105e82` | `java:S1192` (16): textos repetidos pasan a constantes; `java:S1186` (2): comentario que explica el constructor vacío de JPA y el método de apoyo de una prueba; `java:S2696` (1): la escritura del campo estático de Stripe pasa a un método estático | 2 |
+| 3 | `d6afc1a` | `java:S3776` (2): la creación de pedidos y la carga inicial de datos de `commerce` se dividen en métodos más pequeños | 0 |
+
+En las cuatro mediciones las 242 pruebas pasaron sin fallos, la cobertura se mantuvo en 91.5 % o 91.6 %, el Quality Gate quedó en *Passed* y la única incidencia de seguridad es la protección CSRF deshabilitada a propósito (7.1.2). La corrección de `java:S1452` es mecánica: el mismo método devuelve el recurso en caso de éxito o un objeto de error, por lo que `Object` es el tipo común más preciso sin rediseñar la API, y las pruebas de contrato del documento OpenAPI siguen aprobadas.
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-0-inicio-summary.png" alt="SonarQube del backend con el perfil extended: 86 incidencias" width="760"/>
+  <p><i><b>Figura 6.2.45.</b> Resumen de <code>safestep-backend</code> con el perfil <i>Sonar way extended</i> antes de corregir: 86 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-1-s1452-summary.png" alt="SonarQube del backend tras la tanda 1" width="760"/>
+  <p><i><b>Figura 6.2.46.</b> Resumen tras la tanda 1 (<code>java:S1452</code>): 21 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-2-s1192-summary.png" alt="SonarQube del backend tras la tanda 2" width="760"/>
+  <p><i><b>Figura 6.2.47.</b> Resumen tras la tanda 2 (<code>java:S1192</code>, <code>java:S1186</code> y <code>java:S2696</code>): 2 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-3-s3776-summary.png" alt="SonarQube del backend tras la tanda 3" width="760"/>
+  <p><i><b>Figura 6.2.48.</b> Resumen tras la tanda 3 (<code>java:S3776</code>): 0 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+*Frontend*
+
+| Tanda | Commits | Corrección | Fiabilidad | Mantenibilidad | Cobertura |
+|:-----:|---------|------------|:----------:|:--------------:|:---------:|
+| Inicio | `960947d` | Perfil *Sonar way extended* aplicado al nuevo proyecto `safestep-frontend` | 11 | 1 | 0.4 % |
+| 1 | `f68acea`, `deeba5c` | `typescript:S9383` (9): las navegaciones cuya promesa se ignora se marcan con `void`; `typescript:S7723` (1): `new Array(...)`; `typescript:S8786` (1): el formato de precios deja de usar una expresión regular con retroceso | 0 | 0 | 0.7 % |
+
+Para la regla `typescript:S8786` se reescribió `formatPrice` sin esa expresión regular, se comparó su resultado con el de la versión anterior sobre 50,018 valores (incluidos negativos, `NaN`, infinito y números en notación exponencial) sin ninguna diferencia, y se añadieron 4 pruebas unitarias (el frontend pasó de 2 a 6 pruebas). La cobertura sigue siendo baja (0.7 %): es la limitación principal de calidad del frontend y se aborda con nuevas pruebas, no con correcciones puntuales.
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/sonarqube/correccion/frontend-0-inicio-summary.png" alt="SonarQube del frontend con el perfil extended antes de corregir" width="760"/>
+  <p><i><b>Figura 6.2.49.</b> Resumen de <code>safestep-frontend</code> con el perfil <i>Sonar way extended</i> antes de corregir: 11 incidencias de fiabilidad y 1 de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/sonarqube/correccion/frontend-0-inicio-issues.png" alt="Incidencias del frontend antes de corregir" width="760"/>
+  <p><i><b>Figura 6.2.50.</b> Incidencias abiertas del frontend antes de corregir (<code>typescript:S9383</code>, <code>typescript:S7723</code> y <code>typescript:S8786</code>). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/sonarqube/correccion/frontend-1-correcciones-summary.png" alt="SonarQube del frontend tras las correcciones" width="760"/>
+  <p><i><b>Figura 6.2.51.</b> Resumen del frontend tras las correcciones: 0 incidencias abiertas y 0.7 % de cobertura. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
 
 **Conclusiones**
 
 - En el backend, la cobertura pasó de 43.2 % a 91.7 % entre la base y el estado final gracias a las pruebas unitarias por contexto (etapas 03 a 05) y a las pruebas BDD (etapa 06); las pruebas de las etapas 03 a 06 no introducen incidencias, salvo un método vacío en una prueba.
 - Las vulnerabilidades pasaron de 2 a 1 (CORS corregido en la etapa 07) y los bugs de 3 a 0 (etapa 08). La incidencia de seguridad que permanece (`java:S4502`) es una decisión de diseño documentada.
 - El Quality Gate cumplió su función: detuvo el código nuevo sin pruebas (etapa 01 y F1) y el código nuevo con una incidencia (etapas 05 y 09), y aprobó las etapas siguientes una vez corregido.
-- Queda como deuda técnica del backend un conjunto de 86 incidencias de mantenibilidad, la mayoría `java:S1452` y `java:S1192`; y en el frontend, la cobertura de pruebas y las promesas sin manejar.
+- Las 86 incidencias de mantenibilidad del backend y las 11 incidencias del frontend se corrigieron el 8 de noviembre con el perfil *Sonar way extended*, en cuatro mediciones con las 242 pruebas del backend en verde. Del backend solo permanece la incidencia de seguridad que es una decisión de diseño.
+- Queda como limitación del frontend su cobertura de pruebas (0.7 %).
 
 ## 6.2.2. Reviews
 
