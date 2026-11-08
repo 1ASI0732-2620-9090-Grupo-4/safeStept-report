@@ -48,7 +48,7 @@ En sintesis, el contraste entre Lean UX y los resultados obtenidos muestra que S
 
 **Corto plazo:** Se recomienda migrar o recrear la base de datos de Render antes del 7 de noviembre de 2026 si el producto sigue en uso, activar un servicio externo que despierte el backend antes de las demostraciones, subir la cobertura del modulo de perfiles, mantener en cero los code smells que reporta SonarQube con el perfil Sonar way extended (hoy 0 tras corregir 86 en el backend y 11 incidencias en el frontend), subir la cobertura de pruebas del frontend (0.7 %) y extender el analisis de estilo de Checkstyle a las pruebas (src/test), que hoy quedan fuera de su alcance. Tambien conviene marcar en SonarQube como revisada la regla de CSRF, que es una decision de diseno.
 
-**Mediano plazo:** Se recomienda ampliar las pruebas a los flujos que hoy quedan fuera (pago con Stripe y finalizacion de simulaciones), incorporar pruebas de sistema de la aplicacion web y movil y extender el pipeline con la entrega y el despliegue continuos.
+**Mediano plazo:** Se recomienda ampliar las pruebas a los flujos que hoy quedan fuera (pago con Stripe), incorporar las pruebas de sistema de la aplicacion web al pipeline de integracion continua y crear las de la aplicacion movil, y encadenar el despliegue de Render al resultado del Quality Gate (7.3).
 
 **Mediano plazo:** Se recomienda realizar nuevas validaciones con usuarios utilizando la aplicacion desplegada durante mas tiempo. Esto permitiria medir indicadores reales como retencion, finalizacion de simulaciones, errores frecuentes, confianza percibida antes y despues del entrenamiento, y conversion en la tienda.
 
