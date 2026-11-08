@@ -84,7 +84,7 @@ void redeemedCoupon_IsUsedOnlyOnce() {
 | `simulation` | 11 | 91.2 % |
 | `profiles` | 7 | 62.1 % |
 
-El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.7 % de cobertura sobre 980 líneas medibles (ver 7.1.2).
+El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.5 % de cobertura sobre 1,390 líneas medibles (ver 7.1.2).
 
 <div align="center">
   <img src="../../assets/images/chapter-6/jacoco-coverage-report.png" alt="Reporte de cobertura JaCoCo"/>

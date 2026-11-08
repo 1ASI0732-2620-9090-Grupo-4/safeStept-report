@@ -305,6 +305,9 @@ Para ejecutarla necesita una base PostgreSQL y las mismas variables de entorno d
 | #1 | ABORTED | Las etapas de compilación, estilo, pruebas y cobertura terminaron en verde. En la etapa de SonarQube, el análisis terminó bien, pero Jenkins esperó 10 minutos el resultado del Quality Gate porque SonarQube no pudo entregar el aviso (*webhook*): rechaza por defecto direcciones privadas y `jenkins-master` resuelve a una dirección privada de la red de Docker. Se resolvió con `SONAR_VALIDATEWEBHOOKS: "false"` en el servicio de SonarQube del `docker-compose.yml` de `ci/` (7.1.2) |
 | #2 | SUCCESS | Nueve entradas en la vista de etapas, incluida *Build Docker Image* con `--load`. Quality Gate aprobado |
 | #3 | SUCCESS | Diez entradas en la vista de etapas: se agrega *Publish Docker Image*. Imagen publicada en Docker Hub |
+| #4 | FAILURE | Commit temporal con una infracción deliberada de Checkstyle: el pipeline se detiene en *Validate Checkstyle* y omite las etapas siguientes (7.1.2) |
+| #5 | SUCCESS | Backend sin infracciones de Checkstyle: las diez entradas en verde (7.1.2) |
+| #6 | SUCCESS | Perfil *Sonar way extended* y 86 incidencias corregidas (6.2.1.2): 242 pruebas, Quality Gate aprobado y la imagen publicada de nuevo en Docker Hub, en 3 min 58 s (7.1.2) |
 
 **Limitaciones y mejoras identificadas.**
 
