@@ -1,6 +1,6 @@
 # 7.1. Continuous Integration
 
-La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la arquitectura del material del curso: Jenkins y SonarQube se ejecutan como contenedores Docker en una red compartida y el pipeline se define como código en un `Jenkinsfile` versionado junto al backend. Cada ejecución del pipeline parte del código de una rama del repositorio del backend (`develop` en las ejecuciones #1 a #8 que se documentan abajo y `main` en el entorno reconstruido, ver 7.2), lo compila, mide su estilo, ejecuta las pruebas unitarias y de comportamiento (BDD), verifica la cobertura, lo analiza con SonarQube y genera el artefacto. La construcción y publicación de la imagen Docker se documentan en 7.2.
+La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la arquitectura del material del curso: Jenkins y SonarQube se ejecutan como contenedores Docker en una red compartida y el pipeline se define como código en un `Jenkinsfile` versionado junto al backend. Cada ejecución del pipeline parte del código de una rama del repositorio del backend (`develop` en las ejecuciones #1 a #8 que se documentan abajo y `main` en el entorno reconstruido, ver 7.2), lo compila, valida su estilo (y se detiene si encuentra una sola infracción), ejecuta las pruebas unitarias y de comportamiento (BDD), verifica la cobertura, lo analiza con SonarQube y genera el artefacto. La construcción y publicación de la imagen Docker se documentan en 7.2.
 
 ## 7.1.1. Tools and Practices
 
@@ -12,7 +12,7 @@ La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la
 | Docker y Docker Compose | 29.6 | Ejecutan Jenkins y SonarQube como contenedores en la red compartida `spring-postgres-net` |
 | Maven | 3.9.11 | Compilación, pruebas, cobertura y análisis |
 | JDK Eclipse Temurin | 26 | Compila y prueba el backend (se instala en la imagen de Jenkins y se selecciona con `JAVA_HOME_26`) |
-| Checkstyle | 14.3.0 (reglas de Google) | Reporte de estilo |
+| Checkstyle | 14.3.0 (reglas de Google) | Compuerta de estilo: `checkstyle:check` falla el pipeline ante cualquier infracción |
 | JUnit Jupiter, Mockito, Cucumber | ver 6.1 | Suites de prueba que ejecuta el pipeline |
 | JaCoCo | 0.8.15 | Cobertura y umbral de 80 % |
 | SonarQube Community Build | 26.9 | Análisis de calidad y seguridad con Quality Gate |
@@ -22,6 +22,7 @@ La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la
 - **Pipeline como código.** El `Jenkinsfile` está en la raíz de `safeStept-backend`; los cambios al pipeline se revisan y versionan como cualquier otro cambio.
 - **Infraestructura como código.** La carpeta `ci/` contiene el `Dockerfile` de Jenkins, `plugins.txt`, el `docker-compose.yml` y `casc.yaml`, que configura Jenkins con *Configuration as Code*: usuario administrador, servidor SonarQube (`MiSonarServer`), credencial del token (`sonarqube-token-id`) y el job `safestep-backend`, que se crea solo al iniciar. El script `ci/start-ci.sh` levanta ambos servicios, genera el token de análisis, registra el webhook y arranca Jenkins; las claves generadas se guardan en `ci/.env`, que Git ignora.
 - **Fallar rápido.** Las etapas están ordenadas de la más barata a la más costosa y una etapa fallida detiene las siguientes.
+- **Estilo como compuerta.** El código debe cumplir las reglas de Google sin ninguna infracción antes de ejecutar las pruebas; la validación tarda segundos y evita gastar el resto del pipeline en código que no cumple el estándar (6.2.1.1).
 - **Un único origen de verdad para las reglas de calidad.** Las exclusiones de cobertura de JaCoCo y de SonarQube son las mismas.
 - **Pruebas aisladas.** Las pruebas BDD usan H2 en memoria, de modo que nunca tocan datos de desarrollo ni producción.
 - **Evidencia conservada.** Cada etapa archiva sus reportes (resultados JUnit, Checkstyle, JaCoCo, Cucumber y el JAR) como artefactos de la ejecución.
@@ -30,13 +31,13 @@ La integración continua de SafeStep se implementa con **Jenkins**, siguiendo la
 
 ## 7.1.2. Build & Test Suite Pipeline Components
 
-El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #8 en Jenkins (4 min 11 s de principio a fin, resultado **SUCCESS**).
+El pipeline completo tiene las etapas siguientes. Los tiempos corresponden a la ejecución #8 en Jenkins (4 min 11 s de principio a fin, resultado **SUCCESS**), salvo el de la etapa 3, que se añadió después y es el de la ejecución #5 del entorno actual.
 
 | # | Etapa | Comando | Qué verifica o produce | Si falla | Tiempo |
 |---|-------|---------|------------------------|----------|--------|
 | 1 | Checkout SCM | Git | Descarga el `Jenkinsfile` y el código de `develop` | Se detiene | 1 s ||
 | 2 | Compile Project | `mvn clean compile` | El proyecto compila con JDK 26 | Se detiene | 28 s ||
-| 3 | Checkstyle Report | `mvn checkstyle:checkstyle` | Reporte de estilo con reglas de Google (`checkstyle-result.xml`) | No detiene (modo reporte, ver 6.1 y 5.1.3.5) | 22 s ||
+| 3 | Validate Checkstyle | `mvn checkstyle:check` | El código cumple las reglas de Google sin ninguna infracción; archiva `checkstyle-result.xml` | Se detiene (ver abajo y 6.2.1.1) | 6 s ||
 | 4 | Unit and BDD Tests | `mvn test` | 209 pruebas unitarias y de integración más 33 escenarios Cucumber; resultados JUnit y reporte Cucumber | Se detiene | 1 min 27 s ||
 | 5 | Validate Test Coverage | `mvn jacoco:check` | Cobertura de instrucciones ≥ 80 % sobre las clases medidas (resultado: 93.8 %) | Se detiene | 7 s ||
 | 6 | SonarQube Analysis | `mvn sonar:sonar` + `waitForQualityGate()` | Envía el análisis y espera el webhook de SonarQube con el resultado del Quality Gate | Se detiene si el gate no es `OK` | 1 min 21 s ||
@@ -105,6 +106,23 @@ La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-build-artifacts.png" alt="Artefactos de la ejecución en Jenkins"/>
   <p><i><b>Figura 7.1.6.</b> Página de la ejecución #8 con sus artefactos archivados (JAR, Checkstyle, JaCoCo, Cucumber). <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+**Compuerta de estilo (Checkstyle).** Desde el 8 de noviembre de 2026 la etapa 3 es una validación y no un reporte. Para comprobar que de verdad detiene el pipeline se creó, solo en el repositorio local, un commit temporal con una única infracción deliberada (una importación fuera de orden en `PaymentMethod.java`) y se ejecutó el job. La ejecución #4 falló en `Validate Checkstyle` con `You have 1 Checkstyle violation` y la consola indica que `Unit and BDD Tests` y las etapas siguientes se omitieron por el fallo anterior. Ese commit se descartó antes de publicar el repositorio, por lo que no consta en su historial. La ejecución #5, sobre el commit `1103ccf` con el backend sin infracciones (6.2.1.1), pasó todas las etapas, incluida `Validate Checkstyle`, con `You have 0 Checkstyle violations`.
+
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-checkstyle-rojo-consola.png" alt="Consola de la ejecución 4 de Jenkins con la compuerta de Checkstyle fallida"/>
+  <p><i><b>Figura 7.1.7.</b> Consola de la ejecución #4: <code>mvn checkstyle:check</code> detecta la importación fuera de orden (<code>CustomImportOrder</code>) y falla con <code>BUILD FAILURE</code>; la etapa <code>Unit and BDD Tests</code> se omite. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-checkstyle-verde-consola.png" alt="Consola de la ejecución 5 de Jenkins con la compuerta de Checkstyle superada"/>
+  <p><i><b>Figura 7.1.8.</b> Consola de la etapa <code>Validate Checkstyle</code> de la ejecución #5: <code>You have 0 Checkstyle violations</code> y <code>BUILD SUCCESS</code>. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-checkstyle-etapas-rojo-verde.png" alt="Vista de etapas de Jenkins con las ejecuciones 4 y 5"/>
+  <p><i><b>Figura 7.1.9.</b> Vista de etapas del job <code>safestep-backend</code>: la ejecución #5 (arriba) pasa las diez etapas y la ejecución #4 (abajo) aparece en rojo por la compuerta de estilo. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Cómo reproducir el entorno de CI:**
