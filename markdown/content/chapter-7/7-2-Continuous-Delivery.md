@@ -4,7 +4,7 @@ La entrega continua extiende el pipeline de integración continua (7.1) con tres
 
 La misma entrega incluye un **entorno local contenedorizado** de la aplicación: el backend y su base de datos PostgreSQL se levantan juntos con un único comando, de modo que cualquier integrante puede reproducir el sistema completo en su equipo. Las imágenes se construyen desde el mismo `Dockerfile` que utiliza Render para desplegar el backend (5.2.1.5.8).
 
-El entorno de CI se reconstruyó con el script `ci/start-ci.sh`, por lo que el historial de ejecuciones de Jenkins que se cita en esta sección parte de la ejecución #1 y es independiente del historial citado en 7.1.
+El entorno de CI se volvió a levantar con el script `ci/start-ci.sh`, por lo que el historial de ejecuciones de Jenkins que se cita en esta sección parte de la ejecución #1 y es independiente del historial citado en 7.1.
 
 ## 7.2.1. Tools and Practices
 
@@ -30,7 +30,7 @@ El entorno de CI se reconstruyó con el script `ci/start-ci.sh`, por lo que el h
 - **Secretos fuera del repositorio.** Las claves del entorno local viven en archivos `.env` que Git ignora; el repositorio solo incluye plantillas sin valores (`.env.example`). El token de Docker Hub nunca aparece en el `Jenkinsfile`: Jenkins lo entrega al paso de publicación como credencial y los registros de la ejecución lo ocultan.
 - **Mínimo privilegio.** El token de Docker Hub tiene el permiso *Repo Read & Write*: puede subir imágenes, pero no borrarlas ni administrar la cuenta.
 - **Cierre de sesión tras publicar.** La etapa de publicación ejecuta `docker logout` aunque falle, para no dejar la sesión guardada en el directorio de Jenkins.
-- **Entorno reproducible como código.** El `docker-compose.yml` de la aplicación y el de CI, el `Dockerfile` de cada imagen y `casc.yaml` están versionados; reconstruir el entorno en otro equipo requiere solo completar el archivo `.env` de ese equipo.
+- **Entorno reproducible como código.** El `docker-compose.yml` de la aplicación y el de CI, el `Dockerfile` de cada imagen y `casc.yaml` están versionados; levantar el entorno en otro equipo requiere solo completar el archivo `.env` de ese equipo.
 - **Arranque ordenado.** La API espera a que PostgreSQL pase su verificación de salud antes de iniciarse, lo que evita errores de conexión durante el arranque.
 - **Redes separadas.** La aplicación usa su propia red (`safestep_default`) y las herramientas de CI usan `spring-postgres-net`. Jenkins no necesita comunicarse con la API ni con la base de datos, porque las pruebas del pipeline usan una base en memoria y la construcción de imágenes se hace a través del socket de Docker.
 
@@ -106,7 +106,7 @@ docker compose up -d --build
 | Administrador inicial | `Bootstrap admin user 'admin' created` (la variable de administrador estaba definida) |
 | Documentación de la API | `http://localhost:8092/swagger-ui/index.html` responde HTTP 200 |
 | Contrato OpenAPI | 73 operaciones publicadas en `/v3/api-docs` |
-| Reconstrucción de imágenes con caché | 2.6 s |
+| Nueva construcción de las imágenes con caché | 2.6 s |
 
 <div align="center">
   <img src="../../assets/images/chapter-7/compose-ps.png" alt="Servicios de la aplicación en ejecución con docker compose ps"/>
@@ -142,7 +142,7 @@ Para que el pipeline construya imágenes, el contenedor de Jenkins necesita dos 
 
 **Riesgo asumido.** Montar el socket otorga al contenedor control casi total del motor de Docker del equipo. Se acepta en este entorno porque es local, de uso exclusivo del equipo, y porque es el procedimiento que describe el material del curso; no debe replicarse en un servidor compartido.
 
-**Verificación.** Desde el contenedor, `docker version` muestra el cliente 29.9.2 de Jenkins y el servidor de Docker Desktop (motor 29.9.1), `docker buildx version` responde con la versión 0.38.1 y `docker ps` lista los contenedores del equipo, incluidos `safestep-api`, `safestep-postgres` y el propio Jenkins. Reconstruir la imagen de Jenkins tardó 33.6 s, porque Maven y el JDK 26 quedaron en caché.
+**Verificación.** Desde el contenedor, `docker version` muestra el cliente 29.9.2 de Jenkins y el servidor de Docker Desktop (motor 29.9.1), `docker buildx version` responde con la versión 0.38.1 y `docker ps` lista los contenedores del equipo, incluidos `safestep-api`, `safestep-postgres` y el propio Jenkins. Volver a construir la imagen de Jenkins tardó 33.6 s, porque Maven y el JDK 26 quedaron en caché.
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-docker-version.png" alt="docker version ejecutado dentro del contenedor de Jenkins"/>
@@ -166,7 +166,7 @@ credentials:
               password: "${DOCKER_HUB_TOKEN:-}"
 ```
 
-El token se generó en Docker Hub (*Account Settings → Personal access tokens*) con la descripción `jenkins-token` y el permiso *Repo Read & Write*. Se eligió declarar la credencial en `casc.yaml` en lugar de crearla a mano en la interfaz de Jenkins para que se aplique en cada arranque y pueda reproducirse en otro equipo completando solo su `.env`. Se asume, sin haberlo comprobado, que una credencial creada manualmente podría perderse al reconstruir Jenkins, porque JCasC reaplica su configuración. La verificación se hizo en dos niveles: dentro del contenedor, `DOCKER_HUB_USER` vale `melga135` y el token tiene los 36 caracteres propios de un token de Docker Hub; y en Jenkins, la credencial aparece junto con `sonarqube-token-id`.
+El token se generó en Docker Hub (*Account Settings → Personal access tokens*) con la descripción `jenkins-token` y el permiso *Repo Read & Write*. Se eligió declarar la credencial en `casc.yaml` en lugar de crearla a mano en la interfaz de Jenkins para que se aplique en cada arranque y pueda reproducirse en otro equipo completando solo su `.env`. Se asume, sin haberlo comprobado, que una credencial creada manualmente podría perderse al volver a crear Jenkins, porque JCasC reaplica su configuración. La verificación se hizo en dos niveles: dentro del contenedor, `DOCKER_HUB_USER` vale `melga135` y el token tiene los 36 caracteres propios de un token de Docker Hub; y en Jenkins, la credencial aparece junto con `sonarqube-token-id`.
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-credencial-dockerhub.png" alt="Credenciales globales de Jenkins"/>
@@ -298,7 +298,7 @@ Para ejecutarla necesita una base PostgreSQL y las mismas variables de entorno d
   <p><i><b>Figura 7.2.14.</b> Descarga de la imagen publicada desde Docker Hub: se descargan las capas nuevas (<code>Pull complete</code>) y las que ya existían en el equipo no se repiten (<code>Already exists</code>). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
-**Historial de ejecuciones del entorno reconstruido:**
+**Historial de ejecuciones del entorno actual:**
 
 | Ejecución | Resultado | Qué ocurrió |
 |-----------|-----------|-------------|

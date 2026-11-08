@@ -17,7 +17,7 @@ Las 242 pruebas del backend que ejecuta Maven (209 unitarias y de integración c
 
 <div align="center">
   <img src="../../assets/images/chapter-6/jenkins-tendencia-pruebas.png" alt="Tendencia de resultados de pruebas en Jenkins"/>
-  <p><i><b>Figura 6.1.2.</b> Tendencia de los resultados de pruebas en Jenkins: las 242 pruebas aprobadas en cada ejecución del entorno reconstruido. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.2.</b> Tendencia de los resultados de pruebas en Jenkins: las 242 pruebas aprobadas en cada ejecución del entorno actual. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
