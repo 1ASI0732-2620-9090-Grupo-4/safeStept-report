@@ -1,36 +1,291 @@
 # 8.2. Experiment Design
 
-Pendiente.
+La fase de diseño convierte cada pregunta de 8.1 en un experimento confiable. Siguiendo a Rissen, el diseño descansa en tres pilares: las **hipótesis** (qué creemos que pasará), las **medidas** (cómo detectaremos la evidencia) y las **condiciones** (en qué entorno lo probaremos). A ellos se suman la **escala** (cuánta evidencia hace falta) y el **método** (con qué herramienta se recogerá). Todo se decide antes de escribir una sola línea de código.
 
+Se diseñan las diez preguntas de 8.1.5. Los valores de partida que aparecen como «(supuesto)» no son mediciones: SafeStep no registra hoy el comportamiento de uso (8.1.1), así que cada tasa base es una estimación de planificación que debe reemplazarse por la medición de un experimento de línea base antes de ejecutar el experimento correspondiente.
 
 ## 8.2.1. Hypotheses
 
-Pendiente.
+Una hipótesis es una declaración explícita de una creencia, expresada como una diferencia observable entre el comportamiento actual y el esperado tras una intervención. Para ser utilizable debe ser **testeable** (comprobable con los recursos y el tiempo del equipo), **falseable** (es concebible hallar evidencia que la refute) y **medible** (existe un método tangible para comparar la evidencia con el enunciado). Cada hipótesis se redacta en pareja: la **alternativa (H1)**, que es la apuesta del equipo, y la **nula (H0)**, que asume que el cambio no tiene efecto o que cualquier diferencia es azar. La regla de oro es que el experimento **no busca probar H1, sino reunir evidencia suficiente para rechazar H0**; si el valor p es menor que el nivel de significancia (0.05), se rechaza H0 y se adopta H1.
+
+Las hipótesis se escribieron con la plantilla de XDPD: «Creemos que la respuesta es [creencia], cuya evidencia se reflejará en [medidas], bajo las circunstancias de [condiciones]».
+
+### Hipótesis de las preguntas guiadas por una creencia
+
+**Q7 — Costo del primer cupón**
+
+- **H1:** El precio de 100 SafeCoins aumentará la proporción de usuarios elegibles que canjean su primer cupón en 30 días de 40 % a 60 % frente al precio actual de 150, y el de 200 la reducirá.
+- **H0:** El precio del cupón no produce diferencias significativas en la proporción de canje en 30 días (p ≥ 0.05).
+- **Plantilla:** Creemos que un precio menor para el primer cupón aumenta el canje; la evidencia se reflejará en la proporción de usuarios elegibles que canjean en 30 días, bajo las circunstancias de usuarios nuevos asignados al azar a 100, 150 o 200 monedas.
+
+**Q1 — Guía de bienvenida**
+
+- **H1:** Los usuarios nuevos que ven la guía de tres pasos terminarán su primera simulación en los primeros 7 días en una proporción 20 puntos mayor (50 % → 70 %) que quienes no la ven.
+- **H0:** La guía no produce diferencias significativas en la proporción de primera simulación terminada en 7 días (p ≥ 0.05).
+- **Plantilla:** Creemos que explicar XP, SafeCoins y misiones al inicio ayuda a terminar la primera simulación; la evidencia se reflejará en la proporción de usuarios nuevos que la terminan en 7 días, bajo las circunstancias de usuarios nuevos asignados al azar a ver o no la guía.
+
+**Q8 — Bonificación por racha**
+
+- **H1:** Los usuarios con bonificación de +20 % por tres días consecutivos practicarán un día más en 14 días (3 → 4).
+- **H0:** La bonificación no produce diferencias significativas en los días con práctica en 14 días (p ≥ 0.05).
+- **Plantilla:** Creemos que premiar la continuidad aumenta la regularidad; la evidencia se reflejará en los días con al menos una simulación completada en 14 días, bajo las circunstancias de usuarios con una simulación completada asignados al azar a tener o no la bonificación.
+
+**Q3 — Experiencia previa y abandono del nivel Básico**
+
+- **H1:** Las personas con experiencia previa declarada abandonarán las simulaciones de nivel Básico en el doble de los casos que las que no tienen experiencia (40 % frente a 20 %).
+- **H0:** La experiencia previa no se asocia a diferencias significativas en el abandono de las simulaciones de nivel Básico (p ≥ 0.05).
+- **Plantilla:** Creemos que quienes ya saben primeros auxilios abandonan lo básico; la evidencia se reflejará en la proporción de simulaciones de nivel Básico iniciadas y no terminadas, bajo las circunstancias de usuarios que declaran o no experiencia previa.
+
+**Q9 — Umbral de aprobación**
+
+- **H1:** Con un umbral de 80 % la mejora de precisión entre el primer y el segundo intento de una misma simulación será 5 puntos mayor que con el umbral actual de 70 %.
+- **H0:** El umbral de aprobación no produce diferencias significativas en la mejora de precisión entre intentos (p ≥ 0.05).
+- **Plantilla:** Creemos que un umbral más exigente impulsa a aprender más del primer error; la evidencia se reflejará en la diferencia de precisión entre el segundo y el primer intento, bajo las circunstancias de usuarios nuevos asignados al azar a 60, 70 u 80 %.
+
+**Q2 — Recompensa visible antes de empezar**
+
+- **H1:** Mostrar antes de empezar cuánto pagará el intento aumentará en 0.75 las simulaciones distintas completadas en 14 días (2.0 → 2.75).
+- **H0:** Mostrar la recompensa no produce diferencias significativas en las simulaciones distintas completadas (p ≥ 0.05).
+- **Plantilla:** Creemos que conocer la regla de recompensa orienta a probar simulaciones distintas; la evidencia se reflejará en el número de simulaciones distintas completadas en 14 días, bajo las circunstancias de usuarios con una simulación completada asignados al azar a ver o no la recompensa del próximo intento.
+
+**Q6 — Producto sugerido con frase contextual**
+
+- **H1:** La frase contextual aumentará en 10 puntos (10 % → 20 %) la proporción de simulaciones aprobadas tras las cuales se abre la ficha de un producto.
+- **H0:** La frase contextual no produce diferencias significativas en la apertura de fichas (p ≥ 0.05).
+- **Plantilla:** Creemos que relacionar el producto con lo practicado despierta interés; la evidencia se reflejará en la proporción de aperturas de ficha tras una simulación aprobada, bajo las circunstancias de usuarios asignados al azar a la sugerencia genérica o contextual.
+
+### Preguntas exploratorias
+
+Las preguntas Q5, Q4 y Q10 no parten de una creencia, por lo que no llevan hipótesis alterna ni nula. En su lugar se declara qué se espera descubrir y cuándo se considerará suficiente la evidencia.
+
+| Pregunta | Qué se espera descubrir | Criterio de suficiencia |
+| --- | --- | --- |
+| Q5 | Las causas del abandono de una simulación (duración, dificultad, falta de comprensión del sistema, interrupción u otras) | 30 respuestas y 8 entrevistas, o hasta que las nuevas respuestas dejen de aportar categorías nuevas |
+| Q4 | La distribución real de la primera simulación por tipo de emergencia y por punto de entrada | 97 primeras simulaciones (margen de ±10 puntos al 95 %) |
+| Q10 | El intervalo típico entre sesiones y su relación con la precisión de la sesión siguiente | 100 usuarios con tres o más sesiones |
+
+### Verificación de las hipótesis
+
+| Hipótesis | Testeable | Falseable | Medible |
+| --- | --- | --- | --- |
+| Q7 | Sí: la asignación aleatoria de precio es una configuración del backend | Sí: si la proporción de canje no difiere, H0 se mantiene | Sí: canje registrado en 30 días |
+| Q1 | Sí: una tarjeta en el dashboard con interruptor de variante | Sí: igual proporción en ambos grupos refuta H1 | Sí: primera simulación terminada en 7 días |
+| Q8 | Sí: una regla de bonificación y un contador | Sí: igual cantidad de días activos refuta H1 | Sí: días con simulación completada |
+| Q3 | Sí: una pregunta en el registro y datos de abandono | Sí: igual abandono entre grupos refuta H1 | Sí: simulaciones iniciadas y no terminadas |
+| Q9 | Sí: el umbral es un parámetro de la regla de recompensa | Sí: igual mejora entre intentos refuta H1 | Sí: precisión del segundo menos la del primer intento |
+| Q2 | Sí: un texto adicional en la tarjeta de simulación | Sí: igual cantidad de simulaciones distintas refuta H1 | Sí: simulaciones distintas completadas |
+| Q6 | Sí: un cambio de texto en la sugerencia | Sí: igual apertura de fichas refuta H1 | Sí: apertura de ficha tras una simulación aprobada |
 
 ## 8.2.2. Domain Business Metrics
 
-Pendiente.
+Antes de elegir las medidas de cada experimento se definen las métricas del negocio de SafeStep que los experimentos buscan mover. Son pocas y están ordenadas desde la que expresa el valor del producto hasta las que lo sostienen.
+
+**Métrica guía (norte):** **simulaciones aprobadas por usuario activo por semana**. Resume el propósito del producto: que las personas practiquen y mejoren, no solo que entren.
+
+| Código | Métrica | Fórmula | Fuente hoy | Preguntas |
+| --- | --- | --- | --- | --- |
+| M1 | Activación | Usuarios nuevos que terminan su primera simulación en 7 días ÷ usuarios nuevos | Nueva (inicio y registro de eventos) | Q1, Q5 |
+| M2 | Amplitud de práctica | Simulaciones distintas completadas por usuario en 14 días | Intentos registrados | Q2, Q4 |
+| M3 | Regularidad | Días con al menos una simulación completada en 14 días | Intentos registrados (fecha de finalización) | Q8, Q10 |
+| M4 | Retención | Usuarios que vuelven entre el día 2 y el 7, y entre el día 8 y el 30 ÷ usuarios de la cohorte | Nueva (sesiones) | Q10 |
+| M5 | Economía de monedas | SafeCoins emitidas ÷ SafeCoins gastadas en cupones, por periodo | Transacciones de monedas y cupones canjeados | Q7, Q8, Q9 |
+| M6 | Canje de cupones | Usuarios elegibles que canjean su primer cupón en 30 días ÷ usuarios elegibles | Cupones canjeados | Q7 |
+| M7 | Interés por la tienda | Simulaciones aprobadas tras las cuales se abre la ficha de un producto ÷ simulaciones aprobadas | Nueva (eventos de tienda) | Q6 |
+| M8 | Aprendizaje observable | Precisión del segundo intento menos la del primero en una misma simulación (puntos) | Intentos registrados | Q9, Q3 |
+| M9 | Abandono de simulaciones | Simulaciones iniciadas y no terminadas ÷ simulaciones iniciadas | Nueva (inicio de simulación) | Q3, Q5 |
+
+**Equilibrio entre métricas.** M5 es una métrica de equilibrio de la economía del producto: si las monedas se emiten mucho más rápido de lo que se gastan, pierden valor; si casi no se emiten, no motivan. Los experimentos Q7, Q8 y Q9 modifican justamente las entradas y salidas de esta economía, por lo que M5 se vigila como métrica de salud en los tres.
 
 ## 8.2.3. Measures
 
-Pendiente.
+Las medidas de cada experimento se eligieron con los criterios de XDPD: **representativas** (reflejan el comportamiento y no solo el volumen), **calculadas o proporcionales** cuando una proporción revela mejor la intención que un conteo bruto, y **frugales** (se mide solo lo necesario durante el tiempo necesario). Además de la medida principal se definen **métricas de salud** (*health metrics*) que avisan si el experimento mejora una cosa pero daña otra; son el mecanismo del principio de «no hacer daño».
+
+| Pregunta | Medida principal | Medidas secundarias | Métricas de salud |
+| --- | --- | --- | --- |
+| Q5 | Distribución porcentual de los motivos de abandono (%) | Tasa de respuesta al mensaje; paso en que se abandona | Que el mensaje no aumente el abandono: tasa de simulaciones no terminadas con y sin el mensaje |
+| Q7 | Proporción de usuarios elegibles que canjean su primer cupón en 30 días (M6) | Simulaciones completadas por usuario; monedas acumuladas sin gastar | Economía de monedas (M5); abandono de la aplicación |
+| Q1 | Proporción de usuarios nuevos que terminan su primera simulación en 7 días (M1) | Tiempo hasta la primera simulación; tasa de omisión de la guía | Rebote del primer día |
+| Q8 | Días con simulación completada en 14 días (M3) | Proporción que alcanza una racha de 3 días; monedas emitidas por usuario | Precisión promedio (para detectar práctica más frecuente pero peor) |
+| Q3 | Proporción de simulaciones de nivel Básico iniciadas y no terminadas (M9) | Precisión de quienes las terminan | No aplica: es un estudio observacional sin intervención |
+| Q9 | Diferencia de precisión entre segundo y primer intento (M8) | Proporción que repite; monedas ganadas | Abandono tras un intento no aprobado; economía de monedas (M5) |
+| Q2 | Simulaciones distintas completadas en 14 días (M2) | Repeticiones de una misma simulación; monedas totales | Simulaciones iniciadas y no terminadas (M9) |
+| Q6 | Proporción de simulaciones aprobadas tras las cuales se abre una ficha de producto (M7) | Productos agregados al carrito | Tiempo hasta volver a las simulaciones |
+| Q4 | Distribución porcentual de la primera simulación por tipo de emergencia y por punto de entrada | Dificultad elegida | No aplica: sin intervención |
+| Q10 | Intervalo mediano entre sesiones consecutivas | Correlación entre intervalo y precisión de la siguiente sesión (M4) | No aplica: sin intervención |
+
+**Medidas descartadas.** No se medirán visitas totales a páginas, clics totales ni tiempo total en la aplicación: son volúmenes que no distinguen si la persona aprendió o solo navegó. Tampoco se capturará ningún dato personal; las medidas usan un identificador seudónimo (8.2.8).
 
 ## 8.2.4. Conditions
 
-Pendiente.
+Las condiciones delimitan el entorno, el grupo y el flujo bajo los cuales opera cada experimento. En una prueba A/B hay una **condición de control** (la experiencia sin cambios, que actúa asumiendo que H0 es cierta) y una o más **condiciones experimentales** (expuestas al cambio, diseñadas para reunir evidencia que permita rechazar H0). En las preguntas exploratorias las condiciones describen el contexto de la observación.
+
+| Pregunta | Control | Condición(es) experimental(es) | Población | Asignación |
+| --- | --- | --- | --- | --- |
+| Q5 | No aplica | Mensaje de salida con cinco opciones al abandonar a medias | Quienes salen de una simulación tras responder al menos un paso | Todos los que cumplen el gatillo |
+| Q7 | B: 150 monedas (precio actual) | A: 100 monedas; C: 200 monedas | Usuarios nuevos que ganaron al menos 100 monedas | Al azar, 1/3 por variante, fija desde el registro |
+| Q1 | A: dashboard actual | B: dashboard con la guía de tres pasos | Usuarios nuevos | Al azar, 1/2 por variante |
+| Q8 | A: sin bonificación | B: contador de racha y bonificación de +20 % | Usuarios con al menos una simulación completada | Al azar, 1/2 por variante |
+| Q3 | Grupo 2: sin experiencia declarada | Grupo 1: con experiencia declarada | Usuarios que inician una simulación de nivel Básico | Autodeclarada en el registro (observacional) |
+| Q9 | B: umbral de 70 % | A: umbral de 60 %; C: umbral de 80 % | Usuarios nuevos | Al azar, 1/3 por variante, fija desde el registro |
+| Q2 | A: tarjeta actual | B: tarjeta con la recompensa del próximo intento | Usuarios con al menos una simulación completada | Al azar, 1/2 por variante |
+| Q6 | A: sugerencia genérica | B: sugerencia con frase contextual | Usuarios que aprueban una simulación | Al azar, 1/2 por variante |
+| Q4 | No aplica | Observación sin intervención | Usuarios nuevos que inician una simulación | Todos |
+| Q10 | No aplica | Observación sin intervención | Usuarios con tres o más sesiones | Todos |
+
+**Reglas comunes de las condiciones.**
+
+1. **Asignación estable.** La variante de un usuario se calcula a partir de su identificador seudónimo y el nombre del experimento, de modo que la misma persona ve siempre la misma variante.
+2. **Exclusiones.** Se excluyen cuentas de administración, cuentas de prueba y usuarios que participaron en otro experimento que interfiere con el mismo recorrido (ver 8.2.6).
+3. **Población realista.** Los grupos se arman con usuarios reales de los tres segmentos objetivo (1.3), no con datos sembrados.
 
 ## 8.2.5. Scale Calculations and Decisions
 
-Pendiente.
+La escala es la cantidad de evidencia que hay que reunir para que una respuesta sea útil y confiable. Depende de tres parámetros que protegen al producto de los dos errores posibles:
+
+- **Nivel de significancia (α = 0.05):** la probabilidad aceptada de un falso positivo (error tipo I): creer que hay una mejora cuando solo hay ruido.
+- **Poder estadístico (1 − β = 0.80):** la probabilidad de detectar un efecto real; su complemento es el falso negativo (error tipo II): descartar una mejora real porque el experimento no fue lo bastante sensible.
+- **Efecto mínimo detectable (MDE):** el cambio más pequeño, respecto de la métrica base, que justificaría implementar la función. Puede expresarse como diferencia absoluta (de 50 % a 70 % son 20 puntos) o relativa (un aumento de 40 %).
+
+Cuanto menor es el MDE o mayor la certeza exigida, mayor es la muestra y más largo el experimento. Por eso se fijó un MDE que justifica el esfuerzo de construir cada cambio y no uno arbitrariamente pequeño.
+
+### Fórmulas
+
+Para comparar dos proporciones, con prueba bilateral, el tamaño por variante es:
+
+`n = (Z(1−α/2) + Z(1−β))² · [p₁(1 − p₁) + p₂(1 − p₂)] / (p₂ − p₁)²`
+
+Para comparar dos medias, con desviación estándar σ y diferencia mínima δ:
+
+`n = 2 · σ² · (Z(1−α/2) + Z(1−β))² / δ²`
+
+Con α = 0.05 y potencia 0.80, `Z(0.975) = 1.96` y `Z(0.80) = 0.8416`. En los experimentos con tres variantes se compara cada variante contra el control y se aplica la **corrección de Bonferroni**: α = 0.05 / 2 = 0.025 por comparación (`Z(0.9875) = 2.2414`). Para las preguntas exploratorias se usa el margen de error de una proporción: `n = Z² · 0.25 / e²`, que con e = ±10 puntos y 95 % de confianza da 97.
+
+### Resultado del cálculo
+
+| Pregunta | Medida | Valor base (supuesto) | MDE | σ (supuesto) | α | n por variante | Total |
+| --- | --- | --- | --- | --- | --- | :-: | :-: |
+| Q1 | Proporción | 50 % | +20 puntos (relativo +40 %) | — | 0.05 | 91 | 182 |
+| Q2 | Media | 2.0 simulaciones | +0.75 (relativo +37 %) | 1.5 | 0.05 | 63 | 126 |
+| Q3 | Proporción | 20 % | +20 puntos (relativo +100 %) | — | 0.05 | 79 | 158 |
+| Q6 | Proporción | 10 % | +10 puntos (relativo +100 %) | — | 0.05 | 197 | 394 |
+| Q7 | Proporción | 40 % | +20 puntos (relativo +50 %) | — | 0.025 | 115 | 345 |
+| Q8 | Media | 3.0 días | +1 día (relativo +33 %) | 2.0 | 0.05 | 63 | 126 |
+| Q9 | Media | +8 puntos de mejora | +5 puntos | 15 | 0.025 | 172 | 516 |
+| Q4 | Proporción (precisión) | — | ±10 puntos | — | 95 % | — | 97 |
+| Q5 | Saturación de categorías | — | — | — | — | — | 30 respuestas + 8 entrevistas |
+| Q10 | Cohorte | — | — | — | — | — | 100 usuarios |
+
+### Duración estimada
+
+La duración depende del tráfico que SafeStep reciba, que hoy no se conoce. Se estima en dos escenarios supuestos: **30 usuarios nuevos por semana** (conservador, sin campaña) y **100 por semana** (con una campaña dirigida a universidades, comunidades vecinales y grupos de brigadistas). La duración es el tiempo para reunir la muestra más la ventana de observación; el porcentaje es la fracción de usuarios nuevos que entra a la población del experimento (supuesto).
+
+| Pregunta | Entra a la población | Ventana | Con 30 por semana | Con 100 por semana |
+| --- | :-: | :-: | :-: | :-: |
+| Q1 | 100 % | 7 días | 7.1 semanas | 2.8 semanas |
+| Q2 | 70 % | 14 días | 8.0 semanas | 3.8 semanas |
+| Q3 | 24 % (grupo con experiencia que inicia nivel Básico) | 7 días | 12.0 semanas | 4.3 semanas |
+| Q4 | 80 % | — | 4.0 semanas | 1.2 semanas |
+| Q5 | 16 % (inician, abandonan y responden) | — | 6.2 semanas | 1.9 semanas |
+| Q6 | 60 % | — | 21.9 semanas | 6.6 semanas |
+| Q7 | 50 % | 30 días | 27.3 semanas | 11.2 semanas |
+| Q8 | 70 % | 14 días | 8.0 semanas | 3.8 semanas |
+| Q9 | 40 % | 14 días | 45.0 semanas | 14.9 semanas |
+| Q10 | 20 % | 45 días | 23.1 semanas | 11.4 semanas |
+
+### Decisiones de escala
+
+1. **Medir antes de comparar.** Como las tasas base son supuestos, la primera acción es un **experimento de línea base** de dos semanas, sin intervención, que registre los eventos de 8.2.8. Los cálculos se rehacen con las tasas medidas. Si una tasa base real difiere mucho del supuesto, cambia el tamaño de muestra y la decisión de ejecutar.
+2. **Umbral de ejecutabilidad.** Se considera ejecutable en un periodo académico un experimento que reúna su muestra en **12 semanas o menos**. Con 30 usuarios nuevos por semana lo son Q1, Q2, Q4, Q5, Q8 y, en el límite, Q3; con 100 por semana lo son todos salvo Q9 (14.9 semanas). Q9 queda diseñado pero no se ejecutará salvo que el tráfico supere ese nivel o se acepte un MDE mayor, y por modificar una regla educativa exige además una revisión previa del equipo.
+3. **Corrección por comparaciones múltiples.** Q7 y Q9 usan Bonferroni (α = 0.025) porque comparan dos variantes con el mismo control.
+4. **Qué se hará si no se alcanza la muestra.** No se declarará significancia con menos usuarios que el tamaño calculado. Un resultado con muestra incompleta se informa como evidencia preliminar, con su intervalo de confianza, y no como respuesta a la pregunta.
+5. **Regla de «no mirar».** No se revisan los resultados antes de alcanzar la muestra: solo se verifica, a los pocos días de empezar, que los datos se estén registrando, y después la cantidad de datos, no los resultados. Detener un experimento al ver una ventaja prematura invalida su confiabilidad estadística.
+6. **Experimentos de línea base y exploratorios.** Q4, Q5 y Q10 no calculan poder estadístico porque no hay hipótesis que falsear; su escala se define por precisión (Q4), saturación de categorías (Q5) y tamaño de cohorte (Q10).
 
 ## 8.2.6. Methods Selection
 
-Pendiente.
+El método es el vehículo técnico con el que se recogerán los datos. No todo experimento de software es una prueba A/B, y no toda prueba A/B exige modificar el código en producción. Para cada pregunta se aplicó el filtro de **lo más simple útil** (*simplest useful thing*): el método más económico y rápido que siga siendo capaz de alcanzar el MDE diseñado sin contaminar los datos.
+
+| Pregunta | Objeto de indagación | Método elegido | Por qué es lo más simple útil | Alternativa descartada |
+| --- | --- | --- | --- | --- |
+| Q5 | Causas del abandono | Mensaje contextual en la aplicación más entrevistas breves (método mixto) | Pregunta en el momento exacto del abandono, cuando el motivo está fresco; las entrevistas profundizan | Encuesta posterior por correo: menor respuesta y recuerdo impreciso |
+| Q7 | Efecto del precio del cupón | Prueba A/B/C con asignación aleatoria | El precio es un parámetro del backend; una prueba controlada aísla su efecto | Preguntar a los usuarios cuánto pagarían: las respuestas declaradas no predicen la conducta |
+| Q1 | Efecto de la guía de bienvenida | Prueba A/B | Una tarjeta con interruptor de variante; no cambia la lógica de negocio | Entrevistas de usabilidad: no estiman proporciones |
+| Q8 | Efecto de la bonificación por racha | Prueba A/B de reglas de gamificación | La bonificación es una regla de cálculo de monedas | Simulación con datos sembrados: no refleja el comportamiento real |
+| Q3 | Diferencia entre dos grupos de usuarios | Estudio comparativo de cohortes (observacional) | No se puede asignar la experiencia previa; basta clasificar y comparar | Experimento asignando la experiencia: imposible |
+| Q9 | Efecto del umbral de aprobación | Prueba A/B/C | El umbral es un parámetro de la regla de recompensa | Cambiar el umbral para todos y comparar antes y después: confunde el efecto con el tiempo |
+| Q2 | Efecto de ver la recompensa | Prueba A/B | Un texto adicional en la tarjeta | Prototipo en papel: no mide conducta repetida |
+| Q6 | Efecto de la frase contextual | Prueba A/B de contenido | Cambia únicamente un texto | Entrevistas: no miden clics reales |
+| Q4 | Preferencias iniciales | Análisis exploratorio de eventos | El evento de inicio ya basta | Encuesta de preferencias: sesgo de deseabilidad |
+| Q10 | Frecuencia y desempeño | Análisis exploratorio de cohorte con registro de sesiones | Los eventos de sesión y de simulación ya permiten el cruce | Diario del usuario: carga excesiva |
+
+### Principios que rigen todos los experimentos
+
+- **No hacer daño.** El riesgo colateral sobre la experiencia de los usuarios debe ser proporcional al aprendizaje esperado. Los experimentos no tocan pagos reales: las SafeCoins no tienen valor monetario y no se modifica el pago con Stripe. Las métricas de salud de 8.2.3 son la alerta temprana; si una de ellas empeora de forma marcada por razones técnicas (por ejemplo, errores del sistema), el experimento se detiene sin revisar la medida principal.
+- **Datos mínimos y seudónimos.** Se registra un identificador seudónimo, nunca nombres, correos ni texto libre que identifique a alguien. Las respuestas libres de Q5 son opcionales y se revisan antes de citarse.
+- **Consentimiento.** Se informa en la aplicación que las pantallas pueden variar para mejorar el producto y que hay registro anónimo de uso; las entrevistas de Q5 requieren aceptación explícita.
+- **Experimentos en paralelo.** Dos experimentos que actúan sobre el mismo recorrido pueden contaminarse. Q1 (primera simulación) y Q7 (primer cupón) comparten a los usuarios nuevos y Q1 modifica cuántas monedas se ganan al principio, lo que afecta quién es elegible para Q7. Por eso se ejecutan en fases: **fase 1** (semanas 1 a 8): línea base, Q5 y Q1; **fase 2**: Q7, con usuarios que se registraron después de cerrar Q1. Q5 no asigna variantes (solo pregunta al abandonar) y puede correr junto a cualquiera de los dos.
+- **Asignación independiente.** Cuando dos experimentos sí coinciden, cada uno usa su propio nombre en el cálculo de la variante, de modo que las asignaciones no estén correlacionadas.
 
 ## 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
-Pendiente.
+Para no medir «todo» se parte de los objetivos analíticos, se derivan las preguntas que los responden y se eligen los indicadores mínimos: un enfoque Goal–Question–Metric. Medir sin propósito genera deuda técnica, ralentiza la aplicación y aumenta el riesgo de privacidad; por eso cada indicador de la tabla se retirará al terminar el experimento que lo necesita.
+
+| Objetivo analítico | Pregunta | KPI | Meta o umbral de decisión | Fuente | Frecuencia de revisión |
+| --- | --- | --- | --- | --- | --- |
+| Entender por qué se abandona | Q5 | Distribución de motivos de abandono (%) | 30 respuestas en total; actuar sobre cualquier motivo que supere 30 % | Evento de motivo de salida | Al cerrar el experimento |
+| Calibrar el valor de las monedas | Q7 | Proporción de canje del primer cupón en 30 días por variante | Diferencia de 20 puntos con p < 0.025 | Cupones canjeados | Al cerrar el experimento |
+| Mejorar la activación | Q1 | Proporción de primera simulación terminada en 7 días | Diferencia de 20 puntos con p < 0.05 | Eventos de inicio y fin de simulación | Al cerrar el experimento |
+| Sostener la regularidad | Q8, Q10 | Días activos en 14 días; intervalo mediano entre sesiones | +1 día con p < 0.05; intervalo descriptivo | Intentos y sesiones | Al cerrar el experimento |
+| Retener a quienes tienen experiencia | Q3 | Abandono del nivel Básico por grupo | Diferencia de 20 puntos con p < 0.05 | Inicio, fin y perfil | Al cerrar el experimento |
+| Equilibrar la economía | Q7, Q8, Q9 | Monedas emitidas ÷ gastadas (M5) | Entre 1.0 y 3.0 (supuesto, a calibrar con la línea base) | Transacciones de monedas | Semanal, como métrica de salud |
+| Medir aprendizaje observable | Q9 | Mejora de precisión entre intentos | +5 puntos con p < 0.025 | Intentos | Al cerrar el experimento |
+| Vincular tienda y aprendizaje | Q6 | Apertura de ficha tras una simulación aprobada | +10 puntos con p < 0.05 | Eventos de tienda | Al cerrar el experimento |
+
+**Indicadores que no se usarán.** Visitas totales, clics totales y tiempo total en la aplicación (medidas de volumen sin interpretación), y la satisfacción declarada como sustituto del comportamiento: los antecedentes de 1.2 muestran que el interés y la autopercepción no equivalen a estar preparado.
+
+**Qué datos ya existen y cuáles faltan.** Los intentos terminados, las transacciones de monedas y los cupones canjeados ya se guardan y alimentan M2, M3, M5, M6 y M8. Faltan los eventos de inicio de simulación, abandono, navegación, sesión, tienda y asignación de variante, que habilitan M1, M4, M7 y M9 y que se definen en 8.2.8. Hasta que existan, los experimentos que dependen de ellos no pueden ejecutarse.
 
 ## 8.2.8. Web and Mobile Tracking Plan
 
-Pendiente.
+El plan de seguimiento define qué eventos emite la aplicación, cuándo y con qué propiedades. Se limita a lo que necesitan los diez experimentos.
+
+**Propiedades comunes a todos los eventos**
+
+| Propiedad | Tipo | Descripción |
+| --- | --- | --- |
+| `eventId` | texto | Identificador único del evento, para evitar duplicados |
+| `occurredAt` | fecha y hora (UTC) | Momento del evento |
+| `userKey` | texto | Identificador seudónimo del usuario (huella del identificador interno, sin nombre ni correo) |
+| `sessionId` | texto | Identificador de la sesión de uso |
+| `platform` | `web` o `mobile` | Plataforma que emite el evento |
+| `appVersion` | texto | Versión de la aplicación |
+| `assignments` | objeto | Variante asignada en cada experimento activo, por ejemplo `{"welcome-guide": "B"}` |
+
+**Eventos**
+
+| Evento | Se emite cuando | Propiedades propias | Preguntas | Web | Móvil |
+| --- | --- | --- | --- | --- | --- |
+| `account_registered` | Se crea una cuenta | `priorExperience` (sí o no) | Q3 | Se implementa | Pendiente |
+| `session_started` | La persona abre la aplicación con sesión iniciada | — | Q10 | Se implementa | Pendiente |
+| `welcome_guide_viewed` | Se muestra la guía de bienvenida | — | Q1 | Se implementa | Pendiente |
+| `welcome_guide_step` | Se avanza un paso de la guía | `step` (1 a 3) | Q1 | Se implementa | Pendiente |
+| `welcome_guide_dismissed` | Se omite o se cierra la guía | `completed` (sí o no) | Q1 | Se implementa | Pendiente |
+| `simulation_started` | Se contesta o se abre el primer paso de una simulación | `simulationId`, `emergencyType`, `difficulty`, `entryPoint` | Q1, Q3, Q4, Q5 | Se implementa | Pendiente |
+| `simulation_step_answered` | Se responde un paso | `stepIndex`, `correct` | Q5, Q9 | Se implementa | Pendiente |
+| `simulation_exit_prompted` | Se muestra el mensaje de salida | `stepIndex` | Q5 | Se implementa | Pendiente |
+| `simulation_exit_reason` | La persona elige un motivo | `reason`, `hasFreeText`, `stepIndex` | Q5 | Se implementa | Pendiente |
+| `simulation_completed` | Se termina una simulación | `simulationId`, `accuracy`, `attemptNumber`, `earnedCoins`, `multiplier`, `passThreshold` | Q1, Q2, Q3, Q8, Q9, Q10 | Se implementa | Pendiente |
+| `reward_preview_viewed` | Se muestra la recompensa del próximo intento | `previewCoins` | Q2 | Se implementa | Pendiente |
+| `streak_updated` | Cambia la racha de días consecutivos | `streakDays`, `bonusApplied` | Q8 | Se implementa | Pendiente |
+| `coupon_viewed` | Se abre la página de cupones | `balance` | Q7 | Se implementa | Pendiente |
+| `coupon_redeemed` | Se canjea un cupón | `couponId`, `costShown`, `balanceBefore` | Q7 | Se implementa | Pendiente |
+| `product_suggestion_shown` | Se muestra la sugerencia tras una simulación aprobada | `variant`, `productId` | Q6 | Se implementa | Pendiente |
+| `product_opened` | Se abre la ficha de un producto sugerido | `productId`, `fromSuggestion` | Q6 | Se implementa | Pendiente |
+
+**Reglas de captura**
+
+1. Los eventos se envían en lotes al backend mediante un punto de entrada nuevo (`POST /api/v1/analytics/events`), que los valida y los guarda en una tabla propia, separada de los datos del producto.
+2. Si el envío falla, no se interrumpe la experiencia de la persona: el evento se descarta o se reintenta una vez.
+3. El texto libre de `simulation_exit_reason` no se guarda en la tabla de eventos; si la persona lo escribe, se almacena aparte, solo con el identificador seudónimo.
+4. Los eventos se conservan 90 días después de cerrar el experimento que los necesita y luego se eliminan; la tabla no se usa para ningún otro fin.
+5. **Móvil.** La aplicación móvil todavía no existe como producto implementado; cuando exista emitirá el mismo esquema con `platform = mobile`, de modo que los resultados de web y móvil se puedan comparar. Esa columna se completará entonces.
