@@ -308,6 +308,7 @@ Para ejecutarla necesita una base PostgreSQL y las mismas variables de entorno d
 | #4 | FAILURE | Commit temporal con una infracción deliberada de Checkstyle: el pipeline se detiene en *Validate Checkstyle* y omite las etapas siguientes (7.1.2) |
 | #5 | SUCCESS | Backend sin infracciones de Checkstyle: las diez entradas en verde (7.1.2) |
 | #6 | SUCCESS | Perfil *Sonar way extended* y 86 incidencias corregidas (6.2.1.2): 242 pruebas, Quality Gate aprobado y la imagen publicada de nuevo en Docker Hub, en 3 min 58 s (7.1.2) |
+| #7 | SUCCESS | Política de recompensas en el servidor y datos semilla reparados: 260 pruebas, Quality Gate aprobado y la imagen publicada de nuevo en Docker Hub, en 5 min 8 s (7.1.2) |
 
 **Limitaciones y mejoras identificadas.**
 

@@ -669,6 +669,7 @@ Para la regla `typescript:S8786` se reescribió `formatPrice` sin esa expresión
 - Las vulnerabilidades pasaron de 2 a 1 (CORS corregido en la etapa 07) y los bugs de 3 a 0 (etapa 08). La incidencia de seguridad que permanece (`java:S4502`) es una decisión de diseño documentada.
 - El Quality Gate cumplió su función: detuvo el código nuevo sin pruebas (etapa 01 y F1) y el código nuevo con una incidencia (etapas 05 y 09), y aprobó las etapas siguientes una vez corregido.
 - Las 86 incidencias de mantenibilidad del backend y las 11 incidencias del frontend se corrigieron el 8 de noviembre con el perfil *Sonar way extended*, en cuatro mediciones con las 242 pruebas del backend en verde. Del backend solo permanece la incidencia de seguridad que es una decisión de diseño.
+- Una medición posterior, hecha el 9 de noviembre con el backend que ya aplica la política de recompensas en el servidor (ejecución #7), confirmó que el estado se mantiene: 260 pruebas aprobadas, 91.6 % de cobertura según SonarQube, 0 *code smells*, 0 bugs, la misma incidencia de seguridad documentada y Quality Gate aprobado (7.1.2).
 - Queda como limitación del frontend su cobertura de pruebas (0.7 %).
 
 ## 6.2.2. Reviews

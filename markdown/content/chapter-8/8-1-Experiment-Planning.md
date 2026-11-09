@@ -8,7 +8,7 @@ Este capítulo aplica el enfoque **Experiment-Driven Product Development (XDPD)*
 
 ## 8.1.1. As-Is Summary
 
-**El producto hoy.** SafeStep es una aplicación web (Angular 21 y Spring Boot, publicada en Render) para practicar primeros auxilios mediante simulaciones con retroalimentación inmediata. El catálogo contiene 18 simulaciones de cuatro pasos cada una (8 de nivel Básico, 6 Intermedio y 4 Avanzado, de 9 a 22 minutos), 14 misiones, 18 insignias, una tienda de 32 productos en 14 categorías y 6 cupones de descuento. Existe un panel de administración y una página de estadísticas personales. La calidad técnica está documentada en el capítulo 6: 242 pruebas automatizadas en el backend, 15 escenarios de pruebas de sistema que recorren el flujo completo, y un pipeline de integración continua (capítulo 7).
+**El producto hoy.** SafeStep es una aplicación web (Angular 21 y Spring Boot, publicada en Render) para practicar primeros auxilios mediante simulaciones con retroalimentación inmediata. El catálogo contiene 18 simulaciones de cuatro pasos cada una (8 de nivel Básico, 6 Intermedio y 4 Avanzado, de 9 a 22 minutos), 14 misiones, 18 insignias, una tienda de 32 productos en 14 categorías y 6 cupones de descuento. Existe un panel de administración y una página de estadísticas personales. La calidad técnica está documentada en el capítulo 6: 260 pruebas automatizadas en el backend, 15 escenarios de pruebas de sistema que recorren el flujo completo, y un pipeline de integración continua (capítulo 7).
 
 **Cómo funciona el bucle de incentivos.** Estas son las reglas vigentes, tomadas del código:
 

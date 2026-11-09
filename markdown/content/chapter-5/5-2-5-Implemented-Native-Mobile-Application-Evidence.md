@@ -104,7 +104,7 @@ La aplicación consume estos *endpoints* de la API REST (5.2.7), con la URL base
 
 ### 5.2.5.3. Evidencia de pruebas
 
-Las pruebas se ejecutaron el 8 de noviembre de 2026. Las instrumentadas se corrieron en un emulador de Android Studio (Medium Phone, API 37) contra el backend de `main` (259 pruebas aprobadas, 6.1) levantado localmente, con una base de datos PostgreSQL temporal y la aplicación web sirviendo las imágenes.
+Las pruebas se ejecutaron el 8 de noviembre de 2026. Las instrumentadas se corrieron en un emulador de Android Studio (Medium Phone, API 37) contra el backend de `main` (260 pruebas aprobadas, 6.1) levantado localmente, con una base de datos PostgreSQL temporal y la aplicación web sirviendo las imágenes.
 
 | Tipo | Herramienta | Qué verifica | Resultado |
 |------|-------------|--------------|-----------|

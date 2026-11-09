@@ -9,16 +9,16 @@ Esta sección documenta las suites de prueba que verifican SafeStep. La estrateg
 | BDD de aceptación | Cucumber-JVM 8.0.4 + Gherkin | `safeStept-backend/src/test/resources/features` | 33 escenarios (5 features) | 33 aprobados, 0 fallidos |
 | Sistema (web) | Selenium WebDriver 4.50 + Cucumber-JVM 8.0.4 | `safeStept-frontend/e2e-tests` | 15 escenarios (5 features) | 15 aprobados, 0 fallidos |
 
-Las 242 pruebas del backend que ejecuta Maven (209 unitarias y de integración con contexto de Spring, más los 33 escenarios BDD) se ejecutaron en Jenkins (ejecución #8) en 60.2 segundos, sin fallos ni omisiones. Antes de la TB1 el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 209 métodos en 41 clases. Entre ellas está `OpenApiDocumentationIntegrationTest`, con cuatro pruebas que verifican la documentación OpenAPI publicada (5.2.7.14).
+Las 260 pruebas del backend que ejecuta Maven (223 unitarias y de integración con contexto de Spring, más los 37 escenarios BDD) se ejecutaron en Jenkins (ejecución #7, 9 de noviembre de 2026) en 54 segundos, sin fallos ni omisiones. Antes de la TB1 el repositorio contaba con 54 métodos de prueba en 15 clases; las suites actuales reúnen 219 métodos en 43 clases. Desde la ejecución #6 (242 pruebas) se agregaron 18 pruebas: las de la política de recompensas (umbral de 70 % y mitad por cada repetición aprobada) y la que impide que los datos semilla vuelvan a tener caracteres dañados. Entre ellas está `OpenApiDocumentationIntegrationTest`, con cuatro pruebas que verifican la documentación OpenAPI publicada (5.2.7.14).
 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-test-result.png" alt="Resultado de pruebas en Jenkins"/>
-  <p><i><b>Figura 6.1.1.</b> Resultado de las 242 pruebas del backend en Jenkins (ejecución #8). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.1.</b> Resultado de las 260 pruebas del backend en Jenkins (ejecución #7). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/jenkins-tendencia-pruebas.png" alt="Tendencia de resultados de pruebas en Jenkins"/>
-  <p><i><b>Figura 6.1.2.</b> Tendencia de los resultados de pruebas en Jenkins: las 242 pruebas aprobadas en cada ejecución del entorno actual. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.1.2.</b> Tendencia de los resultados de pruebas en Jenkins: el salto de 242 a 260 pruebas aprobadas entre las ejecuciones #6 y #7, sin fallos. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
@@ -72,20 +72,20 @@ void redeemedCoupon_IsUsedOnlyOnce() {
 
 | Medición | Antes de la TB1 | Después |
 |----------|---------------------------|---------|
-| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.8 %** (5,169 de 5,512 instrucciones) |
-| Pruebas del backend | 54 métodos | 242 pruebas |
+| Cobertura de instrucciones (clases medidas) | 44.3 % | **93.9 %** (5,237 de 5,580 instrucciones) |
+| Pruebas del backend | 54 métodos | 260 pruebas |
 
 | Bounded context | Clases medidas | Cobertura |
 |-----------------|----------------|-----------|
-| `analytics` | 3 | 100.0 % |
-| `gamification` | 6 | 100.0 % |
-| `commerce` | 3 | 98.6 % |
+| `analytics` | 5 | 100.0 % |
+| `gamification` | 9 | 100.0 % |
+| `commerce` | 7 | 98.6 % |
 | `shared` | 7 | 94.5 % |
-| `iam` | 17 | 92.0 % |
-| `simulation` | 11 | 91.2 % |
-| `profiles` | 7 | 62.1 % |
+| `iam` | 24 | 92.0 % |
+| `simulation` | 15 | 91.2 % |
+| `profiles` | 10 | 62.1 % |
 
-El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.5 % de cobertura sobre 1,390 líneas medibles (ver 7.1.2).
+El contexto `profiles` es el único por debajo del 80 % por sí solo; el umbral se evalúa sobre el conjunto de clases medidas, y la cobertura de `profiles` queda como deuda técnica identificada. SonarQube, que cuenta las líneas y no las instrucciones, reporta 91.6 % de cobertura sobre 1,400 líneas medibles (ver 7.1.2).
 
 <div align="center">
   <img src="../../assets/images/chapter-6/jacoco-coverage-report.png" alt="Reporte de cobertura JaCoCo"/>

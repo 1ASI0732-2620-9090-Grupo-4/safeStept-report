@@ -76,16 +76,16 @@ Jenkins muestra además las entradas *Declarative: Checkout SCM* y *Declarative:
 | Métrica de SonarQube | Valor |
 |----------------------|-------|
 | Perfil de calidad de Java | *Sonar way extended* (337 reglas) |
-| Líneas de código | 12,858 (17,311 líneas en total) en 370 archivos |
+| Líneas de código | 12,885 (17,376 líneas en total) en 371 archivos |
 | Quality Gate (Sonar way) | **Aprobado** |
-| Cobertura | 91.5 % sobre 1,390 líneas medibles |
+| Cobertura | 91.6 % sobre 1,400 líneas medibles |
 | Duplicación | 0.9 % |
 | Vulnerabilidades | 1 (calificación de seguridad D; es el CSRF deshabilitado a propósito) |
 | Bugs | 0 (calificación de fiabilidad A) |
 | Code smells | 0 (calificación de mantenibilidad A) |
 | Hotspots de seguridad | 0 |
 
-Estas cifras corresponden a la ejecución #6 del entorno actual (versión `1.0.0` en SonarQube, 8 de noviembre de 2026) y reemplazan a las de la ejecución #8 del entorno anterior (9,964 líneas, 91.7 % de cobertura y 207 *code smells*), que se tomaron con otra versión del código y del servidor. Las líneas de código aumentaron porque la limpieza de Checkstyle (6.2.1.1) partió líneas largas con *google-java-format*, y los *code smells* bajaron a cero porque se corrigieron las 86 incidencias que aparecieron al cambiar al perfil *extended* (6.2.1.2).
+Estas cifras corresponden a la ejecución #7 del entorno actual (versión `1.0.0` en SonarQube, 9 de noviembre de 2026) y reemplazan a las de la ejecución #8 del entorno anterior (9,964 líneas, 91.7 % de cobertura y 207 *code smells*), que se tomaron con otra versión del código y del servidor. Las líneas de código aumentaron porque la limpieza de Checkstyle (6.2.1.1) partió líneas largas con *google-java-format*, y los *code smells* bajaron a cero porque se corrigieron las 86 incidencias que aparecieron al cambiar al perfil *extended* (6.2.1.2).
 
 El Quality Gate «Sonar way» evalúa únicamente el **código nuevo**. En el primer análisis del proyecto no existía código nuevo que evaluar y el gate aprobó, por lo que las incidencias existentes se trataron como deuda técnica y se listaron en lugar de ocultarse. En los análisis posteriores el gate evalúa el código nuevo con tres condiciones: cobertura de al menos 80 %, duplicación menor a 3 % y ninguna incidencia nueva. En la ejecución #6 el commit analizado es el mismo que ya había analizado SonarQube en la tercera tanda de correcciones (6.2.1.2), de modo que no hay código nuevo: el gate evalúa solo la condición de incidencias nuevas (0) y aprueba.
 
@@ -134,6 +134,13 @@ La corrección se verificó de tres formas: pruebas nuevas (una unitaria y tres 
 <div align="center">
   <img src="../../assets/images/chapter-7/jenkins-ejecucion-6-extended.png" alt="Vista de etapas de Jenkins con la ejecución 6 en verde y el Quality Gate aprobado"/>
   <p><i><b>Figura 7.1.10.</b> Vista de etapas del job <code>safestep-backend</code>: la ejecución #6 (arriba) pasa todas las etapas con el perfil <i>Sonar way extended</i>, con el Quality Gate <i>Passed</i> y las pruebas sin fallos; la #5 es la ejecución verde de la compuerta de estilo y la #4 la ejecución roja. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
+**Ejecución tras la política de recompensas.** El 9 de noviembre de 2026 el backend incorporó en el servidor el umbral de aprobación de 70 % y la reducción a la mitad por cada repetición aprobada (`c79a1be`) y la reparación de los datos semilla (`b6707df`). La ejecución #7, sobre `main` con esas dos confirmaciones, pasó las diez etapas: 260 pruebas aprobadas (18 más que en la #6) sin fallos ni omisiones, cobertura de JaCoCo de 93.9 %, Quality Gate **Passed**, 0 *code smells* y la imagen publicada de nuevo en Docker Hub. Dura 5 min 8 s, más que la #6 porque hay más pruebas y la etapa de construcción de la imagen tardó 1 min 37 s.
+
+<div align="center">
+  <img src="../../assets/images/chapter-7/jenkins-ejecucion-7.png" alt="Vista de etapas de Jenkins con la ejecución 7 en verde"/>
+  <p><i><b>Figura 7.1.11.</b> Página del job <code>safestep-backend</code> tras la ejecución #7: tendencia de pruebas (de 242 a 260 aprobadas) y vista de etapas con todas las etapas en verde. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Cómo reproducir el entorno de CI:**
