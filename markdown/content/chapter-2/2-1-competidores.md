@@ -82,7 +82,7 @@ Estas ofertas no equivalen automáticamente a SafeStep. La comparación se centr
   </tr>
   <tr>
     <th align="left">Canales de distribución (Web y/o Móvil)</th>
-    <td>Web responsiva. No hay aplicación móvil nativa ni funcionamiento offline implementados.</td>
+    <td>Web responsiva y aplicación móvil nativa para Android. No hay aplicación para iOS ni funcionamiento offline implementados.</td>
     <td>Aplicación móvil y recursos web de la institución.</td>
     <td>Aplicación móvil y recursos web de la institución.</td>
     <td>Aplicación móvil con contenido precargado.</td>

@@ -12,7 +12,7 @@
 
 La arquitectura de información organiza el contenido para que visitantes y usuarios encuentren una forma de conocer SafeStep, practicar y revisar su progreso. Se basa en los segmentos de 1.3, en la necesidad de fuentes y práctica descrita en 2.2–2.3 y en las historias de la landing (US47–US56) y de la aplicación (US01–US46). La prioridad es hacer visible la práctica sin confundir una puntuación de simulación con competencia clínica.
 
-**Alcance:** se distinguen la landing HTML/CSS/JavaScript y la aplicación web autenticada actual. Las decisiones de aplicación nativa son **propuestas To-Be**, porque no hay una app iOS o Android en los repositorios revisados. Cuando una función descrita aquí no está implementada, se etiqueta como pendiente y no se presenta como evidencia de producto terminado.
+**Alcance:** se distinguen la landing HTML/CSS/JavaScript y la aplicación web autenticada actual. La aplicación nativa de **Android** ya está implementada (4.4, 4.5 y 5.2.5); las decisiones para **iOS** siguen siendo **propuestas To-Be**, porque no hay una app iOS. Cuando una función descrita aquí no está implementada, se etiqueta como pendiente y no se presenta como evidencia de producto terminado.
 
 <div align="center">
   <p><b>Gráfico 1.</b> Mapa de contenidos y destinos principales</p>
@@ -30,7 +30,7 @@ La arquitectura de información organiza el contenido para que visitantes y usua
 | Web: inicio y práctica | Jerárquica: dashboard → catálogo de simulaciones → detalle → respuesta y resultado | Por tópico/tipo de emergencia; el filtro de catálogo usa `emergencyType` | Implementado en la aplicación web. |
 | Web: progreso y gamificación | Jerárquica desde el menú principal; vistas de datos y logros | Cronológica cuando se revisan intentos o actividad; por tópico para estadísticas e insignias | Implementado parcialmente; revisar en cada vista las agrupaciones reales. |
 | Web: tienda | Catálogo → producto/kit → carrito y flujo de compra | Por categoría y búsqueda textual; no se presupone un orden alfabético fijo | Implementado en la aplicación web. |
-| Móvil nativo | Destinos principales equivalentes, con disposición adaptable a cada sistema | Mantener las mismas categorías y términos, revalidando su prioridad con cada segmento | Propuesta pendiente de diseño y desarrollo. |
+| Móvil nativo | Destinos principales equivalentes, con disposición adaptable a cada sistema | Mantener las mismas categorías y términos, revalidando su prioridad con cada segmento | Implementado en Android (barra inferior de cinco destinos); propuesta pendiente en iOS. |
 
 La organización **matricial** se reserva como propuesta para cruces de tipo de emergencia, dificultad y estado cuando los datos y controles lo permitan. La organización **por audiencia** —estudiante, miembro de comunidad vecinal y persona con experiencia brigadista— sirve para analizar pertinencia de ejemplos y contenidos; **no se presenta como personalización o roles ya implementados**. Las listas alfabéticas podrían ayudar en un catálogo amplio, mientras las cronológicas son apropiadas para historial; ninguna se atribuye a todas las pantallas sin comprobarlo.
 
@@ -62,7 +62,8 @@ El etiquetado utiliza nombres breves y consistentes para relacionar **etiqueta �
 | Web | Gamificación | Misiones, insignias y recompensas | `/app/gamification`. |
 | Web | Tienda | Catálogo y compra | `/app/store`. |
 | Web | Perfil | Información y opciones personales | Acceso desde shell a `/app/profile`. |
-| Móvil nativo | Inicio / Práctica / Progreso / Tienda | Destinos candidatos de primer nivel | Propuesta; validar mediante pruebas con usuarios. |
+| Android | Inicio / Simulaciones / Progreso / Tienda / Perfil | Destinos de primer nivel de la barra inferior | Implementado; validar mediante pruebas con usuarios. |
+| iOS | Inicio / Práctica / Progreso / Tienda | Destinos candidatos de primer nivel | Propuesta; validar mediante pruebas con usuarios. |
 
 ### 4.2.2.2. Reglas para contenido y acciones
 
@@ -123,7 +124,7 @@ El shell dispone de los destinos Dashboard, Simulaciones, Progreso, Gamificació
 
 ### 4.2.5.3. Experiencia móvil propuesta
 
-Para iOS y Android se conservarán las categorías de contenido, pero la navegación se decidirá mediante pruebas de tareas con los tres segmentos. Se propone acceso visible a inicio, práctica y progreso, con tienda como destino diferenciado; una barra inferior se evaluará solo para destinos principales y el resto podrá ir a menú o perfil. El retorno respetará el comportamiento de cada sistema. **No hay evidencia de barra inferior o gestos nativos implementados actualmente.**
+En Android se conservaron las categorías de contenido de la web y la navegación se resolvió con una barra inferior de cinco destinos (Inicio, Simulaciones, Progreso, Tienda y Perfil), pestañas superiores dentro de Progreso y Tienda, y pantallas de detalle con flecha de retorno; el gesto «atrás» del sistema vuelve a la pantalla anterior. Los wireframes, wireflows y user flows están en 4.4. Para iOS la navegación sigue propuesta y se decidirá mediante pruebas de tareas con los tres segmentos, y la validación de la navegación de Android con participantes sigue pendiente (4.2.5.4).
 
 ### 4.2.5.4. Accesibilidad y validación de navegación
 

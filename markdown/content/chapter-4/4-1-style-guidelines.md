@@ -110,7 +110,7 @@ La meta web es cumplir **WCAG 2.2 nivel AA**: navegación por teclado, orden de 
 
 ## 4.1.3. Mobile Style Guidelines
 
-Estas guías definen una **propuesta To-Be** para aplicaciones nativas. No describen pantallas ya desarrolladas. Se conservan marca, lenguaje, colores con contraste comprobado y estructura de contenido, pero controles, medidas y navegación se adaptarán a cada plataforma. La arquitectura de información móvil de 4.2 es igualmente propuesta.
+Estas guías conservan marca, lenguaje, colores con contraste comprobado y estructura de contenido, pero controles, medidas y navegación se adaptan a cada plataforma. La plataforma **Android** ya está implementada (aplicación `com.safestep.mobile` 1.0.0; diseño en 4.4, prototipo en 4.5 y evidencia en 5.2.5); la de **iOS** sigue siendo una **propuesta To-Be** sin pantallas desarrolladas.
 
 | Elemento compartido | Decisión para las dos plataformas |
 |---|---|
@@ -122,7 +122,7 @@ Estas guías definen una **propuesta To-Be** para aplicaciones nativas. No descr
 <div align="center">
   <p><b>Gráfico 4.</b> Patrones móviles propuestos por plataforma</p>
   <img src="../../assets/images/chapter-4/style-guidelines-mobile-platforms.svg" alt="Esquema comparativo de navegación móvil propuesta para iOS y Android" />
-  <p><i>Fuente: elaboración propia basada en las guías oficiales de Apple y Android. No representa una app implementada.</i></p>
+  <p><i>Fuente: elaboración propia basada en las guías oficiales de Apple y Android. Representa patrones propuestos; la aplicación Android implementada se muestra en 4.4.</i></p>
 </div>
 
 ### 4.1.3.1. iOS Mobile Style Guidelines
@@ -140,5 +140,7 @@ Referencias: [Apple Human Interface Guidelines: Layout](https://developer.apple.
 - Usar navegación principal adaptable: barra para un conjunto pequeño de destinos y, en pantallas amplias, evaluar rail o drawer. El comportamiento de **Back** debe volver de manera predecible desde detalles y flujos.
 - Permitir escalado de fuentes y lectura por TalkBack. El área táctil propuesta para controles es al menos **48 × 48 dp**, incluso si el icono visible es menor.
 - Usar componentes y patrones Material como referencia Android, manteniendo la identidad de SafeStep sin copiar una pantalla iOS.
+
+**Aplicación en la app Android.** La aplicación usa Material 3 con la paleta de la web (azul `#0369a1`), barra inferior de cinco destinos con Navigation Compose, tipografía en `sp` que respeta el tamaño de letra del sistema, áreas táctiles de al menos 48 dp que impone Material 3, y estados que no dependen solo del color (4.4). Queda pendiente verificar la lectura con TalkBack y el comportamiento *edge-to-edge* con barras del sistema.
 
 Referencias: [Android: System bars](https://developer.android.com/design/ui/mobile/guides/foundations/system-bars), [Accessibility](https://developer.android.com/design/ui/mobile/guides/foundations/accessibility) y [Layouts and navigation patterns](https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-patterns).

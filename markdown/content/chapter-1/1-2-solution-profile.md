@@ -65,7 +65,7 @@ La siguiente tabla delimita el estado As-Is del producto y evita presentar como 
 | Progreso, estadísticas y certificados internos | Implementados | Son reconocimientos de la plataforma, no certificaciones profesionales. |
 | Tienda, carrito y pedidos | Implementados | Incluye integración con Stripe Checkout. |
 | Recomendaciones de productos | Implementadas de forma inicial | Su utilidad y aceptación todavía deben medirse. |
-| Aplicación móvil nativa | No implementada | La solución disponible es una aplicación web responsiva. |
+| Aplicación móvil nativa | Implementada para Android (versión 1.0.0, noviembre de 2026) | Cubre los flujos del jugador sobre la misma API; no incluye iOS ni la administración (5.2.5). |
 | Funcionamiento offline | No implementado | Se mantiene como posibilidad futura. |
 | Suscripción premium | No implementada | Es una hipótesis del modelo de negocio. |
 | Portal operativo para instructores | No implementado | El rol existe conceptualmente, pero no hay una experiencia completa. |
@@ -93,7 +93,7 @@ Evaluar y evolucionar SafeStep como plataforma web de aprendizaje de primeros au
 - La tienda debe priorizar insumos no farmacológicos y cumplir las normas peruanas de comercio electrónico, protección al consumidor y protección de datos.
 - Las recomendaciones de compra no deben presentarse como prescripciones médicas.
 - Los experimentos deben aplicar consentimiento informado cuando corresponda, minimizar datos personales y evitar patrones manipulativos.
-- La solución As-Is es web responsiva; cualquier aplicación móvil nativa u operación offline requiere diseño e implementación adicional.
+- La solución As-Is es la aplicación web responsiva más una aplicación Android; una aplicación para iOS u operación offline requiere diseño e implementación adicional.
 - El alcance está condicionado por el tiempo del ciclo académico, el acceso a participantes y los servicios gratuitos o de bajo costo disponibles para despliegue y monitoreo.
 
 ### Técnica de The 5 W's y 2 H's

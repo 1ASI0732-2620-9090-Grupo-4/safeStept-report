@@ -379,4 +379,4 @@ El plan de seguimiento define qué eventos emite la aplicación, cuándo y con q
 2. Si el envío falla, no se interrumpe la experiencia de la persona: el evento se descarta o se reintenta una vez.
 3. El texto libre de `simulation_exit_reason` no se guarda en la tabla de eventos; si la persona lo escribe, se almacena aparte, solo con el identificador seudónimo.
 4. Los eventos se conservan 90 días después de cerrar el experimento que los necesita y luego se eliminan; la tabla no se usa para ningún otro fin.
-5. **Móvil.** La aplicación móvil todavía no existe como producto implementado; cuando exista emitirá el mismo esquema con `platform = mobile`, de modo que los resultados de web y móvil se puedan comparar. Esa columna se completará entonces.
+5. **Móvil.** La aplicación Android (5.2.5) todavía no emite eventos de analítica; cuando lo haga usará el mismo esquema con `platform = mobile`, de modo que los resultados de web y móvil se puedan comparar. Esa columna se completará entonces.
