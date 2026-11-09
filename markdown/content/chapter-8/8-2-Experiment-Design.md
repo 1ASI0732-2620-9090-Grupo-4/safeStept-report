@@ -225,6 +225,31 @@ La duración depende del tráfico que SafeStep reciba, que hoy no se conoce. Se 
 | Q9 | 40 % | 14 días | 45.0 semanas | 14.9 semanas |
 | Q10 | 20 % | 45 días | 23.1 semanas | 11.4 semanas |
 
+### Reglas de decisión
+
+Un experimento solo vale si cambia lo que el equipo hace después. Por eso se fija de antemano qué se decidirá según el resultado, una vez reunida la muestra completa y sin haber mirado antes.
+
+| Resultado | Decisión |
+| --- | --- |
+| El valor p es menor que α y la diferencia alcanza el efecto mínimo detectable, sin deterioro en las métricas de salud | **Adoptar** la variante para todos los usuarios |
+| El valor p es menor que α, pero la diferencia es menor que el efecto mínimo | **Iterar**: el efecto existe pero es menor que el que justifica el cambio; se adopta solo si su costo de mantenimiento es muy bajo, o se rediseña la variante |
+| El valor p es mayor o igual que α con la muestra completa | **Descartar** la variante, mantener H0 y revisar la premisa que la originó |
+| Alguna métrica de salud empeora más que el margen fijado en 8.2.2 | **No adoptar**, aunque la medida principal mejore, y registrar el daño observado |
+| La muestra no se completó | **Informar como evidencia preliminar**, sin declarar significancia, y decidir si se amplía el plazo |
+
+**Qué se hará con cada pregunta si se rechaza H0:**
+
+| Pregunta | Decisión si se confirma H1 |
+| --- | --- |
+| Q7 | Fijar como precio estándar del primer cupón el de la variante ganadora y recalibrar los demás cupones |
+| Q1 | Mostrar la guía de bienvenida a todos los usuarios nuevos |
+| Q8 | Activar la bonificación por racha para todos los usuarios |
+| Q3 | Construir el modo avanzado para quienes tienen experiencia (hallazgo 2 de 6.3) |
+| Q9 | Cambiar el umbral de aprobación por el de la variante ganadora, con revisión educativa previa |
+| Q2 | Mostrar la recompensa del próximo intento en todas las tarjetas de simulación |
+| Q6 | Usar la frase contextual en todas las sugerencias de producto |
+| Q5, Q4, Q10 | No tienen decisión de adopción: sus resultados alimentan la matriz de 8.4.2 y las preguntas nuevas |
+
 ### Decisiones de escala
 
 1. **Medir antes de comparar.** Como las tasas base son supuestos, la primera acción es un **experimento de línea base** de dos semanas, sin intervención, que registre los eventos de 8.2.8. Los cálculos se rehacen con las tasas medidas. Si una tasa base real difiere mucho del supuesto, cambia el tamaño de muestra y la decisión de ejecutar.
