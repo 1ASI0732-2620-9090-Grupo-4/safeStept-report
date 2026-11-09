@@ -276,6 +276,21 @@ El método es el vehículo técnico con el que se recogerán los datos. No todo 
 | Q4 | Preferencias iniciales | Análisis exploratorio de eventos | El evento de inicio ya basta | Encuesta de preferencias: sesgo de deseabilidad |
 | Q10 | Frecuencia y desempeño | Análisis exploratorio de cohorte con registro de sesiones | Los eventos de sesión y de simulación ya permiten el cruce | Diario del usuario: carga excesiva |
 
+### Herramienta de recolección y análisis
+
+Además del método de cada pregunta hay que decidir con qué herramienta se recogerán y analizarán los datos. Se compararon cinco opciones con criterios cualitativos; los planes y precios de cada proveedor cambian, por lo que deben verificarse antes de contratar cualquiera.
+
+| Criterio | Registro propio (eventos en PostgreSQL) | Google Analytics 4 | Mixpanel | PostHog | Matomo |
+| --- | --- | --- | --- | --- | --- |
+| Costo | Sin costo adicional: usa la base de datos existente | Gratuito con límites en los informes | Plan gratuito con límite de eventos | Código abierto; también ofrece servicio alojado | Código abierto autoalojado; el servicio alojado es de pago |
+| Cruce con datos internos (intentos, monedas, cupones) | Directo, con una consulta SQL | Requiere exportar a un almacén de datos externo | Requiere sincronizar datos | Requiere sincronizar datos | Requiere sincronizar datos |
+| Asignación de variantes | La decide el backend y queda en el mismo registro | Depende de herramientas externas de pruebas | Depende de integraciones | Incluye banderas de funcionalidad y experimentos | Complemento o integración externa |
+| Control y privacidad de los datos | Total: los datos no salen de la infraestructura y se pueden borrar a los 90 días | Los datos se procesan en servicios de terceros | Servicio de terceros | Total si se autoaloja | Total si se autoaloja |
+| Esfuerzo de integración | Medio: hay que construir el punto de entrada y el servicio del frontend (TS32 y TS34) | Bajo | Bajo | Medio | Medio |
+| Análisis estadístico | Hay que calcularlo (pruebas de proporciones y de medias) | Informes de exploración, sin prueba de hipótesis | Informes de embudos y retención | Incluye análisis de experimentos | Informes básicos |
+
+**Decisión.** Se adopta el **registro propio** como fuente primaria de datos. Las razones son tres. Primero, las métricas más importantes (M5, M6, M8, M16, M18) combinan datos de uso con intentos, monedas y cupones que ya están en la base de datos de SafeStep, y cruzarlos es inmediato si los eventos viven allí. Segundo, el backend asigna las variantes y debe guardarlas junto al evento, sin depender de un servicio externo. Tercero, los datos de uso de personas que practican primeros auxilios se mantienen bajo control del equipo, de acuerdo con la Ley N.° 29733 de Protección de Datos Personales del Perú, con retención limitada a 90 días tras el experimento. El costo es construir el registro (historias TS32 a TS34) y calcular a mano las pruebas estadísticas, algo asumible porque solo se usan dos fórmulas (8.2.5). Si el volumen o la necesidad de análisis crecen, PostHog es la alternativa que se reevaluaría, porque se puede autoalojar y trae análisis de experimentos.
+
 ### Principios que rigen todos los experimentos
 
 - **No hacer daño.** El riesgo colateral sobre la experiencia de los usuarios debe ser proporcional al aprendizaje esperado. Los experimentos no tocan pagos reales: las SafeCoins no tienen valor monetario y no se modifica el pago con Stripe. Las métricas de salud de 8.2.3 son la alerta temprana; si una de ellas empeora de forma marcada por razones técnicas (por ejemplo, errores del sistema), el experimento se detiene sin revisar la medida principal.
