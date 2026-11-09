@@ -12,47 +12,63 @@ Las hipótesis se escribieron con la plantilla de XDPD: «Creemos que la respues
 
 ### Hipótesis de las preguntas guiadas por una creencia
 
+Cada hipótesis muestra la **premisa** (*belief*) que la origina, tomada de la materia prima de 8.1.2, la hipótesis alterna (H1), la nula (H0) y ambas escritas con la plantilla de XDPD. **Criterio común de decisión:** se considera que el experimento respalda H1 cuando el valor p es menor que el nivel de significancia fijado en 8.2.5 y la diferencia observada alcanza al menos el efecto mínimo detectable; en cualquier otro caso se mantiene H0.
+
 **Q7 — Costo del primer cupón**
 
+- **Belief (premisa):** A3: el precio del cupón decide si las monedas se perciben alcanzables y motivan a seguir practicando.
 - **H1:** El precio de 100 SafeCoins aumentará la proporción de usuarios elegibles que canjean su primer cupón en 30 días de 40 % a 60 % frente al precio actual de 150, y el de 200 la reducirá.
 - **H0:** El precio del cupón no produce diferencias significativas en la proporción de canje en 30 días (p ≥ 0.05).
-- **Plantilla:** Creemos que un precio menor para el primer cupón aumenta el canje; la evidencia se reflejará en la proporción de usuarios elegibles que canjean en 30 días, bajo las circunstancias de usuarios nuevos asignados al azar a 100, 150 o 200 monedas.
+- **Plantilla de H1:** Creemos que un precio menor para el primer cupón aumenta el canje; la evidencia se reflejará en la proporción de usuarios elegibles que canjean en 30 días, bajo las circunstancias de usuarios nuevos asignados al azar a 100, 150 o 200 monedas.
+- **Plantilla de H0:** Creemos que la respuesta es que el precio del primer cupón no cambia el canje; la evidencia se reflejará en una proporción de canje en 30 días sin diferencias significativas entre variantes (M6), bajo las circunstancias de usuarios nuevos asignados al azar a 100, 150 o 200 monedas.
 
 **Q1 — Guía de bienvenida**
 
+- **Belief (premisa):** I1 y A1: quien entiende cómo se ganan y se gastan las monedas empieza y termina más simulaciones.
 - **H1:** Los usuarios nuevos que ven la guía de tres pasos terminarán su primera simulación en los primeros 7 días en una proporción 20 puntos mayor (50 % → 70 %) que quienes no la ven.
 - **H0:** La guía no produce diferencias significativas en la proporción de primera simulación terminada en 7 días (p ≥ 0.05).
-- **Plantilla:** Creemos que explicar XP, SafeCoins y misiones al inicio ayuda a terminar la primera simulación; la evidencia se reflejará en la proporción de usuarios nuevos que la terminan en 7 días, bajo las circunstancias de usuarios nuevos asignados al azar a ver o no la guía.
+- **Plantilla de H1:** Creemos que explicar XP, SafeCoins y misiones al inicio ayuda a terminar la primera simulación; la evidencia se reflejará en la proporción de usuarios nuevos que la terminan en 7 días, bajo las circunstancias de usuarios nuevos asignados al azar a ver o no la guía.
+- **Plantilla de H0:** Creemos que la respuesta es que la guía no cambia la primera simulación; la evidencia se reflejará en una activación sin diferencias significativas (M1), bajo las circunstancias de usuarios nuevos asignados al azar a ver o no la guía.
 
 **Q8 — Bonificación por racha**
 
+- **Belief (premisa):** I5: premiar la continuidad aumenta los días de práctica.
 - **H1:** Los usuarios con bonificación de +20 % por tres días consecutivos practicarán un día más en 14 días (3 → 4).
 - **H0:** La bonificación no produce diferencias significativas en los días con práctica en 14 días (p ≥ 0.05).
-- **Plantilla:** Creemos que premiar la continuidad aumenta la regularidad; la evidencia se reflejará en los días con al menos una simulación completada en 14 días, bajo las circunstancias de usuarios con una simulación completada asignados al azar a tener o no la bonificación.
+- **Plantilla de H1:** Creemos que premiar la continuidad aumenta la regularidad; la evidencia se reflejará en los días con al menos una simulación completada en 14 días, bajo las circunstancias de usuarios con una simulación completada asignados al azar a tener o no la bonificación.
+- **Plantilla de H0:** Creemos que la respuesta es que la bonificación no cambia la regularidad; la evidencia se reflejará en días con práctica sin diferencias significativas (M3), bajo las circunstancias de usuarios con una simulación completada asignados al azar a tener o no la bonificación.
 
 **Q3 — Experiencia previa y abandono del nivel Básico**
 
+- **Belief (premisa):** A4: las personas con experiencia previa encuentran básicas las simulaciones de nivel Básico.
 - **H1:** Las personas con experiencia previa declarada abandonarán las simulaciones de nivel Básico en el doble de los casos que las que no tienen experiencia (40 % frente a 20 %).
 - **H0:** La experiencia previa no se asocia a diferencias significativas en el abandono de las simulaciones de nivel Básico (p ≥ 0.05).
-- **Plantilla:** Creemos que quienes ya saben primeros auxilios abandonan lo básico; la evidencia se reflejará en la proporción de simulaciones de nivel Básico iniciadas y no terminadas, bajo las circunstancias de usuarios que declaran o no experiencia previa.
+- **Plantilla de H1:** Creemos que quienes ya saben primeros auxilios abandonan lo básico; la evidencia se reflejará en la proporción de simulaciones de nivel Básico iniciadas y no terminadas, bajo las circunstancias de usuarios que declaran o no experiencia previa.
+- **Plantilla de H0:** Creemos que la respuesta es que la experiencia previa no se asocia al abandono del nivel Básico; la evidencia se reflejará en un abandono sin diferencias significativas entre grupos (M9), bajo las circunstancias de usuarios que declaran o no experiencia previa.
 
 **Q9 — Umbral de aprobación**
 
+- **Belief (premisa):** A2: el umbral de aprobación decide cuánto se aprende del primer error.
 - **H1:** Con un umbral de 80 % la mejora de precisión entre el primer y el segundo intento de una misma simulación será 5 puntos mayor que con el umbral actual de 70 %.
 - **H0:** El umbral de aprobación no produce diferencias significativas en la mejora de precisión entre intentos (p ≥ 0.05).
-- **Plantilla:** Creemos que un umbral más exigente impulsa a aprender más del primer error; la evidencia se reflejará en la diferencia de precisión entre el segundo y el primer intento, bajo las circunstancias de usuarios nuevos asignados al azar a 60, 70 u 80 %.
+- **Plantilla de H1:** Creemos que un umbral más exigente impulsa a aprender más del primer error; la evidencia se reflejará en la diferencia de precisión entre el segundo y el primer intento, bajo las circunstancias de usuarios nuevos asignados al azar a 60, 70 u 80 %.
+- **Plantilla de H0:** Creemos que la respuesta es que el umbral no cambia el aprendizaje entre intentos; la evidencia se reflejará en una mejora de precisión sin diferencias significativas (M8), bajo las circunstancias de usuarios nuevos asignados al azar a 60, 70 u 80 %.
 
 **Q2 — Recompensa visible antes de empezar**
 
+- **Belief (premisa):** I4: conocer la regla de recompensa orienta a probar simulaciones distintas en lugar de repetir una sola.
 - **H1:** Mostrar antes de empezar cuánto pagará el intento aumentará en 0.75 las simulaciones distintas completadas en 14 días (2.0 → 2.75).
 - **H0:** Mostrar la recompensa no produce diferencias significativas en las simulaciones distintas completadas (p ≥ 0.05).
-- **Plantilla:** Creemos que conocer la regla de recompensa orienta a probar simulaciones distintas; la evidencia se reflejará en el número de simulaciones distintas completadas en 14 días, bajo las circunstancias de usuarios con una simulación completada asignados al azar a ver o no la recompensa del próximo intento.
+- **Plantilla de H1:** Creemos que conocer la regla de recompensa orienta a probar simulaciones distintas; la evidencia se reflejará en el número de simulaciones distintas completadas en 14 días, bajo las circunstancias de usuarios con una simulación completada asignados al azar a ver o no la recompensa del próximo intento.
+- **Plantilla de H0:** Creemos que la respuesta es que ver la recompensa no cambia la amplitud de práctica; la evidencia se reflejará en simulaciones distintas sin diferencias significativas (M2), bajo las circunstancias de usuarios con una simulación completada asignados al azar a ver o no la recompensa.
 
 **Q6 — Producto sugerido con frase contextual**
 
+- **Belief (premisa):** I3: un producto relacionado con lo practicado despierta más interés que una lista genérica.
 - **H1:** La frase contextual aumentará en 10 puntos (10 % → 20 %) la proporción de simulaciones aprobadas tras las cuales se abre la ficha de un producto.
 - **H0:** La frase contextual no produce diferencias significativas en la apertura de fichas (p ≥ 0.05).
-- **Plantilla:** Creemos que relacionar el producto con lo practicado despierta interés; la evidencia se reflejará en la proporción de aperturas de ficha tras una simulación aprobada, bajo las circunstancias de usuarios asignados al azar a la sugerencia genérica o contextual.
+- **Plantilla de H1:** Creemos que relacionar el producto con lo practicado despierta interés; la evidencia se reflejará en la proporción de aperturas de ficha tras una simulación aprobada, bajo las circunstancias de usuarios asignados al azar a la sugerencia genérica o contextual.
+- **Plantilla de H0:** Creemos que la respuesta es que la frase contextual no cambia la apertura de fichas; la evidencia se reflejará en una apertura sin diferencias significativas (M7), bajo las circunstancias de usuarios asignados al azar a la sugerencia genérica o contextual.
 
 ### Preguntas exploratorias
 
