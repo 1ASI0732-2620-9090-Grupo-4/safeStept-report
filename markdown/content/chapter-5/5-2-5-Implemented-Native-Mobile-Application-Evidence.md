@@ -12,116 +12,205 @@
 
 ## 5.2.5. Implemented Native-Mobile Application Evidence
 
-Esta sección reúne la evidencia de la aplicación móvil nativa de SafeStep, un cliente Android escrito en Kotlin que consume la misma API REST que la aplicación web (5.2.7). Es un piloto académico: cubre el recorrido principal de práctica (iniciar sesión, resolver una simulación, ver el progreso y consultar el catálogo) y deja la administración en la aplicación web. El código está en el repositorio <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-android.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-android.git</a>. La verificación se realizó el 8 de octubre de 2026 con la versión `0.1.0`.
+Esta sección reúne la evidencia de la aplicación móvil nativa de SafeStep, un cliente Android escrito en Kotlin con Jetpack Compose que consume la misma API REST que la aplicación web (5.2.7). Cubre todos los flujos del jugador: registro e ingreso con renovación automática de la sesión, recuperación de contraseña, perfil, simulaciones con retroalimentación por respuesta y recompensa, progreso (resumen, misiones, insignias, ranking y movimientos de monedas), tienda con productos, kits y cupones, carrito, pedidos y pago con Stripe. La administración del catálogo y de los roles sigue siendo solo de la aplicación web. El código está en el repositorio <a href="https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-android.git" style="word-break: break-all; overflow-wrap: anywhere;">https://github.com/1ASI0732-2620-9090-Grupo-4/safeStept-android.git</a>. La verificación se realizó el 8 de noviembre de 2026 con la versión `1.0.0` (`versionCode` 2). El diseño de las pantallas está en 4.4 y el prototipo en 4.5.
 
 ### 5.2.5.1. Alcance respecto a las historias de usuario
 
-La aplicación implementa las siguientes historias del Product Backlog (3.3). «Parcial» indica que la app cubre la parte principal de la historia, pero no todos sus criterios.
+La tabla muestra la cobertura de cada historia del Product Backlog (3.3) en la aplicación móvil. «Cubierta» significa que la aplicación implementa la historia completa; «Parcial», que implementa lo principal pero no todos sus criterios.
 
 | Historia | Título | Estado | Qué hace la aplicación |
 |----------|--------|--------|------------------------|
-| US01 | Iniciar sesión en la aplicación | Cubierta | Pantalla de usuario y contraseña; el token de acceso queda solo en memoria |
-| US02 | Registrarse en SafeStep | Cubierta | Botón «Create account»; registra al usuario e inicia sesión de inmediato |
-| US10 | Visualizar catálogo de simulaciones | Cubierta | Lista las simulaciones con su título y dificultad |
-| US12 | Revisar detalle de una simulación antes de iniciar | Parcial | Muestra título, descripción y pasos al abrir la simulación; no hay una pantalla previa separada |
-| US13 | Responder pasos de una simulación | Cubierta | Una opción por paso, con selección única |
-| US14 | Finalizar una simulación | Cubierta | El botón «Finish simulation» se habilita solo cuando todos los pasos tienen respuesta |
-| US15 | Recibir SafeCoins por completar una simulación | Parcial | La app envía el intento y el backend otorga las SafeCoins; la app las muestra en «Progress», pero no informa la recompensa al terminar |
-| US16 | Ver resumen final de simulación | Parcial | Muestra el puntaje y los pasos correctos (por ejemplo, 100 % y 4/4); no muestra el retorno por paso |
-| US18 | Visualizar resumen general de progreso | Parcial | Muestra nivel, XP, SafeCoins y simulaciones completadas; no muestra la racha ni gráficos |
-| US30 | Visualizar productos relevantes en tienda | Parcial | Lista los productos con categoría y precio; no tiene búsqueda, filtros ni detalle |
+| US01 | Iniciar sesión en la aplicación | Cubierta | Usuario y contraseña; los tokens se guardan cifrados con una clave del Android Keystore y se renuevan solos |
+| US02 | Registrarse en SafeStep | Cubierta | Registro con confirmación de contraseña e ingreso inmediato |
+| US03 | Visualizar perfil de usuario | Cubierta | Pantalla Perfil con datos personales y dirección, editables y con guardado |
+| US04 | Cambiar idioma de la aplicación | Parcial | La interfaz está en español e inglés y sigue el idioma del dispositivo; no hay selector dentro de la aplicación |
+| US05 | Ver saldo de SafeCoins en la navegación | Parcial | El saldo se ve en Inicio, Progreso y Tienda; no hay un indicador fijo en la barra superior |
+| US06 | Visualizar resumen general de entrenamiento | Cubierta | Inicio muestra nivel, experiencia, SafeCoins, racha y simulaciones completadas |
+| US07 | Continuar con el siguiente entrenamiento | Cubierta | «Sigue practicando» en Inicio abre la simulación sugerida |
+| US08 | Ver misiones activas desde el dashboard | Cubierta | Inicio muestra las misiones del día con su avance y recompensa |
+| US10 | Visualizar catálogo de simulaciones | Cubierta | Lista con imagen, tema, nivel, duración y recompensa |
+| US11 | Buscar simulaciones por nombre | Cubierta | Búsqueda por texto y filtros por nivel y tema |
+| US12 | Revisar detalle de una simulación antes de iniciar | Cubierta | Pantalla de detalle con descripción, recompensa, duración y lo que se practica |
+| US13 | Responder pasos de una simulación | Cubierta | Una opción por paso, con retroalimentación inmediata; la respuesta no se puede cambiar |
+| US14 | Finalizar una simulación | Cubierta | «Finalizar simulación» envía el intento al servidor |
+| US15 | Recibir SafeCoins por completar una simulación | Cubierta | La recompensa la calcula el servidor (70 % o más de aciertos; cada repetición aprobada paga la mitad) y la aplicación muestra lo que se acreditó |
+| US16 | Ver resumen final de simulación | Parcial | Muestra porcentaje, pasos correctos, experiencia, monedas y saldo; no detalla el resultado de cada paso |
+| US17 | Ver productos sugeridos según errores | Parcial | «Ver productos sugeridos» lleva a la tienda, que lista recomendaciones según las simulaciones practicadas |
+| US18 | Visualizar resumen general de progreso | Cubierta | Pestaña Resumen con nivel, experiencia, SafeCoins, racha y actividad semanal |
+| US19 | Revisar rendimiento por simulación | Parcial | El resumen muestra el rendimiento por dificultad y las habilidades; no hay un detalle por simulación |
+| US22 | Consultar progreso de gamificación desde Progreso | Cubierta | Destino Progreso de la barra inferior |
+| US23 | Visualizar resumen de gamificación | Cubierta | Pestaña Resumen |
+| US24 | Ver misiones activas resumidas | Cubierta | Inicio y pestaña Misiones |
+| US25 | Revisar inventario de misiones | Cubierta | Pestaña Misiones con todas las misiones, su avance y recompensa |
+| US26 | Consultar ranking semanal | Cubierta | Pestaña Ranking con posición, experiencia y racha |
+| US27 | Ver insignias desbloqueadas | Cubierta | Pestaña Insignias, con las desbloqueadas resaltadas |
+| US28 | Ver inventario completo de insignias | Cubierta | Pestaña Insignias con las bloqueadas y su condición |
+| US29 | Consultar historial de SafeCoins | Cubierta | Pestaña Monedas con cada movimiento, su exactitud y el multiplicador aplicado |
+| US30 | Visualizar productos relevantes en tienda | Cubierta | Productos recomendados y catálogo completo |
+| US31 | Buscar productos o kits | Cubierta | Búsqueda por texto en la pestaña Productos |
+| US32 | Filtrar productos por categoría | Cubierta | Chips de categoría |
+| US34 | Ver detalle de producto | Cubierta | Imagen, precio, valoración, descripción y existencias |
+| US35 | Ver detalle de kit de emergencia | Parcial | La pestaña Kits muestra cada kit con su descripción, precio y descuento; no abre una pantalla de detalle propia |
+| US36 | Agregar productos al carrito | Cubierta | «Agregar al carrito» desde el detalle (deshabilitado sin stock) |
+| US37 | Modificar cantidades en carrito | Cubierta | Botones de más y menos por línea |
+| US38 | Quitar productos del carrito | Cubierta | Botón de quitar por línea |
+| US39 | Revisar resumen de compra | Cubierta | Subtotal, descuento del cupón y total a pagar |
+| US40 | Completar pago ficticio | Cubierta con otra pasarela | El pago se hace con Stripe en la página del procesador; la aplicación nunca recibe datos de tarjeta. Se verificó con un servidor simulado, no con una cuenta real de Stripe |
+| US41 | Consultar historial de compras | Cubierta | «Mis pedidos» |
+| US42 | Canjear puntos por cupones | Cubierta | Pestaña Cupones de la tienda |
+| US44 | Navegar por los módulos principales | Cubierta | Barra inferior con cinco destinos |
+| US46 | Usar la aplicación en pantallas pequeñas | Cubierta | Aplicación nativa; diseño probado en 1080 × 2400 px |
+| US59 | Canjear un cupón con SafeCoins | Cubierta | Botón «Canjear», habilitado solo si el saldo alcanza |
+| US60 | Aplicar un cupón canjeado en el checkout | Cubierta | Selector de cupón en el carrito; el total se recalcula |
+| US61 | Consultar mis cupones canjeados | Cubierta | «Mis cupones» en la pestaña Cupones |
 
-No forman parte de la aplicación móvil: el perfil de usuario (US03), la búsqueda de simulaciones (US11), los productos sugeridos según errores (US17), la búsqueda, el filtro y el detalle de productos y kits (US31 a US35), el carrito, los cupones, las compras y todo el panel de administración.
+No forman parte de la aplicación móvil: US09 (productos sugeridos desde el dashboard), US20 y US21 (errores frecuentes y recomendaciones accionables), US33 (volver a la vista principal de la tienda, que no existe como pantalla porque la tienda es un destino de la barra), US43 (reseñas de productos), US45 (notificaciones visuales), la landing (US47 a US56) y la administración (US57 y US58).
 
 ### 5.2.5.2. Arquitectura y stack
 
 | Aspecto | Decisión |
 |---------|----------|
 | Lenguaje y plataforma | Kotlin sobre Android; `applicationId` `com.safestep.mobile`, `minSdk` 26, `targetSdk` 35, `compileSdk` 37 |
-| Interfaz | Jetpack Compose con Material 3 (Compose BOM 2026.08.00) y una sola actividad, `MainActivity` |
-| Asincronía | Corrutinas de Kotlin (`kotlinx-coroutines-android` 1.10.2); las llamadas de red se ejecutan en `Dispatchers.IO` |
-| Cliente HTTP | `HttpURLConnection` de la plataforma con JSON de `org.json`; no se usan librerías de red adicionales |
-| Construcción | Android Gradle Plugin 9.3.2, Kotlin con el plugin de Compose 2.3.21 y Gradle 9.5.0 |
-| Idiomas | Recursos de texto en inglés y en español (`values` y `values-es`); la verificación se hizo con el dispositivo en inglés |
-| Seguridad | `allowBackup` desactivado; el tráfico HTTP sin cifrar solo se permite en la variante `debug`, para llegar al backend local desde el emulador; la app no contiene claves de Stripe ni credenciales de base de datos |
+| Interfaz | Jetpack Compose con Material 3 (Compose BOM 2026.08.00), una sola actividad y navegación con Navigation Compose (barra inferior con cinco destinos y pila por destino) |
+| Estado | `ViewModel` con `StateFlow` por pantalla; un estado explícito por etapa (cargando, contenido, error), por ejemplo `Intro → Playing → Submitting → Finished` en la simulación |
+| Red | Retrofit 2.11 con `kotlinx-serialization` y OkHttp 4.12; un `Authenticator` renueva el token de acceso ante un 401 y repite la solicitud una vez |
+| Sesión | Los tokens se guardan cifrados con AES-GCM con una clave del Android Keystore; al cerrar sesión se revoca el token de renovación |
+| Imágenes | Coil 2.7, desde el origen configurado en `ASSETS_BASE_URL`; vacío muestra marcadores de posición |
+| Pago | Página de Stripe en una pestaña del navegador (Custom Tabs); al volver, la aplicación pregunta al servidor si el pago se confirmó |
+| Composición | `AppContainer` crea los repositorios a mano; no se usa un framework de inyección |
+| Construcción | Android Gradle Plugin 9.3.2, Kotlin 2.3.21 y Gradle 9.5.0 |
+| Idiomas | Recursos de texto en español e inglés (`values-es` y `values`) |
+| Seguridad | `allowBackup` desactivado; el tráfico HTTP sin cifrar solo se permite en la variante `debug`, para llegar al backend local desde el emulador; la aplicación no contiene claves de Stripe ni credenciales de base de datos |
 
-El código fuente tiene tres archivos principales:
+El código está organizado por contexto, como el backend: `core` (red, sesión, repositorios y `AppContainer`), `iam`, `profile`, `home`, `simulation`, `gamification` y `commerce`, con `ui` para el tema y los componentes comunes. El código de producción suma unas 3 300 líneas de Kotlin.
 
-| Archivo | Líneas | Responsabilidad |
-|---------|--------|-----------------|
-| `MainActivity.kt` | 247 | Interfaz y estado de la pantalla: acceso, pestañas de simulaciones, progreso y catálogo, y resultado |
-| `data/SafeStepApi.kt` | 166 | Cliente de la API, modelos (`Simulation`, `SimulationStep`, `Progress`, `Product`) y lectura del JSON |
-| `data/AttemptScorer.kt` | 37 | Calcula puntaje, aciertos, tiempo y errores de un intento a partir de las respuestas elegidas |
+**La recompensa la calcula el servidor.** La aplicación solo envía el intento (puntaje y pasos); el servidor decide si fue exitoso (70 % o más de aciertos), aplica el multiplicador por repetición y acredita experiencia y monedas. La pantalla de resultado se arma con la diferencia entre el resumen de gamificación antes y después del intento, de modo que muestra exactamente lo que se registró.
 
-La aplicación consume estos *endpoints* de la API REST (5.2.7), con la URL base `http://10.0.2.2:8092/api/v1` por defecto, que es la dirección con la que el emulador llega al backend de la computadora y que se puede cambiar en la pantalla de acceso:
+La aplicación consume estos *endpoints* de la API REST (5.2.7), con la URL base `http://10.0.2.2:8092/api/v1` en la variante de depuración (la dirección con la que el emulador llega al backend de la computadora):
 
-| Función | Método y ruta |
-|---------|---------------|
-| Registro | `POST /authentication/sign-up` |
-| Inicio de sesión | `POST /authentication/sign-in` |
-| Catálogo de simulaciones | `GET /simulations` |
-| Detalle de una simulación | `GET /simulations/{id}` |
-| Envío de un intento | `POST /simulations/{id}/attempts` |
-| Progreso | `GET /gamification/summary/me` |
-| Catálogo de productos | `GET /commerce/products` |
+| Contexto | Método y ruta |
+|----------|---------------|
+| Autenticación | `POST /authentication/sign-in`, `/sign-up`, `/refresh-token`, `/logout`, `/forgot-password`, `/reset-password` |
+| Perfil | `GET` y `PUT /profiles/me` |
+| Simulaciones | `GET /simulations`, `GET /simulations/{id}`, `POST /simulations/{id}/attempts`, `GET /simulations/attempts/me` |
+| Gamificación | `GET /gamification/summary/me`, `/missions`, `/badges/me`, `/leaderboard`, `/coin-transactions/me` |
+| Analítica | `GET /analytics/summary/me`, `/analytics/certificates/me` |
+| Catálogo | `GET /commerce/products`, `/products/{id}`, `/categories`, `/kits`, `/recommendations/me` |
+| Carrito | `GET /commerce/cart/me`, `POST /commerce/cart/items`, `PUT` y `DELETE /commerce/cart/items/{id}` |
+| Cupones | `GET /commerce/coupons`, `POST /commerce/coupons/{id}/redeem`, `GET /commerce/coupons/redeemed/me` |
+| Pedidos y pago | `GET /commerce/orders/me`, `POST /commerce/orders`, `POST /commerce/orders/{id}/payments/stripe-checkout`, `/stripe-confirm`, `/stripe-cancel` |
 
-**Artefacto.** El comando `./gradlew assembleDebug` genera el APK `app/build/outputs/apk/debug/app-debug.apk`, de aproximadamente 11.5 MB, firmado con la clave de depuración de Android y con la versión `0.1.0` (`versionCode` 1). Es el APK que se instaló en el emulador para la verificación. No se generó ni se distribuyó un APK firmado de publicación.
+**Artefacto.** El comando `./gradlew assembleDebug` genera el APK `app/build/outputs/apk/debug/app-debug.apk`, de aproximadamente 20 MB, firmado con la clave de depuración de Android y con la versión `1.0.0` (`versionCode` 2). Es el APK que se instaló en el emulador para la verificación. No se generó ni se distribuyó un APK firmado de publicación.
 
 ### 5.2.5.3. Evidencia de pruebas
 
-Las pruebas y el flujo manual se ejecutaron el 8 de octubre de 2026 contra la rama `develop` del backend (242 pruebas aprobadas, 6.1), levantada localmente con una base de datos PostgreSQL 18 temporal y con la URL base por defecto del emulador. El emulador usado fue un Pixel 7 con Android 13.
+Las pruebas se ejecutaron el 8 de noviembre de 2026. Las instrumentadas se corrieron en un emulador de Android Studio (Medium Phone, API 37) contra el backend de `main` (259 pruebas aprobadas, 6.1) levantado localmente, con una base de datos PostgreSQL temporal y la aplicación web sirviendo las imágenes.
 
 | Tipo | Herramienta | Qué verifica | Resultado |
 |------|-------------|--------------|-----------|
 | Compilación | Gradle `assembleDebug` | Que la aplicación compila y empaqueta | Correcta |
-| Unitaria | JUnit 4.13.2 | `AttemptScorerTest`: puntaje al mezclar respuestas correctas e incorrectas (50 %, 1 de 2 pasos, 60 s, error en el paso 2) y simulación sin pasos sin división por cero | 2 de 2 aprobadas |
-| Instrumentada | Compose UI Test en el emulador | `MainActivityTest`: la pantalla sin sesión muestra el título, «Sign in» y «Create account» | 1 de 1 aprobada |
-| Funcional manual | Emulador y `adb` | Recorrido completo contra el backend local (tabla siguiente) | Sin fallos |
+| Unitaria | JUnit 4 y MockWebServer | Cliente de la API (inicio y cierre de sesión, token en cada llamada, renovación una sola vez, fin de sesión si falla la renovación, errores de red legibles, canje de cupón, confirmación del pago con Stripe, campos desconocidos ignorados), sesión, `AttemptScorer`, flujo de simulación, filtros, carrito y cupones, y validación de formularios | 25 de 25 aprobadas |
+| Sistema | Compose UI Test en el emulador, contra la API real | Seis escenarios que se describen abajo | 6 de 6 aprobadas |
+| Instrumentada de interfaz | Compose UI Test en el emulador | `MainActivityTest`: la pantalla sin sesión ofrece ingresar y registrarse, y rechaza credenciales cortas antes de llamar al servidor | 2 de 2 aprobadas |
+| Recorrido de capturas | Compose UI Test en el emulador | `EvidenceTourTest`: recorre las 21 pantallas y guarda una captura de cada una | 1 de 1 aprobada |
 
-Recorrido funcional manual:
+En total son 25 pruebas unitarias y 9 instrumentadas, todas aprobadas.
 
-| Paso | Acción | Resultado observado |
-|------|--------|---------------------|
-| 1 | Crear una cuenta nueva | Se registra, inicia sesión y muestra las simulaciones |
-| 2 | Abrir «RCP básico para adultos» | Muestra la descripción y los 4 pasos con sus opciones |
-| 3 | Responder los 4 pasos y pulsar «Finish simulation» | El botón se habilita solo con todos los pasos respondidos; el intento se envía correctamente |
-| 4 | Ver el resultado | 100 % con 4/4 pasos correctos |
-| 5 | Abrir «Progress» | Nivel 1, 420 XP, 101 SafeCoins y 1 simulación completada |
-| 6 | Abrir «Catalog» | Lista los productos con categoría y precio |
+**Pruebas de sistema.** Usan la aplicación instalada en el emulador y el backend real; cada una crea un jugador nuevo con un nombre aleatorio para no depender de datos previos.
 
-Las pruebas de la aplicación son pocas (tres) y no cubren el cliente de la API ni los errores de red; la garantía funcional del recorrido descansa sobre las suites del backend (6.1).
+| Escenario | Historias |
+|-----------|-----------|
+| Un visitante sin sesión ve el formulario de ingreso | US01 |
+| Un visitante crea una cuenta desde la aplicación y entra | US02 |
+| Una contraseña incorrecta se rechaza y el visitante sigue en el formulario | US01 |
+| Una confirmación de contraseña distinta se rechaza antes de llamar al servidor | US02 |
+| Un jugador completa una simulación y ve la recompensa del servidor | US10 a US16 |
+| Las monedas de dos simulaciones compran un cupón y el carrito lo aplica | US29, US36, US39, US42, US59, US60 |
 
-> **[CAPTURA PENDIENTE · C-506]** **Archivo:** `markdown/assets/images/chapter-5/AndroidApp/android-pruebas-unitarias.png` · **Pie:** Pruebas unitarias de la app Android: `AttemptScorerTest` aprobada (2 de 2). · **Qué capturar:** el reporte HTML de pruebas de Gradle (`app/build/reports/tests/testDebugUnitTest/index.html`) o el panel de Android Studio con la clase `AttemptScorerTest` y sus 2 pruebas en verde. · **Cómo:** en `safeStept-android` ejecuta `gradlew testDebugUnitTest` (recuerda la unidad virtual `subst` por la ruta con «ñ», ver su README) y abre el reporte.
+<div align="center">
+  <p>
+    <b>Figura 5.2.5.22</b>: Reporte de las pruebas unitarias (25 de 25 aprobadas)
+  </p>
+  <img src="../../assets/images/chapter-5/AndroidApp/android-pruebas-unitarias.png" alt="Reporte de pruebas unitarias" width="600" />
+  <p>
+    <i><b>Fuente</b>: Reporte HTML de Gradle (<code>testDebugUnitTest</code>).</i>
+  </p>
+</div>
 
-> **[CAPTURA PENDIENTE · C-507]** **Archivo:** `markdown/assets/images/chapter-5/AndroidApp/android-prueba-instrumentada.png` · **Pie:** Prueba instrumentada `MainActivityTest` aprobada en el emulador (1 de 1). · **Qué capturar:** el resultado de la prueba instrumentada en Android Studio, con el emulador visible o el nombre del dispositivo (Pixel 7, Android 13). · **Cómo:** con el emulador encendido, ejecuta la prueba `MainActivityTest` desde Android Studio y captura el panel *Run* con el resultado.
+<div align="center">
+  <p>
+    <b>Figura 5.2.5.23</b>: Reporte de las pruebas instrumentadas en el emulador (9 de 9 aprobadas)
+  </p>
+  <img src="../../assets/images/chapter-5/AndroidApp/android-pruebas-sistema.png" alt="Reporte de pruebas instrumentadas" width="600" />
+  <p>
+    <i><b>Fuente</b>: Reporte HTML de Gradle (<code>connectedDebugAndroidTest</code>).</i>
+  </p>
+</div>
 
-### 5.2.5.4. Capturas del flujo
+<div align="center">
+  <p>
+    <b>Figura 5.2.5.24</b>: Pruebas de sistema por escenario (<code>SystemFlowTest</code>)
+  </p>
+  <img src="../../assets/images/chapter-5/AndroidApp/android-pruebas-sistema-flujos.png" alt="Reporte de SystemFlowTest" width="600" />
+  <p>
+    <i><b>Fuente</b>: Reporte HTML de Gradle (<code>connectedDebugAndroidTest</code>).</i>
+  </p>
+</div>
 
-Capturas tomadas en el emulador durante el recorrido anterior.
+La verificación del pago con Stripe se hizo contra un servidor simulado (pruebas unitarias del cliente); la prueba con una cuenta real de Stripe necesita claves de prueba en el backend y queda pendiente.
+
+### 5.2.5.4. Capturas de la aplicación
+
+Capturas tomadas por la prueba `EvidenceTourTest` en el emulador, contra el backend real, con una interfaz en inglés. Los textos de simulaciones, misiones, insignias y cupones vienen del servidor y están en español.
 
 <div align="center">
 <table>
 <tr>
-<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/android-01-inicio-sesion.png" alt="Inicio de sesión" width="230" /><br><i><b>Figura 5.2.5.1.</b> Pantalla de acceso con la URL de la API. <b>Fuente</b>: Elaboración propia.</i></td>
-<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/android-02-simulaciones.png" alt="Lista de simulaciones" width="230" /><br><i><b>Figura 5.2.5.2.</b> Catálogo de simulaciones. <b>Fuente</b>: Elaboración propia.</i></td>
-<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/android-03-detalle-simulacion.png" alt="Detalle de una simulación" width="230" /><br><i><b>Figura 5.2.5.3.</b> Pasos de una simulación. <b>Fuente</b>: Elaboración propia.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/01-sign-in.png" alt="Ingreso" width="190" /><br><i><b>Figura 5.2.5.1.</b> Ingreso.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/02-register.png" alt="Registro" width="190" /><br><i><b>Figura 5.2.5.2.</b> Registro.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/03-forgot-password.png" alt="Recuperar contraseña" width="190" /><br><i><b>Figura 5.2.5.3.</b> Recuperar contraseña.</i></td>
 </tr>
 <tr>
-<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/android-04-resultado.png" alt="Resultado de la simulación" width="230" /><br><i><b>Figura 5.2.5.4.</b> Resultado de la simulación. <b>Fuente</b>: Elaboración propia.</i></td>
-<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/android-05-progreso.png" alt="Progreso del usuario" width="230" /><br><i><b>Figura 5.2.5.5.</b> Progreso del usuario. <b>Fuente</b>: Elaboración propia.</i></td>
-<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/android-06-catalogo.png" alt="Catálogo de productos" width="230" /><br><i><b>Figura 5.2.5.6.</b> Catálogo de productos. <b>Fuente</b>: Elaboración propia.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/04-home.png" alt="Inicio" width="190" /><br><i><b>Figura 5.2.5.4.</b> Inicio.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/05-simulations.png" alt="Simulaciones" width="190" /><br><i><b>Figura 5.2.5.5.</b> Lista de simulaciones.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/06-simulation-intro.png" alt="Detalle de simulación" width="190" /><br><i><b>Figura 5.2.5.6.</b> Detalle de una simulación.</i></td>
+</tr>
+<tr>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/07-simulation-step.png" alt="Paso" width="190" /><br><i><b>Figura 5.2.5.7.</b> Paso de la simulación.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/08-simulation-feedback.png" alt="Retroalimentación" width="190" /><br><i><b>Figura 5.2.5.8.</b> Retroalimentación de la respuesta.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/09-simulation-result.png" alt="Resultado" width="190" /><br><i><b>Figura 5.2.5.9.</b> Resultado con la recompensa del servidor.</i></td>
+</tr>
+<tr>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/10-progress-summary.png" alt="Resumen" width="190" /><br><i><b>Figura 5.2.5.10.</b> Progreso: resumen.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/11-progress-missions.png" alt="Misiones" width="190" /><br><i><b>Figura 5.2.5.11.</b> Progreso: misiones.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/12-progress-badges.png" alt="Insignias" width="190" /><br><i><b>Figura 5.2.5.12.</b> Progreso: insignias.</i></td>
+</tr>
+<tr>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/13-progress-ranking.png" alt="Ranking" width="190" /><br><i><b>Figura 5.2.5.13.</b> Progreso: ranking.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/14-progress-coins.png" alt="Monedas" width="190" /><br><i><b>Figura 5.2.5.14.</b> Progreso: monedas.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/15-store-products.png" alt="Productos" width="190" /><br><i><b>Figura 5.2.5.15.</b> Tienda: productos.</i></td>
+</tr>
+<tr>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/16-store-kits.png" alt="Kits" width="190" /><br><i><b>Figura 5.2.5.16.</b> Tienda: kits.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/17-store-coupons.png" alt="Cupones" width="190" /><br><i><b>Figura 5.2.5.17.</b> Tienda: cupones.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/18-coupon-redeemed.png" alt="Cupón canjeado" width="190" /><br><i><b>Figura 5.2.5.18.</b> Cupón canjeado.</i></td>
+</tr>
+<tr>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/19-product-detail.png" alt="Detalle de producto" width="190" /><br><i><b>Figura 5.2.5.19.</b> Detalle de producto.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/20-cart-with-coupon.png" alt="Carrito" width="190" /><br><i><b>Figura 5.2.5.20.</b> Carrito con cupón.</i></td>
+<td align="center"><img src="../../assets/images/chapter-5/AndroidApp/21-profile.png" alt="Perfil" width="190" /><br><i><b>Figura 5.2.5.21.</b> Perfil.</i></td>
 </tr>
 </table>
+<p><i><b>Fuente</b>: Captura de la aplicación SafeStep Android 1.0.0 en el emulador.</i></p>
 </div>
 
 ### 5.2.5.5. Limitaciones
 
-- **Alcance reducido.** Es un piloto de un solo recorrido; no incluye perfil, carrito, cupones, compras ni administración (5.2.5.1).
-- **Arquitectura mínima.** El estado vive dentro de la función composable de `MainActivity` y no hay ViewModel, navegación entre pantallas, ni separación en capas de dominio, aplicación e infraestructura como en el frontend web y el backend. Mantener y ampliar la app exigiría reorganizarla.
-- **Sesión corta.** La app guarda solo el token de acceso, en memoria, y no usa el *refresh token*: al cerrar la aplicación o al expirar el token hay que iniciar sesión de nuevo.
-- **Puntaje calculado en el cliente.** `AttemptScorer` calcula el puntaje con la respuesta correcta que entrega la API y lo envía; el backend solo valida que esté entre 0 y 100.
-- **Errores poco amigables.** Los fallos de red o de la API se muestran como texto técnico (por ejemplo, `HTTP 401` seguido del cuerpo de la respuesta).
-- **Presentación del catálogo.** Los precios se muestran sin símbolo de moneda.
-- **Pocas pruebas.** Hay dos pruebas unitarias y una instrumentada; no hay pruebas del cliente de la API.
-- **Sin distribución.** No existe un APK firmado de publicación ni una publicación en una tienda; el repositorio contenía un único commit inicial al momento de la verificación.
-- **Entorno de Windows.** La ruta del proyecto contiene la letra «ñ», con la que Gradle no localiza las clases de prueba; las pruebas se ejecutaron montando la carpeta en una unidad con ruta ASCII (`subst`), como indica el README del repositorio.
+- **Pago con Stripe sin probar de extremo a extremo.** El cliente se verificó con un servidor simulado; falta una prueba con claves de prueba reales de Stripe en el backend.
+- **Sin distribución.** No existe un APK firmado de publicación ni una publicación en una tienda; el APK generado es el de depuración.
+- **Imágenes.** Se sirven desde la aplicación web (`ASSETS_BASE_URL`). En la variante de publicación el origen está vacío, por lo que se verían marcadores de posición hasta definir el dominio definitivo.
+- **Idioma del contenido.** La interfaz está en español e inglés, pero el contenido que viene del servidor (simulaciones, misiones, insignias, cupones) está solo en español, y el idioma lo fija el dispositivo (US04 parcial).
+- **Sin administración.** La gestión del catálogo, los cupones y los roles es solo de la aplicación web.
+- **Pruebas de interfaz limitadas a flujos clave.** Los seis escenarios de sistema cubren ingreso, registro, simulación con recompensa y cupón con carrito; el resto de las pantallas se verifica con las capturas y con las pruebas unitarias de los `ViewModel`.
+- **Solo Android.** No hay aplicación para iOS (4.5.2).
+- **Entorno de Windows.** La ruta del proyecto contiene la letra «ñ», con la que Gradle no localiza las clases de prueba; las pruebas se ejecutan montando la carpeta en una unidad con ruta ASCII (`subst`), como indica el README del repositorio. En el emulador con renderizado por software, la interfaz del sistema puede tapar las capturas; con `-gpu host` y cuatro núcleos funciona bien.
