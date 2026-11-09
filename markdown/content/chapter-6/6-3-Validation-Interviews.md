@@ -546,8 +546,8 @@ Esta sección presenta la evaluación de la experiencia de usuario de SafeStep a
 | Elemento | Información |
 | --- | --- |
 | Carrera | Ingeniería de Software |
-| Curso | Desarrollo de Aplicaciones Open Source |
-| Sección | 1ASI0729 |
+| Curso | Diseño de Experimentos de Ingeniería de Software |
+| NRC | 9090 |
 | Auditor | Chronos Team - SafeStep |
 | Clientes | Participantes de las entrevistas de validación registradas en la sección 6.3.2 |
 | Site o App a evaluar | SafeStep Landing Page y SafeStep Web Application |

@@ -10,7 +10,7 @@
 
 # 3.2. User Stories
 
-En esta sección se presentan las épicas, user stories y technical stories que guían el desarrollo de SafeStep. Las historias se redactan desde la perspectiva del usuario o del equipo de desarrollo, siguiendo la estructura **Como [rol], quiero [necesidad], para [beneficio]**, con el fin de relacionar cada requerimiento con un valor concreto para el producto.
+En esta sección se presentan las épicas, user stories y technical stories que guían el desarrollo de SafeStep. Las historias se redactan desde la perspectiva del usuario o del equipo de desarrollo, siguiendo la estructura **Como [rol], quiero [necesidad], para [beneficio]**, con el fin de relacionar cada requisito con un valor concreto para el producto.
  
 Los criterios de aceptación se expresan bajo el formato **Gherkin**, utilizando la estructura **Dado que / Cuando / Entonces**. De esta manera, cada historia cuenta con condiciones verificables que permiten validar su cumplimiento durante el desarrollo, las pruebas funcionales y la revisión de cada Sprint. Las filas identificadas como épicas no incluyen criterios de aceptación específicos, debido a que funcionan como agrupadores de historias relacionadas.
 
@@ -144,7 +144,7 @@ En la columna **Priority**, `#1` indica la mayor prioridad y cada número corres
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> ver mis errores mas repetidos <b>para</b> mejorar en pasos concretos.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4">- <b>Dado que</b> el usuario cometio errores en intentos anteriores, <b>Cuando</b> abre el apartado de errores, <b>Entonces</b> el sistema muestra los errores mas frecuentes y una recomendacion asociada<br><br>- <b>Dado que</b> el usuario no tiene errores registrados, <b>Cuando</b> abre el apartado de errores, <b>Entonces</b> el sistema muestra un mensaje positivo o de estado vacio</td></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario cometio errores en intentos anteriores, <b>Cuando</b> abre la sección de errores, <b>Entonces</b> el sistema muestra los errores mas frecuentes y una recomendacion asociada<br><br>- <b>Dado que</b> el usuario no tiene errores registrados, <b>Cuando</b> abre la sección de errores, <b>Entonces</b> el sistema muestra un mensaje positivo o de estado vacio</td></tr>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
     <tr><td>US21</td><td>usuario</td><td>#40</td><td>EP04</td></tr>
     <tr><th>Title</th><td colspan="3">Recibir recomendaciones accionables</td></tr>
@@ -172,7 +172,7 @@ En la columna **Priority**, `#1` indica la mayor prioridad y cada número corres
     <tr><th colspan="4">Description</th></tr>
     <tr><td colspan="4"><b>Como</b> usuario, <b>quiero</b> ver mi nivel, XP, racha, ranking y monedas <b>para</b> conocer mi estado competitivo.</td></tr>
     <tr><th colspan="4">Acceptance Criteria</th></tr>
-    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene datos de gamificacion, <b>Cuando</b> ingresa a Gamificacion, <b>Entonces</b> el sistema muestra nivel, XP, racha, ranking semanal y SafeCoins<br><br>- <b>Dado que</b> el sistema no puede cargar gamificacion, <b>Cuando</b> el usuario ingresa al apartado, <b>Entonces</b> se muestra un mensaje de error comprensible</td></tr>
+    <tr><td colspan="4">- <b>Dado que</b> el usuario tiene datos de gamificacion, <b>Cuando</b> ingresa a Gamificacion, <b>Entonces</b> el sistema muestra nivel, XP, racha, ranking semanal y SafeCoins<br><br>- <b>Dado que</b> el sistema no puede cargar gamificacion, <b>Cuando</b> el usuario ingresa a la sección, <b>Entonces</b> se muestra un mensaje de error comprensible</td></tr>
     <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
     <tr><td>US24</td><td>usuario</td><td>#43</td><td>EP05</td></tr>
     <tr><th>Title</th><td colspan="3">Ver misiones activas resumidas</td></tr>

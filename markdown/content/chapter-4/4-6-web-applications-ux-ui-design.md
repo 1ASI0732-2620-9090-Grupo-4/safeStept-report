@@ -154,7 +154,7 @@ La página de configuración y perfil del usuario.
 
 Esta sección presenta la propuesta de Wireflows. Debe considerarse un Wireflow para cada User goal, considerando los User Persona para cada aplicación que forma parte del alcance. Es recomendable que el equipo elabore previamente los correspondientes Task Flows, para establecer un consenso sobre las rutas típicas de steps para cada User goal. Es importante recordar que la forma como se refleja un cambio en una pantalla (Wireframe) como resultado de la interacción en un flujo es agregar un paso con un Wireframe con la representación del nuevo estado. Utilizar para los Wireflows las herramientas indicadas. Cada Wireflow diagram requiere que se redacte el User goal y se complemente con una explicación del flujo especificado.
 
-### 4.6.2.1. Metodología de Wireflows
+### 4.6.2.1. Método de Wireflows
 
 SafeStep utiliza wireflows para documentar los flujos de interacción entre pantallas. Un wireflow representa una secuencia de pantallas relacionadas por las acciones del usuario, ilustrando cómo los cambios en una pantalla lead a estados diferentes.
 
@@ -409,7 +409,7 @@ Cada mock-up evidencia la aplicación del Design System:
 
 Esta sección presenta la propuesta de User Flows. Debe considerarse un User Flow para cada User goal, considerando los User Persona para cada aplicación que forma parte del alcance. Estos User Flows deben ser consistentes con los Wireflows de los cuales se derivan. Debe recordarse que en el User Flow se incluyen los Mock-ups de las vistas o pantallas de las aplicaciones, junto con los flujos que constituyen la ruta esperada (happy path) y las rutas alternativas (unhappy paths). Utilizar para los User Flows las herramientas indicadas. Cada User Flow diagram requiere que se redacte el User goal y se complemente con una explicación de los flujos y condiciones especificados.
 
-### 4.6.4.1. Metodología de User Flows
+### 4.6.4.1. Método de User Flows
 
 Los User Flows de SafeStep documentan las rutas completas que los usuarios siguen para lograr objetivos específicos. A diferencia de los wireflows que muestran la estructura técnica, los user flows muestran la experiencia desde la perspectiva del usuario.
 

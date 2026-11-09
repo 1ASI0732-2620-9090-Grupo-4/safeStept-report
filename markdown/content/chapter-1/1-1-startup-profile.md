@@ -45,7 +45,7 @@ Ser una plataforma latinoamericana de referencia en educación preventiva digita
       <h3>Desarrollador frontend</h3>
       <h4>Palacios Jáuregui, Kalid Jesus U201913639</h4>
       <p>
-        Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Tengo conocimientos en Especificación y Análisis de Requerimientos, desarrollo UI/UX y desarrollo Frontend aplicaré lo aprendido para aportar en UX, diseño de interfaces y prototipado dentro del proyecto.
+        Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Tengo conocimientos en Especificación y Análisis de Requisitos, desarrollo UI/UX y desarrollo Frontend aplicaré lo aprendido para aportar en UX, diseño de interfaces y prototipado dentro del proyecto.
       </p>
     </td>
   </tr>
@@ -57,7 +57,7 @@ Ser una plataforma latinoamericana de referencia en educación preventiva digita
       <h3>Desarrollador backend</h3>
       <h4>Sanchez Arenas, Manuel Angel U201817507</h4>
       <p>
-        Soy estudiante de Ingeniería de Software. Tengo conocimientos en Diseño y Patrones de Software, Especificación y Análisis de Requerimientos y desarrollo de Base de Datos.
+        Soy estudiante de Ingeniería de Software. Tengo conocimientos en Diseño y Patrones de Software, Especificación y Análisis de Requisitos y desarrollo de Base de Datos.
       </p>
     </td>
   </tr>

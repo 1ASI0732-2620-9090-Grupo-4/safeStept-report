@@ -673,4 +673,41 @@ Para la regla `typescript:S8786` se reescribió `formatPrice` sin esa expresión
 
 ## 6.2.2. Reviews
 
-Pendiente.
+Una revisión es una verificación estática del trabajo por una persona distinta de quien lo produjo o, cuando eso no es posible, por una lectura estructurada con criterios fijos. Esta sección declara qué revisiones existen hoy en SafeStep, qué evidencia hay de ellas y qué hallazgos produjo la única revisión técnica documentada.
+
+### 6.2.2.1. Mecanismos de revisión del proyecto
+
+| Mecanismo | Qué revisa | Evidencia |
+| --- | --- | --- |
+| Compuertas automáticas (Checkstyle, Quality Gate de SonarQube, pruebas en Jenkins) | Estilo, calidad y comportamiento de cada cambio que llega a la rama principal | Resultados en 6.1, 6.2.1 y 7.1 |
+| Integración por GitFlow (feature → `develop` → `main`) | Que solo llegue a `main` lo que ya integró `develop` | Commits de integración: 13 en el backend, 5 en el frontend y 6 en el informe |
+| Pull requests | Lectura del cambio por otra persona antes de integrarlo | Solo el repositorio del informe tiene 3 pull requests (17 de septiembre de 2026), todos sin revisiones registradas. Los repositorios del backend, el frontend y la aplicación Android no tienen ninguno |
+
+**Limitación declarada.** La convención de 5.1.2 indica que cada rama de característica se integra mediante un pull request con revisión. En los repositorios de producto eso no se aplicó: los cambios se integraron con fusiones directas entre ramas, por lo que no hay revisiones por pares registradas en GitHub. Las compuertas automáticas sustituyen parte de la revisión (estilo, calidad y regresiones), pero no la lectura de la lógica de negocio por otra persona. La acción correctiva está en 6.2.2.3.
+
+### 6.2.2.2. Revisión técnica del cambio de reglas de recompensa
+
+**Alcance.** Los commits `c79a1be` y `b6707df` del backend (9 de noviembre de 2026): `RewardPolicy`, el manejador `SimulationAttemptCompletedIntegrationEventHandler`, el ensamblador de transacciones de monedas y la reparación de los datos semilla. Son 13 archivos, con 333 líneas agregadas y 57 eliminadas.
+
+**Tipo de revisión.** Lectura estructurada del cambio con la lista de criterios de la tabla siguiente. La hizo quien escribió el cambio con apoyo de una herramienta de inteligencia artificial; **no es una revisión por pares** y se registra como tal.
+
+| Criterio | Resultado |
+| --- | --- |
+| La regla coincide con lo documentado en 8.1.1 (umbral de 70 % y mitad por cada repetición aprobada) | Cumple; `RewardPolicyTest` cubre los límites (69 %, 70 % y 100 %) y las repeticiones |
+| Los intentos no aprobados no pagan monedas pero sí experiencia | Cumple; verificado en el manejador y en el BDD `simulation-rewards.feature` |
+| El resultado que ve la persona usuaria coincide con lo que se acreditó | Cumple; la bandera de éxito de la transacción se deriva de la exactitud con la misma política |
+| Los datos históricos siguen siendo coherentes | Con reserva (hallazgo 3) |
+| Nombres, comentarios y pruebas siguen las convenciones de 6.2.1.1 | Cumple; Checkstyle sin observaciones y 259 pruebas aprobadas |
+
+| N.º | Hallazgo | Severidad | Disposición |
+| --- | --- | --- | --- |
+| 1 | El número de intentos aprobados previos se cuenta leyendo todas las transacciones de monedas de la persona; con muchos intentos la consulta crece sin límite | Baja | Aceptado: el volumen por jugador es pequeño. Mejora futura: una consulta de conteo en el repositorio |
+| 2 | Dos intentos que terminan casi al mismo tiempo podrían leer el mismo conteo y pagar ambos la recompensa completa | Media | Aceptado como riesgo conocido: el cliente envía un intento a la vez y el efecto es una recompensa extra puntual. Mitigación futura: bloqueo por jugador o restricción única por intento |
+| 3 | Las transacciones creadas antes de la regla se cuentan según su exactitud, sin multiplicador histórico | Baja | Aceptado: la base de producción es de demostración y se reinicia con los datos semilla |
+| 4 | Los datos semilla tenían tildes dañadas por una codificación incorrecta | Media | Corregido en `b6707df` y protegido con `SeedDataEncodingTest`, que falla si reaparecen esos caracteres |
+
+### 6.2.2.3. Plan de mejora
+
+- Integrar todo cambio de los repositorios de producto con pull request y al menos una aprobación de otro integrante, con la protección de ramas de GitHub activada en `main` y `develop`.
+- Dejar el resultado de cada revisión en el propio pull request, para que quede evidencia verificable y no solo lo declarado en el informe.
+- Repetir la revisión técnica de esta sección sobre los cambios del capítulo 8 cuando se construya el seguimiento de eventos.

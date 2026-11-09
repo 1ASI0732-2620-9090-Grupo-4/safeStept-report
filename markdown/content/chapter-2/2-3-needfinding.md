@@ -10,7 +10,7 @@
 
 # 2.3. Needfinding
 
-Esta sección sintetiza necesidades de aprendizaje y preparación en primeros auxilios **antes de utilizar SafeStep**. La evidencia primaria son diez entrevistas del apartado 2.2: cuatro estudiantes universitarios (E01–E04), tres miembros de comunidades vecinales (C01–C03) y tres personas con experiencia actual o previa como brigadistas (B01–B03). El análisis competitivo de 2.1 aporta contexto: existen aplicaciones gratuitas con guías, cuestionarios y, en algunos casos, progreso, insignias o acceso offline. Por ello, ninguno de estos elementos se presenta como ventaja exclusiva de SafeStep.
+Esta sección sintetiza necesidades de aprendizaje y preparación en primeros auxilios **antes de utilizar SafeStep**. La evidencia primaria son diez entrevistas de la sección 2.2: cuatro estudiantes universitarios (E01–E04), tres miembros de comunidades vecinales (C01–C03) y tres personas con experiencia actual o previa como brigadistas (B01–B03). El análisis competitivo de 2.1 aporta contexto: existen aplicaciones gratuitas con guías, cuestionarios y, en algunos casos, progreso, insignias o acceso offline. Por ello, ninguno de estos elementos se presenta como ventaja exclusiva de SafeStep.
 
 El recorrido metodológico es: respuestas y resúmenes de entrevistas → patrones por segmento → arquetipos compuestos → tareas independientes de la solución → journeys, empathy maps y escenarios As-Is. Se indica cuando un rasgo es una inferencia de síntesis y cuando faltan datos. **No se observó el comportamiento real de toda la población**, no se midió competencia clínica y los porcentajes de 2.2.3 solo describen a las personas entrevistadas.
 

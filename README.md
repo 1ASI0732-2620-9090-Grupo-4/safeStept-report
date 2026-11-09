@@ -61,7 +61,7 @@
 </div>
 
 <h3 align="center"><strong>Periodo 202620</strong></h3>
-<h3 align="center"><strong>Septiembre 2026</strong></h3>
+<h3 align="center"><strong>Noviembre 2026</strong></h3>
 
 <div style="page-break-before: always;"></div>
 

@@ -22,7 +22,7 @@ A continuación se presentan las herramientas y tecnologías seleccionadas para 
 |-------------|-----------|------------------|------|
 | Trello | Gestión del Product Backlog, Sprint Boards y seguimiento de tareas del proyecto | <a href="https://trello.com/b/UHs6EvyH/safestep-team-3">https://trello.com/b/UHs6EvyH/safestep-team-3</a> | SaaS |
 | GitHub Projects | Gestión de Issues y seguimiento del progreso del desarrollo en sincronización con los repositorios | <a href="https://github.com/1ASI0732-2620-9090-Grupo-4">https://github.com/1ASI0732-2620-9090-Grupo-4</a> | SaaS |
-| Google Drive | Almacenamiento y colaboración documentos de análisis y requerimientos | <a href="https://drive.google.com">https://drive.google.com</a> | SaaS |
+| Google Drive | Almacenamiento y colaboración documentos de análisis y requisitos | <a href="https://drive.google.com">https://drive.google.com</a> | SaaS |
 | Discord | Comunicación en tiempo real del equipo y reuniones virtuales | <a href="https://discord.com">https://discord.com</a> | SaaS |
 
 ### 5.1.1.2. Herramientas de Diseño UX/UI
@@ -246,7 +246,7 @@ El equipo sigue las "HTML Style Guide and Coding Conventions" ampliamente acepta
 
 El equipo adopta las directrices del "Google HTML/CSS Style Guide" como base para las convenciones de CSS, complementadas con prácticas específicas del ecosistema Angular.
 
-**Organización del Código CSS:** El código CSS se organiza siguiendo metodologías modernas como BEM (Block Element Modifier) para la nomenclatura de clases, lo que facilita el mantenimiento y la escalabilidad de los estilos. Cada componente en Angular debe tener su propio archivo de estilos encapsulado, utilizando preferentemente SCSS para aprovechar características como variables y mixins.
+**Organización del Código CSS:** El código CSS se organiza siguiendo convenciones modernas como BEM (Block Element Modifier) para la nomenclatura de clases, lo que facilita el mantenimiento y la escalabilidad de los estilos. Cada componente en Angular debe tener su propio archivo de estilos encapsulado, utilizando preferentemente SCSS para aprovechar características como variables y mixins.
 
 **Convenciones de Nomenclatura:** Las clases CSS siguen el patrón BEM: `bloque__elemento--modificador`. Por ejemplo: `button--primary`, `card__title--highlighted`. Los nombres deben ser descriptivos y en inglés. Se evita el uso de IDs para estilos, prefiriendo clases para permitir la reutilización.
 

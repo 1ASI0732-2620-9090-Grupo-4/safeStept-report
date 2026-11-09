@@ -109,7 +109,7 @@ El diccionario describe las clases representadas en los diagramas anteriores y a
 | Persistencia y servicios externos | `UserRepository`, `ProfileRepository`, `MedicalSimulationRepository`, `SimulationAttemptRepository`, `BadgeRepository`, `MissionRepository`, `PlayerProgressRepository`, `CoinTransactionRepository`, `CertificateRepository`, `ProductRepository`, `OrderRepository`, `CouponRepository`, `ShoppingCartRepository`, `StripeCheckoutClient` y sus implementaciones | Definir contratos de almacenamiento o integración y adaptarlos a JPA/Stripe. |
 | Compartido y eventos | `AbstractDomainAggregateRoot`, `SimulationAttemptCompletedEvent`, `SimulationAttemptCompletedIntegrationEvent` y sus manejadores | Registrar y publicar hechos del dominio para que Gamification y Analytics reaccionen sin acoplar directamente sus agregados. |
 
-En conjunto, el UML describe estructura y colaboración entre clases, mientras que el ERD del apartado 4.10 describe persistencia. Por ello el número de clases no coincide con el de tablas.
+En conjunto, el UML describe estructura y colaboración entre clases, mientras que el ERD de la sección 4.10 describe persistencia. Por ello el número de clases no coincide con el de tablas.
 
 
 
