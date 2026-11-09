@@ -78,42 +78,59 @@ Las preguntas Q5, Q4 y Q10 no parten de una creencia, por lo que no llevan hipó
 
 ## 8.2.2. Domain Business Metrics
 
-Antes de elegir las medidas de cada experimento se definen las métricas del negocio de SafeStep que los experimentos buscan mover. Son pocas y están ordenadas desde la que expresa el valor del producto hasta las que lo sostienen.
+Esta sección alinea la medición de los experimentos con los objetivos del negocio. Aquí se definen **todas** las métricas del dominio de SafeStep que se usarán para evaluar los experimentos, cada una con su **fórmula de cálculo**, su **técnica de recolección** y su **meta deseada**. Es el catálogo cerrado de métricas: las *Experiment Cards* (8.1.5), las medidas (8.2.3) y los indicadores (8.2.7) solo pueden referirse a métricas definidas en esta tabla, por su código. No se permiten métricas ad-hoc ni no definidas previamente; así se evita decidir con *vanity metrics* (visitas totales, clics totales) que no distinguen si la persona aprendió o solo navegó.
 
-**Métrica guía (norte):** **simulaciones aprobadas por usuario activo por semana**. Resume el propósito del producto: que las personas practiquen y mejoren, no solo que entren.
+**Métrica guía (norte):** **simulaciones aprobadas por usuario activo por semana**. Resume el propósito del producto, que las personas practiquen y mejoren, y es la que se espera que mueva el conjunto de los experimentos.
 
-| Código | Métrica | Fórmula | Fuente hoy | Preguntas |
-| --- | --- | --- | --- | --- |
-| M1 | Activación | Usuarios nuevos que terminan su primera simulación en 7 días ÷ usuarios nuevos | Nueva (inicio y registro de eventos) | Q1, Q5 |
-| M2 | Amplitud de práctica | Simulaciones distintas completadas por usuario en 14 días | Intentos registrados | Q2, Q4 |
-| M3 | Regularidad | Días con al menos una simulación completada en 14 días | Intentos registrados (fecha de finalización) | Q8, Q10 |
-| M4 | Retención | Usuarios que vuelven entre el día 2 y el 7, y entre el día 8 y el 30 ÷ usuarios de la cohorte | Nueva (sesiones) | Q10 |
-| M5 | Economía de monedas | SafeCoins emitidas ÷ SafeCoins gastadas en cupones, por periodo | Transacciones de monedas y cupones canjeados | Q7, Q8, Q9 |
-| M6 | Canje de cupones | Usuarios elegibles que canjean su primer cupón en 30 días ÷ usuarios elegibles | Cupones canjeados | Q7 |
-| M7 | Interés por la tienda | Simulaciones aprobadas tras las cuales se abre la ficha de un producto ÷ simulaciones aprobadas | Nueva (eventos de tienda) | Q6 |
-| M8 | Aprendizaje observable | Precisión del segundo intento menos la del primero en una misma simulación (puntos) | Intentos registrados | Q9, Q3 |
-| M9 | Abandono de simulaciones | Simulaciones iniciadas y no terminadas ÷ simulaciones iniciadas | Nueva (inicio de simulación) | Q3, Q5 |
+La **técnica de recolección** indica de dónde sale el dato: *datos existentes* son los que SafeStep ya guarda (intentos terminados, transacciones de monedas, cupones canjeados); *eventos* son los que habilita el plan de seguimiento de 8.2.8, que hoy no existen. Las **metas** que dependen de una tasa base son supuestos de planificación (8.2.5) y se confirman con la línea base; las de preguntas exploratorias son criterios de suficiencia, no de mejora.
 
-**Equilibrio entre métricas.** M5 es una métrica de equilibrio de la economía del producto: si las monedas se emiten mucho más rápido de lo que se gastan, pierden valor; si casi no se emiten, no motivan. Los experimentos Q7, Q8 y Q9 modifican justamente las entradas y salidas de esta economía, por lo que M5 se vigila como métrica de salud en los tres.
+| Código | Métrica | Fórmula | Técnica de recolección | Meta deseada | Preguntas |
+| --- | --- | --- | --- | --- | --- |
+| M1 | Activación | Usuarios nuevos que terminan su primera simulación en 7 días ÷ usuarios nuevos | Eventos `account_registered` y `simulation_completed` | ≥ 70 % en la variante con guía (base supuesta 50 %) | Q1 |
+| M2 | Amplitud de práctica | Simulaciones distintas completadas por usuario en 14 días | Datos existentes (intentos terminados) | ≥ 2.75 en la variante con recompensa visible (base supuesta 2.0) | Q2 |
+| M3 | Regularidad | Días con al menos una simulación completada en 14 días | Datos existentes (fecha de finalización de los intentos) | ≥ 4 días con bonificación (base supuesta 3) | Q8 |
+| M4 | Retención | Usuarios de la cohorte que vuelven entre el día 2 y el 7 ÷ usuarios de la cohorte | Evento `session_started` | No bajar más de 5 puntos frente al control (métrica de salud) | Q1, Q6, Q7 |
+| M5 | Economía de monedas | SafeCoins emitidas ÷ SafeCoins gastadas en cupones, por semana | Datos existentes (transacciones de monedas y cupones canjeados) | Entre 1.0 y 3.0 (supuesto, se calibra con la línea base) | Q7, Q9 |
+| M6 | Canje del primer cupón | Usuarios elegibles que canjean su primer cupón en 30 días ÷ usuarios elegibles | Datos existentes (cupones canjeados) y evento `coupon_redeemed` | ≥ 60 % con el precio de 100 monedas (base supuesta 40 %) | Q7 |
+| M7 | Interés por la tienda | Simulaciones aprobadas tras las cuales se abre la ficha de un producto sugerido ÷ simulaciones aprobadas | Eventos `product_suggestion_shown` y `product_opened` | ≥ 20 % con la frase contextual (base supuesta 10 %) | Q6 |
+| M8 | Aprendizaje observable | Precisión del segundo intento menos precisión del primero, en la misma simulación (puntos) | Datos existentes (intentos terminados) | Diferencia de al menos +5 puntos frente al control | Q9 |
+| M9 | Abandono de simulaciones | Simulaciones iniciadas y no terminadas ÷ simulaciones iniciadas | Eventos `simulation_started` y `simulation_completed` | No empeorar más de 5 puntos frente al control; en Q3, describir la diferencia entre grupos (base supuesta 20 % y 40 %) | Q3, Q2, Q5 |
+| M10 | Motivos de abandono | Respuestas por motivo ÷ respuestas totales (%) | Evento `simulation_exit_reason` | 30 respuestas; actuar sobre cualquier motivo que supere 30 % | Q5 |
+| M11 | Respuesta al mensaje de salida | Respuestas al mensaje ÷ veces que se mostró el mensaje | Eventos `simulation_exit_prompted` y `simulation_exit_reason` | ≥ 50 % (supuesto) | Q5 |
+| M12 | Paso de abandono | Distribución de los abandonos por paso (1 a 4) | Evento `simulation_exit_prompted` (propiedad `stepIndex`) | Descriptiva: identificar el paso con más abandonos | Q5 |
+| M13 | Tiempo hasta la primera simulación | Mediana de horas entre el registro y la primera simulación completada | Eventos `account_registered` y `simulation_completed` | Menor que en el control (secundaria de Q1) | Q1 |
+| M14 | Omisión de la guía | Usuarios que omiten la guía sin completarla ÷ usuarios a los que se les mostró | Eventos `welcome_guide_viewed` y `welcome_guide_dismissed` | ≤ 40 % (supuesto) | Q1 |
+| M15 | Racha de tres días | Usuarios que completan simulaciones tres días seguidos ÷ usuarios del grupo | Evento `streak_updated` | Mayor en la variante con bonificación (secundaria de Q8) | Q8 |
+| M16 | Precisión promedio | Promedio de la precisión (%) de las simulaciones completadas | Datos existentes (intentos terminados) | No bajar más de 3 puntos frente al control (métrica de salud) | Q8, Q3 |
+| M17 | Tasa de reintento | Intentos de una simulación ya intentada antes por la misma persona ÷ intentos totales | Datos existentes (intentos terminados) | Descriptiva; no se fija meta | Q2, Q9 |
+| M18 | Monedas ganadas por usuario | SafeCoins ganadas por usuario en la ventana del experimento | Datos existentes (transacciones de monedas) | Descriptiva; vigilar junto con M5 | Q7, Q8, Q9, Q2 |
+| M19 | Saldo sin gastar | Mediana del saldo de monedas al día 30 | Evento `session_started` (propiedad `balance`) | Descriptiva; vigilar junto con M5 | Q7 |
+| M20 | Abandono tras un intento no aprobado | Usuarios con un intento no aprobado que no inician otra simulación en 7 días ÷ usuarios con un intento no aprobado | Eventos `simulation_completed` (propiedad `passed`) y `simulation_started` | No empeorar más de 5 puntos frente al control (métrica de salud) | Q9 |
+| M21 | Conversión a carrito desde la sugerencia | Usuarios que agregan al carrito un producto abierto desde la sugerencia ÷ usuarios que lo abrieron | Eventos `product_opened` y `product_added_to_cart` | Descriptiva (secundaria de Q6) | Q6 |
+| M22 | Distribución de la primera simulación | Primeras simulaciones por tipo de emergencia, por punto de entrada y por dificultad (%) | Evento `simulation_started` (primera de cada usuario) | 97 primeras simulaciones (±10 puntos al 95 %) | Q4 |
+| M23 | Intervalo entre sesiones | Mediana de días entre sesiones consecutivas de un usuario | Evento `session_started` | Descriptiva: 100 usuarios con tres o más sesiones | Q10 |
+| M24 | Correlación intervalo–precisión | Correlación de Spearman entre el intervalo previo y la precisión de la sesión siguiente | Eventos `session_started` y `simulation_completed` | Descriptiva: informar el coeficiente y su intervalo | Q10 |
+
+**Equilibrio entre métricas.** M5 es una métrica de equilibrio de la economía del producto: si las monedas se emiten mucho más rápido de lo que se gastan, pierden valor; si casi no se emiten, no motivan. Los experimentos Q7, Q8 y Q9 modifican las entradas y salidas de esa economía, por lo que M5 se vigila como métrica de salud en ellos.
 
 ## 8.2.3. Measures
 
-Las medidas de cada experimento se eligieron con los criterios de XDPD: **representativas** (reflejan el comportamiento y no solo el volumen), **calculadas o proporcionales** cuando una proporción revela mejor la intención que un conteo bruto, y **frugales** (se mide solo lo necesario durante el tiempo necesario). Además de la medida principal se definen **métricas de salud** (*health metrics*) que avisan si el experimento mejora una cosa pero daña otra; son el mecanismo del principio de «no hacer daño».
+Las medidas de cada experimento se eligieron con los criterios de XDPD: **representativas** (reflejan el comportamiento y no solo el volumen), **calculadas o proporcionales** cuando una proporción revela mejor la intención que un conteo bruto, y **frugales** (se mide solo lo necesario durante el tiempo necesario). Además de la medida principal se definen **métricas de salud** (*health metrics*) que avisan si el experimento mejora una cosa pero daña otra; son el mecanismo del principio de «no hacer daño». Todas son métricas de 8.2.2 y se citan por su código.
 
 | Pregunta | Medida principal | Medidas secundarias | Métricas de salud |
 | --- | --- | --- | --- |
-| Q5 | Distribución porcentual de los motivos de abandono (%) | Tasa de respuesta al mensaje; paso en que se abandona | Que el mensaje no aumente el abandono: tasa de simulaciones no terminadas con y sin el mensaje |
-| Q7 | Proporción de usuarios elegibles que canjean su primer cupón en 30 días (M6) | Simulaciones completadas por usuario; monedas acumuladas sin gastar | Economía de monedas (M5); abandono de la aplicación |
-| Q1 | Proporción de usuarios nuevos que terminan su primera simulación en 7 días (M1) | Tiempo hasta la primera simulación; tasa de omisión de la guía | Rebote del primer día |
-| Q8 | Días con simulación completada en 14 días (M3) | Proporción que alcanza una racha de 3 días; monedas emitidas por usuario | Precisión promedio (para detectar práctica más frecuente pero peor) |
-| Q3 | Proporción de simulaciones de nivel Básico iniciadas y no terminadas (M9) | Precisión de quienes las terminan | No aplica: es un estudio observacional sin intervención |
-| Q9 | Diferencia de precisión entre segundo y primer intento (M8) | Proporción que repite; monedas ganadas | Abandono tras un intento no aprobado; economía de monedas (M5) |
-| Q2 | Simulaciones distintas completadas en 14 días (M2) | Repeticiones de una misma simulación; monedas totales | Simulaciones iniciadas y no terminadas (M9) |
-| Q6 | Proporción de simulaciones aprobadas tras las cuales se abre una ficha de producto (M7) | Productos agregados al carrito | Tiempo hasta volver a las simulaciones |
-| Q4 | Distribución porcentual de la primera simulación por tipo de emergencia y por punto de entrada | Dificultad elegida | No aplica: sin intervención |
-| Q10 | Intervalo mediano entre sesiones consecutivas | Correlación entre intervalo y precisión de la siguiente sesión (M4) | No aplica: sin intervención |
+| Q5 | M10 Motivos de abandono | M11 Respuesta al mensaje de salida; M12 Paso de abandono | M9 Abandono de simulaciones (que el mensaje no lo aumente) |
+| Q7 | M6 Canje del primer cupón | M18 Monedas ganadas por usuario; M19 Saldo sin gastar | M5 Economía de monedas; M4 Retención |
+| Q1 | M1 Activación | M13 Tiempo hasta la primera simulación; M14 Omisión de la guía | M4 Retención |
+| Q8 | M3 Regularidad | M15 Racha de tres días; M18 Monedas ganadas por usuario | M16 Precisión promedio (para detectar práctica más frecuente pero peor) |
+| Q3 | M9 Abandono de simulaciones (solo nivel Básico) | M16 Precisión promedio | No aplica: es un estudio observacional sin intervención |
+| Q9 | M8 Aprendizaje observable | M17 Tasa de reintento; M18 Monedas ganadas por usuario | M20 Abandono tras un intento no aprobado; M5 Economía de monedas |
+| Q2 | M2 Amplitud de práctica | M17 Tasa de reintento; M18 Monedas ganadas por usuario | M9 Abandono de simulaciones |
+| Q6 | M7 Interés por la tienda | M21 Conversión a carrito desde la sugerencia | M4 Retención |
+| Q4 | M22 Distribución de la primera simulación | — | No aplica: sin intervención |
+| Q10 | M23 Intervalo entre sesiones | M24 Correlación intervalo–precisión | No aplica: sin intervención |
 
-**Medidas descartadas.** No se medirán visitas totales a páginas, clics totales ni tiempo total en la aplicación: son volúmenes que no distinguen si la persona aprendió o solo navegó. Tampoco se capturará ningún dato personal; las medidas usan un identificador seudónimo (8.2.8).
+**Medidas descartadas.** No se medirán visitas totales a páginas, clics totales ni tiempo total en la aplicación: son volúmenes que no distinguen si la persona aprendió o solo navegó, y no están definidos en 8.2.2. Tampoco se capturará ningún dato personal; las medidas usan un identificador seudónimo (8.2.8).
 
 ## 8.2.4. Conditions
 
@@ -232,18 +249,18 @@ Para no medir «todo» se parte de los objetivos analíticos, se derivan las pre
 
 | Objetivo analítico | Pregunta | KPI | Meta o umbral de decisión | Fuente | Frecuencia de revisión |
 | --- | --- | --- | --- | --- | --- |
-| Entender por qué se abandona | Q5 | Distribución de motivos de abandono (%) | 30 respuestas en total; actuar sobre cualquier motivo que supere 30 % | Evento de motivo de salida | Al cerrar el experimento |
-| Calibrar el valor de las monedas | Q7 | Proporción de canje del primer cupón en 30 días por variante | Diferencia de 20 puntos con p < 0.025 | Cupones canjeados | Al cerrar el experimento |
-| Mejorar la activación | Q1 | Proporción de primera simulación terminada en 7 días | Diferencia de 20 puntos con p < 0.05 | Eventos de inicio y fin de simulación | Al cerrar el experimento |
-| Sostener la regularidad | Q8, Q10 | Días activos en 14 días; intervalo mediano entre sesiones | +1 día con p < 0.05; intervalo descriptivo | Intentos y sesiones | Al cerrar el experimento |
-| Retener a quienes tienen experiencia | Q3 | Abandono del nivel Básico por grupo | Diferencia de 20 puntos con p < 0.05 | Inicio, fin y perfil | Al cerrar el experimento |
-| Equilibrar la economía | Q7, Q8, Q9 | Monedas emitidas ÷ gastadas (M5) | Entre 1.0 y 3.0 (supuesto, a calibrar con la línea base) | Transacciones de monedas | Semanal, como métrica de salud |
-| Medir aprendizaje observable | Q9 | Mejora de precisión entre intentos | +5 puntos con p < 0.025 | Intentos | Al cerrar el experimento |
-| Vincular tienda y aprendizaje | Q6 | Apertura de ficha tras una simulación aprobada | +10 puntos con p < 0.05 | Eventos de tienda | Al cerrar el experimento |
+| Entender por qué se abandona | Q5 | M10 Motivos de abandono (%) | 30 respuestas en total; actuar sobre cualquier motivo que supere 30 % | Evento de motivo de salida | Al cerrar el experimento |
+| Calibrar el valor de las monedas | Q7 | M6 Canje del primer cupón en 30 días, por variante | Diferencia de 20 puntos con p < 0.025 | Cupones canjeados | Al cerrar el experimento |
+| Mejorar la activación | Q1 | M1 Activación | Diferencia de 20 puntos con p < 0.05 | Eventos de inicio y fin de simulación | Al cerrar el experimento |
+| Sostener la regularidad | Q8, Q10 | M3 Regularidad; M23 Intervalo entre sesiones | +1 día con p < 0.05; intervalo descriptivo | Intentos y sesiones | Al cerrar el experimento |
+| Retener a quienes tienen experiencia | Q3 | M9 Abandono de simulaciones (nivel Básico), por grupo | Diferencia de 20 puntos con p < 0.05 | Inicio, fin y perfil | Al cerrar el experimento |
+| Equilibrar la economía | Q7, Q8, Q9 | M5 Economía de monedas | Entre 1.0 y 3.0 (supuesto, a calibrar con la línea base) | Transacciones de monedas | Semanal, como métrica de salud |
+| Medir aprendizaje observable | Q9 | M8 Aprendizaje observable | +5 puntos con p < 0.025 | Intentos | Al cerrar el experimento |
+| Vincular tienda y aprendizaje | Q6 | M7 Interés por la tienda | +10 puntos con p < 0.05 | Eventos de tienda | Al cerrar el experimento |
 
 **Indicadores que no se usarán.** Visitas totales, clics totales y tiempo total en la aplicación (medidas de volumen sin interpretación), y la satisfacción declarada como sustituto del comportamiento: los antecedentes de 1.2 muestran que el interés y la autopercepción no equivalen a estar preparado.
 
-**Qué datos ya existen y cuáles faltan.** Los intentos terminados, las transacciones de monedas y los cupones canjeados ya se guardan y alimentan M2, M3, M5, M6 y M8. Faltan los eventos de inicio de simulación, abandono, navegación, sesión, tienda y asignación de variante, que habilitan M1, M4, M7 y M9 y que se definen en 8.2.8. Hasta que existan, los experimentos que dependen de ellos no pueden ejecutarse.
+**Qué datos ya existen y cuáles faltan.** Los intentos terminados, las transacciones de monedas y los cupones canjeados ya se guardan y alimentan M2, M3, M5, M8, M16, M17 y M18 (y parte de M6). Faltan los eventos de inicio de simulación, abandono, navegación, sesión, tienda, carrito y asignación de variante, que habilitan el resto de las métricas de 8.2.2 y que se definen en 8.2.8. Hasta que existan, los experimentos que dependen de ellos no pueden ejecutarse.
 
 ## 8.2.8. Web and Mobile Tracking Plan
 
@@ -266,7 +283,7 @@ El plan de seguimiento define qué eventos emite la aplicación, cuándo y con q
 | Evento | Se emite cuando | Propiedades propias | Preguntas | Web | Móvil |
 | --- | --- | --- | --- | --- | --- |
 | `account_registered` | Se crea una cuenta | `priorExperience` (sí o no) | Q3 | Se implementa | Pendiente |
-| `session_started` | La persona abre la aplicación con sesión iniciada | — | Q10 | Se implementa | Pendiente |
+| `session_started` | La persona abre la aplicación con sesión iniciada | `balance` (saldo de SafeCoins) | Q7, Q10 | Se implementa | Pendiente |
 | `welcome_guide_viewed` | Se muestra la guía de bienvenida | — | Q1 | Se implementa | Pendiente |
 | `welcome_guide_step` | Se avanza un paso de la guía | `step` (1 a 3) | Q1 | Se implementa | Pendiente |
 | `welcome_guide_dismissed` | Se omite o se cierra la guía | `completed` (sí o no) | Q1 | Se implementa | Pendiente |
@@ -274,13 +291,31 @@ El plan de seguimiento define qué eventos emite la aplicación, cuándo y con q
 | `simulation_step_answered` | Se responde un paso | `stepIndex`, `correct` | Q5, Q9 | Se implementa | Pendiente |
 | `simulation_exit_prompted` | Se muestra el mensaje de salida | `stepIndex` | Q5 | Se implementa | Pendiente |
 | `simulation_exit_reason` | La persona elige un motivo | `reason`, `hasFreeText`, `stepIndex` | Q5 | Se implementa | Pendiente |
-| `simulation_completed` | Se termina una simulación | `simulationId`, `accuracy`, `attemptNumber`, `earnedCoins`, `multiplier`, `passThreshold` | Q1, Q2, Q3, Q8, Q9, Q10 | Se implementa | Pendiente |
+| `simulation_completed` | Se termina una simulación | `simulationId`, `accuracy`, `passed`, `attemptNumber`, `earnedCoins`, `multiplier`, `passThreshold` | Q1, Q2, Q3, Q8, Q9, Q10 | Se implementa | Pendiente |
 | `reward_preview_viewed` | Se muestra la recompensa del próximo intento | `previewCoins` | Q2 | Se implementa | Pendiente |
 | `streak_updated` | Cambia la racha de días consecutivos | `streakDays`, `bonusApplied` | Q8 | Se implementa | Pendiente |
 | `coupon_viewed` | Se abre la página de cupones | `balance` | Q7 | Se implementa | Pendiente |
 | `coupon_redeemed` | Se canjea un cupón | `couponId`, `costShown`, `balanceBefore` | Q7 | Se implementa | Pendiente |
 | `product_suggestion_shown` | Se muestra la sugerencia tras una simulación aprobada | `variant`, `productId` | Q6 | Se implementa | Pendiente |
 | `product_opened` | Se abre la ficha de un producto sugerido | `productId`, `fromSuggestion` | Q6 | Se implementa | Pendiente |
+| `product_added_to_cart` | Se agrega al carrito un producto abierto desde la sugerencia | `productId`, `fromSuggestion` | Q6 | Se implementa | Pendiente |
+
+**Cobertura de las métricas.** Cada métrica de 8.2.2 se puede calcular con los datos que ya existen o con los eventos de esta tabla, y ningún evento queda sin una métrica que lo justifique:
+
+| Evento | Métricas que alimenta |
+| --- | --- |
+| `account_registered` | M1, M13 |
+| `session_started` | M4, M19, M23, M24 |
+| `welcome_guide_viewed`, `welcome_guide_step`, `welcome_guide_dismissed` | M14 |
+| `simulation_started` | M9, M20, M22 |
+| `simulation_step_answered` | Análisis del paso de abandono (apoya a M12) |
+| `simulation_exit_prompted` | M11, M12 |
+| `simulation_exit_reason` | M10, M11 |
+| `simulation_completed` | M1, M9, M13, M16, M17, M18, M20, M24 |
+| `reward_preview_viewed` | Verifica la exposición a la variante de Q2 (M2) |
+| `streak_updated` | M15 |
+| `coupon_viewed`, `coupon_redeemed` | M6 |
+| `product_suggestion_shown`, `product_opened`, `product_added_to_cart` | M7, M21 |
 
 **Reglas de captura**
 

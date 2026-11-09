@@ -148,7 +148,7 @@ Se mantiene un **backlog ancho** (*broad backlog*): las 10 preguntas sondean ár
 
 ## 8.1.5. Experiment Cards
 
-Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** contiene la pregunta, el motivo (*why*), lo más simple útil que se hará (*what*) y la hipótesis. El **reverso** contiene las medidas, las condiciones y la escala con su método. Las hipótesis alternativas y nulas se desarrollan en 8.2.1, las medidas en 8.2.3, las condiciones en 8.2.4 y los cálculos de escala en 8.2.5; aquí se resumen para que cada tarjeta se pueda leer sola. Las cifras de partida marcadas con «(supuesto)» deben medirse antes de ejecutar el experimento (8.2.5).
+Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** contiene la pregunta, el motivo (*why*), lo más simple útil que se hará (*what*) y la hipótesis. El **reverso** contiene las medidas, las condiciones y la escala con su método. Las hipótesis alternativas y nulas se desarrollan en 8.2.1, las medidas en 8.2.3, las condiciones en 8.2.4 y los cálculos de escala en 8.2.5; aquí se resumen para que cada tarjeta se pueda leer sola. **Toda medida de una tarjeta es una métrica definida en 8.2.2** y se cita por su código (M1 a M24); no se usan métricas que no estén definidas allí. Las cifras de partida marcadas con «(supuesto)» deben medirse antes de ejecutar el experimento (8.2.5).
 
 ### Experiment Card 1 (Prioridad 1) — Q5: Motivo del abandono de una simulación
 
@@ -161,7 +161,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: distribución porcentual de los motivos declarados. Secundarias: tasa de respuesta al mensaje, paso en el que se abandona.
+- **Medidas.** Principal: M10 (motivos de abandono). Secundarias: M11 (respuesta al mensaje de salida) y M12 (paso de abandono). Salud: M9 (abandono de simulaciones).
 - **Condiciones.** Gatillo: persona que sale de una simulación después de responder al menos un paso y sin terminarla. Herramienta: una pregunta con cinco opciones (muy larga, muy difícil, no entendí cómo funcionan las monedas, me interrumpieron, otro) y texto libre.
 - **Escala y método.** Al menos 30 respuestas y 8 entrevistas breves; duración hasta alcanzar esas cifras o 6 semanas. Método mixto: mensaje contextual dentro de la aplicación y entrevistas.
 
@@ -176,7 +176,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: proporción de usuarios elegibles que canjean su primer cupón en 30 días. Secundarias: simulaciones completadas por usuario, monedas acumuladas sin gastar. Salud: abandono de la aplicación e incidencias de saldo.
+- **Medidas.** Principal: M6 (canje del primer cupón). Secundarias: M18 (monedas ganadas por usuario) y M19 (saldo sin gastar). Salud: M5 (economía de monedas) y M4 (retención).
 - **Condiciones.** Control (B): 150 monedas. Variante A: 100 monedas. Variante C: 200 monedas. Población: usuarios nuevos que ganaron al menos 100 monedas.
 - **Escala y método.** 115 usuarios elegibles por variante (345 en total), α = 0.025 por comparación (corrección de Bonferroni para dos comparaciones), potencia 0.80, MDE de 20 puntos. Duración: 30 días después de que cada usuario se vuelve elegible. Método: prueba A/B/C.
 
@@ -191,7 +191,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: proporción de usuarios nuevos que terminan su primera simulación en 7 días. Secundarias: tiempo hasta la primera simulación, tasa de omisión de la guía. Salud: tasa de rebote del primer día.
+- **Medidas.** Principal: M1 (activación). Secundarias: M13 (tiempo hasta la primera simulación) y M14 (omisión de la guía). Salud: M4 (retención).
 - **Condiciones.** Control (A): dashboard actual. Experimental (B): dashboard con la guía de tres pasos. Población: usuarios nuevos registrados desde el inicio del experimento.
 - **Escala y método.** 91 usuarios por variante (182 en total), α = 0.05, potencia 0.80, MDE de 20 puntos. Duración: 7 días por usuario. Método: prueba A/B.
 
@@ -206,7 +206,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: días con al menos una simulación completada en 14 días. Secundarias: proporción que alcanza una racha de 3 días, monedas emitidas por usuario. Salud: precisión promedio (para detectar que se practica más pero peor).
+- **Medidas.** Principal: M3 (regularidad). Secundarias: M15 (racha de tres días) y M18 (monedas ganadas por usuario). Salud: M16 (precisión promedio), para detectar práctica más frecuente pero peor.
 - **Condiciones.** Control (A): sin bonificación. Experimental (B): contador de racha y bonificación de +20 %. Población: usuarios con al menos una simulación completada.
 - **Escala y método.** 63 usuarios por variante (126 en total), α = 0.05, potencia 0.80, MDE de 1 día con desviación estándar de 2 días (supuesto). Duración: 14 días. Método: prueba A/B de reglas de gamificación.
 
@@ -221,7 +221,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: proporción de simulaciones de nivel Básico iniciadas y no terminadas. Secundaria: precisión de quienes las terminan.
+- **Medidas.** Principal: M9 (abandono de simulaciones, solo nivel Básico). Secundaria: M16 (precisión promedio de quienes terminan). Salud: no aplica, es un estudio observacional.
 - **Condiciones.** Grupo 1: con experiencia previa declarada. Grupo 2: sin experiencia declarada. Población: usuarios que inician al menos una simulación de nivel Básico.
 - **Escala y método.** 79 usuarios por grupo (158 en total), α = 0.05, potencia 0.80, MDE de 20 puntos. Duración: hasta completar la muestra. Método: estudio comparativo de cohortes (observacional; no se asigna el grupo).
 
@@ -236,7 +236,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: diferencia de precisión (puntos porcentuales) entre el segundo y el primer intento de la misma simulación. Secundarias: proporción que repite, monedas ganadas. Salud: abandono tras un intento no aprobado.
+- **Medidas.** Principal: M8 (aprendizaje observable). Secundarias: M17 (tasa de reintento) y M18 (monedas ganadas por usuario). Salud: M20 (abandono tras un intento no aprobado) y M5 (economía de monedas).
 - **Condiciones.** Control (B): 70 %. Variantes A: 60 % y C: 80 %. Población: usuarios nuevos que completan dos intentos de una misma simulación.
 - **Escala y método.** 172 usuarios por variante (516 en total), α = 0.025 por comparación, potencia 0.80, MDE de 5 puntos con desviación estándar de 15 puntos (supuesto). Duración: hasta completar la muestra. Método: prueba A/B/C. Este experimento afecta una regla educativa, por lo que exige vigilar las métricas de salud (8.2.6).
 
@@ -251,7 +251,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: simulaciones distintas completadas en 14 días. Secundarias: repeticiones de una misma simulación, monedas totales. Salud: simulaciones iniciadas y no terminadas.
+- **Medidas.** Principal: M2 (amplitud de práctica). Secundarias: M17 (tasa de reintento) y M18 (monedas ganadas por usuario). Salud: M9 (abandono de simulaciones).
 - **Condiciones.** Control (A): tarjeta actual. Experimental (B): tarjeta con la recompensa del próximo intento. Población: usuarios con al menos una simulación completada.
 - **Escala y método.** 63 usuarios por variante (126 en total), α = 0.05, potencia 0.80, MDE de 0.75 simulaciones con desviación estándar de 1.5 (supuesto). Duración: 14 días. Método: prueba A/B.
 
@@ -266,7 +266,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: proporción de simulaciones aprobadas tras las cuales se abre la ficha de un producto sugerido. Secundarias: productos agregados al carrito. Salud: tiempo hasta volver a las simulaciones.
+- **Medidas.** Principal: M7 (interés por la tienda). Secundaria: M21 (conversión a carrito desde la sugerencia). Salud: M4 (retención).
 - **Condiciones.** Control (A): sugerencia genérica actual. Experimental (B): sugerencia con frase contextual. Población: usuarios que aprueban una simulación.
 - **Escala y método.** 197 usuarios por variante (394 en total), α = 0.05, potencia 0.80, MDE de 10 puntos. Duración: hasta completar la muestra. Método: prueba A/B de contenido.
 
@@ -281,7 +281,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: distribución porcentual de la primera simulación por tipo de emergencia y por punto de entrada. Secundaria: dificultad elegida.
+- **Medidas.** Principal: M22 (distribución de la primera simulación por tipo de emergencia, punto de entrada y dificultad). Sin medidas secundarias.
 - **Condiciones.** Población: usuarios nuevos que inician al menos una simulación. No hay grupo de control.
 - **Escala y método.** Al menos 97 primeras simulaciones (margen de error de ±10 puntos al 95 %). Duración: hasta alcanzar la cifra. Método: análisis exploratorio cuantitativo de eventos.
 
@@ -296,7 +296,7 @@ Se redacta una tarjeta por pregunta, con el formato de XDPD. El **anverso** cont
 
 **Reverso**
 
-- **Medidas.** Principal: intervalo mediano entre sesiones consecutivas. Secundaria: correlación entre el intervalo y la precisión de la siguiente sesión.
+- **Medidas.** Principal: M23 (intervalo entre sesiones). Secundaria: M24 (correlación entre el intervalo y la precisión de la sesión siguiente).
 - **Condiciones.** Población: usuarios con al menos tres sesiones. No hay grupo de control.
 - **Escala y método.** Al menos 100 usuarios con tres o más sesiones. Duración: 45 días. Método: análisis exploratorio de cohorte con registro de sesiones.
 
