@@ -44,6 +44,28 @@ Este capítulo aplica el enfoque **Experiment-Driven Product Development (XDPD)*
 
 La materia prima se clasificó en las cuatro categorías de XDPD. Cada elemento lleva un código (I, C, A, K) y su origen, para que cada pregunta de 8.1.3 sea rastreable.
 
+### Business Outcomes y User Outcomes
+
+Antes de reunir la materia prima se declara qué esperamos lograr, como negocio y como usuarios. Los resultados de negocio llevan una meta numérica y se vinculan con las métricas que 8.2.2 define; las metas que dependen de una tasa base son supuestos de planificación, rotulados como tales.
+
+**Business Outcomes.** Como startup, tras los experimentos queremos:
+
+| Código | Resultado de negocio | Métrica (8.2.2) | Meta |
+| --- | --- | --- | --- |
+| BO1 | Que los usuarios nuevos empiecen a practicar desde la primera semana | M1 Activación | Al menos 70 % termina una simulación en 7 días (base supuesta: 50 %) |
+| BO2 | Que la práctica sea regular y no un uso aislado | M3 Regularidad | Pasar de 3 a 4 días con práctica en 14 días (base supuesta) |
+| BO3 | Que las SafeCoins mantengan su valor como incentivo | M5 Economía de monedas | Emisión entre 1 y 3 veces el gasto (a calibrar con la línea base) |
+| BO4 | Que las monedas se conviertan en cupones | M6 Canje del primer cupón | Al menos 60 % de los usuarios elegibles canjea su primer cupón en 30 días (base supuesta: 40 %) |
+| BO5 | Que practicar de nuevo enseñe algo | M8 Aprendizaje observable | Mejora de al menos 5 puntos más entre el primer y el segundo intento |
+
+**User Outcomes.** Al terminar los experimentos esperamos que cada segmento de 1.3 consiga lo siguiente, según lo que dijeron en las entrevistas (2.2 y 6.3):
+
+| Segmento | Resultado esperado |
+| --- | --- |
+| Estudiantes universitarios | Entender cómo funciona SafeStep desde el primer uso, terminar su primera simulación sin ayuda y volver a practicar con regularidad; usan principalmente laptop (4/4 en las entrevistas), por lo que el eje es la aplicación web |
+| Comunidades vecinales | Practicar en sesiones cortas, porque la falta de tiempo fue la barrera mencionada por los tres entrevistados (3/3); las simulaciones de 9 a 22 minutos deben poder terminarse o dejarse sin perder lo avanzado ni la recompensa |
+| Brigadistas | Encontrar práctica con más realismo y profundidad, y no abandonar lo básico por falta de reto (hallazgo 2 de 6.3) |
+
 ### Ideas
 
 Soluciones propuestas por el equipo o derivadas de la evaluación heurística. No se prueban como tales: se examinan las premisas que las sostienen.
