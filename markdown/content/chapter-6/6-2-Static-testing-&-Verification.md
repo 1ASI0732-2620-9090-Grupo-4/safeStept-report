@@ -23,6 +23,13 @@ El estándar de codificación del backend es la **Google Java Style Guide**, ver
 | `GoogleRightCurlyCheck` y `LeftCurlyCheck` | 130 | Posición de las llaves |
 | Otras reglas | 158 | Párrafos de Javadoc, declaraciones múltiples y orden de sobrecargas |
 
+La misma línea base se ve en el plugin Checkstyle de IntelliJ IDEA con la regla *Google Checks*: «Checkstyle found 8,128 item(s) in 367 file(s)», con la sangría, la longitud de línea y la documentación Javadoc entre las observaciones.
+
+<div align="center">
+  <img src="../../assets/images/chapter-6/checkstyle/linea-base-intellij.png" alt="Plugin Checkstyle de IntelliJ IDEA con 8,128 observaciones" width="760"/>
+  <p><i><b>Figura 6.2.1.</b> Plugin Checkstyle de IntelliJ IDEA con la regla <i>Google Checks</i> sobre el proyecto <code>safestept-backend</code> antes de las correcciones: 8,128 observaciones en 367 archivos. <b>Fuente</b>: Elaboración propia</i></p>
+</div>
+
 **Corrección por tandas.** Cada tanda es uno o dos commits del repositorio del backend, hechos con el mismo comando y las mismas reglas, y se midió con la caché de Checkstyle limpia para que los conteos sean comparables. Ninguna tanda cambia el comportamiento del código; al terminar, las 242 pruebas del backend pasaron sin fallos y el pipeline las volvió a ejecutar (7.1.2).
 
 | Tanda | Commits | Corrección | Advertencias (antes → después) |
@@ -47,14 +54,14 @@ El estándar de codificación del backend es la **Google Java Style Guide**, ver
 
 <div align="center">
   <img src="../../assets/images/chapter-6/checkstyle/tanda-1-formato.png" alt="Informe de Checkstyle tras la tanda 1" width="760"/>
-  <p><i><b>Figura 6.2.1.</b> Informe de <code>mvn checkstyle:checkstyle</code> tras la tanda 1 (commit <code>487a8a7</code>): 377 archivos y 1,280 advertencias. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.2.</b> Informe de <code>mvn checkstyle:checkstyle</code> tras la tanda 1 (commit <code>487a8a7</code>): 377 archivos y 1,280 advertencias. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Tanda 2. Importaciones, llaves y nombres.** Lo que el formateador no puede decidir se corrigió con transformaciones sobre el código fuente y revisión posterior: se sustituyeron las 189 importaciones con comodín por importaciones explícitas, se añadieron llaves a los 160 bloques de una sola línea, se separaron 23 declaraciones de varias variables y se agruparon los 21 métodos sobrecargados que estaban dispersos. Además se renombraron 11 campos de una sola letra (`r`) a `repository` en los adaptadores de repositorio y la clase `BCryptHashingService` pasó a `BcryptHashingService`, porque la guía no admite siglas consecutivas en mayúscula. Con esto solo quedaron advertencias de Javadoc.
 
 <div align="center">
   <img src="../../assets/images/chapter-6/checkstyle/tanda-2-importaciones-llaves-nombres.png" alt="Informe de Checkstyle tras la tanda 2" width="760"/>
-  <p><i><b>Figura 6.2.2.</b> Informe de Checkstyle tras la tanda 2 (commit <code>d69a1e6</code>): 377 archivos y 873 advertencias, todas de documentación Javadoc. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.3.</b> Informe de Checkstyle tras la tanda 2 (commit <code>d69a1e6</code>): 377 archivos y 873 advertencias, todas de documentación Javadoc. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Tandas 3, 4 y 5. Documentación Javadoc.** Las 873 advertencias restantes pedían documentación en clases, interfaces y métodos públicos (`MissingJavadocTypeCheck`, `MissingJavadocMethodCheck`) y una primera frase completa en cada comentario (`SummaryJavadocCheck`). Se documentó contexto por contexto, en inglés, con una redacción por capa y tipo de clase (comandos, consultas, agregados, repositorios, controladores, etc.) completada a mano donde las reglas de negocio lo requerían:
@@ -68,22 +75,22 @@ El estándar de codificación del backend es la **Google Java Style Guide**, ver
 
 <div align="center">
   <img src="../../assets/images/chapter-6/checkstyle/tanda-3-javadoc-iam-profiles.png" alt="Informe de Checkstyle tras la tanda 3" width="760"/>
-  <p><i><b>Figura 6.2.3.</b> Informe de Checkstyle tras la tanda 3 (commit <code>e1b022f</code>): 698 advertencias tras documentar los contextos <code>iam</code> y <code>profiles</code>. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.4.</b> Informe de Checkstyle tras la tanda 3 (commit <code>e1b022f</code>): 698 advertencias tras documentar los contextos <code>iam</code> y <code>profiles</code>. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/checkstyle/tanda-4-javadoc-commerce-gamification.png" alt="Informe de Checkstyle tras la tanda 4" width="760"/>
-  <p><i><b>Figura 6.2.4.</b> Informe de Checkstyle tras la tanda 4 (commit <code>7e0cff3</code>): 183 advertencias tras documentar <code>commerce</code> y <code>gamification</code>. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.5.</b> Informe de Checkstyle tras la tanda 4 (commit <code>7e0cff3</code>): 183 advertencias tras documentar <code>commerce</code> y <code>gamification</code>. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/checkstyle/tanda-5-javadoc-resto-cero.png" alt="Informe de Checkstyle tras la tanda 5" width="760"/>
-  <p><i><b>Figura 6.2.5.</b> Informe de Checkstyle tras la tanda 5 (commit <code>0a34209</code>): 377 archivos, 0 advertencias y 0 errores. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.6.</b> Informe de Checkstyle tras la tanda 5 (commit <code>0a34209</code>): 377 archivos, 0 advertencias y 0 errores. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/checkstyle/plugin-intellij.png" alt="Plugin Checkstyle de IntelliJ IDEA sin problemas" width="420"/>
-  <p><i><b>Figura 6.2.6.</b> Plugin Checkstyle de IntelliJ IDEA con la regla <i>Google Checks</i> sobre el proyecto <code>safestept-backend</code>: «Checkstyle found no problems in the file(s)». <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.7.</b> Plugin Checkstyle de IntelliJ IDEA con la regla <i>Google Checks</i> sobre el proyecto <code>safestept-backend</code>: «Checkstyle found no problems in the file(s)». <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Compuerta en el pipeline.** El último commit (`1103ccf`) cambia la etapa del `Jenkinsfile` de reporte a validación: `mvn checkstyle:check`, con `failOnViolation` y severidad mínima `warning` en el `pom.xml`, de modo que cualquier advertencia detiene el pipeline antes de ejecutar las pruebas. La evidencia de una ejecución que falla por una infracción deliberada y de otra que la supera se muestra en 7.1.2.
@@ -124,14 +131,14 @@ El **perfil de reglas** determina qué hallazgos se reportan. Se usó *Sonar way
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/general/perfil-java-extended.png" alt="Perfil Sonar way extended para Java" width="760"/>
-  <p><i><b>Figura 6.2.7.</b> Perfil Sonar way extended para Java en SonarQube: 337 reglas activas. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.8.</b> Perfil Sonar way extended para Java en SonarQube: 337 reglas activas. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Quality Gate.** Se usó el Quality Gate *Sonar way*, que evalúa únicamente el **código nuevo** respecto a la versión anterior con cuatro condiciones: cero incidencias nuevas, todos los puntos críticos de seguridad nuevos revisados, cobertura del código nuevo de al menos 80 % y duplicación del código nuevo de a lo sumo 3 %. Por eso un estado puede tener muchas incidencias antiguas y aun así aprobar, y un cambio pequeño con una sola incidencia nueva puede hacer fallar el gate.
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/general/quality-gate-sonar-way.png" alt="Condiciones del Quality Gate Sonar way" width="760"/>
-  <p><i><b>Figura 6.2.8.</b> Condiciones del Quality Gate Sonar way sobre el código nuevo. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.9.</b> Condiciones del Quality Gate Sonar way sobre el código nuevo. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Alcance del análisis y exclusiones de cobertura**
@@ -181,17 +188,17 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/activity-incidencias.png" alt="Actividad de SonarQube: incidencias del backend" width="760"/>
-  <p><i><b>Figura 6.2.9.</b> Actividad del proyecto en SonarQube: evolución de las incidencias en las 12 etapas del backend, con la versión y los eventos del Quality Gate. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.10.</b> Actividad del proyecto en SonarQube: evolución de las incidencias en las 12 etapas del backend, con la versión y los eventos del Quality Gate. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/activity-cobertura.png" alt="Actividad de SonarQube: cobertura del backend" width="760"/>
-  <p><i><b>Figura 6.2.10.</b> Actividad del proyecto en SonarQube: evolución de las líneas a cubrir y las líneas cubiertas del backend. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.11.</b> Actividad del proyecto en SonarQube: evolución de las líneas a cubrir y las líneas cubiertas del backend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/quality-gate-history.png" alt="Historial del Quality Gate del backend" width="760"/>
-  <p><i><b>Figura 6.2.11.</b> Historial del Quality Gate del backend: 9 de las 12 versiones aprobaron y 3 fallaron (etapas 01, 05 y 09). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.12.</b> Historial del Quality Gate del backend: 9 de las 12 versiones aprobaron y 3 fallaron (etapas 01, 05 y 09). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Backend: análisis etapa por etapa**
@@ -212,12 +219,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-00-summary.png" alt="Resumen de SonarQube en la etapa 00" width="760"/>
-  <p><i><b>Figura 6.2.12.</b> Resumen (Summary, código completo) de SonarQube en la etapa 00: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.13.</b> Resumen (Summary, código completo) de SonarQube en la etapa 00: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-00-issues.png" alt="Incidencias de SonarQube en la etapa 00" width="760"/>
-  <p><i><b>Figura 6.2.13.</b> Incidencias abiertas en SonarQube en la etapa 00: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.14.</b> Incidencias abiertas en SonarQube en la etapa 00: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 01. Canje de cupones (estado previo al TB1)
@@ -236,12 +243,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-01-summary.png" alt="Resumen de SonarQube en la etapa 01" width="760"/>
-  <p><i><b>Figura 6.2.14.</b> Resumen (Summary, código completo) de SonarQube en la etapa 01: Canje de cupones (estado previo al TB1). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.15.</b> Resumen (Summary, código completo) de SonarQube en la etapa 01: Canje de cupones (estado previo al TB1). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-01-issues.png" alt="Incidencias de SonarQube en la etapa 01" width="760"/>
-  <p><i><b>Figura 6.2.15.</b> Incidencias abiertas en SonarQube en la etapa 01: Canje de cupones (estado previo al TB1). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.16.</b> Incidencias abiertas en SonarQube en la etapa 01: Canje de cupones (estado previo al TB1). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 02. Herramientas de calidad: JaCoCo, Checkstyle y SonarQube
@@ -260,12 +267,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-02-summary.png" alt="Resumen de SonarQube en la etapa 02" width="760"/>
-  <p><i><b>Figura 6.2.16.</b> Resumen (Summary, código completo) de SonarQube en la etapa 02: Herramientas de calidad: JaCoCo, Checkstyle y SonarQube. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.17.</b> Resumen (Summary, código completo) de SonarQube en la etapa 02: Herramientas de calidad: JaCoCo, Checkstyle y SonarQube. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-02-issues.png" alt="Incidencias de SonarQube en la etapa 02" width="760"/>
-  <p><i><b>Figura 6.2.17.</b> Incidencias abiertas en SonarQube en la etapa 02: Herramientas de calidad: JaCoCo, Checkstyle y SonarQube. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.18.</b> Incidencias abiertas en SonarQube en la etapa 02: Herramientas de calidad: JaCoCo, Checkstyle y SonarQube. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 03. Pruebas unitarias de commerce e iam
@@ -284,12 +291,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-03-summary.png" alt="Resumen de SonarQube en la etapa 03" width="760"/>
-  <p><i><b>Figura 6.2.18.</b> Resumen (Summary, código completo) de SonarQube en la etapa 03: Pruebas unitarias de commerce e iam. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.19.</b> Resumen (Summary, código completo) de SonarQube en la etapa 03: Pruebas unitarias de commerce e iam. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-03-issues.png" alt="Incidencias de SonarQube en la etapa 03" width="760"/>
-  <p><i><b>Figura 6.2.19.</b> Incidencias abiertas en SonarQube en la etapa 03: Pruebas unitarias de commerce e iam. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.20.</b> Incidencias abiertas en SonarQube en la etapa 03: Pruebas unitarias de commerce e iam. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 04. Pruebas unitarias de gamification y simulation
@@ -308,12 +315,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-04-summary.png" alt="Resumen de SonarQube en la etapa 04" width="760"/>
-  <p><i><b>Figura 6.2.20.</b> Resumen (Summary, código completo) de SonarQube en la etapa 04: Pruebas unitarias de gamification y simulation. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.21.</b> Resumen (Summary, código completo) de SonarQube en la etapa 04: Pruebas unitarias de gamification y simulation. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-04-issues.png" alt="Incidencias de SonarQube en la etapa 04" width="760"/>
-  <p><i><b>Figura 6.2.21.</b> Incidencias abiertas en SonarQube en la etapa 04: Pruebas unitarias de gamification y simulation. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.22.</b> Incidencias abiertas en SonarQube en la etapa 04: Pruebas unitarias de gamification y simulation. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 05. Pruebas unitarias de analytics, profiles y shared
@@ -332,12 +339,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-05-summary.png" alt="Resumen de SonarQube en la etapa 05" width="760"/>
-  <p><i><b>Figura 6.2.22.</b> Resumen (Summary, código completo) de SonarQube en la etapa 05: Pruebas unitarias de analytics, profiles y shared. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.23.</b> Resumen (Summary, código completo) de SonarQube en la etapa 05: Pruebas unitarias de analytics, profiles y shared. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-05-issues.png" alt="Incidencias de SonarQube en la etapa 05" width="760"/>
-  <p><i><b>Figura 6.2.23.</b> Incidencias abiertas en SonarQube en la etapa 05: Pruebas unitarias de analytics, profiles y shared. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.24.</b> Incidencias abiertas en SonarQube en la etapa 05: Pruebas unitarias de analytics, profiles y shared. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 06. BDD con Cucumber, pruebas de API con Karate e integración continua
@@ -356,12 +363,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-06-summary.png" alt="Resumen de SonarQube en la etapa 06" width="760"/>
-  <p><i><b>Figura 6.2.24.</b> Resumen (Summary, código completo) de SonarQube en la etapa 06: BDD con Cucumber, pruebas de API con Karate e integración continua. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.25.</b> Resumen (Summary, código completo) de SonarQube en la etapa 06: BDD con Cucumber, pruebas de API con Karate e integración continua. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-06-issues.png" alt="Incidencias de SonarQube en la etapa 06" width="760"/>
-  <p><i><b>Figura 6.2.25.</b> Incidencias abiertas en SonarQube en la etapa 06: BDD con Cucumber, pruebas de API con Karate e integración continua. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.26.</b> Incidencias abiertas en SonarQube en la etapa 06: BDD con Cucumber, pruebas de API con Karate e integración continua. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 07. Corrección de la política CORS (java:S5122)
@@ -380,12 +387,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-07-summary.png" alt="Resumen de SonarQube en la etapa 07" width="760"/>
-  <p><i><b>Figura 6.2.26.</b> Resumen (Summary, código completo) de SonarQube en la etapa 07: Corrección de la política CORS (java:S5122). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.27.</b> Resumen (Summary, código completo) de SonarQube en la etapa 07: Corrección de la política CORS (java:S5122). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-07-issues.png" alt="Incidencias de SonarQube en la etapa 07" width="760"/>
-  <p><i><b>Figura 6.2.27.</b> Incidencias abiertas en SonarQube en la etapa 07: Corrección de la política CORS (java:S5122). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.28.</b> Incidencias abiertas en SonarQube en la etapa 07: Corrección de la política CORS (java:S5122). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 08. Corrección de dos bugs (java:S2184 y java:S2637)
@@ -404,12 +411,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-08-summary.png" alt="Resumen de SonarQube en la etapa 08" width="760"/>
-  <p><i><b>Figura 6.2.28.</b> Resumen (Summary, código completo) de SonarQube en la etapa 08: Corrección de dos bugs (java:S2184 y java:S2637). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.29.</b> Resumen (Summary, código completo) de SonarQube en la etapa 08: Corrección de dos bugs (java:S2184 y java:S2637). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-08-issues.png" alt="Incidencias de SonarQube en la etapa 08" width="760"/>
-  <p><i><b>Figura 6.2.29.</b> Incidencias abiertas en SonarQube en la etapa 08: Corrección de dos bugs (java:S2184 y java:S2637). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.30.</b> Incidencias abiertas en SonarQube en la etapa 08: Corrección de dos bugs (java:S2184 y java:S2637). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 09. Respuesta 400 ante un JSON mal formado
@@ -428,12 +435,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-09-summary.png" alt="Resumen de SonarQube en la etapa 09" width="760"/>
-  <p><i><b>Figura 6.2.30.</b> Resumen (Summary, código completo) de SonarQube en la etapa 09: Respuesta 400 ante un JSON mal formado. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.31.</b> Resumen (Summary, código completo) de SonarQube en la etapa 09: Respuesta 400 ante un JSON mal formado. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-09-issues.png" alt="Incidencias de SonarQube en la etapa 09" width="760"/>
-  <p><i><b>Figura 6.2.31.</b> Incidencias abiertas en SonarQube en la etapa 09: Respuesta 400 ante un JSON mal formado. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.32.</b> Incidencias abiertas en SonarQube en la etapa 09: Respuesta 400 ante un JSON mal formado. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 10. Corrección de java:S1452 en el manejador nuevo
@@ -452,12 +459,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-10-summary.png" alt="Resumen de SonarQube en la etapa 10" width="760"/>
-  <p><i><b>Figura 6.2.32.</b> Resumen (Summary, código completo) de SonarQube en la etapa 10: Corrección de java:S1452 en el manejador nuevo. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.33.</b> Resumen (Summary, código completo) de SonarQube en la etapa 10: Corrección de java:S1452 en el manejador nuevo. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-10-issues.png" alt="Incidencias de SonarQube en la etapa 10" width="760"/>
-  <p><i><b>Figura 6.2.33.</b> Incidencias abiertas en SonarQube en la etapa 10: Corrección de java:S1452 en el manejador nuevo. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.34.</b> Incidencias abiertas en SonarQube en la etapa 10: Corrección de java:S1452 en el manejador nuevo. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa 11. Estado final del backend
@@ -476,12 +483,12 @@ El Quality Gate falló en tres etapas, siempre por el **código nuevo** respecto
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-11-summary.png" alt="Resumen de SonarQube en la etapa 11" width="760"/>
-  <p><i><b>Figura 6.2.34.</b> Resumen (Summary, código completo) de SonarQube en la etapa 11: Estado final del backend. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.35.</b> Resumen (Summary, código completo) de SonarQube en la etapa 11: Estado final del backend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/backend/paso-11-issues.png" alt="Incidencias de SonarQube en la etapa 11" width="760"/>
-  <p><i><b>Figura 6.2.35.</b> Incidencias abiertas en SonarQube en la etapa 11: Estado final del backend. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.36.</b> Incidencias abiertas en SonarQube en la etapa 11: Estado final del backend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Backend: hallazgos abiertos y deuda técnica**
@@ -509,17 +516,17 @@ El frontend (Angular 21) se analizó con el mismo procedimiento. Un detalle de l
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/activity-incidencias.png" alt="Actividad de SonarQube: incidencias del frontend" width="760"/>
-  <p><i><b>Figura 6.2.36.</b> Actividad del proyecto del frontend en SonarQube: evolución de las incidencias en las 3 etapas. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.37.</b> Actividad del proyecto del frontend en SonarQube: evolución de las incidencias en las 3 etapas. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/activity-cobertura.png" alt="Actividad de SonarQube: cobertura del frontend" width="760"/>
-  <p><i><b>Figura 6.2.37.</b> Actividad del proyecto del frontend en SonarQube: evolución de las líneas a cubrir y las líneas cubiertas. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.38.</b> Actividad del proyecto del frontend en SonarQube: evolución de las líneas a cubrir y las líneas cubiertas. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/quality-gate-history.png" alt="Historial del Quality Gate del frontend" width="760"/>
-  <p><i><b>Figura 6.2.38.</b> Historial del Quality Gate del frontend: la etapa F1 falló por código nuevo sin pruebas. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.39.</b> Historial del Quality Gate del frontend: la etapa F1 falló por código nuevo sin pruebas. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa F0. Código base heredado
@@ -538,12 +545,12 @@ El frontend (Angular 21) se analizó con el mismo procedimiento. Un detalle de l
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/paso-F0-summary.png" alt="Resumen de SonarQube en la etapa F0" width="760"/>
-  <p><i><b>Figura 6.2.39.</b> Resumen (Summary, código completo) de SonarQube en la etapa F0: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.40.</b> Resumen (Summary, código completo) de SonarQube en la etapa F0: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/paso-F0-issues.png" alt="Incidencias de SonarQube en la etapa F0" width="760"/>
-  <p><i><b>Figura 6.2.40.</b> Incidencias abiertas en SonarQube en la etapa F0: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.41.</b> Incidencias abiertas en SonarQube en la etapa F0: Código base heredado. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa F1. Panel de administración y canje de cupones
@@ -562,12 +569,12 @@ El frontend (Angular 21) se analizó con el mismo procedimiento. Un detalle de l
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/paso-F1-summary.png" alt="Resumen de SonarQube en la etapa F1" width="760"/>
-  <p><i><b>Figura 6.2.41.</b> Resumen (Summary, código completo) de SonarQube en la etapa F1: Panel de administración y canje de cupones. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.42.</b> Resumen (Summary, código completo) de SonarQube en la etapa F1: Panel de administración y canje de cupones. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/paso-F1-issues.png" alt="Incidencias de SonarQube en la etapa F1" width="760"/>
-  <p><i><b>Figura 6.2.42.</b> Incidencias abiertas en SonarQube en la etapa F1: Panel de administración y canje de cupones. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.43.</b> Incidencias abiertas en SonarQube en la etapa F1: Panel de administración y canje de cupones. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 #### Etapa F2. Estado final del frontend
@@ -586,12 +593,12 @@ El frontend (Angular 21) se analizó con el mismo procedimiento. Un detalle de l
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/paso-F2-summary.png" alt="Resumen de SonarQube en la etapa F2" width="760"/>
-  <p><i><b>Figura 6.2.43.</b> Resumen (Summary, código completo) de SonarQube en la etapa F2: Estado final del frontend. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.44.</b> Resumen (Summary, código completo) de SonarQube en la etapa F2: Estado final del frontend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/frontend/paso-F2-issues.png" alt="Incidencias de SonarQube en la etapa F2" width="760"/>
-  <p><i><b>Figura 6.2.44.</b> Incidencias abiertas en SonarQube en la etapa F2: Estado final del frontend. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.45.</b> Incidencias abiertas en SonarQube en la etapa F2: Estado final del frontend. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Frontend: hallazgos abiertos y deuda técnica**
@@ -621,22 +628,22 @@ En las cuatro mediciones las 242 pruebas pasaron sin fallos, la cobertura se man
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-0-inicio-summary.png" alt="SonarQube del backend con el perfil extended: 86 incidencias" width="760"/>
-  <p><i><b>Figura 6.2.45.</b> Resumen de <code>safestep-backend</code> con el perfil <i>Sonar way extended</i> antes de corregir: 86 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.46.</b> Resumen de <code>safestep-backend</code> con el perfil <i>Sonar way extended</i> antes de corregir: 86 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-1-s1452-summary.png" alt="SonarQube del backend tras la tanda 1" width="760"/>
-  <p><i><b>Figura 6.2.46.</b> Resumen tras la tanda 1 (<code>java:S1452</code>): 21 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.47.</b> Resumen tras la tanda 1 (<code>java:S1452</code>): 21 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-2-s1192-summary.png" alt="SonarQube del backend tras la tanda 2" width="760"/>
-  <p><i><b>Figura 6.2.47.</b> Resumen tras la tanda 2 (<code>java:S1192</code>, <code>java:S1186</code> y <code>java:S2696</code>): 2 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.48.</b> Resumen tras la tanda 2 (<code>java:S1192</code>, <code>java:S1186</code> y <code>java:S2696</code>): 2 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/correccion/backend-3-s3776-summary.png" alt="SonarQube del backend tras la tanda 3" width="760"/>
-  <p><i><b>Figura 6.2.48.</b> Resumen tras la tanda 3 (<code>java:S3776</code>): 0 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.49.</b> Resumen tras la tanda 3 (<code>java:S3776</code>): 0 incidencias de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 *Frontend*
@@ -650,17 +657,17 @@ Para la regla `typescript:S8786` se reescribió `formatPrice` sin esa expresión
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/correccion/frontend-0-inicio-summary.png" alt="SonarQube del frontend con el perfil extended antes de corregir" width="760"/>
-  <p><i><b>Figura 6.2.49.</b> Resumen de <code>safestep-frontend</code> con el perfil <i>Sonar way extended</i> antes de corregir: 11 incidencias de fiabilidad y 1 de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.50.</b> Resumen de <code>safestep-frontend</code> con el perfil <i>Sonar way extended</i> antes de corregir: 11 incidencias de fiabilidad y 1 de mantenibilidad. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/correccion/frontend-0-inicio-issues.png" alt="Incidencias del frontend antes de corregir" width="760"/>
-  <p><i><b>Figura 6.2.50.</b> Incidencias abiertas del frontend antes de corregir (<code>typescript:S9383</code>, <code>typescript:S7723</code> y <code>typescript:S8786</code>). <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.51.</b> Incidencias abiertas del frontend antes de corregir (<code>typescript:S9383</code>, <code>typescript:S7723</code> y <code>typescript:S8786</code>). <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 <div align="center">
   <img src="../../assets/images/chapter-6/sonarqube/correccion/frontend-1-correcciones-summary.png" alt="SonarQube del frontend tras las correcciones" width="760"/>
-  <p><i><b>Figura 6.2.51.</b> Resumen del frontend tras las correcciones: 0 incidencias abiertas y 0.7 % de cobertura. <b>Fuente</b>: Elaboración propia</i></p>
+  <p><i><b>Figura 6.2.52.</b> Resumen del frontend tras las correcciones: 0 incidencias abiertas y 0.7 % de cobertura. <b>Fuente</b>: Elaboración propia</i></p>
 </div>
 
 **Conclusiones**

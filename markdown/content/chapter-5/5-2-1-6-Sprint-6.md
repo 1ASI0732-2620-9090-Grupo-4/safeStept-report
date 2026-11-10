@@ -358,7 +358,6 @@ El Sprint 6 dejó la aplicación Android con todos los flujos del jugador y la a
   <p><i><b>Fuente</b>: Elaboración propia.</i></p>
 </div>
 
-> **[ENLACE PENDIENTE · C-S6-3]** **Video de ejecución del Sprint 6.** El recorrido grabado de la aplicación Android está en `capturas-por-revisar/AndroidApp/video/prototipo-android-recorrido-pruebas.mp4`; falta subirlo y poner aquí su enlace, junto con un video de la aplicación web.
 
 #### 5.2.1.6.7. Services Documentation Evidence for Sprint Review
 
@@ -421,4 +420,3 @@ En esta sección se explica cómo se desarrollaron las actividades del Sprint 6 
 
 Los commits se asocian a cada integrante según las tareas del Sprint Backlog 6 (5.2.1.6.3) que implementan, y cada commit se cuenta una sola vez, en el área principal que modifica. Se consideran los 31 commits de desarrollo del Sprint en los repositorios de backend, frontend, Landing Page y aplicación Android (19, 6, 1 y 5 respectivamente; los commits de fusión no se cuentan). Los commits asociados son: Palacios Jáuregui, Kalid Jesus (`487a8a7`, `2a72367`, `d69a1e6`, `d9fcc3c`, `e379c06`, `b6707df`); Sanchez Arenas, Manuel Angel (`e1b022f`, `7e0cff3`, `0a34209`, `5d88d26`, `731b98c`, `af560dd`); Melgarejo Quiroz, Josep Eliu (`7daa9dd`, `f105e82`, `d6afc1a`, `f68acea`, `deeba5c`, `ae8ccbb`); Tello Palacios, Fabrizio Rafael (`1103ccf`, `c940acf`, `949483a`, `a8b895c`, `709bacf`, `793e367`); Aylas De La Cruz, Paulo Smit (`a30e086`, `d782a20`, `8a80008`, `c79a1be`, `138a384`, `5a1b778`, `fd35c88`). Las líneas incluyen los archivos de datos y de configuración que cada commit modifica; el commit `ae8ccbb` (reconstrucción de la aplicación Android) concentra la mayoría de las líneas agregadas de la columna de Melgarejo Quiroz, Josep Eliu. El trabajo de documentación del informe (tareas T615, T630 a T635) se registra en el repositorio del informe y no se cuenta en esta tabla. Esta asociación es por tareas asignadas, no por autor del commit: la cuenta con la que se confirmó cada cambio puede ser distinta de la del integrante responsable de la tarea.
 
-> **[CAPTURA PENDIENTE · C-S6-4]** **Analíticos de colaboración de GitHub** del Sprint 6 (gráfico de contribuciones y commits por integrante de los repositorios `safestept-backend`, `safestept-frontend`, `safeStept-android` y `safeStept-report`), en `markdown/assets/images/chapter-5/sprint6-colaboracion-*.png`, con su interpretación. Se agregan al cierre del informe, junto con el Report Collaboration Insights.
