@@ -24,7 +24,7 @@ Este anexo incluye los reportes de desempeno elaborados para las entregas del pr
 - Performance Report AV1: <a href="../assets/reports/performance-report-av1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-av1.md</a> (versión PDF: <a href="../assets/reports/upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-performance-av1.pdf</a>)
 - Final Report AV1 (informe completo en PDF): <a href="../../upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-report-av1.pdf</a>
 - Performance Report TB1: <a href="../assets/reports/performance-report-tb1.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-tb1.md</a>
-- Performance Report AV2: se elaborará en la entrega correspondiente.
+- Performance Report AV2: <a href="../assets/reports/performance-report-av2.md" style="word-break: break-all; overflow-wrap: anywhere;">../assets/reports/performance-report-av2.md</a> (versión Word: <a href="../assets/reports/upc-pre-202620-1asi0732-9090-Chronos-performance-av2.docx" style="word-break: break-all; overflow-wrap: anywhere;">upc-pre-202620-1asi0732-9090-Chronos-performance-av2.docx</a>)
 - Performance Report TB2: se elaborará en la entrega correspondiente.
 
 <div style="page-break-before: always;"></div>
