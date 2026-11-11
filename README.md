@@ -74,7 +74,6 @@
 </div>
 
 - [Registro de Versiones del Informe](./markdown/content/registro-versiones.md)
-- [Project Report Collaboration Insights](./markdown/content/report-collaboration.md)
 - [Tabla de contenidos](#índice-general)
 - [Student Outcome](./markdown/content/student-outcome.md)
 
